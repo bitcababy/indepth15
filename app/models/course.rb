@@ -8,7 +8,7 @@ class Course
 	field :i, as: :in_catalog, type: Boolean, default: true
 	field :a, as: :academic_year, type: Integer
 	
-	embeds_many :sections
+	has_many :sections
 		
 	has_one :information, class_name: 'CourseDocument', autobuild: true
 	has_one :description, class_name: 'CourseDocument', autobuild: true
