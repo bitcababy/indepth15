@@ -1,10 +1,17 @@
 development:
-  host: localhost
-  database: depth_charge_development
+  sessions:
+    default:
+      database: depth_charge_development
+      hosts:
+        - localhost
+    
 
 test:
-  host: localhost
-  database: depth_charge_test
+  sessions:
+    default:
+      database: depth_charge_test
+      hosts:
+        - localhost
 
 # set these environment variables on your prod server
 production:
