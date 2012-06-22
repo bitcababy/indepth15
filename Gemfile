@@ -58,6 +58,7 @@ group :development, :test do
 	gem 'guard-haml'
 	gem 'guard-sprockets2'
 	gem 'growl_notify'
+	gem 'fabrication', '>= 2.0'
 end
 
 group :development do
@@ -69,7 +70,6 @@ group :test do
 	gem 'rspec-cells', path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
 	gem 'mongoid-rspec'
 	gem 'pickle' #, path: "/Users/mer/Projects/Rails/gems/pickle" #, git: 'git@github.com:bitcababy/pickle.git'
-	# gem 'machinist_mongo'
 	gem 'capybara'
 	gem 'database_cleaner'
 	gem 'akephalos2', require: 'akephalos'
