@@ -1,4 +1,4 @@
 class CourseDocument < TextDocument
-	has_many :courses
+	belongs_to :course
 	
 end
