@@ -166,9 +166,6 @@ GEM
     nokogiri (1.5.4)
     origin (1.0.1)
     orm_adapter (0.3.0)
-    pickle (0.4.10)
-      cucumber (>= 0.8)
-      rake
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -286,10 +283,9 @@ DEPENDENCIES
   mongoid
   mongoid-rspec
   mongoid_taggable
-  pickle
   rails (= 3.2.6)
   rspec-cells!
-  rspec-rails (>= 2.8.1)
+  rspec-rails
   ruby_gntp
   sass-rails (~> 3.2.3)
   simplecov

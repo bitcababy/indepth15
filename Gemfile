@@ -45,7 +45,7 @@ gem 'mongoid_taggable'
 
 group :development, :test do
 	gem 'grizzled-rails-logger'
-	gem 'rspec-rails', '>=2.8.1'
+	gem 'rspec-rails'
 	gem 'ruby_gntp'
 	gem 'growl'
 	gem 'watchr'
@@ -69,7 +69,6 @@ group :test do
 	gem 'cucumber-rails', '>= 1.2.1', require: false
 	gem 'rspec-cells', path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
 	gem 'mongoid-rspec'
-	gem 'pickle' #, path: "/Users/mer/Projects/Rails/gems/pickle" #, git: 'git@github.com:bitcababy/pickle.git'
 	gem 'capybara'
 	gem 'database_cleaner'
 	gem 'akephalos2', require: 'akephalos'
