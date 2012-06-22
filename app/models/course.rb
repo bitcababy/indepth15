@@ -16,7 +16,7 @@ class Course
 	has_one :policies, class_name: 'CourseDocument', autobuild: true
 	has_one :news, class_name: 'CourseDocument', autobuild: true
 	
-	validates_uniqueness_of :number
+	validates_uniqueness_of :number, scope: :academic_year
 
 end
 	
