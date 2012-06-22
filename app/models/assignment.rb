@@ -1,4 +1,5 @@
 class Assignment
+class Assignment < TextDocument
 	include Mongoid::Document
 	include Mongoid::Versioning
 	include Mongoid::Paranoia
