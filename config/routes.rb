@@ -1,19 +1,7 @@
 DepthCharge::Application.routes.draw do
-	resources :courses, only: [] do
-		member do
-			get 'home'
-		end
-		collection do
-			get 'list'
-		end
-	end
 	
-	resources :sections, only: [] do
-		member do
-			get 'assignments'
-		end
-	end
 	get 'courses/:number/home', to: 'courses#home', as: :course_home
+	get 'courses/list', to: 'course#list'
 	
 	for tab in %W(sections news policies resources information calendar) do
 		get "course_#{tab}_pane", to: "courses##{tab}_name"
