@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 describe TextDocument do
-	it { should validate_presence_of(:contents) }
+	specify { subject.contents.should_not be_nil }
 end
