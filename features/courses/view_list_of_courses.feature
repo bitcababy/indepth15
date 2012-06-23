@@ -5,8 +5,13 @@ Feature: View list of courses
 
 	Scenario: Courses page
 		Given the following courses:
-		 | number | full_name       |
-		 | 1      | Geometry Honors |
-		 | 2      | Math 101        |
+		 | number | full_name          |
+		 | 2      | Mechanical drawing |
+		 | 1      | Geometry Honors    |
+		 | 3      | Math 101           |
 	  When I got to the courses page
-	  Then I should see a list of courses
+	  Then I should see this list:
+		 | item               |
+		 | Geometry Honors    |
+		 | Mechanical drawing |
+		 | Math 101           |
