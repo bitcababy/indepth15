@@ -27,8 +27,12 @@ Then /^the page header should contain the full name of the course$/ do
 end
 
 Then /^I should see the following tabs:$/ do |table|
-  # table is a Cucumber::Ast::Table
-  pending # express the regexp above with the code you wish you had
+	tab_names = (table.hashes.map &:values).flatten
+	for tab in tab_names do
+		steps %{
+			Then I should see a "#{tab}" tab
+		}
+	end
 end
 
 Then /^I should see a sections table$/ do
