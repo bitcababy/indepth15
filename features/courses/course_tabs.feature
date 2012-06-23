@@ -20,3 +20,15 @@ Feature: Course home page
 	Scenario: Section table
 		Then I should see a sections table
 	
+	# @javascript
+	Scenario Outline: Tab clicking
+		When I click on the tab labeled "<label>"
+		Then I should switch to the "<name>" pane for the course
+
+		Examples:
+		 | label       | name        |
+		 | Information | information |
+		 | News        | news        |
+		 | Policies    | policies    |
+		 | Resources   | resources   |
+		 | Sections    | sections    |
