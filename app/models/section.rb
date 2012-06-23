@@ -10,4 +10,7 @@ class Section
 	
 	belongs_to :course
 	belongs_to :teacher
+
+	validates_uniqueness_of :number, scope: :course
+
 end
