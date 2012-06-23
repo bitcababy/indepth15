@@ -9,7 +9,7 @@ Feature: View list of courses
 		 | 2      | Mechanical drawing |
 		 | 1      | Geometry Honors    |
 		 | 3      | Math 101           |
-	  When I got to the courses page
+	  When I go to the courses page
 	  Then I should see this list:
 		 | item               |
 		 | Geometry Honors    |

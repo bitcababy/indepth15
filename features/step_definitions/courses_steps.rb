@@ -7,7 +7,7 @@ When /^I go to a course's home page$/ do
 	get "courses/#{the_course.number}/home"
 end
 
-When /^I got to the courses page$/ do
+When /^I go to the courses page$/ do
 	visit list_courses_path
 end
 
