@@ -70,5 +70,8 @@ module DepthCharge
 			g.helper_spec false
 		end
 
+    Mongoid.logger.level = Logger::WARN
+    Moped.logger.level = Logger::WARN
+
   end
 end
