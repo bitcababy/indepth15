@@ -1,5 +1,5 @@
 Fabricator(:course) do
-	number				{ Fabricate.sequence }
+	number				{ sequence(:course_number) }
 	duration			{ ['Full year', 'Semester'].sample }
 	credits				{ [ 5.0, 2.5].sample }
 	full_name			{ "Course #{Fabricate.sequence}"}
@@ -13,4 +13,4 @@ Fabricator(:course) do
 	
 end
 
-	
+Fabricate.sequence(:course_number) {|i| i}
