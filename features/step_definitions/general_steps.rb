@@ -6,3 +6,7 @@ end
 Then /^the page title should be "([^"]*)"$/ do |title|
 	pending "Unfinished test"
 end
+
+When /^I visit any page$/ do
+  visit root_path
+end
