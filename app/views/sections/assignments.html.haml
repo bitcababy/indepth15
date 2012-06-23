@@ -1,0 +1,13 @@
+%div#assignments
+	%div#header= header(@section)
+	%h3= @section.teacher.general_leadin
+
+	%h3= @section.teacher.current_leadin
+	/ %h2 Current assignment
+	/ = render_cell :assignment_table, :display_next, @section, @section.teacher.current_leadin
+	/ 
+	/ %h2 Upcoming assignments
+	/ = render_cell :assignment_table, :display_upcoming, @section
+	/ 
+	/ %h2 Past assignments
+	/ = render_cell :assignment_table, :display_past, @section, 2
