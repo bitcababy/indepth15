@@ -9,6 +9,8 @@ DepthCharge::Application.routes.draw do
 	end
 	
 	
+	get 'teachers/:id/home', to: 'teachers#home', as: 'teacher_home_page'
+	
 	root to: "courses#list"
 	
 
