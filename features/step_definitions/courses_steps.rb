@@ -3,8 +3,8 @@
 ###
 
 When /^I go to a course's home page$/ do
-	the_course = Fabricate(:course)
-	get "courses/#{the_course.number}/home"
+	the_course = Fabricate :course
+	visit course_home_path(the_course)
 end
 
 When /^I go to the courses page$/ do
