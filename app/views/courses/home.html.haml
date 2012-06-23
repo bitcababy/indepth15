@@ -1,8 +1,4 @@
-- content_for :page_header do
-	%h1= @course.full_name
-
 %meta{charset: "utf-8"}/
-
 
 #page_header= @course.full_name
 
@@ -19,6 +15,10 @@
 				%a{href: course_policies_pane_path(@course), title: 'Policies'} Policies
 			%li#news
 				%a{href: course_news_pane_path(@course), title: 'News'} News
+
+- content_for :page_header do
+	%h1= @course.full_name
+
 
 :coffeescript
 	$(document).ready ->	
