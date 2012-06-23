@@ -13,4 +13,12 @@ class Section
 
 	validates_uniqueness_of :number, scope: :course
 
+	def to_s
+		"Section #{self.number}, block: #{self.block}"
+	end
+	
+	def add_assignment(due_date, asst, show=true)
+		self.assignments << [{due_date: due_date, assignment: asst, show: show}]
+	end
+
 end
