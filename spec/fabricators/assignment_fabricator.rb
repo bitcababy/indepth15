@@ -1,4 +1,4 @@
-Fabricator(:assignment) do
+Fabricator(:assignment, from: :text_document) do
 	name					{ sequence(:assignment_name) }
 end
 
