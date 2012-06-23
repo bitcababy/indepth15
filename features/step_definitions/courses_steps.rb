@@ -11,6 +11,10 @@ When /^I go to the courses page$/ do
 	visit list_courses_path
 end
 
+When /^I click on the tab labeled "([^"]+)"$/ do |label|
+	click_link(label)
+end
+
 ###
 ### Thens
 ###
@@ -36,6 +40,11 @@ Then /^I should see the following tabs:$/ do |table|
 end
 
 Then /^I should see a sections table$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should switch to the "(.+?)" pane for the course$/ do |pane_name|
+  # table is a Cucumber::Ast::Table
   pending # express the regexp above with the code you wish you had
 end
 
