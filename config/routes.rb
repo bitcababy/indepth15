@@ -8,6 +8,7 @@ DepthCharge::Application.routes.draw do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
 	
+	get 'sections/:id/assignments', to: 'sections#assignments', as: 'section_assignments'
 	
 	get 'teachers/:id/home', to: 'teachers#home', as: 'teacher_home_page'
 	
