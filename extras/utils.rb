@@ -1,24 +1,14 @@
 module Utils
 
-# # Instance methods
-# 	def before_cutoff?(time)
-# 		return Utils.before_cutoff?(time)
-# 	end
-# 
-# 	def after_cutoff?(time)
-# 		return Utils.after_cutoff?(time)
-# 	end
-# 	
-# 	def future_due_date
-# 		self.future_due_date
-# 	end
-# 
-# 	def next_school_day
-# 		self.next_school_day
-# 	end
-
-# Class methods
 	class << self
+		def before_cutoff?(time)
+			return !after_cutoff?(time)
+		end
+
+		def after_cutoff?(time)
+			return time.hour > Settings.cutoff.hour || (time.hour == Settings.cutoff.hour && time.min >= Settings.cutoff.minute)
+		end
+	
 		def future_due_date
 			time = Time.now
 			if after_cutoff?(time)
@@ -28,17 +18,8 @@ module Utils
 			end
 		end
 
-		# def before_cutoff?(time)
-		# 	@after_cutoff?(time)
-		# end
-		# 
-
-		def after_cutoff?(time)
-			return time.hour > Settings.cutoff.hour || (time.hour == Settings.cutoff.hour && time.min >= Settings.cutoff.minute)
-		end
-
-		def next_school_day(day)
-		case
+		def next_school_day
+			case
 			when day.friday?
 				day + 3
 			when day.saturday?
@@ -47,7 +28,5 @@ module Utils
 				day + 1
 			end
 		end
-
 	end
 end
-
