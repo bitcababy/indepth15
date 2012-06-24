@@ -10,6 +10,8 @@ class Section
 	
 	belongs_to :course
 	belongs_to :teacher
+	embeds_many :section_assignments
+	accepts_nested_attributes_for :section_assignments
 
 	validates_uniqueness_of :number, scope: :course
 
