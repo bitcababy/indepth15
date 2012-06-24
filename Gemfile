@@ -42,6 +42,7 @@ gem 'mongo'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'mongoid_taggable'
+gem 'settingslogic'
 
 group :development, :test do
 	gem 'grizzled-rails-logger'
