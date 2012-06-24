@@ -68,6 +68,8 @@ module DepthCharge
 
 		config.generators do |g|
 			g.helper_spec false
+		  g.test_framework      :rspec, fixture: true
+		  g.fixture_replacement :fabrication
 		end
 
     Mongoid.logger.level = Logger::WARN
