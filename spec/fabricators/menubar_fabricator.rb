@@ -1,0 +1,2 @@
+Fabricator(:menubar) do
+end

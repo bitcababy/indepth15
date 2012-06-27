@@ -1,0 +1,3 @@
+%li= course.full_name
+%ul
+	= render partial: 'display_section', collection: course.sections, as: :section
