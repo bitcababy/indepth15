@@ -9,7 +9,7 @@ class AssignmentTableCell < Cell::Rails
 		@section_assignments = sas
 		@caption = caption
 		@table_id = table_id
-		render view: :display
+		render
 	end
 
 end
