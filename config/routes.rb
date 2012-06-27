@@ -1,7 +1,9 @@
 DepthCharge::Application.routes.draw do
 
+  get "menus/show"
+
 	get 'courses/:id/home', to: 'courses#home', as: :course_home
-	get 'courses/list', to: 'course#list'
+	get 'courses/list', to: 'courses#list'
 	# get 'courses/:course_number/section
 	
 	for tab in %W(sections news policies resources information) do
