@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
 	before_filter :find_course, except: [:list]
 	
 	def list
-		@courses = Course.in_catalog.asc(:course_number)
+		@courses = Course.in_catalog.asc(:number)
 	end
 	
 	def home
