@@ -7,7 +7,7 @@ class SectionAssignment
 	embedded_in :section
 	belongs_to :assignment
 	
-	scope :future, lambda { gte(due_date: Utils.future_due_date) }
-	scope :past, lambda { lt(due_date: Utils.future_due_date) }
+	scope :future, -> { gte(due_date: Utils.future_due_date) }
+	scope :past, -> { lt(due_date: Utils.future_due_date) }
 end
 
