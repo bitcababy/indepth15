@@ -1,3 +1,14 @@
+
+###
+### Givens
+###
+
+Given /^(?:that )?I'm on the courses page$/ do
+ steps %{
+	When I go to the courses page
+	}
+end
+
 ###
 ### Whens
 ###
@@ -8,7 +19,7 @@ When /^I go to a course's home page$/ do
 end
 
 When /^I go to the courses page$/ do
-	visit list_courses_path
+	visit courses_list_path
 end
 
 When /^I click on the tab labeled "([^"]+)"$/ do |label|
@@ -21,7 +32,7 @@ end
 Then /^I should see (?:this|the) list:?$/ do |table|
 	ul = page.find('#courses')
 	names = (ul.all('li').map &:text).map &:strip
-	(table.hashes.map &:values).flatten.should == names
+	names.should == (table.hashes.map &:values).flatten
 end
 
 Then /^the page header should contain the full name of the course$/ do
@@ -43,8 +54,9 @@ Then /^I should see a sections table$/ do
   pending # express the regexp above with the code you wish you had
 end
 
-Then /^I should switch to the "(.+?)" pane for the course$/ do |pane_name|
+Then /^I should switch to the "(.+)" pane$/ do |pane_name|
   # table is a Cucumber::Ast::Table
   pending # express the regexp above with the code you wish you had
 end
+
 
