@@ -1,4 +1,4 @@
 %ul#courses
 	- for course in @courses do
 		%li
-			%a{href: home_course_path(course)}= course.full_name
+			%a{href: course_home_path(course)}= course.full_name
