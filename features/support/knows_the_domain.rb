@@ -1,6 +1,4 @@
 module KnowsTheDomain
-	attr_accessor :the_user, :the_section, :the_course
-	
 	def the_user
 		@the_user ||= Fabricate(:guest)
 	end
