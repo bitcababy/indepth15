@@ -10,8 +10,8 @@ class Section
 	
 	belongs_to :course
 	belongs_to :teacher
+
 	embeds_many :section_assignments
-	accepts_nested_attributes_for :section_assignments
 
 	validates_uniqueness_of :number, scope: :course
 		
@@ -21,7 +21,14 @@ class Section
 	
 	def add_assignment(due_date, asst, show=true)
 		self.section_assignments.create! due_date: due_date, assignment: asst
-	end			
+	end
 	
+	def future_assignments
+		self.section_assignments.future.order(date_due: :asc).map &:assignment
+	end
 
+	def past_assignments
+		self.section_assignments.past.map &:assignment
+	end
+	
 end
