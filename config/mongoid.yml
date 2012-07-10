@@ -4,6 +4,8 @@ development:
       database: depth_charge_development
       hosts:
         - localhost:27017
+      options:
+        safe: true
     
 
 test:
@@ -12,6 +14,8 @@ test:
       database: depth_charge_test
       hosts:
         - localhost:27017
+      options:
+         safe: true
 
 # set these environment variables on your prod server
 production:

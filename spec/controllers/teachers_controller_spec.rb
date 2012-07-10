@@ -4,7 +4,8 @@ describe TeachersController do
 
   describe "GET 'home'" do
     it "returns http success" do
-      get 'home'
+			teacher = Fabricate(:teacher)
+      visit teacher_home_page_path(teacher)
       response.should be_success
     end
   end

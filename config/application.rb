@@ -77,3 +77,8 @@ module DepthCharge
 
   end
 end
+
+class Array
+	alias contains? include?
+end
+

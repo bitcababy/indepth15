@@ -1,9 +1,14 @@
 class Teacher < RegisteredUser
-	field :un, as: :unique_name, type: String
-	field :c, as: :current, type: Boolean
+	# @@next_id = (Teacher.count > 0 ? Teacher.last.id : 0)
+	field :unique_name, type: String
+	field :current, type: Boolean
+	field :default_room, type: String
+	field :home_page, type: String
 
 	has_many :sections
-	
+	belongs_to :generic_msg_doc, class_name: 'TeacherDocument', inverse_of: :teacher
+	belongs_to :upcoming_msg_doc, class_name: 'TeacherDocument', inverse_of: :teacher
+
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
 	
@@ -11,4 +16,25 @@ class Teacher < RegisteredUser
 		"#{self.honorific} #{self.last_name}"
 	end
 	
+
+	#
+	# importing
+	# 
+	def self.convert_record(hash)
+		hash['email'] = hash['login'] + "@mail.weston.org"
+		hash['password'] = (hash['phrase'].split(' ').map &:first).join('') if (hash['phrase'])
+		hash['current'] = hash['old_current'] == 1
+		# gm = TextDocument.create! content: hash['generic_msg']
+		# um = TextDocument.create! content: hash['upcoming_msg']
+		gm = hash['generic_msg']
+		um = hash['upcoming_msg']
+		
+		%W(phrase old_current generic_msg upcoming_msg teacher_id).each {|k| hash.delete(k)}
+		teacher = self.new hash
+		teacher.create_generic_msg_doc content: gm
+		teacher.create_upcoming_msg_doc content: um
+		teacher.save!
+		teacher
+	end
+
 end

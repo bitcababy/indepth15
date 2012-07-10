@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number).scoped_to(:academic_year) }
+	it { should have_and_belong_to_many(:tags) }
 	
 	context "A new course" do
 		subject {Fabricate(:course)}
@@ -28,4 +29,51 @@ describe Course do
 			course.teachers.count.should == 2
 		end
 	end
+	
+	context "Validation" do
+		it "should have a unique number for a given year" do
+			course1 = Fabricate(:course)
+			course2 = Course.new course1.attributes
+			course2.academic_year += 1
+			course2.should be_valid
+		end
+		
+	end
+	
+	context 'importing' do
+		describe '::convert_one' do
+			before :each do
+				hashes = Import::Course.import_and_create('course_info')
+				@hash = hashes.first
+				@hash.should_not be_nil
+				@course = Course.convert_record(@hash)
+			end
+
+			it "sets its year to the current academic_year" do
+				@course.academic_year.should == Settings.academic_year
+			end
+			
+			it "creates documents from the strings" do
+				@course.information_doc.should_not be_nil
+				@course.resource_doc.should_not be_nil
+				@course.policies_doc.should_not be_nil
+				@course.news_doc.should_not be_nil
+				@course.description_doc.should_not be_nil
+			end
+				
+		end
+		
+	end
+	
+	describe "#clone_for_year" do
+		it "copies all attributes and sets the year" do
+			course1 = Fabricate(:course, academic_year: Course::NO_YEAR)
+			Course.where(academic_year: 2012).exists?.should be_false
+			course2 = course1.clone_for_year(2012)
+			course2.should_not be_nil
+			course2.academic_year.should == 2012
+		end
+	end
+	
+		
 end

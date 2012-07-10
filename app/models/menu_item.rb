@@ -1,9 +1,9 @@
 class MenuItem
   include Mongoid::Document
-	field :o, as: :order, type: Integer
-	field :l, as: :link, type: String
+	field :order, type: Integer
+	field :link, type: String
 
-	recursively_embeds_many
+	# recursively_embeds_many
 	belongs_to :obj, polymorphic: true
 	
 	def text

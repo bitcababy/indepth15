@@ -46,7 +46,7 @@ describe MenubarCell do
 			end
 
       subject { render_cell(:menubar, :display_teachers) }
- 			it { should have_selector('li#teachers', text: 'Teachers') }
+ 			it { should have_selector('li', text: 'Teachers') }
 
 			it "should list each teacher, sorted by last name" do
 				teachers = Teacher.current.order_by_name
@@ -55,7 +55,7 @@ describe MenubarCell do
 				menu = res.find('ul#teachers')
 				menu.should_not be_nil
 				for teacher in teachers do
-					menu.should have_selector('li', text: teacher.full_name)
+					menu.should have_selector('li', text: teacher.formal_name)
 				end
 			end
     end

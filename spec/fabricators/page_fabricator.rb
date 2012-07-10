@@ -1,0 +1,2 @@
+Fabricator(:page) do
+end

@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe RegisteredUser
+describe RegisteredUser do
 end

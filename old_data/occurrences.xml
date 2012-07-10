@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.3.7deb7
+- http://www.phpmyadmin.net
+-
+- Host: outhouse.wildwoodweb.net
+- Generation Time: Jun 29, 2012 at 11:36 AM
+- Server version: 5.0.51
+- PHP Version: 5.3.3-7+squeeze8
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="wmdhs" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="occurrences">
+                CREATE TABLE `occurrences` (
+                  `id` int(11) NOT NULL auto_increment,
+                  `block_name` char(1) NOT NULL default '',
+                  `occurrence` tinyint(4) NOT NULL default '0',
+                  `day_num` tinyint(4) NOT NULL default '0',
+                  `period` tinyint(4) NOT NULL default '0',
+                  `updated_at` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+                  UNIQUE KEY `block_occ` (`block_name`,`occurrence`),
+                  UNIQUE KEY `id` (`id`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'wmdhs'
+    -->
+    <database name="wmdhs">
+        <!-- Table occurrences -->
+        <table name="occurrences">
+            <column name="id">1</column>
+            <column name="block_name">A</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">1</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">2</column>
+            <column name="block_name">A</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">2</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">3</column>
+            <column name="block_name">A</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">4</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">4</column>
+            <column name="block_name">A</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">5</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">5</column>
+            <column name="block_name">A</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">7</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">6</column>
+            <column name="block_name">B</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">2</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">7</column>
+            <column name="block_name">B</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">3</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">8</column>
+            <column name="block_name">B</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">5</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">9</column>
+            <column name="block_name">B</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">6</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">10</column>
+            <column name="block_name">B</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">8</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">11</column>
+            <column name="block_name">C</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">1</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">12</column>
+            <column name="block_name">C</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">3</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">13</column>
+            <column name="block_name">C</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">4</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">14</column>
+            <column name="block_name">C</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">6</column>
+            <column name="period">1</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">15</column>
+            <column name="block_name">C</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">7</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">16</column>
+            <column name="block_name">D</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">1</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">17</column>
+            <column name="block_name">D</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">3</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">18</column>
+            <column name="block_name">D</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">5</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">19</column>
+            <column name="block_name">D</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">6</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">20</column>
+            <column name="block_name">D</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">8</column>
+            <column name="period">2</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">21</column>
+            <column name="block_name">E</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">2</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">22</column>
+            <column name="block_name">E</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">4</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">23</column>
+            <column name="block_name">E</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">5</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">24</column>
+            <column name="block_name">E</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">7</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">25</column>
+            <column name="block_name">E</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">8</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">26</column>
+            <column name="block_name">F</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">1</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">27</column>
+            <column name="block_name">F</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">3</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">28</column>
+            <column name="block_name">F</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">4</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">29</column>
+            <column name="block_name">F</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">6</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">30</column>
+            <column name="block_name">F</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">8</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">31</column>
+            <column name="block_name">G</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">2</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">32</column>
+            <column name="block_name">G</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">3</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">33</column>
+            <column name="block_name">G</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">5</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">34</column>
+            <column name="block_name">G</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">7</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">35</column>
+            <column name="block_name">G</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">8</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">36</column>
+            <column name="block_name">H</column>
+            <column name="occurrence">1</column>
+            <column name="day_num">1</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">37</column>
+            <column name="block_name">H</column>
+            <column name="occurrence">2</column>
+            <column name="day_num">2</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">38</column>
+            <column name="block_name">H</column>
+            <column name="occurrence">3</column>
+            <column name="day_num">4</column>
+            <column name="period">5</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">39</column>
+            <column name="block_name">H</column>
+            <column name="occurrence">4</column>
+            <column name="day_num">6</column>
+            <column name="period">4</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+        <table name="occurrences">
+            <column name="id">40</column>
+            <column name="block_name">H</column>
+            <column name="occurrence">5</column>
+            <column name="day_num">7</column>
+            <column name="period">3</column>
+            <column name="updated_at">0000-00-00 00:00:00</column>
+        </table>
+    </database>
+</pma_xml_export>

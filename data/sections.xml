@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections type="array">
+  <section>
+    <_id>4ffc453b0924277d60000059</_id>
+    <block>E</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">621</orig-id>
+    <room type="integer">5</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000005a</_id>
+    <block>A</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">605</orig-id>
+    <room type="integer">5</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000005b</_id>
+    <block>D</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">606</orig-id>
+    <room type="integer">5</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000005c</_id>
+    <block>G</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">607</orig-id>
+    <room type="integer">5</room>
+    <sched-color>LightYellow</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000005d</_id>
+    <block>F</block>
+    <course-num type="integer">341</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">608</orig-id>
+    <room type="integer">5</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000005e</_id>
+    <block>C</block>
+    <course-num type="integer">391</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">609</orig-id>
+    <room type="integer">7</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000005f</_id>
+    <block>H</block>
+    <course-num type="integer">343</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">610</orig-id>
+    <room type="integer">7</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000060</_id>
+    <block>G</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">611</orig-id>
+    <room type="integer">27</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000061</_id>
+    <block>E</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">612</orig-id>
+    <room type="integer">18</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000062</_id>
+    <block>E</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">613</orig-id>
+    <room type="integer">4</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000063</_id>
+    <block>F</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">614</orig-id>
+    <room type="integer">7</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000064</_id>
+    <block>B</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">615</orig-id>
+    <room type="integer">7</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000065</_id>
+    <block>A</block>
+    <course-num type="integer">341</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">616</orig-id>
+    <room type="integer">7</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000066</_id>
+    <block>B</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">622</orig-id>
+    <room type="integer">5</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000067</_id>
+    <block>G</block>
+    <course-num type="integer">336</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">623</orig-id>
+    <room type="integer">201</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">2</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000068</_id>
+    <block>F</block>
+    <course-num type="integer">336</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">624</orig-id>
+    <room>LIB</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">1</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000069</_id>
+    <block>H</block>
+    <course-num type="integer">371</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">625</orig-id>
+    <room type="integer">5</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">7</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000006a</_id>
+    <block>F</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">626</orig-id>
+    <room type="integer">4</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000006b</_id>
+    <block>G</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">6</number>
+    <orig-id type="integer">627</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gajewskid</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000006c</_id>
+    <block>H</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">5</number>
+    <orig-id type="integer">628</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gajewskid</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000006d</_id>
+    <block>A</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">629</orig-id>
+    <room type="integer">8</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000006e</_id>
+    <block>D</block>
+    <course-num type="integer">361</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">630</orig-id>
+    <room type="integer">7</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000006f</_id>
+    <block>H</block>
+    <course-num type="integer">361</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">631</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000070</_id>
+    <block>E</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">632</orig-id>
+    <room type="integer">7</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000071</_id>
+    <block>B</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">633</orig-id>
+    <room type="integer">6</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000072</_id>
+    <block>C</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">5</number>
+    <orig-id type="integer">634</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000073</_id>
+    <block>F</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">635</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000074</_id>
+    <block>E</block>
+    <course-num type="integer">326</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">636</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000075</_id>
+    <block>H</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">6</number>
+    <orig-id type="integer">637</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000076</_id>
+    <block>B</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">640</orig-id>
+    <room type="integer">200</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000077</_id>
+    <block>D</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">639</orig-id>
+    <room type="integer">200</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000078</_id>
+    <block>F</block>
+    <course-num type="integer">333</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">641</orig-id>
+    <room type="integer">203</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">5</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>1,3,5</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000079</_id>
+    <block>E</block>
+    <course-num type="integer">333</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">642</orig-id>
+    <room type="integer">203</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>1,2,4</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000007a</_id>
+    <block>D</block>
+    <course-num type="integer">341</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">643</orig-id>
+    <room type="integer">8</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>mccowand</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000007b</_id>
+    <block>F</block>
+    <course-num type="integer">381</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">644</orig-id>
+    <room type="integer">201</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>mccowand</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000007c</_id>
+    <block>C</block>
+    <course-num type="integer">343</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">645</orig-id>
+    <room type="integer">6</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000007d</_id>
+    <block>E</block>
+    <course-num type="integer">343</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">646</orig-id>
+    <room type="integer">16</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000007e</_id>
+    <block>F</block>
+    <course-num type="integer">331</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">647</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d6000007f</_id>
+    <block>D</block>
+    <course-num type="integer">331</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">648</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000080</_id>
+    <block>E</block>
+    <course-num type="integer">391</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">649</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LightYellow</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000081</_id>
+    <block>F</block>
+    <course-num type="integer">391</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">650</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LightYellow</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000082</_id>
+    <block>C</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">651</orig-id>
+    <room type="integer">200</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000083</_id>
+    <block>A</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">652</orig-id>
+    <room type="integer">200</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000084</_id>
+    <block>D</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">653</orig-id>
+    <room type="integer">4</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000085</_id>
+    <block>H</block>
+    <course-num type="integer">331</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">654</orig-id>
+    <room type="integer">4</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453c0924277d60000086</_id>
+    <block>E</block>
+    <course-num type="integer">331</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">655</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2012</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000002b</_id>
+    <block>G</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">358</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000002c</_id>
+    <block>A</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">520</orig-id>
+    <room type="integer">6</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000002d</_id>
+    <block>G</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">521</orig-id>
+    <room type="integer">6</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000002e</_id>
+    <block>B</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">421</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000002f</_id>
+    <block>A</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">5</number>
+    <orig-id type="integer">424</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000030</_id>
+    <block>H</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">399</orig-id>
+    <room type="integer">5</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000031</_id>
+    <block>B</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">531</orig-id>
+    <room type="integer">9</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000032</_id>
+    <block>C</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">523</orig-id>
+    <room type="integer">5</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000033</_id>
+    <block>B</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">353</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000034</_id>
+    <block>D</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">354</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LightYellow</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000035</_id>
+    <block>E</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">356</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000036</_id>
+    <block>E</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">6</number>
+    <orig-id type="integer">400</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gajewskid</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000037</_id>
+    <block>B</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">5</number>
+    <orig-id type="integer">402</orig-id>
+    <room type="integer">5</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000038</_id>
+    <block>C</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">403</orig-id>
+    <room type="integer">9</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000039</_id>
+    <block>A</block>
+    <course-num type="integer">332</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">404</orig-id>
+    <room type="integer">9</room>
+    <sched-color>LightPink</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000003a</_id>
+    <block>F</block>
+    <course-num type="integer">333</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">405</orig-id>
+    <room type="integer">200</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">5</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>1,2,4</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000003b</_id>
+    <block>B</block>
+    <course-num type="integer">333</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">406</orig-id>
+    <room type="integer">203</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>1,2,4</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000003c</_id>
+    <block>D</block>
+    <course-num type="integer">391</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">407</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LightYellow</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000003d</_id>
+    <block>F</block>
+    <course-num type="integer">391</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">408</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LightYellow</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000003e</_id>
+    <block>H</block>
+    <course-num type="integer">343</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">409</orig-id>
+    <room type="integer">4</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000003f</_id>
+    <block>B</block>
+    <course-num type="integer">343</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">410</orig-id>
+    <room type="integer">4</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000040</_id>
+    <block>C</block>
+    <course-num type="integer">343</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">411</orig-id>
+    <room type="integer">8</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000041</_id>
+    <block>D</block>
+    <course-num type="integer">361</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">412</orig-id>
+    <room type="integer">9</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000042</_id>
+    <block>G</block>
+    <course-num type="integer">361</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">413</orig-id>
+    <room type="integer">9</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000043</_id>
+    <block>D</block>
+    <course-num type="integer">371</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">414</orig-id>
+    <room type="integer">4</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">7</style-id>
+    <teacher-id>gonzalezd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000044</_id>
+    <block>A</block>
+    <course-num type="integer">334</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">415</orig-id>
+    <room type="integer">200</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">2</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000045</_id>
+    <block>A</block>
+    <course-num type="integer">336</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">416</orig-id>
+    <room type="integer">200</room>
+    <sched-color>PaleGreen</sched-color>
+    <semesters type="integer">1</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000046</_id>
+    <block>C</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">7</number>
+    <orig-id type="integer">419</orig-id>
+    <room type="integer">6</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000047</_id>
+    <block>H</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">6</number>
+    <orig-id type="integer">450</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000048</_id>
+    <block>G</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">451</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000049</_id>
+    <block>E</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">452</orig-id>
+    <room type="integer">9</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000004a</_id>
+    <block>F</block>
+    <course-num type="integer">322</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">453</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>fidlerb</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000004b</_id>
+    <block>C</block>
+    <course-num type="integer">331</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">367</orig-id>
+    <room type="integer">7</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000004c</_id>
+    <block>D</block>
+    <course-num type="integer">331</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">488</orig-id>
+    <room type="integer">7</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>mclaughlinj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000004d</_id>
+    <block>H</block>
+    <course-num type="integer">331</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">489</orig-id>
+    <room type="integer">9</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>gacsa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000004e</_id>
+    <block>C</block>
+    <course-num type="integer">341</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">508</orig-id>
+    <room type="integer">200</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>davidsonl</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d6000004f</_id>
+    <block>G</block>
+    <course-num type="integer">341</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">509</orig-id>
+    <room type="integer">5</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>fierabendm</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000050</_id>
+    <block>D</block>
+    <course-num type="integer">341</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">510</orig-id>
+    <room type="integer">8</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>mccowand</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000051</_id>
+    <block>H</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">525</orig-id>
+    <room type="integer">5</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000052</_id>
+    <block>E</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">526</orig-id>
+    <room type="integer">5</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>monzj</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000053</_id>
+    <block>F</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">2</number>
+    <orig-id type="integer">527</orig-id>
+    <room type="integer">6</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000054</_id>
+    <block>G</block>
+    <course-num type="integer">352</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">4</number>
+    <orig-id type="integer">528</orig-id>
+    <room type="integer">6</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>langsdorfa</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000055</_id>
+    <block>B</block>
+    <course-num type="integer">326</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">529</orig-id>
+    <room type="integer">8</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>hosmerc</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000056</_id>
+    <block>F</block>
+    <course-num type="integer">381</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">1</number>
+    <orig-id type="integer">530</orig-id>
+    <room type="integer">7</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>mccowand</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000057</_id>
+    <block>F</block>
+    <course-num type="integer">342</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">5</number>
+    <orig-id type="integer">532</orig-id>
+    <room type="integer">9</room>
+    <sched-color>AliceBlue</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>griswoldn</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+  <section>
+    <_id>4ffc453b0924277d60000058</_id>
+    <block>H</block>
+    <course-num type="integer">321</course-num>
+    <dept-id type="integer">1</dept-id>
+    <number type="integer">3</number>
+    <orig-id type="integer">620</orig-id>
+    <room type="integer">200</room>
+    <sched-color>LavenderBlush</sched-color>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>gabrinerd</teacher-id>
+    <which-occurrences>all</which-occurrences>
+    <year type="integer">2011</year>
+  </section>
+</sections>

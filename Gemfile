@@ -43,8 +43,12 @@ gem 'mongoid'
 gem 'bson_ext'
 gem 'mongoid_taggable'
 gem 'settingslogic'
+gem 'xml-simple'
+gem 'heroku'
+gem 'state_machine'
 
 group :development, :test do
+	gem 'state_machine'
 	gem 'grizzled-rails-logger'
 	gem 'rspec-rails'
 	gem 'ruby_gntp'

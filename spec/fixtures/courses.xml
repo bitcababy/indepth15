@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses type="array">
+  <course>
+    <_id>4ffb36a2092427372a00000a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00000e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Geometry</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000009</information-doc-id>
+    <logo-url>geom-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00000c</news-doc-id>
+    <number type="integer">322</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">2</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00000d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00000b</resource-doc-id>
+    <schedule-name>Geom</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00005f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00005e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Precalculus, Part Two, with Statistics</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000059</information-doc-id>
+    <logo-url>precalcpart2-2.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00005c</news-doc-id>
+    <number type="integer">352</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">12</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00005d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00005b</resource-doc-id>
+    <schedule-name>Precalc II</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Precalc, Part II</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000060</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00005e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Precalculus, Part Two, with Statistics</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000059</information-doc-id>
+    <logo-url>precalcpart2-2.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00005c</news-doc-id>
+    <number type="integer">352</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">12</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00005d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00005b</resource-doc-id>
+    <schedule-name>Precalc II</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Precalc, Part II</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000077</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000076</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Advanced Placement Computer Science</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000071</information-doc-id>
+    <logo-url>apcs-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000074</news-doc-id>
+    <number type="integer">381</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">15</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000075</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000073</resource-doc-id>
+    <schedule-name>AP CS</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>AP Comp Sci</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000068</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000066</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Calculus AB</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000061</information-doc-id>
+    <logo-url>calcab-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000064</news-doc-id>
+    <number type="integer">361</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">13</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000065</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000063</resource-doc-id>
+    <schedule-name>Calc AB</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00006f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00006e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Calculus BC</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000069</information-doc-id>
+    <logo-url>calcbc-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00006c</news-doc-id>
+    <number type="integer">371</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">14</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00006d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00006b</resource-doc-id>
+    <schedule-name>Calc BC</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000070</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00006e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Calculus BC</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000069</information-doc-id>
+    <logo-url>calcbc-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00006c</news-doc-id>
+    <number type="integer">371</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">14</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00006d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00006b</resource-doc-id>
+    <schedule-name>Calc BC</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000002</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000006</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Geometry Honors</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000001</information-doc-id>
+    <logo-url>geomh-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000004</news-doc-id>
+    <number type="integer">321</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">1</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000005</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000003</resource-doc-id>
+    <schedule-name>Geom H</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000007</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000006</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Geometry Honors</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000001</information-doc-id>
+    <logo-url>geomh-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000004</news-doc-id>
+    <number type="integer">321</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">1</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000005</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000003</resource-doc-id>
+    <schedule-name>Geom H</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000008</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000006</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Geometry Honors</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000001</information-doc-id>
+    <logo-url>geomh-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000004</news-doc-id>
+    <number type="integer">321</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">1</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000005</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000003</resource-doc-id>
+    <schedule-name>Geom H</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00000f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00000e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Geometry</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000009</information-doc-id>
+    <logo-url>geom-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00000c</news-doc-id>
+    <number type="integer">322</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">2</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00000d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00000b</resource-doc-id>
+    <schedule-name>Geom</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000010</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00000e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Geometry</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000009</information-doc-id>
+    <logo-url>geom-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00000c</news-doc-id>
+    <number type="integer">322</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">2</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00000d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00000b</resource-doc-id>
+    <schedule-name>Geom</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000012</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000016</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Intermediate Algebra</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000011</information-doc-id>
+    <logo-url>intalg4-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000014</news-doc-id>
+    <number type="integer">326</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">3</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000015</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000013</resource-doc-id>
+    <schedule-name>Int Alg</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000017</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000016</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Intermediate Algebra</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000011</information-doc-id>
+    <logo-url>intalg4-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000014</news-doc-id>
+    <number type="integer">326</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">3</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000015</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000013</resource-doc-id>
+    <schedule-name>Int Alg</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000018</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000016</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Intermediate Algebra</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000011</information-doc-id>
+    <logo-url>intalg4-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000014</news-doc-id>
+    <number type="integer">326</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">3</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000015</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000013</resource-doc-id>
+    <schedule-name>Int Alg</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00001a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00001e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Algebra II Honors</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000019</information-doc-id>
+    <logo-url>alg2h-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00001c</news-doc-id>
+    <number type="integer">331</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">4</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00001d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00001b</resource-doc-id>
+    <schedule-name>Alg 2 H</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00001f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00001e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Algebra II Honors</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000019</information-doc-id>
+    <logo-url>alg2h-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00001c</news-doc-id>
+    <number type="integer">331</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">4</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00001d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00001b</resource-doc-id>
+    <schedule-name>Alg 2 H</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000020</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00001e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Algebra II Honors</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000019</information-doc-id>
+    <logo-url>alg2h-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00001c</news-doc-id>
+    <number type="integer">331</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">4</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00001d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00001b</resource-doc-id>
+    <schedule-name>Alg 2 H</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000022</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000026</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Algebra II</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000021</information-doc-id>
+    <logo-url>alg2-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000024</news-doc-id>
+    <number type="integer">332</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">5</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000025</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000023</resource-doc-id>
+    <schedule-name>Alg 2</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000027</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000026</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Algebra II</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000021</information-doc-id>
+    <logo-url>alg2-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000024</news-doc-id>
+    <number type="integer">332</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">5</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000025</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000023</resource-doc-id>
+    <schedule-name>Alg 2</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000028</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000026</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Algebra II</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000021</information-doc-id>
+    <logo-url>alg2-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000024</news-doc-id>
+    <number type="integer">332</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">5</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000025</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000023</resource-doc-id>
+    <schedule-name>Alg 2</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00002a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a00002e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Topics in Algebra II</full-name>
+    <has-assignments type="boolean">false</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000029</information-doc-id>
+    <logo-url>topics-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00002c</news-doc-id>
+    <number type="integer">333</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">6</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00002d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00002b</resource-doc-id>
+    <schedule-name>Topics</schedule-name>
+    <semesters type="integer">3</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00002f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a00002e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Topics in Algebra II</full-name>
+    <has-assignments type="boolean">false</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000029</information-doc-id>
+    <logo-url>topics-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00002c</news-doc-id>
+    <number type="integer">333</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">6</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00002d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00002b</resource-doc-id>
+    <schedule-name>Topics</schedule-name>
+    <semesters type="integer">3</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000030</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a00002e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Topics in Algebra II</full-name>
+    <has-assignments type="boolean">false</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000029</information-doc-id>
+    <logo-url>topics-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00002c</news-doc-id>
+    <number type="integer">333</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">6</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00002d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00002b</resource-doc-id>
+    <schedule-name>Topics</schedule-name>
+    <semesters type="integer">3</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000032</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a000036</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Computer Science: Concepts &amp; Applications</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000031</information-doc-id>
+    <logo-url>csca-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000034</news-doc-id>
+    <number type="integer">334</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">7</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000035</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000033</resource-doc-id>
+    <schedule-name>CSCA</schedule-name>
+    <semesters type="integer">2</semesters>
+    <short-name>Comp Sci: Concepts &amp; Apps</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000037</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a000036</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Computer Science: Concepts &amp; Applications</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000031</information-doc-id>
+    <logo-url>csca-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000034</news-doc-id>
+    <number type="integer">334</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">7</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000035</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000033</resource-doc-id>
+    <schedule-name>CSCA</schedule-name>
+    <semesters type="integer">2</semesters>
+    <short-name>Comp Sci: Concepts &amp; Apps</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000038</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a000036</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Computer Science: Concepts &amp; Applications</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000031</information-doc-id>
+    <logo-url>csca-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000034</news-doc-id>
+    <number type="integer">334</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">7</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000035</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000033</resource-doc-id>
+    <schedule-name>CSCA</schedule-name>
+    <semesters type="integer">2</semesters>
+    <short-name>Comp Sci: Concepts &amp; Apps</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00003a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a00003e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Computer Science: Introduction to Programming</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000039</information-doc-id>
+    <logo-url>csip-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00003c</news-doc-id>
+    <number type="integer">336</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">8</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00003d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00003b</resource-doc-id>
+    <schedule-name>CSIP</schedule-name>
+    <semesters type="integer">1</semesters>
+    <short-name>Comp Sci: Intro Prog</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00003f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a00003e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Computer Science: Introduction to Programming</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000039</information-doc-id>
+    <logo-url>csip-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00003c</news-doc-id>
+    <number type="integer">336</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">8</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00003d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00003b</resource-doc-id>
+    <schedule-name>CSIP</schedule-name>
+    <semesters type="integer">1</semesters>
+    <short-name>Comp Sci: Intro Prog</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000040</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">2.5</credits>
+    <description-doc-id>4ffb36a2092427372a00003e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Computer Science: Introduction to Programming</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000039</information-doc-id>
+    <logo-url>csip-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00003c</news-doc-id>
+    <number type="integer">336</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">8</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00003d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00003b</resource-doc-id>
+    <schedule-name>CSIP</schedule-name>
+    <semesters type="integer">1</semesters>
+    <short-name>Comp Sci: Intro Prog</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000042</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000046</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Honors Precalculus</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000041</information-doc-id>
+    <logo-url>honorsprecalc-1.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000044</news-doc-id>
+    <number type="integer">341</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">9</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000045</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000043</resource-doc-id>
+    <schedule-name>Hon Precalc</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Honors Precalculus</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000047</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000046</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Honors Precalculus</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000041</information-doc-id>
+    <logo-url>honorsprecalc-1.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000044</news-doc-id>
+    <number type="integer">341</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">9</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000045</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000043</resource-doc-id>
+    <schedule-name>Hon Precalc</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Honors Precalculus</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000048</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000046</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Honors Precalculus</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000041</information-doc-id>
+    <logo-url>honorsprecalc-1.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000044</news-doc-id>
+    <number type="integer">341</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">9</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000045</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000043</resource-doc-id>
+    <schedule-name>Hon Precalc</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Honors Precalculus</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00004a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00004e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Precalculus, Part One</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000049</information-doc-id>
+    <logo-url>precalcpart1-1.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00004c</news-doc-id>
+    <number type="integer">342</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">10</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00004d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00004b</resource-doc-id>
+    <schedule-name>Precalc I</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Precalc, Part I</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00004f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00004e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Precalculus, Part One</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000049</information-doc-id>
+    <logo-url>precalcpart1-1.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00004c</news-doc-id>
+    <number type="integer">342</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">10</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00004d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00004b</resource-doc-id>
+    <schedule-name>Precalc I</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Precalc, Part I</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000050</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00004e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Precalculus, Part One</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000049</information-doc-id>
+    <logo-url>precalcpart1-1.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00004c</news-doc-id>
+    <number type="integer">342</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">10</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00004d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00004b</resource-doc-id>
+    <schedule-name>Precalc I</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Precalc, Part I</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000052</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000056</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Applied Discrete Math Concepts</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000051</information-doc-id>
+    <logo-url>apptopprecalc-2.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000054</news-doc-id>
+    <number type="integer">343</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">11</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000055</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000053</resource-doc-id>
+    <schedule-name>ADMC</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>App Discrete Math</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000057</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000056</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Applied Discrete Math Concepts</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000051</information-doc-id>
+    <logo-url>apptopprecalc-2.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000054</news-doc-id>
+    <number type="integer">343</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">11</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000055</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000053</resource-doc-id>
+    <schedule-name>ADMC</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>App Discrete Math</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000058</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000056</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Applied Discrete Math Concepts</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000051</information-doc-id>
+    <logo-url>apptopprecalc-2.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000054</news-doc-id>
+    <number type="integer">343</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">11</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000055</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000053</resource-doc-id>
+    <schedule-name>ADMC</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>App Discrete Math</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00005a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00005e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Precalculus, Part Two, with Statistics</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000059</information-doc-id>
+    <logo-url>precalcpart2-2.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00005c</news-doc-id>
+    <number type="integer">352</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">12</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00005d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00005b</resource-doc-id>
+    <schedule-name>Precalc II</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>Precalc, Part II</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000062</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000066</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Calculus AB</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000061</information-doc-id>
+    <logo-url>calcab-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000064</news-doc-id>
+    <number type="integer">361</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">13</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000065</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000063</resource-doc-id>
+    <schedule-name>Calc AB</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000067</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000066</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Calculus AB</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000061</information-doc-id>
+    <logo-url>calcab-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000064</news-doc-id>
+    <number type="integer">361</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">13</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000065</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000063</resource-doc-id>
+    <schedule-name>Calc AB</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00006a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00006e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Calculus BC</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000069</information-doc-id>
+    <logo-url>calcbc-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00006c</news-doc-id>
+    <number type="integer">371</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">14</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00006d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00006b</resource-doc-id>
+    <schedule-name>Calc BC</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name nil="true"></short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000072</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000076</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Advanced Placement Computer Science</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000071</information-doc-id>
+    <logo-url>apcs-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000074</news-doc-id>
+    <number type="integer">381</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">15</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000075</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000073</resource-doc-id>
+    <schedule-name>AP CS</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>AP Comp Sci</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000078</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a000076</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Advanced Placement Computer Science</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000071</information-doc-id>
+    <logo-url>apcs-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a000074</news-doc-id>
+    <number type="integer">381</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">15</orig-id>
+    <policies-doc-id>4ffb36a2092427372a000075</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a000073</resource-doc-id>
+    <schedule-name>AP CS</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>AP Comp Sci</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00007a</_id>
+    <academic-year type="integer">2012</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00007e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Advanced Placement Statistics</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000079</information-doc-id>
+    <logo-url>apstats-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00007c</news-doc-id>
+    <number type="integer">391</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">16</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00007d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00007b</resource-doc-id>
+    <schedule-name>AP Stats</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>AP Statistics</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a00007f</_id>
+    <academic-year type="integer">2011</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00007e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Advanced Placement Statistics</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000079</information-doc-id>
+    <logo-url>apstats-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00007c</news-doc-id>
+    <number type="integer">391</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">16</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00007d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00007b</resource-doc-id>
+    <schedule-name>AP Stats</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>AP Statistics</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+  <course>
+    <_id>4ffb36a2092427372a000080</_id>
+    <academic-year type="integer">2010</academic-year>
+    <created-at type="datetime">2012-07-09T19:53:06Z</created-at>
+    <credits type="decimal">5.0</credits>
+    <description-doc-id>4ffb36a2092427372a00007e</description-doc-id>
+    <duration nil="true"></duration>
+    <full-name>Advanced Placement Statistics</full-name>
+    <has-assignments type="boolean">true</has-assignments>
+    <in-catalog type="boolean">true</in-catalog>
+    <information-doc-id>4ffb36a2092427372a000079</information-doc-id>
+    <logo-url>apstats-logo4.gif</logo-url>
+    <news-doc-id>4ffb36a2092427372a00007c</news-doc-id>
+    <number type="integer">391</number>
+    <occurrences type="integer">5</occurrences>
+    <orig-id type="integer">16</orig-id>
+    <policies-doc-id>4ffb36a2092427372a00007d</policies-doc-id>
+    <resource-doc-id>4ffb36a2092427372a00007b</resource-doc-id>
+    <schedule-name>AP Stats</schedule-name>
+    <semesters type="integer">12</semesters>
+    <short-name>AP Statistics</short-name>
+    <tag-ids type="array"/>
+    <updated-at type="datetime">2012-07-09T19:53:06Z</updated-at>
+  </course>
+</courses>

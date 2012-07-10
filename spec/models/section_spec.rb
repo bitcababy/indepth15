@@ -32,7 +32,36 @@ describe Section do
 		end
 	end
 	
+	context "importing" do
+		describe '::convert_record' do
+			before :each do
+				Import::Teacher.load_from_data
+				Import::Course.load_from_data
+				@hash = {
+					"orig_id"=>629, "dept_id"=>1, "course_num"=>342, "number"=>1, 
+					"semesters"=>12, "block"=>"A", "year"=>2012, "which_occurrences"=>"all", 
+					"room"=>8, "teacher_id"=>"griswoldn", "sched_color"=>"AliceBlue", 
+					"style_id"=>3
+				}
+				@section = Section.convert_record(@hash)
+			end
 			
+			it "fixes up the semester" do
+				@section.semester.should == :first
+			end
 			
+			it "fixes up occurrences" do
+				@section.occurrences.should == (1..5).to_a
+			end
+			
+			it "links to its course" do
+				@section.course.should_not be_nil
+			end
+			it "links to its teacher" do
+				@section.teacher.should_not be_nil
+			end
+
+		end
+	end			
 
 end

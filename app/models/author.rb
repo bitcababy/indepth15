@@ -1,0 +1,2 @@
+class Author < RegisteredUser
+end

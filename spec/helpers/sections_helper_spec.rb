@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-# describe SectionsHelper do
+describe SectionsHelper do
 # 	describe '#assignments_header' do
 # 		it "shows the teacher's name, the academic year, and the block" do
 # 			teacher = Fabricate :teacher, honorific: "Mr.", last_name: "Smith"

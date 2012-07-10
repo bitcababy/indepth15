@@ -1,0 +1,3341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sections type="array">
+  <section>
+    <_id>4ffb36a3092427372a0000d2</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a00001f</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">367</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000d3</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a00001f</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">488</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000d4</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000047</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">510</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000af</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000d5</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a00005f</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">525</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000d6</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a00005f</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">526</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000d7</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00005f</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">527</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000d8</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a00005f</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">528</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000d9</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000017</course-id>
+    <course-num type="integer">326</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">529</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000da</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000077</course-id>
+    <course-num type="integer">381</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">530</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000af</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000db</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00004f</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">5</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">532</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000dc</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000007</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">620</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000dd</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000002</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">621</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000de</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000022</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">605</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000df</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000002</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">606</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e0</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000002</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">607</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e1</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000042</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">608</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e2</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a00007a</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">609</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e3</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000052</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">610</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e4</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a00000a</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">611</orig-id>
+    <room>27</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e5</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a00000a</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">612</orig-id>
+    <room>18</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e6</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000022</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">613</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e7</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00004a</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">614</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e8</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000022</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">615</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000e9</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000042</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">616</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000ea</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000002</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">622</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000eb</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a00003a</course-id>
+    <course-num type="integer">336</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">623</orig-id>
+    <room>201</room>
+    <semester type="symbol">second</semester>
+    <semesters type="integer">2</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000ec</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00003a</course-id>
+    <course-num type="integer">336</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">624</orig-id>
+    <room>LIB</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">1</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000ed</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a00006a</course-id>
+    <course-num type="integer">371</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">625</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">7</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000ee</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000022</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">626</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000ef</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000022</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">6</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">627</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000d0</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f0</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000022</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">5</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">628</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000d0</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f1</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a00004a</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">629</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f2</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000062</course-id>
+    <course-num type="integer">361</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">630</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f3</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000062</course-id>
+    <course-num type="integer">361</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">631</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f4</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a00004a</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">632</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f5</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a00004a</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">633</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f6</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a00000a</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">5</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">634</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f7</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00000a</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">635</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f8</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000012</course-id>
+    <course-num type="integer">326</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">636</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000f9</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a00000a</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">6</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">637</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000fa</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a00005a</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">640</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000fb</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a00005a</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">639</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000fc</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00002a</course-id>
+    <course-num type="integer">333</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">641</orig-id>
+    <room>203</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">5</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000fd</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a00002a</course-id>
+    <course-num type="integer">333</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">4</occurrence>
+    </occurrences>
+    <orig-id type="integer">642</orig-id>
+    <room>203</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000fe</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000042</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">643</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000af</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a0000ff</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000072</course-id>
+    <course-num type="integer">381</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">644</orig-id>
+    <room>201</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000af</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000100</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000052</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">645</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000101</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000052</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">646</orig-id>
+    <room>16</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000102</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00001a</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">647</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000103</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a00001a</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">648</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000104</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a00007a</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">649</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000105</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00007a</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">650</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000106</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a00005a</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">651</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000107</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a00005a</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">652</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000108</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a00000a</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">653</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000109</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a00001a</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">654</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00010a</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a00001a</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">655</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00010b</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000008</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">260</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00010c</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000008</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">261</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00010d</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000008</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">262</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00010e</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000010</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">6</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">430</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00010f</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000008</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">307</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000110</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000048</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">308</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000111</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000010</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">431</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000112</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000010</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">432</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000113</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000010</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">433</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000114</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000018</course-id>
+    <course-num type="integer">326</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">316</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000115</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000020</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">317</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000116</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000020</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">318</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000117</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000020</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">319</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000118</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000028</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">5</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">321</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000119</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000028</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">322</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00011a</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000028</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">323</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00011b</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000030</course-id>
+    <course-num type="integer">333</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">4</occurrence>
+    </occurrences>
+    <orig-id type="integer">324</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">5</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00011c</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000030</course-id>
+    <course-num type="integer">333</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">4</occurrence>
+    </occurrences>
+    <orig-id type="integer">325</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00011d</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000038</course-id>
+    <course-num type="integer">334</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">326</orig-id>
+    <room>201</room>
+    <semester type="symbol">second</semester>
+    <semesters type="integer">2</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00011e</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000040</course-id>
+    <course-num type="integer">336</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">327</orig-id>
+    <room>201</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">1</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00011f</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000048</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">328</orig-id>
+    <room>7</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000af</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000120</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000048</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">329</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000af</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000121</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000050</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">601</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000122</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000050</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">600</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000123</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000058</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">335</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000124</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000058</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">336</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000125</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000058</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">337</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000126</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000060</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">338</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000127</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000060</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">339</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000128</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000060</course-id>
+    <course-num type="integer">352</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">340</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000129</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000068</course-id>
+    <course-num type="integer">361</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">341</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00012a</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000068</course-id>
+    <course-num type="integer">361</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">342</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00012b</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000070</course-id>
+    <course-num type="integer">371</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">343</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">7</style-id>
+    <teacher-id>4ffb36a2092427372a000094</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00012c</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000080</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">344</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000ca</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00012d</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000080</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">345</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000ca</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00012e</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a000080</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">346</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000ca</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00012f</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000028</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">357</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000130</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000028</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">401</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000131</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000050</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">533</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000132</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000050</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">5</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">602</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000133</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000050</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">603</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000134</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000050</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">6</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">604</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000135</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000027</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">358</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000136</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a00004f</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">520</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000137</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a00004f</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">521</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000138</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a00000f</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">421</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000139</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a00000f</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">5</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">424</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00013a</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000027</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">399</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00013b</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a00004f</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">531</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00013c</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a00004f</course-id>
+    <course-num type="integer">342</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">523</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00013d</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000007</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">353</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00013e</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000007</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">354</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00013f</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000007</course-id>
+    <course-num type="integer">321</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">356</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000140</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a000027</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">6</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">400</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000d0</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000141</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000027</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">5</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">402</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000142</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000027</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">403</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000143</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000027</course-id>
+    <course-num type="integer">332</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">404</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000144</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00002f</course-id>
+    <course-num type="integer">333</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">4</occurrence>
+    </occurrences>
+    <orig-id type="integer">405</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">5</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000145</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a00002f</course-id>
+    <course-num type="integer">333</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">4</occurrence>
+    </occurrences>
+    <orig-id type="integer">406</orig-id>
+    <room>203</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">3</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000146</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a00007f</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">407</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000147</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00007f</course-id>
+    <course-num type="integer">391</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">408</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b5</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000148</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a000057</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">409</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000149</_id>
+    <block>B</block>
+    <course-id>4ffb36a2092427372a000057</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">410</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000b2</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00014a</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000057</course-id>
+    <course-num type="integer">343</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">411</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00014b</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a000067</course-id>
+    <course-num type="integer">361</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">412</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00014c</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000067</course-id>
+    <course-num type="integer">361</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">413</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a00009a</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00014d</_id>
+    <block>D</block>
+    <course-id>4ffb36a2092427372a00006f</course-id>
+    <course-num type="integer">371</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">414</orig-id>
+    <room>4</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">7</style-id>
+    <teacher-id>4ffb36a2092427372a000094</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00014e</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a000037</course-id>
+    <course-num type="integer">334</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">415</orig-id>
+    <room>200</room>
+    <semester type="symbol">second</semester>
+    <semesters type="integer">2</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a00014f</_id>
+    <block>A</block>
+    <course-id>4ffb36a2092427372a00003f</course-id>
+    <course-num type="integer">336</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">416</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">1</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a000091</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000150</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a00000f</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">7</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">419</orig-id>
+    <room>6</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000cd</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000151</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a00000f</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">6</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">450</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">3</style-id>
+    <teacher-id>4ffb36a2092427372a0000a3</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000152</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a00000f</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">1</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">451</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000153</_id>
+    <block>E</block>
+    <course-id>4ffb36a2092427372a00000f</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">4</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">452</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a3092427372a000154</_id>
+    <block>F</block>
+    <course-id>4ffb36a2092427372a00000f</course-id>
+    <course-num type="integer">322</course-num>
+    <created-at type="datetime">2012-07-09T19:53:07Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">453</orig-id>
+    <room>8</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">2</style-id>
+    <teacher-id>4ffb36a2092427372a0000c4</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:07Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a4092427372a000155</_id>
+    <block>H</block>
+    <course-id>4ffb36a2092427372a00001f</course-id>
+    <course-num type="integer">331</course-num>
+    <created-at type="datetime">2012-07-09T19:53:08Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">489</orig-id>
+    <room>9</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a0000c7</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:08Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a4092427372a000156</_id>
+    <block>C</block>
+    <course-id>4ffb36a2092427372a000047</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:08Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">3</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">508</orig-id>
+    <room>200</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">1</style-id>
+    <teacher-id>4ffb36a2092427372a00008b</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:08Z</updated-at>
+  </section>
+  <section>
+    <_id>4ffb36a4092427372a000157</_id>
+    <block>G</block>
+    <course-id>4ffb36a2092427372a000047</course-id>
+    <course-num type="integer">341</course-num>
+    <created-at type="datetime">2012-07-09T19:53:08Z</created-at>
+    <days nil="true"></days>
+    <dept nil="true"></dept>
+    <next-asst-num nil="true"></next-asst-num>
+    <number type="integer">2</number>
+    <occurrences type="array">
+      <occurrence type="integer">1</occurrence>
+      <occurrence type="integer">2</occurrence>
+      <occurrence type="integer">3</occurrence>
+      <occurrence type="integer">4</occurrence>
+      <occurrence type="integer">5</occurrence>
+    </occurrences>
+    <orig-id type="integer">509</orig-id>
+    <room>5</room>
+    <semester type="symbol">first</semester>
+    <semesters type="integer">12</semesters>
+    <style-id type="integer">4</style-id>
+    <teacher-id>4ffb36a2092427372a0000c1</teacher-id>
+    <updated-at type="datetime">2012-07-09T19:53:08Z</updated-at>
+  </section>
+</sections>

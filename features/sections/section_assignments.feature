@@ -32,7 +32,7 @@ Feature: Section assignments
 	Scenario: Assignment display
 		Given the following assignment:
 		 | name     | 105         |
-		 | contents | Final exame |
+		 | content | Final exame |
 		And that assignment is assigned to block "B"		
 		And that assignment is due 6/13/2012
 		
