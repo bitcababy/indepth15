@@ -3,7 +3,9 @@ require 'spec_helper'
 describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number).scoped_to(:academic_year) }
-	it { should have_and_belong_to_many(:tags) }
+	it { should have_and_belong_to_many(:course_tags) }
+	it { should have_and_belong_to_many(:major_tags) }
+	it { should belong_to(:branch) }
 	
 	context "A new course" do
 		subject {Fabricate(:course)}
@@ -39,32 +41,7 @@ describe Course do
 		end
 		
 	end
-	
-	context 'importing' do
-		describe '::convert_one' do
-			before :each do
-				hashes = Import::Course.import_and_create('course_info')
-				@hash = hashes.first
-				@hash.should_not be_nil
-				@course = Course.convert_record(@hash)
-			end
-
-			it "sets its year to the current academic_year" do
-				@course.academic_year.should == Settings.academic_year
-			end
-			
-			it "creates documents from the strings" do
-				@course.information_doc.should_not be_nil
-				@course.resources_doc.should_not be_nil
-				@course.policies_doc.should_not be_nil
-				@course.news_doc.should_not be_nil
-				@course.description_doc.should_not be_nil
-			end
-				
-		end
 		
-	end
-	
 	describe "#clone_for_year" do
 		it "copies all attributes and sets the year" do
 			course1 = Fabricate(:course, academic_year: Course::NO_YEAR)

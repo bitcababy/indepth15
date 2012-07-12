@@ -47,30 +47,30 @@ class Section
 		"#{course.full_name}#{course.academic_year}/#{self.teacher.login}/#{self.block}"
 	end
 		
-	class << self
-		def convert_record(hash)
-			year = hash['year']
-			return if year < Settings.start_year
-
-			occurrences = hash['which_occurrences']
-			semesters = hash['semesters']
-			teacher_id = hash['teacher_id']
-			hash['room'] = hash['room'].to_s
-			teacher = Teacher.find_by login: teacher_id
-			%W(which_occurrences semester sched_color year dept_id).each {|k| hash.delete(k)}
-
-			hash['occurrences'] = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
-			
-			hash['semester'] = [1,3,12].contains?(semesters) ? :first : :second
-			course = Course.find_by(number: hash['course_num'], academic_year: year)
-			raise "problem with section #{hash['orig_id']}" if course.sections.collect{|s| s.block}.contains? hash['block']
-			
-			section = course.sections.create!(hash)
-			section.teacher = teacher
-			section.save!
-			return section
-		end
-
-	end
+	# class << self
+	# 	def convert_record(hash)
+	# 		year = hash['year']
+	# 		return if year < Settings.start_year
+	# 
+	# 		occurrences = hash['which_occurrences']
+	# 		semesters = hash['semesters']
+	# 		teacher_id = hash['teacher_id']
+	# 		hash['room'] = hash['room'].to_s
+	# 		teacher = Teacher.find_by login: teacher_id
+	# 		%W(which_occurrences semester sched_color year dept_id).each {|k| hash.delete(k)}
+	# 
+	# 		hash['occurrences'] = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
+	# 		
+	# 		hash['semester'] = [1,3,12].contains?(semesters) ? :first : :second
+	# 		course = Course.find_by(number: hash['course_num'], academic_year: year)
+	# 		raise "problem with section #{hash['orig_id']}" if course.sections.collect{|s| s.block}.contains? hash['block']
+	# 		
+	# 		section = course.sections.create!(hash)
+	# 		section.teacher = teacher
+	# 		section.save!
+	# 		return section
+	# 	end
+	# 
+	# end
 
 end
