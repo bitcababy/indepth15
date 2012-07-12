@@ -1,10 +1,11 @@
-Fabricator(:document) do
+Fabricator(:document)
+
+Fabricator(:text_document) 
+
+Fabricator(:course_page) do
+	course		nil
 end
 
-Fabricator(:text_document, from: :document) do
-	content		''
-end
-
-Fabricator(:td_with_content, parent: :text_document) do
-	content "Lorem ipsum"
+Fabricator(:teacher_page) do
+	teacher		nil
 end
