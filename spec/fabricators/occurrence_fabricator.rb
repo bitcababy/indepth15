@@ -1,0 +1,2 @@
+Fabricator(:occurrence) do
+end

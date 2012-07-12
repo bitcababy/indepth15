@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<occurrences type="array">
+  <occurrence>
+    <_id>4ffc64f5092427246d000001</_id>
+    <block-name>A</block-name>
+    <day-number type="integer">1</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000002</_id>
+    <block-name>A</block-name>
+    <day-number type="integer">2</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000003</_id>
+    <block-name>A</block-name>
+    <day-number type="integer">4</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000004</_id>
+    <block-name>A</block-name>
+    <day-number type="integer">5</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000005</_id>
+    <block-name>A</block-name>
+    <day-number type="integer">7</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000006</_id>
+    <block-name>B</block-name>
+    <day-number type="integer">2</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000007</_id>
+    <block-name>B</block-name>
+    <day-number type="integer">3</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000008</_id>
+    <block-name>B</block-name>
+    <day-number type="integer">5</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000009</_id>
+    <block-name>B</block-name>
+    <day-number type="integer">6</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00000a</_id>
+    <block-name>B</block-name>
+    <day-number type="integer">8</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00000b</_id>
+    <block-name>C</block-name>
+    <day-number type="integer">1</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00000c</_id>
+    <block-name>C</block-name>
+    <day-number type="integer">3</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00000d</_id>
+    <block-name>C</block-name>
+    <day-number type="integer">4</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00000e</_id>
+    <block-name>C</block-name>
+    <day-number type="integer">6</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">1</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00000f</_id>
+    <block-name>C</block-name>
+    <day-number type="integer">7</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000010</_id>
+    <block-name>D</block-name>
+    <day-number type="integer">1</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000011</_id>
+    <block-name>D</block-name>
+    <day-number type="integer">3</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000012</_id>
+    <block-name>D</block-name>
+    <day-number type="integer">5</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000013</_id>
+    <block-name>D</block-name>
+    <day-number type="integer">6</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000014</_id>
+    <block-name>D</block-name>
+    <day-number type="integer">8</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">2</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000015</_id>
+    <block-name>E</block-name>
+    <day-number type="integer">2</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000016</_id>
+    <block-name>E</block-name>
+    <day-number type="integer">4</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000017</_id>
+    <block-name>E</block-name>
+    <day-number type="integer">5</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000018</_id>
+    <block-name>E</block-name>
+    <day-number type="integer">7</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000019</_id>
+    <block-name>E</block-name>
+    <day-number type="integer">8</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00001a</_id>
+    <block-name>F</block-name>
+    <day-number type="integer">1</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00001b</_id>
+    <block-name>F</block-name>
+    <day-number type="integer">3</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00001c</_id>
+    <block-name>F</block-name>
+    <day-number type="integer">4</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00001d</_id>
+    <block-name>F</block-name>
+    <day-number type="integer">6</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00001e</_id>
+    <block-name>F</block-name>
+    <day-number type="integer">8</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d00001f</_id>
+    <block-name>G</block-name>
+    <day-number type="integer">2</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000020</_id>
+    <block-name>G</block-name>
+    <day-number type="integer">3</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000021</_id>
+    <block-name>G</block-name>
+    <day-number type="integer">5</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000022</_id>
+    <block-name>G</block-name>
+    <day-number type="integer">7</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000023</_id>
+    <block-name>G</block-name>
+    <day-number type="integer">8</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000024</_id>
+    <block-name>H</block-name>
+    <day-number type="integer">1</day-number>
+    <occurrence type="integer">1</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000025</_id>
+    <block-name>H</block-name>
+    <day-number type="integer">2</day-number>
+    <occurrence type="integer">2</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000026</_id>
+    <block-name>H</block-name>
+    <day-number type="integer">4</day-number>
+    <occurrence type="integer">3</occurrence>
+    <period type="integer">5</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000027</_id>
+    <block-name>H</block-name>
+    <day-number type="integer">6</day-number>
+    <occurrence type="integer">4</occurrence>
+    <period type="integer">4</period>
+  </occurrence>
+  <occurrence>
+    <_id>4ffc64f5092427246d000028</_id>
+    <block-name>H</block-name>
+    <day-number type="integer">7</day-number>
+    <occurrence type="integer">5</occurrence>
+    <period type="integer">3</period>
+  </occurrence>
+</occurrences>

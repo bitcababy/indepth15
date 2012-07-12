@@ -1,0 +1,206 @@
+--- &70152282683500 !ruby/object:Mongoid::Criteria
+klass: !ruby/class 'Teacher'
+serializers:
+  _type: !ruby/object:Mongoid::Fields::Standard
+    name: _type
+    options:
+      :default: &70152305956620 !ruby/object:Proc {}
+      :type: !ruby/class 'String'
+    label: 
+    default_val: *70152305956620
+    pre_processed: false
+    type: !ruby/class 'String'
+  _id: !ruby/object:Mongoid::Fields::Standard
+    name: _id
+    options:
+      :default: &70152308451540 !ruby/object:Proc {}
+      :pre_processed: true
+      :type: !ruby/class 'Moped::BSON::ObjectId'
+    label: 
+    default_val: *70152308451540
+    pre_processed: true
+  created_at: !ruby/object:Mongoid::Fields::Standard
+    name: created_at
+    options:
+      :type: !ruby/class 'Time'
+    label: 
+    default_val: 
+  updated_at: !ruby/object:Mongoid::Fields::Standard
+    name: updated_at
+    options:
+      :type: !ruby/class 'Time'
+    label: 
+    default_val: 
+  honorific: !ruby/object:Mongoid::Fields::Standard
+    name: honorific
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  first_name: !ruby/object:Mongoid::Fields::Standard
+    name: first_name
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  middle_name: !ruby/object:Mongoid::Fields::Standard
+    name: middle_name
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  last_name: !ruby/object:Mongoid::Fields::Standard
+    name: last_name
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  email: !ruby/object:Mongoid::Fields::Standard
+    name: email
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  login: !ruby/object:Mongoid::Fields::Standard
+    name: login
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  password: !ruby/object:Mongoid::Fields::Standard
+    name: password
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  unique_name: !ruby/object:Mongoid::Fields::Standard
+    name: unique_name
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  current: !ruby/object:Mongoid::Fields::Standard
+    name: current
+    options:
+      :type: !ruby/class 'Boolean'
+    label: 
+    default_val: 
+    type: !ruby/class 'Boolean'
+  default_room: !ruby/object:Mongoid::Fields::Standard
+    name: default_room
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  home_page: !ruby/object:Mongoid::Fields::Standard
+    name: home_page
+    options:
+      :type: !ruby/class 'String'
+    label: 
+    default_val: 
+  generic_msg_doc_id: !ruby/object:Mongoid::Fields::ForeignKey
+    name: generic_msg_doc_id
+    options:
+      :type: !ruby/class 'Object'
+      :identity: true
+      :metadata: !ruby/hash:Mongoid::Relations::Metadata
+        :relation: !ruby/class 'Mongoid::Relations::Referenced::In'
+        :extend: 
+        :inverse_class_name: Teacher
+        :name: :generic_msg_doc
+        :class_name: TeacherPage
+        :inverse_of: :teacher
+        :validate: false
+      :default: 
+    label: 
+    default_val: 
+  upcoming_msg_doc_id: !ruby/object:Mongoid::Fields::ForeignKey
+    name: upcoming_msg_doc_id
+    options:
+      :type: !ruby/class 'Object'
+      :identity: true
+      :metadata: !ruby/hash:Mongoid::Relations::Metadata
+        :relation: !ruby/class 'Mongoid::Relations::Referenced::In'
+        :extend: 
+        :inverse_class_name: Teacher
+        :name: :upcoming_msg_doc
+        :class_name: TeacherPage
+        :inverse_of: :teacher
+        :validate: false
+      :default: 
+    label: 
+    default_val: 
+driver: :moped
+aliases:
+  id: _id
+  generic_msg_doc: generic_msg_doc_id
+  upcoming_msg_doc: upcoming_msg_doc_id
+selector: &70152282693560 !ruby/hash:Origin::Selector
+  _type:
+    $in:
+    - Teacher
+options: !ruby/hash:Origin::Options {}
+inclusions: []
+scoping_options:
+- 
+- 
+documents: []
+context: !ruby/object:Mongoid::Contextual::Mongo
+  cache: 
+  klass: !ruby/class 'Teacher'
+  criteria: *70152282683500
+  query: !ruby/object:Moped::Query
+    selector: *70152282693560
+    collection: !ruby/object:Moped::Collection
+      database: &70152283606240 !ruby/object:Moped::Database
+        session: &70152283347480 !ruby/object:Moped::Session
+          cluster: !ruby/object:Moped::Cluster
+            options:
+              :down_interval: 30
+              :refresh_interval: 300
+            seeds:
+            - localhost:27017
+            nodes:
+            - !ruby/object:Moped::Node
+              address: localhost:27017
+              ip_address: !binary |-
+                MTI3LjAuMC4x
+              port: 27017
+              resolved_address: !binary |-
+                MTI3LjAuMC4xOjI3MDE3
+              timeout: 5
+              down_at: 
+              refreshed_at: 2012-07-10 13:46:48.466555000 -04:00
+              primary: true
+              secondary: 
+              connection: !ruby/object:Moped::Connection
+                sock: !ruby/object:Moped::Connection::TCPSocket {}
+                request_id: 2
+              peers: []
+              arbiter: 
+              passive: 
+              auth: {}
+            auth: {}
+          context: !ruby/object:Moped::Session::Context
+            session: *70152283347480
+          options: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+            safe: true
+            consistency: :eventual
+            database: depth_charge_development
+          current_database: *70152283606240
+        name: depth_charge_development
+      name: :users
+    operation: !ruby/object:Moped::Protocol::Query
+      database: depth_charge_development
+      collection: :users
+      full_collection_name: depth_charge_development.users
+      selector: *70152282693560
+      request_id: 0
+      flags: []
+      limit: 0
+      skip: 0
+      fields: 
+  length: 27
+  cache_loaded: true
+strategy: 
+negating: 

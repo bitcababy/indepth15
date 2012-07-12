@@ -4,17 +4,14 @@ describe MenubarCell do
 	include CourseHelper
 
   context "cell rendering" do 
-    
-    context "rendering display" do
-      subject { render_cell(:menubar, :display) }
-  		it { should have_selector('ul#menubar') }
-    end
-    
-    context "rendering display_home" do
-      subject { render_cell(:menubar, :display_home) }
-			it { should have_selector('li#home', text: 'Home') }
-    end
-    
+	
+		# context "rendering display_home" do
+		#       subject { render_cell(:menubar, :display_home) }
+		# 	it { should have_selector('li', text: 'Home') }
+		# 	it { should have_selector('ul li', text: 'Sign in') }
+		# 	it { should have_selector('ul li', text: 'About') }
+		# end
+
     context "rendering display_courses" do
 			before :each do
 				setup_courses(courses: 3, max_sections: 5, teachers: 3)
@@ -40,19 +37,19 @@ describe MenubarCell do
 			end
     end
     
-    context "rendering display_teachers" do
+    context "rendering display_faculty" do
 			before :each do
 				4.times { Fabricate(:teacher) }
 			end
 
-      subject { render_cell(:menubar, :display_teachers) }
- 			it { should have_selector('li', text: 'Teachers') }
+      subject { render_cell(:menubar, :display_faculty) }
+ 			it { should have_selector('li', text: 'Faculty') }
 
 			it "should list each teacher, sorted by last name" do
 				teachers = Teacher.current.order_by_name
-	    	res = render_cell(:menubar, :display_teachers)
+	    	res = render_cell(:menubar, :display_faculty)
 
-				menu = res.find('ul#teachers')
+				menu = res.find('ul#faculty')
 				menu.should_not be_nil
 				for teacher in teachers do
 					menu.should have_selector('li', text: teacher.formal_name)
@@ -63,8 +60,14 @@ describe MenubarCell do
     context "rendering display_admin" do
       subject { render_cell(:menubar, :display_admin) }
   
-      it { should have_selector("h1", :content => "Menubar#display_admin") }
-      it { should have_selector("p", :content => "Find me in app/cells/menubar/display_admin.html") }
+    end
+
+    context "rendering display" do
+      subject { render_cell(:menubar, :display) }
+  		it { should have_selector('ul#menubar') }
+  		it { should have_selector('li', text: 'Home') }
+  		it { should have_selector('li', text: 'Courses') }
+  		it { should have_selector('li', text: 'Faculty') }
     end
     
   end
@@ -72,6 +75,10 @@ describe MenubarCell do
 
   context "cell instance" do 
     subject { cell(:menubar) } 
+
+		it { should respond_to :current_user }
+
+		it { should respond_to :user_signed_in? }
     
     it { should respond_to(:display) }
     
@@ -79,7 +86,7 @@ describe MenubarCell do
     
     it { should respond_to(:display_courses) }
     
-    it { should respond_to(:display_teachers) }
+    it { should respond_to(:display_faculty) }
     
     it { should respond_to(:display_admin) }
     

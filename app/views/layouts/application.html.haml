@@ -6,5 +6,9 @@
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	%body
+		= render_cell :menubar, :display
+		%p.notice= notice
+		%p.alert= alert
+		
 		#page_header= content_for?(:page_header) ? (yield :page_header) : "The header"
 		= yield

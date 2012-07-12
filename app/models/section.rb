@@ -7,7 +7,6 @@ class Section
 	field :dept, type: Integer
 	field :number, type: Integer
 	field :block, type: String
-	field :days, type: Array
 	field :room, type: String
 	field :next_asst_num, type: Integer
 	field :semester, type: Symbol
@@ -20,6 +19,12 @@ class Section
 	has_many :section_assignments
 
 	validates_uniqueness_of :number, scope: :course, allow_nil: true
+	
+	cattr_reader :blocks, :semesters, :occurrences
+	
+	@@blocks = ('A'..Settings.last_block).to_a
+	@@occurrences = (1..Settings.max_occurrences).to_a
+	@@semesters = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 		
 	def to_s
 		"Section #{self.number}, block: #{self.block}"
@@ -55,6 +60,7 @@ class Section
 			%W(which_occurrences semester sched_color year dept_id).each {|k| hash.delete(k)}
 
 			hash['occurrences'] = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
+			
 			hash['semester'] = [1,3,12].contains?(semesters) ? :first : :second
 			course = Course.find_by(number: hash['course_num'], academic_year: year)
 			raise "problem with section #{hash['orig_id']}" if course.sections.collect{|s| s.block}.contains? hash['block']

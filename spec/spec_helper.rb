@@ -9,6 +9,7 @@ end
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'email_spec'
 require 'rspec/autorun'
 require 'capybara/rspec'
 require 'fabrication/syntax/make'
@@ -36,6 +37,8 @@ RSpec.configure do |config|
   config.infer_base_class_for_anonymous_controllers = false
 	config.include Mongoid::Matchers
 	config.include Devise::TestHelpers, :type => :controller
+  config.include(EmailSpec::Helpers)
+  config.include(EmailSpec::Matchers)
 	
 	config.before(:each) do
 		DatabaseCleaner.clean

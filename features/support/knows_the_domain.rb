@@ -1,8 +1,12 @@
 module KnowsTheDomain
-	def the_user
+	def guest
 		@the_user ||= Fabricate(:guest)
 	end
 	
+	def logged_in_user
+		@the_user ||= Fabricate(:guest)
+	end
+
 	def the_user=(u)
 		@the_user = u
 	end

@@ -1,15 +1,19 @@
-Feature: Menubar
+Feature: User menubar
 
-	Background:
-		When I visit any page
-	
   Scenario: The menubar
-		Then I should see a menubar 
-		And the menubar should have a menu named "<name>":
+		When I visit any page
+		Then I should see a menubar with these menus:
 		 | name     |
 		 | Home     |
 		 | Courses  |
-		 | Teachers |
+		 | Faculty  |
+
+	Scenario: Teacher
+		Given I'm signed in as a teacher
+		When I visit any page
+		# Then I should see a menubar with these menus:
+		#  | name  |
+		#  | Admin |
 
 
 	# Scenario: The teachers menu

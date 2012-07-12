@@ -5,10 +5,12 @@ class Course
 	
 	NO_YEAR = -1
 	
+	
 	FULL_YEAR = :full_year
 	FIRST_SEMESTER = :first_semester
 	SECOND_SEMESTER = :second_semester
 	FULL_YEAR_HALF_TIME = :halftime
+	DURATIONS = [FULL_YEAR, FIRST_SEMESTER, SECOND_SEMESTER, FULL_YEAR_HALF_TIME]
 	
 	field :number, type: Integer
 	field :academic_year, type: Integer, default: NO_YEAR
@@ -20,18 +22,19 @@ class Course
 	field :in_catalog, type: Boolean, default: true
 	field :occurrences, type: Integer, default: 5
 	field :has_assignments, type: Boolean
-	field :orig_id, type: Integer
 
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 	
 	has_many :sections
 	belongs_to :information_doc, class_name: 'CoursePage'
-	belongs_to :resource_doc, class_name: 'CoursePage'
+	belongs_to :resources_doc, class_name: 'CoursePage'
 	belongs_to :policies_doc, class_name: 'CoursePage'
 	belongs_to :news_doc, class_name: 'CoursePage'
 	belongs_to :description_doc, class_name: 'CoursePage'
 
-	has_and_belongs_to_many :tags, inverse_of: nil
+	has_and_belongs_to_many :course_tags, class_name: 'Tag::Course'
+	has_and_belongs_to_many :major_tags, class_name: 'Tag::Major'
+	belongs_to :branch, class_name: 'Tag::Branch'
 
 	validates_uniqueness_of :number, scope: :academic_year
 	
@@ -56,6 +59,22 @@ class Course
 	}
 
 	class << self
+		BRANCH_MAP = {
+			321 => 'Geometry',
+			322 => 'Geometry',
+			326 => 'Algebra',
+			331 => 'Algebra',
+			332 => 'Algebra',
+			333 => 'Algebra',
+			341 => 'Precalculus',
+			342 => 'Precalculus',
+			343 => 'Discrete Math',
+			352 => 'Precalculus',
+			361 => 'Calculus',
+			371 => 'Calculus',
+			391 => 'Statistics',
+		}
+
 		def massage_hash(hash)
 			hash[:duration] = SEMESTER_MAP[hash[:semester].to_i]
 			# [:semester].each {|k| hash.delete(k)}
@@ -65,16 +84,21 @@ class Course
 		# importing
 		# 
 		def convert_record(hash)
-			hash['duration'] = SEMESTER_MAP[hash['semester'].to_i]
+			hash['duration'] = SEMESTER_MAP[hash['semesters'].to_i]
 			info = hash['info']
 			resources = hash['resources']
 			policies = hash['policies']
 			prog_of_studies_descr = hash['prog_of_studies_descr']
-			%W(semester info resources policies prog_of_studies_descr).each {|k| hash.delete(k)}
-		
-			course = self.new hash
+			%W(semesters info resources policies prog_of_studies_descr orig_id).each {|k| hash.delete(k)}
+			
+			course = self.create! hash
+			course_tag = Tag::Course.find_or_create_by(label: course.full_name)
 			doc = course.create_information_doc content: info
-			course.create_resource_doc content: resources
+			doc.tags << course_tag
+			branch_tag = BRANCH_MAP[course.number]
+			course.branch = Tag::Branch.find_or_initialize_by(label: branch_tag) if branch_tag
+			
+			course.create_resources_doc(content: resources)
 			course.create_news_doc
 			course.create_policies_doc content: policies
 			course.create_description_doc content: prog_of_studies_descr

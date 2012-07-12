@@ -7,6 +7,10 @@ When /^that teacher "(.*?)" has a personal website$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end
 
+When /^I'm teaching a section of course (\d+)$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
 Then /^I should see a picture of the teacher$/ do
   pending # express the regexp above with the code you wish you had
 end

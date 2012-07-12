@@ -1,5 +1,20 @@
 DepthCharge::Application.routes.draw do
 
+  get "home/menu"
+
+  # devise_for :users
+
+	devise_scope :user do
+		get 'sign_in', to: 'devise/sessions#new'
+		get 'sign_out', to: 'devise/sessions#destroy'
+	end
+
+	resources 'courses', :module => 'admin' do
+		resources :sections, :only => [:new]
+	end
+	
+	resources :sections, :module => 'admin', :except => [:new]
+
   get "menus/show"
 
 	get 'courses/:id/home', to: 'courses#home', as: :course_home

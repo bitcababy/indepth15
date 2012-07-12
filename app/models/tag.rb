@@ -1,9 +1,8 @@
 class Tag
   include Mongoid::Document
 	field :content, type: String
-	field :tagged, type: Array, default: []
 	
-	has_many :tagged, inverse_of: tags
+	has_and_belongs_to_many :documents
 
 	class << self
 		def add(txt)

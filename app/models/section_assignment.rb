@@ -3,13 +3,14 @@ class SectionAssignment
 
 	field :due_date, type: Date
 	field :published, type: Boolean
+	field :name, type: String
 	
 	belongs_to :section
 	belongs_to :assignment
 	
 	scope :future, -> { gte(due_date: Utils.future_due_date) }
 	scope :past, -> { lt(due_date: Utils.future_due_date) }
-	
+
 	class << self
 		def convert_record(hash)
 			assgt_id = hash['assgt_id']
@@ -31,7 +32,7 @@ class SectionAssignment
 			end
 			# puts "Section: #{section}"
 			assignment = Assignment.find_by(orig_id: assgt_id)
-			Tag.tag_obj(course.full_name, assignment)
+			assignment.tags << Tag.find_or_create_by(label: course.full_name)
 
 			%W(assgt_id schoolyear use_assgt block teacher_id).each {|k| hash.delete(k)}
 			

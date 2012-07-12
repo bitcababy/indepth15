@@ -6,7 +6,9 @@ defaults: &defaults
   cutoff:
     hour: 15
     minute: 0
-  start_year: 2010
+  start_year: 2011
+  last_block: H
+  max_occurrences: 5
 
 development:
   <<: *defaults

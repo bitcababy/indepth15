@@ -55,7 +55,7 @@ describe Course do
 			
 			it "creates documents from the strings" do
 				@course.information_doc.should_not be_nil
-				@course.resource_doc.should_not be_nil
+				@course.resources_doc.should_not be_nil
 				@course.policies_doc.should_not be_nil
 				@course.news_doc.should_not be_nil
 				@course.description_doc.should_not be_nil

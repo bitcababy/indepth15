@@ -1,9 +1,8 @@
 class Assignment < TextDocument
-	field :orig_id, type: Integer
 	field :name, type: String
 
 	has_many :section_assignments			# Joins sections and assignments, with a due date
-		
+
 	class << self
 		def convert_record(hash)
 			teacher_id = hash['teacher_id']
@@ -11,9 +10,9 @@ class Assignment < TextDocument
 			%W(teacher_id kind description year name).each {|k| hash.delete(k)}
 			
 			assignment = Assignment.create!(hash)
-				
-			Tag.tag_obj(teacher_id, assignment)
-			Tag.tag_obj(:assignment, assignment)
+			assignment.tags << Tag::Author.find_or_create_by(author: Teacher.find_by(login: teacher_id))
+			assignment.tags << Tag::ContentType.find_or_create_by(label: 'assignment')
+			assignment.save!
 			return assignment
 		end
 

@@ -5,36 +5,16 @@
 - http://www.phpmyadmin.net
 -
 - Host: outhouse.wildwoodweb.net
-- Generation Time: Jun 29, 2012 at 11:36 AM
+- Generation Time: Jul 10, 2012 at 01:22 PM
 - Server version: 5.0.51
 - PHP Version: 5.3.3-7+squeeze8
 -->
 
-<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+<pma_xml_export version="1.0">
     <!--
-    - Structure schemas
+    - Database: 'wmdhs_export'
     -->
-    <pma:structure_schemas>
-        <pma:database name="wmdhs" collation="utf8_general_ci" charset="utf8">
-            <pma:table name="occurrences">
-                CREATE TABLE `occurrences` (
-                  `id` int(11) NOT NULL auto_increment,
-                  `block_name` char(1) NOT NULL default '',
-                  `occurrence` tinyint(4) NOT NULL default '0',
-                  `day_num` tinyint(4) NOT NULL default '0',
-                  `period` tinyint(4) NOT NULL default '0',
-                  `updated_at` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-                  UNIQUE KEY `block_occ` (`block_name`,`occurrence`),
-                  UNIQUE KEY `id` (`id`)
-                ) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
-            </pma:table>
-        </pma:database>
-    </pma:structure_schemas>
-
-    <!--
-    - Database: 'wmdhs'
-    -->
-    <database name="wmdhs">
+    <database name="wmdhs_export">
         <!-- Table occurrences -->
         <table name="occurrences">
             <column name="id">1</column>

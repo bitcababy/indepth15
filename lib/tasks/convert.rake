@@ -13,6 +13,36 @@ def dump_records(klass)
 	end
 end
 
+namespace :db do
+	desc 'load all records from xml'
+	task :load => :environment do
+		for k in [Import::Occurrence, Import::Teachers, Import::Course, Import::Section, 
+										Import::Assignment, Import::SectionAssignment] do
+			k.load_from_data
+		end
+	end
+end
+
+namespace :occurrences do
+	desc 'Import teachers'
+	task :import => :environment do
+		Import::Occurrence.import_and_create
+	end
+	desc "Export teachers"
+	task :export => :environment do
+		Import::Occurrence.export_to_xml
+	end
+	desc "Load teachers"
+	task :load => :environment do
+		Import::Occurrence.load_from_data
+	end
+	task :dump => :environment do
+		dump_records(Occurrence)
+	end
+	task :ld => [:load, :dump]
+	task :all => [:import, :export, :load, :dump]
+end
+
 desc 'import'
 namespace :teachers do
 	desc 'Import teachers'
@@ -30,8 +60,8 @@ namespace :teachers do
 	task :dump => :environment do
 		dump_records(Teacher)
 	end
+	task :ld => [:load, :dump]
 	task :all => [:import, :export, :load, :dump]
-	
 end
 
 namespace :courses do
@@ -50,7 +80,7 @@ namespace :courses do
 	task :dump => :environment do
 		dump_records(Course)
 	end
-	
+	task :ld => [:load, :dump]
 	task :all => [:import, :export, :load, :dump]
 end
 
@@ -71,7 +101,7 @@ namespace :sections do
 	task :dump => :environment do
 		dump_records(Section)
 	end
-
+	task :ld => [:load, :dump]
 	task :all => [:import, :export, :load, :dump]
 end
 
@@ -91,6 +121,7 @@ namespace :assignments do
 	task :dump => [:load, :environment] do
 		dump_records(Assignment)
 	end
+	task :ld => [:load, :dump]
 	task :all => [:import, :export, :load, :dump]
 end
 
@@ -110,6 +141,7 @@ namespace :sas do
 	task :dump => :environment do
 		dump_records(SectionAssignment)
 	end
+	task :ld => [:load, :dump]
 	task :all => [:import, :export, :load, :dump]
 end
 
@@ -118,5 +150,6 @@ namespace :tags do
 		dump_records(Tag)
 	end
 end
+
 	
 

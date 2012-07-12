@@ -1,4 +1,19 @@
-class Teacher < RegisteredUser
+class Teacher < Author
+
+	field :honorific, type:String
+	field :first_name, type: String
+	field :middle_name, type: String
+	field :last_name, type: String
+	field :password, type: String		# This will change once devise is added
+
+	def formal_name
+		"#{self.honorific} #{self.last_name}"
+	end
+
+	def to_s
+		"#{self.first_name} #{self.last_name}"
+	end
+
 	# @@next_id = (Teacher.count > 0 ? Teacher.last.id : 0)
 	field :unique_name, type: String
 	field :current, type: Boolean
@@ -6,8 +21,8 @@ class Teacher < RegisteredUser
 	field :home_page, type: String
 
 	has_many :sections
-	belongs_to :generic_msg_doc, class_name: 'TeacherDocument', inverse_of: :teacher
-	belongs_to :upcoming_msg_doc, class_name: 'TeacherDocument', inverse_of: :teacher
+	belongs_to :generic_msg_doc, class_name: 'TeacherPage', inverse_of: :teacher
+	belongs_to :upcoming_msg_doc, class_name: 'TeacherPage', inverse_of: :teacher
 
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
@@ -29,11 +44,11 @@ class Teacher < RegisteredUser
 		gm = hash['generic_msg']
 		um = hash['upcoming_msg']
 		
-		%W(phrase old_current generic_msg upcoming_msg teacher_id).each {|k| hash.delete(k)}
-		teacher = self.new hash
+		%W(phrase old_current generic_msg upcoming_msg teacher_id orig_id).each {|k| hash.delete(k)}
+		teacher = self.create! hash
 		teacher.create_generic_msg_doc content: gm
 		teacher.create_upcoming_msg_doc content: um
-		teacher.save!
+		Tag::Author.create!(author: teacher)
 		teacher
 	end
 

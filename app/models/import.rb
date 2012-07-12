@@ -155,6 +155,7 @@ class Import
 					klass.convert_record(new_hash)
 				end
 			end
+			self.delete_all
 		end
 		
 	end

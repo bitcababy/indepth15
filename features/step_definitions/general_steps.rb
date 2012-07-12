@@ -9,7 +9,11 @@ end
 ## Whens
 ##
 When /^I visit any page$/ do
-  visit root_path
+	if @current_user then
+		visit root_path + "?auth_token=#{@current_user.authentication_token}"
+	else
+		visit root_path
+	end
 end
 
 ##
@@ -26,4 +30,9 @@ end
 
 Then /^I should see "(.*?)"$/ do |arg1|
   page.should have_content(arg1)
+end
+
+
+Then /^I should see (?:an|a) "(.+?)" button$/ do |button_name|
+  pending # express the regexp above with the code you wish you had
 end
