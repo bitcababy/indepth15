@@ -40,17 +40,82 @@ class Course
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 	
 	has_many :sections
-	belongs_to :information_doc, class_name: 'CoursePage'
-	belongs_to :resources_doc, class_name: 'CoursePage'
-	belongs_to :policies_doc, class_name: 'CoursePage'
-	belongs_to :news_doc, class_name: 'CoursePage'
-	belongs_to :description_doc, class_name: 'CoursePage'
+	
+	# has_one :information_doc, class_name: 'CoursePage'
+	# has_one :resources_doc, class_name: 'CoursePage'
+	# has_one :policies_doc, class_name: 'CoursePage'
+	# has_one :news_doc, class_name: 'CoursePage'
+	# has_one :description_doc, class_name: 'CoursePage'
 
-	has_and_belongs_to_many :course_tags, class_name: 'Tag::Course'
-	has_and_belongs_to_many :major_tags, class_name: 'Tag::Major'
 	belongs_to :branch, class_name: 'Tag::Branch'
 
+	has_many :course_pages
+	has_and_belongs_to_many :course_tags, class_name: 'Tag::Course'
+	has_and_belongs_to_many :major_tags, class_name: 'Tag::Major'
+
 	validates_uniqueness_of :number, scope: :academic_year
+	
+	def information_doc
+		CoursePage.find_or_create_by(course: self, kind: :information)
+	end
+
+	def resources_doc
+		CoursePage.find_or_create_by(course: self, kind: :resources)
+	end
+
+	def policies_doc
+		CoursePage.find_or_create_by(course: self, kind: :policies)
+	end
+
+	def news_doc
+		CoursePage.find_or_create_by(course: self, kind: :news)
+	end
+
+	def description_doc
+		CoursePage.find_or_create_by(course: self, kind: :description)
+	end
+	
+	attr_accessor :information, :policies, :news, :resources, :description
+	
+	def information
+		self.information_doc.content
+	end
+	
+	def information=(txt)
+		self.information_doc.content = txt
+	end
+	
+	def resources
+		self.resources_doc.content
+	end
+	
+	def resources=(txt)
+		self.resources_doc.content = txt
+	end
+	
+	def resources
+		self.resources_doc.content
+	end
+	
+	def policies=(txt)
+		self.policies_doc.content = txt
+	end
+	
+	def news
+		self.news_doc.content
+	end
+	
+	def news=(txt)
+		self.news_doc.content = txt
+	end
+	
+	def description
+		self.description_doc.content
+	end
+	
+	def description=(txt)
+		self.description_doc.content = txt
+	end
 	
 	def teachers
 		(sections.collect {|s| s.teacher}).uniq
@@ -72,42 +137,34 @@ class Course
 		3 => FULL_YEAR_HALF_TIME,
 	}
 
-	# class << self
-	# 	def massage_hash(hash)
-	# 		hash[:duration] = SEMESTER_MAP[hash[:semester].to_i]
-	# 		# [:semester].each {|k| hash.delete(k)}
-	# 	end
-	# 
-	# 	#
-	# 	# importing
-	# 	# 
-	# 	def convert_record(hash)
-	# 		hash['duration'] = SEMESTER_MAP[hash['semesters'].to_i]
-	# 		info = hash['info']
-	# 		resources = hash['resources']
-	# 		policies = hash['policies']
-	# 		prog_of_studies_descr = hash['prog_of_studies_descr']
-	# 		%W(semesters info resources policies prog_of_studies_descr orig_id).each {|k| hash.delete(k)}
-	# 		
-	# 		course = self.create! hash
-	# 		course_tag = Tag::Course.find_or_create_by(label: course.full_name)
-	# 		doc = course.create_information_doc content: info
-	# 		doc.tags << course_tag
-	# 		branch_tag = BRANCH_MAP[course.number]
-	# 		course.branch = Tag::Branch.find_or_initialize_by(label: branch_tag) if branch_tag
-	# 		
-	# 		course.create_resources_doc(content: resources)
-	# 		course.create_news_doc
-	# 		course.create_policies_doc content: policies
-	# 		course.create_description_doc content: prog_of_studies_descr
-	# 		course.academic_year = Settings.academic_year
-	# 		course.save!
-	# 		(Settings.academic_year - 1).downto(Settings.start_year) do |y|
-	# 			course.clone_for_year y
-	# 		end
-	# 		course
-	# 	end
-	# end
+	class << self
+		def import_from_hash(hash)
+			hash[:duration] = SEMESTER_MAP[hash[:semesters].to_i]
+			info = hash[:info]
+			resources = hash[:resources]
+			policies = hash[:policies]
+			prog_of_studies_descr = hash[:prog_of_studies_descr]
+			%W(semesters info resources policies prog_of_studies_descr).each {|k| hash.delete(k)}
+			
+			course = self.create! hash
+			course_tag = Tag::Course.find_or_create_by(label: course.full_name)
+			branch_tag = BRANCH_MAP[course.number]
+			course.branch = Tag::Branch.find_or_initialize_by(label: branch_tag) if branch_tag
+			
+			course.information = info
+			course.resources = resources
+			course.resources = resources
+			course.policies = policies
+			course.description = prog_of_studies_descr
+			
+			course.academic_year = Settings.academic_year
+			course.save!
+			(Settings.academic_year - 1).downto(Settings.start_year) do |y|
+				course.clone_for_year y
+			end
+			course
+		end
+	end
 	
 end
 	

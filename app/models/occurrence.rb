@@ -5,9 +5,9 @@ class Occurrence
 	field :occurrence, type: Integer
 	field :day_number, type: Integer
 	field :period, type: Integer
-	
-	# def self.convert_record(hash)
-	# 	Occurrence.create! hash
-	# end
+
+	def self.import_from_hash(hash)
+		Occurrence.create! hash
+	end
 		
 end
