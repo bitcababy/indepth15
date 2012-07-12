@@ -37,7 +37,8 @@ gem 'thin'
 gem 'devise'
 gem 'haml'
 gem 'coffee-filter'
-gem 'cells', path: '/Users/mer/Projects/Rails/cells' #, 			git: 'git@github.com:bitcababy/cells.git'
+gem "cells", :git => "git://github.com/apotonick/cells.git"
+# gem 'cells'#, path: '/Users/mer/Projects/Rails/cells' #, 			git: 'git@github.com:bitcababy/cells.git'
 gem 'mongo'
 gem 'mongoid'
 gem 'bson_ext'
@@ -46,9 +47,10 @@ gem 'settingslogic'
 gem 'xml-simple'
 gem 'heroku'
 gem 'state_machine'
+gem 'formtastic'
+gem 'client_side_validations'
 
 group :development, :test do
-	gem 'state_machine'
 	gem 'grizzled-rails-logger'
 	gem 'rspec-rails'
 	gem 'ruby_gntp'
@@ -80,5 +82,6 @@ group :test do
 	# gem 'akephalos2', require: 'akephalos', git: 'git@github.com:bitcababy/akephalos2.git'
 	gem 'hpricot'
 	gem 'simplecov'
+	gem 'email_spec'
 end
 

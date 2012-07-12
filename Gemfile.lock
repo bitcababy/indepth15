@@ -1,7 +1,8 @@
-PATH
-  remote: /Users/mer/Projects/Rails/cells
+GIT
+  remote: git://github.com/apotonick/cells.git
+  revision: cc2ea5946a39e54a01358549fd8e6e0c70bbbed8
   specs:
-    cells (3.8.3)
+    cells (3.8.5)
       actionpack (~> 3.0)
       railties (~> 3.0)
 
@@ -63,6 +64,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.3)
       ffi (~> 1.0.6)
+    client_side_validations (3.1.4)
     coffee-filter (0.1.1)
       coffee-script (>= 2.2.0)
       haml (>= 3.0.18)
@@ -90,6 +92,9 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     diff-lcs (1.1.3)
+    email_spec (1.2.1)
+      mail (~> 2.2)
+      rspec (~> 2.0)
     erubis (2.7.0)
     eventmachine (0.12.10)
     excon (0.14.3)
@@ -97,6 +102,8 @@ GEM
       multi_json (~> 1.0)
     fabrication (2.1.0)
     ffi (1.0.11)
+    formtastic (2.2.1)
+      actionpack (>= 3.0)
     gherkin (2.11.1)
       json (>= 1.4.6)
     grizzled-rails-logger (0.1.5)
@@ -130,7 +137,7 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
-    heroku (2.28.10)
+    heroku (2.28.11)
       heroku-api (~> 0.2.7)
       launchy (>= 0.3.2)
       netrc (~> 0.7.5)
@@ -276,12 +283,15 @@ DEPENDENCIES
   bson_ext
   capybara
   cells!
+  client_side_validations
   coffee-filter
   coffee-rails (~> 3.2.1)
   cucumber-rails (>= 1.2.1)
   database_cleaner
   devise
+  email_spec
   fabrication (>= 2.0)
+  formtastic
   grizzled-rails-logger
   growl
   growl_notify
