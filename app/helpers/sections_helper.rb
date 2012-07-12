@@ -2,6 +2,6 @@
 
 module SectionsHelper
 	def assignments_header(section)
-		"#{section.teacher.formal_name}'s #{academic_year_string} Assignments for Block #{section.block}"
+		"#{section.teacher.formal_name}'s #{academic_year_string(Settings.academic_year)} Assignments for Block #{section.block}"
 	end
 end

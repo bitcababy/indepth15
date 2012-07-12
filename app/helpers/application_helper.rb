@@ -2,8 +2,8 @@
 
 module ApplicationHelper
 
-	def academic_year_string
-		return "#{Settings.academic_year-1}–#{Settings.academic_year}"
+	def academic_year_string(year)
+		return "#{year-1}—#{year}"
 	end
 	
 	def assignment_date_string(date)
