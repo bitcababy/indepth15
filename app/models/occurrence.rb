@@ -6,8 +6,8 @@ class Occurrence
 	field :day_number, type: Integer
 	field :period, type: Integer
 	
-	def self.convert_record(hash)
-		Occurrence.create! hash
-	end
+	# def self.convert_record(hash)
+	# 	Occurrence.create! hash
+	# end
 		
 end
