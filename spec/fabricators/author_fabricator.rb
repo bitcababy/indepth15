@@ -1,2 +1,0 @@
-Fabricator(:author) do
-end

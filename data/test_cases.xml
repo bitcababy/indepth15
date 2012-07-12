@@ -1,175 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <test-cases type="array">
   <test-case>
-    <_id>4ff9b14b092427f570000001</_id>
+    <_id>4fff025c09242749f7000087</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">203</default-room>
+    <default-room>203</default-room>
     <first-name>Joshua</first-name>
     <generic-msg nil="true"></generic-msg>
     <home-page>http://www.westonmath.org/test_cases/abramsj/math4/quotes.html</home-page>
     <honorific>Mr.</honorific>
-    <id nil="true"></id>
     <last-name>Abrams</last-name>
-    <old-current type="integer">1</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">true</old-current>
+    <orig-id type="integer">1</orig-id>
     <photo-url>http://www.westonmath.org/test_cases/abramsj/math4/picture.jpg</photo-url>
     <phrase>temp</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg nil="true"></upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000002</_id>
+    <_id>4fff025c09242749f7000088</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">200</default-room>
+    <default-room>200</default-room>
     <first-name>Beverly</first-name>
     <generic-msg>Check the posted dates due in the upcoming and past assignments. The "current" assignment as posted may not be the one due.
 Note: To check for earlier assignment, scroll done to the bottom.</generic-msg>
     <home-page nil="true"></home-page>
     <honorific>Mrs.</honorific>
-    <id nil="true"></id>
     <last-name>Brown</last-name>
-    <old-current type="integer">0</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">false</old-current>
+    <orig-id type="integer">2</orig-id>
     <photo-url nil="true"></photo-url>
     <phrase>la ea na na ia ea</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg>Note: Assignments are subject to change depending on extenuating circumstances.</upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000003</_id>
+    <_id>4fff025c09242749f7000089</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">20</default-room>
+    <default-room>20</default-room>
     <first-name>Joyce</first-name>
     <generic-msg>&lt;i&gt;&lt;b&gt;Note: All homework without shown work will not be awarded full credit.&lt;/b&gt;&lt;/i&gt;</generic-msg>
     <home-page nil="true"></home-page>
     <honorific>Ms.</honorific>
-    <id nil="true"></id>
     <last-name>Bunten</last-name>
-    <old-current type="integer">0</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">false</old-current>
+    <orig-id type="integer">3</orig-id>
     <photo-url nil="true"></photo-url>
     <phrase>very few triangles are truly equilateral</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg>&lt;font color=red&gt;&lt;i&gt;Note: These assignments are subject to change, depending on class activities and various factors out of our control.&lt;/i&gt;&lt;/font&gt;</upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000004</_id>
+    <_id>4fff025c09242749f700008a</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">200</default-room>
+    <default-room>200</default-room>
     <first-name>Larry</first-name>
     <generic-msg>&lt;p&gt;&lt;b&gt;Note: &lt;/b&gt;&lt;i&gt;These assignments combine classwork and homework.&lt;/i&gt;&lt;/p&gt;</generic-msg>
     <home-page>http://www.larrydavidson.com/</home-page>
     <honorific>Mr.</honorific>
-    <id nil="true"></id>
     <last-name>Davidson</last-name>
-    <old-current type="integer">1</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">true</old-current>
+    <orig-id type="integer">4</orig-id>
     <photo-url>/images/ljd-rsa-smaller.gif</photo-url>
     <phrase>e to the i pi is negative 1</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg>&lt;p&gt;&lt;b&gt;Note: &lt;/b&gt;&lt;i&gt;Upcoming assignments are subject to change, depending on class activities and various other factors out of our control.&lt;/i&gt;&lt;/p&gt;</upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000005</_id>
+    <_id>4fff025c09242749f700008b</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">6</default-room>
+    <default-room>6</default-room>
     <first-name>Sharon</first-name>
     <generic-msg nil="true"></generic-msg>
     <home-page nil="true"></home-page>
     <honorific>Ms.</honorific>
-    <id nil="true"></id>
     <last-name>Friedman</last-name>
-    <old-current type="integer">0</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">false</old-current>
+    <orig-id type="integer">5</orig-id>
     <photo-url nil="true"></photo-url>
     <phrase>l'italia e un bel paese</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg nil="true"></upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000006</_id>
+    <_id>4fff025c09242749f700008c</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">200</default-room>
+    <default-room>200</default-room>
     <first-name>Dan</first-name>
     <generic-msg>If you need extra help come to the math office during one of my unscheduled blocks.  Here is my &lt;a href="/test_cases/gabrinerd/Schedule.pdf"&gt;schedule&lt;/a&gt;.</generic-msg>
     <home-page nil="true"></home-page>
     <honorific>Mr.</honorific>
-    <id nil="true"></id>
     <last-name>Gabriner</last-name>
-    <old-current type="integer">1</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">true</old-current>
+    <orig-id type="integer">6</orig-id>
     <photo-url nil="true"></photo-url>
     <phrase>weston is not lincoln sudbury</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg nil="true"></upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000007</_id>
+    <_id>4fff025c09242749f700008d</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">4</default-room>
+    <default-room>4</default-room>
     <first-name>Donna</first-name>
     <generic-msg>Completed assignments must exhibit clear and organized work that the reader can follow.</generic-msg>
     <home-page nil="true"></home-page>
     <honorific>Mrs.</honorific>
-    <id nil="true"></id>
     <last-name>Gonzalez</last-name>
-    <old-current type="integer">0</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">false</old-current>
+    <orig-id type="integer">7</orig-id>
     <photo-url>/test_cases/gonzalezd/Donna1.JPG</photo-url>
     <phrase>the rain in spain stays mainly on the plain</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg nil="true"></upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000008</_id>
+    <_id>4fff025c09242749f700008e</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">4</default-room>
+    <default-room>4</default-room>
     <first-name>Emily</first-name>
     <generic-msg nil="true"></generic-msg>
     <home-page>none</home-page>
     <honorific>Ms.</honorific>
-    <id nil="true"></id>
     <last-name>Grant</last-name>
-    <old-current type="integer">0</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">false</old-current>
+    <orig-id type="integer">8</orig-id>
     <photo-url nil="true"></photo-url>
     <phrase>there are only 5 platonic solids</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg nil="true"></upcoming-msg>
   </test-case>
   <test-case>
-    <_id>4ff9b14b092427f570000009</_id>
+    <_id>4fff025c09242749f700008f</_id>
     <base-url nil="true"></base-url>
-    <default-room type="integer">9</default-room>
+    <default-room>9</default-room>
     <first-name>Natalie</first-name>
     <generic-msg nil="true"></generic-msg>
     <home-page nil="true"></home-page>
     <honorific>Ms.</honorific>
-    <id nil="true"></id>
     <last-name>Griswold</last-name>
-    <old-current type="integer">1</old-current>
-    <orig-id nil="true"></orig-id>
-    <personal-hp-url nil="true"></personal-hp-url>
+    <old-current type="boolean">true</old-current>
+    <orig-id type="integer">9</orig-id>
     <photo-url nil="true"></photo-url>
     <phrase>hartford is the capital of connecticut</phrase>
-    <teacher-id nil="true"></teacher-id>
-    <title nil="true"></title>
     <upcoming-msg nil="true"></upcoming-msg>
   </test-case>
 </test-cases>
