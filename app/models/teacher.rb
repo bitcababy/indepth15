@@ -1,19 +1,5 @@
 class Teacher < Author
 
-	field :honorific, type:String
-	field :first_name, type: String
-	field :middle_name, type: String
-	field :last_name, type: String
-	field :password, type: String		# This will change once devise is added
-
-	def formal_name
-		"#{self.honorific} #{self.last_name}"
-	end
-
-	def to_s
-		"#{self.first_name} #{self.last_name}"
-	end
-
 	# @@next_id = (Teacher.count > 0 ? Teacher.last.id : 0)
 	field :unique_name, type: String
 	field :current, type: Boolean
@@ -31,7 +17,6 @@ class Teacher < Author
 		"#{self.honorific} #{self.last_name}"
 	end
 	
-
 	#
 	# importing
 	# 
