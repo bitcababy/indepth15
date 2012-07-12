@@ -1,6 +1,6 @@
 DepthCharge::Application.routes.draw do
 
-  get "home/menu"
+  get "home/about"
 
   # devise_for :users
 
@@ -13,7 +13,7 @@ DepthCharge::Application.routes.draw do
 		resources :sections, :only => [:new]
 	end
 	
-	resources :sections, :module => 'admin', :except => [:new]
+	resources :sections, :module => 'admin', :only => [:create, :new, :edit, :update, :destroy,]
 
   get "menus/show"
 
