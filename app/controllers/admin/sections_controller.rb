@@ -22,6 +22,8 @@ class Admin::SectionsController < ApplicationController
   def destroy
   end
 
+	private
+
 	def find_section
 		n = params[:id]
 		@section = Section.find(n)
