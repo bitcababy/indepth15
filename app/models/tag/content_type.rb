@@ -1,2 +1,2 @@
-class Tag::ContentType < Tag
+class Tag::ContentType < Tag::Text
 end

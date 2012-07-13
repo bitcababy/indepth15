@@ -3,22 +3,33 @@ require 'spec_helper'
 describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number).scoped_to(:academic_year) }
-	it { should have_and_belong_to_many(:course_tags) }
 	it { should have_and_belong_to_many(:major_tags) }
-	it { should belong_to(:branch) }
-	
-	context "A new course" do
-		subject {Fabricate(:course)}
-		it { should have(0).sections }
+	it { should have_one(:branch_tag) }
+	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
+		it { should have_one(doc) }
 	end
 	
+	context "Fabricator" do
+		subject { Fabricate(:course) }
+		it { should have(0).sections }
+	end
+
 	context "changes" do
-		subject {Fabricate(:course)}
+		before :each do
+			@course = Fabricate(:course)
+		end
+
 		it "should have one more section when it adds a section" do
 			expect {
-				subject.sections << Fabricate(:section, course: subject)
-			}.to change {subject.sections.count}.by(1)
+				@course.sections << Fabricate(:section, course: @course)
+			}.to change {@course.sections.count}.by(1)
 		end
+		it "should be able to change its information" do
+			expect {
+				@course.information = "Some info"
+			}.to change{@course.information}.to("Some info")
+		end
+			
 	end
 
 	context '#teachers' do

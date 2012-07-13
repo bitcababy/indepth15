@@ -2,6 +2,19 @@ class User
 	include Mongoid::Document
   include Mongoid::Timestamps
 
+	field :ho, as: :honorific, type:String, default: "Mr."
+	field :fn, as: :first_name, type: String, default: ""
+	field :mn, as: :middle_name, type: String, default: ""
+	field :ln, as: :last_name, type: String, default: ""
+
+	def formal_name
+		"#{self.honorific} #{self.last_name}"
+	end
+
+	def to_s
+		"#{self.first_name} #{self.last_name}"
+	end
+
  # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -10,8 +23,8 @@ class User
  				 :timeoutable
 
   ## Database authenticatable
-  field :email,              :type => String, :default => ""
-	field :login, 						  type: String, :default => ""
+  field :email,              :type => String
+	field :login, 						  type: String
   field :encrypted_password, :type => String, :default => ""
 
   validates_presence_of :email

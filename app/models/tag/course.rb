@@ -1,3 +1,4 @@
 class Tag::Course < Tag
-	has_and_belongs_to_many :courses
+	field :no, as: :number, type: Integer
+
 end

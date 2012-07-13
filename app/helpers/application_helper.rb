@@ -7,8 +7,7 @@ module ApplicationHelper
 	end
 	
 	def assignment_date_string(date)
-		date.strftime("%a, %b %-d")
+		return date.strftime("%a, %b %-d")
 	end
-	
-	
+
 end

@@ -3,7 +3,7 @@ class SectionAssignment
 
 	field :due_date, type: Date
 	field :published, type: Boolean
-	field :name, type: String
+	field :name, type: String, default: ""
 	
 	belongs_to :section
 	belongs_to :assignment
@@ -25,16 +25,18 @@ class SectionAssignment
 			puts "can't find section for #{hash['schoolyear']}/#{teacher}/#{block}/#{assgt_id}"
 			return
 		end
-		# puts "Section: #{section}"
+
 		assignment = Assignment.find_by(assgt_id: assgt_id)
-		assignment.tags << Tag.find_or_create_by(label: course.full_name)
+		tc = Tag::Course.find_or_create_by(number: course.number)
+		tc.documents << assignment
 
 		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id].each {|k| hash.delete(k)}
 		
-		sa = section.section_assignments.new hash
+		hash[:name] = assignment.name
+		sa = section.section_assignments.create! hash
 		sa.assignment = assignment
 		sa.save!
-		sa
+		return sa
 	end
 
 

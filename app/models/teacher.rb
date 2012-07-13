@@ -14,10 +14,6 @@ class Teacher < Author
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
 	
-	def formal_name
-		"#{self.honorific} #{self.last_name}"
-	end
-	
 	#
 	# importing
 	# 
@@ -25,8 +21,6 @@ class Teacher < Author
 		hash[:email] = hash[:login] + "@mail.weston.org"
 		hash[:password] = (hash[:phrase].split(' ').map &:first).join('') if (hash[:phrase])
 		hash[:current] = hash[:old_current] == 1
-		# gm = TextDocument.create! content: hash['generic_msg']
-		# um = TextDocument.create! content: hash['upcoming_msg']
 		gm = hash[:generic_msg]
 		um = hash[:upcoming_msg]
 		

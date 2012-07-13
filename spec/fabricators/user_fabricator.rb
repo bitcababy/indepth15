@@ -1,20 +1,16 @@
 Fabricator(:user) do
-end
-
-Fabricator(:author) do
-	honorific					{ %W(Mr. Mrs. Ms. Dr.).sample }
-	first_name				{ %W(John Jane Jake Dan Larry).sample }
-	last_name					{ %W(Black White Orange Red).sample }
-	password					'password'
-end
-
-Fabricator(:registered_user, from: :author) do
 	honorific								{ %W(Mr. Mrs. Ms. Dr.).sample }
 	first_name							{ %W(John Jane Jake Dan Larry).sample }
 	last_name								{ %W(Black White Orange Red).sample }
-	login										{ |attrs| attrs[:last_name].downcase + attrs[:first_name].first }
-	email										{ |attrs| attrs[:login] + 'example.com' }
-	authentication_token		'user'
+	authentication_token		"user"
+	after_build						{ |obj|
+		obj.login ||= (obj.last_name + obj.first_name.first).downcase
+		obj.email ||= obj.login + "@example.com"
+		}
+end
+
+Fabricator :author, from: :user, class_name: 'Author' do
+	authentication_token		'author'
 end
 
 Fabrication::Transform.define(:author, lambda{|full_name|
@@ -26,12 +22,10 @@ Fabrication::Transform.define(:author, lambda{|full_name|
 	end
 })
 
-Fabricator(:guest, from: :user) do
+Fabricator :guest, from: :user  do
 end
 
-Fabricator :teacher, from: :author do
-	login										{ |attrs| attrs[:last_name].downcase + attrs[:first_name].first }
-	email										{ |attrs| attrs[:login] + 'example.com' }
+Fabricator :teacher, from: :author, class_name: 'Teacher' do
 	current									true
 	authentication_token		'teacher'
 	sections								[]

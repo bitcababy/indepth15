@@ -131,6 +131,7 @@ module Convert
 			klass.delete_all
 			arr.each {|a| one_record(klass, a)}
 			puts klass.count
+			arr
 		end
 	end
 	

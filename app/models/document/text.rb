@@ -1,4 +1,4 @@
-class Document::Text < Document::Versioned
+class Document::Text < Document
 	field :content, type: String, default: ""
 	
 end

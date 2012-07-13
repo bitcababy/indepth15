@@ -9,12 +9,12 @@ Feature: Section assignments
 			 | last_name   | Smith                      |
 			 | general_msg | General assignment comment |
 			 | current_msg | Current assignment comment |
-		And the following section:
-			 | block   | B          |
-			 | course  | Math 101   |
-			 | number  | 1          |
-			 | teacher | John Smith |
-	# 	And I go to its assignments page
+		# And the following section:
+		# 	 | block   | B          |
+		# 	 | course  | Math 101   |
+		# 	 | number  | 1          |
+		# 	 | teacher | John Smith |
+		# And I go to that section's assignments page
 	# 
 	# Scenario: Top stuff
 	# 	Then I should see "Mr. Smith's 2011–2012 Assignments for Block B"

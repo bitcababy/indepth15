@@ -5,17 +5,11 @@ Fabricator(:course) do
 	full_name				{ "Course #{Fabricate.sequence}"}
 	in_catalog			true
 	academic_year		{ Settings.academic_year}
-	description			"This is a description"
-	information			"This is the course information"
-	news						"This is the course news"
-	resources				"These are some resources"
-	policies				"These are the policies"
-	has_assignments	true
-	description_doc	{|attrs| Fabricate.build(:course_page, content: attrs['description']) if attrs['description']}
-	information_doc	{|attrs| Fabricate.build(:course_page, content: attrs['information']) if attrs['information']}
-	resources_doc		{|attrs| Fabricate.build(:course_page, content: attrs['resources']) if attrs['resources']}
-	policies_doc		{|attrs| Fabricate.build(:course_page, content: attrs['policies']) if attrs['policies']}
-	news_doc				{|attrs| Fabricate.build(:course_page, content: attrs['news']) if attrs['news']}
+	information_doc(fabricator: :text_document)
+	resources_doc(fabricator: :text_document)
+	policies_doc(fabricator: :text_document)
+	news_doc(fabricator: :text_document)
+	description_doc(fabricator: :text_document)
 end
 
 Fabricate.sequence(:course_number) {|i| i}

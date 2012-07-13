@@ -1,6 +1,8 @@
 class Course
 	include Mongoid::Document
   include Mongoid::Timestamps
+
+	after_initialize :add_tag
 	
 	NO_YEAR = -1
 	
@@ -25,8 +27,11 @@ class Course
 		391 => 'Statistics',
 	}
 
+##
+## Fields
+##
 	field :no, as: :number, type: Integer
-	field :ay as: :academic_year, type: Integer, default: Settings.academic_year
+	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	field :du, as: :duration, type: Symbol, default: FULL_YEAR
 	field :cr, as: :credits, type: BigDecimal, default: 5.0
 	field :fn, as: :full_name, type: String, default: ""
@@ -36,43 +41,27 @@ class Course
 	field :oc, as: :occurrences, type: Integer, default: 5
 	field :ha, as: :has_assignments, type: Boolean, default: true
 
-	scope :in_catalog, where(in_catalog: true).asc(:number)
-	
+##
+## Associations
+##
+
+	# has_and_belongs_to_many :major_tags, class_name: 'Tag::Major'
 	has_many :sections
-	
-	# has_one :information_doc, class_name: 'CoursePage'
-	# has_one :resources_doc, class_name: 'CoursePage'
-	# has_one :policies_doc, class_name: 'CoursePage'
-	# has_one :news_doc, class_name: 'CoursePage'
-	# has_one :description_doc, class_name: 'CoursePage'
-
-	belongs_to :branch, class_name: 'Tag::Branch'
-
-	has_many :course_pages
-	has_and_belongs_to_many :course_tags, class_name: 'Tag::Course'
+	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
+		has_one doc, class_name: 'Document::Text', inverse_of: :owner, autobuild: true, dependent: :destroy
+	end
+	has_one :branch_tag, class_name: 'Tag::Branch'
 	has_and_belongs_to_many :major_tags, class_name: 'Tag::Major'
 
+##
+## Scopes
+##
+	scope :in_catalog, where(in_catalog: true).asc(:number)
+
+##
+## Validations
+##
 	validates_uniqueness_of :number, scope: :academic_year
-	
-	def information_doc
-		CoursePage.find_or_create_by(course: self, kind: :information)
-	end
-
-	def resources_doc
-		CoursePage.find_or_create_by(course: self, kind: :resources)
-	end
-
-	def policies_doc
-		CoursePage.find_or_create_by(course: self, kind: :policies)
-	end
-
-	def news_doc
-		CoursePage.find_or_create_by(course: self, kind: :news)
-	end
-
-	def description_doc
-		CoursePage.find_or_create_by(course: self, kind: :description)
-	end
 	
 	attr_accessor :information, :policies, :news, :resources, :description
 	
@@ -135,6 +124,10 @@ class Course
 		2 => SECOND_SEMESTER,
 		3 => FULL_YEAR_HALF_TIME,
 	}
+	
+	def add_tag
+		Tag::Text.add(self.full_name) if self.full_name
+	end
 
 	class << self
 		def import_from_hash(hash)
@@ -146,7 +139,7 @@ class Course
 			%W(semesters info resources policies prog_of_studies_descr).each {|k| hash.delete(k)}
 			
 			course = self.create! hash
-			course_tag = Tag::Course.find_or_create_by(label: course.full_name)
+			Tag::Course.find_or_create_by(label: course.full_name)
 			branch_tag = BRANCH_MAP[course.number]
 			course.branch = Tag::Branch.find_or_initialize_by(label: branch_tag) if branch_tag
 			
@@ -165,5 +158,6 @@ class Course
 		end
 	end
 	
+		
 end
 	

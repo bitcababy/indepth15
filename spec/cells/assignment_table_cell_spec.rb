@@ -20,7 +20,7 @@ describe AssignmentTableCell do
   	end
 
 		it "should render a caption if one is provided" do
-			res = render_cell(:assignment_table, :display, @sas, "@tbl", "Assignments")
+			res = render_cell(:assignment_table, :display, @sas, "tbl", "Assignments")
 			res.should have_selector('caption', text: 'Assignments')
 		end
 

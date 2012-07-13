@@ -15,7 +15,7 @@ describe Convert do
 			
 		describe 'one_record' do
 			it "turns an array of name/content hashes into a hash of name => content hashes" do
-				puts Convert.one_record(Teacher, @res[0])
+				Convert.one_record(Teacher, @res[0]).should be_kind_of Teacher
 			end
 		end
 	
