@@ -1,2 +1,2 @@
-class Page < TextDocument
+class Document::Page < Document::Owned
 end
