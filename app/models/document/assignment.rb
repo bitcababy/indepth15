@@ -1,4 +1,4 @@
-class Assignment < TextDocument
+class Document::Assignment < Document::Text
 	field :name, type: String
 
 	has_many :section_assignments			# Joins sections and assignments, with a due date
