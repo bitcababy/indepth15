@@ -1,2 +1,0 @@
-class CourseTag < Tag
-end
