@@ -1,5 +1,4 @@
 class Course
-	include Export
 	include Mongoid::Document
   include Mongoid::Timestamps
 	
@@ -26,16 +25,16 @@ class Course
 		391 => 'Statistics',
 	}
 
-	field :number, type: Integer
-	field :academic_year, type: Integer, default: Settings.academic_year
-	field :duration, type: Symbol, default: FULL_YEAR
-	field :credits, type: BigDecimal, default: 5.0
-	field :full_name, type: String, default: ""
-	field :short_name, type: String, default: ""
-	field :schedule_name, type: String, default: ""
-	field :in_catalog, type: Boolean, default: true
-	field :occurrences, type: Integer, default: 5
-	field :has_assignments, type: Boolean, default: true
+	field :no, as: :number, type: Integer
+	field :ay as: :academic_year, type: Integer, default: Settings.academic_year
+	field :du, as: :duration, type: Symbol, default: FULL_YEAR
+	field :cr, as: :credits, type: BigDecimal, default: 5.0
+	field :fn, as: :full_name, type: String, default: ""
+	field :sn, as: :short_name, type: String, default: ""
+	field :sc, as: :schedule_name, type: String, default: ""
+	field :ic, as: :in_catalog, type: Boolean, default: true
+	field :oc, as: :occurrences, type: Integer, default: 5
+	field :ha, as: :has_assignments, type: Boolean, default: true
 
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 	

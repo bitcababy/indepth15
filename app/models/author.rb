@@ -1,8 +1,9 @@
 class Author < User
-	field :honorific, type:String, default: "Mr."
-	field :first_name, type: String, default: ""
-	field :middle_name, type: String, default: ""
-	field :last_name, type: String, default: ""
+	field :ho, as: :honorific, type:String, default: "Mr."
+	field :fn, as: :first_name, type: String, default: ""
+	field :mn, as: :middle_name, type: String, default: ""
+	field :ln, as: :last_name, type: String, default: ""
+	
 	
 	def formal_name
 		"#{self.honorific} #{self.last_name}"
@@ -13,11 +14,11 @@ class Author < User
 	end
 
 	has_one :author_tag, class_name: 'Tag::Author'
-	has_and_belongs_to_many :documents, inverse_of: nil
 
 	after_create :make_tag
 	
 	def make_tag
 		Tag::Author.create!(author: self) unless Tag::Author.where(author: self).exists?
 	end
+
 end
