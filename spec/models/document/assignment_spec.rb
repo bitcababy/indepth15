@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Assignment do
+describe Document::Assignment do
 	
 	context "Fabricator" do
 		subject { Fabricate(:assignment) }
