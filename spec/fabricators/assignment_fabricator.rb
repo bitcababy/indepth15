@@ -1,4 +1,4 @@
-Fabricator(:assignment) do
+Fabricator :assignment, class_name: 'Document::Assignment' do
 	name								{ sequence(:assignment_name) }
 	content							""
 	section_assignments	{}
