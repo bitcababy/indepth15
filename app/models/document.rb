@@ -1,11 +1,15 @@
+
 class Document
 	include Mongoid::Document
 	field :mj, as: :major_version, type: Integer, default: 1
-	field :mi, as: :minor_version, type: Integer, default: 0
+	field :mv, as: :minor_version, type: Integer, default: 0
+	field :dt, as: :document_type, type: Symbol
+	field :ki, as: :kind, type: Symbol
+	field :ma, as: :major_tags, type: Array, default: []
+	field :mi, as: :minor_tags, type: Array, default: []
 	
 	belongs_to :owner, polymorphic: true
-	has_and_belongs_to_many :tags, inverse_of: nil
-
+		
 	def bump_minor_version
 		self.minor_version += 1
 	end
