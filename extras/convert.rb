@@ -107,7 +107,7 @@ module Convert
 					k = map[k] || k
 					v = pair[:content]
 					if v then
-						v = case 
+						memo[k] = case 
 						when v =~ /^\d+$/
 							v.to_i
 						when v == "NULL"
@@ -120,7 +120,6 @@ module Convert
 							v
 						end
 					end
-					memo[k] = v
 				end
 				memo
 			end
