@@ -1,5 +1,9 @@
 class Tag
   include Mongoid::Document
-	has_and_belongs_to_many :documents, inverse_of: nil
+
+	field :co, as: :content, type: String
+
+	# recursively_embeds_many
+	has_and_belongs_to_many :documents
 
 end
