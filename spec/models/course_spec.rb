@@ -4,7 +4,6 @@ describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number).scoped_to(:academic_year) }
 	it { should have_and_belong_to_many(:major_tags) }
-	it { should have_one(:branch_tag) }
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
 		it { should have_one(doc) }
 	end
