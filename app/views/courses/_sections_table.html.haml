@@ -1,0 +1,17 @@
+%table#sections_table
+	%thead
+		%tr
+			%th.block Block
+			%th.days Days
+			%th.teacher Teacher
+			%th.room Room
+	%tbody
+		= render partial: 'courses/section_table_row', collection: @course.sections, as: 'section'
+
+:coffeescript
+$(document).ready ->
+	$("#sections_table").dataTable
+		bFilter: false
+		bInfo: false
+		bPaginate: false
+		bjQueryUI: true
