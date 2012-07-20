@@ -1,8 +1,6 @@
 class Course
 	include Mongoid::Document
   include Mongoid::Timestamps
-
-	after_initialize :add_tag
 	
 	NO_YEAR = -1
 	
@@ -45,13 +43,10 @@ class Course
 ## Associations
 ##
 
-	# has_and_belongs_to_many :major_tags, class_name: 'Tag::Major'
 	has_many :sections
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
 		has_one doc, class_name: 'Document::Text', inverse_of: :owner, autobuild: true, dependent: :destroy
 	end
-	has_one :branch_tag, class_name: 'Tag::Branch'
-	has_and_belongs_to_many :major_tags, class_name: 'Tag::Major'
 
 ##
 ## Scopes
@@ -125,8 +120,6 @@ class Course
 		3 => FULL_YEAR_HALF_TIME,
 	}
 	
-	def add_tag
-		Tag::Text.add(self.full_name) if self.full_name
 	end
 
 	class << self
@@ -139,9 +132,6 @@ class Course
 			%W(semesters info resources policies prog_of_studies_descr).each {|k| hash.delete(k)}
 			
 			course = self.create! hash
-			Tag::Course.find_or_create_by(label: course.full_name)
-			branch_tag = BRANCH_MAP[course.number]
-			course.branch = Tag::Branch.find_or_initialize_by(label: branch_tag) if branch_tag
 			
 			course.information = info
 			course.resources = resources
