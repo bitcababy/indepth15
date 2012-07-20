@@ -1,16 +1,14 @@
-class Assignment < Document::Text
+class Assignment < TextDocument
 	field :name, type: String
 	field :number, type: Integer
 
-	has_many :section_assignments			# Joins sections and assignments, with a due date
-	has_many :tags
-	belongs_to :course_tag, class_name: 'Tag::Course'
+	belongs_to :course
+	belongs_to :author
+	
+	# has_and_belongs_to_many :section_assignments, inverse_of: nil
 
 	def self.import_from_hash(hash)
-		a = Assignment.create! hash
-		teacher.find_by(login: hash[:teacher_id])
-		self.tags << Tag::Author.find_or_create_by(object: teacher)
-		return a
+		Assignment.create! hash.merge(owner: Teacher.find_by(login: hash[:teacher_id]))
 	end
 
 end
