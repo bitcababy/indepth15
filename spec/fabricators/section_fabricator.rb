@@ -3,6 +3,8 @@ Fabricator(:section) do
 	block		{ ('A'..'H').to_a.sample }
 	occurrences		{ (1..5).to_a }
 	room		{ "Room #{Fabricate.sequence}"}
+	teacher
+	after_build		{|obj| obj.occurrences.each {|i| Fabricate(:occurrence, block: obj.block, number: i) } }
 end
 
 Fabricate.sequence(:section_number) {|i| i }
