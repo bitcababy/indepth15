@@ -1,0 +1,51 @@
+1:
+  number: 321
+  full_name: Geometry Honors
+2:
+  number: 322
+  full_name: Geometry
+3:
+  number: 326
+  full_name: Intermediate Algebra
+4:
+  number: 331
+  full_name: Algebra II Honors
+5:
+  number: 332
+  full_name: Algebra II
+6:
+  number: 333
+  full_name: Topics in Algebra II
+7:
+  number: 334
+  full_name: Comp Sci: Concepts & Applications
+8:
+  number: 336
+  full_name: Comp Sci: Introduction to Programming
+9:
+  number: 341
+  full_name: Honors Precalculus
+10:
+  number: 342
+  full_name: Precalculus, Part I
+11:
+  number: 343
+  full_name: Applications in Discrete Mathematics
+12:
+  number: 352
+  full_name: Precalculus, part II
+13:
+  number: 361
+  full_name: Calculus AB
+14:
+  number: 371
+  full_name: Calculus BC
+15:
+  number: 381
+  full_name: AP Computer Science
+16:
+  number: 391
+  full_name: AP Statistics
+
+  
+  
