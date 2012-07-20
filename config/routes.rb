@@ -1,37 +1,38 @@
 DepthCharge::Application.routes.draw do
 
-  get "home/about"
+  get "home", controller: 'home', action: 'dept_info'
+  get "about", controller: 'home', action: 'about'
 
-  # devise_for :users
-
-	devise_scope :user do
-		get 'sign_in', to: 'devise/sessions#new'
-		get 'sign_out', to: 'devise/sessions#destroy'
-	end
-
-	resources 'courses', :module => 'admin' do
-		resources :sections, :only => [:new]
-	end
+	resources :teachers, :only => [:show]
 	
-	resources :sections, :module => 'admin', :only => [:create, :new, :edit, :update, :destroy,]
-
-  get "menus/show"
-
-	get 'courses/:id/home', to: 'courses#home', as: :course_home
-	get 'courses/list', to: 'courses#list'
 	# get 'courses/:course_number/section
 	
 	for tab in %W(sections news policies resources information) do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
 	
+	resources :courses, :only => [:index, :show]
+
 	get 'sections/:id/assignments', to: 'sections#assignments', as: 'section_assignments'
 	
-	get 'teachers/:id/home', to: 'teachers#home', as: 'teacher_home_page'
+	# get 'teachers/:id, to: 'teachers#home', as: 'teacher_home_page'
 	
-	root to: "courses#list"
+	namespace 'admin' do
+		resources 'courses' do
+			resources :sections, :only => [:new]
+		end
+		resources :sections, :only => [:create, :new, :edit, :update, :destroy,]
+	end
 	
+	root to: "home#dept_info"
+	
+  # devise_for :users
+	devise_scope :user do
+		get 'sign_in', to: 'devise/sessions#new'
+		get 'sign_out', to: 'devise/sessions#destroy'
+	end
 
+	
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
