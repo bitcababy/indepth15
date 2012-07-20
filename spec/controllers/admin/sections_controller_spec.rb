@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Admin::SectionsController do
+	pending "Unfinished test"
 
   # describe "GET 'create'" do
   #    it "returns http success" do

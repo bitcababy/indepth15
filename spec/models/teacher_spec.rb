@@ -23,7 +23,7 @@ describe Teacher do
 	context 'importing' do
 		describe '::convert_record' do
 			before :each do
-				@hash ={
+				@hash = {
 					:default_room=>203, :first_name=>"Joshua", :generic_msg=>"generic message", 
 					:home_page=>"http://www.westonmath.org/teachers/abramsj/math4/quotes.html", 
 					:honorific=>"Mr.", :last_name=>"Abrams", :old_current=>1,

@@ -13,6 +13,7 @@ describe SectionsController do
 
   describe "GET 'assignments'" do
 		before do
+			pending "Unfinished test"
 			setup_section
       get :assignments, :id => @the_section.id
 			@the_section.section_assignments.future.asc(:due_date).count.should == 3

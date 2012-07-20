@@ -5,6 +5,7 @@ describe SectionAssignment do
 	it { should belong_to :assignment }
 	
 	it "should have future and past scopes" do
+		pending "Unfinished test"
 		section = Fabricate(:section)
 		2.times { section.add_assignment Date.today + rand(1..5), Fabricate(:assignment) }
 		3.times { section.add_assignment Date.today - rand(1..5), Fabricate(:assignment) }
@@ -33,11 +34,6 @@ describe SectionAssignment do
 			sa.should be_kind_of SectionAssignment
 		end
 		
-		it "should tag the assignment with the course name" do
-			puts "'#{@asst.tags}'"
-			pending "Unfinished test"
-			@asst.tags.where(number: 567).should exist
-		end
 	end
 		
 end

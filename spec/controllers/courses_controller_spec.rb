@@ -9,6 +9,7 @@ describe CoursesController do
 
 	  describe "GET 'home'" do
 	    it "returns http success" do
+				pending "Unfinished test"
 	      visit course_home_path(@course)
 	      response.should be_success
 	    end
@@ -16,6 +17,7 @@ describe CoursesController do
 
 	  describe "GET 'resources_pane'" do
 	    it "returns http success" do
+				pending "Unfinished test"
 	      visit course_resources_pane_path(@course)
 	      response.should be_success
 	    end
@@ -23,6 +25,7 @@ describe CoursesController do
 
 	  describe "GET 'information_pane'" do
 	    it "returns http success" do
+				pending "Unfinished test"
 	      visit course_information_pane_path(@course)
 	      response.should be_success
 	    end
@@ -30,6 +33,7 @@ describe CoursesController do
 
 	  describe "GET 'sections_pane'" do
 	    it "returns http success" do
+				pending "Unfinished test"
 	      visit course_sections_pane_path(@course)
 	      response.should be_success
 	    end
@@ -37,6 +41,7 @@ describe CoursesController do
 
 	  describe "GET 'news_pane'" do
 	    it "returns http success" do
+				pending "Unfinished test"
 	      visit course_news_pane_path(@course)
 	      response.should be_success
 	    end
@@ -44,6 +49,7 @@ describe CoursesController do
 
 	  describe "GET 'policies_pane'" do
 	    it "returns http success" do
+				pending "Unfinished test"
 	      visit course_policies_pane_path(@course)
 	      response.should be_success
 	    end
