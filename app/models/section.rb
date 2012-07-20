@@ -19,18 +19,18 @@ class Section
 	has_many :section_assignments
 
 	validates_uniqueness_of :number, scope: :course, allow_nil: true
-	
+
 	cattr_reader :blocks, :semesters, :occurrences
 	
 	@@blocks = ('A'..Settings.last_block).to_a
 	@@occurrences = (1..Settings.max_occurrences).to_a
 	@@semesters = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
-		
+
 	def to_s
 		"Section #{self.number}, block: #{self.block}"
 	end
 	
-	def add_assignment(due_date, asst, show=true)
+	def add_assignment(asst, due_date, show=true)
 		self.section_assignments.create! due_date: due_date, assignment: asst
 	end
 	
@@ -46,6 +46,19 @@ class Section
 		course = self.course
 		"#{course.full_name}#{course.academic_year}/#{self.teacher.login}/#{self.block}"
 	end
+	
+	def menu_label
+		if self.teacher then
+			self.teacher.formal_name + ", " + self.block
+		else
+			"Section #{self.number}"
+		end
+	end
+	
+	def days_for_section
+		(self.occurrences.collect {|occ| Occurrence.find_by(number: occ, block: self.block).day_number}).sort
+	end
+	
 		
 	class << self
 		def import_from_hash(hash)
