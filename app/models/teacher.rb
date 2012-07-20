@@ -28,5 +28,9 @@ class Teacher < Author
 		teacher = self.create! hash
 		teacher
 	end
+	
+	def menu_label
+		self.full_name
+	end
 
 end
