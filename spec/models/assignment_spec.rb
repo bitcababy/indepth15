@@ -10,13 +10,16 @@ describe Assignment do
 	context "converting" do
 		describe 'Assignment.import_from_hash' do
 			before :each do
+				Fabricate(:teacher, login: 'abramsj')
 				@assignment = Assignment.import_from_hash({
 					name: "3", content: "This is some content", teacher_id: 'abramsj',
 					})
 				@assignment.should be_kind_of Assignment
 			end
 			
-			it "adds an author tag to itself"
+			it "has an author" do
+				@assignment.owner.should_not be_nil
+			end
 		end
 	end
 
