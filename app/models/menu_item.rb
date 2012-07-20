@@ -1,17 +1,31 @@
+require 'action_view/helpers/url_helper'
+
 class MenuItem
   include Mongoid::Document
-	field :order, type: Integer
-	field :link, type: String
+	include ActionView::Helpers::UrlHelper
 
-	# recursively_embeds_many
-	belongs_to :obj, polymorphic: true
+	field :or, as: :order, type: Integer, default: 0
+	field :co, as: :controller, type: Symbol
+	field :ac, as: :action, type: Symbol
+	field :la, as: :label, type: String
+	field :li, as: :link, type: String
+	field :sh, as: :show, type: Boolean, default: true
+	field :ii, as: :item_id, type: String, default: ''
+	field :ic, as: :item_class, type: String, default: ''
+	field :tag, type: String
+
+	belongs_to :object, polymorphic: true
+
+	recursively_embeds_many
 	
-	def text
-		obj ? obj.to_menu_item : ""
+	def menu_label
+		return self.label if self.label
+		return self.object.menu_label if self.object
+		raise "Object missing label"
 	end
 	
-	def root?
-		self.parent_menu_item.nil?
+	def to_s
+		return self.label
 	end
-
+	
 end
