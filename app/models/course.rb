@@ -45,8 +45,12 @@ class Course
 
 	has_many :sections
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
-		has_one doc, class_name: 'Document::Text', inverse_of: :owner, autobuild: true, dependent: :destroy
+		has_one doc, class_name: 'TextDocument', inverse_of: :owner, autobuild: true, dependent: :destroy
 	end
+	has_many :assignments
+	belongs_to :branch
+
+	has_and_belongs_to_many :major_tags
 
 ##
 ## Scopes
@@ -120,6 +124,8 @@ class Course
 		3 => FULL_YEAR_HALF_TIME,
 	}
 	
+	def menu_label
+		self.full_name
 	end
 
 	class << self
@@ -130,7 +136,7 @@ class Course
 			policies = hash[:policies]
 			prog_of_studies_descr = hash[:prog_of_studies_descr]
 			%W(semesters info resources policies prog_of_studies_descr).each {|k| hash.delete(k)}
-			
+			hash[:branch] = Branch_find_or_create_by(content: BRANCH_MAP[hash[:course_num]])
 			course = self.create! hash
 			
 			course.information = info
