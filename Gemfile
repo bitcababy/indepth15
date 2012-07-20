@@ -50,6 +50,7 @@ gem 'state_machine'
 gem 'formtastic'
 gem 'client_side_validations'
 
+
 group :development, :test do
 	gem 'grizzled-rails-logger'
 	gem 'rspec-rails'
@@ -83,5 +84,6 @@ group :test do
 	gem 'hpricot'
 	gem 'simplecov'
 	gem 'email_spec'
+	gem 'webrat'
 end
 
