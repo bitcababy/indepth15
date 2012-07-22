@@ -8,6 +8,8 @@ class SectionAssignment
 	belongs_to :section
 	belongs_to :assignment
 	
+	accepts_nested_attributes_for :section, :assignment
+	
 	scope :future, -> { gte(due_date: Utils.future_due_date) }
 	scope :past, -> { lt(due_date: Utils.future_due_date) }
 	
@@ -27,8 +29,6 @@ class SectionAssignment
 		end
 
 		assignment = Assignment.find_by(assgt_id: assgt_id)
-		tc = Tag::Course.find_or_create_by(number: course.number)
-		tc.documents << assignment
 
 		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id].each {|k| hash.delete(k)}
 		
