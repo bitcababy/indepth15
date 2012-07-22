@@ -30,8 +30,10 @@ module ApplicationHelper
 			url_for(controller: item.controller, action: item.action)
 		when item.object
 			url_for(item.object)
+		when item.class == Menu
+			'#'
 		else
-			raise "Not written yet"
+			raise "Not written yet (class is #{item.class})"
 		end
 	end
 		
