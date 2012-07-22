@@ -1,0 +1,4 @@
+- unless content_for? :menubar
+	- content_for :menubar do
+		= render partial: 'shared/menus', locals: {menus: MenuSet.all_menus.menus }
+= content_for :menubar
