@@ -1,9 +1,0 @@
-%table{id: @table_id}
-	- if @caption
-		%caption= @caption
-	%thead
-		%th #
-		%th Date due
-		%th Assignment
-	%tbody
-		= render partial: 'display_row', collection: @section_assignments, as: 'section_assignment'
