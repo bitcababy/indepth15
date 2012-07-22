@@ -17,14 +17,37 @@ a {
 }
 
 div#page_header {
-	background: #CCCCCC;
+	background: #B80000;
+	color: white;
+	font-size: 2.5em;
 	display: block;
-	padding: 0px;
 	margin: 0px;
-	margin-top: -42px;
 	h1 {
 		font-size: 3em;
 		padding: 8px;
 	}
+	top: 0px;
+	left:0;
+	width: 100%;
+	padding: 8px;
+	padding-left: 16px;
 }
 
+div#menubar {
+	font-family: Arial;
+	font-size: 0.8em;
+	display: block;
+	width: 15em;
+	margin: 0px;
+	float: left;
+	position: relative;
+}
+
+div#main {
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-left-style: dotted;
+	float:left;
+	position: relative;
+	right: 0;
+}
