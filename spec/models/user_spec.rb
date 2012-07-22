@@ -11,10 +11,18 @@ describe User do
 		end
 	end
 	
-	describe 'formal_name' do
+	describe '#formal_name' do
 		it "should return the honorific + the last name" do
 			user = Fabricate :user, honorific: "Mr.", last_name: "Masterson"
 			user.formal_name.should == "Mr. Masterson"
 		end
 	end
+	
+	describe '#full_name' do
+		it "should return the honorific + the last name" do
+			user = Fabricate :user, first_name: "Bat", last_name: "Masterson"
+			user.full_name.should == "Bat Masterson"
+		end
+	end
+	
 end
