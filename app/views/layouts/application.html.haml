@@ -2,13 +2,12 @@
 %html
 	%head
 		%title= content_for?(:title) ? (yield :title) : "The title"
-		= stylesheet_link_tag		 "application", :media => "all"
+		= stylesheet_link_tag "application", media: "all"
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	%body
-		= render 'shared/display_menus'
-		%p.notice= notice
-		%p.alert= alert
-		
 		#page_header= content_for?(:page_header) ? (yield :page_header) : "The header"
-		= yield
+		= render partial: 'shared/menubar'
+	
+		%div#main
+			= yield
