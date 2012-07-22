@@ -1,12 +1,13 @@
 class Teacher < Author
 
 	# @@next_id = (Teacher.count > 0 ? Teacher.last.id : 0)
-	field :unique_name, type: String
-	field :current, type: Boolean
-	field :default_room, type: String
-	field :home_page, type: String
-	field :generic_msg, type: String
-	field :upcoming_msg, type:String
+	field :un, as: :unique_name, type: String
+	field :cu, as: :current, type: Boolean
+	field :dr, as: :default_room, type: String
+	field :hp, as: :home_page, type: String
+	field :gm, as: :generic_msg, type: String
+	field :cm, as: :current_msg, type:String
+	field :um, as: :upcoming_msg, type:String
 
 	has_many :sections
 	# has_many :teacher_pages
@@ -26,11 +27,11 @@ class Teacher < Author
 		
 		%W(phrase old_current generic_msg upcoming_msg teacher_id orig_id).each {|k| hash.delete(k)}
 		teacher = self.create! hash
-		teacher
+		return teacher
 	end
 	
 	def menu_label
-		self.full_name
+		return self.full_name
 	end
 
 end
