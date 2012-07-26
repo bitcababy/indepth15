@@ -4,6 +4,7 @@ Fabricator(:section) do
 	occurrences		{ (1..5).to_a }
 	room					{ "Room #{Fabricate.sequence}"}
 	teacher				{ Fabricate :teacher }
+	academic_year	{ Settings.academic_year }
 	after_build		{|obj| obj.occurrences.each {|i| Fabricate(:occurrence, block: obj.block, number: i) } }
 end
 

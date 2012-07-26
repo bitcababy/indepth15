@@ -4,7 +4,6 @@ Fabricator(:course) do
 	credits					{ [ 5.0, 2.5].sample }
 	full_name				{ "Course #{Fabricate.sequence}"}
 	in_catalog			true
-	academic_year		{ Settings.academic_year}
 	information_doc(fabricator: :text_document)
 	resources_doc(fabricator: :text_document)
 	policies_doc(fabricator: :text_document)
@@ -21,3 +20,4 @@ Fabrication::Transform.define(:course, lambda { |full_name|
 			 Fabricate :course, full_name: full_name 
 			end
 		})
+

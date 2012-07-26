@@ -2,8 +2,9 @@ require 'spec_helper'
 
 describe Course do
 	it { should have_many(:sections) }
-	it { should validate_uniqueness_of(:number).scoped_to(:academic_year) }
+	it { should validate_uniqueness_of(:number)}
 	it { should have_and_belong_to_many(:major_tags) }
+
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
 		it { should have_one(doc) }
 	end
@@ -12,7 +13,27 @@ describe Course do
 		subject { Fabricate(:course) }
 		it { should have(0).sections }
 	end
-
+		
+	describe '::import_from_hash' do
+		it "imports from a hash" do
+			hash = {
+				number: 321,
+				full_name: "Geometry Honors",
+				short_name: "",
+				schedule_name: "GeomH",
+				semesters: 12,
+				credits: 5.0,
+				prog_of_studies_descr: "This is the description",
+				info: "This is the info",
+				policies: "These is the policies",
+				resources: "This is the resources",
+				has_assignments:true
+			}
+			course = Course.import_from_hash hash
+			course.should be_kind_of Course
+		end
+	end
+	
 	context "changes" do
 		before :each do
 			@course = Fabricate(:course)
@@ -28,7 +49,6 @@ describe Course do
 				@course.information = "Some info"
 			}.to change{@course.information}.to("Some info")
 		end
-			
 	end
 
 	context '#teachers' do
@@ -41,26 +61,5 @@ describe Course do
 			course.teachers.count.should == 2
 		end
 	end
-	
-	context "Validation" do
-		it "should have a unique number for a given year" do
-			course1 = Fabricate(:course)
-			course2 = Course.new course1.attributes
-			course2.academic_year += 1
-			course2.should be_valid
-		end
-		
-	end
-		
-	describe "#clone_for_year" do
-		it "copies all attributes and sets the year" do
-			course1 = Fabricate(:course, academic_year: Course::NO_YEAR)
-			Course.where(academic_year: 2012).exists?.should be_false
-			course2 = course1.clone_for_year(2012)
-			course2.should_not be_nil
-			course2.academic_year.should == 2012
-		end
-	end
-	
 		
 end
