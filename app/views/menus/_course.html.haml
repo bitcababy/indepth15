@@ -1,0 +1,4 @@
+%div.col_3
+	%a{href: home_course_path(course), class: 'course-name', title: course.full_name }= course.full_name
+	%ul
+		= render partial: 'menus/section', collection: course.sections
