@@ -67,7 +67,7 @@ module DepthCharge
     config.assets.version = '1.0'
 
 		config.generators do |g|
-			g.helper_spec false
+			g.helper_spec 				false
 		  g.test_framework      :rspec, fixture: true
 		  g.fixture_replacement :fabrication
 		end

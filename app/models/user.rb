@@ -8,15 +8,15 @@ class User
 	field :ln, as: :last_name, type: String, default: ""
 
 	def formal_name
-		"#{self.honorific} #{self.last_name}"
+		return "#{self.honorific} #{self.last_name}"
 	end
 	
 	def full_name
-		"#{self.first_name} #{self.last_name}"
+		return "#{self.first_name} #{self.last_name}"
 	end
 
 	def to_s
-		"#{self.first_name} #{self.last_name}"
+		return "#{self.first_name} #{self.last_name}"
 	end
 
  # Include default devise modules. Others available are:

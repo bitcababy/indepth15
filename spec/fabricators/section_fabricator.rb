@@ -1,9 +1,9 @@
 Fabricator(:section) do
-	number	{ sequence(:section_number) }
-	block		{ ('A'..'H').to_a.sample }
+	number				{ sequence(:section_number) }
+	block					{ ('A'..'H').to_a.sample }
 	occurrences		{ (1..5).to_a }
-	room		{ "Room #{Fabricate.sequence}"}
-	teacher
+	room					{ "Room #{Fabricate.sequence}"}
+	teacher				{ Fabricate :teacher }
 	after_build		{|obj| obj.occurrences.each {|i| Fabricate(:occurrence, block: obj.block, number: i) } }
 end
 
