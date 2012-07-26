@@ -11,24 +11,31 @@ DepthCharge::Application.routes.draw do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
 	
-	resources :courses, :only => [:index, :show]
-
-	get 'sections/:id/assignments', to: 'sections#assignments', as: 'section_assignments'
+	resources :courses do
+		member do
+			get 'home'
+		end
+		resources :sections do
+			member do
+				get 'assignments'
+			end
+		end
+	end
 	
 	# get 'teachers/:id, to: 'teachers#home', as: 'teacher_home_page'
 	
-	namespace 'admin' do
-		resources 'courses' do
-			resources :sections, :only => [:new]
-		end
-		resources :sections, :only => [:create, :new, :edit, :update, :destroy,]
-	end
+	# namespace 'admin' do
+	# 	resources 'courses' do
+	# 		resources :sections, :only => [:new]
+	# 	end
+	# 	resources :sections, :only => [:create, :new, :edit, :update, :destroy,]
+	# end
 	
 	root to: "home#dept_info"
 	
   # devise_for :users
 	devise_scope :user do
-		get 'sign_in', to: 'devise/sessions#new'
+		match '/sign_in' => 'devise/sessions#new'
 		get 'sign_out', to: 'devise/sessions#destroy'
 	end
 
