@@ -3,8 +3,9 @@
 require 'spec_helper'
 
 describe Section do
+	include Utils
+
 	it { should belong_to :teacher }
-	it { should validate_uniqueness_of(:number).scoped_to(:course) }
 	it { should have(0).section_assignments }
 	
 	describe '#days_for_section' do
@@ -17,29 +18,24 @@ describe Section do
 		end
 	end
 	
-	
-	describe '#add_assignment(due_date, asst)' do
-		pending "Unfinished test"
+	describe '#add_assignment(asst, due_date)' do
 		it "adds the assignment and due_date to the assignments hash" do
-			pending "Unfinished test"
 			subject = Fabricate :section
 			asst = Fabricate :assignment
 			expect {
-				subject.add_assignment(Date.today, asst)
+				subject.add_assignment(asst, Date.today)
 			}.to change {subject.section_assignments.count}.by(1)
 		end
 	end
 	
 	context "past and future assignment handling" do
 		before do
-			pending "Unfinished test"
 			@section = Fabricate :section
-			3.times { @section.add_assignment Utils.future_due_date +  rand(1..5), Fabricate(:assignment) }
-			2.times { @section.add_assignment Utils.future_due_date - rand(1..5), Fabricate(:assignment) }
+			3.times { @section.add_assignment Fabricate(:assignment), Utils.future_due_date + rand(1..5) }
+			2.times { @section.add_assignment Fabricate(:assignment), Utils.future_due_date - rand(1..5) }
 		end
 	
 		it "should be able to return all future or past assignments" do
-			pending "Unfinished test"
 			@section.section_assignments.future.count.should == 3
 			@section.future_assignments.count.should == 3
 			@section.section_assignments.past.count.should == 2
