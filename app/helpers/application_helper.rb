@@ -21,20 +21,5 @@ module ApplicationHelper
 	def assignment_date_string(date)
 		return date.strftime("%a, %b %-d")
 	end
-
-	def link_for_menu_item(item)
- 		case
-		when item.link
-			item.link
-		when item.action && item.controller
-			url_for(controller: item.controller, action: item.action)
-		when item.object
-			url_for(item.object)
-		when item.class == Menu
-			'#'
-		else
-			raise "Not written yet (class is #{item.class})"
-		end
-	end
 		
 end
