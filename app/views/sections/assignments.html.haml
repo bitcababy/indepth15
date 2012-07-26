@@ -1,16 +1,10 @@
 %div#assignments
 	%div#header= assignments_header(@section)
-	%h3= @section.teacher.general_leadin
+	%h3= @section.teacher.generic_msg
 
-	%h3= @section.teacher.current_leadin
-	%h2 Current assignment
-	/ = render_cell :assignment_table, :display, [@current_assignment], @section.teacher.current_leadin
-	/ 
-	/ %h2 Upcoming assignments
-	/ = render_cell :assignment_table, :display, @upcoming_assignments
-	/ 
-	/ %h2 Past assignments
-	/ = render_cell :assignment_table, :display, @past_assignments
+	= render partial: 'sections/assignment_table', obj: @current_assignment, as: :assignments, locals: {caption: @section.teacher.current_msg }
+	= render partial: 'sections/assignment_table', obj: @upcoming_assignments, locals: {caption: @section.teacher.upcoming_msg }
+	= render partial: 'sections/assignment_table', obj: @past_assignments
 	
 - content_for :page_header do
 	= @section.course.full_name
