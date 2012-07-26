@@ -6,7 +6,7 @@ development:
         - localhost:27017
       options:
         safe: true
-    
+        identity_map_enabled: true
 
 test:
   sessions:
@@ -16,16 +16,22 @@ test:
         - localhost:27017
       options:
          safe: true
-
+         identity_map_enabled: true
+         
 # set these environment variables on your prod server
 production:
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
-  # slaves:
-  #   - host: slave1.local
-  #     port: 27018
-  #   - host: slave2.local
-  #     port: 27019
+  sessions:
+    default: 
+      host: <%= ENV['MONGOID_HOST'] %>
+      port: <%= ENV['MONGOID_PORT'] %>
+      username: <%= ENV['MONGOID_USERNAME'] %>
+      password: <%= ENV['MONGOID_PASSWORD'] %>
+      database: <%= ENV['MONGOID_DATABASE'] %>
+      options:
+         safe: true
+         identity_map_enabled: true
+      # slaves:
+      #   - host: slave1.local
+      #     port: 27018
+      #   - host: slave2.local
+      #     port: 27019
