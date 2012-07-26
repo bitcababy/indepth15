@@ -1,4 +1,4 @@
-module CourseExampleHelpers
+module CourseExamplesHelper
 	DEFAULT_FUTURE = 3
 	DEFAULT_PAST = 2
 	
@@ -35,4 +35,4 @@ module CourseExampleHelpers
 		return section
 	end
 	
-end #CourseExampleHelpers
+end #CourseExamplesHelper

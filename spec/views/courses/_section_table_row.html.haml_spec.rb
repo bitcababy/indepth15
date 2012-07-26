@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'courses/_section_table_row' do
-	include CourseExampleHelpers
+	include CourseExamplesHelper
 	
 	before :each do
 		@section = section_with_assignments

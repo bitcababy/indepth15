@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'courses/show' do
+describe 'courses/home' do
 	it "sets the page_header to the full name of the course" do
 		course = Fabricate(:course, full_name: "Foo")
 		assign(:course, course)
@@ -10,7 +10,7 @@ describe 'courses/show' do
 		end
 	end
 
-	include CourseExampleHelpers
+	include CourseExamplesHelper
 
 	it "shows various tabs" do
 		assign(:course, course_with_sections)
