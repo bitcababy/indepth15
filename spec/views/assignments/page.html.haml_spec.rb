@@ -1,7 +1,8 @@
 require 'spec_helper'
 
-describe "sections/assignments.html.haml" do
+describe "assignments/page.html.haml" do
 	include CourseExamplesHelper
+
 	before :each do
 		course = Fabricate :course, full_name: 'Math 101'
 		teacher = Fabricate :teacher, 
@@ -16,7 +17,6 @@ describe "sections/assignments.html.haml" do
 	end
 
   it "displays a header for the assignments" do
-	
 		render
 		rendered.should have_selector('div#header') do |div|
 			div.text.should =~ /#{academic_year_string(Settings.academic_year)} Assignments/

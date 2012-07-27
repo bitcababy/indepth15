@@ -2,9 +2,9 @@
 	%div#header= assignments_header(@section)
 	%h3= @section.teacher.generic_msg
 
-	= render partial: 'sections/assignment_table', obj: @current_assignment, as: :assignments, locals: {caption: @section.teacher.current_msg }
-	= render partial: 'sections/assignment_table', obj: @upcoming_assignments, locals: {caption: @section.teacher.upcoming_msg }
-	= render partial: 'sections/assignment_table', obj: @past_assignments
+	= render partial: 'assignments/assignment_table', obj: @current_assignment, as: :assignments, locals: {caption: @section.teacher.current_msg }
+	= render partial: 'assignments/assignment_table', obj: @upcoming_assignments, locals: {caption: @section.teacher.upcoming_msg }
+	= render partial: 'assignments/assignment_table', obj: @past_assignments
 	
 - content_for :page_header do
 	= @section.course.full_name
