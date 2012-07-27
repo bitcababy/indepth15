@@ -3,7 +3,11 @@ DepthCharge::Application.routes.draw do
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
 
-	resources :teachers, :only => [:show]
+	resources :teachers, only: [] do
+		member do
+			get 'home'
+		end
+	end
 	
 	# get 'courses/:course_number/section
 	
@@ -11,14 +15,12 @@ DepthCharge::Application.routes.draw do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
 	
-	resources :courses do
+	resources :courses, only: [] do
 		member do
 			get 'home'
 		end
 	end
-	
-	# get 'teachers/:id, to: 'teachers#home', as: 'teacher_home_page'
-	
+		
 	# namespace 'admin' do
 	# 	resources 'courses' do
 	# 		resources :sections, :only => [:new]
@@ -34,7 +36,6 @@ DepthCharge::Application.routes.draw do
 		get 'sign_out', to: 'devise/sessions#destroy'
 	end
 
-	
 	match 'course/:course_number/block/:block/assignments' => 'assignments#page', :as => :assignments_page
 
   # The priority is based upon order of creation:
