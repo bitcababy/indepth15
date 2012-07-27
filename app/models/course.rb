@@ -44,7 +44,12 @@ class Course
 	##
 	belongs_to :branch
 	has_many :assignments
-	has_many :sections
+	has_many :sections do
+		def current
+			where(academic_year: Settings.academic_year)
+		end
+	end
+
 	has_many :section_assignments
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
 		has_one doc, class_name: 'TextDocument', inverse_of: :owner, autobuild: true, dependent: :destroy
