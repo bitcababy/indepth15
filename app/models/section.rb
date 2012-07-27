@@ -49,7 +49,7 @@ class Section
 	
 	def menu_label
 		if self.teacher then
-			self.teacher.full_name + ", " + self.block
+			self.teacher.full_name + ", Block " + self.block
 		else
 			self.to_s
 		end
