@@ -15,11 +15,6 @@ DepthCharge::Application.routes.draw do
 		member do
 			get 'home'
 		end
-		resources :sections do
-			member do
-				get 'assignments'
-			end
-		end
 	end
 	
 	# get 'teachers/:id, to: 'teachers#home', as: 'teacher_home_page'
@@ -40,6 +35,8 @@ DepthCharge::Application.routes.draw do
 	end
 
 	
+	match 'course/:course_number/block/:block/assignments' => 'assignments#page', :as => :assignments_page
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
