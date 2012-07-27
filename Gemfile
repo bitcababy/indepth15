@@ -75,7 +75,7 @@ end
 
 group :test do
 	gem 'cucumber-rails', '>= 1.2.1', require: false
-	gem 'rspec-cells', path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
+	gem 'rspec-cells'#, path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
 	gem 'mongoid-rspec'
 	gem 'capybara'
 	gem 'database_cleaner'
