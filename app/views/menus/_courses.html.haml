@@ -1,2 +1,4 @@
-%ul#course-list
-	= render partial: 'menus/course', collection: Course.current
+%li.courses
+	%a{href: '#'} Courses
+	%ul.course-list
+		= render partial: 'menus/course', collection: @courses

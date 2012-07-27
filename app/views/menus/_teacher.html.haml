@@ -1,4 +1,5 @@
-%li.teacher= teacher.full_name
-%ul
-	%li.home-page
-		%a{href: teacher_path(teacher)} Home page
+%li.teacher
+	%a{href: teacher_path(teacher)}= teacher.full_name
+	%ul
+		%li.home-page
+			%a{href: teacher_path(teacher)} Home page
