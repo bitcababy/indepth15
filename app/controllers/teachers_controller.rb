@@ -1,4 +1,4 @@
 class TeachersController < ApplicationController
-	def show
+	def home
 	end
 end
