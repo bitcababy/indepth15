@@ -1,0 +1,15 @@
+/ Begin container
+%ul#menubar.hmenu
+	= render_home_menu
+	= render_courses_menu
+	= render_faculty_menu
+
+:coffeescript
+	$(document).ready ($) ->
+		$('#menubar').MegaMenu
+			rowItems: 5
+			speed: 'fast'
+			effect: 'fade'
+			
+			
+			
