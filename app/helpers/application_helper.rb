@@ -21,5 +21,37 @@ module ApplicationHelper
 	def assignment_date_string(date)
 		return date.strftime("%a, %b %-d")
 	end
+	
+	def render_home_menu
+		render partial: 'menus/home'
+	end
+	
+	def render_courses_menu
+		@courses = Course.in_catalog
+		render partial: 'menus/courses'
+	end
+	
+	def render_sections_of_course(course)
+		sections = course.sections.current
+		render partial: 'menus/section', collection: sections
+	end
+	
+	def render_teachers
+		teachers = Teacher.current
+		render partial: 'menus/teacher', collection: teachers
+	end
+
+	def render_faculty_menu
+		render partial: 'menus/faculty'
+	end
+	
+	def render_manage_menu
+		# render partial: 'menus/manage'
+	end
+	
+	def render_menubar
+		render 'menus/menubar'
+	end
+		
 		
 end
