@@ -38,6 +38,9 @@ class Course
 	field :ic, as: :in_catalog, type: Boolean, default: true
 	field :oc, as: :occurrences, type: Integer, default: 5
 	field :ha, as: :has_assignments, type: Boolean, default: true
+	field :_id, type: Integer, default: ->{ number }
+	
+	index( {number: 1}, {unique: true} )
 	
 	##
 	## Associations
