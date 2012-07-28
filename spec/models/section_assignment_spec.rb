@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe SectionAssignment do
-	it { should belong_to :section }
+	it { should be_embedded_in :section }
 	it { should belong_to :assignment }
 	
 	it "should have future and past scopes" do
