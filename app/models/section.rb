@@ -2,7 +2,7 @@
 
 class Section
 	include Mongoid::Document
-  include Mongoid::Timestamps
+  # include Mongoid::Timestamps
 
 	field :dept, type: Integer
 	field :block, type: String

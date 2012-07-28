@@ -1,7 +1,7 @@
 class Document
 	include Mongoid::Document
 	include Mongoid::Paranoia
-  include Mongoid::Timestamps
+  # include Mongoid::Timestamps
 
 	field :mj, as: :major_version, type: Integer, default: 1
 	field :mv, as: :minor_version, type: Integer, default: 0

@@ -1,6 +1,6 @@
 class SectionAssignment
 	include Mongoid::Document
-  include Mongoid::Timestamps
+  # include Mongoid::Timestamps
 
 	field :due_date, type: Date
 	field :name, type: String, default: ""

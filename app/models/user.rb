@@ -1,6 +1,6 @@
 class User
 	include Mongoid::Document
-  include Mongoid::Timestamps
+  # include Mongoid::Timestamps
 
 	field :ho, as: :honorific, type:String, default: "Mr."
 	field :fn, as: :first_name, type: String, default: ""
