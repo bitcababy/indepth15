@@ -1,6 +1,4 @@
 Fabricator :document do
-	major_version		1
-	minor_version		0
 	tags						[]
 	owner						nil
 end
