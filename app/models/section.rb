@@ -4,14 +4,12 @@ class Section
 	include Mongoid::Document
   # include Mongoid::Timestamps
 
-	field :dept, type: Integer
-	field :block, type: String
-	field :room, type: String
-	field :next_asst_num, type: Integer
-	field :semester, type: Symbol
-	field :occurrences, type: Array
-	field :style_id, type: Integer
-	field :academic_year, type: Integer, default: Settings.academic_year
+	field :de, as: :dept, type: Integer
+	field :bl, as: :block, type: String
+	field :rm, as: :room, type: String
+	field :se, as: :semester, type: Symbol
+	field :oc, as: :occurrences, type: Array
+	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	
 	belongs_to :course
 	belongs_to :teacher
