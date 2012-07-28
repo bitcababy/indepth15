@@ -54,7 +54,7 @@ class Section
 	end
 	
 	def days_for_section
-		(self.occurrences.collect {|occ| Occurrence.find_by(number: occ, block: self.block).day_number}).sort
+		(self.occurrences.collect {|occ| Occurrence.find_by(number: occ, block: self.block).day}).sort
 	end
 	
 	class << self
@@ -66,18 +66,19 @@ class Section
 			semesters = hash[:semesters]
 			teacher_id = hash[:teacher_id]
 			hash[:room] = hash[:room].to_s
+			hash[:academic_year] = hash[:year]
+			course_number = hash[:course_num]
+			course = Course.find_by(number: course_number)
+			hash[:course] = course
+			
+			[:which_occurrences, :semester, :sched_color, :year, :dept_id, :number, :course_num, :semesters, :style_id].each {|k| hash.delete(k)}
 			teacher = Teacher.find_by login: teacher_id
-			%W(which_occurrences semester sched_color year dept_id number).each {|k| hash.delete(k)}
-	
-			hash[:occurrences] = (occurrences == :all) ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
+			hash[:teacher] = teacher
+			hash[:occurrences] = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
 			
 			hash[:semester] = [1,3,12].contains?(semesters) ? :first : :second
-			course_number = hash[:course_num]
-
-			course = Course.find_by(number: course_number)
 			
 			section = course.sections.create!(hash)
-			section.teacher = teacher
 			section.save!
 			return section
 		end
