@@ -1,4 +1,4 @@
 %tr.assignment
 	%td.name= assignment.name
 	%td.due_date= assignment_date_string(assignment.due_date)
-	%td.content= assignment.assignment.content
+	%td.content!= assignment.assignment.content
