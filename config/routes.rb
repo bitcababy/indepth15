@@ -1,7 +1,11 @@
 DepthCharge::Application.routes.draw do
 
+	# Unrestful routes
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
+
+	get 'course/:course_number/block/:block/assignments', to: 'assignments#page', :as => :assignments_page
+	get 'course/:course_number/page', to: 'courses#home', :as => :course_home
 
 	resources :teachers, only: [] do
 		member do
@@ -36,7 +40,6 @@ DepthCharge::Application.routes.draw do
 		get 'sign_out', to: 'devise/sessions#destroy'
 	end
 
-	match 'course/:course_number/block/:block/assignments' => 'assignments#page', :as => :assignments_page
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
