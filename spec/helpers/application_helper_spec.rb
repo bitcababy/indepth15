@@ -59,9 +59,12 @@ describe ApplicationHelper do
 		end
 
 		describe "#render_courses_menu" do
-
 			before :each do
-				10.times { course_with_sections }
+				Fabricate :course
+				pending "Unfinished test"
+				10.times { Fabricate :course }
+				pending "Unfinished test"
+				Course.each {|course| (1..5).to_a.any.times {Fabricate(:section, course: course)}}
 				@res = render_courses_menu
 			end
 		
@@ -95,7 +98,7 @@ describe ApplicationHelper do
 			@res.should have_selector('ul', id: 'faculty-list') do |ul|
 				Teacher.each do |teacher|
 					ul.should have_selector('li.teacher', content: teacher.full_name)
-					ul.should have_selector('li.home-page a', href: teacher_path(teacher), content: 'Home page')
+					ul.should have_selector('li.home-page a', href: home_teacher_path(teacher), content: 'Home page')
 				end
 			end
 		end
