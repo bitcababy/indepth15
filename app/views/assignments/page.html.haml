@@ -8,3 +8,6 @@
 	
 - content_for :page_header do
 	= @section.course.full_name
+- content_for :title do
+	= "#{@section.course.full_name}, Block #{@section.block}"
+
