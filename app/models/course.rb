@@ -129,7 +129,7 @@ class Course
 			resources = hash[:resources]
 			policies = hash[:policies]
 			prog_of_studies_descr = hash[:prog_of_studies_descr]
-			%W(semesters info resources policies prog_of_studies_descr).each {|k| hash.delete(k)}
+			[:semesters, :info, :resources, :policies, :prog_of_studies_descr].each {|k| hash.delete(k)}
 			hash[:branch] = Branch.find_or_create_by(content: BRANCH_MAP[hash[:course_num]])
 			course = self.create! hash
 			course.information = info

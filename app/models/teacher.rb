@@ -25,7 +25,7 @@ class Teacher < Author
 		gm = hash[:generic_msg]
 		um = hash[:upcoming_msg]
 		
-		%W(phrase old_current generic_msg upcoming_msg teacher_id orig_id).each {|k| hash.delete(k)}
+		[:phrase, :old_current, :teacher_id, :orig_id].each {|k| hash.delete(k)}
 		teacher = self.create! hash
 		return teacher
 	end

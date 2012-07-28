@@ -34,8 +34,10 @@ class SectionAssignment
 
 		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id].each {|k| hash.delete(k)}
 		
+		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id, :course_num].each {|k| hash.delete(k)}
 		hash[:name] = assignment.name
 		sa = section.section_assignments.create! hash
+
 		sa.assignment = assignment
 		sa.save!
 		return sa
