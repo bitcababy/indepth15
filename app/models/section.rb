@@ -13,9 +13,11 @@ class Section
 	
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 
-	has_many :section_assignments
 	belongs_to :course, index: true
 	belongs_to :teacher, index: true
+
+	embeds_many :section_assignments
+	accepts_nested_attributes_for :section_assignments
 
 	cattr_reader :blocks, :semesters, :occurrences
 	
@@ -73,6 +75,7 @@ class Section
 			hash[:course] = course
 			
 			[:which_occurrences, :semester, :sched_color, :year, :dept_id, :number, :course_num, :semesters, :style_id].each {|k| hash.delete(k)}
+
 			teacher = Teacher.find_by login: teacher_id
 			hash[:teacher] = teacher
 			hash[:occurrences] = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
