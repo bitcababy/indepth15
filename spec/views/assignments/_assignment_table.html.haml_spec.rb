@@ -4,7 +4,8 @@ describe 'assignments/_assignment_table' do
 	it "display a table with the provided assignments" do
 		sas = []
 		(1..3).each do |i|
-			sas << Fabricate(:section_assignment, assignment: Fabricate(:assignment), due_date: (Date.today + i))
+			section = Fabricate(:section)
+			sas << Fabricate(:section_assignment, section: section, assignment: Fabricate(:assignment), due_date: (Date.today + i))
 		end
 		assign(:caption, "Upcoming message")
 		assign(:table_id, "upcoming")
