@@ -8,11 +8,16 @@ describe Section do
 	it { should belong_to :teacher }
 	it { should have(0).section_assignments }
 	
+	context "fabricator" do
+		subject {Fabricate :section }
+		specify { subject.occurrences.should be_kind_of Array }
+	end
+	
 	describe '#days_for_section' do
 		it "returns an array of days for its occurrences" do
 			section = Fabricate(:section)
 			for occ in section.occurrences 
-				Fabricate :occurrence, block: section.block, number: occ, day_number: (1..8).to_a.sample
+				Fabricate :occurrence, block: section.block, number: occ, day: (1..8).to_a.sample
 			end
 			section.days_for_section.size.should == section.occurrences.count
 		end
