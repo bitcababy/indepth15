@@ -5,7 +5,8 @@ Fabricator(:section) do
 	teacher				{ Fabricate :teacher }
 	academic_year	{ Settings.academic_year }
 	after_build		{|obj| obj.occurrences.each {|i| 
-										Fabricate(:occurrence, block: obj.block, number: i ) } }
+										Fabricate(:occurrence, block: obj.block, number: i ) unless Occurrence.where(number: i, block: obj.block).exists?
+										} }
 end
 
 Fabricate.sequence(:block) {|i| ('A'..'H').to_a[i] }
