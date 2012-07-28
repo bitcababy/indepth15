@@ -11,10 +11,11 @@ class Section
 	field :oc, as: :occurrences, type: Array
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	
-	belongs_to :course
-	belongs_to :teacher
+	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 
 	has_many :section_assignments
+	belongs_to :course, index: true
+	belongs_to :teacher, index: true
 
 	cattr_reader :blocks, :semesters, :occurrences
 	
