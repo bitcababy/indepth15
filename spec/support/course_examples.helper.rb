@@ -4,7 +4,7 @@ module CourseExamplesHelper
 	
 	def create_occurrences(section)
 		for occ in section.occurrences 
-			Fabricate :occurrence, block: section.block, number: occ, day_number: (1..8).to_a.sample
+			Fabricate :occurrence, block: section.block, number: occ, day: (1..8).to_a.sample
 		end
 	end
 		
@@ -20,7 +20,7 @@ module CourseExamplesHelper
 
 	def section_with_assignments(options = {})
 		c = options[:course]
-		section = Fabricate(:section)
+		section = Fabricate(:section, academic_year: Settings.academic_year)
 		section.course = c if c
 		nf = options[:future] || DEFAULT_FUTURE
 		np = options[:past] || DEFAULT_PAST
