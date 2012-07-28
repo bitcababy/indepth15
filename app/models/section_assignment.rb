@@ -5,9 +5,9 @@ class SectionAssignment
 	field :dd, as: :due_date, type: Date
 	field :na, as: :name, type: String, default: ""
 	
-	belongs_to :section
-	belongs_to :assignment
-	belongs_to :course
+	embedded_in :section
+	belongs_to :assignment, index: true, inverse_of: nil
+	belongs_to :course, index: true
 	
 	accepts_nested_attributes_for :section, :assignment
 	
@@ -32,13 +32,13 @@ class SectionAssignment
 
 		assignment = Assignment.find_by(assgt_id: assgt_id)
 
-		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id].each {|k| hash.delete(k)}
 		
 		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id, :course_num].each {|k| hash.delete(k)}
 		hash[:name] = assignment.name
 		sa = section.section_assignments.create! hash
 
 		sa.assignment = assignment
+		sa.course = course
 		sa.save!
 		return sa
 	end
