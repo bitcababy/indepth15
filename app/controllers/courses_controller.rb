@@ -1,11 +1,12 @@
 class CoursesController < ApplicationController
-	before_filter :find_course, except: [:list]
+	before_filter :find_course, only: []
 	
 	def list
 		@courses = Course.in_catalog.asc(:number)
 	end
 	
 	def home
+		course = Course.where(number: params['course_number']).first
 		respond_to do |format|
       format.html
     end
