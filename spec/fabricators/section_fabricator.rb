@@ -1,19 +1,19 @@
 Fabricator(:section) do
-	number				{ sequence(:section_number) }
-	block					{ ('A'..'H').to_a.sample }
-	occurrences		{ (1..5).to_a }
+	block					{ sequence(:block) }
+	occurrences		{ (1..3).collect {sequence(:occurrence_number) {|i| i}} }
 	room					{ "Room #{Fabricate.sequence}"}
 	teacher				{ Fabricate :teacher }
 	academic_year	{ Settings.academic_year }
-	after_build		{|obj| obj.occurrences.each {|i| Fabricate(:occurrence, block: obj.block, number: i) } }
+	after_build		{|obj| obj.occurrences.each {|i| 
+										Fabricate(:occurrence, block: obj.block, number: i ) } }
 end
 
-Fabricate.sequence(:section_number) {|i| i }
+Fabricate.sequence(:block) {|i| ('A'..'H').to_a[i] }
 
-Fabrication::Transform.define(:section, lambda {|i| 
-	if Section.where(number: i).exists?
-		Section.find_by(number: i)
+Fabrication::Transform.define(:block, lambda {|b| 
+	if Section.where(block: b).exists?
+		Section.find_by(block: b)
 	else
-		Fabricate(:section, number: i)
+		Fabricate(:section, block: b)
 	end
 	})
