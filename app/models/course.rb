@@ -55,7 +55,7 @@ class Course
 
 	has_many :section_assignments
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
-		has_one doc, class_name: 'TextDocument', inverse_of: :owner, autobuild: true, dependent: :destroy
+		belongs_to doc, class_name: 'TextDocument', inverse_of: :nil, autobuild: true, dependent: :destroy
 	end
 
 	has_and_belongs_to_many :major_tags
