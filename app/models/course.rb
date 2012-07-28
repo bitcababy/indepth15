@@ -1,6 +1,5 @@
 class Course
   include Mongoid::Document
-
   # include Mongoid::Timestamps
 
 	FULL_YEAR = :full_year
@@ -46,14 +45,12 @@ class Course
 	## Associations
 	##
 	belongs_to :branch
-	has_many :assignments
 	has_many :sections do
 		def current
 			where(academic_year: Settings.academic_year)
 		end
 	end
 
-	has_many :section_assignments
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
 		belongs_to doc, class_name: 'TextDocument', inverse_of: :nil, autobuild: true, dependent: :destroy
 	end
