@@ -1,6 +1,5 @@
 class TextDocument < Document
 	field :content, type: String, default: ""
-	field :locked, type: Boolean, default: true
 	
 	# embeds_one :text_document_context
 	# @doc_machine = StateMachine.build do
