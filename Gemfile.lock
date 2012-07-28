@@ -139,6 +139,7 @@ GEM
       excon (~> 0.15.4)
     hike (1.2.1)
     hpricot (0.8.6)
+    htmlentities (4.3.1)
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.0.2)
@@ -305,6 +306,7 @@ DEPENDENCIES
   haml-rails
   heroku
   hpricot
+  htmlentities
   jquery-rails
   mongo
   mongoid

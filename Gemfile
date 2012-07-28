@@ -49,7 +49,7 @@ gem 'heroku'
 gem 'state_machine'
 gem 'formtastic'
 gem 'client_side_validations'
-
+gem 'htmlentities'
 
 group :development, :test do
 	gem 'grizzled-rails-logger'
