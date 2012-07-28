@@ -5,7 +5,7 @@ module Convert
 		Occurrence => 	{
 			'block_name' => :block_name,
 			'occurrence' => :occurrence,
-			'day_num' => :day_number,
+			'day_num' => :day,
 			'period' => :period,
 		},
 		Teacher => {
