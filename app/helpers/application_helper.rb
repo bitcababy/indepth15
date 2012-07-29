@@ -18,6 +18,19 @@ module ApplicationHelper
 		return "#{year-1}—#{year}"
 	end
 	
+	def duration_string(duration)
+		case duration
+		when :full_year
+			'Full Year'
+		when :first_semester
+			'First Semester'
+		when :second_semester
+			'Second Semester'
+		when :halftime
+			'Full Year, half time'
+		end
+	end
+	
 	def assignment_date_string(date)
 		return date.strftime("%a, %b %-d")
 	end
@@ -52,6 +65,15 @@ module ApplicationHelper
 	def render_menubar
 		render 'menus/menubar'
 	end
+	
+	def section_label_for_menu(section)
+		if section.teacher then
+			section.teacher.formal_name + ", Block " + section.block
+		else
+			section.to_s
+		end
+	end
+	
 		
 		
 end
