@@ -31,7 +31,9 @@ describe AssignmentsController do
 		end
 
 		it "assigns @past_assignments" do
-			assigns(:past_assignments).should_not be_nil
+			past = assigns(:past_assignments)
+			past.should_not be_nil
+			past.count.should > 0
 		end
 
   end
