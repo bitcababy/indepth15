@@ -47,15 +47,7 @@ class Section
 		course = self.course
 		"#{course.full_name}#{course.academic_year}/#{self.teacher.login}/#{self.block}"
 	end
-	
-	def menu_label
-		if self.teacher then
-			self.teacher.full_name + ", Block " + self.block
-		else
-			self.to_s
-		end
-	end
-	
+		
 	def days_for_section
 		(self.occurrences.collect {|occ| Occurrence.find_by(number: occ, block: self.block).day}).sort
 	end
@@ -84,6 +76,9 @@ class Section
 			
 			section = course.sections.create!(hash)
 			section.save!
+			section.occurrences.each do |i|
+				puts "Occurrence #{i}/#{section.block} does not exist" unless Occurrence.where(number: i, block: section.block).exists?
+			end
 			return section
 		end
 	
