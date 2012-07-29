@@ -1,31 +1,28 @@
+@import "fonts";
+
 body {
-  font-family: 'Belleza', Verdana, sans-serif;
   border: 0;
   outline: none;
   margin: 0;
   padding: 0; 
+
+	p {
+		font-size: .8em;
+	}
+
+	a {
+		color: rgb(0, 120, 174);
+		decoration: none;
+	}
 }
 
-p {
-	font-family: 'Noticia Text', Georgia, serif;
-	font-size: .8em;
-}
-
-a {
-	color: rgb(0, 120, 174);
-	decoration: none;
-}
-
-div#page_header {
+#page_header {
+	@extend .sans;
 	background: #B80000;
 	color: white;
 	font-size: 2.5em;
 	display: block;
 	margin: 0px;
-	h1 {
-		font-size: 3em;
-		padding: 8px;
-	}
 	top: 0px;
 	left:0;
 	width: 100%;
@@ -33,8 +30,8 @@ div#page_header {
 	padding-left: 16px;
 }
 
-div#menubar {
-	font-family: Arial;
+#menubar-holder {
+	@extend .sans;
 	font-size: 0.8em;
 	display: block;
 	width: 15em;
@@ -44,10 +41,15 @@ div#menubar {
 }
 
 div#main {
-	border-left-width: 1px;
-	border-left-color: #000000;
-	border-left-style: dotted;
-	float:left;
-	position: relative;
-	right: 0;
+	.content-header {
+		@extend .sans;
+		font-size: 140%;
+		font-weight: bold;
+		background: #eee;
+		padding: 8px;
+	}
+	.content {
+		@extend .serif;
+		padding: 8px;
+	}
 }
