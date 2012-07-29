@@ -1,10 +1,8 @@
-%table{id: @table_id}
-	- if @caption
-		%caption!= @caption
-	%thead
-		%tr
-			%th #
-			%th Date due
-			%th Assignment
-	%tbody
-		= render partial: 'assignment_row', collection: @assignments, as: 'assignment'
+%thead
+	%tr
+		%th.name #
+		%th.due_date Date due
+		%th.content Assignment
+%tbody
+	= render partial: 'assignment_row', collection: assignments, as: 'assignment'
+
