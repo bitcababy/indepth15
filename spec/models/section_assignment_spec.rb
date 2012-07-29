@@ -7,7 +7,7 @@ describe SectionAssignment do
 	context "scoping" do
 		before :each do
 			@section = Fabricate(:section)
-			4.times {|i| @section.add_assignment Fabricate(:assignment), Date.today + i }
+			4.times {|i| @section.add_assignment Fabricate(:assignment), Date.today + i + 1 }
 			3.times {|i| @section.add_assignment Fabricate(:assignment), Date.today - i - 1 }
 		end
 		
