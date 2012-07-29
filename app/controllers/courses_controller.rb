@@ -1,12 +1,11 @@
 class CoursesController < ApplicationController
-	before_filter :find_course, only: []
+	before_filter :find_course, except: [:list]
 	
 	def list
 		@courses = Course.in_catalog.asc(:number)
 	end
 	
 	def home
-		course = Course.where(number: params['course_number']).first
 		respond_to do |format|
       format.html
     end
@@ -14,31 +13,31 @@ class CoursesController < ApplicationController
 	
 	def resources_pane
 		respond_to do |format|
-      format.html
-    end
+      format.html { render :layout => !request.xhr? }
+     end
 	end
 	
 	def information_pane
 		respond_to do |format|
-      format.html
+      format.html { render :layout => !request.xhr? }
     end
 	end
 	
 	def news_pane
 		respond_to do |format|
-      format.html
+      format.html { render :layout => !request.xhr? }
     end
 	end
 	
 	def policies_pane
 		respond_to do |format|
-      format.html
+      format.html { render :layout => !request.xhr? }
     end
 	end
 
 	def sections_pane
 		respond_to do |format|
-      format.html
+      format.html { render :layout => !request.xhr? }
     end
 	end
 	
