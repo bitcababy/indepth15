@@ -1,13 +1,89 @@
-%div#assignments
-	%div#header= assignments_header(@section)
-	%div.generic-msg!= @section.teacher.generic_msg
+#assignments.content
+	#generic-msg!= @section.teacher.generic_msg
 
-	= render partial: 'assignments/assignment_table', obj: @current_assignment, as: :assignments, locals: {caption: @section.teacher.current_msg }
-	= render partial: 'assignments/assignment_table', obj: @upcoming_assignments, locals: {caption: @section.teacher.upcoming_msg }
-	= render partial: 'assignments/assignment_table', obj: @past_assignments
+	.assignment-block
+		.title Current assignment
+		- if @current_assignment.count > 0
+			#current-msg!= @section.teacher.current_msg
+			%table#current
+				= render partial: 'assignments/assignment_table', locals: { assignments: @current_assignment }
+		- else
+			%i None
+	
+	.assignment-block
+		.title Upcoming assignments
+		- if @upcoming_assignments.count > 0
+			#upcoming-msg!= @section.teacher.upcoming_msg
+			%table#current
+				= render partial: 'assignments/assignment_table', locals: {assignments: @upcoming_assignments }
+		- else
+			%i None
+
+	.assignment-block
+		.title Past assignments
+		- if @past_assignments.count > 0
+			%table#past
+				= render partial: 'assignments/assignment_table', locals: { assignments: @past_assignments }
+		- else
+			%i None
 	
 - content_for :page_header do
 	= @section.course.full_name
 - content_for :title do
 	= "#{@section.course.full_name}, Block #{@section.block}"
+- content_for :content_header do
+	= assignments_header(@section)
+	
+:coffeescript
+	$(document).ready ->
+		$("#current").dataTable
+			bjQueryUI: true
+			bFilter: false
+			bInfo: false
+			bPaginate: false
+			bSort: false
+			aoColumnDefs: [
+				sWidth: "5em"
+				aTargets: [0]
+			,
+				sWidth: "6em"
+				aTargets: [1]
+			]
 
+		$("#upcoming").dataTable
+			bjQueryUI: true
+			bFilter: false
+			bInfo: false
+			bPaginate: false
+			bSort: false
+			aoColumnDefs: [
+				sWidth: "5em"
+				aTargets: [0]
+			,
+				sWidth: "6em"
+				aTargets: [1]
+			]
+
+		$("#past").dataTable
+			bjQueryUI: true
+			bFilter: false
+			bInfo: false
+			bPaginate: true
+			bSort: false
+			iDisplayLength: 5
+			bLengthChange: true
+			iDeferLoading: true
+			aLengthMenu: [
+				2, 5, 10,-1
+			]
+			aoColumnDefs: [
+				bSortable: false
+				aTargets: [0]
+			,
+				sWidth: "5em"
+				aTargets: [0]
+			,
+				sWidth: "6em"
+				aTargets: [1]
+			]
+			
