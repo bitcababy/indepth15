@@ -6,12 +6,12 @@
 			%th.teacher Teacher
 			%th.room Room
 	%tbody
-		= render partial: 'courses/section_table_row', collection: @course.sections, as: 'section'
+		= render partial: 'courses/section_table_row', collection: @course.sections.current, as: 'section'
 
 :coffeescript
-$(document).ready ->
-	$("#sections_table").dataTable
-		bFilter: false
-		bInfo: false
-		bPaginate: false
-		bjQueryUI: true
+	$(document).ready ->
+		$("#sections_table").dataTable
+			bFilter: false
+			bInfo: false
+			bPaginate: false
+			bjQueryUI: true
