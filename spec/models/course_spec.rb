@@ -5,7 +5,7 @@ describe Course do
 	it { should validate_uniqueness_of(:number)}
 	it { should have_and_belong_to_many(:major_tags) }
 
-	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
+	[:information_doc, :resources_doc, :policies_doc, :news_doc].each do |doc|
 		it { should belong_to(doc) }
 	end
 	
