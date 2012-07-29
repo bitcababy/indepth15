@@ -4,11 +4,11 @@ Fabricator(:course) do
 	credits					{ [ 5.0, 2.5].sample }
 	full_name				{ |attrs| "Course #{attrs[:number]}"}
 	in_catalog			true
+	description			{ |attrs| "This is the description of course #{attrs[:number]}" }
 	information_doc	{ Fabricate :text_document }
 	resources_doc		{ Fabricate :text_document }
 	policies_doc		{ Fabricate :text_document }
 	news_doc				{ Fabricate :text_document }	
-	description_doc	{ Fabricate :text_document }
 end
 
 Fabricate.sequence(:course_number, 321)
