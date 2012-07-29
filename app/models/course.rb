@@ -2,6 +2,8 @@ class Course
   include Mongoid::Document
   # include Mongoid::Timestamps
 
+	after_initialize :create_docs
+
 	FULL_YEAR = :full_year
 	FIRST_SEMESTER = :first_semester
 	SECOND_SEMESTER = :second_semester
