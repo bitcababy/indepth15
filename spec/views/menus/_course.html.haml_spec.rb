@@ -8,9 +8,7 @@ describe 'menus/_courses' do
 		course = Fabricate(:course, full_name: 'Fractals')
 		3.times {course.sections << Fabricate(:section) }
 		render partial: 'menus/course', locals: {course: course}
-		rendered.should have_selector('li.course') do |li|
-			li.should have_content('Fractals')
-		end
+		rendered.should have_selector('li.course', content: 'Fractals')
 		rendered.should have_selector('ul li')				
 	end
 

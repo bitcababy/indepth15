@@ -11,19 +11,10 @@ describe 'courses/_section_table_row' do
 	it "displays a row for a section" do
 		render partial: 'courses/section_table_row', locals: {section: @section}
 		rendered.should have_selector('tr') do |row|
-			row.should have_selector('td.block') do |cell|
-				cell.should contain(@section.block)
-			end
-			row.should have_selector('td.days') do |cell|
-				cell.should contain(@section.days_for_section.join(''))
-			end
-			row.should have_selector('td.teacher') do |cell|
-				cell.should contain(@section.teacher.formal_name)
-			end
-			row.should have_selector('td.room') do |cell|
-				cell.should contain(@section.room)
-			end
-
+			row.should have_selector('td.block', content: @section.block)
+			row.should have_selector('td.days', content: @section.days_for_section.join(''))
+			row.should have_selector('td.teacher', content: @section.teacher.formal_name)
+			row.should have_selector('td.room', content: @section.room)
 		end
 	end
 	

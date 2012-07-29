@@ -8,7 +8,7 @@ describe 'menus/_teacher' do
 	end
 		
 	it "should display the teacher's full name" do
-		rendered.should have_selector('li') {|li| li.should have_content(@teacher.full_name)}
+		rendered.should have_selector('li', content: @teacher.full_name)
 	end
 
 	it "should display a link to the teachers home page" do
