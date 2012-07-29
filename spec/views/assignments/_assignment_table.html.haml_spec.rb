@@ -9,8 +9,7 @@ describe 'assignments/_assignment_table' do
 		end
 		assign(:caption, "Upcoming message")
 		assign(:table_id, "upcoming")
-		assign(:assignments, sas)
-		render partial: 'assignments/assignment_table'
+		render partial: 'assignments/assignment_table', locals: {assignments: sas}
 		rendered.should have_selector('table', id: 'upcoming') do |table|
 			table.should have_selector('thead tr') do |row|
 				['#', 'Date due', 'Assignment'].each {|hdr| row.should have_selector('th', content: hdr)}
