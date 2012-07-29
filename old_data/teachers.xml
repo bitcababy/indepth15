@@ -31,7 +31,7 @@
             <column name="upcoming_assgts_msg"></column>
             <column name="extra_stuff"></column>
             <column name="logged_in">0</column>
-            <column name="current">1</column>
+            <column name="current">0</column>
             <column name="admin_level">none</column>
             <column name="updated_at">2012-05-11 15:25:06</column>
         </table>
