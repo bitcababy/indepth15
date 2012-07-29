@@ -45,15 +45,16 @@ describe ApplicationHelper do
 		end
 			
 	end
-	
+				
 	context "courses menu" do
 		
 		describe '#render_sections_of_course' do
 			it "renders one course as an unordered list" do
 				course = course_with_sections
+				
 				res = render_sections_of_course(course)
 				course.sections.each do |section|
-					res.should have_selector('li.section a', href: assignments_page_path(section.course.number, section.block), content: section.menu_label)
+					res.should have_selector('li.section a', href: assignments_page_path(section.course.number, section.block), content: section_label_for_menu(section))
 				end
 			end
 		end
