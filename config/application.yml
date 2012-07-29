@@ -2,7 +2,7 @@ defaults: &defaults
   academic_year: 2012
   school_name: Weston High School
   dept_name:  Math Department
-  past_assts_num: 2
+  past_assts_num: 5
   cutoff:
     hour: 15
     minute: 0
