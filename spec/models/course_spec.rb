@@ -6,12 +6,15 @@ describe Course do
 	it { should have_and_belong_to_many(:major_tags) }
 
 	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
-		it { should have_one(doc) }
+		it { should belong_to(doc) }
 	end
 	
 	context "Fabricator" do
-		subject { Fabricate(:course) }
-		it { should have(0).sections }
+		it "creates courses with unique numbers" do
+			course1 = Fabricate.build(:course)
+			course2 = Fabricate.build(:course)
+			course1.number.should_not == course2.number
+		end
 	end
 		
 	describe '::import_from_hash' do
@@ -44,6 +47,7 @@ describe Course do
 				@course.sections << Fabricate(:section, course: @course)
 			}.to change {@course.sections.count}.by(1)
 		end
+
 		it "should be able to change its information" do
 			expect {
 				@course.information = "Some info"
