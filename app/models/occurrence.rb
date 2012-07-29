@@ -8,7 +8,7 @@ class Occurrence
 	
 	scope :for_block, lambda {|b| where(block_name: b)}
 	
-	index {number: 1, block: 1}
+	index( {number: 1, block: 1} )
 	
 	def self.import_from_hash(hash)
 		return Occurrence.create! hash
