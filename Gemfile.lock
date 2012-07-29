@@ -6,6 +6,14 @@ GIT
       actionpack (~> 3.0)
       railties (~> 3.0)
 
+GIT
+  remote: git://github.com/asavartsov/delayed_job_mongoid.git
+  revision: 48b1420d59bc01e0b1aba1c2ad66bda4a5e04b9a
+  specs:
+    delayed_job_mongoid (1.0.8)
+      delayed_job (~> 3.0.0)
+      mongoid (>= 3.0.0.rc)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -78,6 +86,8 @@ GEM
       nokogiri (>= 1.5.0)
     daemons (1.1.8)
     database_cleaner (0.8.0)
+    delayed_job (3.0.3)
+      activesupport (~> 3.0)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -98,6 +108,8 @@ GEM
       actionpack (>= 3.0)
     gherkin (2.11.1)
       json (>= 1.4.6)
+    google-webfonts (0.1.2)
+      actionpack (>= 3.0.0)
     grizzled-rails-logger (0.1.5)
       term-ansicolor (>= 1.0.7)
     growl (1.0.3)
@@ -288,10 +300,13 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber-rails (>= 1.2.1)
   database_cleaner
+  delayed_job
+  delayed_job_mongoid!
   devise
   email_spec
   fabrication (>= 2.0)
   formtastic
+  google-webfonts
   grizzled-rails-logger
   growl
   growl_notify
@@ -308,6 +323,7 @@ DEPENDENCIES
   hpricot
   htmlentities
   jquery-rails
+  launchy
   mongo
   mongoid
   mongoid-rspec

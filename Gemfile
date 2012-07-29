@@ -43,6 +43,10 @@ gem 'mongo'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'mongoid_taggable'
+gem 'delayed_job'
+gem 'delayed_job_mongoid', git: 'git://github.com/asavartsov/delayed_job_mongoid.git'
+# gem 'carrierwave-mongoid'
+# gem 'carrierwave'
 gem 'settingslogic'
 gem 'xml-simple'
 gem 'heroku'
@@ -50,6 +54,7 @@ gem 'state_machine'
 gem 'formtastic'
 gem 'client_side_validations'
 gem 'htmlentities'
+gem 'google-webfonts'
 
 group :development, :test do
 	gem 'grizzled-rails-logger'
@@ -85,5 +90,6 @@ group :test do
 	gem 'simplecov'
 	gem 'email_spec'
 	gem 'webrat'
+	gem 'launchy'
 end
 
