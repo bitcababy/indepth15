@@ -1,3 +1,22 @@
 // Place all the styles related to the Courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "fonts";
+
+div#sections_pane {
+	@extend .serif;
+
+	div#info {
+		@extend .sans;
+		text-align: center;
+		margin-bottom: 12px;
+		font-weight: bold;
+	}
+	div#description {
+		margin-bottom: 12px;
+	}
+	div#leadin {
+		margin-bottom: 12px;
+	}
+}
