@@ -6,7 +6,7 @@ development:
         - localhost:27017
       options:
         safe: true
-        identity_map_enabled: true
+        # identity_map_enabled: true
 
 test:
   sessions:
@@ -16,7 +16,7 @@ test:
         - localhost:27017
       options:
          safe: true
-         identity_map_enabled: true
+         # identity_map_enabled: true
          
 # set these environment variables on your prod server
 production:
