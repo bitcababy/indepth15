@@ -9,13 +9,24 @@ class SectionAssignment
 	belongs_to :assignment, index: true, inverse_of: nil
 	belongs_to :course, index: true
 	
-	accepts_nested_attributes_for :section, :assignment
+	# accepts_nested_attributes_for :section, :assignment
 	
-	scope :future, -> { gte(due_date: Utils.future_due_date) }
+	scope :after,	->(date) { gt(due_date: date) }
 	scope :past, -> { lt(due_date: Utils.future_due_date) }
+	scope :future, -> { gte(due_date: Utils.future_due_date) }
+	scope :current, -> { gte(due_date: Utils.future_due_date).limit(1) }
+	
+	def self.upcoming
+		current = self.current.first
+		if current then
+			self.after(current.due_date)
+		else
+			self.future
+		end
+	end
 	
 	def self.import_from_hash(hash)
-		return unless hash[:use_assgt] == 'Y'
+		return unless hash[:use_assgt] == 'Y' # This isn't working, for some reason.
 		assgt_id = hash[:assgt_id]
 		block = hash[:block]
 		year = hash[:schoolyear]
@@ -32,7 +43,6 @@ class SectionAssignment
 
 		assignment = Assignment.find_by(assgt_id: assgt_id)
 
-		
 		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id, :course_num].each {|k| hash.delete(k)}
 		hash[:name] = assignment.name
 		sa = section.section_assignments.create! hash
