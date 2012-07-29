@@ -1,6 +1,4 @@
-%meta{charset: "utf-8"}/
-
-#page_header= @course.full_name
+%meta{charset: "utf-8"}
 
 #page_body
 	%div#tabs
@@ -16,24 +14,15 @@
 			%li#news
 				%a{href: course_news_pane_path(@course), title: 'News'} News
 
-#sections_pane
-	#info
-		= "Course #{@course.number} — #{@course.duration} — #{@course.credits} Credits"
-	#description
-		= @course.description
-	#leadin
-		= "In the #{academic_year_string(Settings.academic_year)} academic year there #{is_are_number_mangler(@course.sections.count, 'section')} of #{@course.full_name}."
-
-	%div= render partial: 'courses/sections_table', obj: @course
-
-
 - content_for :page_header do
 	= @course.full_name
 
+- content_for :page_title do
+	= @course.full_name
 
 :coffeescript
-	$(document).ready ->	
-		$ ->
-		  $("#tabs").tabs ajaxOptions:
-		    error: (xhr, status, index, anchor) ->
-		      $(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. " + "If this wouldn't be a demo."
+	$ ->
+	  $("#tabs").tabs ajaxOptions:
+	    error: (xhr, status, index, anchor) ->
+	      $(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. " + "If this wouldn't be a demo."
+
