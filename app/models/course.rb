@@ -54,8 +54,8 @@ class Course
 		end
 	end
 
-	[:information_doc, :resources_doc, :policies_doc, :news_doc, :description_doc].each do |doc|
-		belongs_to doc, class_name: 'TextDocument', inverse_of: :nil, autobuild: true, dependent: :destroy
+	[:information_doc, :resources_doc, :policies_doc, :news_doc].each do |doc|
+		belongs_to doc, class_name: 'TextDocument', inverse_of: :nil, dependent: :destroy
 	end
 
 	has_and_belongs_to_many :major_tags
@@ -63,9 +63,14 @@ class Course
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 
 	validates_uniqueness_of :number
-	validates_inclusion_of :duration, in: 	@@durations
+	validates_inclusion_of :duration, in: @@durations
 	
-	attr_accessor :information, :policies, :news, :resources, :description
+	def create_docs
+		self.information_doc ||= TextDocument.create!
+		self.resources_doc ||= TextDocument.create!
+		self.policies_doc ||= TextDocument.create!
+		self.news_doc ||= TextDocument.create!
+	end
 	
 	def information
 		self.information_doc.content
@@ -99,16 +104,8 @@ class Course
 		self.news_doc.content = txt
 	end
 	
-	def description
-		self.description_doc.content
-	end
-	
-	def description=(txt)
-		self.description_doc.content = txt
-	end
-	
 	def teachers
-		(sections.collect {|s| s.teacher}).uniq
+		(self.sections.current.collect {|s| s.teacher}).uniq
 	end
 
 	def menu_label
