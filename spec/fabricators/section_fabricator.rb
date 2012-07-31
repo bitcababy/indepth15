@@ -9,7 +9,7 @@ Fabricator(:section) do
 										} }
 end
 
-Fabricate.sequence(:block) {|i| ('A'..'H').to_a[i] }
+Fabricate.sequence(:block) {|i| Settings.blocks[i%Settings.blocks.length] }
 
 Fabrication::Transform.define(:block, lambda {|b| 
 	if Section.where(block: b).exists?
