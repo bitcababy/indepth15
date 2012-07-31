@@ -1,5 +1,9 @@
 DepthCharge::Application.routes.draw do
 
+  resources :sections
+
+  resources :users
+
 	# Unrestful routes
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
