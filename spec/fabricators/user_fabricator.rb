@@ -1,15 +1,17 @@
-Fabricator(:user) do
-	honorific								{ %W(Mr. Mrs. Ms. Dr.).sample }
+Fabricator :user do
+	honorific								{ %W(Mr. Mrs. Ms Dr.).sample }
 	first_name							{ %W(John Jane Jake Dan Larry).sample }
-	last_name								{ %W(Black White Orange Red).sample }
+	last_name								{ %W(Black White Orange Purple).sample }
 	authentication_token		"user"
-	after_build						{ |obj|
+	login										nil
+	email										nil
+	after_build							{ |obj|
 		obj.login ||= (obj.last_name + obj.first_name.first).downcase
 		obj.email ||= obj.login + "@example.com"
 		}
 end
 
-Fabricator :author, from: :user, class_name: 'Author' do
+Fabricator :author, from: :user, class_name: :author do
 	authentication_token		'author'
 end
 
@@ -25,10 +27,16 @@ Fabrication::Transform.define(:author, lambda{|full_name|
 Fabricator :guest, from: :user  do
 end
 
-Fabricator :teacher, from: :author, class_name: 'Teacher' do
+Fabricator :teacher do
+	honorific								{ %W(Mr. Mrs. Ms Dr.).sample }
+	first_name							{ %W(John Jane Jake Dan Larry).sample }
+	last_name								{ %W(Black White Orange Red).sample }
+	after_build						{ |obj|
+		obj.login ||= (obj.last_name + obj.first_name.first).downcase
+		obj.email ||= obj.login + "@example.com"
+		}
 	current									true
 	authentication_token		'teacher'
-	sections								[]
 end
 
 Fabrication::Transform.define(:teacher, lambda{|full_name|
@@ -40,8 +48,8 @@ Fabrication::Transform.define(:teacher, lambda{|full_name|
 	end
 })
 
-Fabrication::Transform.define :general_msg, lambda{|txt| Fabricate :teacher_page, content: txt}
-Fabrication::Transform.define :current_msg, lambda{|txt| Fabricate :teacher_page , content: txt}
+# Fabrication::Transform.define :general_msg, lambda{|txt| Fabricate :teacher_page, content: txt}
+# Fabrication::Transform.define :current_msg, lambda{|txt| Fabricate :teacher_page, content: txt}
 	
 Fabricator :test_teacher, from: :teacher do
 	honorific					"Mr."
