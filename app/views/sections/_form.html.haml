@@ -1,0 +1,12 @@
+= @section.course.full_name
+
+= simple_form_for(@section) do |f|
+	/ = f.error_notification
+
+	.form-inputs
+		= f.input :block, as: :radio_buttons, collection: Settings.blocks
+		= f.input :room, as: :string
+		= f.input :semester, as: :select, collection: Course::DURATIONS
+		= f.collection_check_boxes :occurrences, occurrence_options, :first, :last
+	.form-actions
+		= f.button :submit
