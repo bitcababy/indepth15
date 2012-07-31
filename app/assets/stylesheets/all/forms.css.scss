@@ -1,0 +1,36 @@
+@import 'fonts';
+
+form {
+	@extend .sans;
+	width: 100%;
+	.input {
+		label {
+			display: inline;
+			text-align: right;
+			width: 120px;
+		}
+		input, select {
+			position: relative;
+			
+		}
+	}
+	.hint {
+		font-style: italic;
+		color: #555;
+		font-size: 90%;
+		display: inline;
+	}
+	.error {
+		color: red;
+		font-style: italic;
+	}
+	.alert {
+		padding-bottom: 8px;
+		font-size: 110%;
+	}
+	.field_with_errors {
+		.hint {
+			display: none;
+		}
+	}
+}
