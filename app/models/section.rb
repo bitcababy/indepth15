@@ -17,13 +17,16 @@ class Section
 	belongs_to :teacher, index: true
 
 	embeds_many :section_assignments
-	accepts_nested_attributes_for :section_assignments
+	
+	validates :block, presence: true#, inclusion: {in: Settings.blocks}
+	validates :room, presence: true
+	validates :occurrences, presence: true
+	validates :academic_year, presence: true, numericality: true
 
 	cattr_reader :blocks, :semesters, :occurrences
 	
 	scope :for_year, lambda {|y| where(academic_year: y)}
 	
-	@@blocks = ('A'..Settings.last_block).to_a
 	@@occurrences = (1..Settings.max_occurrences).to_a
 	@@semesters = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
