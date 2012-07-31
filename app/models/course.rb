@@ -5,10 +5,10 @@ class Course
 	after_initialize :create_docs
 
 	FULL_YEAR = :full_year
+	FULL_YEAR_HALF_TIME = :halftime
 	FIRST_SEMESTER = :first_semester
 	SECOND_SEMESTER = :second_semester
-	FULL_YEAR_HALF_TIME = :halftime
-	
+
 	BRANCH_MAP = {
 		321 => 'Geometry',
 		322 => 'Geometry',
@@ -25,7 +25,7 @@ class Course
 		391 => 'Statistics',
 	}
 
-	@@durations = [FULL_YEAR, FIRST_SEMESTER, SECOND_SEMESTER, FULL_YEAR_HALF_TIME]
+	DURATIONS = [FULL_YEAR, FIRST_SEMESTER, SECOND_SEMESTER, FULL_YEAR_HALF_TIME]
 
 	##
 	## Fields
@@ -63,7 +63,11 @@ class Course
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 
 	validates_uniqueness_of :number
-	validates_inclusion_of :duration, in: @@durations
+	validates_inclusion_of :duration, in: DURATIONS
+	
+	def teachers
+		(self.sections.current.map &:teacher).uniq
+	end
 	
 	def create_docs
 		self.information_doc ||= TextDocument.create!
@@ -104,10 +108,10 @@ class Course
 		self.news_doc.content = txt
 	end
 	
-	def teachers
-		(self.sections.current.collect {|s| s.teacher}).uniq
-	end
-
+	# def teachers
+	# 	(self.sections.current.collect {|s| s.teacher}).uniq
+	# end
+	# 
 	def menu_label
 		self.full_name
 	end
