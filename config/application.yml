@@ -9,6 +9,15 @@ defaults: &defaults
   start_year: 2011
   last_block: H
   max_occurrences: 5
+  blocks:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
 
 development:
   <<: *defaults
