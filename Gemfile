@@ -56,7 +56,7 @@ gem 'htmlentities'
 gem 'google-webfonts'
 gem 'client_side_validations'
 gem 'simple_form'
-gem 'validates_email_format_of', git: 'git@github.com:bitcababy/validates_email_format_of.git'
+gem 'validates_email_format_of'#, git: 'git@github.com:bitcababy/validates_email_format_of.git'
 gem 'validation_reflection'
 
 group :development, :test do
