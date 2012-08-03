@@ -41,17 +41,17 @@ module ApplicationHelper
 	
 	def render_courses_menu
 		@courses = Course.in_catalog
-		render partial: 'menus/courses'
+		render partial: 'menus/courses' if @courses
 	end
 	
 	def render_sections_of_course(course)
-		sections = course.sections.current
-		render partial: 'menus/section', collection: sections
+		sections = course.current_sections
+		render partial: 'menus/section', collection: sections if sections
 	end
 	
 	def render_teachers
 		teachers = Teacher.current
-		render partial: 'menus/teacher', collection: teachers
+		render partial: 'menus/teacher', collection: teachers if teachers
 	end
 
 	def render_faculty_menu
@@ -73,7 +73,5 @@ module ApplicationHelper
 			section.to_s
 		end
 	end
-	
-		
-		
+			
 end
