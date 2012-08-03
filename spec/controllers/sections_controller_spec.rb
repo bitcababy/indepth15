@@ -19,12 +19,18 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe SectionsController do
-
+	include Mongoid::Document
+	include CourseMockHelpers
   # This should return the minimal set of attributes required to create a valid
   # Section. As you add validations to Section, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+			room: 501,
+			academic_year: Settings.academic_year,
+			semester: Course::FIRST_SEMESTER,
+			block: "B"
+		}
   end
 
   # This should return the minimal set of values that should be in the session
@@ -32,6 +38,41 @@ describe SectionsController do
   # SectionsController. Be sure to keep this updated too.
   def valid_session
     {}
+  end
+
+  describe "GET 'assignments'" do
+		it "display the assignments page" do
+			@section = Section.create! valid_attributes
+			# teacher = mock do
+				# stubs(:honorific).returns("Mr.")
+				# stubs(:last_name).returns("Masterson")
+			# end
+			# @section.stubs(:teacher).returns teacher
+			
+			@section.should_not be_nil
+			3.times do |i|
+				name = "2#{i}"
+				asst = Assignment.create! name: name, contents: "Contents for assignment #{name}"
+				@section.add_assignment(asst,  Utils.future_due_date + i)
+			end
+			4.times do |i|
+				name = "2#{i}"
+				asst = Assignment.create! name: name, contents: "Contents for assignment #{name}"
+				@section.add_assignment(asst,  Utils.future_due_date + i)
+			end
+			
+			puts @section.section_assignments.past.desc(:due_date).limit(Settings.past_assts_num)
+			pending "Unfinished test"
+			
+      get :assignments, {:id => @section.to_param}, valid_session
+      response.should be_success
+ 			assigns(:current_assignment).should_not be_nil
+			assigns(:upcoming_assignments).should_not be_nil
+			past = assigns(:past_assignments)
+			past.should_not be_nil
+			past.count.should > 0
+		end
+
   end
 
   describe "GET index" do
