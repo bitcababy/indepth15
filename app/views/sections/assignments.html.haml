@@ -6,7 +6,7 @@
 		- if @current_assignment.count > 0
 			#current-msg!= @section.teacher.current_msg
 			%table#current
-				= render partial: 'assignments/assignment_table', locals: { assignments: @current_assignment }
+				= render partial: 'sections/assignment_table', locals: { assignments: @current_assignment }
 		- else
 			%i None
 	
@@ -15,7 +15,7 @@
 		- if @upcoming_assignments.count > 0
 			#upcoming-msg!= @section.teacher.upcoming_msg
 			%table#current
-				= render partial: 'assignments/assignment_table', locals: {assignments: @upcoming_assignments }
+				= render partial: 'sections/assignment_table', locals: {assignments: @upcoming_assignments }
 		- else
 			%i None
 
@@ -23,7 +23,7 @@
 		.title Past assignments
 		- if @past_assignments.count > 0
 			%table#past
-				= render partial: 'assignments/assignment_table', locals: { assignments: @past_assignments }
+				= render partial: 'sections/assignment_table', locals: { assignments: @past_assignments }
 		- else
 			%i None
 	
@@ -32,7 +32,7 @@
 - content_for :title do
 	= "#{@section.course.full_name}, Block #{@section.block}"
 - content_for :content_header do
-	= assignments_header(@section)
+	= @section.page_header
 	
 :coffeescript
 	$(document).ready ->

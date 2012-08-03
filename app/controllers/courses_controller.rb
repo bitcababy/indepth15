@@ -1,14 +1,14 @@
 class CoursesController < ApplicationController
 	before_filter :find_course, except: [:list]
 	
-	def list
-		@courses = Course.in_catalog.asc(:number)
-	end
-	
 	def home
 		respond_to do |format|
       format.html
     end
+	end
+
+	def list
+		@courses = Course.in_catalog.asc(:number)
 	end
 	
 	def resources_pane

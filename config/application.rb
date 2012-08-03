@@ -72,11 +72,12 @@ module DepthCharge
 		  g.fixture_replacement :fabrication
 		end
 
-    Mongoid.logger.level = Logger::WARN
-    Moped.logger.level = Logger::WARN
-
+		config.mongoid.observers = :section_observer
   end
 end
+
+Mongoid.logger.level = Logger::WARN
+Moped.logger.level = Logger::WARN
 
 class Array
 	alias contains? include?

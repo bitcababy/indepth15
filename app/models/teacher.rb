@@ -15,6 +15,11 @@ class Teacher < Author
 
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
+
+	def menu_label
+		return self.full_name
+	end
+
 	#
 	# importing
 	# 
@@ -32,8 +37,5 @@ class Teacher < Author
 		return teacher
 	end
 	
-	def menu_label
-		return self.full_name
-	end
 
 end

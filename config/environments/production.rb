@@ -47,7 +47,8 @@ DepthCharge::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-	config.assets.precomile += %w( application-all.css application-print.css application-screen.css application-ie.css)
+	config.assets.precomile += %w(application-all.css application-print.css application-screen.css)
+	config.assets.precomile += %w( ie6.css ie7.css)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false

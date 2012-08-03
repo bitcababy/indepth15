@@ -6,7 +6,7 @@
 			%th.teacher Teacher
 			%th.room Room
 	%tbody
-		= render partial: 'courses/section_table_row', collection: @course.sections.current, as: 'section'
+		= render partial: 'courses/section_table_row', collection: @course.current_sections, as: 'section'
 
 :coffeescript
 	$(document).ready ->

@@ -9,8 +9,6 @@ class SectionAssignment
 	belongs_to :assignment, index: true, inverse_of: nil
 	belongs_to :course, index: true
 	
-	# accepts_nested_attributes_for :section, :assignment
-	
 	scope :after,	->(date) { gt(due_date: date) }
 	scope :past, -> { lt(due_date: Utils.future_due_date) }
 	scope :future, -> { gte(due_date: Utils.future_due_date) }
@@ -26,7 +24,7 @@ class SectionAssignment
 	end
 	
 	def self.import_from_hash(hash)
-		return unless hash[:use_assgt] == 'Y' # This isn't working, for some reason.
+		return unless hash[:use_assgt] == 'Y'
 		assgt_id = hash[:assgt_id]
 		block = hash[:block]
 		year = hash[:schoolyear]
