@@ -1,12 +1,8 @@
-= @section.course.full_name
-
-= simple_form_for(@section) do |f|
+= simple_form_for @section do |f|
 	/ = f.error_notification
 
 	.form-inputs
-		= f.input :block, as: :radio_buttons, collection: Settings.blocks
-		= f.input :room, as: :string
-		= f.input :semester, as: :select, collection: Course::DURATIONS
-		= f.collection_check_boxes :occurrences, occurrence_options, :first, :last
-	.form-actions
+		= f.input :block, as: :radio_buttons, collection: Settings.blocks, wrapper_html: {id: 'blocks'}, required: true
+		= f.input :room, as: :string, wrapper_html: {id: 'room'}
+		= f.input :semester, as: :select, collection: Course::DURATIONS, wrapper_html: {id: 'durations'}, include_blank: false
 		= f.button :submit

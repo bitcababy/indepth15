@@ -7,9 +7,9 @@ DepthCharge::Application.routes.draw do
 	# Unrestful routes
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
-
-	get 'course/:course_number/block/:block/assignments', to: 'assignments#page', :as => :assignments_page
-	get 'course/:course_number/page', to: 'courses#home', :as => :course_home
+# 
+	get 'sections/:id/assignments', to: 'sections#assignments', :as => :assignments_page
+	get 'courses/:id/page', to: 'courses#home', :as => :course_home
 
 	resources :teachers, only: [] do
 		member do

@@ -28,5 +28,6 @@ module Utils
 				day + 1
 			end
 		end
+
 	end
 end
