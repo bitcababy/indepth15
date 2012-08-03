@@ -75,6 +75,7 @@ group :development, :test do
 	gem 'guard-sprockets2'
 	gem 'growl_notify'
 	gem 'fabrication', '>= 2.0'
+	gem 'foreman'
 end
 
 group :development do
@@ -94,5 +95,6 @@ group :test do
 	gem 'email_spec'
 	gem 'webrat'
 	gem 'launchy'
+	gem 'mocha', require: false
 end
 
