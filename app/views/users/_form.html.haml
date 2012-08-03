@@ -1,0 +1,17 @@
+.content
+	= simple_form_for(@user) do |f|
+		= f.error_notification
+
+		.form-inputs
+		= f.input :honorific, collection: User::HONORIFICS, input_html: {value: 'Mr.'}
+		= f.input :first_name
+		= f.input :middle_name, required: false
+		= f.input :last_name
+		= f.input :email, placeholder: 'user@domain.com'
+		= f.input :login
+		= f.input :password
+		= f.input :verify_password, as: :password, required: true
+	
+
+		.form-actions
+			= f.button :submit

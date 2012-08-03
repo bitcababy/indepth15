@@ -10,8 +10,7 @@ Feature: Courses menu
 	  And I am on any page
 
 	Scenario: Clicking a course name
-		Given the menu item "Geometry Honors" exists
-		When I click the "Geometry Honors" menu item
+		When I click on "Geometry Honors" in the Courses menu
 		Then I should go to the "Geometry Honors" home page
 
   

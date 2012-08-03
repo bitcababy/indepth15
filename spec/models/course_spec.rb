@@ -55,15 +55,15 @@ describe Course do
 		end
 	end
 
-	context '#teachers' do
-		it "should return a list of the teachers teaching the course" do 
-			course = Fabricate(:course)
-			t1 = Fabricate(:teacher)
-			t2 = Fabricate(:teacher)
-			3.times {Fabricate :section, course: course, teacher: t1}
-			2.times {Fabricate :section, course: course, teacher: t2}
-			course.teachers.count.should == 2
-		end
-	end
+	# context '#teachers' do
+	# 	it "should return a list of the teachers teaching the course" do 
+	# 		course = Fabricate(:course)
+	# 		t1 = Fabricate(:teacher)
+	# 		t2 = Fabricate(:teacher)
+	# 		3.times {Fabricate :section, course: course, teacher: t1}
+	# 		2.times {Fabricate :section, course: course, teacher: t2}
+	# 		course.teachers.count.should == 2
+	# 	end
+	# end
 		
 end

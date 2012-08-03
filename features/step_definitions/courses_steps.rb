@@ -36,9 +36,7 @@ Then /^I should see (?:this|the) list:?$/ do |table|
 end
 
 Then /^the page header should contain the full name of the course$/ do
-	page.should have_selector('#page_header') do |hdr|
-		hdr.should have_content(the_course.full_name)
-	end
+	page.should have_selector('#page_header', content: the_course.full_name)
 end
 
 Then /^I should see the following tabs:$/ do |table|
