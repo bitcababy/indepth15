@@ -21,12 +21,14 @@ Dir[Rails.root.join("spec/lib/extras/**/*.rb")].each {|f| require f}
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
+require 'mocha'
+
 RSpec.configure do |config|
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
-  # config.mock_with :mocha
+  config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
 
