@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "sections/show" do
   before(:each) do
+		pending "Unfinished test"
     @section = assign(:section, stub_model(Section))
   end
 

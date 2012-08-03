@@ -1,15 +1,25 @@
 require 'spec_helper'
 
 describe 'menus/_section' do
-	include CourseExamplesHelper
 	
 	it "display a line item with the section's teacher and block" do
-		pending "Unfinished test"
-		teacher = Fabricate(:teacher, first_name: "Harry", last_name: "Smith")
-		section = Fabricate(:section, teacher: teacher)
-		render partial: 'menus/section', locals: {section: section}
-		rendered.should have_selector('li a') do |link|
-			pending "Unfinished test"
+		course = mock do
+			stubs(:number).returns "321"
 		end
+		teacher = mock do
+			stubs(:formal_name).returns "Mr. Ed"
+		end
+		section = mock do
+			stubs(:course).returns course
+			stubs(:block).returns block
+			stubs(:to_s).returns "1"
+			stubs(:block).returns "B"
+			stubs(:teacher).returns teacher
+		end
+		render partial: 'menus/section', locals: {section: section}
+		rendered.should have_selector('li.section') do |li|
+			li.should have_selector('a', href: assignments_page_path(1))
+		end
+			
 	end
 end

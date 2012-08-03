@@ -3,27 +3,24 @@
 require 'spec_helper'
 
 describe "courses/sections_pane" do
-	before :each do
-		@course = Fabricate(:course, full_name: "Fractals", number: 321, duration: :full_year, credits: 5.0)
-		@course.description = "<p>This is some info</p>"
-		4.times { Fabricate(:section, course: @course) }
-		assign(:course, @course)
-		render
-	end
+	include CourseMockHelpers
+
+	it "display a pane with the sections of a course" do
+		course = mock_course_with_sections(6)
+		assign(:course, course)
 	
-	it "lists some basic info" do
+		[:credits, :duration, :number].each {|k| course.unstub(k)}
+		course.stubs(:number).returns 321
+		course.stubs(:duration).returns Course::FULL_YEAR
+		course.stubs(:credits).returns 5.0
+		course.unstub(:description)
+		course.stubs(:description).returns "Some description"
+		render
 		rendered.should have_selector('div#sections_pane') do |div|
 			div.should have_selector('div#info', content: 'Course 321 — Full Year — 5.0 Credits')
+			div.should have_selector('div#description', content: "Some description")
+			div.should have_selector('div#leadin', content: "In the 2011—2012 academic year there are 6 sections of Fractals 101.")
 		end
 	end
 	
-	it "display the description" do
-		rendered.should have_selector('div#description') do |div|
-			div.should have_selector('p', content: 'This is some info')
-		end
-	end
-	
-	it "displays a leadin to the section table" do
-		rendered.should have_selector('div#leadin', content: "In the 2011—2012 academic year there are 4 sections of Fractals.")
-	end
 end

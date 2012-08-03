@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "users/index" do
   before(:each) do
+		pending "Unfinished test"
     assign(:users, [
       stub_model(User),
       stub_model(User)

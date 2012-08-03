@@ -1,8 +1,11 @@
 require 'spec_helper'
 
 describe "sections/edit" do
+	include CourseMockHelpers
+	
   before(:each) do
-    @section = assign(:section, stub_model(Section))
+		pending "Unfinished test"
+    @section = assign(:section, mock_section)
   end
 
   it "renders the edit section form" do

@@ -1,12 +1,8 @@
 Fabricator(:section) do
-	block					{ sequence(:block) }
-	occurrences		{ (1..3).collect {sequence(:occurrence_number) {|i| i}} }
-	room					{ "Room #{Fabricate.sequence}"}
+	block					{ sequence(:block) {|i| Settings.blocks[i%Settings.blocks.length] } }
 	teacher				{ Fabricate :teacher }
 	academic_year	{ Settings.academic_year }
-	after_build		{|obj| obj.occurrences.each {|i| 
-										Fabricate(:occurrence, block: obj.block, number: i ) unless Occurrence.where(number: i, block: obj.block).exists?
-										} }
+	semester			{ Section::SEMESTERS.sample }
 end
 
 Fabricate.sequence(:block) {|i| Settings.blocks[i%Settings.blocks.length] }
