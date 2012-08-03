@@ -1,11 +1,12 @@
 Feature: User menubar
 
-	Background:
-		Given I visit any page
-		
   Scenario: The menubar
-		When I click on the "Home" menu link
-		Then I should go to the home page
+		When I visit any page
+		Then I should see a menubar with these menus:
+		 | name     |
+		 | Home     |
+		 | Courses  |
+		 | Faculty  |
 
 	Scenario: Teacher
 		Given I'm signed in as a teacher

@@ -1,16 +1,12 @@
 require 'spec_helper'
 
 describe User do
-	[:honorific, :first_name, :last_name, :email, :login].each do |field|
-		it {should validate_presence_of field }
-	end
 	
 	context "Fabrication testing" do
-		subject {Fabricate :user, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
+		subject {Fabricate :user, first_name: 'Ralph', last_name: 'Kramden'}
 		specify { subject.login.should == 'kramdenr' }
-
 		it "should accept a login override" do
-			Fabricate(:user, login: 'greenx')
+			Fabricate(:teacher, login: 'greenx')
 			User.where(login: 'greenx' ).should exist
 		end
 	end

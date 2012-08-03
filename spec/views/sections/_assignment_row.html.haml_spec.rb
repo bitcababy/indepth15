@@ -1,20 +1,11 @@
 require 'spec_helper'
 
-describe 'sections/_assignment_row' do
-
+describe 'assignments/_assignment_row' do
 	it "display the name, due date, and content of an assignment" do
-		txt = "This is the content"
-		asst = mock do
-			stubs(:content).returns txt
-		end
-
-		sa = mock do
-			stubs(:name).returns "21"
-			stubs(:due_date).returns Date.new(2012, 7, 20)
-			stubs(:assignment).returns asst
-		end
-
-		render partial: 'sections/assignment_row', locals: {sa: sa}
+		txt = "This is an assignment"
+		assignment = Fabricate :assignment, content: txt
+		sa = Fabricate :section_assignment, section: Fabricate(:section), assignment: assignment, due_date: Date.new(2012, 7, 20), name: "21"
+		render partial: 'assignments/assignment_row', locals: {assignment: sa}
 		rendered.should have_selector('tr.assignment') do |row|
 			row.should have_selector('td.name', content: "21") 
 			row.should have_selector('td.due_date', content: "Fri, Jul 20")

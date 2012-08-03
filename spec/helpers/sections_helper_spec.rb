@@ -4,7 +4,11 @@ require 'spec_helper'
 
 describe SectionsHelper do
 	
-	describe '#occurrence_options'
+	describe '#occurrence_options' do
+		it "should return all occurrences paired with true" do
+			occurrence_options.should == [[true, '1'], [true, '2'], [true, '3'], [true, '4'], [true, '5']]
+		end
+	end
 
 # 	describe '#assignments_header' do
 # 		it "shows the teacher's name, the academic year, and the block" do

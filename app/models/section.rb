@@ -3,14 +3,13 @@
 class Section
 	include Mongoid::Document
   # include Mongoid::Timestamps
-	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
 	field :de, as: :dept, type: Integer
 	field :bl, as: :block, type: String
 	field :rm, as: :room, type: String
 	field :se, as: :semester, type: Symbol
+	field :oc, as: :occurrences, type: Array
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
-	field :oc, as: :occurrences, type: Array, default: (1..Settings.num_occurrences).to_a
 	
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 
@@ -18,22 +17,25 @@ class Section
 	belongs_to :teacher, index: true
 
 	embeds_many :section_assignments
-	# has_and_belongs_to_many :occurrences
-
-	validates :block, presence: true, inclusion: {in: Settings.blocks}
-	# validates :room, presence: true
-	validates :semester, presence: true, inclusion: {in: SEMESTERS}
+	
+	validates :block, presence: true#, inclusion: {in: Settings.blocks}
+	validates :room, presence: true
+	validates :occurrences, presence: true
 	validates :academic_year, presence: true, numericality: true
+
+	cattr_reader :blocks, :semesters, :occurrences
 	
-	scope :for_year, ->(y){ where(academic_year: y)}
-	scope :current, ->{ where(academic_year: Settings.academic_year)}
+	scope :for_year, lambda {|y| where(academic_year: y)}
 	
-	def upcoming_assignments
-		self.section_assignments.upcoming.asc(:due_date)
+	@@occurrences = (1..Settings.max_occurrences).to_a
+	@@semesters = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
+
+	def to_s
+		"Section, block #{self.block}"
 	end
 	
-	def current_assignment
-		[self.section_assignments.current]
+	def add_assignment(asst, due_date, show=true)
+		self.section_assignments.create! due_date: due_date, assignment: asst
 	end
 	
 	def future_assignments
@@ -44,22 +46,13 @@ class Section
 		self.section_assignments.past.desc(:date_due).map &:assignment
 	end
 	
-	def add_assignment(asst, due_date, show=true)
-		self.section_assignments.create! due_date: due_date, assignment: asst
-	end
-	
-	def page_header
-		"#{course.full_name}, Block #{self.block}"
-	end
-		
 	def to_s
 		course = self.course
 		"#{course.full_name}#{course.academic_year}/#{self.teacher.login}/#{self.block}"
 	end
 		
 	def days_for_section
-		occ = Occurrence.where(block: self.block).in(number: self.occurrences)
-		(occ.map &:day).sort
+		(self.occurrences.collect {|occ| Occurrence.find_by(number: occ, block: self.block).day}).sort
 	end
 	
 	class << self
@@ -82,7 +75,7 @@ class Section
 			hash[:teacher] = teacher
 			hash[:occurrences] = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
 			
-			hash[:semester] = [1,3,12].contains?(semesters) ? Course::FIRST_SEMESTER : Course::SECOND_SEMESTER
+			hash[:semester] = [1,3,12].contains?(semesters) ? :first : :second
 			
 			section = course.sections.create!(hash)
 			section.save!

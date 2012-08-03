@@ -10,10 +10,12 @@ module CourseExamplesHelper
 		
 	def course_with_sections
 		course = Fabricate(:course)
-		t1 = Fabricate :teacher, login: "foobar"
-		t2 = Fabricate :teacher, login: "mastersonb"
-		3.times {Fabricate :section, course: course, teacher: t1 }
-		2.times {Fabricate :section, course: course, teacher: t2 }
+		course = Fabricate(:course)
+		t1 = Fabricate(:teacher)
+		t2 = Fabricate(:teacher)
+		3.times {Fabricate :section, course: course, teacher: t1}
+		2.times {Fabricate :section, course: course, teacher: t2}
+		course.teachers.count.should == 2
 		return course
 	end
 

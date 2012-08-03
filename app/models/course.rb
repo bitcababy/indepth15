@@ -48,7 +48,11 @@ class Course
 	## Associations
 	##
 	belongs_to :branch
-	has_many :sections
+	has_many :sections do
+		def current
+			where(academic_year: Settings.academic_year)
+		end
+	end
 
 	[:information_doc, :resources_doc, :policies_doc, :news_doc].each do |doc|
 		belongs_to doc, class_name: 'TextDocument', inverse_of: :nil, dependent: :destroy
@@ -61,13 +65,9 @@ class Course
 	validates_uniqueness_of :number
 	validates_inclusion_of :duration, in: DURATIONS
 	
-	def current_sections
-		self.sections.current
+	def teachers
+		(self.sections.current.map &:teacher).uniq
 	end
-	
-	# def teachers
-	# 	(self.current_sections.map &:teacher).uniq
-	# end
 	
 	def create_docs
 		self.information_doc ||= TextDocument.create!
@@ -108,6 +108,10 @@ class Course
 		self.news_doc.content = txt
 	end
 	
+	# def teachers
+	# 	(self.sections.current.collect {|s| s.teacher}).uniq
+	# end
+	# 
 	def menu_label
 		self.full_name
 	end

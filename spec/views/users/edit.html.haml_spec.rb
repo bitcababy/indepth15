@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe "users/edit" do
   before(:each) do
-		pending "Unfinished test"
     @user = assign(:user, stub_model(User))
   end
 

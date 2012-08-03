@@ -1,13 +1,10 @@
 require 'spec_helper'
 
 describe 'courses/home' do
-	include CourseMockHelpers
+	include CourseExamplesHelper
 
 	it "shows various tabs" do
-		course = mock do
-			stubs(:full_name).returns "Fractals 101"
-		end
-		assign(:course, course)
+		assign(:course, course_with_sections)
 		render
 		rendered.should have_selector('#tabs ul') do |ul|
 			for tab_name in %W(Sections Information Resources Policies News) do

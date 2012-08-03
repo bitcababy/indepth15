@@ -1,16 +1,15 @@
 require 'spec_helper'
 
 describe 'menus/_courses' do
+	include CourseExamplesHelper
+
 	it "displays a course and its sections" do
-		sections = mock do
-			stubs(:current).returns []
-		end
-		course = mock do
-			stubs(:full_name).returns "Fractals 101"
-			stubs(:sections).returns sections
-		end
+		pending "Unfinished test"
+		course = Fabricate(:course, full_name: 'Fractals')
+		3.times {course.sections << Fabricate(:section) }
 		render partial: 'menus/course', locals: {course: course}
-		rendered.should have_selector('li.course', content: 'Fractals 101')
+		rendered.should have_selector('li.course', content: 'Fractals')
+		rendered.should have_selector('ul li')				
 	end
 
 end

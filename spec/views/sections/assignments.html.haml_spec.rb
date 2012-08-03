@@ -1,39 +1,31 @@
-# encoding: UTF-8
-
 require 'spec_helper'
 
-describe "sections/assignments" do
-	include CourseMockHelpers
-	
+describe "assignments/page.html.haml" do
+	include CourseExamplesHelper
+
 	before :each do
-		teacher = mock do
-			stubs(:generic_msg).returns "This is my generic message"
-			stubs(:current_msg).returns "This is my current message"
-			stubs(:upcoming_msg).returns "This is my upcoming message"
-			stubs(:formal_name).returns "Mr. Ed"
-		end
-		course = mock do
-			stubs(:full_name).returns "Fractals 101"
-		end
-		@section = mock do
-			stubs(:teacher).returns teacher
-			stubs(:course).returns course
-			stubs(:block).returns "A"
-			stubs(:current_assignment).returns []
-			stubs(:upcoming_assignments).returns []
-			stubs(:past_assignments).returns []
-			stubs(:page_header).returns "Mr.Ed's assignments for 'Fractals 101', block A "
-		end
+		course = Fabricate :course, full_name: 'Math 101'
+		teacher = Fabricate :teacher, 
+							honorific: "Mr.", last_name: "Masterson", 
+							generic_msg: "This is my generic message",
+							current_msg: "This is my current message",
+							upcoming_msg: "This is my upcoming message"
+		@section = Fabricate :section, teacher: teacher, course: course
+		add_some_assignments(@section, 3, 2)
 		assign(:section, @section)
+		pending "Need to deal with @current_assignments, etc."
 	end
 
+  it "displays a header for the assignments" do
+		render
+		rendered.should have_selector('div#header') do |div|
+			div.text.should =~ /#{academic_year_string(Settings.academic_year)} Assignments/
+		end
+	end
+	
 	it "displays the teacher's generic message" do
-		@section.stubs(:current_assignment).returns [mock_section_assignment(due_date: Date.today + 1, assignment: mock_assignment('A current assignment'))]
-		@section.stubs(:upcoming_assignments).returns [mock_section_assignment(due_date: Date.today + 2, assignment: mock_assignment('An upcoming assignment'))]
-		@section.stubs(:past_assignments).returns [mock_section_assignment(due_date: Date.today - 2, assignment: mock_assignment('A past assignment'))]
 		render
 		rendered.should contain("This is my generic message")
-		pending "Unfinished test"
 	end
 	
 			

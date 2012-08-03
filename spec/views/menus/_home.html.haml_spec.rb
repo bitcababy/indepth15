@@ -2,7 +2,9 @@ require 'spec_helper'
 
 describe 'menus/_home' do
 	before :each do
+		pending "Unfinished test"
 		render partial: 'menus/home'
+		rendered.should have_selector("div#home-menu")
 	end
 
 	it "has a signin/signout item" do

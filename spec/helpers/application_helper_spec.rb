@@ -50,7 +50,6 @@ describe ApplicationHelper do
 		
 		describe '#render_sections_of_course' do
 			it "renders one course as an unordered list" do
-				pending "Unfinished test"
 				course = course_with_sections
 				
 				res = render_sections_of_course(course)
@@ -93,12 +92,10 @@ describe ApplicationHelper do
 		end
 	
 		it "renders a 'Faculty' item" do
-			pending "Unfinished test"
 			@res.should have_selector('li', content: 'Faculty') 
 		end
 	
 		it "renders the faculty menu" do
-			pending "Unfinished test"
 			@res.should have_selector('ul', id: 'faculty-list') do |ul|
 				Teacher.each do |teacher|
 					ul.should have_selector('li.teacher', content: teacher.full_name)
