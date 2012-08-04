@@ -38,7 +38,7 @@ gem 'mongoid'
 gem 'mongoid-history'
 gem 'mongoid-data_table'
 gem 'mongoid_taggable'
-gem 'delayed_job_mongoid', git: 'git://github.com/asavartsov/delayed_job_mongoid.git'
+gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
 gem 'thin'
 gem 'devise'
 gem 'haml'
@@ -56,7 +56,7 @@ gem 'htmlentities'
 gem 'google-webfonts'
 gem 'client_side_validations'
 gem 'simple_form'
-gem 'validates_email_format_of'#, git: 'git@github.com:bitcababy/validates_email_format_of.git'
+gem 'validates_email_format_of'#, :git => 'git@github.com:bitcababy/validates_email_format_of.git'
 gem 'validation_reflection'
 
 group :development, :test do
@@ -82,18 +82,18 @@ group :development do
 end
 
 group :test do
-	gem 'cucumber-rails', '>= 1.2.1', require: false
+	gem 'cucumber-rails', '>= 1.2.1', :require => false
 	gem 'rspec-cells'#, path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
 	gem 'mongoid-rspec'
 	gem 'capybara'
 	gem 'database_cleaner'
-	gem 'akephalos2', require: 'akephalos'
+	gem 'akephalos2', :require => 'akephalos'
 	# gem 'akephalos2', require: 'akephalos', git: 'git@github.com:bitcababy/akephalos2.git'
 	gem 'hpricot'
 	gem 'simplecov'
 	gem 'email_spec'
 	gem 'webrat'
 	gem 'launchy'
-	gem 'mocha', require: false
+	gem 'mocha', :require => false
 end
 
