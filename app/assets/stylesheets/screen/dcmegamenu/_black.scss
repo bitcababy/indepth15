@@ -1,9 +1,9 @@
-$mb-bg-image: url(images/bg_black.png);
+$mb-bg-image: url(image_path("bg_black.png"));
 $mb-bg-color: hsl(0, 0, 13);
 $hover-color: hsl(0, 0, 60);
 $mb-hover-bg-color: hsla(0, 0, 80, 0.5);
 
-$background-hdr-image: url(images/bg_mega_hdr.png);
+$background-hdr-image: url(image_path("bg_mega_hdr.png"));
 $bg-hdr-color: hsl(0, 0, 42);
 
 $subcontainer-color: hsl(0, 0, 80);
