@@ -60,7 +60,6 @@ gem 'validates_email_format_of'#, git: 'git@github.com:bitcababy/validates_email
 gem 'validation_reflection'
 
 group :development, :test do
-	gem 'grizzled-rails-logger'
 	gem 'rspec-rails'
 	gem 'ruby_gntp'
 	gem 'growl'
