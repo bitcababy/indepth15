@@ -28,7 +28,7 @@ production:
     defaults:
       <<: *default_session
       database: <%= uri.path.sub('/', '') %>
-      username: <%= ur.user %>
+      username: <%= uri.user %>
       password: <%= uri.password %>
       hosts:
         - <%= uri.host %>:<%= uri.port %>
