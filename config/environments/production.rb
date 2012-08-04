@@ -65,3 +65,5 @@ DepthCharge::Application.configure do
   config.active_support.deprecation = :notify
 
 end
+
+::ActiveSupport::Deprecation.silenced = true
