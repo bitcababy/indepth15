@@ -7,9 +7,9 @@
 		= stylesheet_link_tag "application-screen", media: "screen"
 		= stylesheet_link_tag "application-all", media: "all"
 		/ [if eq IE 6]
-			= stylesheet_link_tag "application-ie6", media: "all"
+			= stylesheet_link_tag "ie6", media: "all"
 		/ [if eq IE 7]
-			= stylesheet_link_tag "application-ie7", media: "all"
+			= stylesheet_link_tag "ie7", media: "all"
 		= javascript_include_tag "application"
 		
 		= csrf_meta_tags
