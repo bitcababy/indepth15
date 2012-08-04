@@ -1,37 +1,36 @@
-development:
+development: &defaults
   sessions:
-    default:
+    default: &default_session
       database: depth_charge_development
       hosts:
         - localhost:27017
       options:
         safe: true
         # identity_map_enabled: true
+  options:
+    preload_models: true
+    
 
 test:
+  <<: *defaults
   sessions:
     default:
+      <<: *default_session
       database: depth_charge_test
-      hosts:
-        - localhost:27017
-      options:
-         safe: true
-         # identity_map_enabled: true
-         
+          
 # set these environment variables on your prod server
+<% if ENV['MONGOLAB_URI'] %>
+  <% uri = URI.parse(ENV['MONGOLAB_URI']) %>
+
 production:
+  << *defaults
   sessions:
-    default: 
-      host: <%= ENV['MONGOID_HOST'] %>
-      port: <%= ENV['MONGOID_PORT'] %>
-      username: <%= ENV['MONGOID_USERNAME'] %>
-      password: <%= ENV['MONGOID_PASSWORD'] %>
-      database: <%= ENV['MONGOID_DATABASE'] %>
-      options:
-         safe: true
-         identity_map_enabled: true
-      # slaves:
-      #   - host: slave1.local
-      #     port: 27018
-      #   - host: slave2.local
-      #     port: 27019
+    defaults:
+      <<: *default_session
+      database: <%= uri.path.sub('/', '') %>
+      username: <%= ur.user %>
+      password: <%= uri.password %>
+      hosts:
+        - <%= uri.host %>:<%= uri.port %>
+<% end %>
+        
