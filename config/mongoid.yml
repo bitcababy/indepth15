@@ -25,7 +25,7 @@ test:
 production:
   <<: *defaults
   sessions:
-    defaults:
+    default:
       <<: *default_session
       database: <%= uri.path.sub('/', '') %>
       username: <%= uri.user %>
