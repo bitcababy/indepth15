@@ -1,4 +1,6 @@
-http://young-reef-7530.herokuapp.com/
+http://depth-charge.herokuapp.com/
 
-git@heroku.com:young-reef-7530.git
+git@heroku.com:depth-charge.git
 
+
+mongodb://heroku_app6375435:vh9na5v6i77ftca7le1n7eoqvk@ds037077-a.mongolab.com:37077/heroku_app6375435
