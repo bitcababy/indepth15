@@ -23,7 +23,7 @@ test:
   <% uri = URI.parse(ENV['MONGOLAB_URI']) %>
 
 production:
-  << *defaults
+  <<: *defaults
   sessions:
     defaults:
       <<: *default_session
