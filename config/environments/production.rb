@@ -47,6 +47,7 @@ DepthCharge::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
+	config.assets.precomile ||= []
 	config.assets.precomile += %w(application-all.css application-print.css application-screen.css)
 	config.assets.precomile += %w( ie6.css ie7.css)
 
