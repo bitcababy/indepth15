@@ -3,13 +3,11 @@
 	= render_home_menu
 	= render_courses_menu
 	= render_faculty_menu
-
+	= render partial: 'menus/username.html.haml'
+	
 :coffeescript
 	$(document).ready ($) ->
 		$('#menubar').MegaMenu
 			rowItems: 5
 			speed: 'fast'
 			effect: 'fade'
-			
-			
-			

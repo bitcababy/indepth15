@@ -1,5 +1,6 @@
 class SectionsController < ApplicationController
 	before_filter :find_section, only: [:assignments, :show, :edit, :update, :destroy]
+	before_filter :authenticate_user!, except: [:assignments]
 
 	def assignments
 		@upcoming_assignments = @section.section_assignments.upcoming.asc(:due_date)
@@ -50,7 +51,7 @@ class SectionsController < ApplicationController
   # POST /sections.json
   def create
 		puts params[:section]
-
+		return
     @section = Section.new(params[:section])
 
     respond_to do |format|

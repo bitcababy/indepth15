@@ -1,13 +1,22 @@
 DepthCharge::Application.routes.draw do
 
-  resources :sections
+ 	root to: "home#dept_info"
 
-  resources :users
+  devise_for :users#, path: 'users', path_names: {sign_in: 'sign_in'}
+	# devise_scope :user
+	
+	# match 'user_root' => 'home#dept_info'
+
+  # resources :users, only: []
+
+
+	resources :sections
 
 	# Unrestful routes
+
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
-# 
+
 	get 'sections/:id/assignments', to: 'sections#assignments', :as => :assignments_page
 	get 'courses/:id/page', to: 'courses#home', :as => :course_home
 
@@ -36,13 +45,7 @@ DepthCharge::Application.routes.draw do
 	# 	resources :sections, :only => [:create, :new, :edit, :update, :destroy,]
 	# end
 	
-	root to: "home#dept_info"
 	
-  # devise_for :users
-	devise_scope :user do
-		match '/sign_in' => 'devise/sessions#new'
-		get 'sign_out', to: 'devise/sessions#destroy'
-	end
 
 
   # The priority is based upon order of creation:

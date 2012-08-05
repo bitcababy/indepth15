@@ -19,9 +19,9 @@ describe "sections/assignments" do
 			stubs(:teacher).returns teacher
 			stubs(:course).returns course
 			stubs(:block).returns "A"
-			stubs(:current_assignment).returns []
-			stubs(:upcoming_assignments).returns []
-			stubs(:past_assignments).returns []
+			stubs(:current_assignment).returns mock_assignments(1)
+			stubs(:upcoming_assignments).returns mock_assignments(2)
+			stubs(:past_assignments).returns mock_assignments(3)
 			stubs(:page_header).returns "Mr.Ed's assignments for 'Fractals 101', block A "
 		end
 		assign(:section, @section)

@@ -1,5 +1,9 @@
 include Devise::TestHelpers
 
+##
+## Givens
+##
+
 Given /^(?:I am|I'm) signed in as (?:a|an) (teacher|admin)$/ do |user_type|
 	step "the test teacher exists"
   @current_user = Fabricate(:user_test) unless @current_user
@@ -55,3 +59,22 @@ end
 # When /^(?:|I )Sign Out$/ do
 #   click_link 'Sign out'
 # end
+
+When /^I log in$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+Given /^I am not authenticated$/ do
+  visit('/users/sign_out') # ensure that at least
+end
+
+Given /^I am a registered user$/ do
+  email = 'testing@man.net'
+  password = 'secretpass'
+  User.new(:email => email, :password => password, :password_confirmation => password).save!
+
+  visit '/users/sign_in'
+  fill_in "email", :with=>email
+  fill_in "password", :with=>password
+  click_button "Sign in"
+end

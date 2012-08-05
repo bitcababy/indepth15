@@ -3,8 +3,8 @@ require 'spec_helper'
 describe 'menus/_courses' do
 	before :each do
 		courses = []
-		courses << mock
-		courses << mock
+		courses << Fabricate(:course)
+		courses << Fabricate(:course)
 		render partial: 'menus/courses', locals: {courses: courses}
 	end
 

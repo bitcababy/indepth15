@@ -23,8 +23,13 @@ module CourseMockHelpers
 	
 	def mock_assignment(txt)
 		mock('assignment', content: txt)
+		mock('name', name)
 	end
 	
+	def mock_assignments(n=3)
+		(1..n).collect { mock_assignment }
+	end
+
 	def mock_section_with_assignments
 		the_teacher = mock_teacher login: "foobar", email: "foo@example.com" 
 		the_course = mock_course

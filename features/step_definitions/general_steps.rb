@@ -13,6 +13,10 @@ Given /^I am not signed in$/ do
 	@current_user.should be_nil
 end
 
+Given /^I am a registered user$/ do
+	the_user = Fabricate(:user, login: "Mr. Ed", password: "foobar")
+end
+
 ##
 ## Whens
 ##

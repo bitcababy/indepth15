@@ -35,6 +35,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'bundler', '>= 1.2.0rc'
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid-history'
@@ -95,7 +96,6 @@ group :test do
 	gem 'simplecov'
 	gem 'email_spec'
 	gem 'webrat'
-	gem 'launchy'
 	gem 'mocha', :require => false
 end
 

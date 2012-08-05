@@ -1,7 +1,6 @@
 %li.home
 	%a{href: home_path}Home
 	%ul#home-menu
-		%li#sign_in_out
-			%a{href: sign_in_path} Sign in
+		= render partial: 'menus/login_item'
 		%li#about
 			%a{href: about_path} About

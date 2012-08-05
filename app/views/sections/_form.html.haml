@@ -1,8 +1,10 @@
 = simple_form_for @section do |f|
 	/ = f.error_notification
 
-	.form-inputs
+	.form-inputs#form-inputs
 		= f.input :block, as: :radio_buttons, collection: Settings.blocks, wrapper_html: {id: 'blocks'}, required: true
 		= f.input :room, as: :string, wrapper_html: {id: 'room'}
-		= f.input :semester, as: :select, collection: Course::DURATIONS, wrapper_html: {id: 'durations'}, include_blank: false
+		= f.input :semester, as: :select, collection: Course::SEMESTERS, wrapper_html: {id: 'durations'}, include_blank: false
+	.form-actions#form-actions
 		= f.button :submit
+		= f.

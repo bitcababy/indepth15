@@ -9,10 +9,10 @@ class User
 	field :ln, as: :last_name, type: String, default: ""
 	
  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
+  # :token_authenticatable, :confirmable
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :token_authenticatable,
-         :recoverable, :rememberable, :timeoutable#, :trackable,
+         :recoverable, :rememberable, :timeoutable, :trackable
  				 
   ## Database authenticatable
   field :em, as: :email, :type => String
@@ -42,9 +42,9 @@ class User
   # field :unconfirmed_email,    :type => String # Only if using reconfirmable
 
   ## Lockable
-  # field :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts
-  # field :unlock_token,    :type => String # Only if unlock strategy is :email or :both
-  # field :locked_at,       :type => Time
+  field :fa, as: :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts
+  field :ut, as: :unlock_token,    :type => String # Only if unlock strategy is :email or :both
+  field :la, as: :locked_at,       :type => Time
 
   ## Token authenticatable
   field :authentication_token, :type => String
@@ -54,6 +54,8 @@ class User
 	validates :last_name, presence: true#, length: { minimum: 2 }
 	validates :email, presence: true#, uniqueness: true
 	validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
+	
+	attr_accessible :email, :password, :password_confirmation, :remember_me
 
 	def formal_name
 		return "#{self.honorific} #{self.last_name}"

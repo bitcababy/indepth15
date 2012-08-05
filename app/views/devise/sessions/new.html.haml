@@ -1,11 +1,14 @@
-%h2 Sign in
+.content#sign-in 
+	%h2 Sign in
 
-= %semantic_form_for @registered_user do |f|
-	= f.inputs do
-		= f.input :email, as: email
-		= f.input :password, as: password
-	  - if devise_mapping.rememberable?
-			= f.input :remember_me, as: :checkbox
-	= f.actions do
-		= f.action :submit, label: 'Sign in'
-	= render "devise/shared/links"		
+	= simple_form_for(resource, as: resource_name) do |f|
+		.form-inputs#form-inputs
+			= f.input :login
+			= f.input :password, required: true
+			- if devise_mapping.rememberable?
+				= f.label :remember_me
+				= f.check_box :remember_me
+		.form-actions#form-actions
+			= f.submit 'Sign in'
+		= render "devise/shared/links"
+
