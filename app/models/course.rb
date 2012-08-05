@@ -97,6 +97,10 @@ class Course
 		self.resources_doc.content
 	end
 	
+	def policies
+		self.policies_doc.content = txt
+	end
+
 	def policies=(txt)
 		self.policies_doc.content = txt
 	end
@@ -135,6 +139,7 @@ class Course
 			course.resources = resources
 			course.policies = policies
 			course.description = prog_of_studies_descr
+			course.save!
 			course
 		end
 			
