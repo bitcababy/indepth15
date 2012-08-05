@@ -49,11 +49,11 @@ class User
   ## Token authenticatable
   field :authentication_token, :type => String
 
-	validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
-	validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
-	validates :last_name, presence: true#, length: { minimum: 2 }
-	validates :email, presence: true#, uniqueness: true
-	validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
+	# validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
+	# validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
+	# validates :last_name, presence: true#, length: { minimum: 2 }
+	# validates :email, presence: true#, uniqueness: true
+	# validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
 	
 	attr_accessible :email, :password, :password_confirmation, :remember_me
 
