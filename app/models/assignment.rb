@@ -5,6 +5,7 @@ class Assignment < TextDocument
 		coder = HTMLEntities.new
 		hash[:content] = coder.decode(hash[:description])
 		author = Teacher.find_by(login: hash[:teacher_id])
+		raise "Couldn't find teacher #{hash[:teacher_id]}" unless author
 		[:description, :locked, :number, :teacher_id, :year].each { |k| hash.delete(k) }
 		return Assignment.create! hash.merge(owner: author)
 	end
