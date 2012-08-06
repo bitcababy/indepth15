@@ -9,9 +9,10 @@ class User
 	field :ln, as: :last_name, type: String, default: ""
 	
  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable
+  # ::confirmable
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :token_authenticatable,
+         :recoverable, :rememberable, :timeoutable, :trackable, :lockable
  				 
   ## Database authenticatable
   field :em, as: :email, :type => String
@@ -46,13 +47,13 @@ class User
   field :la, as: :locked_at,       :type => Time
 
   ## Token authenticatable
-  field :authentication_token, :type => String
+  field :at, as: :authentication_token, :type => String
 
-	# validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
-	# validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
-	# validates :last_name, presence: true#, length: { minimum: 2 }
-	# validates :email, presence: true#, uniqueness: true
-	# validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
+	validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
+	validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
+	validates :last_name, presence: true#, length: { minimum: 2 }
+	validates :email, presence: true#, uniqueness: true
+	validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
 	
 	# attr_accessible :email, :password, :password_confirmation, :remember_me
 
