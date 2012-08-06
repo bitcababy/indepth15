@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "sections/new" do
 	before(:each) do
-		assign(:section, section = Section.new room: "5")
+		assign(:section, section = Section.new(room: "5"))
 	end
 
 	it "renders new section form" do
