@@ -1,5 +1,5 @@
 class AssignmentsController < ApplicationController
-	before_filter :authenticate_user!, except: [:page]
+	# before_filter :authenticate_user!, except: [:page]
 	
 	def page
 		course_number = params['course_number'].to_i

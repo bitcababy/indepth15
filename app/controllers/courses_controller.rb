@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-	before_filter :find_course, except: [:list]
+	# before_filter :find_course, except: [:list]
 	
 	def home
 		respond_to do |format|
