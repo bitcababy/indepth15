@@ -30,9 +30,9 @@ class SectionAssignment
 		year = hash[:schoolyear]
 
 		course = Course.find_by(number: hash[:course_num])
-		raise "course is nil" unless course
+		raise "course is nil for #{hash[:course_num]}" unless course
 		teacher = Teacher.find_by(login: hash[:teacher_id])
-		raise "teacher is nil" unless teacher
+		raise "teacher is nil for #{hash[:teacher_id]}" unless teacher
 		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
 		unless section
 			puts "can't find section for #{year}/#{teacher}/#{block}/#{assgt_id}"

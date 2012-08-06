@@ -31,7 +31,6 @@ class Teacher < Author
 		hash[:generic_msg] = coder.decode(hash[:generic_msg])
 		# puts "#{hash[:generic_msg]}"
 		hash[:upcoming_msg] = coder.decode(hash[:upcoming_msg])
-		
 		[:phrase, :old_current, :teacher_id, :orig_id].each {|k| hash.delete(k)}
 		teacher = self.create! hash
 		return teacher
