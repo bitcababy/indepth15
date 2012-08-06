@@ -55,7 +55,7 @@ class User
 	# validates :email, presence: true#, uniqueness: true
 	# validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
 	
-	attr_accessible :email, :password, :password_confirmation, :remember_me
+	# attr_accessible :email, :password, :password_confirmation, :remember_me
 
 	def formal_name
 		return "#{self.honorific} #{self.last_name}"
