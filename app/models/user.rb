@@ -35,11 +35,11 @@ class User
   field :lsii, as: :last_sign_in_ip,    :type => String
 
   ## Confirmable
-  # field :confirmation_token,   :type => String
-  # field :confirmed_at,         :type => Time
-  # field :confirmation_sent_at, :type => Time
-  # field :unconfirmed_email,    :type => String # Only if using reconfirmable
-
+  # field :ct, as: :confirmation_token,   :type => String
+  #  field :ca, as: :confirmed_at,         :type => Time
+  #  field :co, as: :confirmation_sent_at, :type => Time
+  #  field :um, as: :unconfirmed_email,    :type => String # Only if using reconfirmable
+ 
   ## Lockable
   field :fa, as: :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts
   field :ut, as: :unlock_token,    :type => String # Only if unlock strategy is :email or :both
