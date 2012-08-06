@@ -23,7 +23,7 @@ describe ApplicationHelper do
 		end
 
 		it "renders a line item" do
-			@res.should have_selector('li', class: 'home') do |li|
+			@res.should have_selector('li', id: 'home') do |li|
 				li.should have_selector('a', href: home_path, content: 'Home')
 			end
 		end
