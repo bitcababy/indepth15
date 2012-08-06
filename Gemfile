@@ -61,6 +61,9 @@ gem 'client_side_validations'
 gem 'simple_form'
 gem 'validates_email_format_of'#, :git => 'git@github.com:bitcababy/validates_email_format_of.git'
 gem 'validation_reflection'
+gem 'googlecharts'
+gem 'google_drive'
+gem 'rack-google-analytics', :require => 'rack/google-analytics'
 
 group :development, :test do
 	gem 'rspec-rails'
@@ -82,6 +85,7 @@ end
 
 group :development do
 	gem 'haml-rails'
+	gem 'heroku_san'
 end
 
 group :test do
@@ -97,5 +101,8 @@ group :test do
 	gem 'email_spec'
 	gem 'webrat'
 	gem 'mocha', :require => false
+	# Warden stuff
+	gem 'warden'
+	gem 'rails_warden'
 end
 
