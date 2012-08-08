@@ -17,24 +17,38 @@ production:
     BUNDLE_WITHOUT: "development:test"
     GOOGLE_ANALYTICS: "UA-12345678-1"
   addons:
+    - memcache:5mb
     - mongolab:starter
+    - scheduler:standard
+    - "blitz:250"
+    - iron_mq:rust
 
 staging:
   stack: cedar
   app: depthcharge-staging
+  tag: staging/*
   config: &default
     BUNDLE_WITHOUT: "development:test"
   addons:
     - memcache:5mb
     - mongolab:starter
+    - scheduler:standard
+    - "blitz:250"
+    - iron_mq:rust
 
 testing:
   stack: cedar
   app: depthcharge-testing
+  tag: dev/*
   config: *default
   addons:
     - mongolab:starter
+    - scheduler:standard
+    - "blitz:250"
+    - iron_mq:rust
 
 demo: 
   app: depthcharge-demo
   config: *default
+  addons:
+    - mongolab:starter
