@@ -1,33 +1,47 @@
 module CourseMockHelpers
 	def mock_teacher(opts={})
 		opts.merge!(formal_name: "Mr. Doe") {|key, v1, v2| v1}
-		mock(opts[:formal_name], opts)
+		mock(opts[:formal_name]) do
+					opts.each_pair {|k, v| stubs(k).returns v}
+				end
 	end
 
 	def mock_section(opts={})
 		opts.merge!({block: Settings.blocks.sample, days_for_section: [1,2,3,4,5], room: "222"}) {|key, v1, v2| v1}
 		opts[:teacher] = mock_teacher unless opts[:teacher]
-		mock("Section #{opts[:block]}", opts)
+		mock("Section #{opts[:block]}") do
+			opts.each_pair {|k, v| stubs(k).returns v}
+		end
 	end
 
 	def mock_course(opts={})
 		opts.merge!({number: 321, duration: Course::FULL_YEAR, credits: 5.0, 
 				description: "A description", full_name: "Fractals 101"}) {|key, v1, v2| v1}
-		course = mock("Course #{opts[:number]}", opts)
+		return mock("Course #{opts[:number]}") do
+			opts.each_pair {|k, v| stubs(k).returns v}
+		end
 	end
 
 	def mock_section_assignment(opts={})
 		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20) }) {|key, v1, v2| v1}
-		mock('section_assignment', opts)
+		sa = mock("section_assignment") do
+			opts.each_pair {|k, v| stubs(k).returns v}
+		end
+		# sa = mock("section_assignment '#{opts[:name]}'", opts)
+		if opts[:assignment]
+			sa.stubs(:assignment).returns mock_assignment("This is assignment #{opts[:name]}")
+		end
+		return sa
 	end
 	
 	def mock_assignment(txt)
-		mock('assignment', content: txt)
-		mock('name', name)
+		mock('assignment') do
+			stubs(:content).returns txt
+		end
 	end
 	
-	def mock_assignments(n=3)
-		(1..n).collect { mock_assignment }
+	def mock_section_assignments(n=3)
+		(1..n).collect {|i| mock_section_assignment(name: "Assignment #{i}", assignment: "Content for assignments #{i}") }
 	end
 
 	def mock_section_with_assignments
