@@ -5,10 +5,10 @@ Fabricator(:course) do
 	full_name				{ |attrs| "Course #{attrs[:number]}"}
 	in_catalog			true
 	description			{ |attrs| "This is the description of course #{attrs[:number]}" }
-	information_doc	{ Fabricate :text_document }
-	resources_doc		{ Fabricate :text_document }
-	policies_doc		{ Fabricate :text_document }
-	news_doc				{ Fabricate :text_document }	
+	information			{|attrs| "Information for course #{attrs[:number]}"}
+	resources       {|attrs| "Resources for course #{attrs[:number]}"}
+	policies				{|attrs| "Policies for course #{attrs[:number]}"}
+	news						{|attrs| "News for course #{attrs[:number]}"}
 end
 
 Fabricate.sequence(:course_number, 321)
