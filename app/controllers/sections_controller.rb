@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-	before_filter :find_section, only: [:assignments, :show, :edit, :update, :destroy]
+	before_filter :find_section, only: [:show, :update, :edit, :delete, :assignments]
 	# before_filter :authenticate_user!, except: [:assignments]
 
 	def assignments

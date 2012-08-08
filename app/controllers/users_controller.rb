@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
-	before_filter :find_user, only: [:show, :edit, :update, :destroy]
+	before_filter :find_user, only: [:show, :update, :edit, :delete]
 	# before_filter :authenticate_user!
 	
+	def login
+	end
 
   # GET /users
   # GET /users.json
