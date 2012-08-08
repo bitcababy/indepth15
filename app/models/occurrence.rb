@@ -8,13 +8,15 @@ class Occurrence
 	
 	index( {number: 1, block: 1} )
 	
+	validates :block, presence: true
+	validates :number, presence: true, numericality: true
+	
 	def self.import_from_hash(hash)
-		occ = Occurrence.create! hash
-		return occ
+		return Occurrence.create! hash
 	end
 	
 	def to_s
-		number.to_s
+		"#{block}#{number}"
 	end
 
 end
