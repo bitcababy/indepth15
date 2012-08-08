@@ -2,13 +2,9 @@ DepthCharge::Application.routes.draw do
 
  	root to: "home#dept_info"
 
-  devise_for :users#, path: 'users', path_names: {sign_in: 'sign_in'}
-	# devise_scope :user
 	
-	# match 'user_root' => 'home#dept_info'
-
-  # resources :users, only: []
-
+  devise_for :users, controllers: {sessions: :user_sessions}
+	resources :users
 
 	resources :sections
 
