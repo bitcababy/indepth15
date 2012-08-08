@@ -61,9 +61,10 @@ gem 'client_side_validations'
 gem 'simple_form'
 gem 'validates_email_format_of'#, :git => 'git@github.com:bitcababy/validates_email_format_of.git'
 gem 'validation_reflection'
-gem 'googlecharts'
-gem 'google_drive'
-gem 'rack-google-analytics', :require => 'rack/google-analytics'
+# gem 'googlecharts'
+# gem 'google_drive'
+# gem 'rack-google-analytics', :require => 'rack/google-analytics'
+# gem 'dropbox'
 
 group :development, :test do
 	gem 'rspec-rails'
