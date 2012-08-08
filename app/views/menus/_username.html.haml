@@ -1,3 +1,4 @@
-%div username
-- if user_signed_in?
-	= current_user.full_name
+%li#username
+	%a{href: '#'}= user_signed_in? ? current_user.full_name : "Guest"
+	%ul
+		= render partial: 'menus/login_item'
