@@ -18,31 +18,12 @@ describe ApplicationHelper do
 	end
 
 	describe "#render_home_menu" do
-		before :each do
-			@res = render_home_menu
-		end
-
-		it "renders a line item" do
-			@res.should have_selector('li', id: 'home') do |li|
-				li.should have_selector('a', href: home_path, content: 'Home')
-			end
-		end
-		
-		it "renders the 'Sign in' item" do
-			@res.should have_selector('ul', id: 'home-menu') do |ul|
-				ul.should have_selector('li', id: 'sign_in_out') do |li|
-					li.should have_selector('a', href: sign_in_path, content: "Sign in")
-				end
-			end
-		end
-		
-		it "renders the 'About' item" do
-			@res.should have_selector('ul', id: 'home-menu') do |ul|
-				ul.should have_selector('li', id: 'about') do |li|
-					li.should have_selector('a', href: about_path, content: 'About')
-				end
-			end
-		end
+		# it "renders a home link" do
+		# 	res = render_home_menu
+		# 	res.should have_selector('li', id: 'home') do |li|
+		# 		li.should have_selector('a', href: home_path, content: 'Home')
+		# 	end
+		# end
 			
 	end
 				
