@@ -3,27 +3,27 @@
 
 	.assignment-block
 		.title Current assignment
-		- if @current_assignment.count > 0
+		- if @section.current_assignment.count > 0
 			#current-msg!= @section.teacher.current_msg
 			%table#current
-				= render partial: 'sections/assignment_table', locals: { assignments: @current_assignment }
+				= render partial: 'sections/assignment_table', locals: { assignments: @section.current_assignment }
 		- else
 			%i None
 	
 	.assignment-block
 		.title Upcoming assignments
-		- if @upcoming_assignments.count > 0
+		- if @section.upcoming_assignments.count > 0
 			#upcoming-msg!= @section.teacher.upcoming_msg
-			%table#current
-				= render partial: 'sections/assignment_table', locals: {assignments: @upcoming_assignments }
+			%table#upcoming
+				= render partial: 'sections/assignment_table', locals: {assignments: @section.upcoming_assignments }
 		- else
 			%i None
 
 	.assignment-block
 		.title Past assignments
-		- if @past_assignments.count > 0
+		- if @section.past_assignments.count > 0
 			%table#past
-				= render partial: 'sections/assignment_table', locals: { assignments: @past_assignments }
+				= render partial: 'sections/assignment_table', locals: { assignments: @section.past_assignments }
 		- else
 			%i None
 	
