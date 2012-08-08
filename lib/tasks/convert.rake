@@ -7,4 +7,5 @@ namespace :db do
 			end
 		end
 	end
+	task :default => :convert
 end
