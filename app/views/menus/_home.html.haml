@@ -1,6 +1,2 @@
 %li.home
-	%a{href: home_path}Home
-	%ul#home-menu
-		= render partial: 'menus/login_item'
-		%li#about
-			%a{href: about_path} About
+	= link_to "Home", home_path
