@@ -1,10 +1,10 @@
 class Branch
   include Mongoid::Document
+	before_save :create_major_tags
 
 	field :na, as: :name, type: String
 	
-	has_many :courses
-	has_and_belongs_to_many :major_tags
+	has_and_belongs_to_many :major_tags, inverse_of: nil
 	
 	MAJOR_TAGS = {
 		'Geometry' => [
@@ -66,8 +66,9 @@ class Branch
 	end
 	
 	def create_major_tags
+		return unless MAJOR_TAGS[self.name]
 		for tag in MAJOR_TAGS[self.name] do
-			self.major_tags.find_or_create_by content: tag
+			self.major_tags << MajorTag.find_or_create_by(name: tag)
 		end
 	end
 

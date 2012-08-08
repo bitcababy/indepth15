@@ -6,10 +6,10 @@ describe Branch do
 		it "creates a major tag for each tag in the MAJOR_TAGS hash" do
 			branch_name = Branch::MAJOR_TAGS.keys.first
 			tags = Branch::MAJOR_TAGS[branch_name]
-			branch = Branch.create! name: branch_name
+			branch = Branch.new name: branch_name
 			branch.create_major_tags
 			for tag in tags do
-				MajorTag.where(content: tag).should exist
+				MajorTag.where(name: tag).should exist
 			end
 		end
 	end

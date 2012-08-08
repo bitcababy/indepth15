@@ -4,10 +4,6 @@ describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number)}
 	it { should have_and_belong_to_many(:major_tags) }
-
-	[:information_doc, :resources_doc, :policies_doc, :news_doc].each do |doc|
-		it { should belong_to(doc) }
-	end
 	
 	context "Fabricator" do
 		it "creates courses with unique numbers" do
@@ -26,14 +22,22 @@ describe Course do
 				schedule_name: "GeomH",
 				semesters: 12,
 				credits: 5.0,
-				prog_of_studies_descr: "This is the description",
-				info: "This is the info",
+				description: "This is the description",
+				information: "This is the info",
 				policies: "These is the policies",
 				resources: "This is the resources",
 				has_assignments:true
 			}
 			course = Course.import_from_hash hash
 			course.should be_kind_of Course
+			course.number.should == 321
+			course.full_name.should == "Geometry Honors"
+			course.short_name.should == ''
+			course.schedule_name.should == "GeomH"
+			course.duration.should == Course::FULL_YEAR
+			course.credits.should == 5.0
+			course.branches.count.should > 0
+			course.major_tags.count.should > 0
 		end
 	end
 	

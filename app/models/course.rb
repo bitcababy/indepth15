@@ -2,8 +2,6 @@ class Course
   include Mongoid::Document
   # include Mongoid::Timestamps
 
-	after_initialize :create_docs
-
 	FULL_YEAR = :full_year
 	FULL_YEAR_HALF_TIME = :halftime
 	FIRST_SEMESTER = :first_semester
@@ -17,7 +15,7 @@ class Course
 		332 => 'Algebra',
 		333 => 'Algebra',
 		341 => 'Precalculus',
-		342 => 'Precalculus',
+		342 => ['Precalculus', 'Statistics', 'Algebra'],
 		343 => 'Discrete Math',
 		352 => 'Precalculus',
 		361 => 'Calculus',
@@ -32,15 +30,30 @@ class Course
 	## Fields
 	##
 	field :no, as: :number, type: Integer
+	validates :number, presence: true, uniqueness: true
+
 	field :du, as: :duration, type: Symbol, default: FULL_YEAR
+	validates :duration, presence: true, inclusion: {in: DURATIONS}
+	
 	field :cr, as: :credits, type: BigDecimal, default: 5.0
+	validates :credits, presence: true, numericality: true
+	
 	field :fn, as: :full_name, type: String, default: ""
+	validates :full_name, presence: true
+
+	field :ha, as: :has_assignments, type: Boolean, default: true
+	field :ic, as: :in_catalog, type: Boolean, default: true
+	field :de, as: :description, type: String, default: ""
+
 	field :sn, as: :short_name, type: String, default: ""
 	field :sc, as: :schedule_name, type: String, default: ""
-	field :ic, as: :in_catalog, type: Boolean, default: true
-	field :oc, as: :occurrences, type: Integer, default: 5
-	field :ha, as: :has_assignments, type: Boolean, default: true
-	field :de, as: :description, type: String, default: ""
+	
+	field :info, as: :information, type: String, default: ""
+	field :res, as: :resources, type: String, default: ""
+	field :pol, as: :policies, type: String, default: ""
+	field :news, type: String, default: ""
+	
+
 	field :_id, type: Integer, default: ->{ number }
 	
 	index( {number: 1}, {unique: true} )
@@ -48,74 +61,26 @@ class Course
 	##
 	## Associations
 	##
-	belongs_to :branch
 	has_many :sections
 
-	[:information_doc, :resources_doc, :policies_doc, :news_doc].each do |doc|
-		belongs_to doc, class_name: 'TextDocument', inverse_of: :nil, dependent: :destroy
-	end
-
-	has_and_belongs_to_many :major_tags
+	has_and_belongs_to_many :major_tags, inverse_of: nil
+	has_and_belongs_to_many :branches
 
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 
-	validates_uniqueness_of :number
-	validates_inclusion_of :duration, in: DURATIONS
 	
 	def current_sections
-		self.sections.current
+		return self.sections.current
 	end
 	
 	# def teachers
 	# 	(self.current_sections.map &:teacher).uniq
 	# end
-	
-	def create_docs
-		self.information_doc ||= TextDocument.create!
-		self.resources_doc ||= TextDocument.create!
-		self.policies_doc ||= TextDocument.create!
-		self.news_doc ||= TextDocument.create!
-	end
-	
-	def information
-		self.information_doc.content
-	end
-	
-	def information=(txt)
-		self.information_doc.content = txt
-	end
-	
-	def resources
-		self.resources_doc.content
-	end
-	
-	def resources=(txt)
-		self.resources_doc.content = txt
-	end
-	
-	def resources
-		self.resources_doc.content
-	end
-	
-	def policies
-		self.policies_doc.content = txt
-	end
-
-	def policies=(txt)
-		self.policies_doc.content = txt
-	end
-	
-	def news
-		self.news_doc.content
-	end
-	
-	def news=(txt)
-		self.news_doc.content = txt
-	end
-	
+		
 	def menu_label
 		self.full_name
 	end
+	
 
 	class << self
 		SEMESTER_MAP = {
@@ -126,23 +91,12 @@ class Course
 		}
 		
 		def import_from_hash(hash)
-			hash[:duration] = SEMESTER_MAP[hash[:semesters].to_i]
-			info = hash[:info]
-			resources = hash[:resources]
-			policies = hash[:policies]
-			prog_of_studies_descr = hash[:prog_of_studies_descr]
-			[:semesters, :info, :resources, :policies, :prog_of_studies_descr].each {|k| hash.delete(k)}
-			hash[:branch] = Branch.find_or_create_by(content: BRANCH_MAP[hash[:course_num]])
+			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
-			course.information = info
-			course.resources = resources
-			course.resources = resources
-			course.policies = policies
-			course.description = prog_of_studies_descr
-			course.save!
-			course
+			return course
 		end
-			
+		
+
 	end
 
 
