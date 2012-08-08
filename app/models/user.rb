@@ -7,7 +7,7 @@ class User
 	field :fn, as: :first_name, type: String, default: ""
 	field :mn, as: :middle_name, type: String, default: ""
 	field :ln, as: :last_name, type: String, default: ""
-	
+		
  # Include default devise modules. Others available are:
   # ::confirmable
   # :lockable, :timeoutable and :omniauthable
@@ -16,6 +16,8 @@ class User
  				 
   ## Database authenticatable
   field :em, as: :email, :type => String
+	validates :email, presence: true#, uniqueness: true
+
 	field :lo, as: :login, type: String
   field :ep, as: :encrypted_password, :type => String, :default => ""
 
@@ -49,10 +51,11 @@ class User
   ## Token authenticatable
   field :at, as: :authentication_token, :type => String
 
+	has_and_belongs_to_many :roles
+
 	validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
 	validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
 	validates :last_name, presence: true#, length: { minimum: 2 }
-	validates :email, presence: true#, uniqueness: true
 	validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
 	
 	# attr_accessible :email, :password, :password_confirmation, :remember_me
