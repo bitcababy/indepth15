@@ -29,21 +29,12 @@ describe Section do
 			section.should be_valid
 			end
 	end
-
-	describe 'find_or_create_occurrence' do
-		it "adds an occurrence" do
-			pending "Unfinished test"
-			section = Section.create! valid_attributes
-			res = section.find_or_create_occurrence number: 1, day: 1
-			res.should be_kind_of Occurrence
-		end
-	end
 	
 	describe '#days_for_section' do
 		it "returns an array of days for its occurrences" do
 			section = Section.create! valid_attributes
 			(1..5).each do |i|
-				Occurrence.create! number: i, block: section.block, day: i
+				section.occurrences.create! number: i, block: section.block, day: i
 			end
 			section.days_for_section.should eql([1,2,3,4,5])
 		end
@@ -62,8 +53,8 @@ describe Section do
 	context "past and future assignment handling" do
 		before do
 			@section = Section.create! valid_attributes
-			3.times { @section.add_assignment Fabricate(:assignment), Utils.future_due_date + rand(1..5) }
-			2.times { @section.add_assignment Fabricate(:assignment), Utils.future_due_date - rand(1..5) }
+			3.times { @section.add_assignment Fabricate(:assignment), future_due_date + rand(1..5) }
+			2.times { @section.add_assignment Fabricate(:assignment), future_due_date - rand(1..5) }
 		end
 	
 		it "should be able to return all future or past assignments" do
@@ -74,5 +65,15 @@ describe Section do
 		end
 	end
 	
-		
+	describe '::import_from_hash' do
+		it "creates a section from a hash representing an old record" do
+			Fabricate :course, number: 332
+			Fabricate :teacher, login: 'davidsonl'
+			hash = {:dept_id=>1, :course_num=>332, :number=>4, :semesters=>12, :block=>"G", :year=>2011, 
+							:which_occurrences=>"all", :room=>200, :teacher_id=>"davidsonl"}
+			section = Section.import_from_hash(hash)
+			pending "Unfinished test"
+		end
+	end
+			
 end
