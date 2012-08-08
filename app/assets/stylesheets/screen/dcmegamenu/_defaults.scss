@@ -1,12 +1,13 @@
 // Defaults that can be overridden in a skin
 $base-font-size: 13px;
-$font-size: 1em;
+$font-size: 1.1em;
 $font: Arial, sans-serif;
-$line-height: 125%;
+$line-height: 120%;
+$hue: 0;
 
-$mb-text-color: hsl(0, 0, 100);
-$mb-text-shadow: hsl(0, 0, 0);
-$mb-hover-text-color: hsl(0, 0, 0);
+$mb-text-color: hsl($hue, 0, 100);
+$mb-text-shadow: hsl($hue, 0, 0);
+$mb-hover-text-color: hsl($hue, 0, 0);
 
 $mb-icon-image: url(image-path("arrow.png"));
 $mb-height: 40px;
@@ -14,22 +15,22 @@ $mb-hover-position: -40px;
 $mb-background-color: #222;
 $mb-weight: bold;
 
-$mb-hover-bg-color: hsla(0, 0, 20, 0.5);
-$mb-selected-bg-color: hsla(0, 0, 20, 0.5);
+$mb-hover-bg-color: hsla($hue, 0, 20, 0.5);
+$mb-selected-bg-color: hsla($hue, 0, 20, 0.5);
 
-$border-color: hsl(0, 0, 11);
-$menu-text-color: hsl(0, 0, 7);
+$border-color: hsl($hue, 0, 11);
+$menu-text-color: hsl($hue, 0, 7);
 
-$item-color: hsl(0, 0, 100);
-$item-hover-bg: hsl(0, 0, 94);
-$item-shadow: 1px 1px 1px hsl(0, 0, 20);
+$item-color: hsl($hue, 0, 100);
+$item-hover-bg: hsl($hue, 0, 94);
+$item-shadow: 1px 1px hsl($hue, 0, 20);
 
 $submenu-bg-image: url(image-path("bg_sub_left.png"));
 $background-hdr-image: url(image-path("bg_mega_hdr.png"));
 
-$hdr-color: hsl(0, 0, 100);
-$hdr-hover-color: hsl(0, 0, 80);
-$hdr-bg-color: hsl(0, 0, 30);
+$hdr-color: hsl($hue, 0, 100);
+$hdr-hover-color: hsl($hue, 0, 80);
+$hdr-bg-color: hsl($hue, 0, 30);
 
-$subcontainer-color: hsl(0, 0, 80);
+$subcontainer-color: hsl($hue, 0, 80);
 $style: "dark";

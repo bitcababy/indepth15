@@ -1,3 +1,4 @@
+@import '../../fonts';
 @import 'menu-settings';
 @import 'defaults';
 
@@ -10,7 +11,7 @@
 //@import 'white';
 
 @if $style == "dark" {
-	$mb-text-shadow: 1 1 1 hsl(0, 0, 0);
+	$mb-text-shadow: 1 1 hsl(0, 0, 0);
 	$mb-hover-text-color: hsl(0, 0, 100);
 	$mb-hover-bg-color: hsla(0, 0, 100, 0.3);
 	$mb-selected-bg-color: hsla(0, 0, 80, 0.3);
@@ -162,11 +163,12 @@
       padding-left: 20px;
       margin-left: -3px;
 			&.mega .sub {
-	      padding: 20px 0px 10px 20px; 
+	      padding: 20px 0px 10px 20px;
 			}
 			&.non-mega {
+				line-height: 100%;
 		    .sub {
-		      padding: 20px 20px 20px 0; 
+		      padding: 12px 20px 12px 0; 
 				}
 		    li {
 					@include flush;
@@ -196,7 +198,7 @@
 			}
 		}
     .sub {
-      padding: 20px 20px 20px 10px;
+      padding: 12px 20px 12px 10px;
 			background: {
 				attachment: scroll;
 				image: url(image-path("bg_sub.png"));
@@ -230,6 +232,7 @@
 	        margin-bottom: 5px;
 					background-color: $hdr-bg-color;
 	        text-transform: uppercase;
+					vertical-align: bottom;
 	        font-weight: bold;
 	        color: $hdr-color;
 	        text-shadow: $item-shadow;
@@ -244,10 +247,11 @@
 	      border: none;
 	      text-shadow: none;
 	      color: $menu-text-color;
-	      padding: 7px 10px;
+	      padding: 3px 10px;
 	      display: block;
 	      float: none;
 	      text-decoration: none;
+				vertical-align: bottom;
 	      font-size: 1em; 
 			}
 		}
