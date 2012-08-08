@@ -1,5 +1,7 @@
 class SectionAssignment
 	include Mongoid::Document
+	include Utils
+
   # include Mongoid::Timestamps
 
 	field :dd, as: :due_date, type: Date
@@ -10,9 +12,9 @@ class SectionAssignment
 	belongs_to :course, index: true
 	
 	scope :after,	->(date) { gt(due_date: date) }
-	scope :past, -> { lt(due_date: Utils.future_due_date) }
-	scope :future, -> { gte(due_date: Utils.future_due_date) }
-	scope :current, -> { gte(due_date: Utils.future_due_date).limit(1) }
+	scope :past, -> { lt(due_date: future_due_date) }
+	scope :future, -> { gte(due_date: future_due_date) }
+	scope :current, -> { gte(due_date: future_due_date).limit(1) }
 	
 	def self.upcoming
 		current = self.current.first
