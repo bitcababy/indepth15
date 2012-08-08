@@ -31,7 +31,6 @@ module Convert
 			},
 		Course => 	{
 				'course_num' 			=> :number,
-				'name' 						=> :short_name,
 				'logo_URL' 				=> :logo_url,
 				'has_assgts' 			=> :has_assignments,
 				'duration' 				=> :duration,
@@ -42,7 +41,7 @@ module Convert
 				'in_catalog' 			=> :in_catalog,
 				'occurrences' 		=> :occurrences,
 				'has_assignments' => :has_assignments,
-				'info' 						=> :info,
+				'info' 						=> :information,
 				'resources' 			=> :resources,
 				'semesters' 			=> :semesters,
 				'policies' 				=> :policies,
