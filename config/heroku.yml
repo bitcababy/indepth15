@@ -10,45 +10,31 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
 production: 
-  app: depthcharge
+  app: depth-charge
   stack: cedar
   tag: production/*
   config:
     BUNDLE_WITHOUT: "development:test"
     GOOGLE_ANALYTICS: "UA-12345678-1"
-  addons:
-    - memcache:5mb
+  addons: & addons
     - mongolab:starter
+    - memcache:5mb
+    - logging:basic
     - scheduler:standard
-    - "blitz:250"
-    - iron_mq:rust
 
 staging:
   stack: cedar
-  app: depthcharge-staging
-  tag: staging/*
+  app: depth-charge-staging
   config: &default
     BUNDLE_WITHOUT: "development:test"
-  addons:
-    - memcache:5mb
-    - mongolab:starter
-    - scheduler:standard
-    - "blitz:250"
-    - iron_mq:rust
-
+  addons: *addons
+    
 testing:
   stack: cedar
-  app: depthcharge-testing
-  tag: dev/*
-  config: *default
-  addons:
-    - mongolab:starter
-    - scheduler:standard
-    - "blitz:250"
-    - iron_mq:rust
+  app: depth-charge-testing
+  addons: *addons
 
 demo: 
-  app: depthcharge-demo
+  app: depth-charge-demo
   config: *default
-  addons:
-    - mongolab:starter
+  addons: *addons
