@@ -7,6 +7,8 @@ DepthCharge::Application.routes.draw do
 	resources :users
 
 	resources :sections
+	resources :assignments
+	resources :courses
 
 	# Unrestful routes
 
