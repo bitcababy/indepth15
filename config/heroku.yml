@@ -31,7 +31,8 @@ staging:
 
 testing:
   stack: cedar
-  app: depth-charge-staging
+  app: depth-charge-testing
+  config: *default
   addons:
     - mongolab:starter
     - memcache:5mb
