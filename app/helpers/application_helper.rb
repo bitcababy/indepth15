@@ -1,6 +1,12 @@
 # encoding: UTF-8
 
 module ApplicationHelper
+	include Utils
+	include UserSessionHelper
+
+	def academic_year_string(year)
+		return "#{year-1}—#{year}"
+	end
 
 	def is_are_number_mangler(n, word)
 		case
@@ -12,10 +18,6 @@ module ApplicationHelper
 				res = "are "
 		end
 		return res + pluralize(n, word).gsub(/^0/, 'no')
-	end
-
-	def academic_year_string(year)
-		return "#{year-1}—#{year}"
 	end
 	
 	def duration_string(duration)
@@ -73,18 +75,5 @@ module ApplicationHelper
 			section.to_s
 		end
 	end
-	
-	def devise_mapping
-		Devise.mappings[:user]
-	end
-	
-	def resource_name
-		devise_mapping.name
-	end
-	
-	def resource_class
-		devise_mapping.to
-	end
 
-			
 end
