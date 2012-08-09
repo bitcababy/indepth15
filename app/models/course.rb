@@ -41,13 +41,13 @@ class Course
 	field :fn, as: :full_name, type: String, default: ""
 	validates :full_name, presence: true
 
+	field :sn, as: :short_name, type: String, default: ""
+	field :sc, as: :schedule_name, type: String, default: ""
+
 	field :ha, as: :has_assignments, type: Boolean, default: true
 	field :ic, as: :in_catalog, type: Boolean, default: true
 	field :de, as: :description, type: String, default: ""
 
-	field :sn, as: :short_name, type: String, default: ""
-	field :sc, as: :schedule_name, type: String, default: ""
-	
 	field :info, as: :information, type: String, default: ""
 	field :res, as: :resources, type: String, default: ""
 	field :pol, as: :policies, type: String, default: ""

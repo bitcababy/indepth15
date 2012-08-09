@@ -7,8 +7,8 @@ class Role
 	GUEST = :guest
 	ROLES = %W(TEACHER ADMIN REGISTERED GUEST)
 
-	field :n, as: :name, type: Symbol
 	validates :name, presence: true, inclusion: {in: ROLES}
+	field :n, as: :name, type: Symbol
 	
 	has_and_belongs_to_many :users
 
