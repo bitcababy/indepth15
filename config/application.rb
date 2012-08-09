@@ -72,7 +72,7 @@ module DepthCharge
 		  g.fixture_replacement :fabrication
 		end
 
-		config.mongoid.observers = :section_observer
+		config.mongoid.observers = [:section_observer, :course_observer]
   end
 end
 
