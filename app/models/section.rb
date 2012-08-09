@@ -6,6 +6,7 @@ class Section
 	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
 	field :de, as: :dept, type: Integer
+
 	field :bl, as: :block, type: String
 	validates :block, presence: true, inclusion: {in: Settings.blocks}
 
@@ -16,7 +17,6 @@ class Section
 
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	validates :academic_year, presence: true, numericality: true
-	# field :oc, as: :occurrences, type: Array, default: (1..Settings.num_occurrences).to_a
 	
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 
