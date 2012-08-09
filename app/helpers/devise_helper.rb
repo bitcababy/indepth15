@@ -1,4 +1,8 @@
+require 'warden'
+
 module DeviseHelper
+	include UserSessionHelper
+
   # A simple way to show error messages for the current devise resource. If you need
   # to customize this method, you can either overwrite it in your application helpers or
   # copy the views to your application.
@@ -23,21 +27,4 @@ module DeviseHelper
      html.html_safe
    end
  
-	def autenticate_user!(opts={})
-		opts[:scope] = :user
-		warden.authenticate!(opts) if !devise_controller? || opts.delete(:force)
-	end
-	
-	def user_signed_in?
-		!!current_user
-	end
-	
-	def current_user
-		@current_user ||= warden.authenticate(:scope => :user)
-	end
-	
-	def user_session
-		current_user && warden.session(:user)
-	end
-
 end
