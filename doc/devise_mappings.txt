@@ -1,0 +1,5 @@
+{:user=>#<Devise::Mapping:0x007ffa82466b88 @scoped_path="users", 
+@singular=:user, 
+@class_name="User", 
+@klass=#<Devise::Getter:0x007ffa8246bed0 @name="User">, 
+@path="users", @path_prefix=nil, @sign_out_via=:delete, @format=nil, @failure_app=Devise::FailureApp, @controllers={:sessions=>"user_sessions", :passwords=>"devise/passwords", :unlocks=>"devise/unlocks"}, @path_names={:registration=>"", :new=>"new", :edit=>"edit", :sign_in=>"sign_in", :sign_out=>"sign_out", :password=>"password", :unlock=>"unlock"}, @modules=[:database_authenticatable, :token_authenticatable, :rememberable, :recoverable, :lockable, :timeoutable, :trackable], @routes=[:session, :password, :unlock], @used_routes=[:session, :password, :unlock], @used_helpers=[:session, :password, :unlock], @strategies=[:rememberable, :token_authenticatable, :database_authenticatable]>}
