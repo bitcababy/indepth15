@@ -2,6 +2,7 @@ class Branch
   include Mongoid::Document
 	before_save :create_major_tags
 
+	validates :name, presence: true, length: { minimum: 3 }
 	field :na, as: :name, type: String
 	
 	has_and_belongs_to_many :major_tags, inverse_of: nil
