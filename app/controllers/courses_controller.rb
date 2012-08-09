@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
 	before_filter :find_course, except: [:index, :list, :new, :create]
-	# skip_before_filter :verify_authenticity_token, :except => [:home, :list]
+	skip_before_filter :verify_authenticity_token, 
+		:except => [:home, :list, :resources_pane, :information_pane, :news_pane, :policies_pane, :sections_pane]
 	
 	def home
 		respond_to do |format|
