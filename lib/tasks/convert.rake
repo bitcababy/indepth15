@@ -6,3 +6,5 @@ task :convert => :environment do
 		end
 	end
 end
+
+task :default => :convert
