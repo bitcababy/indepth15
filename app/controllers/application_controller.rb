@@ -1,21 +1,17 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 	
-	
 	# For ajax requests
 	# skip_before_filter :verify_authenticity_token, :only => [:name_of_your_action] 
 
-	# def store_location
-	# 	return unless request.env["REQUEST_METHOD"] == "GET"
-	#   session[:return_to] = request.env['REQUEST_URI']
-	# end
-
 	helper_method :user_signed_in?
+
 	def user_signed_in?
 		!!current_user
 	end
 	
 	helper_method :current_user
+
 	def current_user
 		@current_user ||= warden.authenticate(:scope => :user)
 	end
@@ -58,14 +54,13 @@ class ApplicationController < ActionController::Base
   end
 
   def create_guest_user
-    u = User.create(:name => "guest", :email => "guest_#{Time.now.to_i}#{rand(99)}@example.com")
+    u = User.new
     u.save(:validate => false)
     u
   end
 
-	def devise_mapping
-		@devise_mapping ||= Devise.mappings[:user]
-	end
-
+	# def devise_mapping
+	# 	@devise_mapping ||= Devise.mappings[:user]
+	# end
 
 end
