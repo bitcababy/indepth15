@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Branch do
+	it {should validate_presence_of :name}
+	it {should validate_length_of :name}
 	
 	describe '#create_major_tags' do
 		it "creates a major tag for each tag in the MAJOR_TAGS hash" do
@@ -14,12 +16,4 @@ describe Branch do
 		end
 	end
 
-  describe '::create_all' do
-		it 'creates a branch for each key in the MAJOR_TAGS hash' do
-			Branch.create_all
-			Branch::MAJOR_TAGS.keys.each do |txt|
-				Branch.where(name: txt).should exist
-			end
-		end
-	end
 end
