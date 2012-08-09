@@ -1,59 +1,53 @@
 require 'spec_helper'
 
 describe CoursesController do
-
-	context "single course" do
+	context "guest accessible" do
 		before :each do
 			@course = Fabricate :course
 		end
 
 	  describe "GET 'home'" do
 	    it "returns http success" do
-				pending "Unfinished test"
-	      visit course_home_path(@course)
+	      get 'home', id: @course.to_param
 	      response.should be_success
 	    end
 	  end
 
 	  describe "GET 'resources_pane'" do
 	    it "returns http success" do
-				pending "Unfinished test"
-	      visit course_resources_pane_path(@course)
+				get 'resources_pane', id: @course.to_param
 	      response.should be_success
 	    end
 	  end
 
 	  describe "GET 'information_pane'" do
 	    it "returns http success" do
-				pending "Unfinished test"
-	      visit course_information_pane_path(@course)
+				get 'information_pane', id: @course.to_param
 	      response.should be_success
 	    end
 	  end
 
 	  describe "GET 'sections_pane'" do
 	    it "returns http success" do
-				pending "Unfinished test"
-	      visit course_sections_pane_path(@course)
+				get 'sections_pane', id: @course.to_param
 	      response.should be_success
 	    end
 	  end
 
 	  describe "GET 'news_pane'" do
 	    it "returns http success" do
-				pending "Unfinished test"
-	      visit course_news_pane_path(@course)
+				get 'news_pane', id: @course.to_param
 	      response.should be_success
 	    end
 	  end
 
 	  describe "GET 'policies_pane'" do
 	    it "returns http success" do
-				pending "Unfinished test"
-	      visit course_policies_pane_path(@course)
+				get 'policies_pane', id: @course.to_param
 	      response.should be_success
 	    end
 	  end
+
 	end
 
 end
