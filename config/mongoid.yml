@@ -71,5 +71,6 @@ production:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
-  
+
+ 
 <% end %>

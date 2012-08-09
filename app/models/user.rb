@@ -51,7 +51,7 @@ class User
   ## Token authenticatable
   field :at, as: :authentication_token, :type => String
 
-	has_and_belongs_to_many :roles
+	# has_and_belongs_to_many :roles
 
 	validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
 	validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
