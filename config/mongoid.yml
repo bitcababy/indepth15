@@ -67,6 +67,11 @@ test:
       database: depth_charge_test
 
 <% if ENV['MONGOLAB_URI'] %>
+testing:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
+
 production:
   sessions:
     default:
