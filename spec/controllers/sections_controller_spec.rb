@@ -20,7 +20,7 @@ require 'spec_helper'
 
 describe SectionsController do
 	include Mongoid::Document
-	include CourseExamplesHelper 
+	include CourseExampleHelpers 
 
 	# This should return the minimal set of attributes required to create a valid
 	# Section. As you add validations to Section, be sure to

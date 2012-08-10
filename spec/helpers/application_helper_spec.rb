@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe ApplicationHelper do
-	include CourseExamplesHelper
+	include CourseExampleHelpers
 
 	describe '#academic_year_string' do
 		it "returns a string for the full academic year" do

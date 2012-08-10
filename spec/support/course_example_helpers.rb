@@ -1,4 +1,4 @@
-module CourseExamplesHelper
+module CourseExampleHelpers
 	DEFAULT_FUTURE = 3
 	DEFAULT_PAST = 2
 	
@@ -28,7 +28,7 @@ module CourseExamplesHelper
 		nf = options[:future] || DEFAULT_FUTURE
 		np = options[:past] || DEFAULT_PAST
 		make_assignments(section, nf, :future)
-		make_assignments(section, np, :future)
+		make_assignments(section, np, :past)
 		return section
 	end
 	
@@ -38,4 +38,4 @@ module CourseExamplesHelper
 		return section
 	end
 	
-end #CourseExamplesHelper
+end #CourseExampleHelpers
