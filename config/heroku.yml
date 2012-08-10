@@ -18,6 +18,8 @@ production:
     GOOGLE_ANALYTICS: "UA-12345678-1"
   addons:
     - mongolab:starter
+    - scheduler:standard
+    - memcache:5mb
 
 staging:
   stack: cedar
@@ -26,7 +28,6 @@ staging:
     BUNDLE_WITHOUT: "development:test"
   addons:
     - mongolab:starter
-    - memcache:5mb
     - scheduler:standard
 
 testing:
@@ -35,7 +36,6 @@ testing:
   config: *default
   addons:
     - mongolab:starter
-    - memcache:5mb
     - scheduler:standard
 
 demo: 
