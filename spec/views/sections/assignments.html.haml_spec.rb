@@ -13,19 +13,8 @@ describe "sections/assignments" do
 			stubs(:formal_name).returns "Mr. Ed"
 		end
 		course = mock_course(number: 321, full_name: "Fractals 101")
-		@section = mock do
-			stubs(:teacher).returns teacher
-			stubs(:course).returns course
-			stubs(:block).returns "A"
-			stubs(:page_header).returns "Mr.Ed's assignments for 'Fractals 101', block A "
-		end
-		current_assignment = mock_section_assignments(1)
-		upcoming_assignments = mock_section_assignments(2)
-		past_assignments = mock_section_assignments(5)
-		
-		@section.stubs(:current_assignment).returns current_assignment
-		@section.stubs(:upcoming_assignments).returns upcoming_assignments
-		@section.stubs(:past_assignments).returns past_assignments
+		@section = mock_section_with_assignments(course: course, teacher: teacher)
+		@section.stubs(:page_header).returns "Page header"
 		assign(:section, @section)
 	end
 
