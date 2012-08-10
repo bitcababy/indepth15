@@ -3,8 +3,8 @@ require 'spec_helper'
 describe "sections/edit.html.haml" do
 	before :each do
 		pending "Unfinished test"
-		@course = Fabricate(:course)
-		@section = Fabricate.build(:section, course: @course)
+		@course = Fabricate(:section)
+		@section = Fabricate.build(:section, section: @section)
 		render
 	end
 
