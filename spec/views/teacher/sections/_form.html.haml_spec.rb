@@ -1,7 +1,8 @@
 require 'spec_helper'
 
-describe 'sections/_form' do
+describe 'teacher/sections/_form' do
 	it "renders a form for a section" do
+		pending "Unfinished test"
 		course = mock do
 			stubs(:full_name).returns 'Fractals 101'
 		end
