@@ -1,23 +1,7 @@
 DepthCharge::Application.routes.draw do
 
  	root to: "home#dept_info"
-
 	
-  devise_for :users, controllers: {sessions: :user_sessions}
-	resources :users
-
-	resources :sections
-	resources :assignments
-	resources :courses
-
-	# Unrestful routes
-
-  get "home", controller: 'home', action: 'dept_info'
-  get "about", controller: 'home', action: 'about'
-
-	get 'sections/:id/assignments', to: 'sections#assignments', :as => :assignments_page
-	get 'courses/:id/page', to: 'courses#home', :as => :course_home
-
 	resources :teachers, only: [] do
 		member do
 			get 'home'
@@ -35,16 +19,34 @@ DepthCharge::Application.routes.draw do
 			get 'home'
 		end
 	end
-		
-	# namespace 'admin' do
-	# 	resources 'courses' do
-	# 		resources :sections, :only => [:new]
-	# 	end
-	# 	resources :sections, :only => [:create, :new, :edit, :update, :destroy,]
-	# end
 	
-	
+  namespace :teacher do 
+		resources :sections
+		resources :assignments, except: [:delete]
+	end
 
+  namespace :admin do
+		resources :sections
+		resources :courses
+		resources :users
+	end
+
+	resources :sections, only: []
+
+	resources :assignments, only: []
+	resources :courses, only: []
+
+  devise_for :users, controllers: {sessions: :user_sessions}
+	resources :users, only: []
+		
+	# Unrestful routes
+
+  get "home", controller: 'home', action: 'dept_info'
+  get "about", controller: 'home', action: 'about'
+
+	get 'sections/:id/assignments', to: 'sections#assignments', :as => :assignments_page
+	get 'courses/:id/page', to: 'courses#home', :as => :course_home
+	
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
