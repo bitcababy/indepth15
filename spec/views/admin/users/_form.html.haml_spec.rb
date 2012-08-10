@@ -1,16 +1,18 @@
 require 'spec_helper'
 
-describe 'users/_form' do
+describe 'admin/users/_form' do
 	before :each do
+		pending "Unfinished test"
 		user = User.new
 		assign(:user, user)
-		render partial: 'users/form'
+		render partial: 'admin/users/form'
 		rendered.should have_selector('form') do |form|
 			@form = form
 		end
 	end
 	
 	context "fields" do
+		pending "Unfinished test"
 		it "should have a Honorific field" do
 			@form.should have_selector('select', name: 'user[honorific]')
 		end
