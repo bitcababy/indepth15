@@ -1,0 +1,2 @@
+Fabricator(:department) do
+end

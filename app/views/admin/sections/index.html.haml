@@ -1,0 +1,17 @@
+%h1 Listing admin_sections
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @sections.each do |admin_section|
+    %tr
+      %td= link_to 'Show', admin_section
+      %td= link_to 'Edit', edit_admin_section_path(admin_section)
+      %td= link_to 'Destroy', admin_section, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Section', new_admin_section_path
