@@ -8,7 +8,7 @@ describe 'sections/_assignment_row' do
 			stubs(:content).returns txt
 		end
 
-		sa = mock do
+		sa = mock('section_assignment') do
 			stubs(:name).returns "21"
 			stubs(:due_date).returns Date.new(2012, 7, 20)
 			stubs(:assignment).returns asst
