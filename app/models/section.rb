@@ -35,15 +35,15 @@ class Section
 	end
 	
 	def current_assignment
-		return [self.section_assignments.current]
+		return self.section_assignments.current.upcoming.asc(:due_date).limit(1)
 	end
 	
 	def future_assignments
-		return self.section_assignments.future.asc(:date_due).map &:assignment
+		return self.section_assignments.future.asc(:date_due)
 	end
 
 	def past_assignments
-		return self.section_assignments.past.desc(:date_due).map &:assignment
+		return self.section_assignments.past.desc(:date_due)
 	end
 	
 	def add_assignment(asst, due_date, show=true)
