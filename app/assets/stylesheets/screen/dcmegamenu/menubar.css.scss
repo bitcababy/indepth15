@@ -1,14 +1,9 @@
 @import '../../fonts';
+@import '../../colors';
 @import 'menu-settings';
 @import 'defaults';
 
-@import 'black';
-//@import 'blue';
-//@import 'red';
-//@import 'orange';
-//@import 'green';
-//@import 'grey';
-//@import 'white';
+@import 'weston';
 
 @if $style == "dark" {
 	$mb-text-shadow: 1 1 hsl(0, 0, 0);
