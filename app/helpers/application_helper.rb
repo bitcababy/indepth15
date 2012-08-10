@@ -61,11 +61,11 @@ module ApplicationHelper
 	end
 	
 	def render_manage_menu
-		# render partial: 'menus/manage'
+		render partial: 'menus/manage' if user_signed_in?
 	end
 	
 	def render_menubar
-		render 'menus/menubar'
+		render partial: 'menus/menubar'
 	end
 	
 	def section_label_for_menu(section)
