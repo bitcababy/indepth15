@@ -20,7 +20,7 @@ require 'spec_helper'
 
 describe SectionsController do
 	include Mongoid::Document
-	include CourseMockHelpers
+	include CourseExamplesHelper 
 
 	# This should return the minimal set of attributes required to create a valid
 	# Section. As you add validations to Section, be sure to
@@ -43,9 +43,8 @@ describe SectionsController do
 
 	 describe "GET 'assignments'" do
 		it "display the assignments page" do
-			pending "Unfinished test"
-			section = mock_section_with_assignments
-			Section.stubs(:find).returns section
+			section = section_with_assignments
+			
 			get :assignments, {id: section.to_param}
 			response.should be_success
 			assigns(:section).should eq(section)
