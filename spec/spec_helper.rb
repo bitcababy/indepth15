@@ -13,18 +13,18 @@ require 'email_spec'
 require 'rspec/autorun'
 require 'capybara/rspec'
 require 'devise/test_helpers'
+require 'mocha'
 
 include Utils
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
-Dir[Rails.root.join("spec/lib/extras/**/*.rb")].each {|f| require f}
+Dir[Rails.root.join("app/lib/extras/**/*.rb")].each {|f| require f}
 
 require 'database_cleaner'
 DatabaseCleaner.strategy = :truncation
 
-require 'mocha'
 
 RSpec.configure do |config|
   # ## Mock Framework

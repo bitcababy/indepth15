@@ -58,9 +58,8 @@ describe Section do
 		end
 	
 		it "should be able to return all future or past assignments" do
-			@section.section_assignments.future.count.should == 3
 			@section.future_assignments.count.should == 3
-			@section.section_assignments.past.count.should == 2
+			@section.current_assignment.count.should == 1
 			@section.past_assignments.count.should == 2
 		end
 	end
