@@ -2,8 +2,8 @@ module CourseMockHelpers
 	def mock_teacher(opts={})
 		opts.merge!(formal_name: "Mr. Doe") {|key, v1, v2| v1}
 		mock(opts[:formal_name]) do
-					opts.each_pair {|k, v| stubs(k).returns v}
-				end
+			opts.each_pair {|k, v| stubs(k).returns v}
+		end
 	end
 
 	def mock_section(opts={})
@@ -27,8 +27,7 @@ module CourseMockHelpers
 		sa = mock("section_assignment") do
 			opts.each_pair {|k, v| stubs(k).returns v}
 		end
-		# sa = mock("section_assignment '#{opts[:name]}'", opts)
-		if opts[:assignment]
+		if opts[:name]
 			sa.stubs(:assignment).returns mock_assignment("This is assignment #{opts[:name]}")
 		end
 		return sa
@@ -44,13 +43,34 @@ module CourseMockHelpers
 		(1..n).collect {|i| mock_section_assignment(name: "Assignment #{i}", assignment: "Content for assignments #{i}") }
 	end
 
-	def mock_section_with_assignments
-		the_teacher = mock_teacher login: "foobar", email: "foo@example.com" 
-		the_course = mock_course
+	def mock_section_with_assignments(opts={})
+		if opts[:teacher]
+			the_teacher = opts[:teacher]
+		else
+			the_teacher = mock_teacher login: "foobar", email: "foo@example.com" 
+		end
+
+		if opts[:course]
+			the_course = opts[:course]
+		else
+			the_course = mock_course
+		end
 		the_section = mock_section course: the_course, teacher: the_teacher, block: "B"
-		course.stubs(:sections).returns [the_section]
-		course.stubs(:current_sections).returns [the_section]
+		the_course.stubs(:sections).returns [the_section]
+		the_course.stubs(:current_sections).returns [the_section]
 	
+		sas = []
+		1.times do |i|
+			name = "1#{i}"
+			asst = mock_assignment "Assignment #{name}"
+			sas << mock_section_assignment(assignment: asst, 
+				due_date: Utils.future_due_date + i, 
+				name: name,
+				section: the_section
+				)
+		end
+		the_section.stubs(:current_assignment).returns sas
+
 		sas = []
 		3.times do |i|
 			name = "2#{i}"
@@ -61,7 +81,9 @@ module CourseMockHelpers
 				section: the_section
 				)
 		end
+		the_section.stubs(:upcoming_assignments).returns sas
 
+		sas = []
 		4.times do |i|
 			name = "1#{i}"
 			asst = mock_assignment "Assignment #{name}"
@@ -71,6 +93,7 @@ module CourseMockHelpers
 						section: @the_section
 						)
 		end
+		the_section.stubs(:past_assignments).returns sas
 		the_section.stubs(:section_assignments).returns sas
 		return the_section
 	end
@@ -92,7 +115,6 @@ module CourseMockHelpers
 		return section
 	end
 	
-	
 	def mock_course_with_sections(n = 3)
 		course = mock_course
 		sections = []
@@ -102,7 +124,7 @@ module CourseMockHelpers
 		course.stubs(:sections).returns sections
 		course.stubs(:current_sections).returns sections
 		return course
-	end
+	end	
 		
 
 	# def do_the_mock(name, opts)
