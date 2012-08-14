@@ -24,7 +24,7 @@ class UserSessionsController < Devise::SessionsController
         # format.js { render_to_facebox } 
       end 
     end
-  end
+	end
 		
 	def logged_in
 		foo

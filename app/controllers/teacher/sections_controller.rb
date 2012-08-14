@@ -1,5 +1,6 @@
 class Teacher::SectionsController < ApplicationController
- 	# before_filter :authenticate_user!
+ 	before_filter :authenticate_user!
+	before_filter :find_section, only: [:show, :edit, :update, :destroy]
 
  # GET /teacher/sections
   # GET /teacher/sections.json
@@ -15,8 +16,6 @@ class Teacher::SectionsController < ApplicationController
   # GET /teacher/sections/1
   # GET /teacher/sections/1.json
   def show
-    @section = Section.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @section }
@@ -26,8 +25,7 @@ class Teacher::SectionsController < ApplicationController
   # GET /teacher/sections/new
   # GET /teacher/sections/new.json
   def new
-    @section = Section.new
-
+    @section = Section.new(params[:section])
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @section }
@@ -36,7 +34,6 @@ class Teacher::SectionsController < ApplicationController
 
   # GET /teacher/sections/1/edit
   def edit
-    @section = Section.find(params[:id])
   end
 
   # POST /teacher/sections
@@ -58,8 +55,6 @@ class Teacher::SectionsController < ApplicationController
   # PUT /teacher/sections/1
   # PUT /teacher/sections/1.json
   def update
-    @section = Section.find(params[:id])
-
     respond_to do |format|
       if @section.update_attributes(params[:section])
         format.html { redirect_to teacher_section_url(@section), notice: 'Section was successfully updated.' }
@@ -74,7 +69,6 @@ class Teacher::SectionsController < ApplicationController
   # DELETE /teacher/sections/1
   # DELETE /teacher/sections/1.json
   def destroy
-    @section = Section.find(params[:id])
     @section.destroy
 
     respond_to do |format|
@@ -82,4 +76,9 @@ class Teacher::SectionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def find_section
+    @section = Section.find(params[:id])
+	end
+
 end
