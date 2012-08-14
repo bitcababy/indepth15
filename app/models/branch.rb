@@ -1,5 +1,7 @@
 class Branch
   include Mongoid::Document
+  include Mongoid::Timestamps if Rails.env == 'production'
+
 	before_save :create_major_tags
 
 	validates :name, presence: true, length: { minimum: 3 }

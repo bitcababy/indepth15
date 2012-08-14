@@ -1,5 +1,7 @@
 class SectionAssignment
 	include Mongoid::Document
+  include Mongoid::Timestamps if Rails.env == 'production'
+
 	include Utils
 
   # include Mongoid::Timestamps

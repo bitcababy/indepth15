@@ -1,6 +1,6 @@
 class Course
   include Mongoid::Document
-  # include Mongoid::Timestamps
+  include Mongoid::Timestamps if Rails.env == 'production'
 
 	FULL_YEAR = :full_year
 	FULL_YEAR_HALF_TIME = :halftime
@@ -53,7 +53,6 @@ class Course
 	field :pol, as: :policies, type: String, default: ""
 	field :news, type: String, default: ""
 	
-
 	field :_id, type: Integer, default: ->{ number }
 	
 	index( {number: 1}, {unique: true} )
@@ -66,9 +65,11 @@ class Course
 	has_and_belongs_to_many :major_tags, inverse_of: nil
 	has_and_belongs_to_many :branches
 
+	##
+	## Scopes
+	##
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 
-	
 	def current_sections
 		return self.sections.current
 	end
@@ -81,7 +82,6 @@ class Course
 		self.full_name
 	end
 	
-
 	class << self
 		SEMESTER_MAP = {
 			12 => FULL_YEAR,
@@ -95,9 +95,6 @@ class Course
 			course = self.create! hash
 			return course
 		end
-		
-
 	end
-
 
 end

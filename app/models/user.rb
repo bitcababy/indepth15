@@ -1,6 +1,6 @@
 class User
 	include Mongoid::Document
-  # include Mongoid::Timestamps
+  include Mongoid::Timestamps if Rails.env == 'production'
 	HONORIFICS = %W(Mr. Mrs. Ms Dr. Ms.)
 
 	field :ho, as: :honorific, type:String, default: "Mr."

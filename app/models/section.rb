@@ -2,7 +2,8 @@
 
 class Section
 	include Mongoid::Document
-  # include Mongoid::Timestamps
+  include Mongoid::Timestamps if Rails.env == 'production'
+
 	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
 	field :de, as: :dept, type: Integer
@@ -54,10 +55,10 @@ class Section
 		"#{course.full_name}, Block #{self.block}"
 	end
 		
-	def to_s
-		course = self.course
-		return "#{course.full_name}#{course.academic_year}/#{self.teacher.login}/#{self.block}"
-	end
+	# def to_s
+	# 	course = self.course
+	# 	return "#{course.full_name}/#{self.academic_year}/#{self.teacher.login}/#{self.block}"
+	# end
 		
 	def days_for_section
 		return (self.occurrences.map &:day).sort
