@@ -26,27 +26,29 @@ DepthCharge::Application.routes.draw do
 	end
 
   namespace :admin do
+		resources :assignments
 		resources :sections
 		resources :courses
 		resources :users
 	end
 
-	resources :sections, only: []
-
-	resources :assignments, only: []
-	resources :courses, only: []
-
   devise_for :users, controllers: {sessions: :user_sessions}
-	resources :users, only: []
 		
 	# Unrestful routes
 
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
 
-	get 'sections/:id/assignments', to: 'sections#assignments', :as => :assignments_page
-	get 'courses/:id/page', to: 'courses#home', :as => :course_home
+	get 'sections/:id/assignments', to: 'sections#assignments', as: :assignments_page
+	get 'courses/:id/page', to: 'courses#home', as: :course_page
 	
+	get 'menus/home', to: 'menus#home', as: :home_menu
+	get 'menus/courses', to: 'menus#courses', as: :courses_menu
+	get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
+	get 'menus/manage', to: 'menus#manage', as: :manage_menu
+	
+	
+	# get 'files', to: 'file_manager#elfinder', as: :file_home
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
