@@ -1,4 +1,4 @@
 %li.course
 	%a{href: home_course_path(course), class: 'course-name', title: course.full_name }= course.full_name
-	%ul
+	%ul.sections
 		= render_sections_of_course(course)
