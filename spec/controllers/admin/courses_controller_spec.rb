@@ -19,6 +19,7 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe Admin::CoursesController do
+	login_admin
 
   # This should return the minimal set of attributes required to create a valid
   # Admin::Course. As you add validations to Admin::Course, be sure to
@@ -26,20 +27,17 @@ describe Admin::CoursesController do
   def valid_attributes
     {
 		number: 321,
-		full_name: 'Geometry Honors'
+		full_name: 'Geometry Honors',
 		}
   end
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # Admin::CoursesController. Be sure to keep this updated too.
-  def valid_session
-    {}
-  end
 
   describe "GET index" do
     it "assigns all courses as @courses" do
-      course = Course.create! valid_attributes
+      course = Fabricate :course, valid_attributes
       get :index, {}
       assigns(:courses).should eq([course])
     end
@@ -47,7 +45,7 @@ describe Admin::CoursesController do
 
   describe "GET show" do
     it "assigns the requested course as @course" do
-      course = Course.create! valid_attributes
+      course = Fabricate :course, valid_attributes
       get :show, {:id => course.to_param}
       assigns(:course).should eq(course)
     end
@@ -62,7 +60,7 @@ describe Admin::CoursesController do
 
   describe "GET edit" do
     it "assigns the requested course as @course" do
-      course = Course.create! valid_attributes
+      course = Fabricate :course, valid_attributes
       get :edit, {:id => course.to_param}
       assigns(:course).should eq(course)
     end
@@ -91,14 +89,14 @@ describe Admin::CoursesController do
     describe "with invalid params" do
       it "assigns a newly created but unsaved course as @course" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Course.any_instance.stubs(:save).returns(false)
+	      Course.any_instance.stubs(:save).returns(false)
         post :create, {:course => {}}
         assigns(:course).should be_a_new(Course)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Course.any_instance.stubs(:save).returns(false)
+       	Course.any_instance.stubs(:save).returns(false)
         post :create, {:course => {}}
         response.should render_template("new")
       end
@@ -108,7 +106,7 @@ describe Admin::CoursesController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested course" do
-        course = Course.create! valid_attributes
+        course = Fabricate :course, valid_attributes
         # Assuming there are no other courses in the database, this
         # specifies that the Course created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -118,13 +116,13 @@ describe Admin::CoursesController do
       end
 
       it "assigns the requested course as @course" do
-        course = Course.create! valid_attributes
+       	course = Fabricate :course, valid_attributes
         put :update, {:id => course.to_param, :course => valid_attributes}
         assigns(:course).should eq(course)
       end
 
       it "redirects to the course" do
-        course = Course.create! valid_attributes
+        course = Fabricate :course, valid_attributes
         put :update, {:id => course.to_param, :course => valid_attributes}
         response.should redirect_to(admin_course_url(course))
       end
@@ -132,7 +130,7 @@ describe Admin::CoursesController do
 
     describe "with invalid params" do
       it "assigns the course as @course" do
-        course = Course.create! valid_attributes
+        course = Fabricate :course, valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Course.any_instance.stubs(:save).returns(false)
         put :update, {:id => course.to_param, :course => {}}
@@ -140,7 +138,7 @@ describe Admin::CoursesController do
       end
 
       it "re-renders the 'edit' template" do
-        course = Course.create! valid_attributes
+        course = Fabricate :course, valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Course.any_instance.stubs(:save).returns(false)
         put :update, {:id => course.to_param, :course => {}}
@@ -151,14 +149,14 @@ describe Admin::CoursesController do
 
   describe "DELETE destroy" do
     it "destroys the requested course" do
-      course = Course.create! valid_attributes
+     	course = Fabricate :course, valid_attributes
       expect {
         delete :destroy, {:id => course.to_param}
       }.to change(Course, :count).by(-1)
     end
 
     it "redirects to the courses list" do
-      course = Course.create! valid_attributes
+     	course = Fabricate :course, valid_attributes
       delete :destroy, {:id => course.to_param}
       response.should redirect_to(admin_courses_url)
     end

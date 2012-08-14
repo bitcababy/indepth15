@@ -33,25 +33,18 @@ describe Admin::UsersController do
 		}
   end
 
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # UsersController. Be sure to keep this updated too.
-  def valid_session
-    {}
-  end
-
-  describe "GET index" do
+   describe "GET index" do
     it "assigns all admin_users as @users" do
-			pending "Unfinished test"
-      user = User.create! valid_attributes
+      user = Fabricate :user, valid_attributes
       get :index, {}
+			pending "Unfinished test"
       assigns(:users).should eq([user])
     end
   end
 
   describe "GET show" do
     it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
+      user = Fabricate :user, valid_attributes
       get :show, {:id => user.to_param}
       assigns(:user).should eq(user)
     end
@@ -66,7 +59,7 @@ describe Admin::UsersController do
 
   describe "GET edit" do
     it "assigns the requested user as @user" do
-      user = User.create! valid_attributes
+      user = Fabricate :user, valid_attributes
       get :edit, {:id => user.to_param}
       assigns(:user).should eq(user)
     end
@@ -112,7 +105,7 @@ describe Admin::UsersController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested user" do
-        user = User.create! valid_attributes
+        user = Fabricate :user, valid_attributes
         # Assuming there are no other users in the database, this
         # specifies that the User created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -122,13 +115,13 @@ describe Admin::UsersController do
       end
 
       it "assigns the requested user as @user" do
-        user = User.create! valid_attributes
+        user = Fabricate :user, valid_attributes
         put :update, {:id => user.to_param, :user => valid_attributes}
         assigns(:user).should eq(user)
       end
 
       it "redirects to the user" do
-        user = User.create! valid_attributes
+        user = Fabricate :user, valid_attributes
         put :update, {:id => user.to_param, :user => valid_attributes}
         response.should redirect_to(admin_user_url(user))
       end
@@ -136,7 +129,7 @@ describe Admin::UsersController do
 
     describe "with invalid params" do
       it "assigns the user as @user" do
-        user = User.create! valid_attributes
+        user = Fabricate :user, valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         User.any_instance.stubs(:save).returns(false)
         put :update, {:id => user.to_param, :user => {}}
@@ -144,7 +137,7 @@ describe Admin::UsersController do
       end
 
       it "re-renders the 'edit' template" do
-        user = User.create! valid_attributes
+        user = Fabricate :user, valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         User.any_instance.stubs(:save).returns(false)
         put :update, {:id => user.to_param, :user => {}}
@@ -155,14 +148,14 @@ describe Admin::UsersController do
 
   describe "DELETE destroy" do
     it "destroys the requested user" do
-      user = User.create! valid_attributes
+      user = Fabricate :user, valid_attributes
       expect {
         delete :destroy, {:id => user.to_param}
       }.to change(User, :count).by(-1)
     end
 
     it "redirects to the admin_users list" do
-      user = User.create! valid_attributes
+      user = Fabricate :user, valid_attributes
       delete :destroy, {:id => user.to_param}
       response.should redirect_to(admin_users_url)
     end

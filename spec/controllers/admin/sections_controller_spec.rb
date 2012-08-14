@@ -31,13 +31,6 @@ describe Admin::SectionsController do
 		}
   end
 
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # SectionsController. Be sure to keep this updated too.
-  def valid_session
-    {}
-  end
-
   describe "GET index" do
     it "assigns all section as @sections" do
       section = Section.create! valid_attributes
@@ -78,12 +71,14 @@ describe Admin::SectionsController do
       end
 
       it "assigns a newly created section as @section" do
+
         post :create, {:section => valid_attributes}
         assigns(:section).should be_a(Section)
         assigns(:section).should be_persisted
       end
 
       it "redirects to the created section" do
+
         post :create, {:section => valid_attributes}
         response.should redirect_to(admin_section_url(Section.last))
       end
@@ -93,6 +88,7 @@ describe Admin::SectionsController do
       it "assigns a newly created but unsaved section as @section" do
         # Trigger the behavior that occurs when invalid params are submitted
         Section.any_instance.stubs(:save).returns(false)
+
         post :create, {:section => {}}
         assigns(:section).should be_a_new(Section)
       end
@@ -100,6 +96,7 @@ describe Admin::SectionsController do
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Section.any_instance.stubs(:save).returns(false)
+
         post :create, {:section => {}}
         response.should render_template("new")
       end
@@ -109,6 +106,7 @@ describe Admin::SectionsController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested section" do
+
         section = Section.create! valid_attributes
         # Assuming there are no other sections in the database, this
         # specifies that the Section created on the previous line
@@ -119,12 +117,14 @@ describe Admin::SectionsController do
       end
 
       it "assigns the requested section as @section" do
+
         section = Section.create! valid_attributes
         put :update, {:id => section.to_param, :section => valid_attributes}
         assigns(:section).should eq(section)
       end
 
       it "redirects to the section" do
+
         section = Section.create! valid_attributes
         put :update, {:id => section.to_param, :section => valid_attributes}
         response.should redirect_to(admin_section_url(section))
@@ -133,6 +133,7 @@ describe Admin::SectionsController do
 
     describe "with invalid params" do
       it "assigns the section as @section" do
+
         section = Section.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Section.any_instance.stubs(:save).returns(false)
@@ -141,6 +142,7 @@ describe Admin::SectionsController do
       end
 
       it "re-renders the 'edit' template" do
+
         section = Section.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Section.any_instance.stubs(:save).returns(false)
@@ -152,6 +154,7 @@ describe Admin::SectionsController do
 
   describe "DELETE destroy" do
     it "destroys the requested section" do
+
       section = Section.create! valid_attributes
       expect {
         delete :destroy, {:id => section.to_param}
@@ -159,6 +162,7 @@ describe Admin::SectionsController do
     end
 
     it "redirects to the admin_sections list" do
+
       section = Section.create! valid_attributes
       delete :destroy, {:id => section.to_param}
       response.should redirect_to(admin_sections_url)

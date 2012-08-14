@@ -1,13 +1,11 @@
 require 'spec_helper'
 
-
 describe TeachersController do
 
 	describe "GET home" do
 		it "returns http success" do
-			pending "Unfinished test"
 			teacher = Fabricate :teacher
-			visit home_teacher_path(teacher)
+			get :home, id: teacher.to_param
 			response.should be_success
 		end
 	end
