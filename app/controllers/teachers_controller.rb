@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-	# before_filter :authenticate_user!, except: [:home]
 	def home
+		@teacher = Teacher.find(params['id'])
 	end
 end
