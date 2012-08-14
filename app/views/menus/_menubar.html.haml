@@ -5,10 +5,16 @@
 	= render_faculty_menu
 	= render partial: 'menus/username'
 
+:javascript
+	$('div#home_menu').load("#{home_menu_url}") ->
+	$('div#courses_menu').load(courses_menu_url)
+	$('div#faculty_menu').load(faculty_menu_url)
+	$('div#manage_menu').load(manage_menu_url)
+
 :coffeescript
 	$(document).ready ($) ->
 		$('#menubar').MegaMenu
-			rowItems: 5
-			speed: 'fast'
-			effect: 'fade'
-			event: 'hover'
+				rowItems: 5
+				speed: 'fast'
+				effect: 'fade'
+				event: 'click'
