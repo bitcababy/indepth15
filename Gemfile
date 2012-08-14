@@ -64,7 +64,9 @@ gem 'validation_reflection'
 # gem 'googlecharts'
 # gem 'google_drive'
 # gem 'rack-google-analytics', :require => 'rack/google-analytics'
-# gem 'dropbox'
+# gem 'el_finder', :git => 'git@github.com:bitcababy/el_finder.git'
+# gem 'rmagick'
+gem 'cloudfiles'
 
 group :development, :test do
 	gem 'rspec-rails'
