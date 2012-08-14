@@ -1,5 +1,5 @@
 .content
-	= simple_form_for(@user) do |f|
+	= simple_form_for(@user), input_options: {url: '/admins/users', method: 'post'} do |f|
 		= f.error_notification
 
 		.form-inputs
