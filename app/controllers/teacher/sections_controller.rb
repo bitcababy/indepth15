@@ -1,5 +1,7 @@
 class Teacher::SectionsController < ApplicationController
-  # GET /teacher/sections
+ 	# before_filter :authenticate_user!
+
+ # GET /teacher/sections
   # GET /teacher/sections.json
   def index
     @sections = Section.all

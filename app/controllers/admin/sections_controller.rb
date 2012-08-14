@@ -1,4 +1,6 @@
 class Admin::SectionsController < ApplicationController
+	# before_filter :authenticate_user!
+
  def index
     @sections = Section.all
 

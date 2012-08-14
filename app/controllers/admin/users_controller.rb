@@ -1,5 +1,7 @@
 class Admin::UsersController < ApplicationController
-  # GET /admin/users
+ 	# before_filter :authenticate_user!
+
+ # GET /admin/users
   # GET /admin/users.json
   def index
     @users = User.all
