@@ -20,6 +20,7 @@ require 'spec_helper'
 
 describe Teacher::SectionsController do
 	login_teacher
+	it_behaves_like "any teacher controller"
 	
   # This should return the minimal set of attributes required to create a valid
   # Teacher::Section. As you add validations to Teacher::Section, be sure to
@@ -34,10 +35,7 @@ describe Teacher::SectionsController do
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # Teacher::SectionsController. Be sure to keep this updated too.
-  def valid_session
-    {}
-  end
-
+ 
   describe "GET index" do
     it "assigns all teacher_sections as @sections" do
       section = Section.create! valid_attributes
