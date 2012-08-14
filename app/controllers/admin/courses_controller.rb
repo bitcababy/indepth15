@@ -1,4 +1,7 @@
 class Admin::CoursesController < ApplicationController
+	# before_filter :authenticate_user!
+	before_filter :find_course, except: [:create, :index, :new]
+
   # GET /admin/courses
   # GET /admin/courses.json
   def index
@@ -13,8 +16,6 @@ class Admin::CoursesController < ApplicationController
   # GET /admin/courses/1
   # GET /admin/courses/1.json
   def show
-    @course = Course.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @course }
@@ -34,7 +35,6 @@ class Admin::CoursesController < ApplicationController
 
   # GET /admin/courses/1/edit
   def edit
-    @course = Course.find(params[:id])
   end
 
   # POST /admin/courses
@@ -56,8 +56,6 @@ class Admin::CoursesController < ApplicationController
   # PUT /admin/courses/1
   # PUT /admin/courses/1.json
   def update
-    @course = Course.find(params[:id])
-
     respond_to do |format|
       if @course.update_attributes(params[:course])
         format.html { redirect_to admin_course_url(@course), notice: 'Course was successfully updated.' }
@@ -72,7 +70,6 @@ class Admin::CoursesController < ApplicationController
   # DELETE /admin/courses/1
   # DELETE /admin/courses/1.json
   def destroy
-    @course = Course.find(params[:id])
     @course.destroy
 
     respond_to do |format|
@@ -80,4 +77,8 @@ class Admin::CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def find_course
+    @course = Course.find(params[:id])
+	end
 end

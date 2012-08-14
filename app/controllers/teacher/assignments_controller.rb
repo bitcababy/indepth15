@@ -1,4 +1,7 @@
 class Teacher::AssignmentsController < ApplicationController
+	# before_filter :authenticate_user!
+	before_filter :find_assignment, only: [:show, :edit, :update, :destroy]
+
   # GET /teacher/assignments
   # GET /teacher/assignments.json
   def index
@@ -13,8 +16,6 @@ class Teacher::AssignmentsController < ApplicationController
   # GET /teacher/assignments/1
   # GET /teacher/assignments/1.json
   def show
-    @assignment = Assignment.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @assignment }
@@ -34,7 +35,6 @@ class Teacher::AssignmentsController < ApplicationController
 
   # GET /teacher/assignments/1/edit
   def edit
-    @assignment = Assignment.find(params[:id])
   end
 
   # POST /teacher/assignments
@@ -56,8 +56,6 @@ class Teacher::AssignmentsController < ApplicationController
   # PUT /teacher/assignments/1
   # PUT /teacher/assignments/1.json
   def update
-    @assignment = Assignment.find(params[:id])
-
     respond_to do |format|
       if @assignment.update_attributes(params[:assignment])
         format.html { redirect_to teacher_assignment_url(@assignment), notice: 'Assignment was successfully updated.' }
@@ -72,7 +70,6 @@ class Teacher::AssignmentsController < ApplicationController
   # DELETE /teacher/assignments/1
   # DELETE /teacher/assignments/1.json
   def destroy
-    @assignment = Assignment.find(params[:id])
     @assignment.destroy
 
     respond_to do |format|
@@ -80,4 +77,8 @@ class Teacher::AssignmentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def find_assignment
+    @assignment = Assignment.find(params[:id])
+	end
 end
