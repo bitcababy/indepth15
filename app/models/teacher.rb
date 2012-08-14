@@ -1,6 +1,5 @@
 class Teacher < Author
 
-	field :un, as: :unique_name, type: String
 	field :cu, as: :current, type: Boolean
 	field :dr, as: :default_room, type: String
 	field :hp, as: :home_page, type: String
@@ -9,7 +8,6 @@ class Teacher < Author
 	field :um, as: :upcoming_msg, type:String
 
 	has_many :sections
-	# has_many :teacher_pages
 	
 	index({current: -1})
 
@@ -35,6 +33,5 @@ class Teacher < Author
 		teacher = self.create! hash
 		return teacher
 	end
-	
 
 end
