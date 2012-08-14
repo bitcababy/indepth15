@@ -22,7 +22,7 @@ DepthCharge::Application.routes.draw do
 	
   namespace :teacher do 
 		resources :sections
-		resources :assignments, except: [:delete]
+		resources :courses
 	end
 
   namespace :admin do
