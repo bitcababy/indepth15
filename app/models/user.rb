@@ -1,12 +1,18 @@
 class User
 	include Mongoid::Document
   include Mongoid::Timestamps if Rails.env == 'production'
+
 	HONORIFICS = %W(Mr. Mrs. Ms Dr. Ms.)
 
 	field :ho, as: :honorific, type:String, default: "Mr."
+	validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
+
 	field :fn, as: :first_name, type: String, default: ""
+	validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
+
 	field :mn, as: :middle_name, type: String, default: ""
 	field :ln, as: :last_name, type: String, default: ""
+	validates :last_name, presence: true#, length: { minimum: 2 }
 		
  # Include default devise modules. Others available are:
   # ::confirmable
@@ -19,6 +25,25 @@ class User
 	validates :email, presence: true#, uniqueness: true
 
 	field :lo, as: :login, type: String
+	validates :login, presence: true, uniqueness: true
+	# field :_id, type: String, default: ->{ login }
+	
+	def formal_name
+		return "#{self.honorific} #{self.last_name}"
+	end
+	
+	def full_name
+		return "#{self.first_name} #{self.last_name}"
+	end
+
+	def to_s
+		return "#{self.first_name} #{self.last_name}"
+	end
+	
+	
+	#
+	# Devise stuff
+	#
   field :ep, as: :encrypted_password, :type => String, :default => ""
 
   # validates_presence_of :encrypted_password # SMELL: breaks testing
@@ -50,26 +75,5 @@ class User
 
   ## Token authenticatable
   field :at, as: :authentication_token, :type => String
-
-	# has_and_belongs_to_many :roles
-
-	validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
-	validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
-	validates :last_name, presence: true#, length: { minimum: 2 }
-	validates :login, presence: true#, uniqueness: true, length: { minimum: 5 }
-	
-	# attr_accessible :email, :password, :password_confirmation, :remember_me
-
-	def formal_name
-		return "#{self.honorific} #{self.last_name}"
-	end
-	
-	def full_name
-		return "#{self.first_name} #{self.last_name}"
-	end
-
-	def to_s
-		return "#{self.first_name} #{self.last_name}"
-	end
 
 end
