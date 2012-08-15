@@ -12,11 +12,9 @@
 		
 		= csrf_meta_tags
 
-
 	%body
-		#page_header= content_for?(:page_header) ? (yield :page_header) : "The header"
-		= render_menubar
-		
+		#page_header= content_for?(:page_header) ? (content_for :page_header) : "The header"
+		= render partial: 'menus/menubar'
 		%div#main
 			- if content_for? :content_header
 				.content-header= content_for :content_header
