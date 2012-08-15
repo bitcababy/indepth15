@@ -1,6 +1,8 @@
 DepthCharge::Application.routes.draw do
-
- 	root to: "home#dept_info"
+	# authenticated :user do
+	#  		root to: "home#dept_info"
+	# end
+	root to: "home#dept_info"
 	
 	resources :teachers, only: [] do
 		member do
@@ -14,10 +16,8 @@ DepthCharge::Application.routes.draw do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
 	
-	resources :courses, only: [] do
-		member do
-			get 'home'
-		end
+	resources :courses, only: [:show] do
+		get :show, controller: :courses, action: :show
 	end
 	
   namespace :teacher do 
@@ -40,7 +40,6 @@ DepthCharge::Application.routes.draw do
   get "about", controller: 'home', action: 'about'
 
 	get 'sections/:id/assignments', to: 'sections#assignments', as: :assignments_page
-	get 'courses/:id/page', to: 'courses#home', as: :course_page
 	
 	get 'menus/home', to: 'menus#home', as: :home_menu
 	get 'menus/courses', to: 'menus#courses', as: :courses_menu
