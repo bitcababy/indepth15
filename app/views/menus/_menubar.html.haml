@@ -1,15 +1,17 @@
 / Begin container
 %ul#menubar.hmenu
-	= render_home_menu
-	= render_courses_menu
-	= render_faculty_menu
+	= render partial: 'menus/home'
+	= render partial: 'menus/courses', locals: {courses: Course.in_catalog}
+	= render partial: 'menus/faculty', locals: {teachers: Teacher.current}
+	- if user_signed_in?
+		= render partial: 'menus/manage'
 	= render partial: 'menus/username'
 
-:javascript
-	$('div#home_menu').load("#{home_menu_url}") ->
-	$('div#courses_menu').load(courses_menu_url)
-	$('div#faculty_menu').load(faculty_menu_url)
-	$('div#manage_menu').load(manage_menu_url)
+/ :javascript
+/ 	$('div#home_menu').load("#{home_menu_url}") ->
+/ 	$('div#courses_menu').load(courses_menu_url)
+/ 	$('div#faculty_menu').load(faculty_menu_url)
+/ 	$('div#manage_menu').load(manage_menu_url)
 
 :coffeescript
 	$(document).ready ($) ->

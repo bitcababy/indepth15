@@ -1,4 +1,4 @@
 %li.faculty
-	%a{href: '#', id: 'faculty_menu'} Faculty
-	%ul#faculty-list
-		= render_teachers
+	%a{href: '#'} Faculty
+	%ul#faculty_menu
+		= render partial: 'menus/teacher', collection: teachers
