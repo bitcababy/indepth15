@@ -25,14 +25,16 @@ describe Section do
 	
 	describe 'fabricator' do
 		it "creates a valid section" do
-			section = Fabricate :section
+			section = Fabricate.build :section, block: "E"
 			section.should be_valid
+			section.teacher.should_not be_nil
+			section.course.should_not be_nil
 			end
 	end
 	
 	describe '#days_for_section' do
 		it "returns an array of days for its occurrences" do
-			section = Section.create! valid_attributes
+			section = Fabricate :section, valid_attributes
 			(1..5).each do |i|
 				section.occurrences.create! number: i, block: section.block, day: i
 			end
@@ -52,7 +54,7 @@ describe Section do
 	
 	context "past and future assignment handling" do
 		before do
-			@section = Section.create! valid_attributes
+			@section = Fabricate :section, valid_attributes
 			3.times { @section.add_assignment Fabricate(:assignment), future_due_date + rand(1..5) }
 			2.times { @section.add_assignment Fabricate(:assignment), future_due_date - rand(1..5) }
 		end
