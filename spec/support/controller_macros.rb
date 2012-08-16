@@ -2,7 +2,7 @@ module ControllerMacros
   def login_admin
      before(:each) do
        @request.env["devise.mapping"] = Devise.mappings[:user]
-       sign_in Fabricate(:user) # Using factory girl as an example
+       sign_in Fabricate(:test_admin) 
      end
    end
  
