@@ -1,5 +1,8 @@
 %li.teacher
 	%a{href: '#'}= teacher.full_name
 	%ul
-		%li.home-page
-			%a{href: home_teacher_path(teacher)} Home page
+		%li.teacher-icons
+			%a{href: teacher_path(teacher), title: "Home page"}
+				%img{src: image_path("home_407518.png")}
+			%a{href: "mailto: #{teacher.email}", title: "Email"}
+				%img{src: image_path("mail_407518.png")}
