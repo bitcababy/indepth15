@@ -30,3 +30,20 @@ module KnowsTheDomain
 end
 
 World(KnowsTheDomain)
+
+Before('@anypage') do
+	visit home_path
+end
+
+Before('@anyone') do
+	@the_user = Fabricate(:guest)
+end
+
+Before('@teacher') do
+	@the_user = Fabricate(:test_teacher) unless Admin.where(login: :test_teacher).exists?
+end
+
+Before('@admin') do
+	@the_user = Fabricate(:test_admin) unless Admin.where(login: :test_admin).exists?
+end
+
