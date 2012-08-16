@@ -1,4 +1,4 @@
-@import '../../_fonts.css';
+@import 'fonts.css';
 
 .hmenu {
 	font-family: 'PT Sans', Verdana, sans-serif;
@@ -35,5 +35,15 @@
 			}
 		}
 	}
+	li ul li.teacher-icons, li .sub li.hmenu-hdr.teacher  {
+		padding-bottom: 8px;		
+	}
+	li.teacher ul {
+		a {
+			display: inline;
+		}
+	}
 }
+
+
 
