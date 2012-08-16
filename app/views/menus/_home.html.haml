@@ -1,3 +1,2 @@
 %li.home
-	= link_to_if current_page?(controller: :home, action: :dept_info), "Home", '#'
-	= link_to_unless current_page?(controller: :home, action: :dept_info), "Home", home_path
+	%a{href: (current_page?(controller: :home, action: :dept_info) ? '#' : home_path)}= "Home"
