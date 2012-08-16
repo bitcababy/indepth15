@@ -1,0 +1,4 @@
+- content_for :title do
+	= "#{Settings.school_name} #{Settings.dept_name} | Teachers | #{@teacher.full_name}"
+- content_for :page_header do
+	= @teacher.full_name

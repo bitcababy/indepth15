@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'courses/home' do
+describe 'courses/show' do
 	include CourseMockHelpers
 
 	it "shows various tabs" do

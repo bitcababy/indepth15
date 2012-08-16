@@ -4,11 +4,7 @@ DepthCharge::Application.routes.draw do
 	# end
 	root to: "home#dept_info"
 	
-	resources :teachers, only: [] do
-		member do
-			get 'home'
-		end
-	end
+	resources :teachers, only: [:show]
 	
 	# get 'courses/:course_number/section
 	
