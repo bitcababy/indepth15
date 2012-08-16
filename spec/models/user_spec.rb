@@ -5,14 +5,35 @@ describe User do
 		it {should validate_presence_of field }
 	end
 	
+	it { should validate_uniqueness_of :login}
+	
 	context "Fabrication testing" do
-		subject {Fabricate :user, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
-		specify { subject.login.should == 'kramdenr' }
+		context ":user" do
+			subject {Fabricate :user, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
+			specify { subject.login.should == 'kramdenr' }
 
-		it "should accept a login override" do
-			Fabricate(:user, login: 'greenx')
-			User.where(login: 'greenx' ).should exist
+			it "should accept a login override" do
+				Fabricate(:user, login: 'greenx')
+				User.where(login: 'greenx' ).should exist
+			end
 		end
+		
+		context ":teacher" do
+			subject {Fabricate :teacher, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
+			specify { subject.login.should == 'kramdenr' }
+			specify { subject.should be_kind_of Teacher}
+		end
+
+		context ":test_teacher" do
+			subject {Fabricate :test_teacher, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
+			specify { subject.should be_kind_of Teacher}
+		end
+
+		context ":test_admin" do
+			subject {Fabricate :test_admin, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
+			specify { subject.should be_kind_of Admin}
+		end
+
 	end
 	
 	describe '#formal_name' do
