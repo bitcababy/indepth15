@@ -17,9 +17,18 @@ Feature: Courses menu
 		 | course  | 321          |
 		And I am on any page
 
-		@showme
+	@javascript
 	Scenario: Clicking a course name
-		When I click on "Geometry Honors" in the "Courses" menu
-		Then I should go to the "Geometry Honors" home page
+		Given there is a "Geometry Honors" item in the "Courses" menu
+		When I click on it
+		Then I should go to the "Geometry Honors" page
 
-  
+  @javascript
+	Scenario: Clicking on a section
+		Given there is a "Geometry Honors" item in the "Courses" menu
+			And it has a "Mr. Gabriner, Block E" subitem
+	  When I click on it
+	  Then I should go to the assignments page of that section
+	
+	
+	
