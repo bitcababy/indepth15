@@ -1,5 +1,6 @@
 class UserSessionsController < Devise::SessionsController
 	layout :choose_layout 
+	skip_before_filter :verify_authenticity_token, :only => [:create] 
 	
 	# def create
 	# 	respond_to do |format|
@@ -26,22 +27,6 @@ class UserSessionsController < Devise::SessionsController
     end
 	end
 		
-	def logged_in
-		foo
-	end
-
-	def new
-		@user = User.new
-		respond_to do |format|
-      format.html
-			format.js
-     end
-	end
-
-	def destroy
-		super
-	end
-	
 	private 
 
   def choose_layout 
