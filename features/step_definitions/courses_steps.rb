@@ -22,7 +22,7 @@ When /^I go to the courses page$/ do
 	visit courses_list_path
 end
 
-When /^I click on the tab labeled "([^"]+)"$/ do |label|
+When /^I click on the tab labeled "([.*]+)"$/ do |label|
 	click_link(label)
 end
 

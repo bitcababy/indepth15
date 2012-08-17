@@ -23,7 +23,7 @@ Then /^I should go to the assignments page of that section$/ do
 	current_path.should == expected_path
 end
 
-Then /^I should (?:visit|go to|see) the "([^"]+)" page$/ do |page_name|
+Then /^I should (?:visit|go to|see) the "(.+)" page$/ do |page_name|
 	case page_name
 	when "About"
 		pending "Unfinished test"
