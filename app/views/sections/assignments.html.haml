@@ -28,7 +28,7 @@
 			%i None
 	
 - content_for :page_header do
-	= render partial: 'shared/course_link', locals: {course: @section.course.}
+	= render partial: 'shared/course_link', locals: {course: @section.course}
 - content_for :title do
 	= "#{@section.course.full_name}, Block #{@section.block}"
 - content_for :content_header do
