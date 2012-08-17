@@ -17,6 +17,14 @@ class Teacher < Author
 	def menu_label
 		return self.full_name
 	end
+	
+	def courses
+		self.sections.map(&:course).uniq
+	end
+		
+	def course_names
+		self.courses.map(&:full_name).sort
+	end
 
 	#
 	# importing
