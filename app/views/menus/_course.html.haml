@@ -1,4 +1,4 @@
 %li.course
-	%a{href: course_path(course), class: 'course-name', title: course.full_name }= course.full_name
+	= render partial: 'shared/course_link', locals: {course: course}
 	%ul.sections
 		= render partial: 'menus/section', collection: course.current_sections
