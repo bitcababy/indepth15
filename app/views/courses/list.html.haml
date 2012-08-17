@@ -1,4 +1,2 @@
 %ul#courses
-	- for course in @courses do
-		%li
-			%a{href: course_page_path(course)}= course.full_name
+	= render partial: 'shared/course_item', collection @courses
