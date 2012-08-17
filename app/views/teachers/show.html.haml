@@ -2,3 +2,9 @@
 	= "#{Settings.school_name} #{Settings.dept_name} | Teachers | #{@teacher.full_name}"
 - content_for :page_header do
 	= @teacher.full_name
+
+#teacher-pic
+#courses
+	%ul
+		=render partial: 'shared/course_item', collection: @teacher.courses, as: :course
+#other-links
