@@ -19,7 +19,7 @@ body {
 
 #page_header {
 	@extend .sans;
-	background: hsl(374, 79, 30);
+	background: $weston-red;
 	color: white;
 	font-size: 2.5em;
 	display: block;
@@ -29,6 +29,13 @@ body {
 	width: 100%;
 	padding: 16px;
 	padding-left: 16px;
+	a {
+		background: $weston-red;
+		color: white;
+		&:hover{
+			color: $weston-red-hover;	
+		}
+	}
 }
 
 #menubar-holder {
