@@ -1,4 +1,8 @@
 %li.course
 	= render partial: 'shared/course_link', locals: {course: course}
-	%ul.sections
-		= render partial: 'menus/section', collection: course.current_sections
+	- if course.current_sections.empty?
+		%p
+			%i Not taught this year
+	- else
+		%ul.sections
+			= render partial: 'menus/section', collection: course.current_sections
