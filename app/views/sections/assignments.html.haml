@@ -37,7 +37,7 @@
 :coffeescript
 	$(document).ready ->
 		$("#current").dataTable
-			bjQueryUI: true
+			bJQueryUI: true
 			bFilter: false
 			bInfo: false
 			bPaginate: false
@@ -51,7 +51,7 @@
 			]
 
 		$("#upcoming").dataTable
-			bjQueryUI: true
+			bJQueryUI: true
 			bFilter: false
 			bInfo: false
 			bPaginate: false
@@ -65,7 +65,7 @@
 			]
 
 		$("#past").dataTable
-			bjQueryUI: true
+			bJQueryUI: true
 			bFilter: false
 			bInfo: false
 			bPaginate: true
@@ -73,13 +73,10 @@
 			iDisplayLength: 2
 			bLengthChange: true
 			iDeferLoading: true
-			aLengthMenu: [
-				2, 5, 10,-1
-			]
+			aLengthMenu: [[
+				2, 5, 10
+			], [2,5,10,"All"]]
 			aoColumnDefs: [
-				bSortable: false
-				aTargets: [0]
-			,
 				sWidth: "5em"
 				aTargets: [0]
 			,
