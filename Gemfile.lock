@@ -43,6 +43,7 @@ GEM
       rake
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.0.4.0)
     bson (1.6.4)
     bson_ext (1.6.4)
       bson (~> 1.6.4)
@@ -306,6 +307,7 @@ PLATFORMS
 
 DEPENDENCIES
   akephalos2
+  bootstrap-sass
   bson_ext
   bundler (>= 1.2.0rc)
   capybara
