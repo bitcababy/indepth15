@@ -2,37 +2,40 @@
 	#generic-msg!= @section.teacher.generic_msg
 
 	.assignment-block
-		.title Current assignment
+		.title.ui-widget-header.ui-corner-top Current assignment
 		- if @section.current_assignment.count > 0
 			#current-msg!= @section.teacher.current_msg
 			%table#current
 				= render partial: 'sections/assignment_table', locals: { sas: @section.current_assignment }
 		- else
-			%i None
+			.none
+				%i None
 	
 	.assignment-block
-		.title Upcoming assignments
+		.title.ui-widget-header.ui-corner-top  Upcoming assignments
 		- if @section.upcoming_assignments.count > 0
 			#upcoming-msg!= @section.teacher.upcoming_msg
 			%table#upcoming
 				= render partial: 'sections/assignment_table', locals: {sas: @section.upcoming_assignments }
 		- else
-			%i None
+			.none
+				%i None
 
 	.assignment-block
-		.title Past assignments
+		.title.ui-widget-header.ui-corner-top  Past assignments
 		- if @section.past_assignments.count > 0
 			%table#past
 				= render partial: 'sections/assignment_table', locals: { sas: @section.past_assignments }
 		- else
-			%i None
+			.none
+				%i None
 	
 - content_for :page_header do
 	= render partial: 'shared/course_link', locals: {course: @section.course}
 - content_for :title do
 	= "#{@section.course.full_name}, Block #{@section.block}"
 - content_for :content_header do
-	= @section.page_header
+	= "Block #{@section.block} with #{@section.teacher.formal_name}"
 	
 :coffeescript
 	$(document).ready ->
