@@ -10,7 +10,7 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
 production: 
-  app: depth-charge
+  app: in-depth
   stack: cedar
   tag: production/*
   config:
@@ -19,25 +19,32 @@ production:
   addons:
     - mongolab:starter
     - scheduler:standard
-    - memcache:5mb
+    - memcachier:5mb
 
 staging:
   stack: cedar
-  app: depth-charge-staging
+  app: in-depth-staging
   config: &default
     BUNDLE_WITHOUT: "development:test"
   addons:
     - mongolab:starter
     - scheduler:standard
+    - memcachier:5mb
 
 testing:
   stack: cedar
-  app: depth-charge-testing
+  app: in-depth-testing
   config: *default
   addons:
     - mongolab:starter
     - scheduler:standard
+    - memcachier:5mb
 
 demo: 
-  app: depth-charge-demo
+  stack: cedar
+  app: in-depth-demo
   config: *default
+  addons:
+    - mongolab:starter
+    - scheduler:standard
+    - memcachier:5mb
