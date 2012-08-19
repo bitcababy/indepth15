@@ -1,9 +1,7 @@
+@import 'defaults';
 @import 'fonts';
 @import 'colors';
 @import 'menu-settings';
-@import 'defaults';
-
-@import 'weston';
 
 @if $style == "dark" {
 	$mb-text-shadow: 1 1 hsl(0, 0, 0);
@@ -30,7 +28,7 @@
 
 	background: {
 		color: $mb-bg-color;
-		image: $mb-bg-image;
+		image: url(image-path($mb-bg-image));
 		repeat: repeat-x;
 		position: {
 			x: 0;
