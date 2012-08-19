@@ -2,5 +2,5 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-DepthCharge::Application.initialize!
+InDepth::Application.initialize!
 Sass.load_paths << Rails.root.join('app/assets/stylesheets', 'shared')

@@ -5,7 +5,7 @@ development: &defaults
     default: &default_session
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: depth_charge_development
+      database: in_depth_development
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -64,7 +64,7 @@ test:
   sessions:
     default:
       <<: *default_session
-      database: depth_charge_test
+      database: in_depth_test
 
 <% if ENV['MONGOLAB_URI'] %>
 testing:

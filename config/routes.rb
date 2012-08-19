@@ -1,4 +1,4 @@
-DepthCharge::Application.routes.draw do
+InDepth::Application.routes.draw do
 	# authenticated :user do
 	#  		root to: "home#dept_info"
 	# end

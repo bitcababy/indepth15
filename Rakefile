@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DepthCharge::Application.load_tasks
+InDepth::Application.load_tasks

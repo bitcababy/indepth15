@@ -12,7 +12,7 @@ require 'devise/test_helpers'
 
 include Utils
 
-# Capybara.app = DepthCharge
+# Capybara.app = InDepth
 
 # Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
 # order to ease the transition to Capybara we set the default here. If you'd
