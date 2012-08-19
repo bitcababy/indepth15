@@ -2,7 +2,7 @@
 %ul#menubar.hmenu
 	= render partial: 'menus/home'
 	= render partial: 'menus/courses', locals: {courses: Course.in_catalog}
-	= render partial: 'menus/faculty', locals: {teachers: Teacher.current}
+	= render partial: 'menus/faculty', locals: {teachers: Teacher.current.asc(:last_name).asc(:first_name)}
 	- if user_signed_in?
 		= render partial: 'menus/manage'
 	= render partial: 'menus/username'
