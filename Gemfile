@@ -46,7 +46,7 @@ gem 'thin'
 gem 'devise'
 gem 'haml'
 gem 'coffee-filter'
-gem "cells", :git => "git://github.com/apotonick/cells.git"
+# gem "cells", :git => "git://github.com/apotonick/cells.git"
 gem 'bson_ext'
 gem 'delayed_job'
 # gem 'carrierwave-mongoid'
@@ -59,7 +59,7 @@ gem 'htmlentities'
 gem 'google-webfonts'
 gem 'client_side_validations'
 gem 'simple_form'
-gem 'validates_email_format_of'#, :git => 'git@github.com:bitcababy/validates_email_format_of.git'
+# gem 'validates_email_format_of'#, :git => 'git@github.com:bitcababy/validates_email_format_of.git'
 gem 'validation_reflection'
 # gem 'googlecharts'
 # gem 'google_drive'
@@ -93,7 +93,7 @@ end
 
 group :test do
 	gem 'cucumber-rails', '>= 1.2.1', :require => false
-	gem 'rspec-cells'#, path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
+	# gem 'rspec-cells'#, path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
 	gem 'mongoid-rspec'
 	gem 'capybara'
 	gem 'database_cleaner'
