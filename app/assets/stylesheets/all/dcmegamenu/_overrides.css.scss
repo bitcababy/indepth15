@@ -1,4 +1,5 @@
-@import 'fonts.css';
+@import url(stylesheet-path('fonts'));
+@import url(stylesheet-path('colors'));
 
 .hmenu {
 	li.section {
