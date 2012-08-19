@@ -1,0 +1,15 @@
+$sans-font: 'PT Sans';
+$serif-font: 'PT Serif';
+$sans-narrow-font: 'PT Sans Narrow';
+
+.sans {
+	font-family: $sans-font, Arial, sans-serif;
+}
+
+.serif {
+	font-family: $serif-font, Georgia, serif;
+}
+
+.sans-narrow {
+	font-family: $sans-narrow-font, Verdana, sans-serif;
+}
