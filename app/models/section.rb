@@ -40,11 +40,11 @@ class Section
 	end
 	
 	def future_assignments
-		return self.section_assignments.future.asc(:date_due)
+		return self.section_assignments.future.asc(:due_date)
 	end
 
 	def past_assignments
-		return self.section_assignments.past.desc(:date_due)
+		return self.section_assignments.past.desc(:due_date)
 	end
 	
 	def add_assignment(asst, due_date, show=true)
