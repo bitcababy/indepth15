@@ -1,6 +1,7 @@
 .hmenu {
-	.mega {
-
+	p {
+		padding-left: 8px;
+		font-size: 1em;
 	}
 }
 
@@ -9,5 +10,6 @@
 }
 
 .teacher-icons {
-	display: inline;
+	display: block;
+	text-align: center;
 }
