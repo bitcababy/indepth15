@@ -2,5 +2,24 @@ $use-mb-icon: false;
 $use-sub-arrow: false;
 $use-text-shadow: true;
 
-$font-size: 0.9em;
+$font-size: 1em;
 $font: 'PT Sans', Arial, sans-serif;
+
+$mb-bg-image: "bg_black.png";
+$mb-bg-color: hsl(0, 0, 13);
+$hover-color: hsl(0, 0, 60);
+$mb-hover-bg-color: hsla(0, 0, 80, 0.5);
+
+$background-hdr-image: "bg_mega_hdr.png";
+$bg-hdr-color: hsl(0, 0, 42);
+
+$subcontainer-color: hsl(0, 0, 80);
+$mb-text-shadow: 1 1 1 hsl(0, 0, 20);
+
+$item-color: hsl(0, 0, 100);
+$item-hover-color: hsl(12, 96, 33);
+$item-hover-bg: hsl(0, 0, 94);
+
+$hdr-bg-color: hsl(374, 79, 30);
+$hdr-hover-color: hsl(374, 3, 92);
+
