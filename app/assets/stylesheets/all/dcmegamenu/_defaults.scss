@@ -9,7 +9,7 @@ $mb-text-color: hsl($hue, 0, 100);
 $mb-text-shadow: hsl($hue, 0, 0);
 $mb-hover-text-color: hsl($hue, 0, 0);
 
-$mb-icon-image: url(image-path("arrow.png"));
+$mb-icon-image: "arrow.png";
 $mb-height: 40px;
 $mb-hover-position: -40px;
 $mb-background-color: #222;
@@ -25,8 +25,8 @@ $item-color: hsl($hue, 0, 100);
 $item-hover-bg: hsl($hue, 0, 94);
 $item-shadow: 1px 1px hsl($hue, 0, 20);
 
-$submenu-bg-image: url(image-path("bg_sub_left.png"));
-$background-hdr-image: url(image-path("bg_mega_hdr.png"));
+$submenu-bg-image: "bg_sub_left.png";
+$background-hdr-image: "bg_mega_hdr.png";
 
 $hdr-color: hsl($hue, 0, 100);
 $hdr-hover-color: hsl($hue, 0, 80);
