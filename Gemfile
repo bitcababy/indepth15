@@ -67,6 +67,8 @@ gem 'validation_reflection'
 # gem 'el_finder', :git => 'git@github.com:bitcababy/el_finder.git'
 # gem 'rmagick'
 gem 'cloudfiles'
+gem 'memcache-client'
+
 
 group :development, :test do
 	gem 'rspec-rails'
