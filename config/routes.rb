@@ -16,11 +16,15 @@ InDepth::Application.routes.draw do
 	
 	resources :courses, only: [:show] do
 		get :show, controller: :courses, action: :show
+		member do
+			get :edit_resources
+		end
 	end
+	
+	resources :teachers, only: [:show]
 	
   namespace :teacher do 
 		resources :sections
-		resources :courses
 	end
 
   namespace :admin do
@@ -29,6 +33,8 @@ InDepth::Application.routes.draw do
 		resources :courses
 		resources :users
 	end
+	
+	resources :text_documents
 
   devise_for :users, controllers: {sessions: :user_sessions}
 		
@@ -43,6 +49,8 @@ InDepth::Application.routes.draw do
 	get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
 	get 'menus/manage', to: 'menus#manage', as: :manage_menu
+	
+	# get 'teacher/courses/:id/edit_resources', controller: 'teacher/courses', action: :edit_resources, as: :edit_course_resources
 	
 	
 	# get 'files', to: 'file_manager#elfinder', as: :file_home
