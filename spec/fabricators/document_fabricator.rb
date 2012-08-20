@@ -9,10 +9,10 @@ end
 
 ## Assignments
 
-Fabricator :assignment, from: :text_document  do
+Fabricator :assignment, from: :text_document, class_name: :assignment  do
 	name								{ sequence(:assignment_name) }
 	content							""
-	section_assignments	{}
+	section_assignments	[]
 end
 
 Fabricator :upload, from: :document
