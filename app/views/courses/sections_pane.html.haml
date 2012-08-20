@@ -2,7 +2,7 @@
 	#info
 		= "Course #{@course.number} — #{duration_string(@course.duration)} — #{@course.credits} Credits"
 	#description
-		!= @course.description
+		!= @course.description.content
 	#leadin
 		= "In the #{academic_year_string(Settings.academic_year)} academic year there #{is_are_number_mangler(@course.current_sections.count, 'section')} of #{@course.full_name}."
 

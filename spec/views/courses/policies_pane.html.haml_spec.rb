@@ -1,9 +1,12 @@
 require 'spec_helper'
 
 describe "courses/policies_pane.html.haml" do
+	include CourseMockHelpers
+
 	it "displays the course information" do
-		course = mock do
-			stubs(:policies).returns "Some policies"
+		t = mock_text_doc("Some policies")
+		course = mock('course') do
+			stubs(:policies).returns t
 		end
 		assign(:course, course)
 		render

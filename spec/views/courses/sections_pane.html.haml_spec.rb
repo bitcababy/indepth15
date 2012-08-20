@@ -14,7 +14,8 @@ describe "courses/sections_pane" do
 		course.stubs(:duration).returns Course::FULL_YEAR
 		course.stubs(:credits).returns 5.0
 		course.unstub(:description)
-		course.stubs(:description).returns "Some description"
+		t = mock_text_doc("Some description")
+		course.stubs(:description).returns t
 		render
 		rendered.should have_selector('div#sections_pane') do |div|
 			div.should have_selector('div#info', content: 'Course 321 — Full Year — 5.0 Credits')
