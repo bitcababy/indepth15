@@ -13,12 +13,27 @@ module CourseMockHelpers
 			opts.each_pair {|k, v| stubs(k).returns v}
 		end
 	end
+	
+	def mock_text_doc(txt)
+		mock('text_document') do
+			stubs(:content).returns txt
+		end
+	end
 
 	def mock_course(opts={})
+		areas = [:description, :policies, :resources, :information, :news]
 		opts.merge!({number: 321, duration: Course::FULL_YEAR, credits: 5.0, 
-				description: "A description", full_name: "Fractals 101"}) {|key, v1, v2| v1}
-		return mock("Course #{opts[:number]}") do
+				full_name: "Fractals 101"}) {|key, v1, v2| v1}
+		docs = {}
+		areas.each do |area|
+			docs[area] = mock_text_doc("#{area.to_s.capitalize} for course #{opts[:number]}")
+		end
+		mock("Course #{opts[:number]}") do
 			opts.each_pair {|k, v| stubs(k).returns v}
+			areas.each do |area|
+				stubs(:area).returns docs[area]
+			end
+
 		end
 	end
 
