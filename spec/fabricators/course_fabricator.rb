@@ -4,11 +4,18 @@ Fabricator(:course) do
 	credits					{ [ 5.0, 2.5].sample }
 	full_name				{ |attrs| "Course #{attrs[:number]}"}
 	in_catalog			true
-	description			{ |attrs| "This is the description of course #{attrs[:number]}" }
-	information			{|attrs| "Information for course #{attrs[:number]}"}
-	resources       {|attrs| "Resources for course #{attrs[:number]}"}
-	policies				{|attrs| "Policies for course #{attrs[:number]}"}
-	news						{|attrs| "News for course #{attrs[:number]}"}
+	description			nil
+	information			nil
+	resources 			nil
+	policies				nil
+	news						nil
+	after_build { |obj|
+		obj.description ||= Fabricate :text_document, contents: "Description"
+		obj.information ||= Fabricate :text_document, contents: "information"
+		obj.resources ||= Fabricate :text_document, contents: "resources"
+		obj.information ||= Fabricate :text_document, contents: "policies"
+		obj.news ||= Fabricate :text_document, contents: "news"
+	}
 end
 
 Fabricate.sequence(:course_number, 321)
