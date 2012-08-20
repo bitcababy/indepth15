@@ -3,6 +3,8 @@
 		%th.name #
 		%th.due_date Date due
 		%th.content Assignment
+		- if user_signed_in?
+			%th.actions Actions
 %tbody
 	= render partial: 'assignment_row', collection: sas, as: 'sa'
 
