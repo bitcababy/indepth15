@@ -14,7 +14,7 @@ module ApplicationHelper
 	end
 	
 	def duration_string(duration)
-		case duration
+		return case duration
 		when :full_year
 			'Full Year'
 		when :first_semester
@@ -31,11 +31,12 @@ module ApplicationHelper
 	end
 	
 	def section_label_for_menu(section)
-		if section.teacher then
-			section.teacher.formal_name + ", Block " + section.block
-		else
-			section.to_s
-		end
+		return
+			if section.teacher then
+				section.teacher.formal_name + ", Block " + section.block
+			else
+				section.to_s
+			end
 	end
 	
 	
