@@ -30,15 +30,15 @@ describe SectionAssignment do
 	end
 
 	describe 'SectionAssignment.import_from_hash' do
-		before :each do
-			@asst = Fabricate(:assignment, assgt_id: 1234)
-			Assignment.where(assgt_id: 1234).should exist
-			@teacher = Fabricate(:teacher, login: 'greenx')
-			Teacher.where(login: 'greenx' ).should exist
-			@course = Fabricate(:course, number: 567, full_name: 'Math 101')
-			Course.where(number: 567).should exist
-			@section = Fabricate(:section, teacher: @teacher, course: @course, block: "C", academic_year: 2012)
-			@section.should_not be_nil
+		it "should create a SectionAssignment" do
+			asst = Fabricate :assignment, assgt_id: 1234, content: "foo"
+			Assignment.where(assgt_id: 1234).count.should == 1
+			teacher = Fabricate(:teacher, login: 'greenx')
+			teacher.should_not be_nil
+			course = Fabricate(:course, number: 567, full_name: 'Math 101')
+			course.should_not be_nil
+			section = Fabricate(:section, teacher: teacher, course: course, block: "C", academic_year: 2012)
+			section.should_not be_nil
 			sa = SectionAssignment.import_from_hash({
 				assgt_id: 1234,
 				course_num: 567,
