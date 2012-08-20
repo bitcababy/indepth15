@@ -13,6 +13,13 @@ class CourseObserver < Mongoid::Observer
 		for branch in obj.branches do
 			obj.major_tags.concat branch.major_tags
 		end
+			
+		obj.create_information
+		obj.create_resources
+		obj.create_policies
+		obj.create_news
+		obj.create_description
+		obj.save!
 		return obj
 	end
 		
