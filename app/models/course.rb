@@ -48,10 +48,10 @@ class Course
 	field :ic, as: :in_catalog, type: Boolean, default: true
 	field :de, as: :description, type: String, default: ""
 
-	field :info, as: :information, type: String, default: ""
-	field :res, as: :resources, type: String, default: ""
-	field :pol, as: :policies, type: String, default: ""
-	field :news, type: String, default: ""
+	# field :info, as: :information, type: String, default: ""
+	# field :res, as: :resources, type: String, default: ""
+	# field :pol, as: :policies, type: String, default: ""
+	# field :news, type: String, default: ""
 	
 	field :_id, type: Integer, default: ->{ number }
 	
@@ -64,7 +64,13 @@ class Course
 
 	has_and_belongs_to_many :major_tags, inverse_of: nil
 	has_and_belongs_to_many :branches
-
+	
+	belongs_to :information, class_name: 'TextDocument'
+	belongs_to :resources, class_name:'TextDocument'
+	belongs_to :policies, class_name: 'TextDocument'
+	belongs_to :news, class_name: 'TextDocument'
+	belongs_to :description, class_name: 'TextDocument'
+	
 	##
 	## Scopes
 	##
@@ -91,8 +97,24 @@ class Course
 		}
 		
 		def import_from_hash(hash)
+			i = hash.delete(:information)
+			r = hash.delete(:resources)
+			p = hash.delete(:policies)
+			n = hash.delete(:news)
+			d = hash.delete(:description)
+			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
+			course.information.content = i
+			course.information.save!
+			course.resources.content = r
+			course.resources.save!
+			course.policies.content = p
+			course.policies.save!
+			course.news.content = n
+			course.news.save!
+			course.description.content = d
+			course.description.save!
 			return course
 		end
 	end

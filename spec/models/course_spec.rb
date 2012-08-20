@@ -4,6 +4,10 @@ describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number)}
 	it { should have_and_belong_to_many(:major_tags) }
+	it { should belong_to :information }
+	it { should belong_to :resources }
+	it { should belong_to :policies }
+	it { should belong_to :news }
 	
 	context "Fabricator" do
 		it "creates courses with unique numbers" do
@@ -26,6 +30,7 @@ describe Course do
 				information: "This is the info",
 				policies: "These is the policies",
 				resources: "This is the resources",
+				news: "This is the news",
 				has_assignments:true
 			}
 			course = Course.import_from_hash hash
@@ -36,8 +41,9 @@ describe Course do
 			course.schedule_name.should == "GeomH"
 			course.duration.should == Course::FULL_YEAR
 			course.credits.should == 5.0
-			course.branches.count.should > 0
-			course.major_tags.count.should > 0
+			# course.branches.count.should > 0
+			# course.major_tags.count.should > 0
+			course.description.content.should == "This is the description"
 		end
 	end
 	
@@ -52,11 +58,6 @@ describe Course do
 			}.to change {@course.sections.count}.by(1)
 		end
 
-		it "should be able to change its information" do
-			expect {
-				@course.information = "Some info"
-			}.to change{@course.information}.to("Some info")
-		end
 	end
 
 	# context '#teachers' do
