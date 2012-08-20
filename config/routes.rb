@@ -1,4 +1,6 @@
 InDepth::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
 	# authenticated :user do
 	#  		root to: "home#dept_info"
 	# end
