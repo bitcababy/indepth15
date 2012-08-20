@@ -44,6 +44,10 @@ class SectionAssignment
 		end
 
 		assignment = Assignment.find_by(assgt_id: assgt_id)
+		unless assignment
+			puts "can't find assignment for #{year}/#{teacher}/#{block}/#{assgt_id}"
+			return
+		end
 
 		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id, :course_num].each {|k| hash.delete(k)}
 		hash[:name] = assignment.name
