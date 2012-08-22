@@ -6,6 +6,14 @@ GIT
       delayed_job (~> 3.0)
       mongoid (~> 3.0)
 
+GIT
+  remote: git@github.com:bitcababy/ckeditor.git
+  revision: 37614dbf14c20f7cf555a35cdf8e13dd9803bc40
+  specs:
+    ckeditor (3.7.1)
+      mime-types
+      orm_adapter
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,7 +51,6 @@ GEM
       rake
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.0.4.0)
     bson (1.6.4)
     bson_ext (1.6.4)
       bson (~> 1.6.4)
@@ -63,9 +70,6 @@ GEM
       mongoid
     childprocess (0.3.5)
       ffi (~> 1.0, >= 1.0.6)
-    ckeditor (3.7.1)
-      mime-types
-      orm_adapter
     client_side_validations (3.1.4)
     cloudfiles (1.5.0.1)
       json
@@ -319,13 +323,12 @@ PLATFORMS
 
 DEPENDENCIES
   akephalos2
-  bootstrap-sass
   bson_ext
   bundler (>= 1.2.0rc)
   capybara
   carrierwave
   carrierwave-mongoid
-  ckeditor
+  ckeditor!
   client_side_validations
   cloudfiles
   coffee-filter
