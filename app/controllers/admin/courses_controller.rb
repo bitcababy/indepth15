@@ -5,7 +5,7 @@ class Admin::CoursesController < ApplicationController
   # GET /admin/courses
   # GET /admin/courses.json
   def index
-    @courses = Course.all
+    @courses = ::Course.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,7 @@ class Admin::CoursesController < ApplicationController
   # GET /admin/courses/new
   # GET /admin/courses/new.json
   def new
-    @course = Course.new
+    @course = ::Course.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +40,7 @@ class Admin::CoursesController < ApplicationController
   # POST /admin/courses
   # POST /admin/courses.json
   def create
-    @course = Course.new(params[:course])
+    @course = ::Course.new(params[:course])
 
     respond_to do |format|
       if @course.save
@@ -79,6 +79,6 @@ class Admin::CoursesController < ApplicationController
   end
 
 	def find_course
-    @course = Course.find(params[:id])
+    @course = ::Course.find(params[:id])
 	end
 end

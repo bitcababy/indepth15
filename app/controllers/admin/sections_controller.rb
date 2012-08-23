@@ -2,7 +2,7 @@ class Admin::SectionsController < ApplicationController
 	before_filter :authenticate_user!
 
  def index
-    @sections = Section.all
+    @sections = ::Section.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::SectionsController < ApplicationController
   # GET /admin/sections/1
   # GET /admin/sections/1.json
   def show
-    @section = Section.find(params[:id])
+    @section = ::Section.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::SectionsController < ApplicationController
   # GET /admin/sections/new
   # GET /admin/sections/new.json
   def new
-    @section = Section.new
+    @section = ::Section.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class Admin::SectionsController < ApplicationController
 
   # GET /admin/sections/1/edit
   def edit
-    @section = Section.find(params[:id])
+    @section = ::Section.find(params[:id])
   end
 
   # POST /admin/sections
   # POST /admin/sections.json
   def create
-    @section = Section.new(params[:section])
+    @section = ::Section.new(params[:section])
 
     respond_to do |format|
       if @section.save
@@ -56,7 +56,7 @@ class Admin::SectionsController < ApplicationController
   # PUT /admin/sections/1
   # PUT /admin/sections/1.json
   def update
-    @section = Section.find(params[:id])
+    @section = ::Section.find(params[:id])
 
     respond_to do |format|
       if @section.update_attributes(params[:section])
@@ -72,7 +72,7 @@ class Admin::SectionsController < ApplicationController
   # DELETE /admin/sections/1
   # DELETE /admin/sections/1.json
   def destroy
-    @section = Section.find(params[:id])
+    @section = ::Section.find(params[:id])
     @section.destroy
 
     respond_to do |format|

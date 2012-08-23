@@ -5,7 +5,7 @@ class Teacher::SectionsController < ApplicationController
  # GET /teacher/sections
   # GET /teacher/sections.json
   def index
-    @sections = Section.all
+    @sections = ::Section.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,7 @@ class Teacher::SectionsController < ApplicationController
   # GET /teacher/sections/new
   # GET /teacher/sections/new.json
   def new
-    @section = Section.new(params[:section])
+    @section = ::Section.new(params[:section])
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @section }
@@ -39,7 +39,7 @@ class Teacher::SectionsController < ApplicationController
   # POST /teacher/sections
   # POST /teacher/sections.json
   def create
-    @section = Section.new(params[:section])
+    @section = ::Section.new(params[:section])
 
     respond_to do |format|
       if @section.save
@@ -78,7 +78,7 @@ class Teacher::SectionsController < ApplicationController
   end
 
 	def find_section
-    @section = Section.find(params[:id])
+    @section = ::Section.find(params[:id])
 	end
 
 end
