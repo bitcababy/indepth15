@@ -8,6 +8,7 @@ class SectionAssignment
 
 	field :dd, as: :due_date, type: Date
 	field :na, as: :name, type: String, default: ""
+	field :use, type: Boolean
 	
 	embedded_in :section
 	belongs_to :assignment, index: true, inverse_of: nil
@@ -28,29 +29,20 @@ class SectionAssignment
 	end
 	
 	def self.import_from_hash(hash)
-		return unless hash[:use_assgt] == 'Y'
 		assgt_id = hash[:assgt_id]
 		block = hash[:block]
-		year = hash[:schoolyear]
+		year = hash[:year]
 
 		course = Course.find_by(number: hash[:course_num])
-		raise "course is nil for #{hash[:course_num]}" unless course
+		raise ArgumentError, "course is nil for #{hash[:course_num]}" unless course
 		teacher = Teacher.find_by(login: hash[:teacher_id])
-		raise "teacher is nil for #{hash[:teacher_id]}" unless teacher
+		raise ArgumentError, "teacher is nil for #{hash[:teacher_id]}" unless teacher
 		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
-		unless section
-			puts "can't find section for #{year}/#{teacher}/#{block}/#{assgt_id}"
-			return
-		end
-
+		raise ArgumentError, "can't find section for #{year}/#{teacher}/#{block}" unless section
 		assignment = Assignment.find_by(assgt_id: assgt_id)
-		unless assignment
-			puts "can't find assignment for #{year}/#{teacher}/#{block}/#{assgt_id}"
-			return
-		end
+		raise ArgumentError,  "can't find assignment for #{year}/#{teacher}/#{block}/#{assgt_id}" unless assignment
 
-		[:assgt_id,:schoolyear,:use_assgt,:block,:teacher_id, :course_num].each {|k| hash.delete(k)}
-		hash[:name] = assignment.name
+		[:teacher_id, :assgt_id, :dept_id, :course_num, :asa, :aa].each {|k| hash.delete(k)}
 		sa = section.section_assignments.create! hash
 
 		sa.assignment = assignment
