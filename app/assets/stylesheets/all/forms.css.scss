@@ -1,4 +1,5 @@
 @import 'fonts';
+@import 'colors';
 
 form {
 	@extend .sans;
@@ -11,12 +12,11 @@ form {
 		}
 		input, select {
 			position: relative;
-			
 		}
 	}
 	.hint {
 		font-style: italic;
-		color: #555;
+		color: $medium-purple;
 		font-size: 90%;
 		display: inline;
 	}

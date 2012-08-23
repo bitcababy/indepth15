@@ -2,6 +2,8 @@
  * Table
  */
 
+$row-hue: 209;
+
 table.dataTable {
   margin: 0 auto;
   clear: both;
@@ -19,19 +21,21 @@ table.dataTable {
       text-align: center; } }
   tr {
     &.odd {
-      background-color: #E2E4FF; }
+      background-color: hsl($row-hue, 60, 80);
+		}
     &.even {
-      background-color: white; }
+      background-color: hsl($row-hue, 60, 95); 
+		}
     &.odd td {
       &.sorting_1 {
-        background-color: #D3D6FF; }
+        background-color: hsl($row-hue, 60, 55); }
       &.sorting_2 {
         background-color: #DADCFF; }
       &.sorting_3 {
         background-color: #E0E2FF; } }
     &.even td {
       &.sorting_1 {
-        background-color: #EAEBFF; }
+        background-color: hsl($row-hue, 60, 85); }
       &.sorting_2 {
         background-color: #F2F3FF; }
       &.sorting_3 {
