@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: outhouse.wildwoodweb.net
-- Generation Time: Jun 30, 2012 at 11:34 AM
+- Generation Time: Aug 21, 2012 at 01:17 PM
 - Server version: 5.0.51
 - PHP Version: 5.3.3-7+squeeze8
 -->
@@ -31,7 +31,7 @@
             <column name="upcoming_assgts_msg"></column>
             <column name="extra_stuff"></column>
             <column name="logged_in">0</column>
-            <column name="current">0</column>
+            <column name="current">1</column>
             <column name="admin_level">none</column>
             <column name="updated_at">2012-05-11 15:25:06</column>
         </table>
@@ -324,9 +324,9 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
 &lt;a href=&quot;http://schedule.westonmath.org/faculty/schedule/mccowand.html&quot;&gt;Schedule&lt;/a&gt;
 </column>
             <column name="logged_in">0</column>
-            <column name="current">1</column>
-            <column name="admin_level">dept</column>
-            <column name="updated_at">2009-09-04 10:35:22</column>
+            <column name="current">0</column>
+            <column name="admin_level">none</column>
+            <column name="updated_at">2012-08-14 14:13:25</column>
         </table>
         <table name="teachers">
             <column name="id">17</column>
@@ -344,8 +344,8 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/mclaughlinj.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">1</column>
             <column name="current">1</column>
-            <column name="admin_level">none</column>
-            <column name="updated_at">2009-09-15 13:42:07</column>
+            <column name="admin_level">dept</column>
+            <column name="updated_at">2012-08-14 14:13:37</column>
         </table>
         <table name="teachers">
             <column name="id">18</column>
@@ -668,9 +668,47 @@ Remember: Don't give up on any problem, ever.  Even though it may be challenging
             <column name="upcoming_assgts_msg"></column>
             <column name="extra_stuff">Click here to see my &lt;a href=&quot;/teachers/gajewskid/alg2/unit 1/schedule.pdf&quot;&gt; schedule &lt;/a&gt;  &lt;br/&gt;Be sure to look at both my Middle School Monday-Friday teaching schedule as well as my High School 8 day schedule.</column>
             <column name="logged_in">0</column>
+            <column name="current">0</column>
+            <column name="admin_level">none</column>
+            <column name="updated_at">2012-08-14 14:13:51</column>
+        </table>
+        <table name="teachers">
+            <column name="id">28</column>
+            <column name="last_name">Abend</column>
+            <column name="first_name">Brian</column>
+            <column name="teacher_id">abendb</column>
+            <column name="title">Mr.</column>
+            <column name="base_URL">NULL</column>
+            <column name="default_room">0</column>
+            <column name="phrase">Lincoln and Sudbury share no common border.</column>
+            <column name="photo_URL"></column>
+            <column name="personal_hp_URL"></column>
+            <column name="generic_assgts_msg"></column>
+            <column name="upcoming_assgts_msg"></column>
+            <column name="extra_stuff"></column>
+            <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">none</column>
-            <column name="updated_at">2011-10-16 13:18:48</column>
+            <column name="updated_at">2012-08-14 14:43:17</column>
+        </table>
+        <table name="teachers">
+            <column name="id">29</column>
+            <column name="last_name">Scanio</column>
+            <column name="first_name">Lauren</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="title">Ms.</column>
+            <column name="base_URL">NULL</column>
+            <column name="default_room">0</column>
+            <column name="phrase">Toto, I have a feeling we're not in the Middle School anymore.</column>
+            <column name="photo_URL"></column>
+            <column name="personal_hp_URL"></column>
+            <column name="generic_assgts_msg"></column>
+            <column name="upcoming_assgts_msg"></column>
+            <column name="extra_stuff"></column>
+            <column name="logged_in">0</column>
+            <column name="current">1</column>
+            <column name="admin_level">none</column>
+            <column name="updated_at">2012-08-14 14:15:15</column>
         </table>
     </database>
 </pma_xml_export>
