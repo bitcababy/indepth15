@@ -62,7 +62,7 @@ gem 'memcache-client'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
-gem 'ckeditor', :git => 'git@github.com:bitcababy/ckeditor.git'
+gem 'ckeditor'#, :git => 'git@github.com:bitcababy/ckeditor.git'
 
 
 group :development, :test do
