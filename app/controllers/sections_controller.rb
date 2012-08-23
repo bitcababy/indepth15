@@ -1,11 +1,20 @@
 class SectionsController < ApplicationController
 
-	def assignments
+	def show
 		@section = Section.find(params['id'])
 		
     respond_to do |format|
-      format.html # assignments.html.haml
+      format.html {render :layout => !request.xhr?}
     end
 	end
+	
+	def assignments
+		@section = Section.find(params['id'])
+
+    respond_to do |format|
+      format.html {render :layout => !request.xhr?}
+    end
+	end
+		
 
 end
