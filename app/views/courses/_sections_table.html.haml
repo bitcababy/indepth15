@@ -1,10 +1,10 @@
 %table#sections_table
 	%thead
 		%tr
-			%th.block Block
-			%th.days Days
 			%th.teacher Teacher
+			%th.block Block<br/><i>(Click for assignments)</i>
 			%th.room Room
+			%th.days Days
 	%tbody
 		= render partial: 'courses/section_table_row', collection: @course.current_sections, as: 'section'
 
