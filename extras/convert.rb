@@ -24,10 +24,7 @@ module Convert
 		Assignment => {
 			"assgt_id" 							=> :assgt_id,
 			"teacher_id"						=> :teacher_id,
-			"description"						=> :description,
-			"kind"									=> :kind,
-			"year"									=> :year,
-			"name"									=> :name,
+			"content"								=> :content,
 			},
 		Course => 	{
 				'course_num' 			=> :number,
@@ -48,27 +45,23 @@ module Convert
 				'prog_of_studies_descr' => :description,
 				},
 		Section => {
-				"section_num" => :number,
-				"block" => :block,
-				"days" => :days,
-				"room" => :room,
-				"semester" => :semesters,
-				"which_occurrences" => :which_occurrences,
 				"dept_id" => :dept_id,
 				"course_num" => :course_num,
+				"semester" => :semesters,
+				"block" => :block,
 				"year" => :year,
 				"room" => :room,
+				"which_occurrences" => :which_occurrences,
 				"teacher_id" => :teacher_id,
 			},
 		SectionAssignment => {
-			"assgt_id" 				=> :assgt_id,
 			"teacher_id" 			=> :teacher_id,
-			"block" 					=> :block,
-			"use_assgt" 			=> :use_assgt,
-			"schoolyear" 			=> :schoolyear,
-			"date_due" 				=> :due_date,
+			"year" 						=> :year,
 			"course_num" 			=> :course_num,
-			"deleted" 				=> :deleted,
+			"block" 					=> :block,
+			"assgt_id" 				=> :assgt_id,
+			"use_assgt" 			=> :use,
+			"due_date" 				=> :due_date,
 		},
 	}
 	CONVERSIONS = {
@@ -79,56 +72,57 @@ module Convert
 		/^false$/ => false,
 	}
 	
-	class << self
-
-		def import_old_file(name)
-			path = File.join(File.join(Rails.root, 'old_data'), name)
-			imported = ::XmlSimple.xml_in(path,
-					'KeyToSymbol' => true,
-					'GroupTags' => {
-					},
-					# :conversions => @conversions,
-					"KeyAttr" => ['database'],
-					'ForceArray' => false,
-			)
-			imported[:database][:table].collect {|h| h[:column]}
-		end
+	def self.import_old_file(name)
+		path = File.join(File.join(Rails.root, 'old_data'), name)
+		imported = ::XmlSimple.xml_in(path,
+				'KeyToSymbol' => true,
+				'GroupTags' => {
+				},
+				# :conversions => @conversions,
+				"KeyAttr" => ['database'],
+				'ForceArray' => false,
+		)
+		imported[:database][:table].collect {|h| h[:column]}
+	end
 		
-		def one_record(klass, arr)
-			map = MAPPINGS[klass]
-			hash = arr.inject({}) do |memo, pair|
-				k = pair['name']
-				v = pair[:content]
+	def self.one_record(klass, arr)
+		map = MAPPINGS[klass]
+		hash = arr.inject({}) do |memo, pair|
+			k = pair['name']
+			v = pair[:content]
 
-				if map[k] then
-					k = map[k] || k
-					v = pair[:content]
-					if v then
-						memo[k] = case 
-						when v =~ /^\d+$/
-							v.to_i
-						when v == "NULL"
-							nil
-						when v == "false"
-							false
-						when v == "true"
-							false
-						else
-							v
-						end
+			if map[k] then
+				k = map[k] || k
+				v = pair[:content]
+				if v then
+					memo[k] = case 
+					when v =~ /^\d+$/
+						v.to_i
+					when v == "NULL"
+						nil
+					when v == "false"
+						false
+					when v == "true"
+						false
+					else
+						v
 					end
 				end
-				memo
 			end
+			memo
+		end
+		begin
 			klass.import_from_hash(hash)
+		rescue ArgumentError => msg
+			print msg
 		end
+	end
 
-		def from_hashes(klass, arr)
-			klass.delete_all
-			arr.each {|a| one_record(klass, a)}
-			puts klass.count
-			arr
-		end
+	def self.from_hashes(klass, arr)
+		klass.delete_all
+		arr.each {|a| one_record(klass, a)}
+		puts klass.count
+		arr
 	end
 	
 end
