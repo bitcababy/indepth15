@@ -1,4 +1,6 @@
 InDepth::Application.routes.draw do
+  get "assignments/create"
+
   mount Ckeditor::Engine => '/ckeditor'
 
 	# authenticated :user do
@@ -15,11 +17,14 @@ InDepth::Application.routes.draw do
 	end
 	
 	resources :courses, only: [:show] do
-		get :show, controller: :courses, action: :show
 		member do
 			get :edit_resources
 		end
 	end
+	
+	resources :sections, only: [:show]
+	
+	get 'assignments/:section_id', to: 'courses#assignments_pane', as: :section_assignments
 	
 	resources :teachers, only: [:show]
 	
@@ -35,9 +40,9 @@ InDepth::Application.routes.draw do
 	end
 	
 	resources :text_documents
-
+			
   devise_for :users, controllers: {sessions: :user_sessions}
-		
+
 	# Unrestful routes
 
   get "home", controller: 'home', action: 'dept_info'
@@ -49,6 +54,8 @@ InDepth::Application.routes.draw do
 	get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
 	get 'menus/manage', to: 'menus#manage', as: :manage_menu
+	
+	# get 'courses/:course_id/teacher/:teacher_id/block/:block_id/assignments', controller: :courses, action: :assignments
 	
 	# get 'teacher/courses/:id/edit_resources', controller: 'teacher/courses', action: :edit_resources, as: :edit_course_resources
 	
