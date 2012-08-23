@@ -31,14 +31,17 @@ module ApplicationHelper
 	end
 	
 	def section_label_for_menu(section)
-		return
-			if section.teacher then
-				section.teacher.formal_name + ", Block " + section.block
-			else
-				section.to_s
-			end
+		if section.teacher then
+			return section.teacher.formal_name + ", Block " + section.block
+		else
+			return section.to_s
+		end
 	end
 	
+	def custom_form_for(object, *args, &block)
+		options = args.extract_options!
+		simple_form_for(object, *(args << options.merge(:builder => CustomFormBuilder)), &block)
+  end
 	
 
 end
