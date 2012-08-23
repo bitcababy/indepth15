@@ -6,5 +6,6 @@
 		= f.input :room, as: :string, wrapper_html: {id: 'room'}
 		= f.input :semester, as: :select, collection: Course::SEMESTERS, wrapper_html: {id: 'durations'}, include_blank: false
 	.form-actions#form-actions
-		= f.button :submit
+		%button
+			= f.button :submit
 		/ = link_to "Reset", 
