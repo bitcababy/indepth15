@@ -1,4 +1,4 @@
-#assignments.content
+#assignments
 	#generic-msg!= @section.teacher.generic_msg
 
 	.assignment-block
@@ -32,11 +32,9 @@
 	
 - content_for :page_header do
 	= render partial: 'shared/course_link', locals: {course: @section.course}
-- content_for :title do
+- content_for :page_title do
 	= "#{@section.course.full_name}, Block #{@section.block}"
-- content_for :content_header do
-	= "Block #{@section.block} with #{@section.teacher.formal_name}"
-	
+
 :coffeescript
 	$(document).ready ->
 		$("#current").dataTable
@@ -86,4 +84,7 @@
 				sWidth: "6em"
 				aTargets: [1]
 			]
-			
+
+
+
+
