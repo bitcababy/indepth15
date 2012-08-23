@@ -1,5 +1,7 @@
 %tr
-	%td.block= section.block
-	%td.days= section.days_for_section.join('')
-	%td.teacher= section.teacher.formal_name
+	%td.teacher
+		%a{href: teacher_path(section.teacher)}= section.teacher.formal_name
+	%td.block
+		%a{href: section_path(section)}= section.block
 	%td.room= section.room
+	%td.days= section.days_for_section.join('')
