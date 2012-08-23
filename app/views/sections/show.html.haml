@@ -1,0 +1,17 @@
+.content
+	%div#tabs
+		%ul
+			%li#assignments
+				%a{href: assignments_page_path(@section), title: 'Assignments'}= "Assignments for #{@section.course.full_name}, Block #{@section.block}"
+			= render partial: 'courses/tabs', locals: {course: @section.course}
+			
+= content_for :page_title do
+	= page_title(@section)
+= content_for :page_header do
+	= page_header(@section)
+
+:coffeescript
+	$(document).ready ->
+	 $("#tabs").tabs ajaxOptions:
+	    error: (xhr, status, index, anchor) ->
+	      $(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. " + "If this wouldn't be a demo."
