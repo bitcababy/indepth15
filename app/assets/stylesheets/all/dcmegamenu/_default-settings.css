@@ -4,3 +4,33 @@ $font-size: 1.1em;
 $font: Arial, sans-serif;
 $line-height: 120%;
 $hue: 0;
+
+$mb-text-color: hsl($hue, 0, 100);
+$mb-text-shadow: hsl($hue, 0, 0);
+$mb-hover-text-color: hsl($hue, 0, 0);
+
+$mb-icon-image: "arrow.png";
+$mb-height: 40px;
+$mb-hover-position: -40px;
+$mb-background-color: #222;
+$mb-weight: normal;
+
+$mb-hover-bg-color: hsla($hue, 0, 20, 0.5);
+$mb-selected-bg-color: hsla($hue, 0, 20, 0.5);
+
+$border-color: hsl($hue, 0, 11);
+$menu-text-color: hsl($hue, 0, 7);
+
+$item-color: hsl($hue, 0, 100);
+$item-hover-bg: hsl($hue, 0, 94);
+$item-shadow: 1px 1px hsl($hue, 0, 20);
+
+$submenu-bg-image: "bg_sub_left.png";
+$background-hdr-image: "bg_mega_hdr.png";
+
+$hdr-color: hsl($hue, 0, 100);
+$hdr-hover-color: hsl($hue, 0, 80);
+$hdr-bg-color: hsl($hue, 0, 30);
+
+$subcontainer-color: hsl($hue, 0, 80);
+$style: "dark";

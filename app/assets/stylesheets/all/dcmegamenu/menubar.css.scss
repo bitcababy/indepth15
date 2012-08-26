@@ -21,7 +21,7 @@
   height: $mb-height;
   border-right: 1px solid $border-color;
   border-left: 1px solid $border-color;
-  font: normal $base-font-size $font;
+  font: normal $font-size $font;
 	line-height: $line-height;
 
 	background: {
@@ -94,7 +94,7 @@
       color: $mb-text-color;
       padding: 12px 38px 12px 25px;
 			background: {
-				image: $mb-bg-image;
+				image: url(image-path($mb-bg-image));
 				repeat: repeat-x;
 				position: 100% 0;
 			}
@@ -209,7 +209,7 @@
         list-style: none;
         float: none;
         width: 170px;
-        font-size: 1em;
+        font-size: $font-size*0.9;
         font-weight: normal;
         &.hmenu-hdr {
           margin: 0 10px 10px 0;
@@ -243,7 +243,7 @@
 	      float: none;
 	      text-decoration: none;
 				vertical-align: bottom;
-	      font-size: 1em; 
+	      font-size: 0.9em; 
 			}
 		}
 	}

@@ -1,3 +1,23 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "fonts";
+@import "colors";
+
+#dept-info {
+	@extend .sans;
+	#why, #information, #resources, #news, #puzzle {
+		p {
+			@extend .sans;
+			font-size: 100%;
+		}
+		li {
+			@extend .sans;
+		}
+	}
+	h3 {
+		text-transform: capitalize;
+		font-weight: bold;
+	}
+}

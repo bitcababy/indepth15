@@ -1,4 +1,5 @@
 @import url(stylesheet-path("fonts"));
+@import url(stylesheet-path("colors"));
 @import "colors";
 @import "fonts";
 
@@ -7,16 +8,21 @@ body {
   outline: none;
   margin: 0;
   padding: 0; 
-	font-size: 14px;
+	font-size: 13px;
+	font-weight: normal;
 	p {
-		font-size: .8em;
+		font-size: 1em;
 	}
-
 	a {
-		color: hsl(374, 79, 30);
+		color: $weston-red;
 		text-decoration: none;
+		text-weight: normal;
 	}
 	background-color: white;
+}
+
+td {
+	vertical-align: top;
 }
 
 #page_header {
@@ -40,26 +46,30 @@ body {
 	}
 }
 
-#menubar-holder {
-	@extend .sans;
-	font-size: 0.8em;
-	display: block;
-	width: 15em;
-	margin: 0px;
-	float: left;
-	position: relative;
-}
-
 div#main {
 	.content-header {
 		@extend .sans;
 		font-size: 140%;
-		font-weight: bold;
 		padding: 8px;
 		padding-left: 16px;
 	}
 	.content {
-		@extend .serif;
+		p {
+			@extend .serif;
+		}
+		h1,h2,h3,h4,h5 {
+			@extend sans;
+		}
+		h1 {
+			font-size: 160%;
+		}
+		h2 {
+			font-size: 140%;
+		}
 		padding: 8px;
+		li {
+			@extend .serif;
+			margin-bottom: 6px;
+		}
 	}
 }
