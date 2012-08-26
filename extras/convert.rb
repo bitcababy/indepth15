@@ -62,6 +62,7 @@ module Convert
 			"assgt_id" 				=> :assgt_id,
 			"use_assgt" 			=> :use,
 			"due_date" 				=> :due_date,
+			"name"						=> :name
 		},
 	}
 	CONVERSIONS = {
