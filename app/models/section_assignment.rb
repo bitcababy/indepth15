@@ -42,7 +42,7 @@ class SectionAssignment
 		assignment = Assignment.find_by(assgt_id: assgt_id)
 		raise ArgumentError,  "can't find assignment for #{year}/#{teacher}/#{block}/#{assgt_id}" unless assignment
 
-		[:teacher_id, :assgt_id, :dept_id, :course_num, :asa, :aa].each {|k| hash.delete(k)}
+		[:teacher_id, :assgt_id, :dept_id, :course_num, :ada, :aa].each {|k| hash.delete(k)}
 		sa = section.section_assignments.create! hash
 
 		sa.assignment = assignment
