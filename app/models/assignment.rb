@@ -1,5 +1,4 @@
 class Assignment < TextDocument
-	field :name, type: String
 	field :assgt_id, type: Integer
 
 	def self.import_from_hash(hash)
