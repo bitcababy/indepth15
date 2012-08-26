@@ -1,8 +1,12 @@
 %li.teacher
-	%a{href: '#'}= teacher.full_name
-	%ul
-		%li.teacher-icons
-			%a{href: teacher_path(teacher), title: "Home page"}
-				%img{src: image_path("home_407518.png")}
-			%a{href: "mailto: #{teacher.email}", title: "Email"}
-				%img{src: image_path("mail_407518.png")}
+	%table
+		%tr
+			%td.teacher-home
+				%a.teacher-icon{href: teacher_path(teacher), title: "Home page"} 
+					%img{src: image_path("home_407518.png")}
+			%td.teqcher-name
+				%b= teacher.full_name
+			%td.teacher-email
+				%a.teacher-icon{href: "mailto: #{teacher.email}", title: "Email"}
+					%img{src: image_path("mail_407518.png")}
+	%hr.teacher-border
