@@ -1,7 +1,7 @@
 !!!
 %html
 	%head
-		%title= content_for?(:page_title) ? (yield :page_title) : "The title"
+		%title= content_for?(:page_title) ? (yield :page_title) : "Fix me!"
 		= stylesheet_link_tag  'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700italic,600italic,400italic,700,600,300italic,300|Coming+Soon|Lora:400,400italic,700,700italic', media: "all"
 		= stylesheet_link_tag "application-all", media: "all"
 		= stylesheet_link_tag "application-print", media: "print"
@@ -13,11 +13,13 @@
 		= csrf_meta_tags
 
 	%body
-		#page_header= content_for?(:page_header) ? (content_for :page_header) : "The header"
+		%header
+			#page_header= content_for?(:page_header) ? (content_for :page_header) : "Fix me!"
 		= render partial: 'menus/menubar'
 		%div#main
 			- if content_for? :content_header
-				.content-header= content_for :content_header
+				%header
+					.content-header= content_for :content_header
 			= render partial: 'user_sessions/sign_in'
 			= yield
 
