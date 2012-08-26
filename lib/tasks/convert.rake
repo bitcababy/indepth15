@@ -109,4 +109,4 @@ namespace :data do
 		
 end
 
-task :default => :convert
+task :default => ':data:convert'
