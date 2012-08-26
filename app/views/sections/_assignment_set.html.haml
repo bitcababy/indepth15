@@ -1,0 +1,9 @@
+.assignment-block
+	.title.ui-corner-top= title
+	- if sas.size > 0
+		%div.message!= message
+		%table{id: table_id}
+			= render partial: 'sections/assignment_table', locals: { sas: sas }
+	- else
+		.none
+			%i None
