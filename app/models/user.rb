@@ -26,7 +26,7 @@ class User
 
 	field :lo, as: :login, type: String
 	validates :login, presence: true, uniqueness: true
-	# field :_id, type: String, default: ->{ login }
+	field :_id, type: String, default: ->{ login }
 	
 	def formal_name
 		return "#{self.honorific} #{self.last_name}"
