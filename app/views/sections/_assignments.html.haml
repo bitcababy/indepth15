@@ -1,34 +1,17 @@
 #assignments
 	#generic-msg!= @section.teacher.generic_msg
-
-	.assignment-block
-		.title.ui-widget-header.ui-corner-top Current assignment
-		- if @section.current_assignment.count > 0
-			#current-msg!= @section.teacher.current_msg
-			%table#current
-				= render partial: 'sections/assignment_table', locals: { sas: @section.current_assignment }
-		- else
-			.none
-				%i None
+	= render partial: 'sections/assignment_set', locals: {table_id: 'current', sas: @section.current_assignment, message: @section.teacher.current_msg, title: 'Current assignment'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @section.upcoming_assignments, message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments, message: "", title: 'Past assignments'}
 	
-	.assignment-block
-		.title.ui-widget-header.ui-corner-top  Upcoming assignments
-		- if @section.upcoming_assignments.count > 0
-			#upcoming-msg!= @section.teacher.upcoming_msg
-			%table#upcoming
-				= render partial: 'sections/assignment_table', locals: {sas: @section.upcoming_assignments }
-		- else
-			.none
-				%i None
-
-	.assignment-block
-		.title.ui-widget-header.ui-corner-top  Past assignments
-		- if @section.past_assignments.count > 0
-			%table#past
-				= render partial: 'sections/assignment_table', locals: { sas: @section.past_assignments }
-		- else
-			.none
-				%i None
+	/ .assignment-block
+	/ 	.title.ui-widget-header.ui-corner-top.ui-state-active   Past assignments
+	/ 	- if @section.past_assignments.count > 0
+	/ 		%table#past
+	/ 			= render partial: 'sections/assignment_table', locals: { sas: @section.past_assignments }
+	/ 	- else
+	/ 		.none
+	/ 			%i None
 	
 - content_for :page_header do
 	= render partial: 'shared/course_link', locals: {course: @section.course}
@@ -37,6 +20,9 @@
 
 :coffeescript
 	$(document).ready ->
+		nameColumnWidth = "7em"
+		dateColumnWidth = "8em"
+
 		$("#current").dataTable
 			bJQueryUI: true
 			bFilter: false
@@ -44,10 +30,10 @@
 			bPaginate: false
 			bSort: false
 			aoColumnDefs: [
-				sWidth: "5em"
+				sWidth: nameColumnWidth
 				aTargets: [0]
 			,
-				sWidth: "6em"
+				sWidth: "8em"
 				aTargets: [1]
 			]
 
@@ -58,14 +44,15 @@
 			bPaginate: false
 			bSort: false
 			aoColumnDefs: [
-				sWidth: "5em"
+				sWidth: nameColumnWidth
 				aTargets: [0]
 			,
-				sWidth: "6em"
+				sWidth: dateColumnWidth
 				aTargets: [1]
 			]
 
 		$("#past").dataTable
+			bServerSide: false
 			bJQueryUI: true
 			bFilter: false
 			bInfo: false
@@ -75,16 +62,17 @@
 			bLengthChange: true
 			iDeferLoading: true
 			aLengthMenu: [[
-				2, 5, 10
+				2, 5, 10, -1
 			], [2,5,10,"All"]]
 			aoColumnDefs: [
-				sWidth: "5em"
+				sWidth: nameColumnWidth
 				aTargets: [0]
 			,
-				sWidth: "6em"
+				sWidth: dateColumnWidth
 				aTargets: [1]
 			]
-
+			oLanguage:
+				sLengthMenu: "Display _MENU_ assignments"
 
 
 
