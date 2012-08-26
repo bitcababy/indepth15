@@ -1,8 +1,4 @@
 InDepth::Application.routes.draw do
-  get "file_handler/fetch"
-
-  get "file_handlerfile_manager/fetch"
-
   get "assignments/create"
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -12,7 +8,8 @@ InDepth::Application.routes.draw do
 	# end
 	root to: "home#dept_info"
 	
-	match 'teachers/*path/:name', via: :get, controller: :file_handler, action: :fetch, constraints: {name: /[^\/]*\.(png|gif|doc|pdf)/ }
+	match 'teachers/*file', via: :get, 
+			controller: :file_handler, action: :pass_on, constraints: {file: /[^\/]*\.(png|gif|doc|pdf|jpg)/ }
 	
 	resources :teachers, only: [:show]
 	
