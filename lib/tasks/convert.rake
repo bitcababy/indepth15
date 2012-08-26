@@ -93,20 +93,18 @@ EOT
 	dept.save!
 end
 
-namespace :data do
-	task :convert => :environment do
-	  Mongoid.unit_of_work(disable: :all) do
-			[Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
-				arr = Convert.import_old_file "#{klass.to_s.tableize}.xml"
-				Convert.from_hashes klass, arr
-			end
+task :convert => :environment do
+  Mongoid.unit_of_work(disable: :all) do
+		[Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
+			arr = Convert.import_old_file "#{klass.to_s.tableize}.xml"
+			Convert.from_hashes klass, arr
 		end
 	end
-	task :dept => :environment do
-		Department.delete_all
-		make_department
-	end
-		
 end
+task :dept => :environment do
+	Department.delete_all
+	make_department
+end
+		
 
-task :default => ':data:convert'
+task :default => [:convert, :dept]
