@@ -1,7 +1,7 @@
 .content
 	%div#tabs
 		%ul
-			%li#assignments
+			%li
 				%a{href: assignments_page_path(@section), title: 'Assignments'}= "Assignments for #{@section.course.full_name}, Block #{@section.block}"
 			= render partial: 'courses/tabs', locals: {course: @section.course}
 			
