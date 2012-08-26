@@ -7,6 +7,8 @@ class Branch
 	validates :name, presence: true, length: { minimum: 3 }
 	field :na, as: :name, type: String
 	
+	index( {name: 1} )
+	
 	has_and_belongs_to_many :major_tags, inverse_of: nil
 	
 	MAJOR_TAGS = {
