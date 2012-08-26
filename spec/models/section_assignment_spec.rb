@@ -44,7 +44,7 @@ describe SectionAssignment do
 				course_num: 567,
 				use_assgt: 'Y',
 				block: "C",
-				schoolyear: 2012,
+				year: 2012,
 				teacher_id: 'greenx',
 			})
 			sa.should be_kind_of SectionAssignment
