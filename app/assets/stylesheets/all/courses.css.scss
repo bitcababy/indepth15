@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url(stylesheet-path("fonts"));
+@import 'colors';
+@import 'fonts';
 
 div#sections_pane {
 	@extend .serif;
