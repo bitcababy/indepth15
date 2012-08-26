@@ -43,8 +43,9 @@ class Section
 		return self.section_assignments.future.asc(:due_date)
 	end
 
-	def past_assignments
-		return self.section_assignments.past.desc(:due_date)
+	def past_assignments(n=nil)
+		ret = self.section_assignments.past.desc(:due_date)
+		n ? ret.limit(n) : ret
 	end
 	
 	def add_assignment(asst, due_date, show=true)
