@@ -1,19 +1,19 @@
 .content
 	#dept-info
 		%h3
-			%a{href: '#'} How to use this app
+			%a{href: '#'}= "How to use this app"
 		#help= "Some verbiage about about how to use it."
 		%h3
-			%a{href: '#'} Why not teacherweb
+			%a{href: '#'}= "Why not teacherweb"
 		#why!= @department.why_doc.content
 		%h3
-			%a{href: '#'} Resources
+			%a{href: '#'}= "Resources"
 		#resources!= @department.resources_doc.content
 		%h3
-			%a{href: '#'} News
+			%a{href: '#'}= "News"
 		#news!= @department.news_doc.content
 		%h3
-			%a{href: '#'} Puzzle
+			%a{href: '#'}= "Puzzle"
 		#puzzle!= @department.puzzle_doc.content
 
 - content_for :page_title do
