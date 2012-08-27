@@ -1,11 +1,12 @@
 .content
 	#dept-info
+	%h3
+		%a{href: '#'} How to use this app
+		Some nonsense about about how to use it.
+	#why!= @department.why_doc.content
 		%h3
 			%a{href: '#'} Why not teacherweb
 		#why!= @department.why_doc.content
-		%h3
-			%a{href: '#'} Objectives of the Department
-		#information!= @department.info_doc.content
 		%h3
 			%a{href: '#'} Resources
 		#resources!= @department.resources_doc.content
