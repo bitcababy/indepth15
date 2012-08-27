@@ -38,22 +38,21 @@ class SectionAssignment
 			block = hash['block']
 			name = hash['name']
 			due_date = Date.parse(hash['due_date'])
-
+			teacher_id = hash['teacher_id']
 			course = Course.find_by(number: course_num)
 			raise ArgumentError, "course is nil for #{course_num}" unless course
-			teacher = Teacher.find_by(login: hash['teacher_id'])
+			teacher = Teacher.find_by(login: teacher_id)
 			raise ArgumentError, "teacher is nil for #{hash['teacher_id']}" unless teacher
 			section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
 			raise ArgumentError, "can't find section for #{year}/#{teacher}/#{block}" unless section
 			assignment = Assignment.find_by(assgt_id: assgt_id)
 			raise ArgumentError,  "can't find assignment for #{year}/#{teacher}/#{block}/#{assgt_id}" unless assignment
 
-			if section.section_assignments.where(assignment: assignment).exists?
-				sa = section.section_assignments.where(assignment: assignment)
-				due_date = due_date
+			if section.section_assignments.where(assignment: assignment, name: name).exists?
+				sa = section.section_assignments.find_by(assignment: assignment, name: name)
 				sa.due_date = due_date if sa.due_date != due_date
 				sa.name = hash['name'] unless sa.name = hash['name']
-				use = (hash[use_assgt] == 'Y')
+				use = (hash['use_assgt'] == 'Y')
 				sa.use = use unless sa.use == use
 				sa.save!
 			else
