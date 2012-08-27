@@ -2,8 +2,8 @@ Fabricator(:section) do
 	academic_year	{ Settings.academic_year }
 	semester			{ Section::SEMESTERS.sample }
 	block					{ Settings.blocks.sample }
-	teacher
-	course
+	teacher				{|attrs| attrs['teachers'] ? attrs['teachers'] : Fabricate(:teacher )}
+	course				{|attrs| attrs['course'] ? attrs['course'] : Fabricate(:course )}
 	after_build	{ |obj|
 		# obj.teacher ||= Fabricate(:teacher)
 		# obj.course ||= Fabricate(:course)
