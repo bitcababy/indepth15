@@ -1,5 +1,5 @@
 defaults: &defaults
-  academic_year: 2012
+  academic_year: 2013
   school_name: Weston High School
   dept_name:  Math Department
   past_assts_num: 5
