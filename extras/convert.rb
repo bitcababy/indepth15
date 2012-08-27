@@ -28,7 +28,6 @@ module Convert
 			},
 		Course => 	{
 				'course_num' 			=> :number,
-				'logo_URL' 				=> :logo_url,
 				'has_assgts' 			=> :has_assignments,
 				'duration' 				=> :duration,
 				'credits' 				=> :credits,
