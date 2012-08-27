@@ -5,7 +5,6 @@ class BridgeController < ApplicationController
 			Assignment.handle_incoming(v)
 		end
 		if v = hash["section_assignments"] then
-			logger.warn(v)
 			SectionAssignment.handle_incoming(v)
 		end
 	end
