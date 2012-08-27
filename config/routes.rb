@@ -9,7 +9,7 @@ InDepth::Application.routes.draw do
 	root to: "home#dept_info"
 	
 	match 'teachers/*file', via: :get, 
-			controller: :file_handler, action: :pass_on, constraints: {file: /[^\/]*\.(png|gif|doc|pdf|jpg)/ }
+			controller: :file_handler, action: :pass_on, constraints: {file: /[^\/]*\.[a-zA-Z0-9]+/i }
 	
 	resources :teachers, only: [:show]
 	
