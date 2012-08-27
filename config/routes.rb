@@ -8,9 +8,8 @@ InDepth::Application.routes.draw do
 	# end
 	root to: "home#dept_info"
 	
-	match 'teachers/*file', via: :get, 
-			controller: :file_handler, action: :pass_on, constraints: {file: /[^\/]*\.[a-zA-Z0-9]+/i }
-	
+	match 'teachers/*path/file', via: :get, 
+			controller: :file_handler, action: :pass_on, constraints: {file: /[^\/]+\.[a-zA-Z0-9]+$/ }
 	resources :teachers, only: [:show]
 	
 	match 'bridge/incoming', via: :post
@@ -20,14 +19,12 @@ InDepth::Application.routes.draw do
 	for tab in %W(sections news policies resources information) do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
-	
 
 	resources :courses, only: [:show] do
 		member do
 			get :edit_resources
 		end
 	end
-	
 
 	resources :sections, only: [:show]
 	
