@@ -3,8 +3,10 @@
 - content_for :page_header do
 	= @teacher.full_name
 
-#teacher-pic
-#courses
-	%ul
-		=render partial: 'shared/course_item', collection: @teacher.courses, as: :course
-#other-links
+.content
+	#teacher-pic
+	#courses.ui-widget
+		%h3.ui-widget-header Courses
+		%ul.ui-widget-body
+			=render partial: 'shared/course_item', collection: @teacher.courses, as: :course
+	#other-links
