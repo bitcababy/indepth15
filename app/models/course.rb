@@ -48,14 +48,7 @@ class Course
 	field :ic, as: :in_catalog, type: Boolean, default: true
 	field :de, as: :description, type: String, default: ""
 
-	# field :info, as: :information, type: String, default: ""
-	# field :res, as: :resources, type: String, default: ""
-	# field :pol, as: :policies, type: String, default: ""
-	# field :news, type: String, default: ""
-	
 	field :_id, type: Integer, default: ->{ number }
-	
-	index( {number: 1}, {unique: true} )
 	
 	##
 	## Associations
