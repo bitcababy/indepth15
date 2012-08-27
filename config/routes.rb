@@ -13,18 +13,22 @@ InDepth::Application.routes.draw do
 	
 	resources :teachers, only: [:show]
 	
+	match 'bridge/incoming', via: :post
+	
 	# get 'courses/:course_number/section
 	
 	for tab in %W(sections news policies resources information) do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
 	
+
 	resources :courses, only: [:show] do
 		member do
 			get :edit_resources
 		end
 	end
 	
+
 	resources :sections, only: [:show]
 	
 	get 'assignments/:section_id', to: 'courses#assignments_pane', as: :section_assignments
