@@ -32,10 +32,6 @@ InDepth::Application.routes.draw do
 	
 	resources :teachers, only: [:show]
 	
-  namespace :teacher do 
-		resources :sections
-	end
-
   namespace :admin do
 		resources :assignments
 		resources :sections
