@@ -24,7 +24,7 @@ class Section
 	belongs_to :course, index: true
 	belongs_to :teacher, index: true
 
-	embeds_many :section_assignments
+	embeds_many :section_assignments, store_as: :sas
 	has_and_belongs_to_many :occurrences, inverse_of: nil
 	accepts_nested_attributes_for :occurrences
 	
