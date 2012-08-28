@@ -37,29 +37,29 @@ describe SectionAssignment do
 				teacher = Fabricate :teacher, login: 'davidsonl'
 				@section = Fabricate :section, academic_year: 2013, block: "D", course: course, teacher: teacher
 
-				@hash = {"teacher_id"=>"davidsonl", 
-					"year"=>"2013", 
-					"course_num"=>"321", 
-					"block"=>"D", 
-					"due_date"=>"2012-09-06", 
-					"name"=>"1", 
-					"use_assgt"=>"Y", 
-					"assgt_id"=>"614639", "ada"=>"2012-08-19 18:34:40", "aa"=>"2012-08-19 18:37:16"}
+				@hash = {:teacher_id=>"davidsonl", 
+					:year=>"2013", 
+					:course_num=>"321",
+					:block=>"D", 
+					:due_date=>"2012-09-06", 
+					:name=>"1", 
+					:use_assgt=>"Y", 
+					:assgt_id =>"614639", 
+					:ada=>"2012-08-19 18:34:40", 
+					:aa=>"2012-08-19 18:37:16"
+				}
 			end
 			it "creates a new section_assignment if the assgt_id is new" do
-				c = @section.section_assignments.count
-				sa = SectionAssignment.handle_incoming @hash
-				sa.should be_kind_of SectionAssignment
-				@section.section_assignments.count.should == (c + 1)
+				expect {
+					SectionAssignment.handle_incoming @hash
+				}.to change(@section.section_assignments, :count).by(1)
 			end
 			it "updates an section_assignment if the assgt_id is old" do
 				SectionAssignment.handle_incoming @hash
-					expect {
-						SectionAssignment.handle_incoming @hash
-					}.to change(SectionAssignment, :count).by(0)
-				end
-				
-			
+				expect {
+					SectionAssignment.handle_incoming @hash
+				}.to change(@section.section_assignments, :count).by(0)
+			end
 		end
 	end
 	
