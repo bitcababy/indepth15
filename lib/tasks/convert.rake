@@ -153,4 +153,5 @@ task :dept => :environment do
 end
 		
 
-task :default => nil
+task :default do
+end
