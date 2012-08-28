@@ -80,7 +80,7 @@ EOT
 	txt = <<EOT
 	<h2>How to Use the New Westonmath App</h2>
 <p>This app is your source of information for math courses at Weston High School.
-The tab right below this one lists some of its features, but here&amp;#8217;s enough to get you started:
+The tab right below this one lists some of its features, but here’s enough to get you started:
 <ul>
 <li>This page is called <b>Home</b>.
 You can get to it through the <b>Home</b> menu,
@@ -97,7 +97,7 @@ including the course description and a list of sections,
 each with its teacher, block, and room number.
 Click on any column header to sort by that column.
 Click again to reverse the sort.
-Click on a section&amp;#8217;s block to see assignments for that section.<br />
+Click on a section’s block to see assignments for that section.<br />
 <br />
 </li>
 
@@ -107,7 +107,7 @@ resources, policies, and news.<br />
 <br />
 </li>
 
-<li>You can also get to any section&amp;#8217;s assignments
+<li>You can also get to any section’s assignments
 by clicking on the section in the <b>Courses</b> menu.
 The current assignment is always listed first, followed by any upcoming assignments that have already been posted, followed by all past assignments.
 You can choose whether to display 2, 5, 10, or all past assignments.<br />
@@ -115,11 +115,11 @@ You can choose whether to display 2, 5, 10, or all past assignments.<br />
 </li>
 
 <li>The third menu lists all the <b>Faculty</b> in our Department.
-Clicking on the icon to the left of a name takes you to that teacher&amp;#8217;s home page,
+Clicking on the icon to the left of a name takes you to that teacher’s home page,
 which includes a list of the courses s/he is currrently teaching.
 Clicking on the icon to the right opens up your favorite email program,
 with a new message addressed to that teacher.
-If you are using a machine that doesn&amp;#8217;t have an identified email client,
+If you are using a machine that doesn’t have an identified email client,
 this option will not work.
 <br />
 <br />
@@ -130,12 +130,12 @@ Check out the tabs in the accordion!<br />
 <br />
 </li>
 
-<li>If you spot any bugs, send email to Mr. Davidson (DavidsonL@weston.org).</li>
+<li>If you spot any bugs, send email to <a href='mailto: davidsonl@weston.org'>Mr. Davidson</a> (DavidsonL@weston.org).</li>
 </ul>
 
 </p>
 EOT
-	dept.how_doc
+	dept.how_doc = TextDocument.create content: txt
 	dept.save!
 end
 
@@ -153,4 +153,4 @@ task :dept => :environment do
 end
 		
 
-task :default => [:convert, :dept]
+task :default => nil
