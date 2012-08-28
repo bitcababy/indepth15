@@ -68,6 +68,7 @@ EOT
 				</li>
 			</ul>
 EOT
+
 	dept.resources_doc = TextDocument.create! content: txt
 
 	txt = <<EOT
@@ -80,10 +81,10 @@ EOT
 	dept.puzzle_doc = TextDocument.create! content: txt
 	
 	txt = <<EOT
-	<h2>How to Use the New Westonmath App</h2>
-<p>This app is your source of information for math courses at Weston High School.
-The tab right below this one lists some of its features, but here’s enough to get you started:
-<ul>
+	<p>This app is your source of information for math courses at Weston High School.
+	The tab right below this one lists some of its features, but here’s enough to get you started:
+	</p>
+	<ul>
 <li>This page is called <b>Home</b>.
 You can get to it through the <b>Home</b> menu,
 which is always the first one at the top of every page.<br />
@@ -132,12 +133,12 @@ Check out the tabs in the accordion!<br />
 <br />
 </li>
 
-<li>If you spot any bugs, send email to <a href='mailto: davidsonl@weston.org'>Mr. Davidson</a> (DavidsonL@weston.org).</li>
+<li>If you spot any bugs, send email to <a href='mailto:davidsonl@weston.org'>Mr. Davidson</a> (DavidsonL@weston.org).</li>
 </ul>
 
-</p>
 EOT
 	dept.how_doc = TextDocument.create! content: txt
+
 	dept.save!
 end
 
