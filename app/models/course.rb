@@ -70,7 +70,18 @@ class Course
 	scope :in_catalog, where(in_catalog: true).asc(:number)
 
 	def current_sections
-		return self.sections.current
+		sections = self.sections.current
+		return sections.sort do |a, b|
+			teacher_a = a.teacher
+			teacher_b = b.teacher
+			if teacher_a == teacher_b 
+				 a.block <=> b.block
+			elsif teacher_a.last_name == teacher_b.last_name
+				return teacher_a.first_name <=> teacher_b.first_name
+			else
+				teacher_a.last_name <=> teacher_b.last_name
+			end
+		end
 	end
 	
 	# def teachers
