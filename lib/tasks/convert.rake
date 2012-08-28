@@ -141,7 +141,7 @@ EOT
 	dept.save!
 end
 
-namespace :data => do
+namespace :data do
 	task :convert => :environment do
 	  Mongoid.unit_of_work(disable: :all) do
 			[Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
