@@ -2,6 +2,7 @@
 
 def make_department
 	dept = Department.create! name: Settings.dept_name
+
 	txt =<<EOT
 	<p>Students keep asking, “Why doesn’t the Math Department just use teacherweb?” One student even asked whether we’re too cool for teacherweb.</p>
 	<p>The WHS Math Department admits to being cool, but that’s not what westonmath is all about. The westonmath.org website is far more than a place to find out tonight’s homework assignment. Here are some of its features:</p>
@@ -15,13 +16,14 @@ def make_department
 	<li>Department-wide information is readily available on the front page.</li>
 	</ul>
 EOT
-	dept.why_doc = TextDocument.create content: txt
+	dept.why_doc = TextDocument.create! content: txt
+
 	txt =<<EOT
 			<h2>New Department Head</h2>
 <p>Please welcome James McLaughlin as the new head of the Math Department for grades 6–12!</p>
 EOT
-
-	dept.news_doc = TextDocument.create content: txt
+	dept.news_doc = TextDocument.create! content: txt
+	
 	txt = <<EOT
 <h2>WHS Math Department Internal Resources</h2>
 	<ul>
@@ -66,7 +68,7 @@ EOT
 				</li>
 			</ul>
 EOT
-	dept.resources_doc = TextDocument.create content: txt
+	dept.resources_doc = TextDocument.create! content: txt
 
 	txt = <<EOT
 	<h2>The Chess Players</h2>
@@ -75,7 +77,7 @@ EOT
 <p>The best player and the worst player are of the same age.</p>
 <p>Who plays the best game of chess? </p>
 EOT
-	dept.puzzle_doc = TextDocument.create content: txt
+	dept.puzzle_doc = TextDocument.create! content: txt
 	
 	txt = <<EOT
 	<h2>How to Use the New Westonmath App</h2>
@@ -135,23 +137,24 @@ Check out the tabs in the accordion!<br />
 
 </p>
 EOT
-	dept.how_doc = TextDocument.create content: txt
+	dept.how_doc = TextDocument.create! content: txt
 	dept.save!
 end
 
-task :convert => :environment do
-  Mongoid.unit_of_work(disable: :all) do
-		[Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
-			arr = Convert.import_old_file "#{klass.to_s.tableize}.xml"
-			Convert.from_hashes klass, arr
+namespace :data => do
+	task :convert => :environment do
+	  Mongoid.unit_of_work(disable: :all) do
+			[Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
+				arr = Convert.import_old_file "#{klass.to_s.tableize}.xml"
+				Convert.from_hashes klass, arr
+			end
 		end
 	end
+	task :dept => :environment do
+		Department.delete_all
+		make_department
+	end
 end
-task :dept => :environment do
-	Department.delete_all
-	make_department
-end
-		
 
 task :default do
 end
