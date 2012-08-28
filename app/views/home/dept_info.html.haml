@@ -2,7 +2,7 @@
 	#dept-info
 		%h3
 			%a{href: '#'}= "How to use this app"
-		#help= "Some verbiage about about how to use it."
+		#how!= @department.how_doc.content
 		%h3
 			%a{href: '#'}= "Why not teacherweb"
 		#why!= @department.why_doc.content
