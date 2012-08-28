@@ -16,23 +16,9 @@ def make_department
 	</ul>
 EOT
 	dept.why_doc = TextDocument.create content: txt
-
 	txt =<<EOT
-<p>The courses in mathematics emphasize the pattern, structure, and unifying ideas of the discipline. Since we have witnessed tremendous growth in uses of mathematics during the past thirty years, it is virtually impossible to predict all our future mathematical needs. We attempt to provide opportunities for students to achieve the mathematical, statistical, and computer literacy that will be required by tomorrow's society. Problem-solving skills are one of the major emphases of our program.</p>
-						<p></p>
-						<h2>Curriculum Levels</h2>
-						<p>The department's program...</p>
-						<p></p>
-						<h2>Course Placement</h2>
-						<p>The following guidelines...</p>
-EOT
-	dept.info_doc = TextDocument.create content: txt
-			txt =<<EOT
-<p>A power-point presentation prepared for the January 23, 2008, curriculum night 
-presentation summarizing the Weston High School math course options may be accessed  
-<a href=&quot;http://www.westonmath.org/teachers/mccowand/PTO2008.ppt&quot;
->here</a>.  The last slide gives contact information for the department chairman 
-if there are questions.</column>
+			<h2>New Department Head</h2>
+<p>Please welcome James McLaughlin as the new head of the Math Department for grades 6–12!</p>
 EOT
 
 	dept.news_doc = TextDocument.create content: txt
@@ -90,6 +76,66 @@ EOT
 <p>Who plays the best game of chess? </p>
 EOT
 	dept.puzzle_doc = TextDocument.create content: txt
+	
+	txt = <<EOT
+	<h2>How to Use the New Westonmath App</h2>
+<p>This app is your source of information for math courses at Weston High School.
+The tab right below this one lists some of its features, but here&amp;#8217;s enough to get you started:
+<ul>
+<li>This page is called <b>Home</b>.
+You can get to it through the <b>Home</b> menu,
+which is always the first one at the top of every page.<br />
+<br />
+
+</li>
+<li>To find information about a particular course,
+click on the <b>Courses</b> menu.
+You will see a list of all our courses and their sections,
+listed by teacher and block number.
+Click on any course to read basic information about it,
+including the course description and a list of sections,
+each with its teacher, block, and room number.
+Click on any column header to sort by that column.
+Click again to reverse the sort.
+Click on a section&amp;#8217;s block to see assignments for that section.<br />
+<br />
+</li>
+
+<li>Course pages also have tabs along the top (below the three standard Westonmath menus).
+You can click on any tab to read about the course information,
+resources, policies, and news.<br />
+<br />
+</li>
+
+<li>You can also get to any section&amp;#8217;s assignments
+by clicking on the section in the <b>Courses</b> menu.
+The current assignment is always listed first, followed by any upcoming assignments that have already been posted, followed by all past assignments.
+You can choose whether to display 2, 5, 10, or all past assignments.<br />
+<br />
+</li>
+
+<li>The third menu lists all the <b>Faculty</b> in our Department.
+Clicking on the icon to the left of a name takes you to that teacher&amp;#8217;s home page,
+which includes a list of the courses s/he is currrently teaching.
+Clicking on the icon to the right opens up your favorite email program,
+with a new message addressed to that teacher.
+If you are using a machine that doesn&amp;#8217;t have an identified email client,
+this option will not work.
+<br />
+<br />
+</li>
+
+<li>The <b>Home</b> page also contains some general information about the Math Department, such as resources, news, and a puzzle that is often (well...occasionally) updated.
+Check out the tabs in the accordion!<br />
+<br />
+</li>
+
+<li>If you spot any bugs, send email to Mr. Davidson (DavidsonL@weston.org).</li>
+</ul>
+
+</p>
+EOT
+	dept.how_doc
 	dept.save!
 end
 
