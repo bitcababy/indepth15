@@ -20,7 +20,7 @@ describe "courses/sections_pane" do
 		rendered.should have_selector('div#sections_pane') do |div|
 			div.should have_selector('div#info', content: 'Course 321 — Full Year — 5.0 Credits')
 			div.should have_selector('div#description', content: "Some description")
-			div.should have_selector('div#leadin', content: "In the 2011—2012 academic year there are 6 sections of Fractals 101.")
+			div.should have_selector('div#leadin', content: "In the #{Settings.academic_year-1}—#{Settings.academic_year} academic year there are 6 sections of Fractals 101.")
 		end
 	end
 	
