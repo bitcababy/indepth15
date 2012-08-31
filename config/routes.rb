@@ -32,13 +32,6 @@ InDepth::Application.routes.draw do
 	
 	resources :teachers, only: [:show]
 	
-  namespace :admin do
-		resources :assignments
-		resources :sections
-		resources :courses
-		resources :users
-	end
-	
 	resources :text_documents
 			
   devise_for :users, controllers: {sessions: :user_sessions}
@@ -54,11 +47,6 @@ InDepth::Application.routes.draw do
 	get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
 	get 'menus/manage', to: 'menus#manage', as: :manage_menu
-	
-	get 'sections/:id/past_assignments/:count', to: 'sections#past_assignments', as: :past_assignments_n
-	get 'sections/:id/past_assignments', to: 'sections#past_assignments', as: :past_assignments
-	get 'sections/:id/current_assignments', to: 'sections#current_assignments', as: :current_assignments
-	get 'sections/:id/upcoming_assignments', to: 'sections#upcoming_assignments', as: :upcoming_assignments
 	
 	# get 'courses/:course_id/teacher/:teacher_id/block/:block_id/assignments', controller: :courses, action: :assignments
 	
