@@ -1,5 +1,5 @@
 class FileHandlerController < ApplicationController
-	REDIRECT_URL = 'http://westonmath.org'
+	REDIRECT_URL = 'http://old.westonmath.org'
 
   def pass_on
 		redirect_to "#{REDIRECT_URL}#{request.path}"
