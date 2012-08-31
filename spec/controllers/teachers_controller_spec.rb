@@ -4,7 +4,7 @@ describe TeachersController do
 
 	describe "GET show" do
 		it "returns http success" do
-			teacher = Fabricate :teacher
+			teacher = Fabricate :teacher, login: "xyzzy"
 			get :show, id: teacher.to_param
 			response.should be_success
 		end
