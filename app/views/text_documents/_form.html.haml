@@ -1,5 +1,5 @@
 #editor.ui-widget
-	= simple_form_for @text_document do |f|
+	= simple_form_for @document do |f|
 		.form-inputs
 			= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false
 		.form-actions
@@ -7,7 +7,6 @@
 				= f.button :submit
 			%button{class: ['ui-button ui-button-text-only', 'ui-widget', 'ui-corner-all'] }
 				= f.button :submit, type: :reset, value: 'Cancel'
-	
 	
 :coffeescript
 	$ ->
