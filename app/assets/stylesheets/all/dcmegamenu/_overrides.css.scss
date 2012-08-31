@@ -1,6 +1,3 @@
-@import url(stylesheet-path('fonts'));
-@import url(stylesheet-path('colors'));
-
 .hmenu {
 	.mhmenu-hdr {
 		vertical-align: bottom;		
@@ -10,7 +7,7 @@
 	}
 	li {
 		&#username {
-    float: right;
+    	float: right;
 		}
 		.submenu {
 			background-color: hsla(0, 0, 50, 0.5);
