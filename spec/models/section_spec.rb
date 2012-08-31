@@ -25,9 +25,12 @@ describe Section do
 	
 	describe 'fabricator' do
 		it "creates a valid section" do
-			section = Fabricate.build :section, block: "E"
+			teacher = Fabricate :teacher
+			teacher.should_not be_nil
+			section = Fabricate.build :section, block: "E", teacher: teacher
 			section.should be_valid
 			section.teacher.should_not be_nil
+			section.teacher.should == teacher
 			section.course.should_not be_nil
 			end
 	end
@@ -63,7 +66,7 @@ describe Section do
 		it "should be able to return all future or past assignments" do
 			@section.future_assignments.count.should == 3
 			@section.past_assignments.count.should == 2
-			@section.current_assignment.count.should == 1
+			@section.current_assignments.count.should == 1
 			@section.upcoming_assignments.count.should == 2
 		end
 	end
@@ -75,6 +78,7 @@ describe Section do
 			hash = {:dept_id=>1, :course_num=>332, :number=>4, :semesters=>12, :block=>"G", :year=>2011, 
 							:which_occurrences=>"all", :room=>200, :teacher_id=>"davidsonl"}
 			section = Section.import_from_hash(hash)
+			section.should be_kind_of Section
 			pending "Unfinished test"
 		end
 	end
