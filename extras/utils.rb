@@ -51,6 +51,7 @@ module Utils
 	end
 
 	def next_school_day
+		day = Date.today
 		case
 		when day.friday?
 			day + 3
