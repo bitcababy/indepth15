@@ -34,14 +34,7 @@ describe SectionsController do
 		}
 	end
 
-	# This should return the minimal set of values that should be in the session
-	# in order to pass any filters (e.g. authentication) defined in
-	# SectionsController. Be sure to keep this updated too.
-	def valid_session
-		{}
-	end
-
-	 describe "GET 'assignments'" do
+	describe "GET 'assignments'" do
 		it "display the assignments page" do
 			section = section_with_assignments
 			
