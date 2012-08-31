@@ -26,7 +26,7 @@ class Section
 
 	embeds_many :section_assignments, store_as: :sas
 	has_and_belongs_to_many :occurrences, inverse_of: nil
-	accepts_nested_attributes_for :occurrences
+	# accepts_nested_attributes_for :occurrences
 	
 	scope :for_year, ->(y){ where(academic_year: y)}
 	scope :current, ->{ where(academic_year: Settings.academic_year)}
@@ -35,7 +35,7 @@ class Section
 		return self.section_assignments.upcoming.asc(:due_date)
 	end
 	
-	def current_assignment
+	def current_assignments
 		return self.section_assignments.current.upcoming.asc(:due_date).limit(1)
 	end
 	
