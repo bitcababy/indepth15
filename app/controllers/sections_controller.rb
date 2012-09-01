@@ -4,7 +4,9 @@ class SectionsController < ApplicationController
 	def show
     respond_to do |format|
       format.html {render :layout => !request.xhr?}
-    end
+ 			format.js
+			format.json { render json: @course}
+   end
 	end
 
 	def assignments
