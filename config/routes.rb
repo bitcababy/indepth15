@@ -1,4 +1,5 @@
 InDepth::Application.routes.draw do
+
   get "assignments/create"
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -34,7 +35,6 @@ InDepth::Application.routes.draw do
 	
 	resources :text_documents
 			
-  devise_for :users, controllers: {sessions: :user_sessions}
 
 	# Unrestful routes
 
@@ -47,6 +47,9 @@ InDepth::Application.routes.draw do
 	get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
 	get 'menus/manage', to: 'menus#manage', as: :manage_menu
+	
+	devise_for :users, controllers: {sessions: 'users/sessions'}
+  
 	
 	# get 'courses/:course_id/teacher/:teacher_id/block/:block_id/assignments', controller: :courses, action: :assignments
 	
