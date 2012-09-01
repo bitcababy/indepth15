@@ -2,7 +2,7 @@
 
 module ApplicationHelper
 	include Utils
-	include UserSessionHelper
+	# include UsersHelper
 
 	def academic_year_string(year)
 		return "#{year-1}—#{year}"
@@ -42,6 +42,13 @@ module ApplicationHelper
 		options = args.extract_options!
 		simple_form_for(object, *(args << options.merge(:builder => CustomFormBuilder)), &block)
   end
-	
+
+	def hidden_div_if(condition, attributes = {}, &block)
+		if condition
+			attributes['style'] = "display: none"
+		end
+		content_tag('div', attributes, &block) if block
+	end
+
 
 end
