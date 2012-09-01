@@ -16,6 +16,21 @@ describe ApplicationHelper do
 			assignment_date_string(Date.new(2012, 7, 12)).should == "Thu, Jul 12"
 		end
 	end
+	
+	describe '#hidden_div_if' do
+		it "adds 'display: none' if the condition is true" do
+			attrs = {}
+			hidden_div_if(true, attrs)
+			attrs['style'].should == 'display: none'
+		end
+		it "doesn't add 'display: none' if the condition is false" do
+			attrs = {}
+			hidden_div_if(false, attrs)
+			attrs['style'].should_not == 'display: none'
+			puts content_tag('div', attrs)
+		end
+		
+	end
 
 end
 
