@@ -20,13 +20,14 @@
 			- if content_for? :content_header
 				%header
 					.content-header= content_for :content_header
-			= render partial: 'user_sessions/sign_in'
+			#sign-in-dialog
+				/ = render partial: 'users/sessions/form'
 			= yield
 
-:coffeescript
-	$(document).ready ->
-		$("#sign-in-dialog").dialog
-		  autoOpen: false
-		  height: 300
-		  width: 350
-		  modal: true
+/ :coffeescript
+/ 	$(document).ready ->
+/ 		$("#sign-in-dialog").dialog
+/ 		  autoOpen: false
+/ 		  height: 300
+/ 		  width: 350
+/ 		  modal: true
