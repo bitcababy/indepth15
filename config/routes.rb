@@ -1,6 +1,6 @@
 InDepth::Application.routes.draw do
 
-  get "assignments/create"
+	resources :assignments, only: [:show, :update, :create]
 
   mount Ckeditor::Engine => '/ckeditor'
 
@@ -12,8 +12,6 @@ InDepth::Application.routes.draw do
 	match 'teachers/*path/file', via: :get, 
 			controller: :file_handler, action: :pass_on, constraints: {file: /[^\/]+\.[a-zA-Z0-9]+$/ }
 	resources :teachers, only: [:show]
-	
-	match 'bridge/incoming', via: :post
 	
 	# get 'courses/:course_number/section
 	
