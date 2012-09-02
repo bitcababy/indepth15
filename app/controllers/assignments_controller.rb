@@ -4,7 +4,7 @@ class AssignmentsController < ApplicationController
   protect_from_forgery except: [:create, :update]
 
   def create
-		teacher_id = params['assignment'].delete('teacher_id')
+		teacher_id = params['assignment'].delete('teacher_id').strip
 		teacher = Teacher.find_by(login: teacher_id)
 		if teacher
 			@assignment = Assignment.new(params['assignment'])
