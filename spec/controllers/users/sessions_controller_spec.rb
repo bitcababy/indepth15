@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe UserSessionsController do
+describe Users::SessionsController do
 
 	# This tries to sign in a user
 	describe "UPDATE 'create'" do
