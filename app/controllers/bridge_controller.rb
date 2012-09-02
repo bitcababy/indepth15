@@ -1,4 +1,5 @@
 class BridgeController < ApplicationController
+	before_filter :authenticate_user!, only: []
 
 	def incoming
 		hash = fix_hash params['wmdhs']
@@ -12,7 +13,7 @@ class BridgeController < ApplicationController
 			SectionAssignment.handle_incoming(v)
 		end
 	end
-	
+
 	def fix_hash(hash)
 		new_hash = Hash.new
 		hash.each {|k,v| new_hash[k.to_sym] = v} 
