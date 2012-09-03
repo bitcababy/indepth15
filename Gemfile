@@ -63,7 +63,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'ckeditor', :git => 'https://github.com/paranoida/ckeditor.git'
-
+# gem 'fakefs'
 
 group :development, :test do
 	gem 'rspec-rails'
