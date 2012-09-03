@@ -4,8 +4,8 @@ describe AssignmentsController do
 
   describe "GET 'show'" do
     it "returns http success" do
-			pending "Unfinished test"
-      get 'show'
+			a = Fabricate :assignment, assgt_id: 614639
+      get 'show', {'id' => a.to_param}
       response.should be_success
     end
   end
