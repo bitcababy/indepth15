@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
 			format.json { render json: @course}
     end
 	end
-	
+
  	# POST courses
   # POST courses.json
   def create
@@ -21,9 +21,11 @@ class CoursesController < ApplicationController
     respond_to do |format|
       if @course.save
         format.html { redirect_to course_url(@course), notice: 'Course was successfully created.' }
+				format.js
         format.json { render json: @course, status: :created, location: @course }
       else
         format.html { render action: "new" }
+ 				format.js
         format.json { render json: @course.errors, status: :unprocessable_entity }
       end
     end
