@@ -1,5 +1,5 @@
 Fabricator(:section) do
-	academic_year	{ Settings.academic_year }
+	academic_year	{ |attrs| attrs[:academic_year] || Settings.academic_year }
 	semester			{ Section::SEMESTERS.sample }
 	block					{ |attrs| attrs[:block] || sequence(:block) {|i| Settings.blocks[i%Settings.blocks.length]} }
 	teacher				{ |attrs| attrs[:teacher] || Fabricate(:teacher )}
