@@ -3,6 +3,13 @@ class AssignmentsController < ApplicationController
   # POST assignments.json
   protect_from_forgery except: [:create, :update]
 
+	def show
+		@assigment = Assignment.find(params['id'])
+    respond_to do |format|
+      format.html { render :layout => !request.xhr? }
+		end
+	end
+
   def create
 		teacher_id = params['assignment'].delete('teacher_id').strip
 		teacher = Teacher.find_by(login: teacher_id)
@@ -16,12 +23,10 @@ class AssignmentsController < ApplicationController
       if @assignment.save
 				teacher.assignments << @assignment
         format.html {
-					logger.warn "****** html"
 	 				redirect_to assignment_url(@assignment), notice: 'Assignment was successfully created.' 
 				}
 				format.js
         format.json {
-					logger.warn "****** js or json"
 	 				render json: @assignment, status: :created, location: @assignment
 				}
       else
