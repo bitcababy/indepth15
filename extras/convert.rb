@@ -27,7 +27,7 @@ module Convert
 			"content"								=> :content,
 			},
 		Course => 	{
-				'course_num' 			=> :number,
+				'number' 					=> :number,
 				'has_assgts' 			=> :has_assignments,
 				'duration' 				=> :duration,
 				'credits' 				=> :credits,
