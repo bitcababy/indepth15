@@ -4,65 +4,27 @@
 - version 3.3.7deb7
 - http://www.phpmyadmin.net
 -
-- Host: outhouse.wildwoodweb.net
-- Generation Time: Jun 29, 2012 at 11:27 AM
-- Server version: 5.0.51
-- PHP Version: 5.3.3-7+squeeze8
+- Host: db1.xoala.net
+- Generation Time: Sep 04, 2012 at 04:59 PM
+- Server version: 5.5.19
+- PHP Version: 5.3.3-7+squeeze9
 -->
 
-<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+<pma_xml_export version="1.0">
     <!--
-    - Structure schemas
+    - Database: 'whsmd'
     -->
-    <pma:structure_schemas>
-        <pma:database name="wmdhs" collation="utf8_general_ci" charset="utf8">
-            <pma:table name="course_info">
-                CREATE TABLE `course_info` (
-                  `id` int(11) NOT NULL auto_increment,
-                  `course_num` smallint(9) NOT NULL default '0',
-                  `full_name` varchar(50) NOT NULL default '',
-                  `short_name` varchar(50) default NULL,
-                  `course_id` varchar(8) NOT NULL default '',
-                  `schedule_name` varchar(50) NOT NULL default '',
-                  `semesters` tinyint(4) NOT NULL default '2',
-                  `half_time` tinyint(1) NOT NULL default '0',
-                  `credits` decimal(2,1) NOT NULL default '5.0',
-                  `num_occurrences` int(11) NOT NULL default '5',
-                  `prog_of_studies_descr` text NOT NULL,
-                  `logo_URL` varchar(100) NOT NULL default '',
-                  `info` longtext NOT NULL,
-                  `policies` longtext NOT NULL,
-                  `resources` longtext NOT NULL,
-                  `has_assgts` tinyint(4) NOT NULL default '1',
-                  `updated_at` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-                  UNIQUE KEY `course_num` (`course_num`),
-                  UNIQUE KEY `id` (`id`),
-                  KEY `course_id` (`course_id`)
-                ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
-            </pma:table>
-        </pma:database>
-    </pma:structure_schemas>
-
-    <!--
-    - Database: 'wmdhs'
-    -->
-    <database name="wmdhs">
-        <!-- Table course_info -->
-        <table name="course_info">
-            <column name="id">1</column>
-            <column name="course_num">321</column>
+    <database name="whsmd">
+        <!-- Table courses -->
+        <table name="courses">
+            <column name="number">321</column>
             <column name="full_name">Geometry Honors</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">geomh</column>
             <column name="schedule_name">Geom H</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">A formal Euclidean geometry curriculum is taught that includes coordinate, synthetic, and solid geometry. Students will use the Geometer&amp;rsquo;s Sketchpad to investigate geometric conjectures. Only students with high motivation, exceptional ability and demonstrated mathematical achievement should enroll in this course.</column>
-            <column name="logo_URL">geomh-logo4.gif</column>
-            <column name="info">
- &lt;h3&gt;Welcome!&lt;/h3&gt;
+            <column name="description">A formal Euclidean geometry curriculum is taught that includes coordinate, synthetic, and solid geometry. Students will use the Geometer&amp;rsquo;s Sketchpad to investigate geometric conjectures. Only students with high motivation, exceptional ability and demonstrated mathematical achievement should enroll in this course.</column>
+            <column name="info"> &lt;h3&gt;Welcome!&lt;/h3&gt;
          
          &lt;p&gt;Students, parents, colleagues:&lt;/p&gt;
          
@@ -102,8 +64,7 @@
          &lt;/ul&gt;
          
 Here are the course &lt;a href=&quot;/teachers/davidsonl/geomh/curriculum.pdf&quot;&gt;curriculum&lt;/a&gt; and the &lt;a href=&quot;/teachers/davidsonl/geomh/goals+objectives.pdf&quot;&gt;goals and objectives&lt;/a&gt;.</column>
-            <column name="policies">
-&lt;h3&gt;Supplies&lt;/h3&gt;
+            <column name="policies">&lt;h3&gt;Supplies&lt;/h3&gt;
 
 &lt;p&gt;You will need a bound lab notebook and a thin binder for your class notes, homework, returned
 tests and quizzes, and handouts.
@@ -194,9 +155,8 @@ classmate, or by sending email to your teacher, or by seeing your
 teacher in school as soon as you return. You must make up any missed
 tests or quizzes right away.&lt;/p&gt;
 </column>
-            <column name="resources">
-&lt;p&gt;&lt;a href=&quot;http://www.westonmath.org/teachers/mclaughlinj/geomh/a_secret_message.PDF&quot;&gt;Secret
-Message&lt;/a&gt;&lt;/p&gt;
+            <column name="resources">&lt;p&gt;&lt;a href=&quot;http://www.westonmath.org/teachers/mclaughlinj/geomh/a_secret_message.PDF&quot;&gt;Secret
+Message!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt; &lt;a href=&quot;http://www.westonmath.org//teachers/mclaughlinj/geomh/textbook.pdf&quot;&gt;How to read a textbook&lt;/a&gt;&lt;/p&gt;
 
@@ -216,21 +176,17 @@ Message&lt;/a&gt;&lt;/p&gt;
 &lt;/p&gt; 
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2011-12-18 11:16:59</column>
+            <column name="updated_at">2012-09-03 14:57:35</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">2</column>
-            <column name="course_num">322</column>
+        <table name="courses">
+            <column name="number">322</column>
             <column name="full_name">Geometry</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">geom</column>
             <column name="schedule_name">Geom</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This college-preparatory course in Euclidean Geometry develops a solid background in geometric skills and ideas and also places a significant emphasis on mathematical thinking. There is a special stress on processes such as finding patterns, investigating, making conjectures, developing appropriate habits of mind, explaining one&amp;#146;s results, making connections, argument, and proof. This approach is based on the premise that the best way to prepare students to solve problems that don&amp;#146;t yet exist is to help them develop the ways of thinking that are characteristic of mathematics and science. The approach stresses depth rather than breadth, often presenting long problems that extend throughout an entire class period or even more than one class period.</column>
-            <column name="logo_URL">geom-logo4.gif</column>
+            <column name="description">This college-preparatory course in Euclidean Geometry develops a solid background in geometric skills and ideas and also places a significant emphasis on mathematical thinking. There is a special stress on processes such as finding patterns, investigating, making conjectures, developing appropriate habits of mind, explaining one&amp;#146;s results, making connections, argument, and proof. This approach is based on the premise that the best way to prepare students to solve problems that don&amp;#146;t yet exist is to help them develop the ways of thinking that are characteristic of mathematics and science. The approach stresses depth rather than breadth, often presenting long problems that extend throughout an entire class period or even more than one class period.</column>
             <column name="info">&lt;H2&gt;Syllabus&lt;/h2&gt;
 &lt;P&gt;This college-preparatory course in Euclidean Geometry uses the textbook Geometry for Enjoyment and Challenge. This program not only develops a solid background in geometric skills and ideas but also places a significant emphasis on mathematical thinking, inquiry, and exploration. There is a special stress on processes such as finding patterns, investigating, making conjectures, developing appropriate habits of mind, explaining one&amp;#8217;s results, making connections, argument, and proof.  This approach is based on the premise that the best way to prepare students to solve problems that don&amp;#8217;t yet exist is to help them develop the ways of thinking that are characteristic of mathematics and science.&amp;#8221; The approach stresses depth rather than breadth, often presenting long problems that extend throughout an entire class period or even more than one class period.
 &lt;P&gt;
@@ -376,21 +332,17 @@ The year is divided into four major topics of unequal length:
 
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2009-03-26 09:48:14</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">3</column>
-            <column name="course_num">326</column>
+        <table name="courses">
+            <column name="number">326</column>
             <column name="full_name">Intermediate Algebra</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">intalg</column>
             <column name="schedule_name">Int Alg</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This course is designed for students wishing to strengthen their algebraic skills prior to enrolling in Algebra II. The course will reinforce the use of algebraic notation to describe mathematical patterns; build algebraic fluency and intuition; work on mastery in solving first- and second-degree equations and inequalities; study functions, functional notation, and the use of linear functions as mathematical models; review basic properties and uses of exponents; explore the solution of linear systems; and study the analytical geometry of the line. Many of the skills required for mastery of the mathematics section of the MCAS exam will be dealt with during the course. Students will make use of graphing calculators and spreadsheets to develop their skills and understanding of the concepts described above.</column>
-            <column name="logo_URL">intalg4-logo4.gif</column>
+            <column name="description">This course is designed for students wishing to strengthen their algebraic skills prior to enrolling in Algebra II. The course will reinforce the use of algebraic notation to describe mathematical patterns; build algebraic fluency and intuition; work on mastery in solving first- and second-degree equations and inequalities; study functions, functional notation, and the use of linear functions as mathematical models; review basic properties and uses of exponents; explore the solution of linear systems; and study the analytical geometry of the line. Many of the skills required for mastery of the mathematics section of the MCAS exam will be dealt with during the course. Students will make use of graphing calculators and spreadsheets to develop their skills and understanding of the concepts described above.</column>
             <column name="info">&lt;p&gt;This course will focus on several major themes,including: the concepts and notation of functions and algebraic expressions, the use of algebraic notation to describe mathematical patterns, solving first- and second-degree equations and inequalities, the use of equations as mathematical models and systems of equations.&lt;/p&gt;
 &lt;p&gt;Students will build fluency in working with algebraic expressions, including fractions and exponents through various activities. Students may see the same question asked in several different ways, building mathematical reading comprehension.&lt;/p&gt;
 &lt;p&gt;This course is designed to prepare students for succesful completion of Algebra II. Many of the skills required for mastery of the MCAS exam will be dealt with during the course.&lt;/p&gt;
@@ -436,24 +388,20 @@ http://www.interactivestuff.org/sums4fun/decchall.html&quot;&gt;The Decimal Chal
 &lt;p&gt;&lt;a href=&quot;http://www.funbrain.com/algebra/index.html&quot;&gt;Order of Operations&lt;/a&gt;&lt;/p&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2008-05-20 08:17:09</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">4</column>
-            <column name="course_num">331</column>
+        <table name="courses">
+            <column name="number">331</column>
             <column name="full_name">Algebra II Honors</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">alg2h</column>
             <column name="schedule_name">Alg 2 H</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This course builds upon previous work in Algebra I and Geometry by pursuing algebraic ideas in greater depth and breadth. Topics and subtopics include systems of equations and inequalities of the first and second degrees; polynomial, exponential, logarithmic, and other functions in both explicit and recursive forms; the theory of functions, including function representations, inverses, composition, domain and range; matrices; transformations of graphs; an introduction to sequences, emphasizing explicit and recursive definitions; counting, probability, and combinatorics; and an introduction to statistics. Computer programming is introduced as a topic in itself and is used throughout the course, as are graphing calculators. There is a balance between mathematical theory and its application to many endeavors, particularly mathematical modeling, cryptography, linear programming, and game theory. In all these contexts, students are expected to develop and demonstrate skills and concepts at an honors level.</column>
-            <column name="logo_URL">alg2h-logo4.gif</column>
+            <column name="description">This course builds upon previous work in Algebra I and Geometry by pursuing algebraic ideas in greater depth and breadth. Topics and subtopics include systems of equations and inequalities of the first and second degrees; polynomial, exponential, logarithmic, and other functions in both explicit and recursive forms; the theory of functions, including function representations, inverses, composition, domain and range; matrices; transformations of graphs; an introduction to sequences, emphasizing explicit and recursive definitions; counting, probability, and combinatorics; and an introduction to statistics. Computer programming is introduced as a topic in itself and is used throughout the course, as are graphing calculators. There is a balance between mathematical theory and its application to many endeavors, particularly mathematical modeling, cryptography, linear programming, and game theory. In all these contexts, students are expected to develop and demonstrate skills and concepts at an honors level.</column>
             <column name="info">&lt;H2&gt;&lt;A NAME=Syllabus&gt;&lt;/a&gt;Syllabus&lt;/h2&gt;
 
-&lt;P&gt;There are five major topics during the year:&lt;/p&gt;
+&lt;P&gt;There are four major topics during the year:&lt;/p&gt;
 
 &lt;P&gt;Topic 1, Introduction to Abstract Algebra, sets the stage for the entire year. The class learns about sets, relations, binary operations, and functions. Functions are studied in many ways, as rules, machines, tables, mapping diagrams, and graphs. Composition of functions, inverses of functions, transformations of
 graphs, and recursive vs. explicit definitions are all examined.
@@ -474,14 +422,7 @@ This application includes a function-based approach to cryptography using
 classical ciphers such as substitution and Vigenere, modern
 encryption with matrices and RSA, and a touch of cryptanalysis.&lt;/p&gt;
 
-&lt;P&gt;Topic 4, Systems, explores systems of equations and inequalities.
-Students solve systems of linear equations by substitution, linear
-combination, matrices, and graphing. They also solve non-linear
-equations and systems. Solutions to inequalities lead to linear
-programming as an application; other applications include
-mathematical modeling and an introduction to game theory.&lt;/p&gt;
-
-&lt;P&gt;Topic 5, Introduction to Probability, includes systematic counting, combinations and permutations,
+&lt;P&gt;Topic 4, Introduction to Probability, includes systematic counting, combinations and permutations,
 the definition of probability, the multiplication principle, binomial probability, the binomial theorem, and conditional probability. Applications may include genetics, detection of fraud, meedical testing, and manufacturing quality control. &lt;/p&gt;
 
 </column>
@@ -572,8 +513,8 @@ all quizzes count the same, and all tests count the same. Projects can vary grea
 
 &lt;P&gt;Regular attendance is expected and important. If you're
 absent, you're still responsible for any material missed! Make
-up the work ASAP; find out what we did in class by calling a
-classmate, or by sending email to your teacher, or by seeing your
+up the work ASAP; find out what we did in class by looking on this website, calling a
+classmate, sending an email to your teacher, or by seeing your
 teacher in school as soon as you return. You must make up any missed
 tests or quizzes right away. If you absolutely must arrive at class
 late or leave early, do so as rarely as possible.&lt;/p&gt;
@@ -581,7 +522,7 @@ late or leave early, do so as rarely as possible.&lt;/p&gt;
 &lt;P&gt;Our basic rules for class:
 &lt;FONT COLOR=&quot;#CC0000&quot;&gt;First, do no harm&lt;/font&gt;. Don't interfere with anyone else's learning. Second: Commit yourself to a serious attitude and do the work that's expected of you. Third: Become a part of the Algebra 2 Honors community and help your
 classmates learn by participating fully in all class activities, discussions, and projects.&lt;/p&gt;</column>
-            <column name="resources">&lt;P&gt; For the beginning-of-year algebra review, click &lt;A HREF=&quot;/teachers/monzj/alg2h/Summary of Topics for Prospective Algebra II Honors Students.pdf&quot;&gt;HERE&lt;/A&gt;&lt;/p&gt;&lt;P&gt; For the applet to crack the substitution cipher, click &lt;A HREF=&quot;http://www.math.psu.edu/dlittle/java/cryptography/monoalphabetic/index.html&quot;&gt;HERE&lt;/A&gt;&lt;/p&gt;&lt;P&gt; For the Fathom Correlation Exercise, click &lt;A HREF=&quot;/teachers/monzj/alg2h/Scatterplot Correlation Exercise.ftm&quot;&gt;HERE&lt;/A&gt;&lt;/p&gt;&lt;P&gt; Mark your calendars: our first quarter test days are Tuesday, September 22 and Wednesday, October 28.&lt;/p&gt;&lt;P&gt; There are many good interactive algebra review activities at  &lt;A HREF=&quot;http://www.analyzemath.com&quot;&gt; ANALYZEMATH. &lt;/A&gt;&lt;/p&gt; &lt;P&gt; Click here for &lt;A HREF=&quot;/teachers/monzj/alg2h/Six Data Sets.ftm&quot;&gt;SIX DATA SETS&lt;/A&gt;&lt;/p&gt;
+            <column name="resources">&lt;P&gt; For the beginning-of-year algebra review, click &lt;A HREF=&quot;https://dl.dropbox.com/u/49187641/Summary%20of%20Topics%20for%20Prospective%20Algebra%20II%20Honors%20Students-2.pdf&quot;&gt;HERE&lt;/A&gt;&lt;/p&gt;&lt;P&gt; For the applet to crack the substitution cipher, click &lt;A HREF=&quot;http://www.math.psu.edu/dlittle/java/cryptography/monoalphabetic/index.html&quot;&gt;HERE&lt;/A&gt;&lt;/p&gt;&lt;P&gt; For the Fathom Correlation Exercise, click &lt;A HREF=&quot;/teachers/monzj/alg2h/Scatterplot Correlation Exercise.ftm&quot;&gt;HERE&lt;/A&gt;&lt;/p&gt;&lt;P&gt; Mark your calendars: our first quarter test days are Tuesday, September 22 and Wednesday, October 28.&lt;/p&gt;&lt;P&gt; There are many good interactive algebra review activities at  &lt;A HREF=&quot;http://www.analyzemath.com&quot;&gt; ANALYZEMATH. &lt;/A&gt;&lt;/p&gt; &lt;P&gt; Click here for &lt;A HREF=&quot;/teachers/monzj/alg2h/Six Data Sets.ftm&quot;&gt;SIX DATA SETS&lt;/A&gt;&lt;/p&gt;
 &lt;P&gt; For the Towers of Hanoi applet, click &lt;A HREF=&quot;http://illuminations.nctm.org/ActivityDetail.aspx?ID=40&quot;&gt;TOWERS OF HANOI&lt;/A&gt;&lt;/p&gt;
  &lt;P&gt;For the Fathom, Excel, or .PDF files for the Statistics Project, click &lt;A HREF=&quot;/teachers/monzj/alg2h/StatProjectDataRevised.ftm&quot;&gt;FATHOM PROJECT  DATA&lt;/A&gt; or &lt;A HREF=&quot;/teachers/monzj/alg2h/Stat Project Data Revised.xls&quot;&gt;EXCEL PROJECT DATA&lt;/A&gt;or &lt;A HREF=&quot;/teachers/monzj/alg2h/Stat Project Data Revised.pdf&quot;&gt;PDF PROJECT  DATA&lt;/A&gt;.&lt;/P&gt; 
 &lt;P&gt;For the Fathom activity on pro sports salaries, click &lt;A HREF=&quot;/teachers/monzj/alg2h/Baseball Data 2006.ftm&quot;&gt;BASEBALL SALARIES&lt;/A&gt; or &lt;A HREF=&quot;/teachers/monzj/alg2h/Football Data 2006.ftm&quot;&gt;FOOTBALL SALARIES&lt;/A&gt;.&lt;/P&gt; 
@@ -709,21 +650,17 @@ classmates learn by participating fully in all class activities, discussions, an
 
 &lt;P&gt;&lt;/p&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2011-08-29 12:51:36</column>
+            <column name="updated_at">2012-09-04 10:53:00</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">5</column>
-            <column name="course_num">332</column>
+        <table name="courses">
+            <column name="number">332</column>
             <column name="full_name">Algebra II</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">alg2</column>
             <column name="schedule_name">Alg 2</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This course builds upon previously studied topics from Algebra I and Geometry. It develops skills and emphasizes applications of those skills. Major topics include quadratic functions, exponential and logarithmic functions, matrices, systems of equations, linear programming, cryptography, and number theory. Use of a graphing calculator is an essential component of this course; students will need access to a TI-83 or -84 calculator. Students will become more proficient in the application of technology to the study of mathematics. Applications of mathematics will be emphasized throughout the course.</column>
-            <column name="logo_URL">alg2-logo4.gif</column>
+            <column name="description">This course builds upon previously studied topics from Algebra I and Geometry. It develops skills and emphasizes applications of those skills. Major topics include quadratic functions, exponential and logarithmic functions, matrices, systems of equations, linear programming, cryptography, and number theory. Use of a graphing calculator is an essential component of this course; students will need access to a TI-83 or -84 calculator. Students will become more proficient in the application of technology to the study of mathematics. Applications of mathematics will be emphasized throughout the course.</column>
             <column name="info">&lt;p&gt;Students, parents, colleagues:&lt;/p&gt;
          
          &lt;p&gt;This website helps you keep up-to-date with the
@@ -986,23 +923,19 @@ tests or quizzes right away.&lt;/p&gt;
 --&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2011-04-24 10:45:48</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">6</column>
-            <column name="course_num">333</column>
+        <table name="courses">
+            <column name="number">333</column>
             <column name="full_name">Topics in Algebra II</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">topics</column>
             <column name="schedule_name">Topics</column>
             <column name="semesters">3</column>
-            <column name="half_time">1</column>
-            <column name="credits">2.5</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This course is designed for students who
+            <column name="description">This course is designed for students who
 have the interest and motivation to succeed in Algebra II but who need additional time to master the material of that course.
 The Topics course offers students an opportunity for additional instruction on topics currently being studied in Algebra II, helps students diagnose background weaknesses, and offers help in remediating those weaknesses. The course improves both algebraic and arithmetic skills needed for success in higher math courses. This is a pass/fail course with little outside homework required. This course meets 2.5 blocks per eight-day cycle.</column>
-            <column name="logo_URL">topics-logo4.gif</column>
             <column name="info">&lt;H1&gt;&lt;CENTER&gt;&lt;FONT FACE=&quot;Arial&quot;&gt; WELCOME TO TOPICS IN ALGEBRA II&lt;/font&gt;&lt;/center&gt;&lt;/h1&gt;
 
 &lt;H2&gt;&lt;FONT FACE=&quot;Arial&quot;&gt;The Course &lt;/font&gt;&lt;/h2&gt;
@@ -1071,22 +1004,18 @@ href=&quot;http://www.brainbashers.com/puzzles.asp&quot;&gt;Brainbashers&lt;/a&g
 &lt;A
 HREF=&quot;http://www.cryptograms.org/&quot;&gt;Try Solving Cryptograms!&lt;/a&gt;</column>
             <column name="has_assgts">0</column>
-            <column name="updated_at">2012-06-21 08:43:03</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">7</column>
-            <column name="course_num">334</column>
+        <table name="courses">
+            <column name="number">334</column>
             <column name="full_name">Computer Science: Concepts &amp; Applications</column>
             <column name="short_name">Comp Sci: Concepts &amp; Apps</column>
-            <column name="course_id">csca</column>
             <column name="schedule_name">CSCA</column>
             <column name="semesters">2</column>
-            <column name="half_time">0</column>
-            <column name="credits">2.5</column>
             <column name="num_occurrences">3</column>
-            <column name="prog_of_studies_descr">This course is intended for students who want to broaden and deepen their knowledge about computers.
+            <column name="description">This course is intended for students who want to broaden and deepen their knowledge about computers. 
 Topics will include the design and structure of databases and spreadsheets, the internal workings of computers, the history of computing, artificial intelligence, and how the Internet works.</column>
-            <column name="logo_URL">csca-logo4.gif</column>
             <column name="info">&lt;p&gt;This lab-based course is intended for students who want to broaden and deepen their knowledge of computers in areas other than programming. Topics include the design and structure of databases and spreadsheets, the internal workings of computers, the history of computing, artificial intelligence, and how the Internet works.&lt;/p&gt;
 
 &lt;h3&gt;Themes:&lt;/h3&gt;
@@ -1246,20 +1175,17 @@ Whether you volunteer or not, you will be called on from time to time anyway, an
 &lt;li&gt;&lt;a href=&quot;http://www.zabaware.com/webhal&quot;&gt;Web Hal&lt;/a&gt;&lt;/li&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2010-04-27 12:24:51</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">8</column>
-            <column name="course_num">336</column>
+        <table name="courses">
+            <column name="number">336</column>
             <column name="full_name">Computer Science: Introduction to Programming</column>
             <column name="short_name">Comp Sci: Intro Prog</column>
-            <column name="course_id">csip</column>
             <column name="schedule_name">CSIP</column>
             <column name="semesters">1</column>
-            <column name="half_time">0</column>
-            <column name="credits">2.5</column>
             <column name="num_occurrences">3</column>
-            <column name="prog_of_studies_descr">This course is intended for students who want an in-depth introduction
+            <column name="description">This course is intended for students who want an in-depth introduction
 to computer programming. The course
 will prepare students who want to go on to take Advanced Placement Computer Science
 (APCS), as well as those who do not intend to take APCS later on. Students learn to design,
@@ -1267,7 +1193,6 @@ write, and test computer programs, using the DrScheme programming language.
 Course topics include design recipes,
 algorithms,
 procedures, functions, variables and data types, simple and compound data structures, recursion, and debugging.</column>
-            <column name="logo_URL">csip-logo4.gif</column>
             <column name="info">	&lt;h2&gt;Computer Science: Intro to Programming&lt;br&gt;
 (Course 336)&lt;/h2&gt;
 
@@ -1359,21 +1284,17 @@ knowledge to the task of writing a video game or other substantial application.&
 &lt;/ul&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-01-12 09:02:34</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">9</column>
-            <column name="course_num">341</column>
+        <table name="courses">
+            <column name="number">341</column>
             <column name="full_name">Honors Precalculus</column>
             <column name="short_name">Honors Precalculus</column>
-            <column name="course_id">precalch</column>
             <column name="schedule_name">Hon Precalc</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">Trigonometry and its applications, conic sections, polynomials, complex numbers and polar coordinates, sequences and series, limits, fractals, and mathematical induction are some of the topics studied. Students will use graphing calculators regularly in this course as well as a variety of computer software. This course is a recommended prerequisite for any student considering enrollment in AB or BC Calculus (Course 361 or 371).</column>
-            <column name="logo_URL">honorsprecalc-1.gif</column>
+            <column name="description">Trigonometry and its applications, conic sections, polynomials, complex numbers and polar coordinates, sequences and series, limits, fractals, and mathematical induction are some of the topics studied. Students will use graphing calculators regularly in this course as well as a variety of computer software. This course is a recommended prerequisite for any student considering enrollment in AB or BC Calculus (Course 361 or 371).</column>
             <column name="info">&lt;p&gt;Honors Precalculus deepens and broadens students&amp;#146; previous mathematical work. Major topics include trigonometry and its applications, polynomials, complex numbers, polar coordinates, sequences and series, limits, fractals, and mathematical induction. Computer programming is integrated into the mathematical work throughout the course, as are graphing calculators. There is a careful balance between mathematical theory and its application to many endeavors, such as navigation, economics, fractals, chaos, and the physics of motion, light, and sound. In all these contexts, students are expected to work hard to develop and demonstrate skills and concepts at an honors level.&lt;/p&gt;
 		&lt;p&gt;There are three major units during the year:&lt;/p&gt;
 		&lt;p&gt;&lt;strong&gt;Unit 1 &lt;/strong&gt; &amp;#8212; &lt;strong&gt; &lt;/strong&gt;&lt;em&gt; Expanding Trigonometry&lt;/em&gt; &amp;#8212; consists of four related modules:
@@ -1732,21 +1653,17 @@ including use of sigma notation.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 &lt;/ol&gt; 
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-06-07 08:51:04</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">10</column>
-            <column name="course_num">342</column>
+        <table name="courses">
+            <column name="number">342</column>
             <column name="full_name">Precalculus, Part One</column>
             <column name="short_name">Precalc, Part I</column>
-            <column name="course_id">precalc1</column>
             <column name="schedule_name">Precalc I</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">The content of this course includes trigonometry, complex numbers, polynomials, and probability. Students will be expected to become proficient in the application of technology to the study of mathematics.  They will use graphing calculators regularly throughout the course and also a variety of computer packages as needed. Applications of mathematics will be emphasized throughout the course. Successful completion of the course will prepare students for a college-level discrete mathematics &lt;i&gt;or &lt;/i&gt;precalculus course.  In combination with Precalculus, Part Two, with Statistics (Course 352) or with additional summer work, students will be prepared for calculus.</column>
-            <column name="logo_URL">precalcpart1-1.gif</column>
+            <column name="description">The content of this course includes trigonometry, complex numbers, polynomials, and probability. Students will be expected to become proficient in the application of technology to the study of mathematics.  They will use graphing calculators regularly throughout the course and also a variety of computer packages as needed. Applications of mathematics will be emphasized throughout the course. Successful completion of the course will prepare students for a college-level discrete mathematics &lt;i&gt;or &lt;/i&gt;precalculus course.  In combination with Precalculus, Part Two, with Statistics (Course 352) or with additional summer work, students will be prepared for calculus.</column>
             <column name="info">&lt;h2&gt;Themes:&lt;/h2&gt;
 &lt;ol&gt; 
 &lt;li&gt;Provide students with an appreciation of the importance of mathematics in society by emphasizing mathematical applications and models.&lt;/li&gt;&lt;br&gt;
@@ -1846,21 +1763,17 @@ Fractal Geometry of the Mandelbrot Set&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-02-14 13:24:36</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">11</column>
-            <column name="course_num">343</column>
+        <table name="courses">
+            <column name="number">343</column>
             <column name="full_name">Applied Discrete Math Concepts</column>
             <column name="short_name">App Discrete Math</column>
-            <column name="course_id">admc</column>
             <column name="schedule_name">ADMC</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This course offers students who have successfully completed Algebra Two the opportunity to study the application of important mathematical concepts to real world issues and problems.  Students will gain a solid understanding of  fundamental mathematical ideas by developing mathematical models and applying technology while using these models for decision making.  The topics studied might include mathematical models for the study of traffic and the spread of gossip or disease, the use of probability and inferential statistics to make predictions from limited data, applied game theory, mathematical systems for modeling situations ranging from urban geography to political decision making, and numeracy including the history of mankind?s attempts to represent and store numeric data. Students may elect to take the course as a senior elective or as preparation for Course 342.</column>
-            <column name="logo_URL">apptopprecalc-2.gif</column>
+            <column name="description">This course offers students who have successfully completed Algebra Two the opportunity to study the application of important mathematical concepts to real world issues and problems.  Students will gain a solid understanding of  fundamental mathematical ideas by developing mathematical models and applying technology while using these models for decision making.  The topics studied might include mathematical models for the study of traffic and the spread of gossip or disease, the use of probability and inferential statistics to make predictions from limited data, applied game theory, mathematical systems for modeling situations ranging from urban geography to political decision making, and numeracy including the history of mankind?s attempts to represent and store numeric data. Students may elect to take the course as a senior elective or as preparation for Course 342.</column>
             <column name="info">&lt;HTML&gt;
 &lt;!--This file created 12:14 PM  9/3/03 by Claris Home Page version 3.0--&gt;
 &lt;HEAD&gt;
@@ -1963,9 +1876,9 @@ and common sense and will combine those estimates to obtain
 approximate answers to questions such as &quot;How many cans of cat food
 are opened in New York City in one year?&quot; They will explore various
 ways of measuring and comparing risks and factors which influence a
-person's decision to engage in risky behavior.  Students will also develop insight into why certain risks are overrated in our society compared to others that are underrated&lt;/P&gt;
+person's decision to engage in risky behavior.  Students will also develop insight into why certain risks are overrated in our society compared to others that are underrated.&lt;/P&gt;
 &lt;P&gt;&lt;B&gt;Topic 3, Graph Theory&lt;/B&gt;, introduces students to important concepts in graph theory such as Eulerian Paths and Hamiltonian Paths, graph coloring and the four color theorem.  Students will learn how graph theory can model social networks, the spread of disease, as well as the structure of corporations. The attributes of each graph can have many important implications from the efficiency of interactions to the best way to prevent the spread of disease.  &lt;/P&gt;
-&lt;P&gt;&lt;B&gt;Topic4, Queueing Theory and Optimization&lt;/B&gt;, allows students to develop strategies for modeling different types of lines. Students will learn which queueing discipline is most efficient and how to determine the number of servers needed for different customer frequencies.  Students will also learn how to predict the length of a line using Little's Law.&lt;/P&gt;
+&lt;P&gt;&lt;B&gt;Topic 4, Queueing Theory and Optimization&lt;/B&gt;, allows students to develop strategies for modeling different types of lines. Students will learn which queueing discipline is most efficient and how to determine the number of servers needed for different customer frequencies.  Students will also learn how to predict the length of a line using Little's Law. Students will also use the Manhattan Metric to optimize efficiency for the location of ambulances, school districting lines, and location of trash collectors.&lt;/P&gt;
 &lt;P&gt;&lt;B&gt;Topic 5, Game Theory&lt;/B&gt;, offers students the opportunity to
 learn a mathematical model which has wide application to conflict
 situations. Students will determine payoffs for various strategies
@@ -1979,7 +1892,7 @@ deterrence, from honor systems to using weather forecasts, from board
 games to deciding what locations to protect from terrorist
 attack.&lt;/P&gt;
 
-&lt;P&gt;&lt;B&gt;Topic 6, Distributed Systems&lt;/B&gt;, explores systems where
+&lt;P&gt;&lt;B&gt;Topic 6, Emergence&lt;/B&gt;, explores systems where
 locally defined behavior applied to a large number of individuals
 results in surprising patterns on a global scale. Students will use
 the Net logo computer program to simulate events similar to traffic
@@ -1989,17 +1902,16 @@ jams and ant colonies.&lt;/P&gt;
 
 &lt;H2&gt;Materials:&lt;/H2&gt;
 
-&lt;P&gt;Texts: For All Practical Purposes, written by a committee and
+&lt;P&gt;Texts: &lt;u&gt;For All Practical Purposes&lt;/u&gt;, written by a committee and
 published by COMAP (Consortium for Mathematics and Its Applications)
-sixth edition; supplemented extensively by teacher-written
+sixth edition; &lt;u&gt;Workshop Statistics&lt;/u&gt;, written by Rossman, Chance and Oehsen, and published by Key College Publishing; supplemented extensively by teacher-written
 materials.&lt;/P&gt;
 
 &lt;P&gt;Videos/film: COMAP's For All Practical Purposes video and a
 variety of brief excerpts from movies demonstrating relevant
 mathematical concepts.&lt;/P&gt;
 
-&lt;P&gt;Software: Spreadsheets, graphing software, Internet brousers, the
-Minitab Statistical package, and Net Logo are all used in the
+&lt;P&gt;Software: Spreadsheets, graphing software, Internet browsers, and Net Logo are all used in the
 course.&lt;/P&gt;
 
 &lt;P&gt;Calculators: Students are required to use a graphing calculator,
@@ -2335,21 +2247,17 @@ HREF=&quot;http://serendip.brynmawr.edu/playground/pd.html&quot;&gt;Prisoner's D
 &lt;A
 HREF=&quot;http://www.iterated-prisoners-dilemma.net/&quot;&gt;Repeated Prisoner's Dilemma&lt;/a&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-04-05 15:07:10</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">12</column>
-            <column name="course_num">352</column>
+        <table name="courses">
+            <column name="number">352</column>
             <column name="full_name">Precalculus, Part Two, with Statistics</column>
             <column name="short_name">Precalc, Part II</column>
-            <column name="course_id">precalc2</column>
             <column name="schedule_name">Precalc II</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This course provides a detailed study of precalculus and discrete mathematics topics. Included in the course are analysis of functions and limits as applied to rational, exponential, and trigonometric functions; recursion and mathematical induction; complex numbers; and polar coordinates.  Additional work may be done in logic, combinatorics, and with the concept of derivatives and  integrals. Successful completion of this course will provide a strong background for college-level work in calculus and other mathematics related courses in engineering and science programs.</column>
-            <column name="logo_URL">precalcpart2-2.gif</column>
+            <column name="description">This course provides a detailed study of precalculus and discrete mathematics topics. Included in the course are analysis of functions and limits as applied to rational, exponential, and trigonometric functions; recursion and mathematical induction; complex numbers; and polar coordinates.  Additional work may be done in logic, combinatorics, and with the concept of derivatives and  integrals. Successful completion of this course will provide a strong background for college-level work in calculus and other mathematics related courses in engineering and science programs.</column>
             <column name="info">&lt;H2&gt;Course Description&lt;/h2&gt;
 &lt;p&gt;Precalculus, Part Two, is a combination of two one semester courses. The first semester is an introduction to calculus, and the second semester is an introduction to inferential statistics. Most students will take both semesters; however, those who are concurrently enrolled in AP Statistics will take only the first semester (introduction to calculus).  Successful completion of this course will provide a strong background for college level work in either calculus or statistics as well as and other mathematics related courses in engineering and science programs.&lt;/p&gt;
 
@@ -2489,21 +2397,17 @@ need to ask for it. You are not alone in this venture.&lt;/P&gt;</column>
 &lt;P&gt; For a copy of the Z- or T-probability tables, click on &lt;A HREF=&quot;/teachers/monzj/precalc2/NormalProbabilityTables.pdf&quot;&gt;Z- and T-TABLES&lt;/A&gt;.&lt;/P&gt;&lt;&lt;P&gt;For the MINITAB Random Rectangle sheet, click &lt;A HREF=&quot;/teachers/monzj/precalc2/Random Rectangles.MPJ&quot;&gt;HERE&lt;/A&gt;.&lt;/P&gt;
 &lt;P&gt;For the Sampling Distributions Activity click &lt;A HREF=&quot;/teachers/monzj/precalc2/Sampling SIM_1.exe&quot;&gt;HERE.&lt;/A&gt;&lt;/P&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-01-24 12:58:03</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">13</column>
-            <column name="course_num">361</column>
+        <table name="courses">
+            <column name="number">361</column>
             <column name="full_name">Calculus AB</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">calcab</column>
             <column name="schedule_name">Calc AB</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">&lt;B&gt;Students in this course will study properties of elementary functions and concepts of calculus (limits, derivatives, integrals, and applications). This course will prepare students to take the Advance Placement Calculus AB examination in May.&lt;/B&gt;</column>
-            <column name="logo_URL">calcab-logo4.gif</column>
+            <column name="description">&lt;B&gt;Students in this course will study properties of elementary functions and concepts of calculus (limits, derivatives, integrals, and applications). This course will prepare students to take the Advance Placement Calculus AB examination in May.&lt;/B&gt;</column>
             <column name="info">&lt;H1&gt;&lt;CENTER&gt;&lt;FONT FACE=&quot;Arial&quot;&gt; WELCOME TO AB
 CALCULUS&lt;/font&gt;&lt;/center&gt;&lt;/h1&gt;
 
@@ -2610,14 +2514,14 @@ CALCULUS&lt;/font&gt;&lt;/center&gt;&lt;/h1&gt;
 &lt;UL&gt;
    &lt;LI&gt;&lt;FONT FACE=&quot;Arial&quot;&gt;Quizzes&lt;/font&gt;&lt;/li&gt;
    
-   &lt;LI&gt;&lt;FONT FACE=&quot;Arial&quot;&gt;Tests (worth 2 quizzes)&lt;/font&gt;&lt;/li&gt;
+   &lt;LI&gt;&lt;FONT FACE=&quot;Arial&quot;&gt;Tests&lt;/font&gt;&lt;/li&gt;
 
 &lt;P&gt;*****&lt;FONT FACE=&quot;Arial&quot;&gt;All or parts of tests and quizzes may be
 &lt;/font&gt;&lt;FONT FACE=&quot;Arial&quot; COLOR=&quot;#003399&quot;&gt;&lt;B&gt;NONCALCULATOR&lt;/b&gt;&lt;/font&gt;*****&lt;/p&gt;
 
 &lt;P&gt;&lt;/p&gt;
    
-   &lt;LI&gt;&lt;FONT FACE=&quot;Arial&quot;&gt;Homework (worth 1/2 quiz)&lt;/font&gt;&lt;/li&gt;
+   &lt;LI&gt;&lt;FONT FACE=&quot;Arial&quot;&gt;Homework&lt;/font&gt;&lt;/li&gt;
    
    &lt;LI&gt;&lt;FONT FACE=&quot;Arial&quot;&gt;Classwork and participation (used for borderline grades
    )&lt;/font&gt;&lt;/li&gt;
@@ -2675,21 +2579,17 @@ CALCULUS&lt;/font&gt;&lt;/center&gt;&lt;/h1&gt;
 http://www.elmhurst.edu/~abigailh/fa00/math151-01/m151-01worksheets/worksheet8/worksheet8key.html&quot;&gt;http://www.elmhurst.edu/~abigailh/fa00/math151-01/m151-01worksheets/worksheet8/worksheet8key.html
 &lt;/a&gt;&lt;/p&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2007-05-18 14:24:28</column>
+            <column name="updated_at">2012-09-04 09:15:24</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">14</column>
-            <column name="course_num">371</column>
+        <table name="courses">
+            <column name="number">371</column>
             <column name="full_name">Calculus BC</column>
             <column name="short_name">NULL</column>
-            <column name="course_id">calcbc</column>
             <column name="schedule_name">Calc BC</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">The topics in this course range from elementary calculus concepts to infinite series and differential equations. This course prepares students to take the Advanced Placement Calculus BC examination in May.</column>
-            <column name="logo_URL">calcbc-logo4.gif</column>
+            <column name="description">The topics in this course range from elementary calculus concepts to infinite series and differential equations. This course prepares students to take the Advanced Placement Calculus BC examination in May.</column>
             <column name="info">&lt;H2&gt;&lt;B&gt;Who should take BC Calculus?&lt;/B&gt;&lt;/H2&gt;
 
 &lt;P&gt;&lt;B&gt;Calculus BC &lt;/B&gt;is a two semester course designed to provide
@@ -2756,21 +2656,17 @@ Solutions that are identical may not be given credit.&lt;/P&gt;
             <column name="resources">&lt;P&gt;For information about the AP Exam in BC Calculus go to &lt;A HREF=&quot;http://apcentral.collegeboard.com/article/0,1281,151-162-0-4348,00.html&quot;&gt;AP
 Central&lt;/A&gt;.&lt;/P&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2006-09-04 10:48:08</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">15</column>
-            <column name="course_num">381</column>
+        <table name="courses">
+            <column name="number">381</column>
             <column name="full_name">Advanced Placement Computer Science</column>
             <column name="short_name">AP Comp Sci</column>
-            <column name="course_id">apcs</column>
             <column name="schedule_name">AP CS</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">The emphasis of this course is on the logical thinking and understanding of computers necessary to solve problems by writing computer programs. The course studies programming methodology, algorithms, and data structures.  Students will learn the subset of Java identified by the College Entrance Examination Board. The course generally follows the syllabus suggested for preparation for the Advanced Placement Computer Science AB examination, including the current case study. Students need have no prior knowledge of Java. Students with no programming background should expect to spend significant amounts of time working with computers during the first quarter or should take Computer Science: Introduction to Programming (Course 336) prior to enrolling in this course. Work may be done using school computers or on the student&amp;#8217;s home computer. Successful completion of this course prepares students for the Advanced Placement Computer Science AB examination in May. (Students who find the first semester overly challenging may elect to take the A level examination instead.)</column>
-            <column name="logo_URL">apcs-logo4.gif</column>
+            <column name="description">The emphasis of this course is on the logical thinking and understanding of computers necessary to solve problems by writing computer programs. The course studies programming methodology, algorithms, and data structures.  Students will learn the subset of Java identified by the College Entrance Examination Board. The course generally follows the syllabus suggested for preparation for the Advanced Placement Computer Science AB examination, including the current case study. Students need have no prior knowledge of Java. Students with no programming background should expect to spend significant amounts of time working with computers during the first quarter or should take Computer Science: Introduction to Programming (Course 336) prior to enrolling in this course. Work may be done using school computers or on the student&amp;#8217;s home computer. Successful completion of this course prepares students for the Advanced Placement Computer Science AB examination in May. (Students who find the first semester overly challenging may elect to take the A level examination instead.)</column>
             <column name="info">&lt;HTML&gt;
 &lt;!--This file created 4:12 PM  9/7/2004 by Claris Home Page version 3.0--&gt;
 &lt;HEAD&gt;
@@ -2918,26 +2814,22 @@ Information from the College Board can be obtained at
 &lt;br&gt;
 &lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/SpanishPoems.txt&quot;&gt; Spanish poems&lt;/a&gt; </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2011-09-16 10:14:09</column>
+            <column name="updated_at">2012-08-28 14:21:49</column>
+            <column name="sent">1</column>
         </table>
-        <table name="course_info">
-            <column name="id">16</column>
-            <column name="course_num">391</column>
+        <table name="courses">
+            <column name="number">391</column>
             <column name="full_name">Advanced Placement Statistics</column>
             <column name="short_name">AP Statistics</column>
-            <column name="course_id">apstats</column>
             <column name="schedule_name">AP Stats</column>
             <column name="semesters">12</column>
-            <column name="half_time">0</column>
-            <column name="credits">5.0</column>
             <column name="num_occurrences">5</column>
-            <column name="prog_of_studies_descr">This course covers the statistics syllabus prepared by the College Board and is equivalent to a college-level statistics course.
+            <column name="description">This course covers the statistics syllabus prepared by the College Board and is equivalent to a college-level statistics course.
 Major topics include descriptive statistics; data collection, sampling, and surveys;
 probability; and statistical inference including confidence intervals and tests of significance.
 Students will use graphing calculators with statistical capabilities as well as selected computer statistics software.
 This is a course for students interested in pursuing areas of study requiring statistical analysis of experiments and those who have high motivation and demonstrated mathematical achievement who are interested in working at the college level.
-Other students interested in statistics should enroll in Math V (Course 352) where a unit on statistical inference is taught.</column>
-            <column name="logo_URL">apstats-logo4.gif</column>
+Other students interested in statistics should enroll in Precalculus Part Two (Course 352), where a unit on statistical inference is taught.</column>
             <column name="info">&lt;H1&gt;Who should take AP Statistics?&lt;/H1&gt;
 
 &lt;P&gt;Juniors and seniors who are interested in pursuing careers that
@@ -3003,11 +2895,13 @@ Text:  &lt;i&gt;Stats: Modeling the World&lt;/i&gt;, Bock, Velleman, DeVeaux, Pe
 &lt;P&gt;Semester grades are computed by finding the average of the two quarters that make up the particular semester. The year grade is the average of the four quarters. For seniors, the 4th quarter will be weighted one-half as much as the other 3 quarters. &lt;/p&gt;
 
 </column>
-            <column name="resources">&lt;P&gt; Answers to the practice multiple choice problems:  &lt;A HREF=&quot;http://www.westonmath.org/teachers/monzj/apstats/Multiple Choice Answers.pdf&quot;&gt;MULTIPLE CHOICE ANSWERS.&lt;/A&gt; &lt;/P&gt;&lt;p&gt;REVIEW SESSIONS THURSDAY MAY 10 AND MONDAY MAY 14 FROM 7 to 8 PM IN THE MEDIA CENTER!!!!&lt;/p&gt;&lt;P&gt;Here are some links to the correlation activities &lt;A HREF=&quot;http://www.westonmath.org/teachers/monzj/alg2h/Scatterplot%20Correlation%20Exercise.ftm&quot;&gt;FATHOM CORRELATION EXERCISE&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://istics.net/stat/Correlations/&quot;&gt;CORRELATION GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://www.ruf.rice.edu/~lane/stat_sim/reg_by_eye/index.html&quot;&gt;REGRESSION BY EYE GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is a link to the midterm course evaluation &lt;A HREF=&quot;https://docs.google.com/a/my.weston.org/spreadsheet/viewform?formkey=dHFHNUtEQS0xWTBxaHVRTE0yT2xndnc6MA&quot;&gt;MIDTERM EVALUATION.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link to  &lt;A HREF=&quot;https://oli.web.cmu.edu/openlearning/forstudents/freecourses&quot;&gt;CARNEGIE MELLON ONLINE STATS.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; Here is a link to  &lt;A HREF=&quot;http://www.unpracticalmath.com/applets/virtual_dice.html&quot;&gt;VIRTUAL DICE.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; If you need some extra review, or if you find our textbook a bit unclear, try these online resources:  &lt;A HREF=&quot;http://www.stattrek.com&quot;&gt;STAT TREK.&lt;/A&gt; and  &lt;A HREF=&quot;http://onlinestatbook.com&quot;&gt;THE ONLINE STAT TEXTBOOK.&lt;/A&gt; &lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;http://www.causeweb.org/repository/Minitab/Minitab.pdf&quot;&gt;INTRO TO MINITAB.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/TextingData.mpj&quot;&gt;TEXTING DATA.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/WATER TEST DATA.xlsx&quot;&gt;WATER TEST DATABASE.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; You can find a program for the Chi-Square Goodness of Fit Test on the TI-83 at &lt;A HREF=&quot;http://staweb.sta.cathedral.org/departments/math/mhansen/public_html/01stat/programs/chisqgof.htm&quot;&gt;Chi-Square Test.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt; Log in to the probability experiment at &lt;A HREF=&quot;http://veconlab.econ.virginia.edu/login.php&quot;&gt;Probability Experiment.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt;For information about the AP Exam in AP Statistics go to &lt;A HREF=&quot;http://www.collegeboard.com/ap/students/statistics/index.html&quot;&gt;AP
+            <column name="resources">&lt;P&gt;Read the following article:  &lt;A HREF=&quot;http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&quot;&gt;HOW COMPANIES LEARN YOUR SECRETS&quot;.&lt;/A&gt; &lt;/P&gt;
+&lt;P&gt;Here are some links to the correlation activities &lt;A HREF=&quot;http://www.westonmath.org/teachers/monzj/alg2h/Scatterplot%20Correlation%20Exercise.ftm&quot;&gt;FATHOM CORRELATION EXERCISE&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://istics.net/stat/Correlations/&quot;&gt;CORRELATION GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://www.ruf.rice.edu/~lane/stat_sim/reg_by_eye/index.html&quot;&gt;REGRESSION BY EYE GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is a link to the midterm course evaluation &lt;A HREF=&quot;https://docs.google.com/a/my.weston.org/spreadsheet/viewform?formkey=dHFHNUtEQS0xWTBxaHVRTE0yT2xndnc6MA&quot;&gt;MIDTERM EVALUATION.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link to  &lt;A HREF=&quot;https://oli.web.cmu.edu/openlearning/forstudents/freecourses&quot;&gt;CARNEGIE MELLON ONLINE STATS.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; Here is a link to  &lt;A HREF=&quot;http://www.unpracticalmath.com/applets/virtual_dice.html&quot;&gt;VIRTUAL DICE.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; If you need some extra review, or if you find our textbook a bit unclear, try these online resources:  &lt;A HREF=&quot;http://www.stattrek.com&quot;&gt;STAT TREK.&lt;/A&gt; and  &lt;A HREF=&quot;http://onlinestatbook.com&quot;&gt;THE ONLINE STAT TEXTBOOK.&lt;/A&gt; &lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;http://www.causeweb.org/repository/Minitab/Minitab.pdf&quot;&gt;INTRO TO MINITAB.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/TextingData.mpj&quot;&gt;TEXTING DATA.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/WATER TEST DATA.xlsx&quot;&gt;WATER TEST DATABASE.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; You can find a program for the Chi-Square Goodness of Fit Test on the TI-83 at &lt;A HREF=&quot;http://staweb.sta.cathedral.org/departments/math/mhansen/public_html/01stat/programs/chisqgof.htm&quot;&gt;Chi-Square Test.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt; Log in to the probability experiment at &lt;A HREF=&quot;http://veconlab.econ.virginia.edu/login.php&quot;&gt;Probability Experiment.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt;For information about the AP Exam in AP Statistics go to &lt;A HREF=&quot;http://www.collegeboard.com/ap/students/statistics/index.html&quot;&gt;AP
 Central&lt;/A&gt;.&lt;/P&gt;
 &lt;P&gt;For the activity on Normal Quantile Plots go to &lt;A HREF=&quot;/teachers/gonzalezd/apstats/normalplot.mpj&quot;&gt;NORMAL PLOTS&lt;/A&gt;.&lt;/P&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-05-15 12:52:28</column>
+            <column name="updated_at">2012-09-04 09:10:26</column>
+            <column name="sent">1</column>
         </table>
     </database>
 </pma_xml_export>
