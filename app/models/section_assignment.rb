@@ -46,41 +46,19 @@ class SectionAssignment
 		return section,assignment
 	end
 	
-	def self.handle_incoming(hash)
-		hash = Hash[hash]
-		section,assignment = self.get_sa(hash)
-
-		name = hash[:name]
-		hash[:use] = (hash.delete(:use_assgt) == 'Y')
-		[:ada, :aa].each {|k| hash.delete(k)}
-
-		puts section.section_assignments.first
-
-		# puts section.section_assignments.where(assignment: assignment, name: name).exists?
-		if section.section_assignments.where(assignment: assignment, name: name).exists?
-			puts hash
-			sa = section.section_assignments.find_by(assignment: assignment, name: name)
-			sa.update_attributes(hash)
-			# sa.due_date = due_date if sa.due_date != due_date
-			# sa.name = name unless sa.name = name
-			# sa.use = use unless sa.use == use
-			sa.save!
-		else
-			puts section.section_assignments.count
-			[:ada, :aa].each {|k| hash.delete(k)}
-			section.section_assignments.create! hash
-			puts section.section_assignments.count
-		end
-	end
-	
 	def self.import_from_hash(hash)
 		section,assignment = self.get_sa(hash)
-
-		hash[:use] = (hash.delete(:use_assgt) == 'Y')
-
-		[:ada, :aa].each {|k| hash.delete(k)}
-		hash[:assignment] = assignment
-		section.section_assignments.create! hash
+		crit = section.section_assignments.where(section: section, assignment: assignment)
+		if crit.exists?
+			sa = crit.first
+			sa.update_attributes(hash)
+			sa.save!
+		else
+			hash[:use] = (hash.delete(:use_assgt) == 'Y')
+			[:ada, :aa].each {|k| hash.delete(k)}
+			hash[:assignment] = assignment
+			section.section_assignments.create! hash
+		end
 	end
 
 
