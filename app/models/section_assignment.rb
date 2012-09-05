@@ -48,14 +48,16 @@ class SectionAssignment
 	
 	def self.import_from_hash(hash)
 		section,assignment = self.get_sa(hash)
-		crit = section.section_assignments.where(section: section, assignment: assignment)
+		
+		crit = section.section_assignments.where(section: section, assignment: assignment, block: hash[:block])
 		if crit.exists?
 			sa = crit.first
-			sa.update_attributes(hash)
+			raise "no section_assignment" unless sa
+			sa.due_date = hash[:due_date]
+			sa.use = hash[:use_assgt]
 			sa.save!
 		else
 			hash[:use] = (hash.delete(:use_assgt) == 'Y')
-			[:ada, :aa].each {|k| hash.delete(k)}
 			hash[:assignment] = assignment
 			section.section_assignments.create! hash
 		end
