@@ -17,7 +17,7 @@ class SectionAssignment
 	scope :after,	->(date) { gt(due_date: date) }
 	scope :past, -> { lt(due_date: future_due_date) }
 	scope :future, -> { gte(due_date: future_due_date) }
-	scope :current, -> { gte(due_date: future_due_date).limit(1) }
+	scope :current, -> { gte(due_date: future_due_date).asc(:due_date).limit(1) }
 	
 	def self.upcoming
 		current = self.current.first
