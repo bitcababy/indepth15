@@ -1,16 +1,16 @@
 require 'spec_helper'
 
 describe Convert do
-	describe 'import_old_file' do
+	describe 'import_xml_file' do
 		it "imports a file using XmlSimple and returns an array of name, content hashes" do
-			res = Convert.import_old_file('teachers.xml')
+			res = Convert.import_xml_file('teachers.xml')
 			res.should be_kind_of Array
 		end
 	end
 	
 	context 'flattening and renaming of keys' do
 		before :each do
-			@res = Convert.import_old_file('teachers.xml')
+			@res = Convert.import_xml_file('teachers.xml')
 		end
 			
 		describe 'one_record' do

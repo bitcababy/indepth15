@@ -64,6 +64,7 @@ module Convert
 			"name"						=> :name
 		},
 	}
+
 	CONVERSIONS = {
 		/^\d+$/ => lambda{|s| s.to_i},
 		/^null$/ => nil,
@@ -72,8 +73,8 @@ module Convert
 		/^false$/ => false,
 	}
 	
-	def self.import_old_file(name)
-		path = File.join(File.join(Rails.root, 'old_data'), name)
+	def self.import_xml_file(name, dir='old_data')
+		path = File.join(File.join(Rails.root, dir), name)
 		imported = ::XmlSimple.xml_in(path,
 				'KeyToSymbol' => true,
 				'GroupTags' => {
@@ -84,6 +85,7 @@ module Convert
 		)
 		imported[:database][:table].collect {|h| h[:column]}
 	end
+	
 		
 	def self.one_record(klass, arr)
 		map = MAPPINGS[klass]
@@ -118,8 +120,8 @@ module Convert
 		end
 	end
 
-	def self.from_hashes(klass, arr)
-		klass.delete_all
+	def self.from_hashes(klass, arr, delete = true)
+		klass.delete_all if delete
 		arr.each {|a| one_record(klass, a)}
 		puts klass.count
 		arr
