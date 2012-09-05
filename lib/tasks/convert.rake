@@ -155,6 +155,15 @@ namespace :data do
 	task :dept => :environment do
 		Department.delete_all
 		make_department
+	
+end
+
+namespace :update do
+	task :assignments => :environment do
+		arr = Convert.import_xml_file "updated_assignments.xml", 'updates'
+		Convert.from_hashes Assignment, arr
+		path = File.join(File.join(Rails.root, 'updates'), 'updated_assignments.xml')
+		puts path
 	end
 end
 
