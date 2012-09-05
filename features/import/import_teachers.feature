@@ -13,8 +13,8 @@ Feature: Import teachers
 	  title: Mr.
 	  default_room: 203
 	  phrase: temp
-	  photo_URL: /files/teachers/abramsj/math4/picture.jpg
-	  personal_hp_URL: /files/teachers/abramsj/math4/quotes.html
+	  photo_URL: /files/abramsj/math4/picture.jpg
+	  personal_hp_URL: /files/abramsj/math4/quotes.html
 	  generic_assgts_msg: Foo
 	  upcoming_assgts_msg: Bar
 	  extra_stuff: 
@@ -29,8 +29,8 @@ Feature: Import teachers
 			 | first_name      | Joshua                                                       |
 			 | honorific       | Mr.                                                          |
 			 | default_root    | 203                                                          |
-			 | photo_url       | /files/teachers/abramsj/math4/picture.jpg |
-			 | personal_hp_url | /files/teachers/abramsj/math4/quotes.html  |
+			 | photo_url       | /files/abramsj/math4/picture.jpg |
+			 | personal_hp_url | /files/abramsj/math4/quotes.html  |
 			 | general_leadin  | Foo                                                          |
 			 | upcoming_leadin | Bar                                                          |
 			

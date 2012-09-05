@@ -38,7 +38,7 @@ EOT
 	<br />
 	</li>
 
-	<li><a href=&quot;/files/teachers/davidsonl/mathteam/permission-form-2011-12.pdf&quot;>Math Team Permission Form</a><br />
+	<li><a href=&quot;/files/davidsonl/mathteam/permission-form-2011-12.pdf&quot;>Math Team Permission Form</a><br />
 	<br />
 	</li>
 
