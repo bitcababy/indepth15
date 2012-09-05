@@ -30,13 +30,16 @@ class Section
 	
 	scope :for_year, ->(y){ where(academic_year: y)}
 	scope :current, ->{ where(academic_year: Settings.academic_year)}
+	scope :for_teacher, ->(t) { where(teacher: t) }
+	scope :for_block, ->(b) { where(block: b) }
+	scope :for_course, ->(c) { where(course: b) }
 	
 	def upcoming_assignments
 		return self.section_assignments.upcoming.asc(:due_date)
 	end
 	
 	def current_assignments
-		return self.section_assignments.current.upcoming.asc(:due_date).limit(1)
+		return self.section_assignments.current.asc(:due_date).limit(1)
 	end
 	
 	def future_assignments
