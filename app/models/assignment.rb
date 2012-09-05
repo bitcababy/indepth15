@@ -29,7 +29,9 @@ class Assignment < TextDocument
 			
 	scope :dupes, ->(a) { where(:assgt_id.gt => a.assgt_id, :content => a.content) }
 	
+
 	index( {assgt_id: 1} )
+	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
 
 	def self.cleanup
 		dupes = {}
