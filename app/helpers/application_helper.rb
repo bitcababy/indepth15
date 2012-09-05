@@ -5,7 +5,7 @@ module ApplicationHelper
 	# include UsersHelper
 
 	def academic_year_string(year)
-		return "#{year-1}—#{year}"
+		return "#{year-1}–#{year}"
 	end
 
 	def is_are_number_mangler(n, word)

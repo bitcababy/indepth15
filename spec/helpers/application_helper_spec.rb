@@ -7,7 +7,7 @@ describe ApplicationHelper do
 
 	describe '#academic_year_string' do
 		it "returns a string for the full academic year" do
-			academic_year_string(2012).should == "2011—2012"
+			academic_year_string(2012).should == "2011–2012"
 		end
 	end
 	
