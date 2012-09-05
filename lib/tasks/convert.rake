@@ -13,10 +13,21 @@ end
 namespace :update do
 	task :assignments => :environment do
 		arr = Convert.import_xml_file "updated_assignments.xml", 'updates'
-		Convert.from_hashes Assignment, arr
-		path = File.join(File.join(Rails.root, 'updates'), 'updated_assignments.xml')
-		puts path
+		Convert.from_hashes Assignment, arr, false
+		# path = File.join(File.join(Rails.root, 'updates'), 'updated_assignments.xml')
+		# puts path
 	end
+	
+	task :section_assignments => :environment do
+		arr = Convert.import_xml_file "updated_sas.xml", 'updates'
+		Convert.from_hashes SectionAssignment, arr, false
+	end
+
+	task :courses => :environment do
+		arr = Convert.import_xml_file "updated_courses.xml", 'updates'
+		Convert.from_hashes Course, arr, false
+	end
+	
 end
 
 task :default do
