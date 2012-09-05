@@ -23,7 +23,7 @@ class Assignment < TextDocument
 			else
 				author = Teacher.find_by(login: hash[:teacher_id])
 				raise "Couldn't find teacher #{hash[:teacher_id]}" unless author
-				[:teacher_id].each { |k| hash.delete(k) }
+				hash.delete(:teacher_id)
 				return Assignment.create! hash.merge(owner: author)
 			end
 		end
