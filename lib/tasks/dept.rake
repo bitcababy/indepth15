@@ -26,7 +26,7 @@ EOT
 	txt = <<EOT
 <h2>WHS Math Department Internal Resources</h2>
 	<ul>
-	<li><a href=&quot;http://www.westonmath.org/AcademicSupport_10-11.pdf&quot;>Academic Support</a><br />
+	<li><a href=&quot;/files/AcademicSupport_10-11.pdf&quot;>Academic Support</a><br />
 
 	</li>
 
@@ -38,7 +38,7 @@ EOT
 	<br />
 	</li>
 
-	<li><a href=&quot;http://www.westonmath.org/teachers/davidsonl/mathteam/permission-form-2011-12.pdf&quot;>Math Team Permission Form</a><br />
+	<li><a href=&quot;/files/teachers/davidsonl/mathteam/permission-form-2011-12.pdf&quot;>Math Team Permission Form</a><br />
 	<br />
 	</li>
 
