@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.3.7deb7
+- http://www.phpmyadmin.net
+-
+- Host: db1.xoala.net
+- Generation Time: Sep 06, 2012 at 10:10 AM
+- Server version: 5.5.19
+- PHP Version: 5.3.3-7+squeeze9
+-->
+
+<pma_xml_export version="1.0">
+    <!--
+    - Database: 'whsmd'
+    -->
+    <database name="whsmd">
+        <!-- Table updated_sas -->
+        <table name="updated_sas">
+            <column name="id">28083</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">H</column>
+            <column name="due_date">2012-09-07</column>
+            <column name="name">2</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614679</column>
+            <column name="date_updated">2012-09-06 08:26:54</column>
+            <column name="assignment_updated">2012-09-06 08:25:47</column>
+            <column name="sent">0</column>
+        </table>
+        <table name="updated_sas">
+            <column name="id">28086</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">F</column>
+            <column name="due_date">2012-09-10</column>
+            <column name="name">2</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614681</column>
+            <column name="date_updated">2012-09-06 08:17:03</column>
+            <column name="assignment_updated">2012-09-06 08:17:03</column>
+            <column name="sent">0</column>
+        </table>
+        <table name="updated_sas">
+            <column name="id">28084</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">C</column>
+            <column name="due_date">2012-09-10</column>
+            <column name="name">1</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614680</column>
+            <column name="date_updated">2012-09-06 08:14:33</column>
+            <column name="assignment_updated">2012-09-06 08:18:49</column>
+            <column name="sent">0</column>
+        </table>
+        <table name="updated_sas">
+            <column name="id">28085</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">G</column>
+            <column name="due_date">2012-09-10</column>
+            <column name="name">1</column>
+            <column name="use_assgt">N</column>
+            <column name="assgt_id">614680</column>
+            <column name="date_updated">2012-09-06 08:14:33</column>
+            <column name="assignment_updated">2012-09-06 08:18:49</column>
+            <column name="sent">0</column>
+        </table>
+    </database>
+</pma_xml_export>

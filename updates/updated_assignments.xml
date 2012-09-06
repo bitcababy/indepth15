@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 05, 2012 at 11:08 AM
+- Generation Time: Sep 06, 2012 at 10:09 AM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -17,20 +17,124 @@
     <database name="whsmd">
         <!-- Table updated_assignments -->
         <table name="updated_assignments">
-            <column name="assgt_id">614648</column>
+            <column name="assgt_id">614639</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content"></column>
-            <column name="sent">0</column>
-            <column name="updated_at">2012-09-04 21:31:29</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read two of our initial documents:
+&lt;a href=&quot;https://www.dropbox.com/s/8ogv06cxd96ow8i/FAQ1-hg-info%2Bexpectations.pdf&quot;&gt;Info &amp; Expectations&lt;/a&gt; and &lt;a href=&quot;https://www.dropbox.com/s/5d387t0fbijak1r/FAQ2-hg-materials.pdf&quot;&gt;Supplies &amp; Materials&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Get your supplies!&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Write your math autobiography, discussing the outstanding highlights and lowlights of your math education.
+You will probably want to concentrate on the last couple of years, but you should go back as far as you remember.
+Tell me (with specific examples)
+your biggest strength and biggest weakness in math; explain what
+makes the former a strength and what you think you can do to compensate
+for your weakness.
+If you have not been in the Weston Public Schools all along,
+be sure to explain what schools you went to and when.
+In all cases, describe your math experiences in previous grades.
+Tell me what works for you in math, and what doesn't work.
+For example, is practice effective for you? Extra help from the teacher?
+Working with classmates?
+In all your previous schooling, what was your best year in math? Your worst?
+Why?&lt;br /&gt;&lt;br /&gt;
+This needs to be
+at least one substantial paragraph, but will probably take two or three paragraphs. As a minimum, I suggest 150-200 words.
+Send it to me (DavidsonL@weston.org) in an email message.
+Use &lt;b&gt;math autobiography&lt;/b&gt; as your subject.
+If you have a mysterious email address, like superman42@comcast.net, be sure that your &lt;i&gt;real &lt;i&gt;name appears somewhere!&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="sent">1</column>
+            <column name="updated_at">2012-09-06 07:56:27</column>
         </table>
         <table name="updated_assignments">
-            <column name="assgt_id">614653</column>
-            <column name="teacher_id">griswoldn</column>
-            <column name="content">&lt;p&gt;&lt;a href=&quot;/teachers/griswoldn/abcalc/hwk 1 2011.doc&quot;&gt; Here's&lt;/a&gt;  your first assignment of the year!!&lt;/p&gt;
-
-</column>
+            <column name="assgt_id">614648</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read two more of our initial documents:
+&lt;a href=&quot;/teachers/davidsonl/geomh/FAQ3-hg-hw+classwork.pdf&quot;&gt;Homework and Classwork&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/geomh/FAQ4-hg-tests+quizzes.pdf&quot;&gt;Tests and Quizzes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Remember to get your supplies!&lt;/li&gt;
+&lt;li&gt;Complete the &lt;a href=&quot;/teachers/davidsonl/geomh/HonorsGeometryPreparedness.pdf&quot;&gt;Algebra Preparedness Sheet&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-05 08:26:54</column>
+            <column name="updated_at">2012-09-06 08:28:16</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614649</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">The &lt;a href=&quot;/teachers/hosmerc/geom/GeomScavengerHunt2012.pdf&quot;&gt;Scavenger Hunt&lt;/a&gt; is due today.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 08:48:59</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614650</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Here is an extra copy of the &lt;a href=&quot;/teachers/hosmerc/geom/SyllabusforGeometry20122013.pdf&quot;&gt;Syllabus&lt;/a&gt; for our class.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 08:50:02</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614652</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Here is an extra copy of the &lt;a href=&quot;/teachers/hosmerc/alg2/Alg2 Syllabus.pdf&quot;&gt;Syllabus&lt;/a&gt; for our class.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 08:50:53</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614681</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read the next two documents: &lt;a href=&quot;/teachers/davidsonl/alg2/FAQ3-a2-homework+classwork.pdf&quot;&gt;Homework &amp; Classwork&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/alg2/FAQ4-a1-tests+quizzes.pdf&quot;&gt;Tests &amp; Quizzes&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Complete at least problems #1&amp;ndash;11 in the &lt;a href=&quot;/teachers/davidsonl/alg2/1-1_Linear_Equations.pdf&quot;&gt;Linear Functions Review&lt;/a&gt;,
+which you worked on in class.
+&lt;/li&gt;
+
+&lt;/ul&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 08:17:03</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614679</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read two more documents: &lt;a href=&quot;/teachers/davidsonl/precalch/FAQ3-hpc-hw+classwork.pdf&quot;&gt;Homework &amp; Classwork&lt;/a&gt;
+and &lt;a href=&quot;/teachers/davidsonl/precalch/FAQ4-hpc-tests+quizzes.pdf&quot;&gt;Tests &amp; Quizzes&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Get all your supplies!&lt;/li&gt;
+
+&lt;li&gt;Complete &lt;a href=&quot;/teachers/davidsonl/precalch/intro-problems-ratios.pdf&quot;&gt;Introductory Problems: New Ideas on Ratios&lt;/a&gt;, which you started in class.&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 08:25:47</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614680</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete &lt;a href=&quot;/teachers/fierabendm/precalch/1_intro-problems-ratios.pdf&quot;&gt;Introductory Problems&lt;/a&gt;.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 08:18:49</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614665</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 3 in the textbook, or complete pages 6 &amp; 7 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Do the problems on the handout, &quot;AP Statistics assignment 3.&quot;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 07:12:01</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614667</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 2 in the textbook, or complete pages 10, 11 &amp; 12 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Then do the problems on &quot;AP Statistics assignment 2.&quot;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 07:12:35</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614668</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapters 1 and 2 in the textbook, or complete pages 13 through 18 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Then do the problems on the handout &quot;AP Statistics assignment 1.&quot; </column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-06 07:13:29</column>
         </table>
     </database>
 </pma_xml_export>
