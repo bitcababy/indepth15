@@ -18,7 +18,7 @@ namespace :update do
 		# puts path
 	end
 	
-	task :section_assignments => :environment do
+	task :sas => :environment do
 		arr = Convert.import_xml_file "updated_sas.xml", 'updates'
 		Convert.from_hashes SectionAssignment, arr, false
 	end
