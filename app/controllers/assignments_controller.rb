@@ -10,6 +10,22 @@ class AssignmentsController < ApplicationController
       format.html { render :layout => !request.xhr? }
 		end
 	end
+	
+	# PUT assignments/1
+  # PUT assignments/1.json
+  def update
+    respond_to do |format|
+      if @assignment.update_attributes(params[:assignment])
+        format.html { redirect_to assignment_path(@assignment), notice: 'assignment was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @assignment.errors, status: :unprocessable_entity }
+      end
+    end
+		return
+  end
+
 
   def create
 		teacher_id = params['assignment'].delete('teacher_id').strip
