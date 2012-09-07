@@ -29,6 +29,15 @@ class AssignmentsController < ApplicationController
 
   def create
 		teacher_id = params['assignment'].delete('teacher_id').strip
+		# This is temporary, until the system is finished
+		if (aid = params['assgt_id']) && Assignment.where(assgt_id: aid.to_i).exists?
+			assignment = Assignment.find_by(assgt_id: assgt_id)
+			params['id'] = assignment.to_param
+			redirect_to update
+			return
+		end
+			
+		teacher_id = params.delete('teacher_id').strip
 		teacher = Teacher.find_by(login: teacher_id)
 		if teacher
 			@assignment = Assignment.new(params['assignment'])
@@ -41,6 +50,7 @@ class AssignmentsController < ApplicationController
 				teacher.assignments << @assignment
         format.html {
 	 				redirect_to assignment_url(@assignment), notice: 'Assignment was successfully created.' 
+					return
 				}
 				format.js
         format.json {
