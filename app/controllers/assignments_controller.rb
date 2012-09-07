@@ -2,6 +2,7 @@ class AssignmentsController < ApplicationController
  	# POST Assignments
   # POST assignments.json
   protect_from_forgery except: [:create, :update]
+	before_filter :find_assignment, only: [:show, :update, :delete]
 
 	def show
 		@assigment = Assignment.find(params['id'])
@@ -36,5 +37,10 @@ class AssignmentsController < ApplicationController
       end
     end
   end
+
+	protected
+	def find_assignment
+		@assigment = Assignment.find(params['id'])
+	end
 
 end
