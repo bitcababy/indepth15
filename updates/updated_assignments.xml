@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 06, 2012 at 10:09 AM
+- Generation Time: Sep 07, 2012 at 03:12 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -17,11 +17,155 @@
     <database name="whsmd">
         <!-- Table updated_assignments -->
         <table name="updated_assignments">
-            <column name="assgt_id">614639</column>
+            <column name="assgt_id">614648</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read two more of our initial documents:
+&lt;a href=&quot;/teachers/davidsonl/geomh/FAQ3-hg-hw+classwork.pdf&quot;&gt;Homework and Classwork&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/geomh/FAQ4-hg-tests+quizzes.pdf&quot;&gt;Tests and Quizzes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Remember to get your supplies!&lt;/li&gt;
+&lt;li&gt;Complete the &lt;a href=&quot;/teachers/davidsonl/geomh/HonorsGeometryPreparedness.pdf&quot;&gt;Algebra Preparedness Sheet&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614670</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Welcome!!!&lt;/h2&gt;&lt;p&gt;
+&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;
+Look through the math department website. Make sure to find info on:&lt;ul&gt;
+&lt;li&gt;-Supplies you will need - remember I require a bound graph paper notebook&lt;/li&gt;
+&lt;li&gt;-Where to get homework - here!&lt;/li&gt;
+&lt;li&gt;-Grading policies&lt;/li&gt;
+&lt;li&gt;-Find the link that is called &quot;Secret Message&quot;&lt;/li&gt;
+&lt;li&gt;-Send me an email with the answer to the secret message (if you know it!)  In the subject line of the email write your name and the class block that you are in.&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Write your math autobiography, discussing the outstanding highlights and lowlights of your math education.
+You will probably want to concentrate on the last couple of years, but you should go back as far as you remember.
+If you have not been in the Weston Public Schools all along,
+be sure to explain what schools you went to when,
+and describe your math experience in each place.
+Include specific details about your strengths and weaknesses.
+This needs to be
+at least one substantial paragraph, but will probably take two or three paragraphs.
+You can find some strong examples from last year &lt;a href=&quot;/teachers/davidsonl/geomh/autobiog-strong1.pdf&quot;&gt;here&lt;/a&gt; and  &lt;a href=&quot;/teachers/davidsonl/geomh/autobiog-strong2.pdf&quot;&gt;here&lt;/a&gt;, and some weak examples  &lt;a href=&quot;/teachers/davidsonl/geomh/autobiog-weak1.pdf&quot;&gt;here&lt;/a&gt; and  &lt;a href=&quot;/teachers/davidsonl/geomh/autobiog-weak2.pdf&quot;&gt;here&lt;/a&gt;;
+(names and other identifying details have been changed to protect
+the innocent (and others)).&lt;br&gt;
+Send it to me (gabrinerd@weston.org) in an email message.
+Use &lt;b&gt;math autobiography&lt;/b&gt; as your subject.
+If you have a mysterious email address, like superman42@comcast.net, be sure that your &lt;i&gt;real &lt;i&gt;name appears somewhere!&lt;/i&gt;&lt;/i&gt;&lt;/li&gt;
+&lt;li&gt;Include the answers to the following questions in your email:&lt;/li&gt;
+&lt;ol&gt;
+&lt;li&gt;What is the longest amount of time you have ever spent on a math problem?&lt;/li&gt;
+&lt;li&gt;How long do you think is an appropriate amount of time to work on a difficult math problem before giving up?&lt;/li&gt;
+&lt;li&gt;What or who is the first resource you turn to when you can’t make any progress on your own while working on a difficult math problem?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/ul&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614671</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Complete the Honors Geometry Preparedness 
+&lt;a href=&quot;/teachers/gabrinerd/geomh/HonorsGeometryPreparedness.pdf&quot;&gt;worksheet&lt;/a&gt;. &lt;br&gt;
+</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614649</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">The &lt;a href=&quot;/teachers/hosmerc/geom/GeomScavengerHunt2012.pdf&quot;&gt;Scavenger Hunt&lt;/a&gt; is due today.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614650</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Here is an extra copy of the &lt;a href=&quot;/teachers/hosmerc/geom/SyllabusforGeometry20122013.pdf&quot;&gt;Syllabus&lt;/a&gt; for our class.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614651</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Please complete all sections of the &lt;a href=&quot;https://dl.dropbox.com/u/49187641/Geom%20Scavenger%20Hunt%202012.pdf&quot;&gt; Geometry Scavenger Hunt&lt;/a&gt;. This is worth a quiz grade, so don't forget!
+&lt;br&gt;
+Also, &lt;a href=&quot;https://dl.dropbox.com/u/49187641/Syllabus%20for%20Geometry2012.pdf&quot;&gt;Here&lt;/a&gt; is the syllabus for the course.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614675</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish the note card activity.  You need to include
+&lt;br&gt; Side 1
+&lt;br&gt;1. Your name
+&lt;br&gt; 2. Your date of birth
+&lt;br&gt; 3. Your teacher/math course from last year.
+&lt;br&gt; 4. The approximate grade you earned in your math course last year.
+&lt;br&gt; Side 2
+&lt;br&gt; 5. Something about you.  Be specific and detailed please.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614684</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish questions 1-6, 7a and 8 on &lt;a href=&quot;/teachers/hosmerc/geom/PlottingPointsProblems2013.pdf&quot;&gt;Plotting Points Problems&lt;/a&gt;. </column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614690</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/teachers/hosmerc/geom/EvaluatingMathematicalStatements2013.pdf&quot;&gt;EvaluatingMathematicalStatements&lt;/a&gt;.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 12:17:48</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614673</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;a href=&quot;https://dl.dropbox.com/u/49187641/Algebra%202%20Honors%20Resources%20and%20Details%202012.pdf&quot;&gt;Resources and Details.&lt;/a&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614685</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Finish problems 1 and 2 from class, then do problem set A from the handout.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614689</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Try your best on &lt;a href=&quot;/teachers/gacsa/alg2h/Unit 1/Sets One 2012.pdf&quot;&gt;Sets Parts A and B.&lt;/a&gt; We'll go over it next time.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614691</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Do problem set B from the handout on set notation.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 12:32:17</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614652</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Here is an extra copy of the &lt;a href=&quot;/teachers/hosmerc/alg2/Alg2 Syllabus.pdf&quot;&gt;Syllabus&lt;/a&gt; for our class.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614674</column>
             <column name="teacher_id">davidsonl</column>
             <column name="content">&lt;ul&gt;
 &lt;li&gt;Read two of our initial documents:
-&lt;a href=&quot;https://www.dropbox.com/s/8ogv06cxd96ow8i/FAQ1-hg-info%2Bexpectations.pdf&quot;&gt;Info &amp; Expectations&lt;/a&gt; and &lt;a href=&quot;https://www.dropbox.com/s/5d387t0fbijak1r/FAQ2-hg-materials.pdf&quot;&gt;Supplies &amp; Materials&lt;/a&gt;.
+&lt;a href=&quot;https://www.dropbox.com/s/f6wdavxl3q2xhxm/FAQ1-a2-info%2Bexpectations.pdf&quot;&gt;Info &amp; Expectations&lt;/a&gt; and &lt;a href=&quot;https://www.dropbox.com/s/rahk0lvrqcfecry/FAQ2-a2-materials.pdf&quot;&gt;Supplies &amp; Materials&lt;/a&gt;.
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Get your supplies!&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Write your math autobiography, discussing the outstanding highlights and lowlights of your math education.
@@ -44,47 +188,21 @@ Send it to me (DavidsonL@weston.org) in an email message.
 Use &lt;b&gt;math autobiography&lt;/b&gt; as your subject.
 If you have a mysterious email address, like superman42@comcast.net, be sure that your &lt;i&gt;real &lt;i&gt;name appears somewhere!&lt;/li&gt;
 &lt;/ul&gt;</column>
-            <column name="sent">1</column>
-            <column name="updated_at">2012-09-06 07:56:27</column>
-        </table>
-        <table name="updated_assignments">
-            <column name="assgt_id">614648</column>
-            <column name="teacher_id">davidsonl</column>
-            <column name="content">&lt;ul&gt;
-&lt;li&gt;Read two more of our initial documents:
-&lt;a href=&quot;/teachers/davidsonl/geomh/FAQ3-hg-hw+classwork.pdf&quot;&gt;Homework and Classwork&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/geomh/FAQ4-hg-tests+quizzes.pdf&quot;&gt;Tests and Quizzes&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Remember to get your supplies!&lt;/li&gt;
-&lt;li&gt;Complete the &lt;a href=&quot;/teachers/davidsonl/geomh/HonorsGeometryPreparedness.pdf&quot;&gt;Algebra Preparedness Sheet&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;</column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 08:28:16</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
         <table name="updated_assignments">
-            <column name="assgt_id">614649</column>
+            <column name="assgt_id">614676</column>
             <column name="teacher_id">hosmerc</column>
-            <column name="content">The &lt;a href=&quot;/teachers/hosmerc/geom/GeomScavengerHunt2012.pdf&quot;&gt;Scavenger Hunt&lt;/a&gt; is due today.</column>
+            <column name="content">Finish warm up #1.  Be sure to double check your work and look up anything that you may have forgotten from your Algebra 1 class.  </column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 08:48:59</column>
-        </table>
-        <table name="updated_assignments">
-            <column name="assgt_id">614650</column>
-            <column name="teacher_id">hosmerc</column>
-            <column name="content">Here is an extra copy of the &lt;a href=&quot;/teachers/hosmerc/geom/SyllabusforGeometry20122013.pdf&quot;&gt;Syllabus&lt;/a&gt; for our class.</column>
-            <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 08:50:02</column>
-        </table>
-        <table name="updated_assignments">
-            <column name="assgt_id">614652</column>
-            <column name="teacher_id">hosmerc</column>
-            <column name="content">Here is an extra copy of the &lt;a href=&quot;/teachers/hosmerc/alg2/Alg2 Syllabus.pdf&quot;&gt;Syllabus&lt;/a&gt; for our class.</column>
-            <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 08:50:53</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
         <table name="updated_assignments">
             <column name="assgt_id">614681</column>
             <column name="teacher_id">davidsonl</column>
             <column name="content">&lt;ul&gt;
-&lt;li&gt;Read the next two documents: &lt;a href=&quot;/teachers/davidsonl/alg2/FAQ3-a2-homework+classwork.pdf&quot;&gt;Homework &amp; Classwork&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/alg2/FAQ4-a1-tests+quizzes.pdf&quot;&gt;Tests &amp; Quizzes&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Read the next two documents: &lt;a href=&quot;/teachers/davidsonl/alg2/FAQ3-a2-homework+classwork.pdf&quot;&gt;Homework &amp; Classwork&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/alg2/FAQ4-a2-tests+quizzes.pdf&quot;&gt;Tests &amp; Quizzes&lt;/a&gt;.&lt;/li&gt;
 
 &lt;li&gt;Complete at least problems #1&amp;ndash;11 in the &lt;a href=&quot;/teachers/davidsonl/alg2/1-1_Linear_Equations.pdf&quot;&gt;Linear Functions Review&lt;/a&gt;,
 which you worked on in class.
@@ -92,7 +210,292 @@ which you worked on in class.
 
 &lt;/ul&gt;</column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 08:17:03</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614683</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete problems 1-13 (inclusive) on &lt;a href=&quot;/teachers/hosmerc/alg2/1-1_Linear_Equations.pdf&quot;&gt;Alg 2 Lesson 1-1 by Kate Nowak&lt;/a&gt; for our class. </column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614654</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Getting Started&lt;/h2&gt;
+&lt;blockquote&gt;Complete the following, and email your results to Mr. Gabriner at &lt;a href=&quot;mailto:gabrinerd@weston.org&quot;&gt;gabrinerd@weston.org&lt;/a&gt;.
+&lt;br&gt;Please use &lt;b&gt;&lt;span style=&quot;color: rgb(255, 0, 0);&quot;&gt;YourID #1&lt;/span&gt;&lt;/b&gt; as the Subject of your message.
+&lt;br&gt;Label subsequent assignments similarly, just change the assignment number.  &lt;br&gt;Email your work when it is complete and ready to be graded.
+&lt;ol&gt;
+&lt;li&gt; 
+
+Read all parts of the &lt;a href=&quot;/teachers/gabrinerd/csip/getting-started.html&quot;&gt;Getting Started&lt;/a&gt; document,
+and complete the lab in &lt;a href=&quot;/teachers/gabrinerd/csip/Getting-Started.py&quot;&gt;Getting-Started.py&lt;/a&gt;.&lt;/li&gt;
+
+&lt;li&gt;Carefully read Chapter 1 of the textbook, which you can find at
+&lt;br&gt;&lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/&quot;&gt;http://www.openbookproject.net/thinkcs/python/english2e/&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/blockquote&gt;
+&lt;br&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614655</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Data Types&lt;/h2&gt;&lt;br&gt;
+Read &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch02.html&quot;&gt;chapter 2&lt;/a&gt; and &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch03.html&quot;&gt;chapter 3&lt;/a&gt; in the online textbook.&lt;br&gt;&lt;br&gt;
+In this — and all subsequent function definitions — you must include a contract, a purpose statement, and at least one test case.&lt;br&gt;&lt;br&gt;
+
+Download &lt;a href=&quot;/teachers/gabrinerd/csip/Data-Types.py&quot;&gt;Data-Type.py&lt;/a&gt; and complete the following excercises:&lt;br&gt;&lt;ul&gt;
+&lt;li&gt;Utopia's tax accountants always use programs that compute income taxes even though the tax rate is a solid, never-changing 15%. Define the functions gross_pay, tax, and net_pay.
+&lt;br&gt;Assume an hourly rate of $12.
+&lt;br&gt;
+Note:
+&lt;br&gt; &quot;gross pay&quot; is what you earn before taxes.
+&lt;br&gt;&quot;net pay&quot; is what you take home after taxes are deducted.
+&lt;/li&gt;
+&lt;li&gt;The local supermarket needs a program that can compute the value of a bag of coins. Define the function sum-coins. It consumes four numbers: the number of pennies, nickels, dimes, and quarters in the bag; it produces the amount of money in the bag.&lt;/li&gt;  
+
+&lt;li&gt;An old-style movie theater has a simple profit function. Each customer pays $5 per ticket. Every performance costs the theater $20, plus $.50 per attendee. Develop the function total-profit. It consumes the number of attendees (of a show) and produces how much income the attendees produce.    Solution&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614656</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Branching&lt;/h2&gt;
+Read &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch04.html&quot;&gt;chapter 4.1 - 4.8, 4.10, and 4.12&lt;/a&gt; in the online textbook.&lt;br&gt;&lt;br&gt;
+Download &lt;a href=&quot;/teachers/gabrinerd/csip/Branching.py&quot;&gt;Branching.py&lt;/a&gt; and complete the following exercises:
+&lt;ol&gt;
+&lt;li&gt;Develop a function called &lt;b&gt;can_vote&lt;/b&gt; that consumes a person’s age and produces a boolean that tells you whether the person is old enough to vote.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+
+&lt;li&gt;Write a program that consumes a number representing a student’s percentage score on a test and produces a string representing an appropriate comment for that student. For example, &lt;b&gt;teacher_comment(72)&lt;/b&gt; might produce &lt;b&gt;&quot;should&amp;nbsp;try&amp;nbsp;harder&quot;&lt;/b&gt;.
+
+
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+
+&lt;li&gt;Use symbols for the days of the week.&lt;br&gt;
+Write a function &lt;b&gt;is_weekday&lt;/b&gt; that consumes a day of the week symbol and produces a boolean that tells you whether or not the day is a weekday.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt; 
+&lt;li&gt;Write a program &lt;b&gt;begins_with_vowel&lt;/b&gt; that consumes a string and produces a boolean that tells you whether or not the word begins with a vowel. 
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614657</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Be the Computer&lt;/h2&gt;&lt;br&gt;
+Read &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch05.html&quot;&gt;chapter 5&lt;/a&gt; in the online textbook.&lt;br&gt;&lt;br&gt;
+Here is some &lt;a href=&quot;/teachers/gabrinerd/csip/FingerExercises.html&quot;&gt;practice&lt;/a&gt;  for the quizzes that require pencil and paper and no computer.&lt;br&gt;
+Read the instructions at the top of the page and take their suggestion of writing down your answers before checking them.&lt;br&gt;
+Do these on paper or in your head but write down your answers.  BE the computer.&lt;br&gt;&lt;br&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614658</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Iteration and Strings&lt;/h2&gt;&lt;br&gt;Read &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch06.html&quot;&gt;chapter 6&lt;/a&gt; and  &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch07.html&quot;&gt;chapter 7&lt;/a&gt; in the online textbook.&lt;br&gt;&lt;br&gt;
+Download &lt;a href=&quot;/teachers/gabrinerd/csip/Iteration-Strings.py&quot;&gt;Iteration-Strings.py&lt;/a&gt; and complete the following exercises:
+&lt;ol&gt;
+
+&lt;li&gt;Write a program called &lt;i&gt;pig &lt;/i&gt;that translates a word (in the form of a string) into Pig Latin. Use the simplest dialect of Pig Latin, in which you move an initial consonant (if any) to the end and add &quot;ay&quot; (so &quot;string&quot; becomes &quot;tringsay&quot; and &quot;easy&quot; becomes &quot;easyay&quot;).
+You may want to use the &lt;a href=&quot;/teachers/gabrinerd/csip/begins-with-vowel.scm&quot;&gt;&lt;b&gt;begins_with_vowel&lt;/b&gt;&lt;/a&gt; program that
+we developed in class.&lt;br&gt;
+
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Write a program called &lt;i&gt;pigg &lt;/i&gt;that translates a word (in the form of a string) into Pig Latin. Use the dialect of Pig Latin in which you add &quot;way&quot; to a word that begins with a vowel (so &quot;easy&quot; becomes &quot;easyway&quot;), otherwise you move any initial consonants to the end and add &quot;ay&quot; (so &quot;string&quot; becomes &quot;ingstray&quot;).&lt;br&gt;
+
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Challenging:&lt;/b&gt; Write a function &lt;i&gt;piggy&lt;/i&gt; that correctly handles the cases where y is a vowel as in the word myth .  It must also handle the case where y is a consonant as in the word year.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;b&gt;Very Challenging:&lt;/b&gt; correctly handle words with no vowels such as tsk or cwm.&lt;/li&gt;
+
+&lt;/ol&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614659</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Data Structures - Lists&lt;/h2&gt;&lt;br&gt;Read &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch09.html&quot;&gt;chapter 9.1 - 9.16&lt;/a&gt; in the online textbook.&lt;br&gt;Read the Google Python
+&lt;a href=&quot;http://code.google.com/edu/languages/google-python-class/lists.html&quot;&gt; List Reference&lt;/a&gt;  
+ and then do the following:
+&lt;br&gt;&lt;ol&gt;
+&lt;li&gt;Develop the function contains_doll, which consumes a list of strings and determines whether one of them is &quot;doll&quot;.&lt;br&gt;
+Create enough test cases to completely test your code.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Develop the function contains_string, which consumes a string and a list of strings and determines whether or not the string occurs in the list.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Hopefully you used the &quot;in&quot; operator supplied by Python when doing the previous exercises. Now implement your own version of &quot;in&quot; by looping through all the strings on a list looking for a given string.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Define a function that consumes a list of numbers and returns the sum of the numbers in the list.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Define a function that consumes a list of numbers and returns whether or not a given number is in the list.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Challenging:&lt;/b&gt; Define a function that increments each number on the list by a given amount and returns the updated list.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;More Challenging:&lt;/b&gt; Define a function that consumes a non-empty list of numbers and returns the largest number. 
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Even More Challenging: &lt;/b&gt;Write an &quot;in&quot; function that is data-type independent.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614660</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Recursion&lt;/h2&gt;&lt;br&gt;Read &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch11.html&quot;&gt;chapter 11.6 - 11.8&lt;/a&gt; in the online textbook
+ and then do the following:&lt;ol&gt;
+&lt;li&gt;
+Write a recursive function that consumes a number(&lt;i&gt;n&lt;/i&gt;) and produces &lt;i&gt;n&lt;/i&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Factorial&quot;&gt;factorial&lt;/a&gt;.&lt;/li&gt;
+&lt;br&gt;&lt;li&gt;
+Write a recursive function that consumes a number(&lt;i&gt;n&lt;/i&gt;) and produces a list of the first &lt;i&gt;n&lt;/i&gt; &lt;a href=&quot;http://en.wikipedia.org/wiki/Fibonacci_number&quot;&gt;Fibonacci numbers&lt;/a&gt;.&lt;/li&gt;&lt;br&gt;
+&lt;li&gt;&lt;b&gt;Challenge:&lt;/b&gt;
+Have your code raise an appropriate exception if it receives a bad user input value.&lt;/li&gt;&lt;br&gt;
+If your functions have &quot;ugly&quot; interfaces then write &quot;wrapper&quot; functions that provide a clean interface to the user.
+&lt;br&gt;&lt;br&gt;
+&lt;/ol&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614661</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Images&lt;/h2&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;Documention for drawing and graphics can be found at &lt;a href=&quot;http://www.pygame.org/docs&quot;&gt;pygame&lt;/a&gt;.
+&lt;br&gt;&lt;br&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Download the following files and save them to your folder  by right clicking and selecting save as ...&lt;br&gt;
+&lt;a href=&quot;/teachers/gabrinerd/csip/first-graphics.py&quot;&gt;first-graphics.py&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;/teachers/gabrinerd/csip/elvis-portrait.gif&quot;&gt;Elvis&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;/teachers/gabrinerd/csip/groucho.gif&quot;&gt;Groucho&lt;/a&gt;&lt;br&gt;
+Open the first-graphics.py file in Wing IDE and explore drawing graphics and overlaying images.&lt;br&gt;
+&lt;br&gt;
+When finished show me what you have done.&lt;br&gt;&lt;br&gt;
+&lt;/li&gt;
+
+&lt;li&gt;Create an American flag.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+
+&lt;li&gt;Create an American flag programatically draws the stripes.&lt;/li&gt;&lt;br&gt;
+&lt;li&gt;&lt;b&gt;Challenge:&lt;/b&gt; Create an American flag that programatically draws both the stripes and stars.&lt;/li&gt;
+
+&lt;br&gt;&lt;li&gt;
+&lt;b&gt;Super Challenge:&lt;/b&gt; Create the following  function:&lt;br&gt;
+
+#american-flag&lt;br&gt;
+#contract: num -&amp;gt; image&lt;br&gt;
+
+#purpose: consumes a width and returns a well proportioned american flag of that width.&lt;br&gt;
+see &lt;a href=&quot;http://en.wikipedia.org/wiki/Flag_of_the_United_States#Specification&quot;&gt;Wikipedia&lt;/a&gt; for the correct proportions and colors. &lt;/li&gt;
+
+&lt;/ol&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614662</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Classes&lt;/h2&gt;&lt;br&gt;Read &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch13.html&quot;&gt;chapter 13&lt;/a&gt; and  &lt;a href=&quot;http://www.openbookproject.net/thinkcs/python/english2e/ch15.html&quot;&gt;chapter 15.6 - 15.8&lt;/a&gt; in the online textbook.&lt;br&gt;&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;Define a class for a Point with attributes x and y.&lt;br&gt;Define the following methods for your Point class.&lt;ol&gt;
+&lt;li&gt;An initialization method.&lt;/li&gt;
+&lt;li&gt;A print method that produces the coordinates of the point in the format ( x, y).&lt;/li&gt;
+&lt;li&gt;A distance method that consumes a point and produces the distance between the two points.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Challenge: &lt;/b&gt;Overload the + operator to add two points.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Implement &lt;a href=&quot;/teachers/gabrinerd/csip/myTunes.pdf&quot;&gt;myTunes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Implement &lt;a href=&quot;/teachers/gabrinerd/csip/transcript.pdf&quot;&gt;High School Transcripts&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614664</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Animation&lt;/h2&gt;&lt;br&gt;
+Download the following files:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/teachers/gabrinerd/csip/pygamehelper.py&quot;&gt; pygamehelper.py&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/teachers/gabrinerd/csip/Ball.py&quot;&gt;Ball.py&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/teachers/gabrinerd/csip/BallGame.py&quot;&gt;BallGame.py&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+Modify Ball.py and Ballgame.py to do the following:&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;Make the ball move.&lt;br&gt;
+Hints: &lt;br&gt;
+&lt;ul&gt;&lt;li&gt;Write the body of move_ball_horz and move_ball_vert.&lt;br&gt;
+Add dx to x and dy to y.&lt;/li&gt;
+&lt;li&gt;Modify the key-press function to accept the arrow keys as input.  &lt;br&gt;
+When an arrow is hit change the value of dx or dy as appropriate.&lt;/li&gt;&lt;/ul&gt;
+&lt;/li&gt;&lt;li&gt;Add the ability to change the color of the ball by pressing a key.&lt;/li&gt;
+&lt;li&gt;Add collision detection and make the ball bounce off the walls&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Challenge: &lt;/b&gt;Add the effect of gravity.&lt;/li&gt;
+
+&lt;li&gt;&lt;b&gt;Very Challenging:&lt;/b&gt; Add mouse event handling and drag or throw the ball.&lt;/li&gt;&lt;/ol&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614666</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Project&lt;/h2&gt;&lt;br&gt;
+&lt;a href=&quot;/teachers/gabrinerd/csip/DesignGuidelines.pdf&quot;&gt;Design Guidelines&lt;/a&gt;
+&lt;br&gt;
+Turn in your design document which should include the following items:&lt;ol&gt;
+
+&lt;li&gt;Classes you plan to use.&lt;/li&gt;
+&lt;li&gt;Versions of your project in order of increasing complexity.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;a href=&quot;/teachers/gabrinerd/csip/DesignGuidelines.pdf&quot;&gt;Design Guidelines&lt;/a&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614669</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h2&gt;Project Due&lt;/h2&gt;&lt;br&gt;
+Turn in the following three items:&lt;ol&gt;
+&lt;li&gt;Email the code to me.&lt;/li&gt;
+&lt;li&gt;A reflection on your project. &lt;br&gt;The good, the bad, and the ugly.  
+&lt;br&gt;Advice for others:  what went well and what would you do differently.&lt;/li&gt;
+&lt;li&gt;A semester grade justification.&lt;/li&gt;
+&lt;/ol&gt;
+
+</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614672</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Carefully read the course &lt;a href=&quot;https://www.dropbox.com/s/9lbhxmvaidqaeae/FAQ1-hpc-info%2Bexpectations.pdf&quot;&gt;Info &amp; Expectations&lt;/a&gt; and &lt;a href=&quot;https://www.dropbox.com/s/2gakm6dgxoebm4s/FAQ2-hpc-materials.pdf&quot;&gt;Supplies &amp; Materials&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Start getting your supplies.&lt;/li&gt;
+&lt;li&gt;Write your math autobiography, discussing the outstanding highlights and lowlights of your math education.
+You will probably want to concentrate on the last couple of years, but you should go back as far as you remember.
+If you have not been in the Weston Public Schools all along,
+be sure to explain what schools you went to and when,
+and describe your math experience in each place.
+If you were a student of mine in your freshman year,
+tell me in some detail how your mathematical skills and interests have
+matured (or just changed) since then.
+In any case,
+include specific details about your strengths and weaknesses.
+This needs to be at least one substantial paragraph, but will probably take two or three paragraphs. As a minimum, I suggest 150-200 words.
+Send it to me (DavidsonL@weston.org) in an email message.
+Use &lt;b&gt;math autobiography&lt;/b&gt; as your subject.
+If you have a mysterious email address, like superman42@comcast.net, be sure that your &lt;i&gt;real &lt;i&gt;name appears somewhere!&lt;/li&gt;
+&lt;/ul&gt;</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
         <table name="updated_assignments">
             <column name="assgt_id">614679</column>
@@ -106,35 +509,130 @@ and &lt;a href=&quot;/teachers/davidsonl/precalch/FAQ4-hpc-tests+quizzes.pdf&quo
 &lt;li&gt;Complete &lt;a href=&quot;/teachers/davidsonl/precalch/intro-problems-ratios.pdf&quot;&gt;Introductory Problems: New Ideas on Ratios&lt;/a&gt;, which you started in class.&lt;/li&gt;
 &lt;/ul&gt;</column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 08:25:47</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
         <table name="updated_assignments">
             <column name="assgt_id">614680</column>
             <column name="teacher_id">fierabendm</column>
             <column name="content">Please complete &lt;a href=&quot;/teachers/fierabendm/precalch/1_intro-problems-ratios.pdf&quot;&gt;Introductory Problems&lt;/a&gt;.</column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 08:18:49</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614687</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Complete questions 1 through 7 on the FUNctions packet.  If you need another copy, please let me know.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614688</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete the &lt;a href=&quot;/teachers/fierabendm/precalc1/1_FUNctions.pdf&quot;&gt;Functions Packet&lt;/a&gt; for today. This means through question 30!</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614695</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Complete the FUNctions packet and the transformations worksheet handed out in class.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 14:26:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614653</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;&lt;a href=&quot;/teachers/griswoldn/abcalc/hwk 1 2011.doc&quot;&gt; Here's&lt;/a&gt;  your first assignment of the year!!&lt;/p&gt;
+
+</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614677</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read section 1-2 and then do problems #1-9(odd), 12(b), 14, 18, 24 - 26.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614678</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read section 1-3 then do problems 4,5,7,10, and 11.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614692</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 1-4 and do #1, 4, and 6. Also, try the review problems from the end of the chapter R1 - R4.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 12:34:08</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614693</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read section1-5 and do #1-10, 16 -19. Also, do review problem R5 from the end of the chapter.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 12:35:09</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614694</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Study for your Chapter 1 Test.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 12:36:03</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614682</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 10.1&lt;br&gt;
+Do problems  #1, 3, 11, 12, 24, 28, 41
+</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 14:33:28</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614696</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">section 10.1 problem #43</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 14:31:15</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614663</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read the article titled, &quot;How Companies Learn Your Secrets,&quot; linked on the course resources page at old.westonmath.org.</column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
         <table name="updated_assignments">
             <column name="assgt_id">614665</column>
             <column name="teacher_id">monzj</column>
-            <column name="content">Read Chapter 3 in the textbook, or complete pages 6 &amp; 7 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Do the problems on the handout, &quot;AP Statistics assignment 3.&quot;</column>
+            <column name="content">Read Chapters 1 and 2 in the textbook, or complete pages 6 &amp; 7 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Do the problems on the handout, &quot;AP Statistics assignment 1.&quot;</column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 07:12:01</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
         <table name="updated_assignments">
             <column name="assgt_id">614667</column>
             <column name="teacher_id">monzj</column>
-            <column name="content">Read Chapter 2 in the textbook, or complete pages 10, 11 &amp; 12 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Then do the problems on &quot;AP Statistics assignment 2.&quot;</column>
+            <column name="content">Read Chapter 3 in the textbook, or complete pages 10, 11 &amp; 12 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Then do the problems on &quot;AP Statistics assignment 2.&quot;</column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 07:12:35</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
         <table name="updated_assignments">
             <column name="assgt_id">614668</column>
             <column name="teacher_id">monzj</column>
-            <column name="content">Read Chapters 1 and 2 in the textbook, or complete pages 13 through 18 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Then do the problems on the handout &quot;AP Statistics assignment 1.&quot; </column>
+            <column name="content">Read Chapter 4 in the textbook, or complete pages 13 through 18 of the Canegie-Mellon online Probability &amp; Statistics course, linked on the course resources page at old.westonmath.org. Then do the problems on the handout &quot;AP Statistics assignment 3.&quot; </column>
             <column name="sent">0</column>
-            <column name="updated_at">2012-09-06 07:13:29</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
+        </table>
+        <table name="updated_assignments">
+            <column name="assgt_id">614686</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Read chapter 1 and 2 in the textbook. Make a note of any vocabulary you are unfamiliar with. </column>
+            <column name="sent">0</column>
+            <column name="updated_at">2012-09-07 10:44:18</column>
         </table>
     </database>
 </pma_xml_export>
