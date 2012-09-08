@@ -7,8 +7,8 @@ describe SectionAssignment do
 	context "scoping" do
 		before :each do
 			@section = Fabricate(:section)
-			4.times {|i| @section.add_assignment Fabricate(:assignment), Date.today + i + 1 }
-			3.times {|i| @section.add_assignment Fabricate(:assignment), Date.today - i - 1 }
+			4.times {|i| @section.add_assignment i.to_s, Fabricate(:assignment), Date.today + i + 1 }
+			3.times {|i| @section.add_assignment i.to_s, Fabricate(:assignment), Date.today - i - 1 }
 		end
 		
 		it "has a current scope" do
@@ -29,39 +29,39 @@ describe SectionAssignment do
 			
 	end
 	
-	context "incoming" do
-		describe '::handle_incoming' do
-			before :each do
-				course = Fabricate :course, number: 321
-				Fabricate :assignment, assgt_id: 614639
-				teacher = Fabricate :teacher, login: 'davidsonl'
-				@section = Fabricate :section, academic_year: 2013, block: "D", course: course, teacher: teacher
-
-				@hash = {:teacher_id=>"davidsonl", 
-					:year=>"2013", 
-					:course_num=>"321",
-					:block=>"D", 
-					:due_date=>"2012-09-06", 
-					:name=>"1", 
-					:use_assgt=>"Y", 
-					:assgt_id =>"614639", 
-					:ada=>"2012-08-19 18:34:40", 
-					:aa=>"2012-08-19 18:37:16"
-				}
-			end
-			it "creates a new section_assignment if the assgt_id is new" do
-				expect {
-					SectionAssignment.handle_incoming @hash
-				}.to change(@section.section_assignments, :count).by(1)
-			end
-			it "updates an section_assignment if the assgt_id is old" do
-				SectionAssignment.handle_incoming @hash
-				expect {
-					SectionAssignment.handle_incoming @hash
-				}.to change(@section.section_assignments, :count).by(0)
-			end
-		end
-	end
+	# context "incoming" do
+	# 	describe '::handle_incoming' do
+	# 		before :each do
+	# 			course = Fabricate :course, number: 321
+	# 			Fabricate :assignment, assgt_id: 614639
+	# 			teacher = Fabricate :teacher, login: 'davidsonl'
+	# 			@section = Fabricate :section, academic_year: 2013, block: "D", course: course, teacher: teacher
+	# 
+	# 			@hash = {:teacher_id=>"davidsonl", 
+	# 				:year=>"2013", 
+	# 				:course_num=>"321",
+	# 				:block=>"D", 
+	# 				:due_date=>"2012-09-06", 
+	# 				:name=>"1", 
+	# 				:use_assgt=>"Y", 
+	# 				:assgt_id =>"614639", 
+	# 				:ada=>"2012-08-19 18:34:40", 
+	# 				:aa=>"2012-08-19 18:37:16"
+	# 			}
+	# 		end
+	# 		it "creates a new section_assignment if the assgt_id is new" do
+	# 			expect {
+	# 				SectionAssignment.handle_incoming @hash
+	# 			}.to change(@section.section_assignments, :count).by(1)
+	# 		end
+	# 		it "updates an section_assignment if the assgt_id is old" do
+	# 			SectionAssignment.handle_incoming @hash
+	# 			expect {
+	# 				SectionAssignment.handle_incoming @hash
+	# 			}.to change(@section.section_assignments, :count).by(0)
+	# 		end
+	# 	end
+	# end
 	
 
 	describe 'SectionAssignment.import_from_hash' do

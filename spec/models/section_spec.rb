@@ -70,8 +70,8 @@ describe Section do
 	context "past and future assignment handling" do
 		before do
 			@section = Fabricate :section, valid_attributes
-			3.times {|i| @section.add_assignment Fabricate(:assignment), future_due_date + i }
-			2.times {|i| @section.add_assignment Fabricate(:assignment), future_due_date - i - 1 }
+			3.times {|i| @section.add_assignment "future#{i}", Fabricate(:assignment), future_due_date + i }
+			2.times {|i| @section.add_assignment "past#{i}", Fabricate(:assignment), future_due_date - i - 1 }
 			@section.section_assignments.count.should == 5
 		end
 	

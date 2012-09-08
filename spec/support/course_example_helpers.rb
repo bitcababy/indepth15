@@ -18,7 +18,7 @@ module CourseExampleHelpers
 	end
 
 	def make_assignments(section, n = 3, kind = :future)
-		n.times { section.add_assignment( Fabricate(:assignment), Date.today + (kind == :future ? rand(1..5) : rand(-5..-1)))	}
+		n.times {|i| section.add_assignment(i.to_s, Fabricate(:assignment), Date.today + (kind == :future ? rand(1..5) : rand(-5..-1)))	}
 	end
 
 	def section_with_assignments(options = {})
@@ -33,8 +33,8 @@ module CourseExampleHelpers
 	end
 	
 	def add_some_assignments(section, past, future)
-		past.times { section.add_assignment(Fabricate(:assignment), Date.today + rand(1..10))}
-		future.times { section.add_assignment(Fabricate(:assignment), Date.today - 1) }
+		past.times {|i| section.add_assignment("past #{i}", Fabricate(:assignment), Date.today + rand(1..10))}
+		future.times { section.add_assignment("future #{i}", Fabricate(:assignment), Date.today - 1) }
 		return section
 	end
 	
