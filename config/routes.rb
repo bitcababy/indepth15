@@ -1,6 +1,8 @@
 InDepth::Application.routes.draw do
 
 	resources :assignments, only: [:show, :update, :create]
+	resources :assignments
+
 	resources :section_assignments, only: [:show, :update, :create]
 
   mount Ckeditor::Engine => '/ckeditor'
