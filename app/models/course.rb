@@ -91,7 +91,7 @@ class Course
 	def menu_label
 		self.full_name
 	end
-	
+		
 	class << self
 		SEMESTER_MAP = {
 			12 => FULL_YEAR,
@@ -99,6 +99,11 @@ class Course
 			2 => SECOND_SEMESTER,
 			3 => FULL_YEAR_HALF_TIME,
 		}
+		
+		def massage(txt)
+			return txt
+			return txt.gsub!(/"\/teachers([^"]+)"/, "\"/files/\1\"")
+		end
 		
 		def import_from_hash(hash)
 			i = hash.delete(:information)
@@ -109,15 +114,15 @@ class Course
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
-			course.information.content = i
+			course.information.content = massage(i)
 			course.information.save!
-			course.resources.content = r
+			course.resources.content = massage(r)
 			course.resources.save!
-			course.policies.content = p
+			course.policies.content = massage(p)
 			course.policies.save!
-			course.news.content = n
+			course.news.content = massage(n)
 			course.news.save!
-			course.description.content = d
+			course.description.content = massage(d)
 			course.description.save!
 			return course
 		end
