@@ -1,90 +1,53 @@
-#!/usr/bin/env ruby
-
-require 'net/http'
-require 'active_support/core_ext'
+require 'mysql'
 
 module Bridge
-	@database = "whsmd_testing"
-	@host = "db1.xoala.net"
-	@user = "whswriter"
-
-	@mysql_prefix = "mysql -B -N -u #{@user} -h #{@host} #{@database} -e "
-	@server = 'http://0.0.0.0:3000'
-
-	# class Assignment
-	# 	attr_accessor :assgt_id, :teacher_id, :content
-	# end
-	# 		
-	def run_mysql_cmd(cmd)
-		stmt = "#{@mysql_prefix} '#{cmd}'"
-		# puts stmt
-		return %x{echo `#{stmt}`}
-	end
-
-	def find_one(table, is_new=true)
-		run_mysql_cmd("SELECT id FROM #{table} WHERE sent=0 AND is_new=#{is_new ? 1 : 0} LIMIT 1").strip
-	end
-
-	# def cons_assignment(assgt_id)
-	# 	teacher_id = run_mysql_cmd("SELECT teacher_id FROM assignments WHERE assgt_id=#{assgt_id}").strip
-	# 	content = run_mysql_cmd("SELECT content FROM assignments WHERE assgt_id=#{assgt_id}")
-	# 	return <<EOT
-	# <?xml version="1.0" encoding="utf-8" ?>
-	# 
-	# <assignment>
-	# 	<assgt_id>#{assgt_id}</assgt_id>
-	# 	<teacher_id>#{teacher_id}</assgt_id>
-	# 	<content><![CDATA[#{content}
-	# 	]]></content>
-	# </assignment>
-	# EOT
-	# end
-
-	def do_create(controller, hash)
-		uri = URI "#{@server}/#{controller}.xml"
-		req = Net::HTTP::Post.new(uri.path)
-		req.set_form_data hash
-		res = Net::HTTP.start(uri.hostname, uri.port) do |http|
-			http.request(req)
-		end
+	SERVER = (Rails.env == 'production')? 'http://www.westonmath.org' : 'http://0.0.0.0:3000'
 	
-		case res
-		when Net::HTTPSuccess, Net::HTTPRedirection
-			puts "success"
-		else
-			res.value
+	class << self
+		def connector
+			return Mysql.connect "db1.xoala.net", 'whswriter', 'hyperbole', 'whsmd', 3306, "/var/run/mysqld/mysqld.sock"
 		end
-	end
-
-	def get_id(str)
-		str.match(/"_id":("[^"]+"),/) {|m| return m[1]}
-	end
-	
-	def get_assignment_id(assgt_id)
-		uri = URI("#{@server}/assignments/get_one/#{assgt_id}.xml")
-		res = Net::HTTP.get(uri)
-		get_id(res)
-	end
-
-	def post_assignment(assgt_id)
-		hash = {'assgt_id' => assgt_id}
-		hash['teacher_id'] = run_mysql_cmd("SELECT teacher_id FROM assignments WHERE assgt_id=#{assgt_id}").strip
-		hash['content'] = run_mysql_cmd("SELECT content FROM assignments WHERE assgt_id=#{assgt_id}")
-
-		aid = get_assignment_id(assgt_id)
-		if aid.empty?
-			# is_new = run_mysql_cmd("SELECT is_new FROM assignments WHERE assgt_id=#{assgt_id}")
-			do_create('assignments', hash)
-		else
-			do_update(controller, hash)
+		
+		def create_or_update_assignments
+			conn = connector
+			conn.query("SELECT assgt_id FROM assgts_status WHERE sent=0").each do |rec|
+				assgt_id = rec[0].to_i
+				conn.query("SELECT assgt_id, teacher_id, content FROM assignments WHERE assgt_id=#{assgt_id}").each_hash do |hash|
+					if Assignment.where(assgt_id: assgt_id).exists?
+						asst = Assignment.find_by(assgt_id: assgt_id)
+						asst.content = hash['content']
+						asst.save!
+					else
+						Assignment.create! hash
+					end
+					conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{assgt_id}")
+				end
+			end
+			return true
 		end
+		
+		def create_or_update_sas
+			conn = connector
+
+			conn.query("SELECT id, assgt_id,course_num,teacher_id,block FROM assgt_dates_status WHERE sent=0").each_hash do |hash|
+				# puts "hash is #{hash}"
+				section = Section.find_by course_id: hash['course_num'].to_i, teacher_id: hash['teacher_id'], block: hash['block']
+
+				conn.query("SELECT due_date, assgt_id, use_assgt FROM section_assignments WHERE id=#{hash['id']}").each_hash do |hash2|
+					hash['use'] = hash.delete('use_assgt') == 'Y'
+					raise "assignment #{hash['assgt_id']} doesn't exist" unless Assignment.where(assgt_id: hash['assgt_id']).exists?
+					
+					if section.section_assignments.where(assgt_id: hash2['assgt_id']).exists?
+						sa = section.section_assignments.find_by(assgt_id: hash2['assgt_id'])
+						sa.update_attributes hash2
+						sa.save!
+					else
+						section.add_assignment(hash2['name'], hash2['assgt_id'], hash2['use'])
+					end
+					conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['id']}")
+				end
+			end
+			return true
+		end		
 	end
 end
-
-# 
-# aid = find_one 'assignments'
-# 
-# # post_assignment(aid)
-# 
-# get_assignment('222')
-# 

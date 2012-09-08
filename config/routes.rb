@@ -1,9 +1,12 @@
 InDepth::Application.routes.draw do
 
-	resources :assignments, only: [:show, :update, :create]
 	resources :assignments
 
 	resources :section_assignments, only: [:show, :update, :create]
+	
+	post 'assignments/create_or_update'
+	
+	get 'assignments/get_one/:assgt_id', controller: :assignments, action: :get_one, as: :get_one_assignment
 
   mount Ckeditor::Engine => '/ckeditor'
 
@@ -12,10 +15,11 @@ InDepth::Application.routes.draw do
 	# end
 	root to: "home#dept_info"
 	
-	match 'teachers/*path/file', via: :get, 
-			controller: :file_handler, action: :pass_on, constraints: {file: /[^\/]+\.[a-zA-Z0-9]+$/ }
+	match 'files/*path', via: :get, controller: :files, action: :pass_on
 
 	resources :teachers, only: [:show]
+	
+	get 'xyzzy', controller: :bridge, action: :import
 
 	# get 'courses/:course_number/section
 	
@@ -37,7 +41,6 @@ InDepth::Application.routes.draw do
 	
 	resources :text_documents
 			
-
 	# Unrestful routes
 
   get "home", controller: 'home', action: 'dept_info'
@@ -52,6 +55,7 @@ InDepth::Application.routes.draw do
 	
 	devise_for :users, controllers: {sessions: 'users/sessions'}
   
+	resources :assignments
 	
 	# get 'courses/:course_id/teacher/:teacher_id/block/:block_id/assignments', controller: :courses, action: :assignments
 	
