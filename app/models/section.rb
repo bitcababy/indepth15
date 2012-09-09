@@ -54,8 +54,8 @@ class Section
 		n ? ret.limit(n) : ret
 	end
 	
-	def add_assignment(name, asst, due_date, show=true)
-		return self.section_assignments.create! name: name, due_date: due_date, assignment: asst
+	def add_assignment(name, asst, due_date, use=true)
+		return self.section_assignments.create! name: name, due_date: due_date, assignment: asst, use: use
 	end
 	
 	def page_header
