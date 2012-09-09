@@ -9,7 +9,7 @@ EOT
 		
 		res += Bridge.create_or_update_assignments
 		res += Bridge.create_or_update_sas
-		res += </sent>
+		res += "</sent>"
 		head :success
 	end
 
