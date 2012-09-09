@@ -20,11 +20,14 @@ class Section
 	validates :academic_year, presence: true, numericality: true
 	
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
-
+	index({academic_year: -1}, {name: 'ay'})
 	belongs_to :course, index: true
 	belongs_to :teacher, index: true
 
 	embeds_many :section_assignments, store_as: :sas
+	index "section_assignment.assgt_id" => 1
+	index "section_assignment.due_date" => -1
+
 	has_and_belongs_to_many :occurrences, inverse_of: nil
 	# accepts_nested_attributes_for :occurrences
 	
