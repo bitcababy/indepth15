@@ -3,7 +3,7 @@ class Assignment < TextDocument
 	
 	scope :dupes, ->(a) { where(:assgt_id.gt => a.assgt_id, :content => a.content) }
 
-	index( {assgt_id: 1} )
+	index( {assgt_id: 1}, {unique: true})
 	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
 
 	class << self
