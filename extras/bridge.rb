@@ -10,15 +10,13 @@ module Bridge
 		
 		def create_or_update_assignment(hash)
 			res = ""
-			assgt_id = hash['assgt_id']
+			assgt_id = hash['assgt_id'].to_i
 			if Assignment.where(assgt_id: assgt_id).exists?
 				asst = Assignment.find_by(assgt_id: assgt_id)
-				if asst.content != hash['content'] 
-					asst.content = hash['content']
-					asst.save!
-				end
+				asst.content = hash['content']
+				asst.save!
 			else
-				Assignment.create! hash
+				Assignment.create! assgt_id: assgt_id, content: hash['content']
 			end
 			res + <<EOT
 <assgt_id>#{assgt_id}</assgt_id>
@@ -42,20 +40,24 @@ EOT
 		end
 		
 		def create_or_update_sa(hash)
-			res = ""
-			hash['academic_year'] = hash['academic_year'].to_i
-			hash['course_id'] = hash['course_id'].to_i
-			section = Section.find_by course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
-			raise "Missing section #{hash}" unless section
-			raise "assignment #{hash['assgt_id']} doesn't exist" unless Assignment.where(assgt_id: hash['assgt_id'].to_i).exists?
+			assgt_id = hash['assgt_id'].to_i
+			use = hash['use_assgt'] == 'Y'
+			ay = hash['academic_year'].to_i
+			course_id = hash['course_id'].to_i
+			due_date = Date.parse(hash['due_date'])
 
-			if section.section_assignments.where(assgt_id: hash['assgt_id']).exists?
-				sa = section.section_assignments.find_by(assgt_id: hash['assgt_id'])
-				sa.due_date = hash['due_date']
-				sa.due_date = hash.delete('use_assgt') == 'Y'
-				sa.save!
+			res = ""
+			section = Section.find_by course_id: course_id, teacher_id: hash['teacher_id'], block: hash['block'], academic_year: ay
+			raise "Missing section #{hash}" unless section
+			raise "assignment #{assgt_id} doesn't exist" unless Assignment.where(assgt_id: assgt_id).exists?
+			
+			if sa = section.section_assignments.detect {|s| s.assignment.assgt_id == assgt_id}
+				sa.due_date = due_date
+				sa.use = use
+				sa.name = hash['name']
+				section.save!
 			else
-				section.add_assignment(hash['name'], hash['assgt_id'], hash['use'])
+				section.section_assignments.create! name: hash['name'], due_date: due_date, assignment: Assignment.find_by(assgt_id: assgt_id), use: use
 			end
 			return res + <<EOT
 	<assgt_date>#{hash['id']}</assgt_date>
@@ -66,8 +68,7 @@ EOT
 			res = ""
 			if conn = connector
 				begin
-					threads = []
-					conn.query("SELECT assgt_dates.id, assgt_id, course_num AS course_id,teacher_id,block,date_due AS due_date,use_assgt,schoolyear AS academic_year FROM assgt_dates,assgt_dates_status WHERE assgt_dates.id=assgt_dates_status.id AND assgt_dates_status.sent=0").each_hash do |hash|
+					conn.query("SELECT section_assignments.id, assgt_id, name, course_num AS course_id,teacher_id,block,due_date,academic_year,use_assgt FROM section_assignments,assgt_dates_status WHERE section_assignments.id=assgt_dates_status.id AND assgt_dates_status.sent=0").each_hash do |hash|
 						res += create_or_update_sa(hash)
 						conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['id']}")
 					end
