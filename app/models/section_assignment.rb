@@ -11,7 +11,7 @@ class SectionAssignment
 	field :use, type: Boolean
 	
 	embedded_in :section
-	belongs_to :assignment, index: true, inverse_of: nil
+	belongs_to :assignment, inverse_of: nil
 	belongs_to :course, index: true
 
 	scope :after,	->(date) { gt(due_date: date) }
@@ -49,7 +49,7 @@ class SectionAssignment
 	def self.import_from_hash(hash)
 		section,assignment = self.get_sa(hash)
 		
-		crit = section.section_assignments.where(section: section, assignment: assignment, block: hash[:block])
+		crit = section.section_assignments.where(assignment: assignment, block: hash[:block])
 		if crit.exists?
 			sa = crit.first
 			raise "no section_assignment" unless sa
