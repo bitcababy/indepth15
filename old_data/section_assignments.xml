@@ -17,17 +17,6 @@
     <database name="whsmd">
         <!-- Table section_assignments -->
         <table name="section_assignments">
-            <column name="id">28140</column>
-            <column name="teacher_id">fierabendm</column>
-            <column name="year">2013</column>
-            <column name="course_num">341</column>
-            <column name="block">G</column>
-            <column name="due_date">2012-09-11</column>
-            <column name="name">2</column>
-            <column name="use_assgt">N</column>
-            <column name="assgt_id">614717</column>
-        </table>
-        <table name="section_assignments">
             <column name="id">28139</column>
             <column name="teacher_id">fierabendm</column>
             <column name="year">2013</column>

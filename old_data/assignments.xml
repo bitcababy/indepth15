@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 10, 2012 at 12:33 PM
+- Generation Time: Sep 10, 2012 at 12:49 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -20183,6 +20183,16 @@ and &lt;a href=&quot;/teachers/davidsonl/precalch/FAQ4-hpc-tests+quizzes.pdf&quo
             <column name="content">&lt;P&gt; Here is the link to worksheet 2:  &lt;A HREF=&quot;/teachers/monzj/precalch/WS2.pdf&quot;&gt;Sine, Cosine, Tangent: Ratios or Functions?.&lt;/A&gt; &lt;/P</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">614717</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is a copy of the &lt;a href=&quot;/teachers/fierabendm/precalch/1_WS1Ans.pdf&quot;&gt;Answers - WS 1&lt;/a&gt;. We started working on &lt;a href=&quot;/teachers/fierabendm/precalch/2_right-tri-SOH-CAH-TOA.pdf&quot;&gt;worksheet 2 - sine, cosine, tangent&lt;/a&gt;, which we will finish tomorrow. Remember, we are meeting in the Mac Lab tomorrow to do some dynamic modeling.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614718</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is a copy of our &lt;a href=&quot;/teachers/fierabendm/precalch/2_Morphing Right Triangles with Sketchpad-1.doc&quot;&gt;dynamic modeling - morphing right triangles&lt;/a&gt;. Please finish worksheet 2 for next class.</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610804</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Please send me an email.  My email address is:
@@ -27455,19 +27465,9 @@ Here are the &lt;a href=&quot;teachers/monzj/apstats/Answers to Problem Set 3 20
             <column name="content">Read chapter 1 and 2 in the textbook. Make a note of any vocabulary you are unfamiliar with. </column>
         </table>
         <table name="assignments">
-            <column name="assgt_id">614699</column>
+            <column name="assgt_id">614719</column>
             <column name="teacher_id">fidlerb</column>
-            <column name="content">Do problems 2, 6, 9, 14, 19, and 25 on pages 16 through 18 of the textbook.</column>
-        </table>
-        <table name="assignments">
-            <column name="assgt_id">614700</column>
-            <column name="teacher_id">fidlerb</column>
-            <column name="content">Do problems 2, 6, 9, 14, 19, and 25 on pages 16 through 18 of the textbook.</column>
-        </table>
-        <table name="assignments">
-            <column name="assgt_id">614701</column>
-            <column name="teacher_id">fidlerb</column>
-            <column name="content">Do problems 2, 6, 9, 14, 19, and 25 on pages 16 through 18 of the textbook.</column>
+            <column name="content">Do problems 2, 6, 9, 14, 19, and 25 on pages 16 through 18 of the textbook.  Then read Chapter 3 in your textbook. </column>
         </table>
     </database>
 </pma_xml_export>
