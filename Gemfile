@@ -64,6 +64,8 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'ckeditor', :git => 'https://github.com/paranoida/ckeditor.git'
 gem 'ruby-mysql'
+gem 'tidy_ffi'
+gem 'daemons'
 
 group :development, :test do
 	gem 'rspec-rails'
