@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 09, 2012 at 05:35 PM
+- Generation Time: Sep 10, 2012 at 12:33 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -4257,12 +4257,26 @@ Here are the ergs for each question:&lt;br /&gt;
 	&lt;td align=&quot;right&quot;&gt;*16&lt;/td align=&quot;right&quot;&gt;
 	&lt;td align=&quot;right&quot;&gt;2&lt;/td align=&quot;right&quot;&gt;
 &lt;/tr&gt;
-&lt;/table&gt;</column>
+&lt;/table&gt;
+&lt;br /&gt;
+Or, if you prefer it inline rather than as a table: #1(4), *2(4), 3(2), 4(2), 5(2), 6(2), 7(4), *8(8), *9(4), 10(8), 11(2), 12(8), 13(8), *14(2), *15(2), *16(2).</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614698</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">This is just here for testing purposes.</column>
+            <column name="content">This is just here for testing purposes. Now going to try and save this.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614702</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">testing
+more
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614712</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">And here's another test assignment</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610791</column>
@@ -7122,6 +7136,11 @@ Also, &lt;a href=&quot;https://dl.dropbox.com/u/49187641/Syllabus%20for%20Geomet
             <column name="content">Finish &lt;a href=&quot;/teachers/hosmerc/geom/EvaluatingMathematicalStatements2013.pdf&quot;&gt;EvaluatingMathematicalStatements&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">614703</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;a href=&quot;/teachers/gacsa/geom/Unit 1/Plotting Points 2013.pdf&quot;&gt;Plotting Points.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610850</column>
             <column name="teacher_id">hosmerc</column>
             <column name="content">Create a machine with at least 3 input/output pairs but leave the rule blank.  You will be presenting this to your classmates and they will try to guess your rule.  Try to make it as challenging as possible so that your classmates will not guess it immediately.</column>
@@ -9354,6 +9373,11 @@ And for anyone who's interested, Allie and Kacie created &lt;a href=&quot;teache
             <column name="assgt_id">614691</column>
             <column name="teacher_id">griswoldn</column>
             <column name="content">Do problem set B from the handout on set notation.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614716</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;a href=&quot;teachers/gacsa/alg2h/Unit 1/Set Notation 2011.pdf&quot;&gt;Set Notation&lt;/a&gt; and &lt;a href=&quot;teachers/gacsa/alg2h/Unit 1/More Set Notation 2011.pdf&quot;&gt;More Set Notation.&lt;/a&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610800</column>
@@ -15910,6 +15934,11 @@ which you worked on in class.
             <column name="content">Complete problems 1-13 (inclusive) on &lt;a href=&quot;/teachers/hosmerc/alg2/1-1_Linear_Equations.pdf&quot;&gt;Alg 2 Lesson 1-1 by Kate Nowak&lt;/a&gt; for our class. </column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">614714</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete at least #1-11 on the &lt;a href=&quot;/files/davidsonl/alg2/square-windows.pdf&quot;&gt;Square Windows&lt;/a&gt; worksheet.</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">612697</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">On the first day of Topics, we introduced ourselves, discussed the &lt;a href = &quot;/teachers/langsdorfa/precalc2/SyllabusforLangsdorfTopics2011.pdf&quot;&gt; course information &lt;/a&gt;, and filled out some student surveys.  </column>
@@ -20144,6 +20173,16 @@ and &lt;a href=&quot;/teachers/davidsonl/precalch/FAQ4-hpc-tests+quizzes.pdf&quo
             <column name="content">Please complete &lt;a href=&quot;/teachers/fierabendm/precalch/1_intro-problems-ratios.pdf&quot;&gt;Introductory Problems&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">614705</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt; Here is the link to worksheet 1:  &lt;A HREF=&quot;/teachers/monzj/precalch/WS1corrected.pdf&quot;&gt;Introductory Problems.&quot;&lt;/A&gt; &lt;/P&gt;&lt;p&gt; Here are the answers: &lt;A HREF=&quot;/teachers/monzj/precalch/WS1Ans.pdf&quot;&gt;Answers.&quot;&lt;/A&gt;&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614706</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt; Here is the link to worksheet 2:  &lt;A HREF=&quot;/teachers/monzj/precalch/WS2.pdf&quot;&gt;Sine, Cosine, Tangent: Ratios or Functions?.&lt;/A&gt; &lt;/P</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610804</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Please send me an email.  My email address is:
@@ -23486,6 +23525,11 @@ Students with extended time (7:50-10:50), please go to room #200.</column>
             <column name="assgt_id">614695</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Complete the FUNctions packet and the transformations worksheet handed out in class.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614715</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete &lt;a href=&quot;/teachers/fierabendm/precalc1/1_transhw.pdf&quot;&gt;transformation homework&lt;/a&gt; and &lt;a href=&quot;/teachers/fierabendm/precalc1/5_more trans hw.doc&quot;&gt;more transformation homework&lt;/a&gt; for next class. If you are confused, please see me outside of class.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610803</column>
@@ -27409,6 +27453,21 @@ Here are the &lt;a href=&quot;teachers/monzj/apstats/Answers to Problem Set 3 20
             <column name="assgt_id">614686</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Read chapter 1 and 2 in the textbook. Make a note of any vocabulary you are unfamiliar with. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614699</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Do problems 2, 6, 9, 14, 19, and 25 on pages 16 through 18 of the textbook.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614700</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Do problems 2, 6, 9, 14, 19, and 25 on pages 16 through 18 of the textbook.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614701</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Do problems 2, 6, 9, 14, 19, and 25 on pages 16 through 18 of the textbook.</column>
         </table>
     </database>
 </pma_xml_export>

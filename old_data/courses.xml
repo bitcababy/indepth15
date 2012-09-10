@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 04, 2012 at 04:59 PM
+- Generation Time: Sep 10, 2012 at 12:36 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -24,46 +24,37 @@
             <column name="semesters">12</column>
             <column name="num_occurrences">5</column>
             <column name="description">A formal Euclidean geometry curriculum is taught that includes coordinate, synthetic, and solid geometry. Students will use the Geometer&amp;rsquo;s Sketchpad to investigate geometric conjectures. Only students with high motivation, exceptional ability and demonstrated mathematical achievement should enroll in this course.</column>
-            <column name="info"> &lt;h3&gt;Welcome!&lt;/h3&gt;
-         
-         &lt;p&gt;Students, parents, colleagues:&lt;/p&gt;
-         
-         &lt;p&gt;This website helps you keep up-to-date with the Honors
-         Geometry classes taught by Mr. Gabriner and Mr. Davidson
-         at Weston High School. You can use the items at the left to
-         navigate to different pages, and of course you can click on
-         any of the links contained in following options:&lt;/p&gt;
-         
-         &lt;ul&gt;
-            &lt;li&gt;Check the Info page (where you are now) for
-            information about the course syllabus and other details.&lt;br&gt;
-            &lt;br&gt;
-            &lt;/li&gt;
-            
-            &lt;li&gt;Find out current, past, or upcoming assignments on the Assignments page for each section.&lt;br&gt;
-            &lt;br&gt;
-            &lt;/li&gt;
-            
-            &lt;li&gt;Check on course
-            procedures and policies, including requirements for
-            supplies, homework, and class participation, as well as
-            information on grading on the Policies page.&lt;br&gt;
-            &lt;br&gt;
-            &lt;/li&gt;
-            
-            &lt;li&gt;Explore Honors
-            Geometry resources that will help you expand your
-            knowledge of mathematics.&lt;br&gt;
-            &lt;br&gt;
-            &lt;/li&gt;
-            
-            &lt;li&gt;Send email to &lt;a href=&quot;mailto:gabrinerd@mail.weston.org&quot;&gt;Mr.
-            Gabriner&lt;/a&gt; or &lt;a href=&quot;mailto:davidsonl@mail.weston.org&quot;&gt;Mr. Davidson&lt;/a&gt;.&lt;br&gt;
-            &lt;br&gt;
-            &lt;/li&gt;
-         &lt;/ul&gt;
-         
-Here are the course &lt;a href=&quot;/teachers/davidsonl/geomh/curriculum.pdf&quot;&gt;curriculum&lt;/a&gt; and the &lt;a href=&quot;/teachers/davidsonl/geomh/goals+objectives.pdf&quot;&gt;goals and objectives&lt;/a&gt;.</column>
+            <column name="info">&lt;h3&gt;Welcome!&lt;/h3&gt;
+&lt;p&gt;Students, parents, colleagues:&lt;/p&gt;
+&lt;p&gt;This website helps you keep up-to-date with the Honors Geometry
+classes taught by Mr. Gabriner and Mr. Davidson at Weston High
+School. You can use the items at the left to navigate to different
+pages, and of course you can click on any of the links contained in
+following options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Check the Info page (where you are now) for information about
+the course syllabus and other details.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Find out current, past, or upcoming assignments on the
+Assignments page for each section.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Check on course procedures and policies, including requirements
+for supplies, homework, and class participation, as well as
+information on grading on the Policies page.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Explore Honors Geometry resources that will help you expand
+your knowledge of mathematics.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Send email to &lt;a href=&quot;mailto:gabrinerd@mail.weston.org&quot;&gt;Mr.
+Gabriner&lt;/a&gt; or &lt;a href=&quot;mailto:davidsonl@mail.weston.org&quot;&gt;Mr.
+Davidson&lt;/a&gt;.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+Here are the course &lt;a href=
+&quot;/teachers/davidsonl/geomh/curriculum.pdf&quot;&gt;curriculum&lt;/a&gt; and the
+&lt;a href=&quot;/teachers/davidsonl/geomh/goals+objectives.pdf&quot;&gt;goals and
+objectives&lt;/a&gt;.
+</column>
             <column name="policies">&lt;h3&gt;Supplies&lt;/h3&gt;
 
 &lt;p&gt;You will need a bound lab notebook and a thin binder for your class notes, homework, returned
@@ -155,10 +146,11 @@ classmate, or by sending email to your teacher, or by seeing your
 teacher in school as soon as you return. You must make up any missed
 tests or quizzes right away.&lt;/p&gt;
 </column>
-            <column name="resources">&lt;p&gt;&lt;a href=&quot;/files/mclaughlinj/geomh/a_secret_message.PDF&quot;&gt;Secret
+            <column name="resources">&lt;p&gt;&lt;a href=&quot;/teachers/mclaughlinj/geomh/a_secret_message.PDF&quot;&gt;Secret
 Message!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt; &lt;a href=&quot;/files//teachers/mclaughlinj/geomh/textbook.pdf&quot;&gt;How to read a textbook&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;/teachers/mclaughlinj/geomh/textbook.pdf&quot;&gt;How to read a textbook&lt;/a&gt;&lt;/p&gt;
+
 
 
 &lt;p&gt;
@@ -176,8 +168,8 @@ Message!&lt;/a&gt;&lt;/p&gt;
 &lt;/p&gt; 
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-09-03 14:57:35</column>
-            <column name="sent">1</column>
+            <column name="updated_at">2012-09-08 06:59:51</column>
+            <column name="sent">0</column>
         </table>
         <table name="courses">
             <column name="number">322</column>
@@ -2200,15 +2192,15 @@ Here are some NetLogo files you will need:
 &lt;p&gt;
 &lt;/p&gt;
 &lt;A
-HREF=&quot;/files/mclaughlinj/admc/BumperBasics-1.nlogo&quot;&gt;Bumperbasics&lt;/a&gt;
+HREF=&quot;http://www.westonmath.org/teachers/mclaughlinj/admc/BumperBasics-1.nlogo&quot;&gt;Bumperbasics&lt;/a&gt;
 &lt;p&gt;
 &lt;/p&gt;
 &lt;A
-HREF=&quot;/files/mclaughlinj/admc/startingfile.nlogo&quot;&gt;Starting File&lt;/a&gt;
+HREF=&quot;http://www.westonmath.org/teachers/mclaughlinj/admc/startingfile.nlogo&quot;&gt;Starting File&lt;/a&gt;
 &lt;p&gt;
 &lt;/p&gt;
 &lt;A
-HREF=&quot;/files/mclaughlinj/admc/DesignYourOwnPath1.nlogo&quot;&gt;Design Your Own Path&lt;/a&gt;
+HREF=&quot;http://www.westonmath.org/teachers/mclaughlinj/admc/DesignYourOwnPath1.nlogo&quot;&gt;Design Your Own Path&lt;/a&gt;
 &lt;p&gt;
 &lt;/p&gt;
 &lt;A
@@ -2800,19 +2792,19 @@ Information from the College Board can be obtained at
 &lt;P&gt;&lt;/p&gt;
 
  Available text files for download to use with the typing monkeys:&lt;br&gt;
-&lt;A HREF=&quot;/files/mccowand/apcs/Monkey/Melville.txt&quot;&gt; Melville short story&lt;/a&gt; 
+&lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/Melville.txt&quot;&gt; Melville short story&lt;/a&gt; 
 &lt;br&gt;
-&lt;A HREF=&quot;/files/mccowand/apcs/Monkey/Twain.txt&quot;&gt; Twain short story&lt;/a&gt; 
+&lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/Twain.txt&quot;&gt; Twain short story&lt;/a&gt; 
 &lt;br&gt;
-&lt;A HREF=&quot;/files/mccowand/apcs/Monkey/Goethe.txt&quot;&gt; German text&lt;/a&gt; 
+&lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/Goethe.txt&quot;&gt; German text&lt;/a&gt; 
 &lt;br&gt;
-&lt;A HREF=&quot;/files/mccowand/apcs/Monkey/Dante.txt&quot;&gt; Italian text&lt;/a&gt; 
+&lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/Dante.txt&quot;&gt; Italian text&lt;/a&gt; 
 &lt;br&gt;
-&lt;A HREF=&quot;/files/mccowand/apcs/Monkey/Balzac.txt&quot;&gt; French text&lt;/a&gt;
+&lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/Balzac.txt&quot;&gt; French text&lt;/a&gt;
 &lt;br&gt;
-&lt;A HREF=&quot;/files/mccowand/apcs/Monkey/AllsWell.txt&quot;&gt; Shakespeare play&lt;/a&gt;  
+&lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/AllsWell.txt&quot;&gt; Shakespeare play&lt;/a&gt;  
 &lt;br&gt;
-&lt;A HREF=&quot;/files/mccowand/apcs/Monkey/SpanishPoems.txt&quot;&gt; Spanish poems&lt;/a&gt; </column>
+&lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/SpanishPoems.txt&quot;&gt; Spanish poems&lt;/a&gt; </column>
             <column name="has_assgts">1</column>
             <column name="updated_at">2012-08-28 14:21:49</column>
             <column name="sent">1</column>
@@ -2896,7 +2888,7 @@ Text:  &lt;i&gt;Stats: Modeling the World&lt;/i&gt;, Bock, Velleman, DeVeaux, Pe
 
 </column>
             <column name="resources">&lt;P&gt;Read the following article:  &lt;A HREF=&quot;http://www.nytimes.com/2012/02/19/magazine/shopping-habits.html?pagewanted=all&quot;&gt;HOW COMPANIES LEARN YOUR SECRETS&quot;.&lt;/A&gt; &lt;/P&gt;
-&lt;P&gt;Here are some links to the correlation activities &lt;A HREF=&quot;/files/monzj/alg2h/Scatterplot%20Correlation%20Exercise.ftm&quot;&gt;FATHOM CORRELATION EXERCISE&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://istics.net/stat/Correlations/&quot;&gt;CORRELATION GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://www.ruf.rice.edu/~lane/stat_sim/reg_by_eye/index.html&quot;&gt;REGRESSION BY EYE GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is a link to the midterm course evaluation &lt;A HREF=&quot;https://docs.google.com/a/my.weston.org/spreadsheet/viewform?formkey=dHFHNUtEQS0xWTBxaHVRTE0yT2xndnc6MA&quot;&gt;MIDTERM EVALUATION.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link to  &lt;A HREF=&quot;https://oli.web.cmu.edu/openlearning/forstudents/freecourses&quot;&gt;CARNEGIE MELLON ONLINE STATS.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; Here is a link to  &lt;A HREF=&quot;http://www.unpracticalmath.com/applets/virtual_dice.html&quot;&gt;VIRTUAL DICE.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; If you need some extra review, or if you find our textbook a bit unclear, try these online resources:  &lt;A HREF=&quot;http://www.stattrek.com&quot;&gt;STAT TREK.&lt;/A&gt; and  &lt;A HREF=&quot;http://onlinestatbook.com&quot;&gt;THE ONLINE STAT TEXTBOOK.&lt;/A&gt; &lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;http://www.causeweb.org/repository/Minitab/Minitab.pdf&quot;&gt;INTRO TO MINITAB.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/TextingData.mpj&quot;&gt;TEXTING DATA.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/WATER TEST DATA.xlsx&quot;&gt;WATER TEST DATABASE.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; You can find a program for the Chi-Square Goodness of Fit Test on the TI-83 at &lt;A HREF=&quot;http://staweb.sta.cathedral.org/departments/math/mhansen/public_html/01stat/programs/chisqgof.htm&quot;&gt;Chi-Square Test.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt; Log in to the probability experiment at &lt;A HREF=&quot;http://veconlab.econ.virginia.edu/login.php&quot;&gt;Probability Experiment.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt;For information about the AP Exam in AP Statistics go to &lt;A HREF=&quot;http://www.collegeboard.com/ap/students/statistics/index.html&quot;&gt;AP
+&lt;P&gt;Here are some links to the correlation activities &lt;A HREF=&quot;http://www.westonmath.org/teachers/monzj/alg2h/Scatterplot%20Correlation%20Exercise.ftm&quot;&gt;FATHOM CORRELATION EXERCISE&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://istics.net/stat/Correlations/&quot;&gt;CORRELATION GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt;&lt;A HREF=&quot;http://www.ruf.rice.edu/~lane/stat_sim/reg_by_eye/index.html&quot;&gt;REGRESSION BY EYE GAME&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is a link to the midterm course evaluation &lt;A HREF=&quot;https://docs.google.com/a/my.weston.org/spreadsheet/viewform?formkey=dHFHNUtEQS0xWTBxaHVRTE0yT2xndnc6MA&quot;&gt;MIDTERM EVALUATION.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link to  &lt;A HREF=&quot;https://oli.web.cmu.edu/openlearning/forstudents/freecourses&quot;&gt;CARNEGIE MELLON ONLINE STATS.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; Here is a link to  &lt;A HREF=&quot;http://www.unpracticalmath.com/applets/virtual_dice.html&quot;&gt;VIRTUAL DICE.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; If you need some extra review, or if you find our textbook a bit unclear, try these online resources:  &lt;A HREF=&quot;http://www.stattrek.com&quot;&gt;STAT TREK.&lt;/A&gt; and  &lt;A HREF=&quot;http://onlinestatbook.com&quot;&gt;THE ONLINE STAT TEXTBOOK.&lt;/A&gt; &lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;http://www.causeweb.org/repository/Minitab/Minitab.pdf&quot;&gt;INTRO TO MINITAB.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/TextingData.mpj&quot;&gt;TEXTING DATA.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; Here is the link for the &lt;A HREF=&quot;teachers/monzj/apstats/WATER TEST DATA.xlsx&quot;&gt;WATER TEST DATABASE.&lt;/A&gt;&lt;/P&gt;&lt;P&gt; You can find a program for the Chi-Square Goodness of Fit Test on the TI-83 at &lt;A HREF=&quot;http://staweb.sta.cathedral.org/departments/math/mhansen/public_html/01stat/programs/chisqgof.htm&quot;&gt;Chi-Square Test.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt; Log in to the probability experiment at &lt;A HREF=&quot;http://veconlab.econ.virginia.edu/login.php&quot;&gt;Probability Experiment.&lt;/A&gt;.&lt;/P&gt;&lt;P&gt;For information about the AP Exam in AP Statistics go to &lt;A HREF=&quot;http://www.collegeboard.com/ap/students/statistics/index.html&quot;&gt;AP
 Central&lt;/A&gt;.&lt;/P&gt;
 &lt;P&gt;For the activity on Normal Quantile Plots go to &lt;A HREF=&quot;/teachers/gonzalezd/apstats/normalplot.mpj&quot;&gt;NORMAL PLOTS&lt;/A&gt;.&lt;/P&gt;</column>
             <column name="has_assgts">1</column>
