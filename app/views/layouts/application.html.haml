@@ -7,7 +7,7 @@
 		= stylesheet_link_tag "application-print", media: "print"
 		= stylesheet_link_tag "application-screen", media: "screen"
 		/ [if eq IE 7]
-			= stylesheet_link_tag "ie7", media: "all"
+			/ = stylesheet_link_tag "ie7", media: "all"
 		= javascript_include_tag "application"
 		
 		= csrf_meta_tags
