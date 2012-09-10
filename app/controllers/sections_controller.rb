@@ -5,19 +5,27 @@ class SectionsController < ApplicationController
     respond_to do |format|
       format.html {render :layout => !request.xhr?}
  			format.js
-			format.json { render json: @course}
+			format.json { render json: @section}
    end
 	end
 
 	def assignments
-    respond_to do |format|
-      format.html {render :layout => !request.xhr?}
-    end
+		if @section 
+	    respond_to do |format|
+	      format.html {render :layout => !request.xhr?}
+	    end
+		else
+			redirect_to '/'
+		end
 	end
 
 	protected
 	def find_section
-		@section = Section.find(params['id'])
+		begin
+			@section = Section.find(params['id'])
+		rescue
+			@section = nil
+		end
 	end
 
 end
