@@ -149,28 +149,6 @@
             <column name="assgt_id">614702</column>
         </table>
         <table name="section_assignments">
-            <column name="id">28119</column>
-            <column name="teacher_id">fidlerb</column>
-            <column name="year">2013</column>
-            <column name="course_num">391</column>
-            <column name="block">B</column>
-            <column name="due_date">2012-09-12</column>
-            <column name="name">4</column>
-            <column name="use_assgt">Y</column>
-            <column name="assgt_id">614701</column>
-        </table>
-        <table name="section_assignments">
-            <column name="id">28118</column>
-            <column name="teacher_id">fidlerb</column>
-            <column name="year">2013</column>
-            <column name="course_num">391</column>
-            <column name="block">B</column>
-            <column name="due_date">2012-09-12</column>
-            <column name="name">3</column>
-            <column name="use_assgt">Y</column>
-            <column name="assgt_id">614700</column>
-        </table>
-        <table name="section_assignments">
             <column name="id">28117</column>
             <column name="teacher_id">fidlerb</column>
             <column name="year">2013</column>
