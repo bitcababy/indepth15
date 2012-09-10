@@ -9,7 +9,6 @@ module Bridge
 		end
 		
 		def create_or_update_assignment(hash)
-			# res = ""
 			assgt_id = hash['assgt_id'].to_i
 			if Assignment.where(assgt_id: assgt_id).exists?
 				asst = Assignment.find_by(assgt_id: assgt_id)
@@ -18,27 +17,8 @@ module Bridge
 			else
 				Assignment.create! assgt_id: assgt_id, content: hash['content']
 			end
-# 			res + <<EOT
-# <assgt_id>#{assgt_id}</assgt_id>
-# EOT
 		end
 				
-		def create_or_update_assignments
-			# res = ""
-			if conn = connector
-				begin
-					conn.query("SELECT assignments.assgt_id, assignments.teacher_id, assignments.content FROM assgts_status, assignments WHERE assgts_status.sent=0 AND assgts_status.deleted=0 AND assgts_status.assgt_id=assignments.assgt_id").each_hash do |hash|
-						res += create_or_update_assignment(hash)
-						conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}")
-					end
-				ensure
-					conn.close
-				end
-			end
-
-			# return res
-		end
-		
 		def create_or_update_sa(hash)
 			assgt_id = hash['assgt_id'].to_i
 			use = hash['use_assgt'] == 'Y'
@@ -46,7 +26,6 @@ module Bridge
 			course_id = hash['course_id'].to_i
 			due_date = Date.parse(hash['due_date'])
 
-			# res = ""
 			section = Section.find_by course_id: course_id, teacher_id: hash['teacher_id'], block: hash['block'], academic_year: ay
 			raise "Missing section #{hash}" unless section
 			raise "assignment #{assgt_id} doesn't exist" unless Assignment.where(assgt_id: assgt_id).exists?
@@ -59,24 +38,38 @@ module Bridge
 			else
 				section.section_assignments.create! name: hash['name'], due_date: due_date, assignment: Assignment.find_by(assgt_id: assgt_id), use: use
 			end
-# 			return res + <<EOT
-# 	<assgt_date>#{hash['id']}</assgt_date>
-# EOT
 		end
 
+		def create_or_update_assignments
+			if conn = connector
+				begin
+					conn.query("SELECT assignments.assgt_id, assignments.teacher_id, assignments.content FROM assgts_status, assignments WHERE assgts_status.sent=0 AND assgts_status.deleted=0 AND assgts_status.assgt_id=assignments.assgt_id").each_hash do |hash|
+						create_or_update_assignment(hash)
+						conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}")
+					end
+				rescue
+					logger.warn "Couldn't connect to database #{SERVER}"
+				ensure
+					conn.close if conn
+				end
+			end
+
+			# return res
+		end
+		
 		def create_or_update_sas
 			# res = ""
 			if conn = connector
 				begin
 					conn.query("SELECT section_assignments.id, assgt_id, name, course_num AS course_id,teacher_id,block,due_date,academic_year,use_assgt FROM section_assignments,assgt_dates_status WHERE assgt_dates_status.sent=0 AND AND assgts_status.deleted=0 section_assignments.id=assgt_dates_status.id").each_hash do |hash|
-						# res += create_or_update_sa(hash)
+						create_or_update_sa(hash)
 						conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['id']}")
 					end
+				rescue
 				ensure
-					conn.close
+					conn.close if conn
 				end
 			end
-			# return res
 		end
 
 	end
