@@ -1,6 +1,6 @@
 module CourseMockHelpers
 	def mock_teacher(opts={})
-		opts.merge!(formal_name: "Mr. Doe", generic_msg: "Generic msg" current_msg: "Current msg", upcoming_msg: "Upcoming_msg") {|key, v1, v2| v1}
+		opts.merge!(formal_name: "Mr. Doe", generic_msg: "Generic msg", current_msg: "Current msg", upcoming_msg: "Upcoming_msg") {|key, v1, v2| v1}
 		mock(opts[:formal_name]) do
 			opts.each_pair {|k, v| stubs(k).returns v}
 		end
