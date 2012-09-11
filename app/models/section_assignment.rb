@@ -10,15 +10,22 @@ class SectionAssignment
 	field :na, as: :name, type: String, default: ""
 	field :use, type: Boolean
 	
-	embedded_in :section
+	index :due_date => -1
+	
+	belongs_to :section
 	belongs_to :assignment, inverse_of: nil
-	belongs_to :course, index: true
+	# accepts_nested_attributes_for :assignment
 
 	scope :after,	->(date) { gt(due_date: date) }
 	scope :past, -> { lt(due_date: future_due_date) }
 	scope :future, -> { gte(due_date: future_due_date) }
 	scope :current, -> { gte(due_date: future_due_date).asc(:due_date).limit(1) }
+	scope :for_section, ->(s) { where(section: s) }
 	
+	def to_s
+		"#{self.section}/#{self.assignment.assgt_id}"
+	end
+
 	def self.upcoming
 		current = self.current.first
 		if current
@@ -27,6 +34,10 @@ class SectionAssignment
 			self.future
 		end
 	end
+	
+	# def self.current
+	# 	[self.future.asc(:due_date).first]
+	# end
 	
 	def self.get_sa(hash)
 		assgt_id = hash.delete(:assgt_id)
@@ -42,24 +53,24 @@ class SectionAssignment
 		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
 		raise "Section #{course}/#{block}/#{teacher_id} not found" unless teacher
 		assignment = Assignment.find_by(assgt_id: assgt_id)
-		hash[:course] = course
 		return section,assignment
 	end
 	
 	def self.import_from_hash(hash)
 		section,assignment = self.get_sa(hash)
 		
-		crit = section.section_assignments.where(assignment: assignment, block: hash[:block])
+		crit = SectionAssignment.where(assignment: assignment, block: hash[:block], section: section)
 		if crit.exists?
 			sa = crit.first
 			raise "no section_assignment" unless sa
 			sa.due_date = hash[:due_date]
 			sa.use = hash[:use_assgt]
 			sa.save!
+			return sa
 		else
 			hash[:use] = (hash.delete(:use_assgt) == 'Y')
 			hash[:assignment] = assignment
-			section.section_assignments.create! hash
+			return section.section_assignments.create! hash
 		end
 	end
 
