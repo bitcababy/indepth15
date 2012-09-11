@@ -1,5 +1,6 @@
 class Assignment < TextDocument
 	field :assgt_id, type: Integer
+	validates :assgt_id, uniqueness: true
 	
 	scope :dupes, ->(a) { where(:assgt_id.gt => a.assgt_id, :content => a.content) }
 
