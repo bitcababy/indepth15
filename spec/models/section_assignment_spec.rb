@@ -1,32 +1,36 @@
 require 'spec_helper'
 
 describe SectionAssignment do
-	it { should be_embedded_in :section }
+	it { should belong_to :section }
 	it { should belong_to :assignment }
 	
 	context "scoping" do
 		before :each do
 			@section = Fabricate(:section)
-			4.times {|i| @section.add_assignment i.to_s, Fabricate(:assignment), Date.today + i + 1 }
-			3.times {|i| @section.add_assignment i.to_s, Fabricate(:assignment), Date.today - i - 1 }
+			3.times {|i| Fabricate :future_section_assignment, section: @section }
+			4.times {|i| Fabricate :past_section_assignment, section: @section }
 		end
 		
-		it "has a current scope" do
-			@section.section_assignments.current.count.should == 1
+		it "has a for_section scope" do
+			SectionAssignment.for_section(@section).count.should == 7
 		end
 		
 		it "has a future scope" do
-			@section.section_assignments.future.count.should == 4
+			SectionAssignment.for_section(@section).future.count.should == 3
 		end
 		
 		it "has a past scope" do
-			@section.section_assignments.past.count.should == 3
+			SectionAssignment.past.count.should == 4
 		end
 		
 		it "has an upcoming scope" do
-			@section.section_assignments.upcoming.count.should == 3
+			SectionAssignment.upcoming.count.should == 2
 		end
 			
+		it "has a current scope" do
+			SectionAssignment.current.to_a.count.should == 1
+		end
+		
 	end
 	
 	# context "incoming" do
@@ -95,9 +99,10 @@ describe SectionAssignment do
 			@hash[:due_date] = "2012-09-07"
 			expect {
 				SectionAssignment.import_from_hash(Hash[@hash])
-			}.to change(@section.section_assignments, :count).by(0)
+			}.to change(@section.section_assignments.to_a, :count).by(0)
 			@hash[:due_date] = "2012-09-08"
 			sa = SectionAssignment.import_from_hash(Hash[@hash])
+			sa.should be_kind_of SectionAssignment
 			sa.due_date.should == Date.new(2012, 9, 8)
 		end
 			
