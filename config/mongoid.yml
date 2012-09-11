@@ -26,7 +26,7 @@ development: &defaults
     # allow_dynamic_fields: true
 
     # Enable the identity map, needed for eager loading. (default: false)
-    identity_map_enabled: true
+    identity_map_enabled: false
 
     # Includes the root model name in json serialization. (default: false)
     # include_root_in_json: false
@@ -43,7 +43,7 @@ development: &defaults
 
     # Raise an error when performing a #find and the document is not found.
     # (default: true)
-    raise_not_found_error: false
+    raise_not_found_error: true
 
     # Raise an error when defining a scope with the same name as an
     # existing method. (default: false)
@@ -74,17 +74,11 @@ test:
       database: in_depth_test
 
 <% if ENV['MONGOLAB_URI'] %>
-testing:
-  sessions:
-    default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
-
 production:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
   options:
     identity_map_enabled: true
-
- 
+    safe: false
 <% end %>
