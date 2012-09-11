@@ -13,6 +13,7 @@ Fabricator :assignment, from: :text_document, class_name: :assignment  do
 	name								{ sequence(:assignment_name) }
 	content							""
 	section_assignments	[]
+	assgt_id						{ sequence(1)}
 end
 
 Fabricator :upload, from: :document
