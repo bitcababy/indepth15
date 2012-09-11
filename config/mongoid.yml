@@ -74,6 +74,15 @@ test:
       database: in_depth_test
 
 <% if ENV['MONGOLAB_URI'] %>
+testing:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
+    options:
+      safe: false
+  options:
+    identity_map_enabled: true
+
 production:
   sessions:
     default:
