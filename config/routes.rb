@@ -15,8 +15,10 @@ InDepth::Application.routes.draw do
 	root to: "home#dept_info"
 	
 	match 'files/*path', via: :get, controller: :files, action: :pass_on
-
+	
 	resources :teachers, only: [:show]
+	
+	match 'teachers/*path', via: :get, controller: :files, action: :pass_on
 	
 	get 'xyzzy', controller: :bridge, action: :import
 
