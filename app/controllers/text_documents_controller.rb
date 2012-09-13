@@ -16,10 +16,14 @@ class TextDocumentsController < ApplicationController
   # GET text_documents/1
   # GET text_documents/1.json
   def show
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @text_document }
-    end
+		if @text_document
+	    respond_to do |format|
+	      format.html # show.html.erb
+	      format.json { render json: @text_document }
+	    end
+		else
+			redirect_to root_url, notice: 'Invalid document'
+		end
   end
 
   # GET text_documents/new
@@ -34,6 +38,9 @@ class TextDocumentsController < ApplicationController
 
   # GET text_documents/1/edit
   def edit
+		unless @text_document
+			redirect_to root_url, notice: 'Invalid document'
+		end
   end
 
   # POST text_documents
@@ -55,20 +62,30 @@ class TextDocumentsController < ApplicationController
   # PUT text_documents/1
   # PUT text_documents/1.json
   def update
-    respond_to do |format|
-      if @text_document.update_attributes(params[:text_document])
-        format.html { redirect_to text_document_url(@text_document), notice: 'TextDocument was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @text_document.errors, status: :unprocessable_entity }
-      end
-    end
+		if @text_document
+			respond_to do |format|
+	      if @text_document.update_attributes(params[:text_document])
+	        format.html { redirect_to text_document_url(@text_document), notice: 'TextDocument was successfully updated.' }
+	        format.json { head :no_content }
+	      else
+	        format.html { render action: "edit" }
+	        format.json { render json: @text_document.errors, status: :unprocessable_entity }
+	      end
+	    end
+		else
+			logger.error "Tried to updated nonexistent document"
+			redirect_to root_url
+		end
   end
 
   # DELETE text_documents/1
   # DELETE text_documents/1.json
   def destroy
+		unless @text_document
+			logger.error "Tried to delete nonexistent document"
+			redirect_to root_url, notice: 'Invalid document'
+		end
+
     @text_document.destroy
 
     respond_to do |format|
@@ -78,6 +95,10 @@ class TextDocumentsController < ApplicationController
   end
 
 	def find_text_document
-    @text_document = TextDocument.find(params[:id])
+		begin
+    	@text_document = TextDocument.find(params[:id])
+		rescue Mongoid::Errors::DocumentNotFound
+			@text_document = nil
+		end
 	end
 end
