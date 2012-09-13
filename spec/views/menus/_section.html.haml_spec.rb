@@ -18,7 +18,7 @@ describe 'menus/_section' do
 		end
 		render partial: 'menus/section', locals: {section: section}
 		rendered.should have_selector('li.section') do |li|
-			li.should have_selector('a', href: assignments_page_path(1))
+			li.should have_selector('a', href: section_path(1))
 		end
 			
 	end

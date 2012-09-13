@@ -72,14 +72,14 @@ describe Section do
 			@section = Fabricate :section, valid_attributes
 			3.times {|i| @section.add_assignment "future#{i}", Fabricate(:assignment), future_due_date + i }
 			2.times {|i| @section.add_assignment "past#{i}", Fabricate(:assignment), future_due_date - i - 1 }
-			@section.section_assignments.count.should == 5
+			@section.section_assignments.to_a.count.should == 5
 		end
 	
 		it "should be able to return all future or past assignments" do
-			@section.future_assignments.count.should == 3
-			@section.past_assignments.count.should == 2
-			@section.current_assignments.count.should == 1
-			@section.upcoming_assignments.count.should == 2
+			@section.future_assignments.to_a.count.should == 3
+			@section.past_assignments.to_a.count.should == 2
+			@section.current_assignments.to_a.count.should == 1
+			@section.upcoming_assignments.to_a.count.should == 2
 		end
 	end
 	

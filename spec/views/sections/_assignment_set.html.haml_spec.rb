@@ -12,9 +12,10 @@ describe 'sections/_assignment_set' do
 			stubs(:assignment).returns asst
 		end
 
-		render partial: 'sections/assignment_set', locals:{table_id: 'current', sas: [sa], message: "Message", title: 'Some assignment'}
+		render partial: 'sections/assignment_set', 
+				locals: {table_id: 'current', sas: [sa], message: "Message", title: 'Some assignments'}
 		rendered.should have_selector('div.assignment-block') do |div|
-			div.should have_selector('div.title', content: 'Some assignments')
+			div.should contain('Some assignments')
 		end
 	end
 end

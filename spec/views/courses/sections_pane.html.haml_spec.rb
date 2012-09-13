@@ -18,9 +18,9 @@ describe "courses/sections_pane" do
 		course.stubs(:description).returns t
 		render
 		rendered.should have_selector('div#sections_pane') do |div|
-			div.should have_selector('div#info', content: 'Course 321 — Full Year — 5.0 Credits')
-			div.should have_selector('div#description', content: "Some description")
-			div.should have_selector('div#leadin', content: "In the #{Settings.academic_year-1}—#{Settings.academic_year} academic year there are 6 sections of Fractals 101.")
+			div.should contain('Course 321 — Full Year — 5.0 Credits')
+			div.should contain("Some description")
+			div.should contain("In the #{academic_year_string(Settings.academic_year)} academic year there are 6 sections of Fractals 101.")
 		end
 	end
 	
