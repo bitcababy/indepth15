@@ -3,7 +3,8 @@
 require 'spec_helper'
 
 describe Assignment do
-	
+	it { should validate_uniqueness_of :assgt_id }
+
 	context "Fabricator" do
 		subject { Fabricate(:assignment) }
 		specify { subject.content.should_not be_nil }
