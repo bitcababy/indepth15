@@ -92,13 +92,13 @@ end
 
 group :test do
 	gem 'cucumber-rails', '>= 1.2.1', :require => false
+	gem 'rspec-instafail'
+	gem 'rspec-rails-mocha'
 	gem 'nokogiri', '= 1.5.2'
-	# gem 'rspec-cells'#, path: '/Users/mer/Projects/Rails/rspec-cells' # ,git: 'https://github.com/bitcababy/rspec-cells.git'
 	gem 'mongoid-rspec'
 	gem 'capybara'
 	gem 'database_cleaner'
 	gem 'akephalos2', :require => 'akephalos'
-	# gem 'akephalos2', require: 'akephalos', git: 'git@github.com:bitcababy/akephalos2.git'
 	gem 'hpricot'
 	gem 'simplecov'
 	gem 'email_spec'
