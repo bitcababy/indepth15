@@ -4,9 +4,8 @@ InDepth::Application.routes.draw do
 
 	resources :section_assignments, only: [:show, :update, :create]
 	
-	post 'assignments/create_or_update'
-	
-	get 'assignments/get_one/:assgt_id', controller: :assignments, action: :get_one, as: :get_one_assignment
+	# post 'assignments/create_or_update'
+	# get 'assignments/get_one/:assgt_id', controller: :assignments, action: :get_one, as: :get_one_assignment
 
   mount Ckeditor::Engine => '/ckeditor'
 
@@ -55,7 +54,7 @@ InDepth::Application.routes.draw do
 	
 	devise_for :users, controllers: {sessions: 'users/sessions'}
   
-	resources :assignments
+	# resources :assignments
 	
 	# get 'courses/:course_id/teacher/:teacher_id/block/:block_id/assignments', controller: :courses, action: :assignments
 	
