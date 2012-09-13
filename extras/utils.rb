@@ -12,7 +12,7 @@ module Utils
 		end
 
 		def future_due_date
-			time = Time.now
+			time = Time.now.local
 			if after_cutoff?(time)
 				Date.tomorrow
 			else
@@ -42,7 +42,7 @@ module Utils
 	end
 
 	def future_due_date
-		time = Time.now
+		time = Time.now.localtime
 		if after_cutoff?(time)
 			Date.tomorrow
 		else
