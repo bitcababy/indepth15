@@ -78,17 +78,9 @@ testing:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
-    options:
-      safe: false
-  options:
-    identity_map_enabled: true
 
 production:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
-    options:
-      safe: false
-  options:
-    identity_map_enabled: true
 <% end %>
