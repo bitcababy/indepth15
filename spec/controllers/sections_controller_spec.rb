@@ -34,11 +34,11 @@ describe SectionsController do
 		}
 	end
 
-	describe "GET 'assignments'" do
+	describe "GET 'assignments', xhr" do
 		it "display the assignments page" do
 			section = section_with_assignments
 			
-			get :assignments, {id: section.to_param}
+			xhr :get, :assignments, {id: section.to_param}
 			response.should be_success
 			assigns(:section).should eq(section)
 		end
