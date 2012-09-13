@@ -4,7 +4,7 @@ defaults: &defaults
   dept_name:  Math Department
   past_assts_num: 5
   cutoff:
-    hour: 12
+    hour: 19
     minute: 30
   start_year: 2011
   last_block: H
