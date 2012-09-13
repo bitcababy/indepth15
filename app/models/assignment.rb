@@ -10,7 +10,7 @@ class Assignment < TextDocument
 	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
 	
 	def fix_content
-		self.content = Assignment.massage_content(txt)
+		self.content = Assignment.massage_content(self.content)
 	end
 
 	class << self
