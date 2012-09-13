@@ -26,7 +26,6 @@ class Assignment < TextDocument
 		def import_from_hash(hash)
 			assgt_id = hash[:assgt_id]
 			hash[:content] ||= ""
-			hash[:content] = self.massage_content(hash[:content])
 			crit = self.with_assgt_id(assgt_id)
 			if crit.exists?
 				asst = crit.first
