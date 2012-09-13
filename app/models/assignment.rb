@@ -20,6 +20,7 @@ class Assignment < TextDocument
 			txt.gsub!(/\/teachers\//, "/files/")
 			txt.gsub!(/href\s+=\s+'teachers\//, "href='/files/")
 			txt.gsub!(/href\s+=\s+"teachers\//, "href=\"/files/")
+			txt.gsub!(/href\s+=\s+(["'])teachers/, "href=\1/files")
 			return txt
 		end
 
