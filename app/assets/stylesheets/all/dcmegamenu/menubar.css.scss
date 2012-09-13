@@ -15,7 +15,7 @@
 
 .hmenu {
   list-style: none;
-  position: relative;
+  position: absolute;
 	@include flush;
   width: 100%;
   height: $mb-height;
@@ -42,7 +42,7 @@
 			display: none; 
 			}
 		}
-		position: relative;
+		position: absolute;
 		@include flush;
 	}
 
@@ -100,9 +100,9 @@
 			}
       text-shadow: $mb-text-shadow;
       text-decoration: none;
-			position: relative;
+			position: absolute;
 
-	    &.mega { position: relative;}
+	    &.mega { position: absolute;}
 
 			@if $use-mb-icon {
  	    .mbar-icon {
