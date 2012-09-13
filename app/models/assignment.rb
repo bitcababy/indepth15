@@ -1,4 +1,6 @@
 class Assignment < TextDocument
+	before_save :fix_content
+
 	field :assgt_id, type: Integer
 	validates :assgt_id, uniqueness: true
 	
@@ -6,6 +8,10 @@ class Assignment < TextDocument
 
 	index( {assgt_id: 1}, {unique: true})
 	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
+	
+	def fix_content
+		self.content = Assignment.massage_content(txt)
+	end
 
 	class << self
 		def massage_content(txt)
