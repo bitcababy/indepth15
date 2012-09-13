@@ -8,14 +8,19 @@ class Assignment < TextDocument
 	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
 
 	class << self
-		def fix_content(txt)
-			coder = HTMLEntities.new
-			coder.decode(txt)
+		def massage_content(txt)
+			txt.gsub!(/http:\/\/www\.westonmath\.org/, "")
+			txt.gsub!(/http:\/\/westonmath\.org/, "")
+			txt.gsub!(/\/teachers\//, "/files/")
+			txt.gsub!(/href\s+=\s+'teachers\//, "href='/files/")
+			txt.gsub!(/href\s+=\s+"teachers\//, "href=\"/files/")
+			return txt
 		end
 
 		def import_from_hash(hash)
 			assgt_id = hash[:assgt_id]
-			hash[:content] = fix_content(hash[:content])
+			hash[:content] ||= ""
+			hash[:content] = self.massage_content(hash[:content])
 			crit = self.with_assgt_id(assgt_id)
 			if crit.exists?
 				asst = crit.first
@@ -28,22 +33,6 @@ class Assignment < TextDocument
 				return Assignment.create! hash.merge(owner: author)
 			end
 		end
-			
-		# def cleanup
-		# 	dupes = {}
-		# 	skip = []
-		# 	Assignment.asc(:assgt_id).each do |asst|
-		# 		next if skip.include?(asst.assgt_id)
-		# 		next if Assignment.dupes(asst).count == 0
-		# 		ids = []
-		# 		Assignment.dupes(asst).each {|a| ids << a.assgt_id}
-		# 		print "."
-		# 		skip += ids
-		# 		dupes[asst.assgt_id ] = ids
-		# 	end
-		# 	puts dupes
-		# end
-		
 	end
-			
+
 end
