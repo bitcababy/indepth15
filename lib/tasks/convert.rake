@@ -28,6 +28,8 @@ namespace :update do
 		Convert.from_hashes Course, arr, false
 	end
 	
+	task :all => [:assignments, :sas]
+	
 end
 
 task :default do
