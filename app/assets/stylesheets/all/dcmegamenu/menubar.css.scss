@@ -15,7 +15,7 @@
 
 .hmenu {
   list-style: none;
-  position: absolute;
+  position: relative;
 	@include flush;
   width: 100%;
   height: $mb-height;
@@ -42,7 +42,7 @@
 			display: none; 
 			}
 		}
-		position: absolute;
+		position: relative;
 		@include flush;
 	}
 
@@ -100,9 +100,9 @@
 			}
       text-shadow: $mb-text-shadow;
       text-decoration: none;
-			position: absolute;
+			position: relative;
 
-	    &.mega { position: absolute;}
+	    &.mega { position: relative;}
 
 			@if $use-mb-icon {
  	    .mbar-icon {
@@ -147,14 +147,16 @@
       position: absolute;
 			background: {
 				image: $submenu-bg-image;
+				color: #EFEFEF;
 				repeat: no-repeat;
 				position: 0 100%;
 			};
       background: $submenu-bg-image no-repeat 0 100%;
-      padding-left: 20px;
-      margin-left: -3px;
+      padding-left: 6px;
+      margin-left: -8px;
 			&.mega .sub {
-	      padding: 20px 0px 10px 20px;
+				margin-left: 6px;
+	      padding: 12px 20px 0px 20px;
 			}
 			&.non-mega {
 				line-height: 100%;
@@ -219,8 +221,7 @@
 					}
 				}
 	      &.hmenu-hdr a.hmenu-hdr-a {
-	        padding: 5px 5px 5px 15px;
-	        margin-bottom: 5px;
+	        padding: 5px 5px 5px 0px;
 					background-color: $hdr-bg-color;
 	        text-transform: uppercase;
 					vertical-align: bottom;

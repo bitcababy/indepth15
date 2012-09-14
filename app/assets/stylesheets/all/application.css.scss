@@ -35,6 +35,7 @@ td {
 	width: 100%;
 	padding: 16px;
 	padding-left: 16px;
+	text-shadow: hsla($weston-hue, 70, 80, .8) 1px 1px;
 	a {
 		background: $weston-red;
 		color: white;
@@ -52,6 +53,7 @@ div#main {
 		padding-left: 16px;
 	}
 	.content {
+		position: relative;
 		p {
 			@extend .serif;
 		}

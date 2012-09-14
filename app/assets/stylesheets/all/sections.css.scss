@@ -49,6 +49,12 @@ $title-width: 12em;
 	}
 }
 
+.assignment-set {
+	tr td.name {
+		text-align: right;
+	}
+}
+
 .asst-content {
 	@extend .serif;
 	h1, h2, h3, h4, h5 {

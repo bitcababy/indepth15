@@ -21,3 +21,7 @@ div#sections_pane {
 		margin-bottom: 12px;
 	}
 }
+
+div#tabs ul li a {
+	@extend .sans;
+}

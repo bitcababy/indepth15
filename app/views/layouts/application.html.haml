@@ -18,7 +18,7 @@
 		%header
 			#page_header= content_for?(:page_header) ? (content_for :page_header) : "Fix me!"
 		= render partial: 'menus/menubar'
-		%div#main
+		%div#main.clear
 			- if content_for? :content_header
 				%header
 					.content-header= content_for :content_header
