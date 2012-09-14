@@ -1,8 +1,4 @@
 InDepth::Application.routes.draw do
-
-	resources :assignments
-
-	resources :section_assignments, only: [:show, :update, :create]
 	
 	# post 'assignments/create_or_update'
 	# get 'assignments/get_one/:assgt_id', controller: :assignments, action: :get_one, as: :get_one_assignment
@@ -14,46 +10,37 @@ InDepth::Application.routes.draw do
 	# end
 	root to: "home#dept_info"
 	
-	match 'files/*path', via: :get, controller: :files, action: :pass_on
-	
+	##
+	## Resources
+	##
 	resources :teachers, only: [:show]
-	
-	match 'teachers/*path', via: :get, controller: :files, action: :pass_on
-	
-	get 'xyzzy', controller: :bridge, action: :import
+	resources :courses, only: [:show]
+	resources :sections, only: [:show]
+	resources :teachers, only: [:show]
+	resources :text_documents
+			
+	# Unrestful routes
 
-	# get 'courses/:course_number/section
+	# Temporary routes to deal with old links
+	match 'files/*path', via: :get, controller: :files, action: :pass_on
+	match 'teachers/*path', via: :get, controller: :files, action: :pass_on
+
+	get 'xyzzy', controller: :bridge, action: :import
 	
 	for tab in %W(sections news policies resources information) do
 		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
 	end
-
-	resources :courses, only: [:show] do
-		member do
-			get :edit_resources
-		end
-	end
-
-	resources :sections, only: [:show]
-	
-	get 'assignments/:section_id', to: 'courses#assignments_pane', as: :section_assignments
-	
-	resources :teachers, only: [:show]
-	
-	resources :text_documents
-			
-	# Unrestful routes
 
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
 
 	get 'sections/:id/assignments', to: 'sections#assignments', as: :assignments_page
 	
-	get 'menus/home', to: 'menus#home', as: :home_menu
-	get 'menus/courses', to: 'menus#courses', as: :courses_menu
-	get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
-	get 'menus/manage', to: 'menus#manage', as: :manage_menu
-	
+	# get 'menus/home', to: 'menus#home', as: :home_menu
+	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
+	# get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
+	# get 'menus/manage', to: 'menus#manage', as: :manage_menu
+
 	devise_for :users, controllers: {sessions: 'users/sessions'}
   
 	# resources :assignments
