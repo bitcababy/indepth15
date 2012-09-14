@@ -2,7 +2,7 @@
 def make_department
 	dept = Department.create! name: Settings.dept_name
 
-	txt =<<EOT
+	txt = <<EOT
 	<p>Students keep asking, “Why doesn’t the Math Department just use teacherweb?” One student even asked whether we’re too cool for teacherweb.</p>
 	<p>The WHS Math Department admits to being cool, but that’s not what westonmath is all about. The westonmath.org website is far more than a place to find out tonight’s homework assignment. Here are some of its features:</p>
 	<ul>
