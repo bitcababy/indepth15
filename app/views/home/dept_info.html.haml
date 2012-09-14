@@ -2,9 +2,7 @@
 	#dept-info
 		%h3
 			%a{href: '#'}= "How to Use the New Westonmath App"
-		/ #how!= @department.how_doc.content
-		#how
-			= render partial: 'how'
+		#how!= @department.how_doc.content
 		%h3
 			%a{href: '#'}= "Why not teacherweb?"
 		#why!= @department.why_doc.content
