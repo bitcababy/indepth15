@@ -27,9 +27,9 @@ class SectionsController < ApplicationController
 	protected
 	def find_section
 		begin
-			@section = Section.find(params['id'])
+			@section = Section.find(params[:id])
 		rescue Mongoid::Errors::DocumentNotFound
-			logger.error "Invalid course"
+			logger.error "Section not found"
 			@section = nil
 		end
 	end

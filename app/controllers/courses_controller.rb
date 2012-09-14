@@ -108,9 +108,9 @@ class CoursesController < ApplicationController
 	
 	def find_course
 		begin
-			@course = Course.find(params['id'])
+			@course = Course.find(params[:id])
 		rescue Mongoid::Errors::DocumentNotFound
-			logger.error "Invalid course"
+			logger.error "Course not found"
 		end
 	end
 	
