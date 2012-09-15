@@ -2,15 +2,11 @@ class SectionsController < ApplicationController
 	before_filter :find_section
 
 	def show
-		if @section
-	    respond_to do |format|
-	      format.html {render :layout => !request.xhr?}
-	 			format.js
-				format.json { render json: @section}
-		   end
-		else
-			redirect_to root_path, notice: 'Invalid section'
-		end
+    respond_to do |format|
+      format.html {render :layout => !request.xhr?}
+ 			format.js
+			format.json { render json: @section}
+	   end
 	end
 
 	def assignments
@@ -26,12 +22,7 @@ class SectionsController < ApplicationController
 
 	protected
 	def find_section
-		begin
-			@section = Section.find(params[:id])
-		rescue Mongoid::Errors::DocumentNotFound
-			logger.error "Section not found"
-			@section = nil
-		end
+		@section = Section.find(params[:id])
 	end
 
 end

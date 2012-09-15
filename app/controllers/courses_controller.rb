@@ -7,13 +7,9 @@ class CoursesController < ApplicationController
 	##
 		
 	def show
-		if @course
-			respond_to do |format|
-				format.html { render }
-				format.json { render json: @course}
-			end
-		else
-			redirect_to root_path, notice: "Invalid course"
+		respond_to do |format|
+			format.html { render }
+			format.json { render json: @course}
 		end
 	end
 
@@ -107,11 +103,7 @@ class CoursesController < ApplicationController
 	protected
 	
 	def find_course
-		begin
-			@course = Course.find(params[:id])
-		rescue Mongoid::Errors::DocumentNotFound
-			logger.error "Course not found"
-		end
+		@course = Course.find(params[:id])
 	end
 	
 end

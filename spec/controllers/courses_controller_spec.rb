@@ -12,12 +12,6 @@ describe CoursesController do
       response.should be_success
       response.should render_template('show')
     end
-
-		it "redirects to root if there's an error" do
-			get 'show', id: 1
-			flash[:notice].should == "Invalid course"
-			response.should redirect_to root_path
-		end
   end
 
   describe "GET 'resources_pane'" do
