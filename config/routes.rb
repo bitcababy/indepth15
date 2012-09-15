@@ -42,15 +42,11 @@ InDepth::Application.routes.draw do
 	# get 'menus/manage', to: 'menus#manage', as: :manage_menu
 
 	devise_for :users, controllers: {sessions: 'users/sessions'}
-  
-	# resources :assignments
 	
-	# get 'courses/:course_id/teacher/:teacher_id/block/:block_id/assignments', controller: :courses, action: :assignments
-	
-	# get 'teacher/courses/:id/edit_resources', controller: 'teacher/courses', action: :edit_resources, as: :edit_course_resources
-	
-	
-	# get 'files', to: 'file_manager#elfinder', as: :file_home
+	unless Rails.application.config.consider_all_requests_local
+    match '*not_found', to: 'errors#error_404'
+  end
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

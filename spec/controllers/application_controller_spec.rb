@@ -7,4 +7,5 @@ describe ApplicationController do
 	describe '#current_or_guest_user'
 	describe '#guest_user'
 	describe '#create_gues_user'
+	
 end

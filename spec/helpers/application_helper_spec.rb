@@ -27,7 +27,7 @@ describe ApplicationHelper do
 			attrs = {}
 			hidden_div_if(false, attrs)
 			attrs['style'].should_not == 'display: none'
-			puts content_tag('div', attrs)
+			# puts content_tag('div', attrs)
 		end
 		
 	end

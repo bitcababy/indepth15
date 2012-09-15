@@ -3,23 +3,31 @@ class ApplicationController < ActionController::Base
 	# For ajax requests
 	# skip_before_filter :verify_authenticity_token, :only => [:name_of_your_action] 
 	
+	unless Rails.application.config.consider_all_requests_local
+    rescue_from Exception, with: :render_500
+    rescue_from ActionController::RoutingError, with: :render_404
+    rescue_from ActionController::UnknownController, with: :render_404
+    rescue_from ActionController::UnknownAction, with: :render_404
+    rescue_from Mongoid::Errors::DocumentNotFound, with: :render_404
+  end	
+
 	##
 	## Devise methods
 	##
 	helper_method :user_signed_in?
 
 	def user_signed_in?
-		!!current_user
+		return !!current_user
 	end
 	
 	helper_method :current_user
 
 	def current_user
-		@current_user ||= warden.authenticate(:scope => :user)
+		return @current_user ||= warden.authenticate(:scope => :user)
 	end
 	
 	def user_session
-		current_user && warden.session(:user)
+		return current_user && warden.session(:user)
 	end
 
 	# if user is logged in, return current_user, else return guest_user
@@ -30,16 +38,16 @@ class ApplicationController < ActionController::Base
 				guest_user.destroy
 				session[:guest_user_id] = nil
 			end
-			current_user
+			return current_user
 		else
-			guest_user
+			return guest_user
 		end
 	end
 
 	# find guest_user object associated with the current session,
 	# creating one as needed
 	def guest_user
-		User.find(session[:guest_user_id].nil? ? session[:guest_user_id] = create_guest_user.id : session[:guest_user_id])
+		return  User.find(session[:guest_user_id].nil? ? session[:guest_user_id] = create_guest_user.id : session[:guest_user_id])
 	end
 
 	private
@@ -58,7 +66,7 @@ class ApplicationController < ActionController::Base
 	def create_guest_user
 		u = User.new
 		u.save(:validate => false)
-		u
+		return u
 	end
 
 	# def devise_mapping
@@ -69,5 +77,23 @@ class ApplicationController < ActionController::Base
 		def ckeditor_filebrowser_scope(options = {})
 			super({ :assetable_id => current_user.id, :assetable_type => 'User' }.merge(options))
 		end
+		
+	private
+  def render_404(exception)
+    @not_found_path = exception.message
+    respond_to do |format|
+      format.html { render template: 'errors/error_404', layout: 'layouts/application', status: 404 }
+      format.all { render nothing: true, status: 404 }
+    end
+  end
+
+  def render_500(exception)
+    @error = exception
+    respond_to do |format|
+      format.html { render template: 'errors/error_500', layout: 'layouts/application', status: 500 }
+      format.all { render nothing: true, status: 500}
+    end
+  end
+	  
 
 end
