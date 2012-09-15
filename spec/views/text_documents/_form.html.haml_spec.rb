@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'cancel_input'
 
 describe 'text_documents/_form' do
 	it "renders a form to edit a document" do
