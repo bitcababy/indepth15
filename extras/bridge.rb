@@ -5,7 +5,9 @@ module Bridge
 	
 	class << self
 		def connector
-			return Mysql.connect "db1.xoala.net", 'whswriter', 'hyperbole', ((Rails.env == 'production')  ? 'whsmd' : 'whsmd_testing'), 3306, "/var/run/mysqld/mysqld.sock"
+			c = Mysql.connect "db1.xoala.net", 'whswriter', 'hyperbole', ((Rails.env == 'production')  ? 'whsmd' : 'whsmd_testing'), 3306, "/var/run/mysqld/mysqld.sock"
+			c.charset = 'utf8'
+			return c
 		end
 		
 		def create_assignment(hash)
