@@ -14,16 +14,16 @@ class ApplicationController < ActionController::Base
 	##
 	## Devise methods
 	##
-	helper_method :user_signed_in?
-
-	def user_signed_in?
-		return !!current_user
-	end
-	
 	helper_method :current_user
 
 	def current_user
 		return @current_user ||= warden.authenticate(:scope => :user)
+	end
+
+	helper_method :user_signed_in?
+
+	def user_signed_in?
+		return !!current_user
 	end
 	
 	def user_session
@@ -95,5 +95,4 @@ class ApplicationController < ActionController::Base
     end
   end
 	  
-
 end
