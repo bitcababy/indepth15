@@ -63,13 +63,26 @@ module Bridge
 			return sa.save!
 		end
 		
+		
+		def find_section_from_hash(hash)
+			begin
+				return Section.find_by course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
+			rescue
+				return nil
+			end
+		end
+		
+		def find_sa_by_assgt_id(assgt_id)
+			return section.section_assignments.detect {|s| s.assignment.assgt_id == assgt_id}
+		end
+			
 		def create_or_update_sa(hash)
 			translate_sa_hash(hash)
 			assgt_id = hash['assgt_id']
-			return false unless (crit = Section.where course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']).exists?
-			section = crit.first
+			section = find_section_from_hash course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
+			return false unless Section
 			return false unless Assignment.where(assgt_id: assgt_id).exists?
-			sa = section.section_assignments.detect {|s| s.assignment.assgt_id == assgt_id}
+			sa = find_sa_by_assgt_id assgt_id
 			if sa
 				update_sa(sa, hash)
 			else
@@ -107,6 +120,13 @@ module Bridge
 			end
 		end
 
+		def delete_sa(hash)
+			section = find_section_from_hash course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
+			return false unless section
+			sa = find_sa_by_assgt_id assgt_id
+			return false unless sa
+			sa.delete
+		end
 	end
 	
 end
