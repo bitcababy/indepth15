@@ -9,7 +9,8 @@ class SectionAssignment
 	field :dd, as: :due_date, type: Date
 	field :na, as: :name, type: String, default: ""
 	field :use, type: Boolean
-	
+	field :oi, as: :old_id, type: Integer
+
 	index :due_date => -1
 	
 	belongs_to :section
