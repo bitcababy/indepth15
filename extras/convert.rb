@@ -54,6 +54,7 @@ module Convert
 				"teacher_id" => :teacher_id,
 			},
 		SectionAssignment => {
+			"id"							=> :old_id,
 			"teacher_id" 			=> :teacher_id,
 			"year" 						=> :year,
 			"course_num" 			=> :course_num,
