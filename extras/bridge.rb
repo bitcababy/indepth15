@@ -10,6 +10,36 @@ module Bridge
 			return c
 		end
 		
+		def update_course(hash)
+			begin
+				course = Course.find hash['course_num'].to_i
+				for k in [:description, :policies, :news, :resources, :information] do
+					doc = course.send k
+					doc.content = hash[k.to_s]
+					doc.save!
+				end
+			rescue
+				return false
+			end
+		end
+
+		def update_courses
+			if conn = connector
+				begin
+					conn.query("SELECT course_info.course_num, prog_of_studies_descr 
+					AS description, info AS information, policies, resources,news FROM course_info, course_info_status 
+					WHERE course_info_status.sent=0 AND course_info_status.course_num=course_info.course_num").each_hash do |hash|
+						if update_course(hash)
+							conn.query("UPDATE course_info_status SET sent=1 WHERE course_num=#{hash['course_num']}") if update_course(hash)
+						end
+					end
+				ensure
+					conn.close if conn
+				end
+			end
+			
+		end
+		
 		def create_assignment(hash)
 			assgt_id = hash['assgt_id'].to_i
 			asst = Assignment.new assgt_id: assgt_id, content: hash['content']

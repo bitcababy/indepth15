@@ -2,25 +2,48 @@ require 'spec_helper'
 
 describe Bridge do
 
-	describe 'Bridge.create_assignment' do
-		it "creates an assignment from a hash and returns true" do
-			Bridge.create_assignment('assgt_id' => 123, 'content' => "Foo bar").should be_true
+	context "assignments" do
+		before each do
+			@hash = { 'assgt_id' => 123, 'content' => "Foo bar" }
 		end
+
+		describe 'Bridge.create_assignment' do
+			it "creates an assignment from a hash and returns true" do
+				Bridge.create_assignment(@hash).should be_true
+			end
 		
-		it "returns false if the creation fails" do
-			Bridge.create_assignment('assgt_id' => 123, 'content' => "Foo bar")
-			Bridge.create_assignment('assgt_id' => 123, 'content' => "Foo bar").should be_false
-		end		
-	end
+			it "returns false if the creation fails" do
+				Bridge.create_assignment(@hash)
+				Bridge.create_assignment(@hash).should be_false
+			end		
+		end
 	
-	describe "Bridge.update_assignment" do
-		it "returns false if the assignment doesn't exist" do
-			Bridge.update_assignment('assgt_id' => 123, 'content' => "Foo bar").should be_false
-		end
+		describe "Bridge.update_assignment" do
+			it "returns false if the assignment doesn't exist" do
+				Bridge.update_assignment(@hash).should be_false
+			end
 		
-		it "returns true if the assignment is updated" do
-			Bridge.create_assignment('assgt_id' => 123, 'content' => "Foo bar")
-			Bridge.update_assignment('assgt_id' => 123, 'content' => "quux").should be_true
+			it "returns true if the assignment is updated" do
+				Bridge.create_assignment(@hash)
+				Bridge.update_assignment('assgt_id' => 123, 'content' => "quux").should be_true
+			end
+		end
+	end
+
+	describe 'update_course' do
+		before :each do
+			@course = Fabricate :course
+			@hash = { 
+				'number' => @course.number.to_s,
+				'full_name' => 'Full name',
+				'description' => '',
+				'policies' => '',
+				'resources' => '',
+				'news' => '',
+				}
+		end
+		it "returns false if the assignment doesn't exist" do
+			Bridge.update_course(@hash).should be_false
 		end
 	end
 			
