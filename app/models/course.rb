@@ -100,9 +100,14 @@ class Course
 			3 => FULL_YEAR_HALF_TIME,
 		}
 		
-		def massage(txt)
+		def massage_content(txt)
+			txt.gsub!(/http:\/\/www\.westonmath\.org/, "")
+			txt.gsub!(/http:\/\/westonmath\.org/, "")
+			txt.gsub!(/\/teachers\//, "/files/")
+			txt.gsub!(/href\s+=\s+'teachers\//, "href='/files/")
+			txt.gsub!(/href\s+=\s+"teachers\//, "href=\"/files/")
+			txt.gsub!(/href\s+=\s+(["'])teachers/, "href=\1/files")
 			return txt
-			return txt.gsub!(/"\/teachers([^"]+)"/, "\"/files/\1\"")
 		end
 		
 		def import_from_hash(hash)
@@ -114,15 +119,15 @@ class Course
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
-			course.information.content = massage(i)
+			course.information.content = massage_content(i)
 			course.information.save!
-			course.resources.content = massage(r)
+			course.resources.content = massage_content(r)
 			course.resources.save!
-			course.policies.content = massage(p)
+			course.policies.content = massage_content(p)
 			course.policies.save!
-			course.news.content = massage(n)
+			course.news.content = massage_content(n)
 			course.news.save!
-			course.description.content = massage(d)
+			course.description.content = massage_content(d)
 			course.description.save!
 			return course
 		end
