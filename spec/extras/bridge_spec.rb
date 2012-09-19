@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Bridge do
 
 	context "assignments" do
-		before each do
+		before :each do
 			@hash = { 'assgt_id' => 123, 'content' => "Foo bar" }
 		end
 

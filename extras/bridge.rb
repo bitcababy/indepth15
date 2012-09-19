@@ -50,6 +50,20 @@ module Bridge
 			end
 		end
 		
+		def delete_assignment(hash)
+			begin
+				asst = Assignment.find_by assgt_id: hash['assgt_id'].to_i
+				if (Rails.env == 'production') 
+					return asst.delete
+				else
+					puts "#{asst} would have been deleted"
+					return true
+				end
+			rescue
+				return false
+			end
+		end
+		
 		def update_assignment(hash)
 			assgt_id = hash['assgt_id'].to_i
 			return false unless (crit = Assignment.where(assgt_id: assgt_id)).exists?
@@ -64,6 +78,31 @@ module Bridge
 				update_assignment(hash)
 			else
 				create_assignment(hash)
+			end
+		end
+
+		def create_or_update_assignments
+			if conn = connector
+				begin
+					conn.query("SELECT assignments.assgt_id, assignments.teacher_id, assignments.content FROM assgts_status, assignments WHERE assgts_status.sent=0 AND assgts_status.deleted=0 AND assgts_status.assgt_id=assignments.assgt_id").each_hash do |hash|
+						conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}") if create_or_update_assignment(hash) 
+					end
+				ensure
+					conn.close if conn
+				end
+			end
+		end
+		
+		def delete_assignments
+			if conn = connector
+				begin
+					conn.query("SELECT assgt_id FROM assgts_status
+								WHERE assgts_status.sent=0 AND assgts_status.deleted=1").each_hash do |hash|
+						conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}") if delete_assignment(hash) 
+					end
+				ensure
+					conn.close if conn
+				end
 			end
 		end
 
@@ -93,7 +132,6 @@ module Bridge
 			return sa.save!
 		end
 		
-		
 		def find_section_from_hash(hash)
 			begin
 				return Section.find_by course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
@@ -120,28 +158,15 @@ module Bridge
 			end
 		end
 
-		def create_or_update_assignments
-			if conn = connector
-				begin
-					conn.query("SELECT assignments.assgt_id, assignments.teacher_id, assignments.content FROM assgts_status, assignments WHERE assgts_status.sent=0 AND assgts_status.deleted=0 AND assgts_status.assgt_id=assignments.assgt_id").each_hash do |hash|
-						conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}") if create_or_update_assignment(hash) 
-					end
-				ensure
-					conn.close if conn
-				end
-			end
-
-		end
-		
 		def create_or_update_sas
 			if conn = connector
 				begin
 					conn.query("SELECT section_assignments.id, assgt_id, name, course_num 
 								AS course_id,teacher_id,block,due_date,year AS academic_year,use_assgt 
 								FROM section_assignments,assgt_dates_status 
-								WHERE assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0 
-								AND section_assignments.id=assgt_dates_status.id").each_hash do |hash|
-							conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['id']}") if create_or_update_sa(hash)
+								WHERE section_assignments.id=assgt_dates_status.id 
+								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|
+							conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}") if create_or_update_sa(hash)
 					end
 				# rescue
 				ensure
@@ -151,11 +176,33 @@ module Bridge
 		end
 
 		def delete_sa(hash)
-			section = find_section_from_hash course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
-			return false unless section
-			sa = find_sa_by_assgt_id assgt_id
+			begin
+				sa = SectionAssignment.find_by old_id: hash['id'].to_i
+			rescue
+				return false
+			end
 			return false unless sa
-			sa.delete
+			if (Rails.env == 'production') 
+				return sa.delete
+			else
+				puts "#{sa} would have been deleted"
+				return true
+			end
+		end
+
+		def delete_sas
+			if conn = connector
+				begin
+					conn.query("SELECT assgt_dates_status.id FROM assgt_dates_status 
+								WHERE assgt_dates_status.sent=0
+								AND assgt_dates_status.deleted=1 ").each_hash do |hash|
+							conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['id']}") if delete_sa(hash)
+					end
+				# rescue
+				ensure
+					conn.close if conn
+				end
+			end
 		end
 	end
 	
