@@ -1,0 +1,9 @@
+@import "colors";
+@import "fonts";
+
+.asst-content {
+	@extend .serif;
+	h1, h2, h3, h4, h5 {
+		@extend .sans;
+	}
+}
