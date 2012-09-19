@@ -144,7 +144,7 @@ module Bridge
 			translate_sa_hash(hash)
 			assgt_id = hash['assgt_id']
 			section = find_section_from_hash course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
-			return false unless Section
+			return false unless section
 			return false unless Assignment.where(assgt_id: assgt_id).exists?
 			sa = section.section_assignments.detect {|s| s.assignment.assgt_id == assgt_id}
 			if sa
