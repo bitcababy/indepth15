@@ -24,7 +24,8 @@
 					.content-header= content_for :content_header
 			#sign-in-dialog
 				/ = render partial: 'users/sessions/form'
-			= yield
+			.content
+				= yield
 
 / :coffeescript
 / 	$(document).ready ->

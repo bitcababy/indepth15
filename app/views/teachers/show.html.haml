@@ -1,12 +1,14 @@
+#teacher-page 
+	- if @teacher[:photo_url]
+		#teacher-pic
+			%img{src: @teacher[:photo_url]}
+	#courses
+		%h3 Courses
+		%ul
+			=render partial: 'shared/course_item', collection: @teacher.courses, as: :course
+	#other-links
+
 - content_for :page_title do
 	= "#{Settings.school_name} #{Settings.dept_name} | Teachers | #{@teacher.full_name}"
 - content_for :page_header do
 	= @teacher.full_name
-
-.content
-	#teacher-pic
-	#courses.ui-widget
-		%h3.ui-widget-header Courses
-		%ul.ui-widget-body
-			=render partial: 'shared/course_item', collection: @teacher.courses, as: :course
-	#other-links

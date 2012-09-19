@@ -1,9 +1,8 @@
-.content
-	%div#tabs
-		%ul
-			%li
-				%a{href: assignments_page_path(@section.course.to_param, @section.academic_year, @section.teacher.login, @section.block), title: 'Assignments'}= "Assignments for #{@section.course.full_name}, Block #{@section.block}"
-			= render partial: 'courses/tabs', locals: {course: @section.course}
+%div#tabs
+	%ul
+		%li
+			%a{href: assignments_page_path(@section.course.to_param, @section.academic_year, @section.teacher.login, @section.block), title: 'Assignments'}= "Assignments for #{@section.course.full_name}, Block #{@section.block}"
+		= render partial: 'courses/tabs', locals: {course: @section.course}
 			
 = content_for :page_title do
 	= page_title(@section)

@@ -1,20 +1,19 @@
-.content
-	#dept-info
-		%h3
-			%a{href: '#'}= "How to Use the New Westonmath App"
-		#how!= @department.how_doc.content
-		%h3
-			%a{href: '#'}= "Why not teacherweb?"
-		#why!= @department.why_doc.content
-		%h3
-			%a{href: '#'}= "Resources"
-		#resources!= @department.resources_doc.content
-		%h3
-			%a{href: '#'}= "News"
-		#news!= @department.news_doc.content
-		%h3
-			%a{href: '#'}= "Puzzle"
-		#puzzle!= @department.puzzle_doc.content
+#dept-info
+	%h3
+		%a{href: '#'}= "How to Use the New Westonmath App"
+	#how!= @department.how_doc.content
+	%h3
+		%a{href: '#'}= "Why not teacherweb?"
+	#why!= @department.why_doc.content
+	%h3
+		%a{href: '#'}= "Resources"
+	#resources!= @department.resources_doc.content
+	%h3
+		%a{href: '#'}= "News"
+	#news!= @department.news_doc.content
+	%h3
+		%a{href: '#'}= "Puzzle"
+	#puzzle!= @department.puzzle_doc.content
 
 - content_for :page_title do
 	= Settings.school_name
