@@ -37,8 +37,10 @@ describe SectionsController do
 	describe "GET 'assignments', xhr" do
 		it "display the assignments page" do
 			section = section_with_assignments
+			section.teacher = Fabricate :teacher, login: "foo"
+			section.save!
 			
-			xhr :get, :assignments, {id: section.to_param}
+			xhr :get, :assignments, { course_id: section.course.to_param, year: section.academic_year, teacher_id: section.teacher.to_param, block: section.block}
 			response.should be_success
 			assigns(:section).should eq(section)
 		end

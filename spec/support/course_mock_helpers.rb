@@ -1,14 +1,15 @@
 module CourseMockHelpers
 	def mock_teacher(opts={})
-		opts.merge!(formal_name: "Mr. Doe", generic_msg: "Generic msg", current_msg: "Current msg", upcoming_msg: "Upcoming_msg") {|key, v1, v2| v1}
+		opts.merge!(login: 'doem', formal_name: "Mr. Doe", generic_msg: "Generic msg", current_msg: "Current msg", upcoming_msg: "Upcoming_msg") {|key, v1, v2| v1}
 		mock(opts[:formal_name]) do
 			opts.each_pair {|k, v| stubs(k).returns v}
 		end
 	end
 
 	def mock_section(opts={})
-		opts.merge!({block: Settings.blocks.sample, days_for_section: [1,2,3,4,5], room: "222"}) {|key, v1, v2| v1}
+		opts.merge!({academic_year: 2013, block: Settings.blocks.sample, days_for_section: [1,2,3,4,5], room: "222"}) {|key, v1, v2| v1}
 		opts[:teacher] = mock_teacher unless opts[:teacher]
+		opts[:course] = mock_course unless opts[:course]
 		mock("Section #{opts[:block]}") do
 			opts.each_pair {|k, v| stubs(k).returns v}
 		end
@@ -33,7 +34,6 @@ module CourseMockHelpers
 			areas.each do |area|
 				stubs(:area).returns docs[area]
 			end
-
 		end
 	end
 

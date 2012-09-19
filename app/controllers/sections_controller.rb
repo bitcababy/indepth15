@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-	before_filter :find_section
+	before_filter :find_section, except: [:assignments]
 
 	def show
     respond_to do |format|
@@ -10,14 +10,11 @@ class SectionsController < ApplicationController
 	end
 
 	def assignments
-		if @section 
-	    respond_to do |format|
-	      format.html {render :layout => !request.xhr?}
-	    end
-		else
-			# This probably isn't right
-			redirect_to root_path, notice: 'Invalid section'
-		end
+		# puts params
+		@section = Section.find_by course_id: params[:course_id].to_i, academic_year: params[:year].to_i, teacher_id: params[:teacher_id], block: params[:block].upcase
+    respond_to do |format|
+      format.html {render :layout => !request.xhr?}
+    end
 	end
 
 	protected

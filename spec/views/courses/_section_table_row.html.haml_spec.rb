@@ -5,7 +5,8 @@ describe 'courses/_section_table_row' do
 	
 	it "displays a row for a section" do
 		teacher = mock_teacher(formal_name: "Mr. Ed")
-		section = mock_section(block: "B", room: "501", teacher: teacher)
+
+		section = mock_section(block: "B", room: "501", teacher: teacher, course: mock_course, academic_year: 2013)
 
 		render partial: 'courses/section_table_row', locals: {section: section}
 		rendered.should have_selector('tr') do |row|

@@ -1,2 +1,2 @@
 %li.section
-	%a{href: section_path(section) }= section_label_for_menu(section)
+	%a{href: assignments_page_path(section.course.to_param, section.academic_year, section.teacher.to_param, section.block) }= section_label_for_menu(section)
