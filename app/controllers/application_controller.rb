@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     rescue_from ActionController::UnknownController, with: :render_404
     rescue_from ActionController::UnknownAction, with: :render_404
     rescue_from Mongoid::Errors::DocumentNotFound, with: :render_404
-  end	
+	end	
 
 	##
 	## Devise methods
@@ -81,6 +81,14 @@ class ApplicationController < ActionController::Base
 	private
   def render_404(exception)
     @not_found_path = exception.message
+		##
+		## handle old paths
+		##
+		if m = exception.message.match(/^\/course_index\.php\?course_num=(\d+)$/)
+			redirect_to controller: :courses, action: :show, id: "#{m[0]}.to_i"
+			return 
+		end
+
     respond_to do |format|
       format.html { render template: 'errors/error_404', layout: 'layouts/application', status: 404 }
       format.all { render nothing: true, status: 404 }
