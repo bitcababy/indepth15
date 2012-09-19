@@ -1,3 +1,36 @@
 // Place all the styles related to the Teachers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colors";
+@import "fonts";
+
+#teacher-page {
+	#teacher-pic {
+		border-width: 1px;
+		border-color: black;
+		border-style: solid;
+		float: left;
+		margin-right: 16px;
+		padding: 2px;
+	}
+
+	#courses {
+		float: left;
+		h3 {
+			background-color: #447baf;
+			padding: 8px;
+			color: white;
+			padding: 4px;
+			padding-left: 8px;
+			margin: 0px;
+			text-align: center;
+			@extend .sans;
+		}
+		ul,li {
+			list-style-type: none;
+			margin-left: -1em;
+			@extend .sans;
+		}
+	}
+}

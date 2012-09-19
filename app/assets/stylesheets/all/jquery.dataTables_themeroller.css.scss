@@ -21,14 +21,14 @@ table.dataTable {
       text-align: center; } }
   tr {
     &.odd {
-      background-color: hsl($row-hue, 60, 80);
+      background-color: hsl($row-hue, 60, 90);
 		}
     &.even {
       background-color: hsl($row-hue, 60, 95); 
 		}
     &.odd td {
       &.sorting_1 {
-        background-color: hsl($row-hue, 60, 55); }
+        background-color: hsl($row-hue, 60, 75); }
       &.sorting_2 {
         background-color: #DADCFF; }
       &.sorting_3 {
