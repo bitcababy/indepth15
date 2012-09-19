@@ -140,17 +140,13 @@ module Bridge
 			end
 		end
 		
-		def find_sa_by_assgt_id(assgt_id)
-			return section.section_assignments.detect {|s| s.assignment.assgt_id == assgt_id}
-		end
-			
 		def create_or_update_sa(hash)
 			translate_sa_hash(hash)
 			assgt_id = hash['assgt_id']
 			section = find_section_from_hash course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
 			return false unless Section
 			return false unless Assignment.where(assgt_id: assgt_id).exists?
-			sa = find_sa_by_assgt_id assgt_id
+			sa = section.section_assignments.detect {|s| s.assignment.assgt_id == assgt_id}
 			if sa
 				update_sa(sa, hash)
 			else
