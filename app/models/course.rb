@@ -101,6 +101,7 @@ class Course
 		}
 		
 		def massage_content(txt)
+			return "" unless txt
 			txt.gsub!(/http:\/\/www\.westonmath\.org/, "")
 			txt.gsub!(/http:\/\/westonmath\.org/, "")
 			txt.gsub!(/\/teachers\//, "/files/")
