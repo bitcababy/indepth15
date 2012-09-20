@@ -5,10 +5,9 @@
 	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments, message: "", title: 'Past assignments'}
 	
 - content_for :page_header do
-	= render partial: 'shared/course_link', locals: {course: @section.course}
+	= page_header(@section)
 - content_for :page_title do
-	= "#{@section.course.full_name}, Block #{@section.block}"
-
+	= "#{Settings.school_name} | #{Settings.dept_name} | #{@section.course.full_name}"
 :coffeescript
 	$(document).ready ->
 		nameColumnWidth = "7em"
