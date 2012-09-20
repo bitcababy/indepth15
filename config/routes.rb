@@ -34,7 +34,7 @@ InDepth::Application.routes.draw do
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
 
-	get "courses/:course_id/section/:year/:teacher_id/:block/assignments", to: 'sections#assignments', as: :assignments_page
+	get "courses/:course_id/assignments/:year/:teacher_id/:block", to: 'sections#assignments', as: :assignments_page
 	
 	# get 'menus/home', to: 'menus#home', as: :home_menu
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
