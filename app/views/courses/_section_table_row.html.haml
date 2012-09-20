@@ -2,5 +2,5 @@
 	%td.teacher
 		%a{href: teacher_path(section.teacher)}= section.teacher.formal_name
 	%td.block
-		%a{href: assignments_page_path(section.course.to_param, section.academic_year, section.teacher.to_param, section.block)}= section.block
+		%a{href: section_to_assignments_path(section)}= section.block
 	%td.room= section.room
