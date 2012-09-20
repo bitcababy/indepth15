@@ -1,5 +1,6 @@
 .assignment-block
-	%div.message!= message
+	- if message && !message.empty?
+		%div.message!= message
 	.title.ui-corner-top= title
 	- if sas.size > 0
 		%table.assignment-set{id: table_id}
