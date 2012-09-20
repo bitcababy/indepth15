@@ -5,14 +5,26 @@
 @import 'colors';
 @import 'fonts';
 
-#generic-msg {
-	font-size: 120%;
-	border-width: 1px;
-	border-color: black;
-	border-style: dotted;
-	background: #efefef;
-	padding: 8px;
-	margin-bottom: 16px;
+$shadow: 1px 1px 1px 1px $dark-brown;
+
+#generic-msg, .message {
+	p {
+		font-size: 120%;
+//		border-width: 1px;
+//		border-color: $dark-brown;
+//		border-style: solid;
+		-moz-box-shadow: $shadow;
+		-webkit-box-shadow: $shadow;
+		box-shadow:  $shadow;
+		background: $pale-brown;
+		color: $dark-brown;
+		background: $pale-brown;
+		padding: 8px;
+		margin-top: 8px;
+		margin-bottom: 12px;
+		@extend .friendly;
+		font-size: 100%;
+	}
 }
 
 $title-width: 12em;
@@ -32,6 +44,7 @@ $title-width: 12em;
 		background-color: $weston-red;
 		width: $title-width;
 		padding: 8px;
+		font-weight: bold;
 	}
 	.none {
 		font-size: 100%;
@@ -40,18 +53,5 @@ $title-width: 12em;
 		background-color: #E2E4FF;
 		width: $title-width*1.1;
 	}
-	margin-bottom: 16px;
+	margin-bottom: 24px;
 }
-
-#assignments { 
-	font-size: 90%;
-	.due_date {
-	}
-}
-
-.assignment-set {
-	tr td.name {
-		text-align: right;
-	}
-}
-

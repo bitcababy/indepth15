@@ -54,24 +54,29 @@ div#main {
 	}
 	.content {
 		position: relative;
-		p {
-			@extend .serif;
-		}
-		h1,h2,h3,h4,h5 {
-			@extend sans;
-		}
-		h1 {
-			font-size: 160%;
-		}
-		h2 {
-			font-size: 140%;
-		}
 		padding: 8px;
-		li {
-			@extend .serif;
-			padding-bottom: 6px;
+		label {
+			@extend .sans;			
+			font-weight: bold;
 		}
+//		p {
+//			@extend .serif;
+//		}
+//		h1,h2,h3,h4,h5 {
+//			@extend sans;
+//		}
+//		h1 {
+//			font-size: 160%;
+//		}
+//		h2 {
+//			font-size: 140%;
+//		}
+//		li {
+//			@extend .serif;
+//			padding-bottom: 6px;
+//			}
 		th {
+			font-weight: bold;
 			@extend .sans;
 		}
 	}

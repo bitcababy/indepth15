@@ -7,3 +7,33 @@
 		@extend .sans;
 	}
 }
+
+.assignment {
+	td.name {
+		text-align: right;
+	}
+	td.due_date {
+		
+	}
+	td.asst-content {
+		ul {
+			margin-top: 2px;
+		}
+		font-size: 110%;
+		line-height: 110%;
+	}
+}
+
+
+//#assignments { 
+//	font-size: 90%;
+//	.due_date {
+//	}
+//}
+//
+//.assignment-set {
+//	tr td.name {
+//		text-align: right;
+//	}
+//}
+//
