@@ -149,19 +149,13 @@ module Bridge
 			return sa.save!
 		end
 		
-		def find_section_from_hash(hash)
-			begin
-				return 
-			rescue
-				return nil
-			end
-		end
-		
 		def create_or_update_sa(hash)
 			translate_sa_hash(hash)
-			if sa = SectionAssignment.find_by( old_id: hash['id'])
-				return update_sa(sa, hash)
+			old_id = hash['id'].to_i
+			if SectionAssignment.where(old_id: old_id).exists?
+				return update_sa(SectionAssignment.find_by(old_id: old_id), hash)
 			else
+				section = Section.find_by course: hash['course_id'].to_i, teacher_id: hash['teacher_id'], block: hash['block']
 				return create_sa(section, hash)
 			end
 		end
@@ -169,22 +163,19 @@ module Bridge
 		def create_or_update_sas
 			if conn = connector
 				begin
-					conn.query("UPDATE assgt_dates_status SET sent=1 WHERE sent=0 AND new=1 AND deleted = 1")
-					conn.query("SELECT section_assignments.id assgt_id, name, course_num 
+					conn.query("UPDATE assgt_dates_status SET sent=1 WHERE sent=0 AND new=1 AND deleted=1")
+					conn.query("SELECT section_assignments.id, assgt_id, name, course_num 
 								AS course_id,teacher_id,block,due_date,year AS academic_year,use_assgt 
 								FROM section_assignments,assgt_dates_status 
 								WHERE section_assignments.id=assgt_dates_status.id 
 								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|
-						begin
-							if create_or_update_sa(hash)
-								conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}")
-							else
-								puts "problem with #{hash}"
-							end
-						rescue
+						puts hash
+						if create_or_update_sa(hash)
+							conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}")
+						else
+							puts "problem with #{hash}"
 						end
 					end
-				# rescue
 				ensure
 					conn.close if conn
 				end
