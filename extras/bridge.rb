@@ -10,6 +10,9 @@ module Bridge
 			return c
 		end
 		
+		##
+		## Courses
+		##
 		def update_course(hash)
 			begin
 				course = Course.find hash['course_num'].to_i
@@ -39,6 +42,9 @@ module Bridge
 			end
 		end
 		
+		##
+		## Assignments
+		##
 		def create_assignment(hash)
 			assgt_id = hash['assgt_id'].to_i
 			asst = Assignment.new assgt_id: assgt_id, content: hash['content']
@@ -82,6 +88,7 @@ module Bridge
 
 		def create_or_update_assignments
 			if conn = connector
+				conn.query("UPDATE assgts_status SET sent=1 WHERE sent=0 AND new=1 AND deleted = 1")
 				begin
 					conn.query("SELECT assignments.assgt_id, assignments.teacher_id, assignments.content FROM assgts_status, assignments WHERE assgts_status.sent=0 AND assgts_status.deleted=0 AND assgts_status.assgt_id=assignments.assgt_id").each_hash do |hash|
 						if create_or_update_assignment(hash) 
@@ -113,6 +120,9 @@ module Bridge
 			end
 		end
 
+		##
+		## SectionAssignments
+		##
 		def translate_sa_hash(hash)
 			hash['assgt_id'] = hash['assgt_id'].to_i
 			hash['use'] = hash['use_assgt'] == 'Y'
@@ -149,7 +159,7 @@ module Bridge
 		
 		def create_or_update_sa(hash)
 			translate_sa_hash(hash)
-			if sa = SectionAssignment.find_by( old_id: hash['old_id'])
+			if sa = SectionAssignment.find_by( old_id: hash['id'])
 				return update_sa(sa, hash)
 			else
 				return create_sa(section, hash)
@@ -159,14 +169,15 @@ module Bridge
 		def create_or_update_sas
 			if conn = connector
 				begin
-					conn.query("SELECT section_assignments.id AS old_id, assgt_id, name, course_num 
+					conn.query("UPDATE assgt_dates_status SET sent=1 WHERE sent=0 AND new=1 AND deleted = 1")
+					conn.query("SELECT section_assignments.id assgt_id, name, course_num 
 								AS course_id,teacher_id,block,due_date,year AS academic_year,use_assgt 
 								FROM section_assignments,assgt_dates_status 
 								WHERE section_assignments.id=assgt_dates_status.id 
 								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|
 						begin
 							if create_or_update_sa(hash)
-								conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['old_id']}")
+								conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}")
 							else
 								puts "problem with #{hash}"
 							end
