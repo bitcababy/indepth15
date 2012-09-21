@@ -37,7 +37,6 @@ module Bridge
 					conn.close if conn
 				end
 			end
-			
 		end
 		
 		def create_assignment(hash)
@@ -53,8 +52,8 @@ module Bridge
 		def delete_assignment(hash)
 			begin
 				asst = Assignment.find_by assgt_id: hash['assgt_id'].to_i
-				if (Rails.env == 'production') 
-					return asst.delete
+				if (Rails.env == 'production')
+					return asst.delete!
 				else
 					puts "#{asst} would have been deleted"
 					return true
@@ -85,7 +84,11 @@ module Bridge
 			if conn = connector
 				begin
 					conn.query("SELECT assignments.assgt_id, assignments.teacher_id, assignments.content FROM assgts_status, assignments WHERE assgts_status.sent=0 AND assgts_status.deleted=0 AND assgts_status.assgt_id=assignments.assgt_id").each_hash do |hash|
-						conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}") if create_or_update_assignment(hash) 
+						if create_or_update_assignment(hash) 
+							conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}")
+						else
+							puts "problem with #{hash}"
+						end
 					end
 				ensure
 					conn.close if conn
@@ -98,7 +101,11 @@ module Bridge
 				begin
 					conn.query("SELECT assgt_id FROM assgts_status
 								WHERE assgts_status.sent=0 AND assgts_status.deleted=1").each_hash do |hash|
-						conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}") if delete_assignment(hash) 
+						if delete_assignment(hash) 
+							conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}") 
+						else
+							puts "problem with #{hash}"
+						end
 					end
 				ensure
 					conn.close if conn
@@ -134,7 +141,7 @@ module Bridge
 		
 		def find_section_from_hash(hash)
 			begin
-				return Section.find_by course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
+				return 
 			rescue
 				return nil
 			end
@@ -142,27 +149,29 @@ module Bridge
 		
 		def create_or_update_sa(hash)
 			translate_sa_hash(hash)
-			assgt_id = hash['assgt_id']
-			section = find_section_from_hash course_id: hash['course_id'], teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
-			return false unless section
-			return false unless Assignment.where(assgt_id: assgt_id).exists?
-			sa = section.section_assignments.detect {|s| s.assignment.assgt_id == assgt_id}
-			if sa
-				update_sa(sa, hash)
+			if sa = SectionAssignment.find_by( old_id: hash['old_id'])
+				return update_sa(sa, hash)
 			else
-				create_sa(section, hash)
+				return create_sa(section, hash)
 			end
 		end
 
 		def create_or_update_sas
 			if conn = connector
 				begin
-					conn.query("SELECT section_assignments.id, assgt_id, name, course_num 
+					conn.query("SELECT section_assignments.id AS old_id, assgt_id, name, course_num 
 								AS course_id,teacher_id,block,due_date,year AS academic_year,use_assgt 
 								FROM section_assignments,assgt_dates_status 
 								WHERE section_assignments.id=assgt_dates_status.id 
 								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|
-							conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}") if create_or_update_sa(hash)
+						begin
+							if create_or_update_sa(hash)
+								conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}")
+							else
+								puts "problem with #{hash}"
+							end
+						rescue
+						end
 					end
 				# rescue
 				ensure
@@ -174,15 +183,14 @@ module Bridge
 		def delete_sa(hash)
 			begin
 				sa = SectionAssignment.find_by old_id: hash['id'].to_i
+				if (Rails.env == 'production') 
+					return sa.delete!
+				else
+					puts "#{sa} would have been deleted"
+					return true
+				end
 			rescue
 				return false
-			end
-			return false unless sa
-			if (Rails.env == 'production') 
-				return sa.delete
-			else
-				puts "#{sa} would have been deleted"
-				return true
 			end
 		end
 
