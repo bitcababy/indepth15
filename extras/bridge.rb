@@ -166,7 +166,7 @@ module Bridge
 								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|
 						begin
 							if create_or_update_sa(hash)
-								conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}")
+								conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['old_id']}")
 							else
 								puts "problem with #{hash}"
 							end
