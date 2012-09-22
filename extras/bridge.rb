@@ -46,7 +46,7 @@ module Bridge
 		## Assignments
 		##
 		def create_assignment(hash)
-			assgt_id = hash['assgt_id'].to_i
+			assgt_id = hash['assgt_id']
 			asst = Assignment.new assgt_id: assgt_id, content: hash['content']
 			if asst.valid?
 				return asst.save!
@@ -57,7 +57,7 @@ module Bridge
 		
 		def delete_assignment(hash)
 			begin
-				asst = Assignment.find_by assgt_id: hash['assgt_id'].to_i
+				asst = Assignment.find_by assgt_id: hash['assgt_id']
 				if (Rails.env == 'production')
 					return asst.delete!
 				else
@@ -70,16 +70,14 @@ module Bridge
 		end
 		
 		def update_assignment(hash)
-			assgt_id = hash['assgt_id'].to_i
-			return false unless (crit = Assignment.where(assgt_id: assgt_id)).exists?
+			return false unless (crit = Assignment.where(assgt_id: hash['assgt_id'])).exists?
 			asst = crit.first
 			asst.content = hash['content']
 			return asst.save!
 		end
 		
 		def create_or_update_assignment(hash)
-			assgt_id = hash['assgt_id'].to_i
-			if Assignment.where(assgt_id: assgt_id).exists?
+			if Assignment.where(assgt_id: hash['assgt_id']).exists?
 				update_assignment(hash)
 			else
 				create_assignment(hash)
@@ -150,7 +148,6 @@ module Bridge
 			hash['old_id'] = hash['old_id'].to_i
 			old_id = hash['old_id'].to_i
 			if SectionAssignment.where(old_id: old_id).exists?
-				puts hash
 				return update_sa(SectionAssignment.find_by(old_id: old_id), hash)
 			else
 				section = Section.find_by course: hash['course_id'].to_i, teacher_id: hash['teacher_id'], block: hash['block']
