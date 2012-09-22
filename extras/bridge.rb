@@ -123,14 +123,6 @@ module Bridge
 		##
 		## SectionAssignments
 		##
-		def translate_sa_hash(hash)
-			hash['assgt_id'] = hash['assgt_id'].to_i
-			hash['use'] = hash['use_assgt'] == 'Y'
-			hash['academic_year'] = hash['academic_year'].to_i
-			hash['course_id'] = hash['course_id'].to_i
-			hash['due_date'] = Date.parse(hash['due_date'])
-		end
-	
 		def create_sa(section, hash)
 			sa = section.section_assignments.new name: hash['name'],  due_date: hash['due_date'], 
 					assignment: Assignment.find_by(assgt_id: hash['assgt_id']), 
@@ -144,14 +136,19 @@ module Bridge
 		
 		def update_sa(sa, hash)
 			sa.due_date = hash['due_date']
-			sa.use = hash['use'] == 'Y'
+			sa.use = hash['use']
 			sa.name = hash['name']
 			return sa.save!
 		end
 		
 		def create_or_update_sa(hash)
-			translate_sa_hash(hash)
-			old_id = hash['id'].to_i
+			hash['assgt_id'] = hash['assgt_id'].to_i
+			hash['use'] = hash['use_assgt'] == 'Y'
+			hash['academic_year'] = hash['academic_year'].to_i
+			hash['course_id'] = hash['course_id'].to_i
+			hash['due_date'] = Date.parse(hash['due_date'])
+			hash['old_id'] = hash['old_id'].to_i
+			old_id = hash['old_id']
 			if SectionAssignment.where(old_id: old_id).exists?
 				return update_sa(SectionAssignment.find_by(old_id: old_id), hash)
 			else
@@ -164,14 +161,13 @@ module Bridge
 			if conn = connector
 				begin
 					conn.query("UPDATE assgt_dates_status SET sent=1 WHERE sent=0 AND new=1 AND deleted=1")
-					conn.query("SELECT section_assignments.id, assgt_id, name, course_num 
+					conn.query("SELECT section_assignments.id AS old_id, assgt_id, name, course_num 
 								AS course_id,teacher_id,block,due_date,year AS academic_year,use_assgt 
 								FROM section_assignments,assgt_dates_status 
 								WHERE section_assignments.id=assgt_dates_status.id 
 								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|
-						puts hash
 						if create_or_update_sa(hash)
-							conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['id']}")
+							conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['old_id']}")
 						else
 							puts "problem with #{hash}"
 						end
