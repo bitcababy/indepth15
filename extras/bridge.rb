@@ -148,7 +148,7 @@ module Bridge
 			hash['course_id'] = hash['course_id'].to_i
 			hash['due_date'] = Date.parse(hash['due_date'])
 			hash['old_id'] = hash['old_id'].to_i
-			old_id = hash['old_id']
+			old_id = hash['old_id'].to_i
 			if SectionAssignment.where(old_id: old_id).exists?
 				return update_sa(SectionAssignment.find_by(old_id: old_id), hash)
 			else
@@ -198,7 +198,11 @@ module Bridge
 					conn.query("SELECT assgt_dates_status.id FROM assgt_dates_status 
 								WHERE assgt_dates_status.sent=0
 								AND assgt_dates_status.deleted=1 ").each_hash do |hash|
-							conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['id']}") if delete_sa(hash)
+						if delete_sa(hash)
+							conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['id']}")
+						else
+							puts "Couldn't delete #{hash['id']}"
+						end
 					end
 				# rescue
 				ensure
