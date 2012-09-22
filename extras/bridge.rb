@@ -109,7 +109,7 @@ module Bridge
 					conn.query("SELECT assgt_id FROM assgts_status
 								WHERE assgts_status.sent=0 AND assgts_status.deleted=1").each_hash do |hash|
 						if delete_assignment(hash) 
-							conn.query("UPDATE assgts_status SET sent=1 WHERE assgt_id=#{hash['assgt_id']}") 
+							conn.query("UPDATE assgts_status SET sent=1,new=0,updated=0 WHERE assgt_id=#{hash['assgt_id']}") 
 						else
 							puts "problem with #{hash}"
 						end
@@ -150,6 +150,7 @@ module Bridge
 			hash['old_id'] = hash['old_id'].to_i
 			old_id = hash['old_id'].to_i
 			if SectionAssignment.where(old_id: old_id).exists?
+				puts hash
 				return update_sa(SectionAssignment.find_by(old_id: old_id), hash)
 			else
 				section = Section.find_by course: hash['course_id'].to_i, teacher_id: hash['teacher_id'], block: hash['block']
@@ -167,7 +168,7 @@ module Bridge
 								WHERE section_assignments.id=assgt_dates_status.id 
 								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|
 						if create_or_update_sa(hash)
-							conn.query("UPDATE assgt_dates_status SET sent=1,new=0 WHERE id=#{hash['old_id']}")
+							conn.query("UPDATE assgt_dates_status SET sent=1 WHERE id=#{hash['old_id']}")
 						else
 							puts "problem with #{hash}"
 						end
