@@ -9,22 +9,22 @@ $shadow: 1px 1px 1px 1px $dark-brown;
 
 #generic-msg, .message {
 	p {
-		font-size: 120%;
+		font-size: 90%;
 //		border-width: 1px;
 //		border-color: $dark-brown;
 //		border-style: solid;
-		-moz-box-shadow: $shadow;
-		-webkit-box-shadow: $shadow;
-		box-shadow:  $shadow;
-		background: $pale-brown;
-		color: $dark-brown;
-		background: $pale-brown;
-		padding: 8px;
-		margin-top: 8px;
-		margin-bottom: 12px;
-		@extend .friendly;
-		font-size: 100%;
 	}
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	box-shadow:  $shadow;
+	background: $pale-brown;
+	color: $dark-brown;
+	background: $pale-brown;
+	padding: 8px;
+	margin-top: 8px;
+	margin-bottom: 12px;
+	@extend .friendly;
+	font-size: 100%;
 }
 
 $title-width: 12em;
