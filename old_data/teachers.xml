@@ -359,7 +359,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="photo_URL"></column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg">&lt;p&gt; Note: Check the due dates of the current assignment carefully; once in a while the current assignment listed here may not be the &quot;current assignment&quot; for your section because different sections may have different due dates.&lt;/p&gt;
-&lt;p&gt; &lt;h2&gt; Remember: assignments without work will not receive credit.&lt;/h2&gt; &lt;/p&gt;</column>
+  &lt;h2&gt; Remember: assignments without work will not receive credit.&lt;/h2&gt;</column>
             <column name="upcoming_assgts_msg"></column>
             <column name="extra_stuff">&lt;a href=&quot;/files/schedule/monzj.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
