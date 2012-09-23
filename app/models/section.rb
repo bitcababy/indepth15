@@ -38,7 +38,15 @@ class Section
 	def to_s
 		"#{self.academic_year}/#{self.course.number}/#{self.teacher}/#{self.block}"
 	end
+	
+	def label_for_teacher
+		return "#{self.course.short_name || self.course.full_name}, Block #{self.block}"
+	end
 		
+	def label_for_course
+		return "#{self.teacher.formal_name}, Block #{self.block}"
+	end
+
 	def upcoming_assignments
 		return self.section_assignments.upcoming.asc(:due_date)
 	end
