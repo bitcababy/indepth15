@@ -4,17 +4,17 @@
 - version 3.3.7deb7
 - http://www.phpmyadmin.net
 -
-- Host: outhouse.wildwoodweb.net
-- Generation Time: Aug 28, 2012 at 02:25 PM
-- Server version: 5.0.51
+- Host: db1.xoala.net
+- Generation Time: Sep 23, 2012 at 05:31 PM
+- Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
 
 <pma_xml_export version="1.0">
     <!--
-    - Database: 'wmdhs'
+    - Database: 'whsmd'
     -->
-    <database name="wmdhs">
+    <database name="whsmd">
         <!-- Table departments -->
         <table name="departments">
             <column name="news">&lt;h2&gt;New Department Head&lt;/h2&gt;
@@ -77,7 +77,7 @@ Check out the tabs in the accordion!&lt;br /&gt;
 &lt;/p&gt;</column>
             <column name="resources">&lt;h2&gt;WHS Math Department Internal Resources&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;/files/AcademicSupport_10-11.pdf&quot;&gt;Academic Support&lt;/a&gt;&lt;br /&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.westonmath.org/AcademicSupport_10-11.pdf&quot;&gt;Academic Support&lt;/a&gt;&lt;br /&gt;
 
 &lt;/li&gt;
 
@@ -90,7 +90,7 @@ Check out the tabs in the accordion!&lt;br /&gt;
 &lt;br /&gt;
 &lt;/li&gt;
 
-&lt;li&gt;&lt;a href=&quot;/files/davidsonl/mathteam/permission-form-2011-12.pdf&quot;&gt;Math Team Permission Form&lt;/a&gt;&lt;br /&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.westonmath.org/teachers/davidsonl/mathteam/permission-form-2011-12.pdf&quot;&gt;Math Team Permission Form&lt;/a&gt;&lt;br /&gt;
 &lt;br /&gt;
 &lt;/li&gt;
 
@@ -119,12 +119,17 @@ Check out the tabs in the accordion!&lt;br /&gt;
 			&lt;/li&gt;
 		&lt;/ul&gt;
 &lt;hr /&gt;</column>
-            <column name="puzzle">&lt;h2&gt;The Chess Players&lt;/h2&gt;
-		&lt;p&gt;Josh MacKeetch, his sister, his son, and his daughter all play chess.&lt;/p&gt;
-		&lt;p&gt;The best player’s twin and the worst player are of the opposite sex.&lt;/p&gt;
-		&lt;p&gt;The best player and the worst player are of the same age.&lt;/p&gt;
-		&lt;p&gt;Who plays the best game of chess? &lt;/p&gt;
-</column>
+            <column name="puzzle">&lt;h2&gt;Three Boxes&lt;/h2&gt;
+&lt;p&gt;Imagine that you have three boxes, each containing two marbles.
+One box has two black marbles, one has two white ones, and one has one white and one black.&lt;/p&gt;
+&lt;p&gt;The boxes were labeled with their contents (BB, WW, and BW), but
+someone changed the labels such that all three boxes were labeled incorrectly.
+&lt;/p&gt;
+
+&lt;p&gt;Can you pick out marbles, one at a time with replacement,
+so that you can figure out with certainty which box is which?
+If so, what is the fewest picks needed.
+If not, why not?&lt;/p&gt;</column>
         </table>
     </database>
 </pma_xml_export>
