@@ -5,4 +5,4 @@
 			%i Not taught this year
 	- else
 		%ul.sections
-			= render partial: 'menus/section', collection: course.current_sections
+			= render partial: 'menus/csection', collection: course.current_sections, as: :section
