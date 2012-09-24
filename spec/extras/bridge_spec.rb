@@ -48,19 +48,7 @@ describe Bridge do
 	end
 			
 	describe "Bridge.create_sa"
-	
-	describe 'find_section_from_hash' do
-		it "returns false if there's no section" do
-			s = Fabricate :section
-			Bridge.find_section_from_hash('course_id' => s.course.number + 1, 'teacher_id' => s.teacher_id, 'block' => s.block, 'academic_year' => s.academic_year).should be_false
-		end
 		
-		it "returns the section if it exists" do
-			s = Fabricate :section
-			Bridge.find_section_from_hash('course_id' => s.course.number, 'teacher_id' => s.teacher_id, 'block' => s.block, 'academic_year' => s.academic_year).should be_kind_of Section
-		end
-	end
-	
 	describe 'delete_sa' do
 		before :each do
 			t = Fabricate :teacher
