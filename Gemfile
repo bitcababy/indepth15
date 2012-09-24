@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails', '3.2.6'
+gem 'rails', '>= 3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -19,6 +19,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
 
 gem 'jquery-rails'
 
@@ -38,8 +39,10 @@ gem 'bundler', '>= 1.2.0rc'
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid-history'
-gem 'mongoid-data_table'
+gem 'mongoid-data_table', :git => 'git://github.com/shamanime/mongoid-data_table.git'
 gem 'mongoid_taggable'
+gem 'mongoid_rails_migrations'
+gem 'locomotive_mongoid_acts_as_tree'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
 gem 'thin'
 gem 'devise'
@@ -107,5 +110,6 @@ group :test do
 	# Warden stuff
 	gem 'warden'
 	gem 'rails_warden'
+	gem 'guard-sass', :require => false
 end
 
