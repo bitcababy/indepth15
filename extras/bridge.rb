@@ -150,7 +150,7 @@ module Bridge
 				return update_sa(SectionAssignment.find_by(old_id: old_id), hash)
 			else
 				puts hash
-				section = Section.find_by course: hash['course_id'].to_i, teacher_id: hash['teacher_id'], block: hash['block']
+				section = Section.find_by course: hash['course_id'].to_i, teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
 				return create_sa(section, hash)
 			end
 		end
