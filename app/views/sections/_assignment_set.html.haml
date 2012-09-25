@@ -3,7 +3,7 @@
 		%div.message!= message
 	.title.ui-corner-top= title
 	- if sas.size > 0
-		%table.assignment-set{id: table_id}
+		%table.assignment-set{id: table_id, width: "100%"}
 			= render partial: 'sections/assignment_table', locals: { sas: sas }
 	- else
 		.none
