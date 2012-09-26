@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 21, 2012 at 01:56 PM
+- Generation Time: Sep 25, 2012 at 09:00 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -16,6 +16,578 @@
     -->
     <database name="whsmd">
         <!-- Table section_assignments -->
+        <table name="section_assignments">
+            <column name="id">28399</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">13</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614873</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28398</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">D</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">13</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614873</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28397</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">G</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">6</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614872</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28396</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="year">2013</column>
+            <column name="course_num">342</column>
+            <column name="block">A</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">5</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614871</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28395</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">A</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614870</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28394</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">381</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">2.5</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614869</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28393</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="year">2013</column>
+            <column name="course_num">331</column>
+            <column name="block">H</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614868</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28392</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="year">2013</column>
+            <column name="course_num">331</column>
+            <column name="block">A</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614868</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28391</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">H</column>
+            <column name="due_date">2012-09-26</column>
+            <column name="name">12</column>
+            <column name="use_assgt">N</column>
+            <column name="assgt_id">614867</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28390</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">12</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614867</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28389</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-10-03</column>
+            <column name="name">10</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614866</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28388</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">D</column>
+            <column name="due_date">2012-10-04</column>
+            <column name="name">10</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614866</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28387</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">9</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614865</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28386</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">D</column>
+            <column name="due_date">2012-10-01</column>
+            <column name="name">9</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614865</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28385</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">4</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614864</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28384</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">A</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">4</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614864</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28383</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">352</column>
+            <column name="block">C</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">9</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614863</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28382</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">352</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">9</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614863</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28381</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">A</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">7</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614862</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28380</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">381</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">2.4</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614861</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28379</column>
+            <column name="teacher_id">abendb</column>
+            <column name="year">2013</column>
+            <column name="course_num">342</column>
+            <column name="block">H</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">2</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614860</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28378</column>
+            <column name="teacher_id">abendb</column>
+            <column name="year">2013</column>
+            <column name="course_num">342</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">2</column>
+            <column name="use_assgt">N</column>
+            <column name="assgt_id">614860</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28377</column>
+            <column name="teacher_id">abendb</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-09-26</column>
+            <column name="name">2</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614859</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28376</column>
+            <column name="teacher_id">abendb</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">D</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">2</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614859</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28375</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-11-02</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614858</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28374</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">D</column>
+            <column name="due_date">2012-11-01</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614858</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28373</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">352</column>
+            <column name="block">G</column>
+            <column name="due_date">2012-10-29</column>
+            <column name="name">2</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614857</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28372</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">F</column>
+            <column name="due_date">2012-10-29</column>
+            <column name="name">7</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614856</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28371</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">F</column>
+            <column name="due_date">2012-10-04</column>
+            <column name="name">6</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614855</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28370</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">352</column>
+            <column name="block">G</column>
+            <column name="due_date">2012-10-04</column>
+            <column name="name">1</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614854</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28369</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-10-09</column>
+            <column name="name">7</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614853</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28368</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">D</column>
+            <column name="due_date">2012-10-09</column>
+            <column name="name">7</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614853</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28367</column>
+            <column name="teacher_id">monzj</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">F</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">5</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614852</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28366</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="year">2013</column>
+            <column name="course_num">371</column>
+            <column name="block">H</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614851</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28365</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="year">2013</column>
+            <column name="course_num">342</column>
+            <column name="block">A</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">4</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614850</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28364</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">H</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">11</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614849</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28363</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">11</column>
+            <column name="use_assgt">N</column>
+            <column name="assgt_id">614849</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28362</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">C</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">6</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614848</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28361</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="year">2013</column>
+            <column name="course_num">391</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">6</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614848</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28360</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="year">2013</column>
+            <column name="course_num">342</column>
+            <column name="block">F</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">10</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614847</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28359</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="year">2013</column>
+            <column name="course_num">342</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">10</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614847</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28358</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">G</column>
+            <column name="due_date">2012-09-28</column>
+            <column name="name">13</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614846</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28357</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">C</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">13</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614846</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28356</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="year">2013</column>
+            <column name="course_num">331</column>
+            <column name="block">F</column>
+            <column name="due_date">2012-09-24</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614845</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28355</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="year">2013</column>
+            <column name="course_num">331</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614845</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28354</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="year">2013</column>
+            <column name="course_num">341</column>
+            <column name="block">H</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">9</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614844</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28353</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">F</column>
+            <column name="due_date">2012-09-27</column>
+            <column name="name">9</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614843</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28352</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">352</column>
+            <column name="block">C</column>
+            <column name="due_date">2012-09-24</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614842</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28351</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="year">2013</column>
+            <column name="course_num">352</column>
+            <column name="block">B</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">8</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614842</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28350</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="year">2013</column>
+            <column name="course_num">322</column>
+            <column name="block">G</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">5</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614841</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28349</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">E</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">12</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614840</column>
+        </table>
+        <table name="section_assignments">
+            <column name="id">28348</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="year">2013</column>
+            <column name="course_num">332</column>
+            <column name="block">D</column>
+            <column name="due_date">2012-09-25</column>
+            <column name="name">12</column>
+            <column name="use_assgt">Y</column>
+            <column name="assgt_id">614840</column>
+        </table>
         <table name="section_assignments">
             <column name="id">28345</column>
             <column name="teacher_id">davidsonl</column>
@@ -123,7 +695,7 @@
             <column name="block">B</column>
             <column name="due_date">2012-09-25</column>
             <column name="name">3</column>
-            <column name="use_assgt">N</column>
+            <column name="use_assgt">Y</column>
             <column name="assgt_id">614829</column>
         </table>
         <table name="section_assignments">

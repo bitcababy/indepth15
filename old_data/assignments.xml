@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 21, 2012 at 01:57 PM
+- Generation Time: Sep 25, 2012 at 09:01 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -4336,10 +4336,11 @@ Here is the &lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.4Answers.pdf&quot;&gt
             <column name="teacher_id">davidsonl</column>
             <column name="content">&lt;i&gt;Transformational Geometry, &lt;/i&gt;&lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.5.pdf&quot;&gt;Problem Set 1.5&lt;/a&gt;,
 at least 42 ergs’ worth from #1–6, 9, 12, 14, 17–19.
-(When Eccles says &quot;construct,&quot;
-there is no need yet to limit yourself to a straightedge and compass;
-just sketch the figures,
-and/or use any tools you have until later in the year.)
+(Note: whenever Eccles says &quot;construct,&quot;
+there is no need to limit yourself to a straightedge and compass;
+just sketch the figures
+and/or use any tools you have.
+Later in the year we'll tighten this up.)
 &lt;br /&gt;&lt;br /&gt;
 Here are the ergs for each question:
 #1 (4),
@@ -4355,7 +4356,8 @@ Here are the ergs for each question:
 *18 (10),
 *19 (10).
 Note that quite a few questions are starred (and thereby required).
-I will stop reminding you about the meaning of starred questions after this assignment.</column>
+I will stop reminding you about the meaning of starred questions after this assignment.&lt;br /&gt;&lt;br /&gt;
+Here are the &lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.5Answers.pdf&quot;&gt;answers&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614757</column>
@@ -4373,8 +4375,8 @@ Here are the ergs for each question:
 *10 (8),
 *11 (8),
 13 (12).
-
-</column>
+&lt;br /&gt;&lt;br /&gt;
+Here are the &lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.6Answers.pdf&quot;&gt;answers&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614758</column>
@@ -4384,12 +4386,24 @@ Here are the ergs for each question:
         <table name="assignments">
             <column name="assgt_id">614759</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">&lt;i&gt;Transformational Geometry, &lt;/i&gt;&lt;a href=&quot;/files/davidsonl/geomh/TG/PS2.1.pdf&quot;&gt;Problem Set 2.1&lt;/a&gt;,&lt;/i&gt;</column>
+            <column name="content">&lt;i&gt;Transformational Geometry, &lt;/i&gt;&lt;a href=&quot;/files/davidsonl/geomh/TG/PS2.1.pdf&quot;&gt;Problem Set 2.1&lt;/a&gt;,&lt;/i&gt;
+at least 42 ergs’ worth from
+# *1 (5), *2 (5), *3 (5), *4 (5), 5 (6), 6 (6), 10 (8), *12 (8), *14(a and c only) (8).</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614760</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">&lt;a href=&quot;/files/davidsonl/geomh/isometries-2.pdf&quot;&gt;Isometries II&lt;/a&gt;. (No ergs: do all of it.)</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;If you are planning to take a retake for Quiz #1,
+you must do it on or before Friday, October 5.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/files/davidsonl/geomh/isometries-2.pdf&quot;&gt;Isometries II&lt;/a&gt;. (No ergs: do all of it.)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/files/davidsonl/mathteam/invite.pdf&quot;&gt;Read about our required
+math competitions,
+and consider joining the Math Team as well!&lt;/a&gt;
+&lt;br&gt;
+&lt;img src=&quot;/files/gabrinerd/geomh/MathTeamRecruit.jpg&quot; width=&quot;120&quot;&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614761</column>
@@ -4418,9 +4432,10 @@ problems #1–6, 9, 12, 14, 17a&lt;br&gt;
 there is no need yet to limit yourself to a straightedge and compass;
 just sketch the figures,
 and/or use any tools you have until later in the year.)
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
+Here is the &lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.5Answers.pdf&quot;&gt;answer key&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
 A combination compass-ruler-protractor is available for sale in the Stockyard for $2.&lt;br&gt;
-&lt;img src=&quot;/teachers/gabrinerd/geomh/compass.jpg&quot; height=&quot;25%&quot; width=&quot;25%/&quot;&gt;
+&lt;img src=&quot;/teachers/gabrinerd/geomh/compass.jpg&quot; height=&quot;25%&quot; width=&quot;25%&quot;/&gt;
 &lt;br&gt;&lt;br&gt;</column>
         </table>
         <table name="assignments">
@@ -4429,6 +4444,7 @@ A combination compass-ruler-protractor is available for sale in the Stockyard fo
             <column name="content">Catch up on all previous homework that is not completely understood.&lt;br&gt;Work on problems set 1.5 #19&lt;br&gt;Hints:&lt;ol&gt;&lt;li&gt;The shortest distance between two points is a straight line.&lt;/li&gt;
 &lt;li&gt;We are studying reflections.&lt;/li&gt;
 &lt;/ol&gt;
+&lt;br&gt;Here is the &lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.5Answers.pdf&quot;&gt;answer key&lt;/a&gt; for 1.5.
 </column>
         </table>
         <table name="assignments">
@@ -4437,12 +4453,15 @@ A combination compass-ruler-protractor is available for sale in the Stockyard fo
             <column name="content">&lt;i&gt;Transformational Geometry, &lt;/i&gt;&lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.6.pdf&quot;&gt;Problem Set 1.6&lt;/a&gt;,
 do problems #1–3, 5, 7, 9–11&lt;br&gt;
 &lt;b&gt;Challenge:&lt;/b&gt;4, 8, 12&lt;br&gt;
-&lt;b&gt;Super Challenge:&lt;/b&gt;13&lt;br&gt;</column>
+&lt;b&gt;Super Challenge:&lt;/b&gt;13&lt;br&gt;
+&lt;br&gt;
+Here is the &lt;a href=&quot;/files/davidsonl/geomh/TG/PS1.6Answers.pdf&quot;&gt;answer key&lt;/a&gt;.&lt;br&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614812</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Finish all of &lt;a href=&quot;/files/davidsonl/geomh/isometries-1.pdf&quot;&gt;Isometries I&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+Study for the quiz.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614813</column>
@@ -6325,7 +6344,7 @@ Finish &lt;A HREF=&quot;http://www.westonmath.org/teachers/hosmerc/geom/Parallel
 
 &lt;br&gt;
 2.  Redraw an Octagon to figure out how many diagonals in total can be drawn. (Hint: 18 is not the correct answer).
-&lt;br.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Don't forget &lt;A HREF=&quot;http://www.westonmath.org/teachers/hosmerc/geom/Challenge Problem 5 2011.docx&quot;&gt;Challenge Problem #5 is due today&lt;/a&gt;. </column>
         </table>
         <table name="assignments">
@@ -7380,7 +7399,7 @@ If you need extra 5 Representation sheets, please click &lt;a href=&quot;/teache
         <table name="assignments">
             <column name="assgt_id">614808</column>
             <column name="teacher_id">langsdorfa</column>
-            <column name="content">Complete &lt;a href = &quot;/files/langsdorfa/geom/Transformations32013.pdf&quot;&gt; Transformations 3&lt;/a&gt;.  You'll also need a few copies of this &lt;a href = &quot;/files/langsdorfa/geom/FiveRepresentationsTemplateV12013.pdf&quot;&gt; 5 Representations Template&lt;/a&gt;.  </column>
+            <column name="content">Complete &lt;a href = &quot;/files/langsdorfa/geom/Transformations32013.pdf&quot;&gt; Transformations III&lt;/a&gt;.  You'll also need a few copies of this &lt;a href = &quot;/files/langsdorfa/geom/FiveRepresentationsTemplateV12013.pdf&quot;&gt; 5 Representations Template&lt;/a&gt;.  </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">614818</column>
@@ -7411,6 +7430,48 @@ If you need extra 5 Representation sheets, please click &lt;a href=&quot;/teache
             <column name="assgt_id">614834</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">If you didn't complete it in class, finish the &lt;a href = &quot;/files/langsdorfa/geom/BasicReflectionAndTranslationPractice2013.pdf&quot;&gt; warmup&lt;/a&gt;.  Then, complete &lt;a href = &quot;/files/langsdorfa/geom/TransformationsTwo2013.pdf&quot;&gt; Transformations II&lt;/a&gt;.  You'll need some copies of this &lt;a href = &quot;/files/langsdorfa/geom/FiveRepresentationsTemplateV12013.pdf&quot;&gt; improved five representations template&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614841</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;b&gt;Read&lt;/b&gt; pages 3-5 of the textbook.
+&lt;br&gt;
+Then &lt;b&gt;do&lt;/b&gt; problems 1-4 and 6-11 from pages 7 and 8.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614849</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete question #1 only on &lt;a href=&quot;/files/hosmerc/geom/transformations3(2013).pdf&quot;&gt;Transformations 3&lt;/a&gt;. 
+&lt;br&gt;
+If you need extra 5 Representation sheets, please click &lt;a href=&quot;/teachers/hosmerc/geom/five-rep-template (unscaffolded).pdf&quot;&gt;here&lt;/a&gt;. 
+
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614859</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Today in class we worked on &lt;a href=&quot;files/abendb/geom/Worksheet - Transformations 3.pdf&quot;&gt;Transformations 3&lt;/a&gt;.  For homework, please finish this worksheet and bring in evidence of trials on the last one, considering differences in degrees, direction, and point of rotations.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614862</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Complete &lt;a href = &quot;/files/langsdorfa/geom/ThinkingWritingTransformations2013.pdf&quot;&gt; Thinking and Writing about Transformations&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614867</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish questions 2 and 3 on &lt;a href=&quot;/files/hosmerc/geom/transformations3(2013).pdf&quot;&gt;Transformations 3&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614870</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Look back over today's &lt;a href = &quot;/files/langsdorfa/geom/TransformationsIdentificationPractice2013.pdf&quot;&gt; warmup&lt;/a&gt; and complete &lt;a href = &quot;/files/langsdorfa/geom/RotationsReflectionsHomework2013.pdf&quot;&gt; Rotations and Reflections Homework&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614872</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Please complete all of &lt;a href=&quot;/files/hosmerc/geom/transformations3(2013).pdf&quot;&gt;Transformations III.&lt;/a&gt;&lt;br&gt;
+In case you need another, &lt;a href=&quot;/files/gacsa/geom/Unit 1/five-rep-template (unscaffolded).pdf&quot;&gt;Here is the five representations sheet with compositions.&lt;/a&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610850</column>
@@ -9700,6 +9761,16 @@ And the solutions are &lt;a href=&quot;/files/gacsa/alg2h/Unit 1/Binary Operatio
             <column name="assgt_id">614821</column>
             <column name="teacher_id">griswoldn</column>
             <column name="content">Finish the third worksheet on Binary Operations.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614845</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Finish &lt;a href=&quot;/files/gacsa/alg2h/Unit 1/Binary Operations 3 2012.pdf&quot;&gt;Even More Binary Operations Practice.&lt;/a&gt; &lt;br&gt;&lt;br&gt; And the solutions are &lt;a href=&quot;/files/gacsa/alg2h/Unit 1/Binary Operations 3 Solutions 2012.pdf&quot;&gt;here.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614868</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Practice the &lt;a href=&quot;/teachers/griswoldn/alg2/dist prop hw.docx&quot;&gt;Distributive Property&lt;/a&gt;.&lt;/p&gt; </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610800</column>
@@ -16349,7 +16420,7 @@ Finish Functions 2 Worksheet</column>
             <column name="assgt_id">614837</column>
             <column name="teacher_id">davidsonl</column>
             <column name="content">&lt;ol&gt;
-&lt;li&gt;FInish &lt;a href=&quot;/files/davidsonl/alg2/functions-4.pdf&quot;&gt;Functions 4&lt;/a&gt;.
+&lt;li&gt;Finish &lt;a href=&quot;/files/davidsonl/alg2/functions-4.pdf&quot;&gt;Functions 4&lt;/a&gt;.
 &lt;/li&gt;
 &lt;li&gt;Using the &amp;#8220;&lt;a href=&quot;/files/davidsonl/alg2/quad-rep-template.pdf&quot;&gt;Five Representations&lt;/a&gt;&amp;#8221; sheet, create function-machine diagrams, algebraic rules, extended tables, transformation descriptions,
 and graphs for the following four quadratic functions.
@@ -16394,6 +16465,38 @@ Below each graph, be sure that you describe (in words and numbers) exactly how t
 (the &quot;parent&quot; function)
 can be moved in order to produce the graph that you drew.
 &lt;/li&gt;&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614840</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish questions 1, 2, 4 and 5 on &lt;a href=&quot;/files/hosmerc/alg2/functions4.pdf&quot;&gt;Functions 4&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614843</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ol&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/alg2/FDR.pdf&quot;&gt;Functions,
+Domain, and Range&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Do #1-4 on &lt;a href=&quot;/files/davidsonl/alg2/Piecewise_Functions.pdf&quot;&gt; Piecewise Functions&lt;/a&gt;,
+written by an unnamed math teacher from the Upper Peninsula.&lt;/li&gt;
+&lt;li&gt;We strongly recommend that you download &lt;a href=&quot;http://ccl.northwestern.edu/netlogo/download.shtml&quot;&gt;NetLogo&lt;/a&gt; for your home computer
+from &lt;a href=&quot;http://ccl.northwestern.edu/netlogo/download.shtml&quot;&gt;http://ccl.northwestern.edu/netlogo/download.shtml&lt;/a&gt;.
+While this isn&amp;#8217;t (and can&amp;#8217;t be) required, it will make life easier for you.
+If you don&amp;#8217;t download it, 
+you will need to finish all NetLogo worksheets in a computer lab in school.
+&lt;/li&gt;&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614864</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">Hi Everyone, 
+We will be using the netbook laptops in class tomorrow so if you'd prefer to use your own laptop please bring it to class tomorrow.  :-)
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614873</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish (if you haven't done so already), &lt;a href=&quot;/files/hosmerc/alg2/functionsdomainrange.pdf&quot;&gt;Functions, Domain and Range&lt;/a&gt;. </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">612697</column>
@@ -19006,7 +19109,7 @@ Complete &lt;a href=&quot;/teachers/davidsonl/precalch/right-tri-SOH-CAH-TOA.pdf
         <table name="assignments">
             <column name="assgt_id">612851</column>
             <column name="teacher_id">fierabendm</column>
-            <column name="content">We did a quick practice chart of SIN, COS, and TAN values for 0, 30, 45, 60, and 90 degrees to start class.  (There will be a timed quiz, soon.)  Students were reminded that those receiving a C on the last quiz can make it up by appointment.  We then took a look at our expanding definition of the SIN function, using WS3.  In problem one, we developed a new area formula using SIN that helped us understand that when 90&lt;x&lt;=180, sin(x) = sin(180 - x).  Problem two introduced the Law of Sines.  We then worked on problem three, which dealt with an, &quot;Ambiguous Case.&quot;  HW - have WS3 finished for next class.</column>
+            <column name="content">We did a quick practice chart of SIN, COS, and TAN values for 0, 30, 45, 60, and 90 degrees to start class.  (There will be a timed quiz, soon.)  Students were reminded that those receiving a C on the last quiz can make it up by appointment.  We then took a look at our expanding definition of the SIN function, using WS3.  In problem one, we developed a new area formula using SIN that helped us understand that when 90&amp;lt;x&amp;lt;=180, sin(x) = sin(180 - x).  Problem two introduced the Law of Sines.  We then worked on problem three, which dealt with an, &quot;Ambiguous Case.&quot;  HW - have WS3 finished for next class.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">612857</column>
@@ -20754,6 +20857,43 @@ The input should be the distance traveled, the output either xc or yc as the cas
 So your table has three columns: distance, xc, and yc.
 Use 0, &amp;#960;/6, &amp;#960;/4, &amp;#960;/3, &amp;#960;/2, 2&amp;#960;/3, 5&amp;#960;/6, &amp;#960;, 7&amp;#960;/6, 5&amp;#960;/4, 3&amp;#960;/2, 5&amp;#960;/3, 11&amp;#960;/6, and 2&amp;#960; as your input values.
 Then graph xc and yc as functions of d.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614844</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Lesson 7&amp;ndash;1, p. 261, &lt;i&gt;Written Exercises, &lt;/i&gt;#4(&lt;i&gt;abcd&lt;/i&gt;), 8(&lt;i&gt;abcd&lt;/i&gt;), 11(&lt;i&gt;d &lt;/i&gt;only), 14(&lt;i&gt;c &lt;/i&gt;only).
+&lt;/li&gt;
+&lt;li&gt;Lesson 7&amp;ndash;4, p. 280, &lt;i&gt;Written Exercises, &lt;/i&gt;#14(&lt;i&gt;abcd&lt;/i&gt;), #15(&lt;i&gt;abcd&lt;/i&gt;).
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/files/davidsonl/mathteam/invite.pdf&quot;&gt;Read about our required
+math competitions,
+and consider joining the Math Team as well!&lt;/a&gt;
+&lt;br&gt;
+&lt;img src=&quot;/files/gabrinerd/geomh/MathTeamRecruit.jpg&quot; width=&quot;120&quot;&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614846</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete the &lt;a href=&quot;http://old.westonmath.org/files/davidsonl/precalch/wrap.html&quot;&gt;Wrapping Functions&lt;/a&gt; worksheet for our next class. Also, visit the online textbook (the link appears in an earlier assignment) and read the following pages: p. 87-91, 103, 104.&lt;br&gt;&lt;br&gt;
+Please read this letter about required math competitions and joining Math Team:  &lt;a href=/files/fierabendm/precalch/invite.pdf&quot;&gt;Invite&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614852</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt; Here is the link to the Wrapping Function problems:  &lt;A HREF=&quot;/teachers/monzj/precalch/Wrapping Functions1.pdf&quot;&gt;Wrapping Functions.&lt;/A&gt; &lt;/P&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614855</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Test 1 is today!  Problem Set 1 is due - it will be posted soon.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614856</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Test 2 is today! Problem Set 2 is due - it will be posted on or about Oct. 19.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610804</column>
@@ -24180,6 +24320,26 @@ create a qualitative graphing video in groups of two or three. What you must do 
             <column name="content">Finish up the &lt;a href=&quot;files/abendb/precalc1/Ed Functions.pdf&quot;&gt;&quot;-ed&quot; Functions worksheet&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">614847</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Read about the unit circle, radian and degree measure at &lt;a href=&quot;http://coolmath.com/precalculus-review-calculus-intro/precalculus-trigonometry/28-the-unit-circle-02.htm&quot;&gt;www.coolmath.com&lt;/a&gt;. Also complete both sides of our &lt;a href=&quot;/files/fierabendm/precalc1/2_deg to rad special right.pdf&quot;&gt;degree and radian conversions&lt;/a&gt; worksheet.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614850</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Complete the &lt;a href=&quot;/files/fidlerb/precalc1/Unit 1/graph sine hw.pdf&quot;&gt;Graphing the Sine Function&lt;/a&gt; sheet.  Use transformations!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614860</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">No homework.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614871</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Complete the inner two rings of the unit circle, as described in class.  See me with any questions.</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610803</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Please send me an email.  My email address is:
@@ -24960,6 +25120,26 @@ Wednesday, November 16: Deadline for Retakes of Test 1 and 2</column>
             <column name="assgt_id">614780</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">Solve the first two of  these &lt;a href = &quot;/files/langsdorfa/precalc2/SumProblems2013.pdf&quot;&gt; sum problems&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614842</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Finish all of the problems from the sum problem worksheet found in assignment #7.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614854</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Test 1 is today!  Problem Set 1 is due. It will be posted soon.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614857</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Test 2 is today! Problem Set 2 is due - it will be posted on or about Oct. 19.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614863</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Finish a &lt;a href = &quot;/files/langsdorfa/precalc2/ReallyStrangeSequence2013.pdf&quot;&gt; Really Strange Sequence&lt;/a&gt;.  </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610818</column>
@@ -26854,6 +27034,11 @@ Note: Do all these using algebraic methods, no calculators, graphs or tables.</c
 Read Section 1.6, do problems #2, 11, 18, 28, 41, 42, 53</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">614851</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 1.8 and do problems #4, 7, 33, 36, 39, 45, 47, 48, 53, 55</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610805</column>
             <column name="teacher_id">mccowand</column>
             <column name="content">Download DR Scheme version 4.2.1 onto your home computer.  -note this is not the most recent version. &lt;P&gt;&lt;/p&gt;
@@ -27383,6 +27568,16 @@ and &lt;A HREF=&quot;/teachers/mccowand/apcs/HuffmanEncode2.java&quot;&gt;Encode
             <column name="assgt_id">614789</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">Read the improved guessing game program and complete the HailstoneSequences and ApproximateCashRegister programs described &lt;a href = &quot;/files/langsdorfa/apcs/APCS018.pdf&quot;&gt; here&lt;/a&gt;,</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614861</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Today's handout, which does not contain any new programming assignments, is &lt;a href = &quot;/files/langsdorfa/apcs/APCS024.pdf&quot;&gt; here&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614869</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Today's sample program and assignments are &lt;a href = &quot;/files/langsdorfa/apcs/APCS025.pdf&quot;&gt; here&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610796</column>
@@ -28257,6 +28452,31 @@ Here are the &lt;a href=&quot;teachers/monzj/apstats/Answers to Problem Set 3 20
             <column name="assgt_id">614819</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Read Ch. 5 - up to page 83 only, not including standard deviation. Do problems 3, 5, 7, 11, 13, and 15 on pages 90 - 92.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614848</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Read pages 83 - 90 in the textbook, and answer questions 24, 32, 28, 35, 40, 41, 45, and 47 on pages 94- 101.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614853</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Test 1 is today!  Problem Set 1 is due. Here it is:  &lt;A HREF=&quot;/files/monzj/apstats/AP Statistics Problem Set 1 2012-13.pdf&quot;&gt;PROBLEM SET 1.&lt;/A&gt; &lt;/P&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614858</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Test 2 is today! Problem Set 2 is due - it will be posted on or about Oct. 19.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614865</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 6 in the textbook, pages 104 to 112, and do problems 3, 5, 7, 12, 18, 20 on pages 129 and 130.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">614866</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Ch. 6 in the textbook, pages 112-126. Do problems 23, 29, 30, 31, 32, 34, and 44 on pages 131 to 133.</column>
         </table>
     </database>
 </pma_xml_export>
