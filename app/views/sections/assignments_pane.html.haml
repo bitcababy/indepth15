@@ -1,0 +1,65 @@
+#assignments
+	#generic-msg!= @section.teacher.generic_msg
+	= render partial: 'sections/assignment_set', locals: {table_id: 'current', sas: @section.current_assignments, message: @section.teacher.current_msg, title: 'Current assignment'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @section.upcoming_assignments, message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments, message: "", title: 'Past assignments'}
+	
+- content_for :page_header do
+	= render partial: 'shared/course_link', locals: {course: @section.course}
+- content_for :page_title do
+	= "#{@section.course.full_name}, Block #{@section.block}"
+
+:coffeescript
+	nameColumnWidth = "7em"
+	dateColumnWidth = "8em"
+
+	$("#current").dataTable
+		bJQueryUI: true
+		bFilter: false
+		bInfo: false
+		bPaginate: false
+		bSort: false
+		aoColumnDefs: [
+			sWidth: nameColumnWidth
+			aTargets: [0]
+		,
+			sWidth: "8em"
+			aTargets: [1]
+		]
+
+	$("#upcoming").dataTable
+		bJQueryUI: true
+		bFilter: false
+		bInfo: false
+		bPaginate: false
+		bSort: false
+		aoColumnDefs: [
+			sWidth: nameColumnWidth
+			aTargets: [0]
+		,
+			sWidth: dateColumnWidth
+			aTargets: [1]
+		]
+
+	$("#past").dataTable
+		bServerSide: false
+		bJQueryUI: true
+		bFilter: false
+		bInfo: false
+		bPaginate: true
+		bSort: false
+		iDisplayLength: 2
+		bLengthChange: true
+		iDeferLoading: true
+		aLengthMenu: [[
+			2, 5, 10, -1
+		], [2,5,10,"All"]]
+		aoColumnDefs: [
+			sWidth: nameColumnWidth
+			aTargets: [0]
+		,
+			sWidth: dateColumnWidth
+			aTargets: [1]
+		]
+		oLanguage:
+			sLengthMenu: "Display _MENU_ past assignments"

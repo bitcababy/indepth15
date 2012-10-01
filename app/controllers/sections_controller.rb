@@ -1,23 +1,21 @@
 class SectionsController < ApplicationController
 	before_filter :find_section, except: [:assignments]
 
-	def show
-    respond_to do |format|
-      format.html {render :layout => !request.xhr?}
- 			format.js
-			format.json { render json: @section}
-	   end
-	end
-
-	def assignments
-		# puts params
-		@section = Section.find_by course_id: params[:course_id].to_i, academic_year: params[:year].to_i, teacher_id: params[:teacher_id], block: params[:block].upcase
+	def assignments_pane
+		@course = @section.course
     respond_to do |format|
       format.html {render :layout => !request.xhr?}
     end
 	end
+	
+	def assignments
+		@section = Section.find_by course_id: params[:course_id].to_i, academic_year: params[:year].to_i, teacher_id: params[:teacher_id], block: params[:block].upcase
+		respond_to do |format|
+			format.html {render :layout => !request.xhr?}
+		end
+	end
 
-	protected
+	# protected
 	def find_section
 		@section = Section.find(params[:id])
 	end

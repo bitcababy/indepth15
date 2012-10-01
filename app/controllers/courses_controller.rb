@@ -56,18 +56,6 @@ class CoursesController < ApplicationController
 	#		end
  
 	##
-	## Other methods
-	##
-	def assignments_pane
-		@section = Section.find(params[:section_id])
-		@course = @section.course
-		@selected = 5
-		respond_to do |format|
-			format.html { render :layout => !request.xhr? }
-		end
-	end
-
-	##
 	## Panes
 	##
 	def resources_pane

@@ -1,66 +1,16 @@
-#assignments
-	- unless @section.teacher.generic_msg.empty?
-		#generic-msg!= @section.teacher.generic_msg
-	= render partial: 'sections/assignment_set', locals: {table_id: 'current', sas: @section.current_assignments, message: "", title: 'Current assignment'}
-	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @section.upcoming_assignments, message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
-	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments, message: "", title: 'Past assignments'}
-	
-- content_for :page_header do
+%div#tabs
+	%ul
+		%li
+			%a{href: assignments_pane_path(@section), title: 'Assignments'}= "Assignments for #{@section.course.full_name}, Block #{@section.block}"
+		= render partial: 'courses/tabs', locals: {course: @section.course}
+			
+= content_for :page_title do
+	= page_title(@section)
+= content_for :page_header do
 	= page_header(@section)
-- content_for :page_title do
-	= "#{Settings.school_name} | #{Settings.dept_name} | #{@section.course.full_name}"
+
 :coffeescript
 	$(document).ready ->
-		nameColumnWidth = "7em"
-		dateColumnWidth = "8em"
-
-		$("#current").dataTable
-			bJQueryUI: true
-			bFilter: false
-			bInfo: false
-			bPaginate: false
-			bSort: false
-			aoColumnDefs: [
-				sWidth: nameColumnWidth
-				aTargets: [0]
-			,
-				sWidth: "8em"
-				aTargets: [1]
-			]
-
-		$("#upcoming").dataTable
-			bJQueryUI: true
-			bFilter: false
-			bInfo: false
-			bPaginate: false
-			bSort: false
-			aoColumnDefs: [
-				sWidth: nameColumnWidth
-				aTargets: [0]
-			,
-				sWidth: dateColumnWidth
-				aTargets: [1]
-			]
-
-		$("#past").dataTable
-			bServerSide: false
-			bJQueryUI: true
-			bFilter: false
-			bInfo: false
-			bPaginate: true
-			bSort: false
-			iDisplayLength: 2
-			bLengthChange: true
-			iDeferLoading: true
-			aLengthMenu: [[
-				2, 5, 10, -1
-			], [2,5,10,"All"]]
-			aoColumnDefs: [
-				sWidth: nameColumnWidth
-				aTargets: [0]
-			,
-				sWidth: dateColumnWidth
-				aTargets: [1]
-			]
-			oLanguage:
-				sLengthMenu: "Display _MENU_ past assignments"
+	 $("#tabs").tabs ajaxOptions:
+	    error: (xhr, status, index, anchor) ->
+	      $(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. " + "If this wouldn't be a demo."
