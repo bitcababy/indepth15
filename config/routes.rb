@@ -15,7 +15,6 @@ InDepth::Application.routes.draw do
 	##
 	resources :teachers, only: [:show]
 	resources :courses, only: [:show]
-	resources :sections, only: [:show]
 	resources :teachers, only: [:show]
 	resources :text_documents
 			
@@ -35,7 +34,8 @@ InDepth::Application.routes.draw do
   get "about", controller: 'home', action: 'about'
 
 	get "courses/:course_id/section/:year/:teacher_id/:block/assignments", to: 'sections#assignments', as: :assignments_page
-	
+	get "sections/:id/assignments", to: 'sections#assignments_pane', as: :assignments_pane
+
 	# get 'menus/home', to: 'menus#home', as: :home_menu
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	# get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
