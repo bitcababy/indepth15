@@ -1,9 +1,9 @@
 #assignments
 	- unless @section.teacher.generic_msg.empty?
 		#generic-msg!= @section.teacher.generic_msg
-	= render partial: 'sections/assignment_set', locals: {table_id: 'current', sas: @section.current_assignments, message: @section.teacher.current_msg, title: 'Current assignment'}
-	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @section.upcoming_assignments, message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
-	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments, message: "", title: 'Past assignments'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'current', sas: @section.current_assignments.where(use: true), message: @section.teacher.current_msg, title: 'Current assignment'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @section.upcoming_assignments.where(use: true), message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments.where(use: true), message: "", title: 'Past assignments'}
 	
 	/ .assignment-block
 	/ 	.title.ui-widget-header.ui-corner-top.ui-state-active   Past assignments
