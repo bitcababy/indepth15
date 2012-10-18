@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Oct 18, 2012 at 12:42 PM
+- Generation Time: Oct 18, 2012 at 01:03 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -17,8 +17,16 @@
     <database name="whsmd">
         <!-- Table departments -->
         <table name="departments">
-            <column name="news">&lt;h2&gt;New Department Head&lt;/h2&gt;
-&lt;p&gt;Please welcome James McLaughlin as the new head of the Math Department for grades 6–12!&lt;/p&gt;</column>
+            <column name="dept_id">whs_math</column>
+            <column name="objectives">&lt;h2&gt;Objectives of the Department &lt;/h2&gt;
+&lt;p&gt;The courses in mathematics emphasize the pattern, structure, and unifying ideas of the discipline. Since we have witnessed tremendous growth in uses of mathematics during the past thirty years, it is virtually impossible to predict all our future mathematical needs. We attempt to provide opportunities for students to achieve the mathematical, statistical, and computer literacy that will be required by tomorrow's society. Problem-solving skills are one of the major emphases of our program.&lt;/p&gt;
+											&lt;p&gt;&lt;/p&gt;
+											&lt;h2&gt;Curriculum Levels&lt;/h2&gt;
+											&lt;p&gt;The department's program...&lt;/p&gt;
+											&lt;p&gt;&lt;/p&gt;
+											&lt;h2&gt;Course Placement&lt;/h2&gt;
+											&lt;p&gt;The following guidelines...&lt;/p&gt;
+					</column>
             <column name="how_to_use">&lt;h2&gt;How to Use the New Westonmath App&lt;/h2&gt;
 &lt;p&gt;This app is your source of information for math courses at Weston High School.
 The tab right below this one lists some of its features, but here&amp;#8217;s enough to get you started:
@@ -75,6 +83,8 @@ Check out the tabs in the accordion!&lt;br /&gt;
 &lt;/ul&gt;
  
 &lt;/p&gt;</column>
+            <column name="news">&lt;h2&gt;New Department Head&lt;/h2&gt;
+&lt;p&gt;Please welcome James McLaughlin as the new head of the Math Department for grades 6–12!&lt;/p&gt;</column>
             <column name="resources">&lt;h2&gt;WHS Math Department Internal Resources&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.westonmath.org/AcademicSupport_10-11.pdf&quot;&gt;Academic Support&lt;/a&gt;&lt;br /&gt;
@@ -130,6 +140,18 @@ someone changed the labels such that all three boxes were labeled incorrectly.
 so that you can figure out with certainty which box is which?
 If so, what is the fewest picks needed.
 If not, why not?&lt;/p&gt;</column>
+            <column name="why">	&lt;p&gt;Students keep asking, “Why doesn’t the Math Department just use teacherweb?” One student even asked whether we’re too cool for teacherweb.&lt;/p&gt;
+	&lt;p&gt;The WHS Math Department admits to being cool, but that’s not what westonmath is all about. The westonmath.org website is far more than a place to find out tonight’s homework assignment. Here are some of its features:&lt;/p&gt;
+	&lt;ul&gt;
+		&lt;li&gt; The “Current Assignment” automatically rolls over every afternoon. The teacher doesn’t have to remember to do so manually. Future assignments aren’t confused with the current one.&lt;/li&gt;
+	&lt;li&gt;You have an easily accessible database of all past assignments. Even in June it stretches all the way back to September.&lt;/li&gt;
+		&lt;li&gt;	Teachers have access to past assignments in every course going back to 2002. This is extremely helpful for experienced teachers and newcomers alike.&lt;/li&gt;
+	&lt;li&gt;Westonmath is course-oriented rather than teacher-oriented. Students, parents, and teachers can easily find out 
+	important information about a course, such as its syllabus and its grading policies. Even if there are four or five different 
+	teachers for a course, all the course-wide data are collected in a single place.&lt;/li&gt;
+	&lt;li&gt;Department-wide information is readily available on the front page.&lt;/li&gt;
+	&lt;/ul&gt;
+</column>
         </table>
     </database>
 </pma_xml_export>
