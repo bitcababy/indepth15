@@ -8,6 +8,15 @@ module Convert
 			'day_num' => :day,
 			'period' => :period,
 		},
+		Department => {
+			'dept_id' => :name,
+			'objectives' => :objectives,
+			'how_to_use' => :how_to_use,
+			'news'	=> :news,
+			'resources' => :resources,
+			'puzzle' => :puzzle,
+			'why' => :why,
+		},
 		Teacher => {
 			"last_name" 			=> :last_name,
 			'first_name' 			=> :first_name,
@@ -84,7 +93,10 @@ module Convert
 				"KeyAttr" => ['database'],
 				'ForceArray' => false,
 		)
-		imported[:database][:table].collect {|h| h[:column]}
+		if imported[:database][:table].keys.include? :column
+			imported[:database][:table] = [imported[:database][:table]]
+		end
+		imported[:database][:table].collect {|h| puts h.class; h[:column]}
 	end
 	
 		
