@@ -7,7 +7,13 @@ namespace :data do
 			end
 		end
 	end
-	
+end
+
+namespace :dept do
+	task :convert => :environment do
+		arr = Convert.import_xml_file "departments.xml"
+		Convert.from_hashes Department, arr
+	end
 end
 
 namespace :update do
