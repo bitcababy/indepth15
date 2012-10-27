@@ -180,7 +180,7 @@ module Bridge
 			begin
 				sa = SectionAssignment.find_by old_id: hash['id'].to_i
 				if (Rails.env == 'production') 
-					return sa.delete!
+					return sa.delete
 				else
 					puts "#{sa} would have been deleted"
 					return true
