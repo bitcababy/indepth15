@@ -52,7 +52,7 @@ class Section
 	end
 	
 	def current_assignments
-		return self.section_assignments.current.asc(:due_date).limit(1)
+		return self.section_assignments.current
 	end
 	
 	def future_assignments
