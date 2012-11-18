@@ -106,7 +106,7 @@ group :test do
 	gem 'simplecov'
 	gem 'email_spec'
 	gem 'webrat'
-	gem 'mocha', :require => false
+	gem 'mocha', :require => 'mocha/setup'
 	# Warden stuff
 	gem 'warden'
 	gem 'rails_warden'
