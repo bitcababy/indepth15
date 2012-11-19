@@ -11,7 +11,7 @@ class SectionAssignment
 	field :use, type: Boolean
 	field :oi, as: :old_id, type: Integer
 
-	index :due_date => -1
+	index({due_date: -1, use: 1})
 	
 	belongs_to :section
 	belongs_to :assignment, inverse_of: nil
