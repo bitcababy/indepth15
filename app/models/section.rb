@@ -48,7 +48,7 @@ class Section
 	end
 
 	def upcoming_assignments
-		return self.section_assignments.upcoming.asc(:due_date)
+		return self.section_assignments.upcoming.asc(:due_date).published
 	end
 	
 	def current_assignments
@@ -56,11 +56,11 @@ class Section
 	end
 	
 	def future_assignments
-		return self.section_assignments.future.asc(:due_date)
+		return self.section_assignments.future.asc(:due_date).published
 	end
 
 	def past_assignments(n=nil)
-		ret = self.section_assignments.past.desc(:due_date)
+		ret = self.section_assignments.past.desc(:due_date).published
 		n ? ret.limit(n) : ret
 	end
 	
