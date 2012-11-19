@@ -63,11 +63,11 @@ class SectionAssignment
 			sa = crit.first
 			raise "no section_assignment" unless sa
 			sa.due_date = hash[:due_date]
-			sa.use = hash[:use_assgt]
+			sa.use = hash[:use] == 'Y'
 			sa.save!
 			return sa
 		else
-			hash[:use] = (hash.delete(:use_assgt) == 'Y')
+			hash[:use] = hash[:use] == 'Y'
 			hash[:assignment] = assignment
 			return section.section_assignments.create! hash
 		end
