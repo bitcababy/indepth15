@@ -18,6 +18,7 @@ class SectionAssignment
 	# accepts_nested_attributes_for :assignment
 
 	scope :due_after,	->(date) { gt(due_date: date) }
+  scope :due_on, ->(date) { where(due_date: date) }
 	scope :past, -> { lt(due_date: future_due_date) }
 	scope :future, -> { gte(due_date: future_due_date) }
 	scope :current, -> { gte(due_date: future_due_date).asc(:due_date).limit(1) }
@@ -27,9 +28,6 @@ class SectionAssignment
 	end
   
 	def self.upcoming
-		current = self.current.first
-		if current
-			self.after(current.due_date)
 		na = self.next_assignment.first
 		if na
 			self.due_after(na.due_date)
@@ -37,10 +35,6 @@ class SectionAssignment
 			self.future
 		end
 	end
-	
-	# def self.current
-	# 	[self.future.asc(:due_date).first]
-	# end
 	
 	def self.get_sa(hash)
 		assgt_id = hash.delete(:assgt_id)
