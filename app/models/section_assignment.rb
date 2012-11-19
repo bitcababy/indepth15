@@ -17,20 +17,22 @@ class SectionAssignment
 	belongs_to :assignment, inverse_of: nil
 	# accepts_nested_attributes_for :assignment
 
-	scope :after,	->(date) { gt(due_date: date) }
+	scope :due_after,	->(date) { gt(due_date: date) }
 	scope :past, -> { lt(due_date: future_due_date) }
 	scope :future, -> { gte(due_date: future_due_date) }
 	scope :current, -> { gte(due_date: future_due_date).asc(:due_date).limit(1) }
 	scope :for_section, ->(s) { where(section: s) }
-	
 	def to_s
 		"#{self.section}/#{self.assignment.assgt_id}"
 	end
-
+  
 	def self.upcoming
 		current = self.current.first
 		if current
 			self.after(current.due_date)
+		na = self.next_assignment.first
+		if na
+			self.due_after(na.due_date)
 		else
 			self.future
 		end
