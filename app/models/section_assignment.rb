@@ -21,7 +21,7 @@ class SectionAssignment
   scope :due_on, ->(date) { where(due_date: date) }
 	scope :past, -> { lt(due_date: future_due_date) }
 	scope :future, -> { gte(due_date: future_due_date) }
-	scope :current, -> { gte(due_date: future_due_date).asc(:due_date).limit(1) }
+	scope :next_assignment, -> { gte(due_date: future_due_date).asc(:due_date).published.limit(1) }
 	scope :for_section, ->(s) { where(section: s) }
 	def to_s
 		"#{self.section}/#{self.assignment.assgt_id}"
