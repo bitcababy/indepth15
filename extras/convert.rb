@@ -2,13 +2,13 @@ require 'xmlsimple'
 
 module Convert
 	MAPPINGS = {
-		Occurrence => 	{
-			'block_name' => :block,
-			'occurrence' => :number,
-			'day_num' => :day,
-			'period' => :period,
-		},
-		Department => {
+    Occurrence =>   {
+      'block_name' => :block,
+      'occurrence' => :number,
+      'day_num' => :day,
+      'period' => :period,
+    },
+		::Department => {
 			'dept_id' => :name,
 			'objectives' => :objectives,
 			'how_to_use' => :how_to_use,
@@ -93,10 +93,10 @@ module Convert
 				"KeyAttr" => ['database'],
 				'ForceArray' => false,
 		)
-		if imported[:database][:table].keys.include? :column
-			imported[:database][:table] = [imported[:database][:table]]
-		end
-		imported[:database][:table].collect {|h| puts h.class; h[:column]}
+    # if imported[:database][:table].kind_of?(Array) && imported[:database][:table].keys.include? :column
+    #   imported[:database][:table] = [imported[:database][:table]]
+    # end
+		imported[:database][:table].collect {|h| h[:column]}
 	end
 	
 		
