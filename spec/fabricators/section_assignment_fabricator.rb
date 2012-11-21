@@ -1,5 +1,6 @@
 Fabricator(:section_assignment) do
 	due_date			{ Date.today }
+  use           true
 	section
 	assignment
 end
