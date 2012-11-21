@@ -38,7 +38,7 @@ module CourseMockHelpers
 	end
 
 	def mock_section_assignment(opts={})
-		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20) }) {|key, v1, v2| v1}
+		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20), use: true }) {|key, v1, v2| v1}
 		sa = mock("section_assignment") do
 			opts.each_pair {|k, v| stubs(k).returns v}
 		end
