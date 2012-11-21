@@ -54,21 +54,18 @@ describe Bridge do
 			t = Fabricate :teacher
 			s = Fabricate :section
 			s.teacher = t
-			puts s.attributes
 			a = Fabricate :assignment
 			Fabricate :section_assignment, section: s, assignment: a
 			@hash = {'course_id' => s.course.number, 'teacher_id' => s.teacher_id, 'block' => s.block, 'academic_year' => s.academic_year, 'assgt_id' => a.assgt_id}
 		end
 		
 		it "returns false if the section doesn't exist" do
-			puts @hash
 			pending "Unfinished test"
 			h = Hash[@hash]
 			h['course_id'] += 1
 			Bridge.delete_sa(hash).should be_false
 		end
 	end
-			
 			
 	describe "Bridge.delete_assignment" do
 		it "returns false if the assignment doesn't exist" do
