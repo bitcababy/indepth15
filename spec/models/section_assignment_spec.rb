@@ -12,23 +12,23 @@ describe SectionAssignment do
 		end
 		
 		it "has a for_section scope" do
-			SectionAssignment.for_section(@section).count.should == 7
+			SectionAssignment.for_section(@section).to_a.count.should == 7
 		end
 		
 		it "has a future scope" do
-			SectionAssignment.for_section(@section).future.count.should == 3
+			SectionAssignment.for_section(@section).future.to_a.count.should == 3
 		end
 		
 		it "has a past scope" do
-			SectionAssignment.past.count.should == 4
+			SectionAssignment.past.to_a.count.should == 4
 		end
 		
-		it "has an upcoming scope" do
-			SectionAssignment.upcoming.count.should == 2
+		it "has a next_assignment scope" do
+			SectionAssignment.next_assignment.to_a.count.should == 1
 		end
-			
-		it "has a current scope" do
-			SectionAssignment.current.to_a.count.should == 1
+
+		it "has an upcoming scope" do
+			SectionAssignment.upcoming.to_a.count.should == 2
 		end
 		
 	end
