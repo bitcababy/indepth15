@@ -1,6 +1,7 @@
 module CourseExampleHelpers
 	DEFAULT_FUTURE = 3
 	DEFAULT_PAST = 2
+	include Utils
 	
 	def create_occurrences(section)
 		for occ in section.occurrences 
@@ -18,7 +19,7 @@ module CourseExampleHelpers
 	end
 
 	def make_assignments(section, n = 3, kind = :future)
-		n.times {|i| section.add_assignment(i.to_s, Fabricate(:assignment), Date.today + (kind == :future ? rand(1..5) : rand(-5..-1)))	}
+		n.times {|i| section.add_assignment(i.to_s, Fabricate(:assignment), future_due_date + (kind == :future ? rand(1..5) : rand(-5..-1)), true)	}
 	end
 
 	def section_with_assignments(options = {})
