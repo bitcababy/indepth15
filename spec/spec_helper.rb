@@ -13,7 +13,6 @@ require 'email_spec'
 require 'rspec/autorun'
 require 'capybara/rspec'
 require 'devise/test_helpers'
-require 'mocha'
 
 include Utils
 
@@ -31,6 +30,8 @@ RSpec.configure do |config|
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
+  require 'mocha/setup'
+  require 'mocha/api'
   config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
