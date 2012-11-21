@@ -53,7 +53,7 @@ class Section
 	
 	def current_assignments
     if na = self.section_assignments.next_assignment.first
-      return self.section_assignments.due_on(na.first.due_date).all.published
+      return self.section_assignments.due_on(na.due_date).all.published
     else
       return []
     end
