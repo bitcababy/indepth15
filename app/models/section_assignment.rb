@@ -26,15 +26,15 @@ class SectionAssignment
 	scope :published, -> { where(use: true) }
 
 	def to_s
-		"#{self.section}/#{self.assignment.assgt_id}"
+		return "#{self.section}/#{self.assignment.assgt_id}"
 	end
   
 	def self.upcoming
 		na = self.next_assignment.first
 		if na
-			self.due_after(na.due_date)
+			return self.due_after(na.due_date)
 		else
-			self.future
+			return self.future
 		end
 	end
 	
