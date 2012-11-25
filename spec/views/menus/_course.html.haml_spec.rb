@@ -4,7 +4,7 @@ describe 'menus/_course' do
 	it "displays a course and its sections" do
 		sections = []
 		course = mock('course') do
-			stubs(:full_name).returns "Fractals 101"
+			stubs(:menu_label).returns "Fractals 101"
 			stubs(:current_sections).returns sections
 			stubs(:number).returns 321
 		end

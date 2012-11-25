@@ -7,6 +7,20 @@ describe User do
 	
 	it { should validate_uniqueness_of :login}
 	
+  describe 'to_s' do
+    it "returns the full name of a teacher" do
+      teacher = Fabricate(:teacher, first_name: "John", last_name: "Doe")
+      teacher.to_s.should == "John Doe"
+    end
+  end
+
+  describe 'menu_label' do
+    it "returns the full name of a teacher" do
+      teacher = Fabricate(:teacher, first_name: "John", last_name: "Doe")
+      teacher.menu_label.should == teacher.full_name
+    end
+  end
+
 	context "Fabrication testing" do
 		context ":user" do
 			subject {Fabricate :user, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}

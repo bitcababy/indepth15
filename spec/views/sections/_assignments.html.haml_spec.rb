@@ -8,7 +8,7 @@ describe "sections/_assignments" do
 	before :each do
 		teacher = mock_teacher
     teacher.stubs(:generic_msg).returns "This is a generic message"
-		course = mock_course(number: 321, full_name: "Fractals 101")
+		course = mock_course(number: 321, menu_label: "Fractals 101")
 		@section = mock_section_with_assignments(course: course, teacher: teacher)
 		@section.stubs(:page_header).returns "Page header"
 		assign(:section, @section)

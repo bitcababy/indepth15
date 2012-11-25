@@ -1,5 +1,5 @@
 %li.teacher
-	%a{href: '#'}= teacher.full_name
+	%a{href: '#'}= teacher.menu_label
 	%ul.sections
 		= render partial: 'menus/tsection', collection: teacher.sections.current, as: :section
 		%br
