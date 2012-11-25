@@ -53,7 +53,6 @@ gem 'bson_ext'
 gem 'delayed_job'
 gem 'settingslogic'
 gem 'xml-simple'
-gem 'heroku'
 gem 'state_machine'
 gem 'htmlentities'
 gem 'google-webfonts'
@@ -103,13 +102,15 @@ group :test do
 	gem 'database_cleaner'
 	gem 'akephalos2', :require => 'akephalos'
 	gem 'hpricot'
-	gem 'simplecov'
+	gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
 	gem 'email_spec'
 	gem 'webrat'
-	gem 'mocha', :require => 'mocha/setup'
+	gem 'mocha', :require => false
 	# Warden stuff
 	gem 'warden'
 	gem 'rails_warden'
 	gem 'guard-sass', :require => false
+  gem 'websocket'
 end
 
