@@ -1,8 +1,20 @@
-require 'simplecov'
-
-SimpleCov.start do
-	add_filter '/spec/'
-	add_filter '/features/'
+if( ENV['COVERAGE'] == 'on' )
+  require 'simplecov'
+  require 'simplecov-rcov'
+  class SimpleCov::Formatter::MergedFormatter
+    def format(result)
+       SimpleCov::Formatter::HTMLFormatter.new.format(result)
+       SimpleCov::Formatter::RcovFormatter.new.format(result)
+    end
+  end
+  SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
+  SimpleCov.start 'rails' do
+  	add_filter '/spec/'
+  	add_filter '/features/'
+    add_filter '/config/'
+    add_filter '/uploaders/'
+    add_filter '/app/models/ckeditor/'
+  end
 end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -30,8 +42,6 @@ RSpec.configure do |config|
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
-  require 'mocha/setup'
-  require 'mocha/api'
   config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
@@ -62,4 +72,5 @@ RSpec.configure do |config|
 	config.extend ControllerMacros, :type => :controller
 
 end
+require 'mocha/setup'
 
