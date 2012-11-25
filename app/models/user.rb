@@ -40,7 +40,10 @@ class User
 		return "#{self.first_name} #{self.last_name}"
 	end
 	
-	
+	def menu_label
+		return self.full_name
+	end
+	  
 	#
 	# Devise stuff
 	#

@@ -14,10 +14,6 @@ class Teacher < Author
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
 
-	def menu_label
-		return self.full_name
-	end
-	
 	def courses
 		self.sections.map(&:course).uniq
 	end
