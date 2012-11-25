@@ -1,13 +1,26 @@
 module CourseMockHelpers
 	def mock_teacher(opts={})
-		opts.merge!(login: 'doem', formal_name: "Mr. Doe", generic_msg: "Generic msg", current_msg: "Current msg", upcoming_msg: "Upcoming_msg") {|key, v1, v2| v1}
-		mock(opts[:formal_name]) do
+    defaults = {
+        login: 'doej',
+        formal_name: "Mr. Doe",
+        full_name: "John Doe",
+        generic_msg: "Generic msg", 
+        current_msg: "Current msg", 
+        upcoming_msg: "Upcoming_msg"}
+    opts = defaults.merge(opts)
+    # opts.merge!(defaults) {|key, v1, v2| v1}
+		mock(opts[:full_name]) do
 			opts.each_pair {|k, v| stubs(k).returns v}
+      stubs(:menu_label).returns opts[:formal_name]
 		end
 	end
 
 	def mock_section(opts={})
-		opts.merge!({academic_year: 2013, block: Settings.blocks.sample, days_for_section: [1,2,3,4,5], room: "222"}) {|key, v1, v2| v1}
+		defaults = {academic_year: 2013, 
+        block: Settings.blocks.sample, 
+        days_for_section: [1,2,3,4,5], 
+        room: "222"}
+    opts = defaults.merge(opts)
 		opts[:teacher] = mock_teacher unless opts[:teacher]
 		opts[:course] = mock_course unless opts[:course]
 		mock("Section #{opts[:block]}") do
@@ -23,8 +36,11 @@ module CourseMockHelpers
 
 	def mock_course(opts={})
 		areas = [:description, :policies, :resources, :information, :news]
-		opts.merge!({number: 321, duration: Course::FULL_YEAR, credits: 5.0, 
-				full_name: "Fractals 101"}) {|key, v1, v2| v1}
+		opts.merge!({number: 321, 
+        duration: Course::FULL_YEAR, credits: 5.0, 
+				full_name: "Fractals 101"
+        }) {|key, v1, v2| v1}
+    
 		docs = {}
 		areas.each do |area|
 			docs[area] = mock_text_doc("#{area.to_s.capitalize} for course #{opts[:number]}")
@@ -34,6 +50,7 @@ module CourseMockHelpers
 			areas.each do |area|
 				stubs(:area).returns docs[area]
 			end
+      stubs(:menu_label).returns opts[:full_name]
 		end
 	end
 
