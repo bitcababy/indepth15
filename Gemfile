@@ -35,7 +35,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem 'bundler', '>= 1.2.0rc'
+gem 'bundler'
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid-history'
@@ -89,13 +89,11 @@ end
 
 group :development do
 	gem 'haml-rails'
-	gem 'heroku_san'
 end
 
 group :test do
-	gem 'cucumber-rails', '>= 1.2.1', :require => false
+	gem 'cucumber-rails', :require => false
 	gem 'rspec-instafail'
-	gem 'rspec-rails-mocha'
 	gem 'nokogiri', '= 1.5.2'
 	gem 'mongoid-rspec'
 	gem 'capybara'
