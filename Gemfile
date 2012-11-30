@@ -73,7 +73,7 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'ruby_gntp'
 	gem 'growl'
-	gem 'watchr'
+	gem 'watchr', :path =>'/Users/mer/Dropbox/projects/watchr'#   :git => 'git://github.com/bitcababy/watchr.git'
 	gem 'guard'
 	gem 'guard-rspec'
 	gem 'guard-cucumber'
