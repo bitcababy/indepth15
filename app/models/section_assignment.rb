@@ -14,7 +14,7 @@ class SectionAssignment
 	index({due_date: -1, use: 1})
 	
 	belongs_to :section
-	belongs_to :assignment, inverse_of: nil
+	belongs_to :assignment
 	# accepts_nested_attributes_for :assignment
 
 	scope :due_after,	->(date) { gt(due_date: date) }
