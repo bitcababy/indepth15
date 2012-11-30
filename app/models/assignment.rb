@@ -4,6 +4,8 @@ class Assignment < TextDocument
 	field :assgt_id, type: Integer
 	validates :assgt_id, uniqueness: true
 	
+  has_many :section_assignments
+
 	scope :dupes, ->(a) { where(:assgt_id.gt => a.assgt_id, :content => a.content) }
 
 	index( {assgt_id: 1}, {unique: true})
