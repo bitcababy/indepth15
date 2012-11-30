@@ -85,6 +85,7 @@ group :development, :test do
 	gem 'growl_notify'
 	gem 'fabrication', '>= 2.0'
 	gem 'foreman'
+  gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
 end
 
 group :development do
@@ -104,11 +105,13 @@ group :test do
   gem 'simplecov-rcov', :require => false
 	gem 'email_spec'
 	gem 'webrat'
-	gem 'mocha', :require => false
+  gem 'rspec-rails-mocha'
+  gem 'websocket'
+  gem 'spork'
+  gem 'ZenTest'
 	# Warden stuff
 	gem 'warden'
 	gem 'rails_warden'
 	gem 'guard-sass', :require => false
-  gem 'websocket'
 end
 
