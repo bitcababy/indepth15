@@ -1,7 +1,7 @@
-require 'spec_helper
+require 'spec_helper'
 
 describe FilesController do
-  describe '#pass_on' do
+  describe ':pass_on' do
     it "redirects to the old Weston site"
   end
 end
