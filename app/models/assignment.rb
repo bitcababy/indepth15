@@ -5,6 +5,7 @@ class Assignment < TextDocument
 	validates :assgt_id, uniqueness: true
 	
   has_many :section_assignments
+  accepts_nested_attributes_for :section_assignments
 
 	scope :dupes, ->(a) { where(:assgt_id.gt => a.assgt_id, :content => a.content) }
 
