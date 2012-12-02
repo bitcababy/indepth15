@@ -20,38 +20,29 @@ require 'spec_helper'
 
 describe SectionsController do
 	include Mongoid::Document
-	include CourseExampleHelpers 
+  include FabricationMacros
 
-	# This should return the minimal set of attributes required to create a valid
-	# Section. As you add validations to Section, be sure to
-	# update the return value of this method accordingly.
-	def valid_attributes
-		{
-			room: 501,
-			academic_year: Settings.academic_year,
-			semester: Course::FIRST_SEMESTER,
-			block: "B"
-		}
-	end
-
-	describe "GET 'assignments', xhr" do
-		it "display the assignments page" do
-			section = section_with_assignments
-			section.teacher = Fabricate :teacher, login: "foo"
-			section.save!
-			
-			xhr :get, :assignments, { course_id: section.course.to_param, year: section.academic_year, teacher_id: section.teacher.to_param, block: section.block}
-			response.should be_success
-			assigns(:section).should eq(section)
-		end
-	end
-  
-  describe "GET 'assignments_pane'" dp
-	  section = section_with_assignments
-    xhr :get, :assignments_pane, {section_id: section.to.param}
-		response.should be_success
+  describe "GET 'assignments', xhr" do
+   it "display the assignments page" do
+      section = section_with_assignments
+      section.teacher = Fabricate :teacher, login: "foo"
+      section.save!
+      
+      xhr :get, :assignments, { course_id: section.course.to_param, year: section.academic_year, teacher_id: section.teacher.to_param, block: section.block}
+      response.should be_success
+      assigns(:section).should eq(section)
+    end
   end
-
+    
+  describe "GET 'assignments_pane'" do
+    # it "gets the assignments pane via xhr" do
+    #   section = section_with_assignments
+    #   xhr :get, :assignments_pane, {section_id: section.to_param}
+    #   response.should be_success
+    # end
+    pending
+  end
+  
   describe '#find_section'
 
 end
