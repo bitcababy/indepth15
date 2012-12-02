@@ -25,7 +25,8 @@ InDepth::Application.routes.draw do
 	resources :courses, only: [:show]
 	resources :teachers, only: [:show]
 	resources :text_documents
-			
+	
+
 	# Unrestful routes
 
 	# Temporary routes to deal with old links
@@ -48,6 +49,8 @@ InDepth::Application.routes.draw do
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	# get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
 	# get 'menus/manage', to: 'menus#manage', as: :manage_menu
+  
+  resources :assignments
 
 	devise_for :users, controllers: {sessions: 'users/sessions'}
 	
