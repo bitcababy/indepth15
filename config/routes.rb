@@ -15,9 +15,9 @@ InDepth::Application.routes.draw do
 	##
 	resources :teachers, only: [:show]
   
-  resources :teachers, only: [] do
+  resources :teachers, only: [:show] do
      resources :courses, only: [] do
-       resources :assignments, only: [:edit, :update, :show]
+       resources :assignments, only: [:new, :edit, :update, :show]
      end
    end      
   
