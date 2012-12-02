@@ -24,6 +24,8 @@ class SectionAssignment
 	scope :next_assignment, -> { gte(due_date: future_due_date).asc(:due_date).published.limit(1) }
 	scope :for_section, ->(s) { where(section: s) }
 	scope :published, -> { where(use: true) }
+  
+  delegate :block, :block=, to: :section
 
 	def to_s
 		return "#{self.section}/#{self.assignment.assgt_id}"
@@ -69,6 +71,7 @@ class SectionAssignment
 		else
 			hash[:use] = hash[:use] == 'Y'
 			hash[:assignment] = assignment
+      hash.delete(:block) # Have to do this or the block delegation won't work
 			return section.section_assignments.create! hash
 		end
 	end
