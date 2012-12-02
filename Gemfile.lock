@@ -398,6 +398,7 @@ DEPENDENCIES
   mongoid_taggable
   nokogiri (= 1.5.2)
   perftools.rb!
+  pry
   rails (>= 3.2.6)
   rails_warden
   rspec-instafail
