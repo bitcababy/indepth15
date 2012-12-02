@@ -1,0 +1,10 @@
+= simple_form_for @assignment do |f|
+	.inputs
+		= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false
+		#section-assignments
+		%table
+			= f.simple_fields_for :section_assignments,@assignment.section_assignments  do |ff|
+				%tr
+					%td= ff.input :block, disabled: true
+					%td= ff.input :due_date, as: :datepicker
+					%td= ff.input :use, as: :check_boxes
