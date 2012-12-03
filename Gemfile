@@ -69,6 +69,7 @@ gem 'ruby-mysql'
 gem 'tidy_ffi'
 gem 'daemons'
 gem 'pry'
+gem 'yard'
 
 group :development, :test do
 	gem 'rspec-rails'

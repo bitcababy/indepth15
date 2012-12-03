@@ -344,6 +344,7 @@ GEM
     xml-simple (1.1.2)
     xpath (1.0.0)
       nokogiri (~> 1.3)
+    yard (0.8.3)
 
 PLATFORMS
   ruby
@@ -422,3 +423,4 @@ DEPENDENCIES
   webrat
   websocket
   xml-simple
+  yard
