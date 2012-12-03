@@ -7,6 +7,12 @@ GIT
       mongoid (~> 3.0)
 
 GIT
+  remote: git://github.com/bitcababy/watchr.git
+  revision: b083421e28bae3d03cc7edcf5c5cd8722f788c02
+  specs:
+    watchr (0.71)
+
+GIT
   remote: git://github.com/shamanime/mongoid-data_table.git
   revision: 33ff3c1368e942d45fc7cbdc965c44d919ac13da
   specs:
@@ -27,11 +33,6 @@ GIT
     ckeditor (3.7.1)
       mime-types
       orm_adapter
-
-PATH
-  remote: /Users/mer/Dropbox/projects/watchr
-  specs:
-    watchr (0.71)
 
 GEM
   remote: https://rubygems.org/
