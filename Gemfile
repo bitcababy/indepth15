@@ -70,6 +70,8 @@ gem 'tidy_ffi'
 gem 'daemons'
 
 group :development, :test do
+  gem 'heroku'
+  gem 'heroku_san'
 	gem 'rspec-rails'
 	gem 'ruby_gntp'
 	gem 'growl'
