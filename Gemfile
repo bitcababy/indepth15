@@ -72,10 +72,12 @@ gem 'pry'
 gem 'yard'
 
 group :development, :test do
+  gem 'heroku'
+  gem 'heroku_san'
 	gem 'rspec-rails'
 	gem 'ruby_gntp'
 	gem 'growl'
-	gem 'watchr', :path =>'/Users/mer/Dropbox/projects/watchr'#   :git => 'git://github.com/bitcababy/watchr.git'
+	gem 'watchr',  :git => 'git://github.com/bitcababy/watchr.git'
 	gem 'guard'
 	gem 'guard-rspec'
 	gem 'guard-cucumber'
