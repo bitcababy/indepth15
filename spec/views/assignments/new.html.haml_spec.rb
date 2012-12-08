@@ -24,8 +24,7 @@ describe 'assignments/new' do
   context 'inputs' do
     it "displays an editor for the assignment" do
       rendered.should have_selector('form') do |form|
-        form.should have_selector('textarea')
-        pending
+        form.should have_selector('textarea', name: 'assignment[content]')
       end
     end
   
@@ -36,13 +35,26 @@ describe 'assignments/new' do
         form.should have_selector('#assignment_section_assignments_attributes_0_due_date')
         form.should have_selector('#assignment_section_assignments_attributes_1_due_date')
       end
-    end
+    end 
   end
   
   context 'buttons' do
-    it "should have a create button"
-    it "should have a cancel button"
-    it "should have a reset button"
+    it "should have a create button" do
+      rendered.should have_selector('form') do |form|
+        form.should have_selector('input', class: 'btn', label: 'Create')
+      end
+    end
+    it "should have a cancel button" do
+      rendered.should have_selector('form') do |form|
+        form.should have_selector('input', class: 'btn', label: 'Cancel')
+      end
+    end
+
+    it "should have a reset button" do
+      rendered.should have_selector('form') do |form|
+        form.should have_selector('input', class: 'btn', label: 'Reset')
+      end
+    end
   end
     
     
