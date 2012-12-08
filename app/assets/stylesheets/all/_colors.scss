@@ -1,12 +1,15 @@
 $weston-hue: 334;
 
+// #891044
 $weston-red: hsl($weston-hue, 79, 30);
 $weston-red-text: white;
 $weston-red-hover: hsl(57, 87, 84);
 
 $purple-hue: 268;
+// 8932E7
 $dark-purple: hsl($purple-hue, 79, 55);
 $medium-purple: hsl($purple-hue, 79, 65);
+// BC8DF2
 $light-purple: hsl($purple-hue, 79, 75);
 $pale-purple: hsl($purple-hue, 23, 87);
 
@@ -17,13 +20,18 @@ $light-brown: hsl($brown-hue, 87, 60);
 $pale-brown: hsl($brown-hue, 87, 90);
 
 $blue-hue: 209;
-$dark-blue: hsl($blue-hue, 61, 40);
+// #2868A4
+$dark-blue: hsl($blue-hue, 61, 40); 
+// #428CD1
 $medium-blue: hsl($blue-hue, 61, 54);
+// 80B2E0
 $light-blue: hsl($blue-hue, 61, 69);
 $pale-blue: hsl($blue-hue, 12, 93);
 
 $green-hue: 84;
+// #85CD18
 $dark-green: hsl($green-hue, 79, 45);
+// A9EA48
 $medium-green: hsl($green-hue, 79, 60);
 $light-green: hsl($green-hue, 20, 80);
 $pale-green: hsl($green-hue, 35, 82);
