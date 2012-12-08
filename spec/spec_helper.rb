@@ -52,14 +52,12 @@ Spork.prefork do
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
   Dir[Rails.root.join("app/lib/extras/**/*.rb")].each {|f| require f}
 
   require 'database_cleaner'
   DatabaseCleaner.strategy = :truncation
 
 
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
   RSpec.configure do |config|
     # ## Mock Framework
     #
@@ -81,7 +79,6 @@ Spork.prefork do
   	# Clear out 
   	config.before(:each) do
   		DatabaseCleaner.clean
-  		Mongoid::IdentityMap.clear
   	end
 	
   	config.after(:each) do
@@ -92,11 +89,9 @@ Spork.prefork do
   	config.include Devise::TestHelpers, :type => :controller
   	config.include Devise::TestHelpers, :type => :view
   	config.include Devise::TestHelpers, :type => :helper
-  	config.extend ControllerMacros, :type => :controller
 
   end
   require 'mocha/setup'
-
 
 end
 
