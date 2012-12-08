@@ -22,3 +22,7 @@ module ControllerMacros
     end
   end
 end
+
+RSpec.configure do |config|
+  config.extend ControllerMacros, :type => :controller
+end
