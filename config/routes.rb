@@ -8,19 +8,19 @@ InDepth::Application.routes.draw do
 	# authenticated :user do
 	#  		root to: "home#dept_info"
 	# end
-	root to: "home#dept_info"
+	root to: "department#home_page"
 	
 	##
 	## Resources
 	##
 	resources :teachers, only: [:show]
   
-  resources :teachers, only: [:show] do
-     resources :courses, only: [] do
-       resources :assignments, only: [:new, :edit, :update, :show]
-     end
-   end      
-  
+  # resources :teachers, only: [:show] do
+  #     resources :courses, only: [] do
+  #       resources :assignments, only: [:new, :edit, :update, :show], shallow: true
+  #     end
+  #   end      
+   
    
 	resources :courses, only: [:show]
 	resources :teachers, only: [:show]
@@ -50,10 +50,13 @@ InDepth::Application.routes.draw do
 	# get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
 	# get 'menus/manage', to: 'menus#manage', as: :manage_menu
   
-  resources :assignments
+  # resources :assignments
 
 	devise_for :users, controllers: {sessions: 'users/sessions'}
 	
+  get 'teachers/:teacher_id/courses/:course_id/assignments/new', as: :new_assignment
+  resources :assignments, except: [:new]
+
 	unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
   end
