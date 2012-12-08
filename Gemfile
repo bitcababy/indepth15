@@ -69,6 +69,7 @@ gem 'tidy_ffi'
 gem 'daemons'
 gem 'pry'
 gem 'yard'
+gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
 
 group :development, :test do
   gem 'heroku'
