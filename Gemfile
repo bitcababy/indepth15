@@ -88,7 +88,7 @@ group :development, :test do
 	gem 'growl_notify'
 	gem 'fabrication', '>= 2.0'
 	gem 'foreman'
-  gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
+  # gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
 end
 
 group :development do
