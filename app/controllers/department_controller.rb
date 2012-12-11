@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 	
-	def dept_info
 		@department = Department.first
+	def home_page
 		respond_to do |format|
 			format.html { render }
 			format.json { render json: @department}
