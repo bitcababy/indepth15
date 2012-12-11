@@ -69,7 +69,7 @@ gem 'tidy_ffi'
 gem 'daemons'
 gem 'pry'
 gem 'yard'
-gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
+# gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
 
 group :development, :test do
   gem 'heroku'
@@ -77,7 +77,7 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'ruby_gntp'
 	gem 'growl'
-	gem 'watchr',  :git => 'git://github.com/bitcababy/watchr.git'
+	gem 'watchr'#,  :git => 'git://github.com/bitcababy/watchr.git'
 	gem 'guard'
 	gem 'guard-rspec'
 	gem 'guard-cucumber'
