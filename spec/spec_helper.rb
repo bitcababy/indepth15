@@ -75,6 +75,7 @@ Spork.prefork do
   	config.include Devise::TestHelpers, :type => :controller
     config.include(EmailSpec::Helpers)
     config.include(EmailSpec::Matchers)
+    DatabaseCleaner.orm = "mongoid"
 
   	# Clear out 
   	config.before(:each) do
