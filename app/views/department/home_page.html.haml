@@ -1,8 +1,0 @@
-#home-page
-	= render partial: 'shared/pane', collection: @panes, as: :src_obj
-
-:coffeescript
-	$(document).ready ->
-	  $("#home-page").accordion()
-		animated = $("#home-page").accordion("option", "animated")
-		$("#home-page").accordion "option", "animated", "bounceslide"

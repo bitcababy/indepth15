@@ -1,0 +1,8 @@
+#home-page
+	= render partial: 'shared/pane', collection: @dept.homepage_docs, as: :doc
+
+:coffeescript
+	$(document).ready ->
+		$("#home-page").accordion()
+		$("#home-page").accordion "option", "animated", "bounceslide"
+		activePane = $('.ui-accordion-content-active', '#home-page')
