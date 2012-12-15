@@ -8,7 +8,7 @@ InDepth::Application.routes.draw do
 	# authenticated :user do
 	#  		root to: "home#dept_info"
 	# end
-	root to: "department#home_page"
+	root to: "department#home"
 	
 	##
 	## Resources
@@ -24,7 +24,7 @@ InDepth::Application.routes.draw do
    
 	resources :courses, only: [:show]
 	resources :teachers, only: [:show]
-	resources :text_documents
+    
 	
 
 	# Unrestful routes
@@ -58,6 +58,9 @@ InDepth::Application.routes.draw do
   resources :assignments, except: [:new]
 
 	unless Rails.application.config.consider_all_requests_local
+  
+  resources :text_documents
+
     match '*not_found', to: 'errors#error_404'
   end
  
