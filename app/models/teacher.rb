@@ -22,20 +22,5 @@ class Teacher < Author
 		self.courses.map(&:full_name).sort
 	end
 
-	#
-	# importing
-	# 
-	def self.import_from_hash(hash)
-		hash[:email] = hash[:login] + "@mail.weston.org"
-		hash[:password] = (hash[:phrase].split(' ').map &:first).join('') if (hash[:phrase])
-		hash[:current] = hash[:old_current] == 1
-		coder = HTMLEntities.new
-		hash[:generic_msg] = coder.decode(hash[:generic_msg])
-		# puts "#{hash[:generic_msg]}"
-		hash[:upcoming_msg] = coder.decode(hash[:upcoming_msg])
-		[:phrase, :old_current, :teacher_id, :orig_id].each {|k| hash.delete(k)}
-		teacher = self.create! hash
-		return teacher
-	end
 
 end

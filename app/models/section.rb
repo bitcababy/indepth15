@@ -83,33 +83,5 @@ class Section
 		
 	def days_for_section
 		return (self.occurrences.map &:day).sort
-	end
-	
-	def self.import_from_hash(hash)
-		year = hash[:academic_year] = hash.delete(:year)
-		return if year < Settings.start_year
-
-		occurrences = hash.delete(:which_occurrences)
-		hash[:semester] = (hash.delete(:semesters) == 2) ? Course::SECOND_SEMESTER : Course::FIRST_SEMESTER
-		teacher_id = hash.delete(:teacher_id)
-		hash[:room] = hash[:room].to_s
-		
-		course_number = hash.delete(:course_num)
-		course = Course.find_by(number: course_number)
-		hash[:course] = course
-		
-		[:course_num, :semesters].each {|k| hash.delete(k)}
-
-		teacher = Teacher.find_by login: teacher_id
-		hash[:teacher] = teacher
-		section = course.sections.create!(hash)
-
-		occurrences = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
-		for occ in occurrences
-			section.occurrences.find_or_create_by(block: section.block, number: occ)
-		end
-		return section
-	end
-	
 
 end
