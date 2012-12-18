@@ -2,15 +2,13 @@ class Branch
   include Mongoid::Document
   include Mongoid::Timestamps if Rails.env == 'production'
 
-	before_save :create_major_tags
+  # before_save :create_major_tags
 
 	validates :name, presence: true, length: { minimum: 3 }
 	field :na, as: :name, type: String
 	
 	index( {name: 1} )
-	
-	has_and_belongs_to_many :major_tags, inverse_of: nil
-	
+		
 	MAJOR_TAGS = {
 		'Geometry' => [
 			'Transformations', 'Similarity', 'Congruence', 'Logic/Proof',
@@ -62,19 +60,19 @@ class Branch
 			],
 	}
 	
-	def self.create_all
-		Branch.delete_all
-		for name in MAJOR_TAGS.keys do
-			branch = Branch.create! name: name
-			branch.create_major_tags
-		end
-	end
-	
-	def create_major_tags
-		return unless MAJOR_TAGS[self.name]
-		for tag in MAJOR_TAGS[self.name] do
-			self.major_tags << MajorTag.find_or_create_by(name: tag)
-		end
-	end
+  # def self.create_all
+  #   Branch.delete_all
+  #   for name in MAJOR_TAGS.keys do
+  #     branch = Branch.create! name: name
+  #     branch.create_major_tags
+  #   end
+  # end
+  # 
+  # def create_major_tags
+  #   return unless MAJOR_TAGS[self.name]
+  #   for tag in MAJOR_TAGS[self.name] do
+  #     self.major_tags << MajorTag.find_or_create_by(name: tag)
+  #   end
+  # end
 
 end

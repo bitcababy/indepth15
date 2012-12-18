@@ -1,16 +1,18 @@
 class Document
 	include Mongoid::Document
 	include Mongoid::Paranoia
-	include Mongoid::Versioning
-  include Mongoid::Timestamps if Rails.env == 'production'
-
-	field :dt, as: :type, type: Symbol, default: :unknown
-	field :ma, as: :major_tags, type: Array, default: []
-	field :mi, as: :minor_tags, type: Array, default: []
+  include Mongoid::Timestamps
+  
+  # has_and_belongs_to_many :tags
 	
 	belongs_to :owner, polymorphic: true
 	
-	ASSIGNMENT_TYPE = :assignment
-	TYPES = [:assignment, :worksheet, :test, :quiz, :retake, :benchmark, :classwork, :homework]
-
+  # 
+  # def tagged_with(s)
+  #   return self.tags.detect { |tag| tag.name == s }
+  # end
+  
+  # def <=>(b)
+  #   self.position < b.position
+  # end
 end

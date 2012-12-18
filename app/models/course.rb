@@ -55,7 +55,6 @@ class Course
 	##
 	has_many :sections
 
-	has_and_belongs_to_many :major_tags, inverse_of: nil
 	has_and_belongs_to_many :branches
 	
 	belongs_to :information, class_name: 'TextDocument'

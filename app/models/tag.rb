@@ -1,10 +1,10 @@
 class Tag
   include Mongoid::Document
-  include Mongoid::Timestamps if Rails.env == 'production'
 
-	field :name, type: String
+	field :n, as: :name, type: String
+  field :k, as: :kind, type: Symbol
 
-	# recursively_embeds_many
-	has_and_belongs_to_many :documents
+  # recursively_embeds_many
+  # has_and_belongs_to_many :documents
 
 end
