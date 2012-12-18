@@ -1,5 +1,7 @@
 #home-page
 	= render partial: 'shared/pane', collection: @dept.homepage_docs, as: :doc
+- content_for :page_title, 'Home'
+- content_for :page_header, Settings.school_name + " " + Settings.dept_name
 
 :coffeescript
 	$(document).ready ->
