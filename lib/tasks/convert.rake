@@ -1,5 +1,5 @@
-namespace :data do
-	task :convert => :environment do
+namespace :convert do
+	task :data => :environment do
 	  Mongoid.unit_of_work(disable: :all) do
 			[Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
 				arr = Convert.import_xml_file "#{klass.to_s.tableize}.xml"
@@ -7,10 +7,8 @@ namespace :data do
 			end
 		end
 	end
-end
 
-namespace :dept do
-	task :convert => :environment do
+	task :dept => :environment do
 		arr = Convert.import_xml_file "departments.xml"
 		Convert.from_hashes Department, arr
 	end
