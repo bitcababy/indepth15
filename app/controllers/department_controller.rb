@@ -1,4 +1,5 @@
 class DepartmentController < ApplicationController
+	before_filter :find_department, except: []
 	
 	def home
 		respond_to do |format|
@@ -10,4 +11,10 @@ class DepartmentController < ApplicationController
 
   def about
   end
+  
+  protected
+  def find_department
+    @dept = Department.first
+  end
+
 end
