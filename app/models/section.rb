@@ -33,7 +33,7 @@ class Section
 	scope :current, ->{ where(academic_year: Settings.academic_year)}
 	scope :for_teacher, ->(t) { where(teacher: t) }
 	scope :for_block, ->(b) { where(block: b) }
-	scope :for_course, ->(c) { where(course: b) }
+	scope :for_course, ->(c) { where(course: c) }
 	
 	def to_s
 		"#{self.academic_year}/#{self.course.number}/#{self.teacher}/#{self.block}"
