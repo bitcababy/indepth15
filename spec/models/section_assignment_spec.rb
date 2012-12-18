@@ -3,13 +3,20 @@ require 'spec_helper'
 describe SectionAssignment do
 	it { should belong_to :section }
 	it { should belong_to :assignment }
+  # it { should accept_nested_attributes_for :section }
+  it { should respond_to :block }
 	
-	context "scoping" do
+	context "scoping and delegation" do
 		before :each do
-			@section = Fabricate(:section)
+			@section = Fabricate :section, block: "B"
 			3.times {|i| Fabricate :future_section_assignment, section: @section }
 			4.times {|i| Fabricate :past_section_assignment, section: @section }
 		end
+    
+    it "should be able to get its block from its section" do
+      sa = Fabricate :section_assignment, section: @section
+      sa.block.should == "B"
+    end
 		
 		it "has a for_section scope" do
 			SectionAssignment.for_section(@section).to_a.count.should == 7
