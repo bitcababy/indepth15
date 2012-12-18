@@ -68,44 +68,4 @@ describe SectionAssignment do
 	# end
 	
 
-	describe 'SectionAssignment.import_from_hash' do
-		before :each do
-			@hash = {
-				:teacher_id=>"davidsonl", 
-				:year=>"2013", 
-				:course_num=>"321",
-				:block=>"D", 
-				:due_date=>"2012-09-06", 
-				:name=>"1", 
-				:use_assgt=>"Y", 
-				:assgt_id =>"614639", 
-				:ada=>"2012-08-19 18:34:40", 
-				:aa=>"2012-08-19 18:37:16"
-			}
-			course = Fabricate :course, number: @hash[:course_num]
-			Fabricate :assignment, assgt_id: @hash[:assgt_id]
-			teacher = Fabricate :teacher, login: @hash[:teacher_id]
-			@section = Fabricate :section, academic_year: @hash[:year].to_i, block: @hash[:block], course: course, teacher: teacher
-
-		end
-
-		it "should create a SectionAssignment if it's new" do
-			sa = SectionAssignment.import_from_hash(Hash[@hash])
-			sa.should be_kind_of SectionAssignment
-		end
-		
-		it "should update a SectionAssignment if it's old" do
-			SectionAssignment.import_from_hash(Hash[@hash])
-			@hash[:due_date] = "2012-09-07"
-			expect {
-				SectionAssignment.import_from_hash(Hash[@hash])
-			}.to change(@section.section_assignments.to_a, :count).by(0)
-			@hash[:due_date] = "2012-09-08"
-			sa = SectionAssignment.import_from_hash(Hash[@hash])
-			sa.should be_kind_of SectionAssignment
-			sa.due_date.should == Date.new(2012, 9, 8)
-		end
-			
-	end
-		
 end

@@ -83,16 +83,5 @@ describe Section do
 		end
 	end
 	
-	describe '::import_from_hash' do
-		it "creates a section from a hash representing an old record" do
-			Fabricate :course, number: 332
-			Fabricate :teacher, login: 'davidsonl'
-			hash = {:dept_id=>1, :course_num=>332, :number=>4, :semesters=>12, :block=>"G", :year=>2011, 
-							:which_occurrences=>"all", :room=>200, :teacher_id=>"davidsonl"}
-			section = Section.import_from_hash(hash)
-			section.should be_kind_of Section
-			pending "Unfinished test"
-		end
-	end
 			
 end
