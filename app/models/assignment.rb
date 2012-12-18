@@ -1,21 +1,19 @@
 class Assignment < TextDocument
-	before_save :fix_content
+  include Mongoid::History::Trackable
+  
+  if ::Settings.bridged
+  	field :assgt_id, type: Integer
+  	validates :assgt_id, uniqueness: true
+  end
 
-	field :assgt_id, type: Integer
-	validates :assgt_id, uniqueness: true
-	
-  has_many :section_assignments
+  # A section_assignment is meaningless if the assignment is deleted
+  has_many :section_assignments, dependent: :delete, autosave: true
   accepts_nested_attributes_for :section_assignments
 
-	scope :dupes, ->(a) { where(:assgt_id.gt => a.assgt_id, :content => a.content) }
-
-	index( {assgt_id: 1}, {unique: true})
-	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
-	
-	def fix_content
-		self.content = Assignment.massage_content(self.content)
-	end
-
-	end
-
-end
+  # track_history on: [:content],
+  #                modifier_field: :modifier, 
+  #                version_field: :version, 
+  #                track_create: true, 
+  #                track_update: true, 
+  #                track_destroy: true
+ end
