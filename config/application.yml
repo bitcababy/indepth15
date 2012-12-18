@@ -24,6 +24,7 @@ defaults: &defaults
     - F
     - G
     - H
+  bridged: true
 
 development:
   <<: *defaults
