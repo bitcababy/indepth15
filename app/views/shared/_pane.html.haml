@@ -1,4 +1,8 @@
-%h3.pane-title{name: src_obj.div_id}
-	%a{href: '#'}= src_obj.title
-%div{class: 'pane-content', id: src_obj.div_id}!= src_obj.content
-	
+%h3.pane-title
+	%a{href: '#'}= doc.title
+%div{class: 'editable', id: doc.to_param.to_s}
+	%button
+		%a{href: edit_text_document_path(doc)} Edit
+	!= doc.content
+
+		
