@@ -36,7 +36,7 @@ class Section
 	scope :for_course, ->(c) { where(course: c) }
 	
 	def to_s
-		"#{self.academic_year}/#{self.course.number}/#{self.teacher}/#{self.block}"
+		"#{self.academic_year}/#{self.course.number}/#{self.teacher.login}/#{self.block}"
 	end
 	
 	def label_for_teacher
@@ -76,12 +76,8 @@ class Section
 		"#{course.full_name}, Block #{self.block}"
 	end
 		
-	# def to_s
-	# 	course = self.course
-	# 	return "#{course.full_name}/#{self.academic_year}/#{self.teacher.login}/#{self.block}"
-	# end
-		
 	def days_for_section
 		return (self.occurrences.map &:day).sort
+	end	
 
 end
