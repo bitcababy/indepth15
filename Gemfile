@@ -69,6 +69,8 @@ gem 'tidy_ffi'
 gem 'daemons'
 gem 'pry'
 gem 'yard'
+gem 'acts_as_list_mongoid'
+
 # gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
 
 group :development, :test do
