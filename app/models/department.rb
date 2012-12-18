@@ -3,13 +3,10 @@
 class Department
   include Mongoid::Document
   include Mongoid::Timestamps if Rails.env == 'production'
-
+  
 	field :n, as: :name, type: String
+  field :_id, type: String, default: :name
 
-	belongs_to :why_doc, class_name: 'TextDocument', polymorphic: true
-	belongs_to :how_doc, class_name: 'TextDocument', polymorphic: true
-	belongs_to :news_doc, class_name: 'TextDocument', polymorphic: true
-	belongs_to :resources_doc, class_name: 'TextDocument', polymorphic: true
-	belongs_to :puzzle_doc, class_name: 'TextDocument', polymorphic: true
-	
+  has_many :homepage_docs, class_name: 'TextDocument', inverse_of: :owner, dependent: :delete
+  	
 end
