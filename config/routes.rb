@@ -22,9 +22,18 @@ InDepth::Application.routes.draw do
   #   end      
    
    
-	resources :courses, only: [:show]
+	resources :courses, only: [:show] do
+    member do
+      get :home
+    end
+  end
 	resources :teachers, only: [:show]
-    
+  
+  resources :sections, only: [] do
+    member do
+      get 'assignments'
+    end
+  end
 	
 
 	# Unrestful routes
@@ -35,15 +44,11 @@ InDepth::Application.routes.draw do
 
 	get 'xyzzy', controller: :bridge, action: :import
 	
-	for tab in %W(sections news policies resources information) do
-		get "courses/:id/#{tab}_pane", to: "courses##{tab}_pane", as: "course_#{tab}_pane"
-	end
-
   get "home", controller: 'home', action: 'dept_info'
   get "about", controller: 'home', action: 'about'
 
-	get "courses/:course_id/section/:year/:teacher_id/:block/assignments", to: 'sections#assignments', as: :assignments_page
-	get "sections/:id/assignments", to: 'sections#assignments_pane', as: :assignments_pane
+	get "courses/:course_id/academic_year/:year/:teacher_id/:block/assignments", to: 'sections#assignments', as: :section_assignments_pane
+  # get "sections/:id/assignments", to: 'sections#assignments_pane', as: :section_assignments
 
 	# get 'menus/home', to: 'menus#home', as: :home_menu
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
@@ -57,10 +62,14 @@ InDepth::Application.routes.draw do
   get 'teachers/:teacher_id/courses/:course_id/assignments/new', as: :new_assignment
   resources :assignments, except: [:new]
 
-	unless Rails.application.config.consider_all_requests_local
+  
+  # put 'text_documents/:id(.:format)', as: :update_text_document, to: 'text_documents#update'
+  
+  # match 'department/update_doc/:value/:id', as: :update_dept_doc, to: 'department#update_doc'
   
   resources :text_documents
 
+  unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
   end
  
