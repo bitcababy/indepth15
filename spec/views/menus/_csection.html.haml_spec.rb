@@ -20,7 +20,7 @@ describe 'menus/_csection' do
 		end
 		render partial: 'menus/csection', locals: {section: section}
 		rendered.should have_selector('li.section') do |li|
-			li.should have_selector('a', href: assignments_page_path(321, 2013, 'edh', 'B'))
+			li.should have_selector('a', href: section_to_assignments_path(section))
 		end
 			
 	end
