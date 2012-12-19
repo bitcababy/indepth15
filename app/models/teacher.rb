@@ -15,11 +15,11 @@ class Teacher < Author
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
 
 	def courses
-		self.sections.map(&:course).uniq
+		return self.sections.map(&:course).uniq
 	end
 		
 	def course_names
-		self.courses.map(&:full_name).sort
+		return self.courses.map(&:full_name).sort
 	end
 
 
