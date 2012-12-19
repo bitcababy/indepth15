@@ -2,10 +2,11 @@
 
 require 'spec_helper'
 
-describe "courses/sections_pane" do
+describe "courses/_sections_pane" do
 	include CourseMockHelpers
 
 	it "display a pane with the sections of a course" do
+    view.stubs(:assignments_page_path).returns "foo"
 		course = mock_course_with_sections(6)
 		assign(:course, course)
 	
@@ -16,7 +17,7 @@ describe "courses/sections_pane" do
 		course.unstub(:description)
 		t = mock_text_doc("Some description")
 		course.stubs(:description).returns t
-		render
+		render partial: "courses/sections_pane", locals: {course: course}
 		rendered.should have_selector('div#sections_pane') do |div|
 			div.should contain('Course 321 — Full Year ')
 			div.should contain("Some description")
