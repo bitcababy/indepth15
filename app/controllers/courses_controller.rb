@@ -1,12 +1,12 @@
 class CoursesController < ApplicationController
-	before_filter :find_course, except: [:assignments_pane]
+	before_filter :find_course, except: []
 	before_filter :authenticate_user!, only: [:new]
 	
 	##
 	## Rest routes
 	##
 		
-	def show
+	def home
 		respond_to do |format|
 			format.html { render }
 			format.json { render json: @course}
