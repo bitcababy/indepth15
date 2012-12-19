@@ -1,0 +1,35 @@
+/ %meta{charset: "utf-8"}
+#tabs
+	%ul
+		- if @section
+			%li#assignments
+				%a{href: assignments_pane_path(@section), title: 'Assignments'}= "Assignments for #{@section.course.full_name}, Block #{@section.block}"
+		%li
+			%a{href: '#sections', title: 'Sections'} Sections
+		%li
+			%a{href: '#information', title: 'Information'} Information
+		%li
+			%a{href: '#resources', title: 'Resources'} Resources
+		%li
+			%a{href: '#policies', title: 'Policies'} Policies
+		%li
+			%a{href: '#news', title: 'News'} News
+
+	#sections= render partial: 'courses/sections_pane', object: @course
+	#information= render partial: 'courses/information_pane', object: @course
+	#resources= render partial: 'courses/resources_pane', object: @course
+	#policies= render partial: 'courses/policies_pane', object: @course
+	#news= render partial: 'courses/news_pane', object: @course
+
+- content_for :page_header do
+	= @course.full_name
+
+- content_for :page_title do
+	= @course.full_name
+
+:coffeescript
+	$(document).ready ->
+	  $("#tabs").tabs ajaxOptions:
+	    error: (xhr, status, index, anchor) ->
+	      $(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. "
+
