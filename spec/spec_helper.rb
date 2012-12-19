@@ -6,24 +6,6 @@ Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
-  if( ENV['COVERAGE'] == 'on' )
-    require 'simplecov'
-    require 'simplecov-rcov'
-    class SimpleCov::Formatter::MergedFormatter
-      def format(result)
-         SimpleCov::Formatter::HTMLFormatter.new.format(result)
-         SimpleCov::Formatter::RcovFormatter.new.format(result)
-      end
-    end
-    SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
-    SimpleCov.start 'rails' do
-    	add_filter '/spec/'
-    	add_filter '/features/'
-      add_filter '/config/'
-      add_filter '/uploaders/'
-      add_filter '/app/models/ckeditor/'
-    end
-  end
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
@@ -103,6 +85,24 @@ Spork.each_run do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
   Dir[Rails.root.join("app/lib/extras/**/*.rb")].each {|f| require f}
 
+  # if( ENV['COVERAGE'] == 'on' )
+    require 'simplecov'
+    require 'simplecov-rcov'
+    class SimpleCov::Formatter::MergedFormatter
+      def format(result)
+         SimpleCov::Formatter::HTMLFormatter.new.format(result)
+         SimpleCov::Formatter::RcovFormatter.new.format(result)
+      end
+    end
+    SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
+    SimpleCov.start 'rails' do
+    	add_filter '/spec/'
+    	add_filter '/features/'
+      add_filter '/config/'
+      add_filter '/uploaders/'
+      add_filter '/app/models/ckeditor/'
+    end
+  # end
 end
 
 # --- Instructions ---
