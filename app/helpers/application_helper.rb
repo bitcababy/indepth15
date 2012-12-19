@@ -51,7 +51,7 @@ module ApplicationHelper
 	end
 
 	def section_to_assignments_path(section)
-		return assignments_page_path(section.course.to_param, section.academic_year, section.teacher.to_param, section.block)
+		return section_assignments_pane_path(section.course.to_param, section.academic_year, section.teacher.to_param, section.block)
 	end
 
 end
