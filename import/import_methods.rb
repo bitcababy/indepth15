@@ -127,6 +127,23 @@ class SectionAssignment
 			return section.section_assignments.create! hash
 		end
 	end
+	
+	def self.get_sa(hash)
+		assgt_id = hash.delete(:assgt_id)
+		year = hash[:year]
+		course_num = hash.delete(:course_num).to_i
+		block = hash[:block]
+		name = hash[:name]
+		teacher_id = hash.delete(:teacher_id)
+		course = Course.find_by(number: course_num)
+		raise "Course #{course_num} not found" unless course
+		teacher = Teacher.find_by(login: teacher_id)
+		raise "Course #{teacher_id} not found" unless teacher
+		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
+		raise "Section #{course}/#{block}/#{teacher_id} not found" unless teacher
+		assignment = Assignment.find_by(assgt_id: assgt_id)
+		return section,assignment
+	end
 end
 
 class Assignment
