@@ -33,15 +33,6 @@ describe SectionsController do
       assigns(:section).should eq(section)
     end
   end
-    
-  describe "GET 'assignments_pane'" do
-    # it "gets the assignments pane via xhr" do
-    #   section = section_with_assignments
-    #   xhr :get, :assignments_pane, {section_id: section.to_param}
-    #   response.should be_success
-    # end
-    pending
-  end
   
   describe '#find_section'
 
