@@ -10,10 +10,10 @@ class Assignment < TextDocument
   has_many :section_assignments, dependent: :delete, autosave: true
   accepts_nested_attributes_for :section_assignments
 
-  # track_history on: [:content],
-  #                modifier_field: :modifier, 
-  #                version_field: :version, 
-  #                track_create: true, 
-  #                track_update: true, 
-  #                track_destroy: true
+  track_history on: [:content],
+                 modifier_field: :modifier, 
+                 version_field: :version, 
+                 track_create: true, 
+                 track_update: true, 
+                 track_destroy: true
  end
