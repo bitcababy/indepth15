@@ -13,6 +13,10 @@ Spork.prefork do
   require 'rspec/autorun'
   require 'capybara/rspec'
   require 'devise/test_helpers'
+  require 'mongoid-history'
+  class HistoryTracker
+    include Mongoid::History::Tracker
+  end
 
   module Devise
     module Models
