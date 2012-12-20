@@ -3,7 +3,6 @@
 require 'spec_helper'
 
 describe ApplicationHelper do
-	include CourseExampleHelpers
 
 	describe '#academic_year_string' do
 		it "returns a string for the full academic year" do
@@ -31,6 +30,23 @@ describe ApplicationHelper do
 		end
 		
 	end
+
+  describe '#section_assignments' do
+    it "returns the path for a section's assignments'" do
+      teacher = mock('teacher') do
+        stubs(:to_param).returns 'djoe'
+      end
+      course = mock('course') do
+        stubs(:param).returns 'fractals'
+      end
+      section = mock('section') do
+        stubs(:teacher).returns teacher
+        stubs(:course).returns course
+        stubs(:academic_year).returns 2013
+        stubs(:block).returns 'B'
+      end
+    end
+  end
 
 end
 
