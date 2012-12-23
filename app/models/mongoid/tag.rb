@@ -2,8 +2,7 @@ class Mongoid::Tag
   include Mongoid::Document
 
   field :name, type: String
-  validates_presence_of :name
-  validates_uniqueness_of :name
+  validates :name, presence: true, length: { minimum: 0, maximum: 128 }, uniqueness: true
 
   def self.named(n)
     where(name: match_exact(n))

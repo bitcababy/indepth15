@@ -1,14 +1,8 @@
 require 'spec_helper'
 
-class TaggableModel
-  include Mongoid::Document
-  field :name, type: String
-end
-
 describe Mongoid::Tag do
   before(:each) do
     @tag = Mongoid::Tag.new
-    @user = TaggableModel.create(:name => "Pablo")
   end
 
   context 'scopes' do
