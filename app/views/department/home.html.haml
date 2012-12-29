@@ -1,10 +1,44 @@
-#home-page
-	= render partial: 'shared/pane', collection: @dept.homepage_docs, as: :doc
 - content_for :page_title, 'Home'
 - content_for :page_header, Settings.school_name + " " + Settings.dept_name
-
+- forms = []
+#home-page
+	= render partial: 'department/pane', collection: @dept.homepage_docs, as: :doc
+	
 :coffeescript
+	get_form_named = (name) ->
+		$('form#' + name)
+		
+	save_form_contents = (form) ->
+		
+		
+	create_dialog = (form) ->
+		$(form).dialog
+			autoOpen: false
+			height: 600
+			width: 700
+			modal: true
+			resizable: true
+			buttons:
+				Save: ->
+					$(form).submit();
+					$(form).dialog "destroy"
+				Cancel: ->
+					$(form).dialog "destroy"
+
+	edit_doc = (evt) ->
+		form = get_form_named(evt.data)
+		textarea = $('textarea', form)[0]
+		setTimeout (->
+			CKEDITOR.replace textarea
+		), 0
+
+		create_dialog(form)
+		form.dialog "open"
+
 	$(document).ready ->
-		$("#home-page").accordion()
-		$("#home-page").accordion "option", "animated", "bounceslide"
-		activePane = $('.ui-accordion-content-active', '#home-page')
+		btns = $('.edit-button')
+		for btn in btns
+			$(btn).bind 'click', $(btn).attr('name'), edit_doc
+		$('form', '#home-page').hide()
+		$("#home-page").accordion
+			heightStyle: "content"
