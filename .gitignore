@@ -19,3 +19,6 @@ public/assets
 stashed
 .env
 .akephalos
+
+lib/plugins/
+
