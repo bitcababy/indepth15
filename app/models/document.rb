@@ -2,17 +2,15 @@ class Document
 	include Mongoid::Document
 	include Mongoid::Paranoia
   include Mongoid::Timestamps
+  include Mongoid::Locker
+  include Comparable
   
-  # has_and_belongs_to_many :tags
-	
-	belongs_to :owner, polymorphic: true
-	
-  # 
-  # def tagged_with(s)
-  #   return self.tags.detect { |tag| tag.name == s }
-  # end
+  field :pos, as: :position, type: Integer, default: 0
+
+  attr_accessor :locked_by
   
-  # def <=>(b)
-  #   self.position < b.position
-  # end
+  def <=>(b)
+    self.position <=> b.position
+  end      
+    
 end
