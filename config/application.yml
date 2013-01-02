@@ -25,6 +25,7 @@ defaults: &defaults
     - G
     - H
   bridged: true
+  lock_timeout: 2
 
 development:
   <<: *defaults
