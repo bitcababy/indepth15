@@ -68,6 +68,7 @@ InDepth::Application.routes.draw do
   # match 'department/update_doc/:value/:id', as: :update_dept_doc, to: 'department#update_doc'
   
   resources :text_documents
+  get 'departments/edit_doc/:doc_id', to: 'department#edit_doc'
 
   unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
