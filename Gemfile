@@ -77,8 +77,6 @@ group :development, :test do
   gem 'heroku'
   gem 'heroku_san'
 	gem 'rspec-rails'
-	gem 'ruby_gntp'
-	gem 'growl'
 	gem 'watchr'#,  :git => 'git://github.com/bitcababy/watchr.git'
 	gem 'guard'
 	gem 'guard-rspec'
@@ -119,5 +117,6 @@ group :test do
 	gem 'warden'
 	gem 'rails_warden'
 	gem 'guard-sass', :require => false
+  gem 'rb-fsevent', '~>0.9.1'
 end
 

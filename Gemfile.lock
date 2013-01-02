@@ -129,7 +129,6 @@ GEM
       json (>= 1.4.6)
     google-webfonts (0.1.2)
       actionpack (>= 3.0.0)
-    growl (1.0.3)
     growl_notify (0.0.3)
       rb-appscript
     guard (1.6.1)
@@ -278,6 +277,7 @@ GEM
       thor (>= 0.14.6, < 2.0)
     rake (10.0.3)
     rb-appscript (0.6.1)
+    rb-fsevent (0.9.3)
     rdoc (3.12)
       json (~> 1.4)
     rest-client (1.6.7)
@@ -302,7 +302,6 @@ GEM
       mocha (>= 0.9.8)
       rspec-rails (>= 2.0.0)
     ruby-mysql (2.9.10)
-    ruby_gntp (0.3.4)
     rubyzip (0.9.9)
     sass (3.2.4)
     sass-rails (3.2.5)
@@ -388,7 +387,6 @@ DEPENDENCIES
   fabrication (>= 2.0)
   foreman
   google-webfonts
-  growl
   growl_notify
   guard
   guard-bundler
@@ -418,11 +416,11 @@ DEPENDENCIES
   pry
   rails (>= 3.2.6)
   rails_warden
+  rb-fsevent (~> 0.9.1)
   rspec-instafail
   rspec-rails
   rspec-rails-mocha
   ruby-mysql
-  ruby_gntp
   sass-rails (~> 3.2.3)
   settingslogic
   simple_form
