@@ -16,8 +16,16 @@ class DepartmentController < ApplicationController
 
   def edit_doc
     @doc = TextDocument.find params[:doc_id]
-		respond_to do |format|
-			format.html { render layout: !request.xhr? }
+    if @doc.unlocked?
+      @doc.lock
+  		respond_to do |format|
+  			format.html { render layout: false }
+      end
+    else
+  		respond_to do |format|
+        format.html { head :bad_request }
+        # format.html { render template: 'shared/document_locked', layout: false}
+      end
     end
   end
 
