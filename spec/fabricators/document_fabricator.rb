@@ -1,6 +1,5 @@
 Fabricator :document do
 	tags						[]
-	owner						nil
 end
 
 Fabricator :text_document do
