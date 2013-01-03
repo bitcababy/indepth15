@@ -1,8 +1,8 @@
 class TextDocument < Document
   include Mongoid::History::Trackable
 
-  field :title, type: String, default: ''
-	field :content, type: String, default: ""
+  field :ti, as: :title, type: String, default: ''
+	field :co, as: :content, type: String, default: ''
 
   track_history on: [:title, :content],
                 modifier_field: :modifier, 
@@ -11,4 +11,5 @@ class TextDocument < Document
                 track_update: true, 
                 track_destroy: true
 
+  
 end
