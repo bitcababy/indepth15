@@ -11,7 +11,7 @@ class SectionsController < ApplicationController
 
 	# protected
 	def find_section
-		@section = Section.find(params[:id])
+		return @section = Section.find(params[:id])
 	end
 
 end
