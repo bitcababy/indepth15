@@ -3,6 +3,7 @@ class Document
 	include Mongoid::Paranoia
   include Mongoid::Timestamps
   include Mongoid::Locker
+  include Mongoid::TaggableWithContext
   include Comparable
   
   field :pos, as: :position, type: Integer, default: 0
