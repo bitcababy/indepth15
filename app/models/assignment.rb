@@ -16,4 +16,8 @@ class Assignment < TextDocument
                  track_create: true, 
                  track_update: true, 
                  track_destroy: true
- end
+                 
+   taggable :major
+   taggable :minor
+  
+end
