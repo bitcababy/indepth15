@@ -5,11 +5,11 @@ describe DepartmentController do
 
   describe 'GET :home' do
     it "uses the first department" do
-      dept = mock_department
-      Department.stubs(:first).returns dept
+      dept = Fabricate :department
       get :home
       assigns(:dept).should == dept
     end
-  end  
+  end
+  
 	
 end
