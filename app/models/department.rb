@@ -8,6 +8,6 @@ class Department
   validates :name, presence: true, length: {minimum: 4}
   field :_id, type: String, default: -> { n }
 
-  has_many :homepage_docs, class_name: 'TextDocument', inverse_of: :owner, dependent: :delete
+  has_and_belongs_to_many :homepage_docs, class_name: 'TextDocument', inverse_of: nil, dependent: :delete
   	
 end
