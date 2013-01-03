@@ -4,7 +4,23 @@ class AssignmentsController < ApplicationController
 	#   protect_from_forgery except: [:create, :update, :show]
 	# before_filter :find_assignment, only: [:show, :update, :delete]
 	# 
-	# ## REST methods
+  ## REST methods
+  # def new
+  #   course = Course.find params[:course_id]
+  #   teacher = Teacher.find params[:teacher_id]
+  #   sections = teacher.sections.for_course(course)
+  #   @assignment = Assignment.new
+  #   sas= []
+  #   for section in sections do
+  #     sas << SectionAssignment.new(section: section, assignment: @assignment, due_date: Date.tomorrow, use: true)
+  #   end
+  #   @assignment.section_assignments = sas
+  #   respond_to do | format|
+  #     format.html
+  #   end
+  # end
+  # 
+  
 	# def show
 	#     respond_to do |format|
 	#       format.html { render :layout => !request.xhr? }
