@@ -27,10 +27,50 @@
 			.content
 				= yield
 
-/ :coffeescript
-/ 	$(document).ready ->
-/ 		$("#sign-in-dialog").dialog
-/ 		  autoOpen: false
-/ 		  height: 300
-/ 		  width: 350
-/ 		  modal: true
+
+:coffeescript
+	close_signin_dialog = ->
+		$('#signinform').dialog "close"
+		
+	user_signed_in = ->
+		return "#{user_signed_in?}" is "true"
+
+	fix_usermenu = ->
+		# console.log  "#{current_user_name}"
+		if user_signed_in()
+			$('#signin').css('display', 'none')
+			$('#signout').css('display', 'block')
+		else
+			$('#signin').css('display', 'block')
+			$('#signout').css('display', 'none')
+			
+	handle_signin_submit = ->
+		form = $('form', this)[0]
+		$.ajax form.action,
+			data: 	$(form).serialize()
+			type: 	"POST"
+			error:	(xhr, status) ->
+				console.log "Error"
+				console.log status
+			complete: (xhr, status) ->
+				if status is "success"
+					fix_usermenu()
+				close_signin_dialog()
+
+	create_dialog = ->
+		$('#signinform').dialog
+			autoOpen: false
+			width: 500
+			height: 350
+			modal: true
+			resizable: false
+			buttons: 
+				'Sign in': handle_signin_submit
+				'Cancel': close_signin_dialog
+
+	$(document).ready ->
+		$('#signinform').removeClass('nodisplay').addClass('block-display')
+		create_dialog()
+		$('#signin').bind 'click', (evt) ->
+			$('#signinform').dialog "open"
+		fix_usermenu()
