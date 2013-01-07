@@ -17,34 +17,39 @@ class ApplicationController < ActionController::Base
 	##
   # helper_method :current_user
   # 
-  # def current_user
-  #   return @current_user ||= warden.authenticate(:scope => :user)
-  # end
-  # 
+  def current_user
+    return @current_user ||= warden.authenticate(:scope => :user)
+  end
+  
+  helper_method :current_user_name
+  def current_user_name
+    return user_signed_in? ? current_user.full_name : "Guest"
+  end
+  
   # helper_method :user_signed_in?
   # 
-  # def user_signed_in?
-  #   return !!current_user
-  # end
+  def user_signed_in?
+    return !!current_user
+  end
   # 
-  # def user_session
-  #   return current_user && warden.session(:user)
-  # end
+  def user_session
+    return current_user && warden.session(:user)
+  end
 
 	# if user is logged in, return current_user, else return guest_user
-  # def current_or_guest_user
-  #   if current_user
-  #     if session[:guest_user_id]
-  #       logging_in
-  #       guest_user.destroy
-  #       session[:guest_user_id] = nil
-  #     end
-  #     return current_user
-  #   else
-  #     return guest_user
-  #   end
-  # end
-  # 
+  def current_or_guest_user
+    if current_user
+      if session[:guest_user_id]
+        logging_in
+        guest_user.destroy
+        session[:guest_user_id] = nil
+      end
+      return current_user
+    else
+      return guest_user
+    end
+  end
+  
   # # find guest_user object associated with the current session,
   # # creating one as needed
   # def guest_user
