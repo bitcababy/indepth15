@@ -81,3 +81,15 @@ div#main {
 		}
 	}
 }
+
+.hidden {
+	visibility: hidden;
+}
+
+.nodisplay, .no-display {
+	display: none;
+}
+
+.block-display {
+	display: block;
+}
