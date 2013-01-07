@@ -1,16 +1,6 @@
 class Users::SessionsController < Devise::SessionsController
 	skip_before_filter :verify_authenticity_token, :only => [] 
 	
-	def create
-		respond_to do |format|
-			format.html { super }
-			format.json {
-	       	warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#new")  
-	        render :status => 200, :json => { :error => "Success" }  
-			}
-		end
-	end
-	
 	def create 
     login = params[:user][:login] 
     password = params[:user][:password] 
