@@ -2,24 +2,7 @@
 	%a#username{href: '#'}= user_signed_in? ? current_user.full_name : "Guest"
 	%ul
 		%li#sign_in_out
-			= link_to 'Sign out', destroy_user_session_path, method: :delete, remote: true, id: 'signout'
-			= link_to 'Sign in', new_user_session_path, method: :get, remote: true, id: 'signin'
-
-:coffeescript
-	$(document).ready ->
-		console.dir $('#username')
-		$('#username').text "#{current_user_name}"
-
-/ :coffeescript
-/ 	user_signed_in = ->
-/ 		return "#{user_signed_in?}" is "true"
-/ 
-/ 	$(document).ready ($)->
-/ 		if user_signed_in()
-/ 			$('#signin').css('display', 'none')
-/ 			$('#signout').css('display', 'block')
-/ 		else
-/ 			$('#signin').css('display', 'block')
-/ 			$('#signout').css('display', 'none')
-/ 			
-/ 	
+			- if user_signed_in?
+				= link_to 'Sign out', destroy_user_session_path, method: :delete, id: 'signout'
+			- else
+				= link_to 'Sign in', new_user_session_path, method: :get, remote: true, id: 'signin'
