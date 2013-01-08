@@ -1,20 +1,14 @@
-/ Begin container
-%ul#menubar.hmenu
-	= render partial: 'menus/home'
+%ul#menubar.hmenu.hidden
+	= render 'menus/home'
 	= render partial: 'menus/courses', locals: {courses: Course.in_catalog}
 	= render partial: 'menus/faculty', locals: {teachers: Teacher.current.asc(:last_name).asc(:first_name)}
 	- if user_signed_in?
-		= render partial: 'menus/manage'
-	= render partial: 'menus/username'
-
-/ :javascript
-/ 	$('div#home_menu').load("#{home_menu_url}") ->
-/ 	$('div#courses_menu').load(courses_menu_url)
-/ 	$('div#faculty_menu').load(faculty_menu_url)
-/ 	$('div#manage_menu').load(manage_menu_url)
+		= render 'menus/manage'
+	= render 'menus/username'
 
 :coffeescript
 	$(document).ready ($) ->
+		$('#menubar').removeClass('hidden')
 		$('#menubar').MegaMenu
 				rowItems: 4
 				speed: 'fast'
