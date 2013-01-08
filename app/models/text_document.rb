@@ -1,6 +1,7 @@
 class TextDocument < Document
   include Mongoid::History::Trackable
 
+  include Mongoid::Locker
   field :ti, as: :title, type: String, default: ''
 	field :co, as: :content, type: String, default: ''
 
