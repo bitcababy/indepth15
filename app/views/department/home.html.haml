@@ -1,8 +1,7 @@
 - content_for :page_title, 'Home'
 - content_for :page_header, Settings.school_name + " " + Settings.dept_name
-- forms = []
 #home-page
-	= render partial: 'department/pane', collection: @dept.homepage_docs, as: :doc
+	= render partial: 'department/pane', collection: @panes, as: :doc
 	
 :coffeescript
 	get_form_named = (name) ->
