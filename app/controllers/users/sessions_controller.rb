@@ -7,7 +7,8 @@ class Users::SessionsController < Devise::SessionsController
     user = User.find_for_database_authentication({:login => login})
     if (!user.nil?) && (user.valid_password?(password)) 
       sign_in user, event: :authentication
-      render :status => 200, :json => { :error => "Success" }  
+      redirect_to :back
+      # render :status => 200, :json => { :error => "Success" }  
     else
       render :status => 401, :json => { :error => "failure" }
     end
