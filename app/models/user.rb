@@ -25,7 +25,7 @@ class User
 	validates :email, presence: true#, uniqueness: true
 
 	field :lo, as: :login, type: String
-	validates :login, presence: true, uniqueness: true
+	validates :login, presence: true, uniqueness: true, length: { minimum: 3}
 	field :_id, type: String, default: ->{ login }
 	
 	def formal_name
