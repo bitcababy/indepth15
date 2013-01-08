@@ -1,7 +1,0 @@
-%h3.pane-title
-	%a.title{href: '#'}= doc.title
-%div{name: edit_text_document_path(doc)}
-	- if @editable
-		.edit-btn= link_to "Edit", edit_text_document_path(doc)
-	.content!= doc.content
-
