@@ -1,8 +1,8 @@
 class DepartmentController < ApplicationController
 	before_filter :find_department, except: [:edit_doc]
-	
+
 	def home
-    @editable = true # Temporary
+    @editable = !current_user.nil?
     @panes = @dept.homepage_docs.sort
 		respond_to do |format|
 			format.html { render }
