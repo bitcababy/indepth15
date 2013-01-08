@@ -44,8 +44,8 @@ InDepth::Application.routes.draw do
 
 	get 'xyzzy', controller: :bridge, action: :import
 	
-  get "home", controller: 'home', action: 'dept_info'
-  get "about", controller: 'home', action: 'about'
+  get "home", controller: 'department', action: 'home'
+  get "about", controller: 'department', action: 'about'
 
 	get "courses/:course_id/academic_year/:year/:teacher_id/:block/assignments", to: 'sections#assignments', as: :section_assignments_pane
   # get "sections/:id/assignments", to: 'sections#assignments_pane', as: :section_assignments
