@@ -18,6 +18,7 @@
 		%header
 			#page_header= content_for?(:page_header) ? (content_for :page_header) : "Fix me!"
 		= render partial: 'menus/menubar'
+		#signinform.nodisplay= render 'shared/signinform'
 		%div#main.clear
 			- if content_for? :content_header
 				%header
