@@ -18,6 +18,7 @@ class DepartmentController < ApplicationController
     @doc = TextDocument.find params[:doc_id]
     if @doc.unlocked?
       @doc.lock
+      @doc.locked_by = current_user
   		respond_to do |format|
   			format.html { render layout: false }
       end
