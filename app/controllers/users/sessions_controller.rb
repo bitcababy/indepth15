@@ -18,5 +18,18 @@ class Users::SessionsController < Devise::SessionsController
       format.html { render :new, layout: nil }
 		end
 	end
+  
+  # DELETE /resource/sign_out
+  def destroy
+    signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+    set_flash_message :notice, :signed_out if signed_out && is_navigational_format?
+
+    # We actually need to hardcode this as Rails default responder doesn't
+    # support returning empty response on GET request
+    respond_to do |format|
+      format.all { redirect_to :back }
+    end
+  end
+
 			
 end
