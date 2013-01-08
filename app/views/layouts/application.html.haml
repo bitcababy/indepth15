@@ -33,6 +33,8 @@
 		$('#signinform').dialog "close"
 		
 	handle_signin_submit = ->
+		form = $('form', '#signinform')[0]
+		form.submit()
 
 	create_dialog = ->
 		$('#signinform').dialog
