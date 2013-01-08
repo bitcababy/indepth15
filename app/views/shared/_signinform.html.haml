@@ -1,7 +1,12 @@
 = simple_form_for resource, as: resource_name, url: session_path(resource_name), remote: true, validate: true do |f|
 	%fieldset
-		= f.input :login, autofocus: true, size: 20, validate: { user_exists: true }
-		= f.input :password, size: 20
+		%table
+			%tr
+				%td Login:
+				%td= f.input :login, required: true, autofocus: true, input_html: {size: 20}, label: false, validate: { user_exists: true }
+			%tr
+				%td Password:
+				%td= f.input :password, required: true, input_html: {size: 20}, label: false
 		= f.input :remember_me, required: false, as: :boolean if devise_mapping.rememberable?
 	%links
 		= render "users/shared/links"
