@@ -1,0 +1,7 @@
+%h3.pane-title
+	%a.title{href: '#'}= doc.title
+%div.pane-content
+	- if user_signed_in?
+		%button.edit-button= link_to "Edit", edit_dept_doc_path(doc)
+	!= doc.content
+
