@@ -16,7 +16,7 @@ class DepartmentController < ApplicationController
 
   def edit_doc
     @doc = TextDocument.find params[:doc_id]
-    if @doc.unlocked?
+    if @doc.unlocked? || @doc.can_relock?
       @doc.lock
       @doc.locked_by = current_user
   		respond_to do |format|
