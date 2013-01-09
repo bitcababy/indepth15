@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Document do
    subject = Fabricate :document
-   it { should be_unlocked }
   
   describe '<=>' do
     subject.position = 1
