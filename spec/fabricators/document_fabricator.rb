@@ -1,10 +1,13 @@
 Fabricator :document do
-	tags						[]
+  pod       0
 end
 
-Fabricator :text_document do
-  title     nil
-	content		""
+Fabricator :text_document, from: :document, class_name: :text_document do
+end
+
+Fabricator :locked_doc, from: :text_document do
+  locked_at   { Time.now.localtime }
+  state       :locked
 end
 
 ## Assignments
