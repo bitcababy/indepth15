@@ -2,10 +2,6 @@ class CoursesController < ApplicationController
 	before_filter :find_course, except: []
 	before_filter :authenticate_user!, only: [:new]
 	
-	##
-	## Rest routes
-	##
-		
 	def home
 		respond_to do |format|
 			format.html { render }
@@ -20,6 +16,9 @@ class CoursesController < ApplicationController
 		end
   end
 
+	##
+	## Rest routes
+	##
 	# # POST courses
 	#		# POST courses.json
 	#		def create
