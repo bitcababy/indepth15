@@ -2,13 +2,11 @@ class DepartmentController < ApplicationController
 	before_filter :find_department, except: [:edit_doc]
 
 	def home
-    @editable = !current_user.nil?
     @panes = @dept.homepage_docs.sort
 		respond_to do |format|
 			format.html { render }
 			format.json { render json: @panes }
 		end
-		return
 	end
 
   def about
@@ -23,6 +21,7 @@ class DepartmentController < ApplicationController
   			format.html { render layout: false }
       end
     else
+      ## Smell: Is this the right way to do it?
   		respond_to do |format|
         format.html { head :bad_request }
         # format.html { render template: 'shared/document_locked', layout: false}

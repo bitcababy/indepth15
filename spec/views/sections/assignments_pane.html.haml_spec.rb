@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe "sections/assignments" do
+describe "sections/assignments_pane" do
   # include CourseMockHelpers
   # 
   # before :each do
@@ -12,6 +12,7 @@ describe "sections/assignments" do
   #   @section = mock_section_with_assignments(course: course, teacher: teacher)
   #   @section.stubs(:page_header).returns "Page header"
   #   assign(:section, @section)
+  #   stub_template 'sections/assignment_set' => "An assignment set"
   # end
   # 
   # it "displays the teacher's generic message" do
@@ -25,7 +26,7 @@ describe "sections/assignments" do
   # end
   # 
   # it "skips displaying the teacher's current assignment message and the table if there isn't a current assignment" do
-  #   @section.unstub(:current_assignments)
+  #   @section.unstubs(:current_assignments)
   #   @section.stubs(:current_assignments).returns []
   #   render
   #   rendered.should_not have_selector('table#current')
@@ -37,7 +38,7 @@ describe "sections/assignments" do
   # end
   # 
   # it "skips displaying the table for past assignments if there aren't any" do
-  #   @section.unstub(:past_assignments)
+  #   @section.unstubs(:past_assignments)
   #   @section.stubs(:past_assignments).returns []
   #   render
   #   rendered.should_not have_selector('table#past')
@@ -50,7 +51,7 @@ describe "sections/assignments" do
   # end
   # 
   # it "skips displaying the table for upcoming assignments if there aren't any" do
-  #   @section.unstub(:upcoming_assignments)
+  #   @section.unstubs(:upcoming_assignments)
   #   @section.stubs(:upcoming_assignments).returns []
   #   render
   #   rendered.should_not have_selector('table#upcoming')
