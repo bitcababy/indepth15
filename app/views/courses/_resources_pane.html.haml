@@ -1,5 +1,5 @@
 != @course.resources.content
-- if user_signed_in?
+- if editable?
 	#course-edit
 		%a{href: edit_resources_course_path(@course)}= "Edit"
 	
