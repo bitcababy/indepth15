@@ -50,6 +50,7 @@ class User
   field :ep, as: :encrypted_password, :type => String, :default => ""
 
   # validates_presence_of :encrypted_password # SMELL: breaks testing
+  validates_presence_of :encrypted_password # SMELL: breaks testing
 
   ## Recoverable
   field :rt, as: :reset_password_token,   :type => String
