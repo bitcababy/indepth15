@@ -13,6 +13,13 @@ class CoursesController < ApplicationController
 		end
 	end
 
+  def home_with_assignments
+    @section = Section.find_by teacher: params[:teacher_id], block: params[:block], academic_year: params[:year]
+		respond_to do |format|
+			format.html { render 'home'}
+		end
+  end
+
 	# # POST courses
 	#		# POST courses.json
 	#		def create

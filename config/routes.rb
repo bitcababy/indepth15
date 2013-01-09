@@ -49,6 +49,7 @@ InDepth::Application.routes.draw do
 
 	get "courses/:course_id/academic_year/:year/:teacher_id/:block/assignments", to: 'sections#assignments', as: :section_assignments_pane
   # get "sections/:id/assignments", to: 'sections#assignments_pane', as: :section_assignments
+	get "courses/:id/academic_year/:year/:teacher_id/:block/assignments", to: 'courses#home_with_assignments', as: :home_with_assignments
 
 	# get 'menus/home', to: 'menus#home', as: :home_menu
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
