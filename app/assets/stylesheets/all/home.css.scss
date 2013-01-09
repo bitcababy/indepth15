@@ -7,7 +7,8 @@
 
 #home-page {
 	@extend .sans;
-	#why, #information, #resources, #news, #puzzle {
+
+	.pane-content {
 		p {
 			@extend .sans;
 			font-size: 100%;
@@ -15,6 +16,10 @@
 		li {
 			@extend .sans;
 		}
+		a {
+			color: $weston-red;
+		}
+		background: #FFFFFF;
 	}
 	h3 {
 		text-transform: capitalize;
