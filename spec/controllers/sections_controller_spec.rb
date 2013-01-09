@@ -19,21 +19,18 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe SectionsController do
-	include Mongoid::Document
   include FabricationMacros
 
-  describe "GET 'assignments', xhr" do
-   it "display the assignments page" do
-      section = section_with_assignments
-      section.teacher = Fabricate :teacher, login: "foo"
-      section.save!
-      
-      xhr :get, :assignments, { course_id: section.course.to_param, year: section.academic_year, teacher_id: section.teacher.to_param, block: section.block}
-      response.should be_success
-      assigns(:section).should eq(section)
-    end
-  end
-  
-  describe '#find_section'
+  # describe "GET 'assignments_pane', xhr" do
+  #  it "display the assignments pane" do
+  #     section = section_with_assignments
+  #     section.teacher = Fabricate :teacher, login: "foo"
+  #     section.save!
+  #     
+  #     xhr :get, :assignments_pane, { course_id: section.course.to_param, year: section.academic_year, teacher_id: section.teacher.to_param, block: section.block}
+  #     response.should be_success
+  #     assigns(:section).should eq(section)
+  #   end
+  # end
 
 end
