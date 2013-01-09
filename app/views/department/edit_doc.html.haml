@@ -1,0 +1,4 @@
+= simple_form_for @doc, validate: true, remote: true, method: :put, html: {id: @doc.to_param } do |f|
+	%fieldset
+		.title= f.input :title, required: true
+		.text= f.input :content, as: :ckeditor, label: false, input_html: { rows: 20, columns: 100 }, required: true
