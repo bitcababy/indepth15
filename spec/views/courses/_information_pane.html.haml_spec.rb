@@ -9,7 +9,9 @@ describe "courses/_information_pane.html.haml" do
 		course = mock do
 			stubs(:information).returns t
 		end
-		render partial: 'courses/information_pane', locals: {course: course}
+    assign(:course, course)
+    view.stubs(:editable?).returns false
+		render partial: 'courses/information_pane'
 		rendered.should have_content(t.content)
 	end
 end

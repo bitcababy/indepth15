@@ -8,7 +8,9 @@ describe "courses/resources_pane.html.haml" do
 		course = mock do
 			stubs(:resources).returns t
 		end
-		render partial: 'courses/resources_pane', locals: {course: course}
+    assign(:course, course)
+    view.stubs(:editable?).returns false
+		render partial: 'courses/resources_pane'
 	end
 		
 	it "displays the course information" do

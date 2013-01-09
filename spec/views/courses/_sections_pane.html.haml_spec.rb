@@ -10,11 +10,9 @@ describe "courses/_sections_pane" do
 		course = mock_course_with_sections(6)
 		assign(:course, course)
 	
-		[:credits, :duration, :number].each {|k| course.unstub(k)}
 		course.stubs(:number).returns 321
 		course.stubs(:duration).returns Course::FULL_YEAR
 		course.stubs(:credits).returns 5.0
-		course.unstub(:description)
 		t = mock_text_doc("Some description")
 		course.stubs(:description).returns t
 		render partial: "courses/sections_pane", locals: {course: course}
