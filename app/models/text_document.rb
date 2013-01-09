@@ -10,6 +10,7 @@ class TextDocument < Document
     
   field :ti, as: :title, type: String, default: ''
 	field :co, as: :content, type: String, default: ''
+  belongs_to :owner, polymorphic: true
   
   attr_accessor :locked_by, :last_editor
 
