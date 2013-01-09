@@ -14,6 +14,7 @@ Spork.prefork do
   require 'capybara/rspec'
   require 'devise/test_helpers'
   require 'mongoid-history'
+
   class HistoryTracker
     include Mongoid::History::Tracker
   end
@@ -43,12 +44,12 @@ Spork.prefork do
   require 'database_cleaner'
   DatabaseCleaner.strategy = :truncation
 
-
   RSpec.configure do |config|
     # ## Mock Framework
     #
     # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
     #
+    require 'mocha/setup'
     config.mock_with :mocha
     # config.mock_with :flexmock
     # config.mock_with :rr
@@ -58,9 +59,10 @@ Spork.prefork do
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
   	config.include Mongoid::Matchers
-  	config.include Devise::TestHelpers, :type => :controller
     config.include(EmailSpec::Helpers)
     config.include(EmailSpec::Matchers)
+    config.include Devise::TestHelpers, :type => :controller
+
     DatabaseCleaner.orm = "mongoid"
 
   	# Clear out 
@@ -71,15 +73,8 @@ Spork.prefork do
   	config.after(:each) do
   		DatabaseCleaner.clean
   	end
-	
-  	# Devise
-  	config.include Devise::TestHelpers, :type => :controller
-  	config.include Devise::TestHelpers, :type => :view
-  	config.include Devise::TestHelpers, :type => :helper
 
   end
-  require 'mocha/setup'
-
 end
 
 Spork.each_run do
@@ -98,6 +93,7 @@ Spork.each_run do
          SimpleCov::Formatter::RcovFormatter.new.format(result)
       end
     end
+
     SimpleCov.formatter = SimpleCov::Formatter::MergedFormatter
     SimpleCov.start 'rails' do
     	add_filter '/spec/'
