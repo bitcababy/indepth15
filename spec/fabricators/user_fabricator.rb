@@ -6,6 +6,7 @@ Fabricator :user do
 	login										nil
 	email										nil
 	suffix									{ sequence }
+  encrypted_password      "password"
 	# role									{Fabricate :role, name: :registered_user}
 	after_build							{ |obj|
 		obj.login ||= (obj.last_name + obj.first_name.first).downcase + obj.suffix.to_s
