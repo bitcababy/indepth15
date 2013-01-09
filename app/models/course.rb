@@ -57,11 +57,11 @@ class Course
 
 	has_and_belongs_to_many :branches
 	
-	belongs_to :information, class_name: 'TextDocument'
-	belongs_to :resources, class_name:'TextDocument'
-	belongs_to :policies, class_name: 'TextDocument'
-	belongs_to :news, class_name: 'TextDocument'
-	belongs_to :description, class_name: 'TextDocument'
+	belongs_to :information, class_name: 'TextDocument', inverse_of: :owner
+	belongs_to :resources, class_name:'TextDocument', inverse_of: :owner
+	belongs_to :policies, class_name: 'TextDocument', inverse_of: :owner
+	belongs_to :news, class_name: 'TextDocument', inverse_of: :owner
+	belongs_to :description, class_name: 'TextDocument', inverse_of: :owner
 	
 	##
 	## Scopes
