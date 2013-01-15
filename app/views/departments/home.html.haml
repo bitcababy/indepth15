@@ -96,7 +96,6 @@
 		# TODO: Handle an error
 
 	handle_btn_click = (evt) ->
-		settings = evt.data
 		btn = evt.target
 		url = btn.href
 		# The url will load the form
@@ -121,36 +120,25 @@
 			heightStyle: "content"
 		# Set up each button to open a form in a dialog
 		# Each button's href is the url for the form
-		data = $('#editor').data "linkToForm"
+		form_div = $('#editor')
+		data = form_div.data "linkToForm"
 		unless data
 			options = 
-				div: $('#editor')
+				div: form_div
 				width: 800
 				height: 700
 				error: -> alert "Error!"
 				cancelCallback: unlock_doc
 				CKname: 'text_document_content'
-			$('#editor').data "linkToForm", $.extend({}, default_settings, options)
+			form_div.data "linkToForm", $.extend({}, default_settings, options)
 
-		btns = $('.edit-button')
-		setup_btn btn for btn in btns
-
-/ :coffeescript
-/ 	$(document).ready ->
-/ 		# Set up accordion
-/ 		$("#home-page").accordion
-/ 			heightStyle: "content"
-/ 	
-/ 		cancel_callback = (form) ->
-/ 			$.get( form.action + '/unlock')
-/ 
-/ 		# Set up each button to open a form in a dialog
-/ 		# Each button's href is the url for the form
-/ 		btns = $('.edit-button')
-/ 		btns.dform
-/ 			destroy:			true
-/ 			deleteForm:		true
-/ 			cancelCallback: cancel_callback
-/ 			div_id:				'#editor'
+		setup_btn btn for btn in $('.edit-button')
+		form_div.dialog "option", "buttons", [
+				text: "Save"
+				click: (evt) -> do_save(evt, settings)
+			,
+				text: "Cancel"
+				click: (evt) -> do_cancel(evt, settings)
+			]
 			
-	
+		
