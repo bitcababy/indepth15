@@ -1,0 +1,156 @@
+- content_for :page_title, 'Home'
+- content_for :page_header, Settings.school_name + " " + Settings.dept_name
+#home-page
+	= render partial: 'departments/pane', collection: @panes, as: :doc
+#editor
+
+:coffeescript
+	default_settings = 
+		width: 					700
+		height: 				600
+		autoOpen: 			false
+		modal: 					true
+		resizable: 			true
+		closeOnEscape:	false
+		emptyDiv:				true
+		saveAction:			"destroy"
+
+	get_settings = ->
+		$('#editor').data "linkToForm"
+
+	unlock_doc = (form) ->
+		$.get( form.action + '/unlock')
+		
+	do_cleanup = ->
+		settings = get_settings()
+		div = settings.div
+		instance = CKEDITOR.instances[settings.CKname]
+		if instance
+			console.log "Have instance"
+			console.dir instance
+			instance.destroy()
+		div.dialog settings.saveAction
+		div.empty() if settings.emptyDiv
+
+	get_form = ->
+		settings = get_settings()
+		return $('form', settings.div)
+		
+	do_save = (evt, settings) ->
+		form = get_form()
+		$.ajax
+			type: 		'PUT'
+			url: 			form.action
+			dataType: 'json'
+			data: 		$(form).serialize()
+			success:	(data, status, jqxhr) -> handleSaveResponse(status, data, null, jqxhr, settings)
+			error:		(jqxhr, status, errorMsg) -> handleSaveResponse(status, null, errorMsg, jqxhr, settings)
+			
+	handleSaveResponse = (status, data, errorMsg, jqxhr) ->
+		if status is "success"
+			do_cleanup()
+		else
+			alert "Write error in saving code!"
+		
+	do_cancel = (evt) ->
+		settings = get_settings()
+		form = get_form()
+		settings.cancel_callback(form) if typeof settings.cancel_callback is "function"
+		do_cleanup()
+
+	create_dialog = ->
+		settings = get_settings()
+		settings.div.dialog
+			autoOpen: 	settings.autoOpen
+			height: 		settings.height
+			width: 			settings.width
+			modal: 			settings.modal
+			resizable: 	settings.resizable
+			closeOnEscape: false
+			buttons:
+				Save:			(evt) -> 
+					do_save(evt, settings)
+				Cancel:		(evt) ->
+					# 'this' is the dialog div
+					do_cancel(evt, settings)
+			
+	handleGetForm = (status, data, errorMsg, jqxhr) ->
+		settings = get_settings()
+		if status is "success"
+			# Add the form to the div
+			div = settings.div
+			div.append(data)
+			# Create the dialog
+			create_dialog(settings)
+			# And open it
+			div.dialog "open"
+		else
+			handleGetFormError()
+
+	handleGetFormError = () ->
+		settings = get_settings()
+		if settings.error and typeof(settings.error) is "function"
+			settings.error()
+		else
+			alert "Error!"
+		# TODO: Handle an error
+
+	handle_btn_click = (evt) ->
+		settings = evt.data
+		btn = evt.target
+		url = btn.href
+		# The url will load the form
+		$.ajax
+			url: 			url
+			type: 		'GET'
+			dataType: 'html'
+			success:	(data, status, jqxhr) -> 
+				handleGetForm(status, data, null, jqxhr)
+				return false
+			error:		(jqxhr, status, errorMsg) -> 
+				handleGetForm(status, null, errorMsg, jqxhr)
+				return false
+		return false
+
+	setup_btn = (btn) ->
+		$(btn).on 'click', handle_btn_click
+			
+	$(document).ready ->
+		# Set up accordion
+		$("#home-page").accordion
+			heightStyle: "content"
+		# Set up each button to open a form in a dialog
+		# Each button's href is the url for the form
+		data = $('#editor').data "linkToForm"
+		unless data
+			options = 
+				div: $('#editor')
+				width: 800
+				height: 700
+				error: -> alert "Error!"
+				cancelCallback: unlock_doc
+				CKname: 'text_document_content'
+			$('#editor').data "linkToForm", $.extend({}, default_settings, options)
+
+		btns = $('.edit-button')
+		setup_btn btn for btn in btns
+
+/ :coffeescript
+/ 	$(document).ready ->
+/ 		# Set up accordion
+/ 		$("#home-page").accordion
+/ 			heightStyle: "content"
+/ 	
+/ 		cancel_callback = (form) ->
+/ 			$.get( form.action + '/unlock')
+/ 
+/ 		# Set up each button to open a form in a dialog
+/ 		# Each button's href is the url for the form
+/ 		btns = $('.edit-button')
+/ 		btns.dform
+/ 			destroy:			true
+/ 			deleteForm:		true
+/ 			cancelCallback: cancel_callback
+/ 			div_id:				'#editor'
+			
+	
