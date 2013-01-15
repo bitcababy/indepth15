@@ -156,23 +156,23 @@
 			
 			/* Check that the class assignment is correct for sorting */
 			if ( !oCol.bSortable ||
-				 ($.inArray('asc', oCol.asSorting) == -1 && $.inArray('desc', oCol.asSorting) == -1) )
+				 ($.inArray('asc', oCol.asSorting) === -1 && $.inArray('desc', oCol.asSorting) === -1) )
 			{
 				oCol.sSortingClass = oSettings.oClasses.sSortableNone;
 				oCol.sSortingClassJUI = "";
 			}
 			else if ( oCol.bSortable ||
-			          ($.inArray('asc', oCol.asSorting) == -1 && $.inArray('desc', oCol.asSorting) == -1) )
+			          ($.inArray('asc', oCol.asSorting) === -1 && $.inArray('desc', oCol.asSorting) === -1) )
 			{
 			  oCol.sSortingClass = oSettings.oClasses.sSortable;
 			  oCol.sSortingClassJUI = oSettings.oClasses.sSortJUI;
 			}
-			else if ( $.inArray('asc', oCol.asSorting) != -1 && $.inArray('desc', oCol.asSorting) == -1 )
+			else if ( $.inArray('asc', oCol.asSorting) !== -1 && $.inArray('desc', oCol.asSorting) === -1 )
 			{
 				oCol.sSortingClass = oSettings.oClasses.sSortableAsc;
 				oCol.sSortingClassJUI = oSettings.oClasses.sSortJUIAscAllowed;
 			}
-			else if ( $.inArray('asc', oCol.asSorting) == -1 && $.inArray('desc', oCol.asSorting) != -1 )
+			else if ( $.inArray('asc', oCol.asSorting) === -1 && $.inArray('desc', oCol.asSorting) !== -1 )
 			{
 				oCol.sSortingClass = oSettings.oClasses.sSortableDesc;
 				oCol.sSortingClassJUI = oSettings.oClasses.sSortJUIDescAllowed;
@@ -403,7 +403,7 @@
 							/* Class name matching on TH element */
 							for ( k=0, kLen=oSettings.aoColumns.length ; k<kLen ; k++ )
 							{
-								if ( aTargets[j] == "_all" ||
+								if ( aTargets[j] === "_all" ||
 								     $(oSettings.aoColumns[k].nTh).hasClass( aTargets[j] ) )
 								{
 									fn( k, aoColDefs[i] );
@@ -522,7 +522,7 @@
 				nTrs = oSettings.nTBody.childNodes;
 				for ( i=0, iLen=nTrs.length ; i<iLen ; i++ )
 				{
-					if ( nTrs[i].nodeName.toUpperCase() == "TR" )
+					if ( nTrs[i].nodeName.toUpperCase() === "TR" )
 					{
 						iThisIndex = oSettings.aoData.length;
 						nTrs[i]._DT_RowIndex = iThisIndex;
@@ -537,7 +537,7 @@
 						for ( j=0, jLen=nTds.length ; j<jLen ; j++ )
 						{
 							sNodeName = nTds[j].nodeName.toUpperCase();
-							if ( sNodeName == "TD" || sNodeName == "TH" )
+							if ( sNodeName === "TD" || sNodeName === "TH" )
 							{
 								_fnSetCellData( oSettings, iThisIndex, jInner, $.trim(nTds[j].innerHTML) );
 								jInner++;
@@ -559,7 +559,7 @@
 				{
 					nTd = nTrs[i].childNodes[j];
 					sNodeName = nTd.nodeName.toUpperCase();
-					if ( sNodeName == "TD" || sNodeName == "TH" )
+					if ( sNodeName === "TD" || sNodeName === "TH" )
 					{
 						nTds.push( nTd );
 					}
@@ -761,7 +761,7 @@
 				return sData();
 			}
 		
-			if ( sSpecific == 'display' && sData === null )
+			if ( sSpecific === 'display' && sData === null )
 			{
 				return '';
 			}
@@ -1238,7 +1238,7 @@
 		
 						/* Expand the cell to cover as many rows as needed */
 						while ( aoLocal[i+iRowspan] !== undefined &&
-						        aoLocal[i][j].cell == aoLocal[i+iRowspan][j].cell )
+						        aoLocal[i][j].cell === aoLocal[i+iRowspan][j].cell )
 						{
 							aApplied[i+iRowspan][j] = 1;
 							iRowspan++;
@@ -1246,7 +1246,7 @@
 		
 						/* Expand the cell to cover as many columns as needed */
 						while ( aoLocal[i][j+iColspan] !== undefined &&
-						        aoLocal[i][j].cell == aoLocal[i][j+iColspan].cell )
+						        aoLocal[i][j].cell === aoLocal[i][j+iColspan].cell )
 						{
 							/* Must update the applied array over the rows for the columns */
 							for ( k=0 ; k<iRowspan ; k++ )
@@ -1363,7 +1363,7 @@
 					{
 						for ( var k=0 ; k<iOpenRows ; k++ )
 						{
-							if ( nRow == oSettings.aoOpenRows[k].nParent )
+							if ( nRow === oSettings.aoOpenRows[k].nParent )
 							{
 								anRows.push( oSettings.aoOpenRows[k].nTr );
 								break;
@@ -1384,7 +1384,7 @@
 		
 				var oLang = oSettings.oLanguage;
 				var sZero = oLang.sZeroRecords;
-				if ( oSettings.iDraw == 1 && oSettings.sAjaxSource !== null && !oSettings.oFeatures.bServerSide )
+				if ( oSettings.iDraw === 1 && oSettings.sAjaxSource !== null && !oSettings.oFeatures.bServerSide )
 				{
 					sZero = oLang.sLoadingRecords;
 				}
@@ -1524,14 +1524,14 @@
 				iPushFeature = 0;
 				cOption = aDom[i];
 				
-				if ( cOption == '<' )
+				if ( cOption === '<' )
 				{
 					/* New container div */
 					nNewNode = $('<div></div>')[0];
 					
 					/* Check to see if we should append an id and/or a class name to the container */
 					cNext = aDom[i+1];
-					if ( cNext == "'" || cNext == '"' )
+					if ( cNext === "'" || cNext === '"' )
 					{
 						sAttr = "";
 						j = 2;
@@ -1542,11 +1542,11 @@
 						}
 						
 						/* Replace jQuery UI constants */
-						if ( sAttr == "H" )
+						if ( sAttr === "H" )
 						{
 							sAttr = oSettings.oClasses.sJUIHeader;
 						}
-						else if ( sAttr == "F" )
+						else if ( sAttr === "F" )
 						{
 							sAttr = oSettings.oClasses.sJUIFooter;
 						}
@@ -1554,13 +1554,13 @@
 						/* The attribute can be in the format of "#id.class", "#id" or "class" This logic
 						 * breaks the string into parts and applies them as needed
 						 */
-						if ( sAttr.indexOf('.') != -1 )
+						if ( sAttr.indexOf('.') !== -1 )
 						{
 							var aSplit = sAttr.split('.');
 							nNewNode.id = aSplit[0].substr(1, aSplit[0].length-1);
 							nNewNode.className = aSplit[1];
 						}
-						else if ( sAttr.charAt(0) == "#" )
+						else if ( sAttr.charAt(0) === "#" )
 						{
 							nNewNode.id = sAttr.substr(1, sAttr.length-1);
 						}
