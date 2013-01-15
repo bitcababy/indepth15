@@ -2,6 +2,6 @@
 	%a.title{href: '#'}= doc.title
 %div.pane-content
 	- if editable?
-		%button.edit-button= link_to "Edit", edit_dept_doc_path(doc)
+		%button.edit-button{name: doc.to_param}= link_to "Edit", edit_dept_doc_path(doc)
 	!= doc.content
 
