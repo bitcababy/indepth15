@@ -1,5 +1,6 @@
-class DepartmentController < ApplicationController
+class DepartmentsController < ApplicationController
 	before_filter :find_department, except: [:edit_doc]
+  before_filter :authenticate_user!, only: [:edit_doc]
 
 	def home
     @panes = @dept.homepage_docs.sort
@@ -14,9 +15,8 @@ class DepartmentController < ApplicationController
 
   def edit_doc
     @doc = TextDocument.find params[:doc_id]
-    if @doc.unlocked? || @doc.can_relock?
-      @doc.lock
-      @doc.locked_by = current_user
+    if true || @doc.can_lock?(current_user)
+      @doc.lock(current_user)
   		respond_to do |format|
   			format.html { render layout: false }
       end
