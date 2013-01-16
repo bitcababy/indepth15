@@ -21,4 +21,5 @@ stashed
 .akephalos
 
 lib/plugins/
+vendor/cache
 
