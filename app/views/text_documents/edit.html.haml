@@ -1,28 +1,3 @@
-#edit-form
-	= simple_form_for @text_document, validate: true, remote: true do |f|
-		%fieldset
-			.title= f.input :title, validate:{ presence: true}, required: true
-			.editor= f.input :content, as: :ckeditor, validate:{ presence: true}, input_html: { height: 300, toolbar: "Full" }, label: false, required: true
-		.buttons
-			%button#save= f.submit 'Save'
-			%button#cancel= 'Cancel'
-
-:coffeescript
-	$(document).ready ->
-		$('.confirm').easyconfirm()
-		btn = $('#cancel')
-		btn.click ->
-			$('#edit-form').close()
-
-/ :coffeescript
-/ 	$("#edit-form").dialog
-/ 		autoOpen: true
-/ 		height: 500
-/ 		width: 600
-/ 		modal: true
-/ 		resizable: true
-/ 		buttons:
-/ 			Save: ->
-/ 				$("#edit-form").submit();
-/ 			Cancel: ->
-/ 				$(this).dialog "close"
+= simple_form_for @doc, validate: false, remote: true, method: :put do |f|
+	%fieldset
+		.text= f.input :content, as: :ckeditor, label: false, input_html: {ckeditor: {resize_enabled: false, height: 380 }}
