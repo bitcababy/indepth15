@@ -1,5 +1,5 @@
 != @course.resources.content
 - if editable?
 	#course-edit
-		%a{href: edit_resources_course_path(@course)}= "Edit"
+		%button.edit-button= link_to "Edit", edit_text_document_path(@course.resources)
 	
