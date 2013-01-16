@@ -6,9 +6,9 @@ InDepth::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   authenticated :user do
-    root to: "department#home"
+    root to: "departments#home"
   end
-	root to: "department#home"
+	root to: "departments#home"
 	
 	##
 	## Resources
@@ -44,12 +44,13 @@ InDepth::Application.routes.draw do
 
 	get 'xyzzy', controller: :bridge, action: :import
 	
-  get "home", controller: 'department', action: 'home'
-  get "about", controller: 'department', action: 'about'
+  get "home", controller: 'departments', action: 'home'
+  get "about", controller: 'departments', action: 'about'
 
 	get "courses/:id/academic_year/:year/:teacher_id/:block/assignments", to: 'courses#home_with_assignments', as: :home_with_assignments
   get "sections/:id/assignments", to: 'sections#assignments_pane', as: :assignments_pane
 
+  
 	# get 'menus/home', to: 'menus#home', as: :home_menu
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	# get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
@@ -65,10 +66,9 @@ InDepth::Application.routes.draw do
   
   # put 'text_documents/:id(.:format)', as: :update_text_document, to: 'text_documents#update'
   
-  # match 'department/update_doc/:value/:id', as: :update_dept_doc, to: 'department#update_doc'
+  # match 'departments/update_doc/:value/:id', as: :update_dept_doc, to: 'departments#update_doc'
   
-  resources :text_documents
-  get 'departments/edit_doc/:doc_id', to: 'department#edit_doc', as: :edit_dept_doc
+  get 'departments/edit_doc/:doc_id', to: 'departments#edit_doc', as: :edit_dept_doc
 
   unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
