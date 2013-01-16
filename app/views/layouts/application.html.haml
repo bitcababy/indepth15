@@ -23,14 +23,8 @@
 				= yield
 
 :coffeescript
-	close_signin_dialog = ->
-		$('#signinform').dialog "close"
-		
-	handle_signin_submit = ->
-		form = $('form', '#signinform')[0]
-		form.submit()
-
-	create_dialog = ->
+	$(document).ready ->
+		$('#signinform').removeClass('nodisplay').addClass('block-display')
 		$('#signinform').dialog
 			autoOpen: false
 			width: 500
@@ -38,11 +32,10 @@
 			modal: true
 			resizable: true
 			buttons: 
-				'Sign in': handle_signin_submit
-				'Cancel': close_signin_dialog
-
-	$(document).ready ->
-		$('#signinform').removeClass('nodisplay').addClass('block-display')
-		create_dialog()
+				'Sign in': -> 
+					$('form', '#signinform')[0].submit()
+				'Cancel': ->
+					$('#signinform').dialog "close"
+			
 		$('#signin').bind 'click', (evt) ->
 			$('#signinform').dialog "open"
