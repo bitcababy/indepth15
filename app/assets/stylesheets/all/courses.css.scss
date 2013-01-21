@@ -11,6 +11,7 @@ div#sections_pane {
 	div#info {
 		@extend .sans;
 		text-align: center;
+		valign: bottom;
 //		margin-bottom: 12px;
 		font-weight: bold;
 	}
@@ -24,4 +25,12 @@ div#sections_pane {
 
 div#tabs ul li a {
 	@extend .sans;
+}
+
+.block {
+	text-align: center;
+}
+
+.room {
+	text-align: right;
 }

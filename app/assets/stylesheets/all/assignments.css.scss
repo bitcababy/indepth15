@@ -9,11 +9,13 @@
 }
 
 .assignment {
+	vertical-align: top;
 	td.name {
 		text-align: right;
+		font-size: 85%;
 	}
 	td.due_date {
-		
+		font-size: 90%;
 	}
 	td.asst-content {
 		ul {
@@ -22,7 +24,7 @@
 		li {
 			padding-bottom: 4px;
 		}
-		font-size: 120%;
+		font-size: 100%;
 		line-height: 130%;
 	}
 	img {

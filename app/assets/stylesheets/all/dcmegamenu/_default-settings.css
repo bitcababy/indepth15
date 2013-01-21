@@ -1,9 +1,10 @@
 // Defaults that can be overridden in a skin
-$base-font-size: 13px;
+$base-font-size: 11px;
 $font-size: 1.1em;
 $font: Arial, sans-serif;
 $line-height: 120%;
 $hue: 0;
+$font-weight: normal;
 
 $mb-text-color: hsl($hue, 0, 100);
 $mb-text-shadow: hsl($hue, 0, 0);
