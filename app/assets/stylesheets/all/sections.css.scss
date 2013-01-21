@@ -8,8 +8,8 @@
 $shadow: 1px 1px 1px 1px $dark-brown;
 
 #generic-msg, .message {
+	font-size: 110%;
 	p {
-		font-size: 90%;
 //		border-width: 1px;
 //		border-color: $dark-brown;
 //		border-style: solid;
@@ -39,19 +39,27 @@ $title-width: 12em;
 	.title {
 		@extend .sans;
 		@extend .ui-corner-top;
-		font-size: 110%;
+		font-size: 100%;
 		color: white;
 		background-color: $weston-red;
 		width: $title-width;
 		padding: 8px;
 		font-weight: bold;
 	}
-	.none {
+	.no-assignment {
 		font-size: 100%;
 		padding-left: 16px;
+		padding-bottom: 8px;
 		margin-bottom: 16px;
 		background-color: #E2E4FF;
-		width: $title-width*1.1;
+		width: $title-width;
 	}
-	margin-bottom: 24px;
+	margin-bottom: 18px;
 }
+
+#tabs {
+	.past {
+	margin-bottom: 0px;
+	}
+}
+
