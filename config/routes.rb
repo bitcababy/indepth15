@@ -25,18 +25,12 @@ InDepth::Application.routes.draw do
 	resources :courses, only: [:show] do
     member do
       get :home
+      get :edit_doc
     end
   end
 	resources :teachers, only: [:show]
   
-  resources :sections, only: [] do
-    member do
-      get 'assignments'
-    end
-  end
-	
-
-	# Unrestful routes
+ 	# Unrestful routes
 
 	# Temporary routes to deal with old links
 	match 'files/*path', via: :get, controller: :files, action: :pass_on
@@ -48,7 +42,7 @@ InDepth::Application.routes.draw do
   get "about", controller: 'departments', action: 'about'
 
 	get "courses/:id/academic_year/:year/:teacher_id/:block/assignments", to: 'courses#home_with_assignments', as: :home_with_assignments
-  get "sections/:id/assignments", to: 'sections#assignments_pane', as: :assignments_pane
+  get "sections/:id/assignments_pane",  to: 'sections#assignments_pane', as: :assignments_pane
 
   
 	# get 'menus/home', to: 'menus#home', as: :home_menu
@@ -63,18 +57,24 @@ InDepth::Application.routes.draw do
   get 'teachers/:teacher_id/courses/:course_id/assignments/new', as: :new_assignment
   resources :assignments, except: [:new]
 
-  
   # put 'text_documents/:id(.:format)', as: :update_text_document, to: 'text_documents#update'
   
   # match 'departments/update_doc/:value/:id', as: :update_dept_doc, to: 'departments#update_doc'
   
   get 'departments/edit_doc/:doc_id', to: 'departments#edit_doc', as: :edit_dept_doc
+  get 'courses/edit_doc/:doc_id', to: 'courses#edit_doc', as: :edit_course_doc
 
   unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
   end
  
-
+  resources :text_documents, only: [:edit, :update] do
+    member do
+      get :ping
+      get :unlock
+    end
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
