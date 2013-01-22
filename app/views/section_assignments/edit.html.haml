@@ -1,0 +1,7 @@
+= simple_form_for @sa, remote: true do |f|
+	%fieldset
+		.sa_name= f.input :name, required: true
+		.date_due= f.input :due_date, disabled: true
+		.text= f.input :content, as: :ckeditor, label: false, input_html: {ckeditor: {resize_enabled: false, height: 380 }}, required: true
+	%button Save
+	%button Cancel
