@@ -822,12 +822,12 @@ body .ui-tooltip {
 	border: 1px solid #cccccc;
 	background: #428cd1 url(images/ui-bg_highlight-hard_100_428cd1_1x100.png) 50% 50% repeat-x;
 	font-weight: bold;
-	color: #333333;
+	color: #EEEEEE;
 }
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited {
-	color: #333333;
+	color: #EEEEEE;
 	text-decoration: none;
 }
 .ui-state-hover,
