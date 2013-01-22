@@ -49,7 +49,6 @@ class User
 	#
   field :ep, as: :encrypted_password, :type => String, :default => ""
 
-  # validates_presence_of :encrypted_password # SMELL: breaks testing
   validates_presence_of :encrypted_password # SMELL: breaks testing
 
   ## Recoverable
@@ -81,3 +80,13 @@ class User
   field :at, as: :authentication_token, :type => String
 
 end
+
+class LoginValidator < ActiveModel::EachValidator
+  def validate_each(record, attr_name, value)
+    foo
+    unless User.exists? login: record.login
+      record.errors.add("Invalid user", :login)
+    end
+  end
+end
+
