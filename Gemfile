@@ -41,8 +41,9 @@ gem 'mongoid'
 gem 'mongoid-history'
 gem 'mongoid-data_table', :git => 'git://github.com/shamanime/mongoid-data_table.git'
 # gem 'mongoid_taggable'
+# gem 'acts_as_list_mongoid'
 gem 'mongoid_rails_migrations'
-gem 'locomotive_mongoid_acts_as_tree'
+# gem 'locomotive_mongoid_acts_as_tree'
 gem 'mongoid_taggable_with_context', :git => 'git://github.com/lgs/mongoid_taggable_with_context.git'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
 gem 'thin'
@@ -69,13 +70,15 @@ gem 'memcache-client'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
-gem 'ckeditor'#, '3.7.1', git: 'git@github.com:bitcababy/ckeditor.git'
+# gem 'ckeditor', '4.0.0rc1' #, :path => File.expand_path('../lib/plugins/ckeditor', __FILE__)
+# gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
+# gem 'ckeditor', :git => 'git@github.com:bitcababy/ckeditor.git'
+gem 'ckeditor', '4.0.0rc1'
 gem 'ruby-mysql'
 gem 'tidy_ffi'
 gem 'daemons'
 gem 'pry'
 gem 'yard'
-gem 'acts_as_list_mongoid'
 
 # gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
 
@@ -124,6 +127,6 @@ group :test do
 	gem 'rails_warden'
 	gem 'guard-sass', :require => false
   gem 'rb-fsevent', '~>0.9.1'
-  gem 'turnip'
+  # gem 'turnip'
 end
 
