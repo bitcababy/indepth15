@@ -25,9 +25,10 @@
 				height: 600,
 				resizable: true,
 				method: 'put',
-				saveAction: "destroy",
+				closeAction: "destroy",
 				saveText: "Save",
-				cancelText: "Cancel"
+				cancelText: "Cancel",
+				ckid: null
 		};
 		var data, settings;
 
@@ -39,18 +40,26 @@
 				
 		this.closeDialog = function() {
 			var settings = this.data(dataKey);
-	    this.dialog(settings.saveAction);
+	    this.dialog(settings.closeAction);
 	    this.empty();
+			if (settings.ckid) {
+				var instance = CKEDITOR.instances[settings.ckid];
+				if (instance) {
+					// instance.remove();
+				}
+			}
 	    return this;
 		}
 
 		this._saveFailed = function () {
 	    this.trigger('linkToFormSaveFailed');
+			alert("failed");
 	    return this;
 		}
 
 		this.handleSaveResponse = function(status, data, errorMsg, jqxhr) {
 	    if (status === "success") {
+				this.trigger('afterSave');
 	      this.closeDialog();
 	    } else {
 	      this._saveFailed();
@@ -63,8 +72,10 @@
 		}
 
 		this.doSave = function(evt) {
+			this.trigger('beforeSave');
 	    var settings = this.data(dataKey);
 			var form = $('form', this)[0];
+			$('#' + settings.ckid, form).val(CKEDITOR.instances[settings.ckid].getData());
 			var data = $(form).serialize();
 			var $this = this;
 	    $.ajax({
@@ -133,7 +144,7 @@
 			return false;
 	  }
 	
-		this.bindButtons = function(btns) {
+		this.bindLinks = function(btns) {
 			btns.on('click', this, btnClickHandler);
 		}
 
@@ -145,11 +156,11 @@
 				this.data(dataKey, extended_defaults);
 			}
 			data = this.data(dataKey);
-			this.bindButtons(data.buttons);
 		}
 		
 		var methods = {
 			init: this.init,
+			bindLinks: this.bindLinks,
 		}
 
     if ( methods[method] ) {
