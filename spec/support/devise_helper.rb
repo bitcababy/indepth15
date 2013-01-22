@@ -25,19 +25,19 @@ def as_visitor(user=nil, &block)
   return self
 end
 
-# module DeviseHelper
-# 	def create_guest
-# 		guest = mock
-# 		# request.env['warden'].stubs(:authenticate!).throws(:warden, {scope: :user})
-# 		controller.stubs(:current_user).returns user
-# 	end
-# 	
-# 	def create_guest
-# 		guest = mock
-# 		request.env['warden'].stubs(:authenticate!).returns user
-# 		controller.stubs(:current_user).returns user
-# 	end
-# 	
-# end
-# 
-# 
+module DeviseHelper
+  def create_guest
+    guest = mock
+    request.env['warden'].stubs(:authenticate!).throws(:warden, {scope: :user})
+    controller.stubs(:current_user).returns user
+  end
+  
+  def create_user
+    user = mock
+    request.env['warden'].stubs(:authenticate!).returns user
+    controller.stubs(:current_user).returns user
+  end
+  
+end
+
+
