@@ -1,4 +1,4 @@
 class Author < User
-	has_many :assignments, inverse_of: :owner
+	has_many :text_documents, inverse_of: :owner
 	
 end
