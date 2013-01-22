@@ -20,7 +20,8 @@ InDepth::Application.routes.draw do
   #       resources :assignments, only: [:new, :edit, :update, :show], shallow: true
   #     end
   #   end      
-   
+  
+  resources :section_assignments, only: [:edit, :update]
    
 	resources :courses, only: [:show] do
     member do
