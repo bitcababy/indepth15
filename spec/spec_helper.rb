@@ -41,8 +41,6 @@ Spork.prefork do
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("app/lib/extras/**/*.rb")].each {|f| require f}
 
-  require 'database_cleaner'
-  DatabaseCleaner.strategy = :truncation
 
   RSpec.configure do |config|
     # ## Mock Framework
@@ -58,22 +56,26 @@ Spork.prefork do
     # automatically. This will be the default behavior in future versions of
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
+
+    Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
   	config.include Mongoid::Matchers
     config.include(EmailSpec::Helpers)
     config.include(EmailSpec::Matchers)
     config.include Devise::TestHelpers, :type => :controller
+    config.extend ControllerMacros, :type => :controller
 
     DatabaseCleaner.orm = "mongoid"
 
+    require 'database_cleaner'
+    config.before :suite do
+      DatabaseCleaner.strategy = :truncation
+      DatabaseCleaner.orm = 'mongoid'
+    end
   	# Clear out 
   	config.before(:each) do
   		DatabaseCleaner.clean
   	end
 	
-  	config.after(:each) do
-  		DatabaseCleaner.clean
-  	end
-
   end
 end
 
@@ -83,6 +85,7 @@ Spork.each_run do
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
   Dir[Rails.root.join("app/lib/extras/**/*.rb")].each {|f| require f}
+
 
   # if( ENV['COVERAGE'] == 'on' )
     require 'simplecov'
