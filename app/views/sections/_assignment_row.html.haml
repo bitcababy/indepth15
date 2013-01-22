@@ -5,4 +5,4 @@
 		%td.asst-content!= sa.assignment ? sa.assignment.content : 'Something is wrong with this assignment. Please let Mr. Davidson know.'
 		- if editable?
 			%td
-				%button= "Edit"
+				%button= link_to "Edit", edit_section_assignment_path(sa)
