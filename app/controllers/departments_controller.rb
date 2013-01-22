@@ -19,12 +19,13 @@ class DepartmentsController < ApplicationController
       @doc.lock(current_user)
   		respond_to do |format|
   			format.html { render layout: false }
+        # format.html { render layout: !request.xhr? }
       end
     else
       ## Smell: Is this the right way to do it?
   		respond_to do |format|
         format.html { head :bad_request }
-        # format.html { render template: 'shared/document_locked', layout: false}
+        # format.html { render template: 'shared/document_locked', layout: !request.xhr?}
       end
     end
   end
