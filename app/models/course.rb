@@ -3,7 +3,8 @@ class Course
   include Mongoid::Timestamps
   
   after_create :add_branches
-  after_create :add_docs
+  after_create :create_docs
+  after_destroy :destroy_docs
 
 	FULL_YEAR = :full_year
 	FULL_YEAR_HALF_TIME = :halftime
@@ -37,6 +38,12 @@ class Course
   field :oc, as: :occurrences, type: Array
   
 	field :_id, type: Integer, default: ->{ number }
+  
+  belongs_to :resources, class_name: 'TextDocument', inverse_of: nil, autosave: true
+  belongs_to :information, class_name: 'TextDocument', inverse_of: nil, autosave: true
+  belongs_to :news, class_name: 'TextDocument', inverse_of: nil, autosave: true
+  belongs_to :policies, class_name: 'TextDocument', inverse_of: nil, autosave: true
+  belongs_to :description, class_name: 'TextDocument', inverse_of: nil, autosave: true
 	
 	##
 	## Associations
@@ -44,11 +51,6 @@ class Course
 	has_many :sections
   has_and_belongs_to_many :branches, inverse_of: nil
 	
-	belongs_to :resources, class_name:'CourseDocument', inverse_of: :owner
-	belongs_to :policies, class_name: 'CourseDocument', inverse_of: :owner
-	belongs_to :news, class_name: 'CourseDocument', inverse_of: :owner
-	belongs_to :description, class_name: 'CourseDocument', inverse_of: :owner
-  	
 	##
 	## Scopes
 	##
@@ -80,16 +82,27 @@ class Course
   def add_branches
     return unless Branch::BRANCH_MAP[number]
     keys = Branch::BRANCH_MAP[number].to_a
-    branches = Branch.in(name: keys)
+    self.branches = Branch.in(name: keys)
     self.save!
   end
   
-  def add_docs
-    self.resources ||= CourseDocument.create!
-    self.news ||= CourseDocument.create!
-    self.policies ||= CourseDocument.create!
-    self.description ||= CourseDocument.create!
-    self.save! if self.changed?
+  def create_docs
+    self.resources = TextDocument.create!
+    self.news = TextDocument.create!
+    self.policies = TextDocument.create!
+    self.description = TextDocument.create!
+    self.information = TextDocument.create!
+    
+    self.save!
   end
+  
+  def destroy_docs
+    self.resources.destroy
+    self.news.destroy
+    self.policies.destroy
+    self.description.destroy
+    self.information.destroy
+  end
+    
      
 end
