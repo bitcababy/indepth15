@@ -1,13 +1,4 @@
-- content_for :page_title, 'Edit'
-- content_for :page_header, 'Edit'
 = simple_form_for @doc, validate: false, remote: true, method: :put do |f|
 	%fieldset
 		.title= f.input :title, required: true
 		.text= f.input :content, as: :ckeditor, label: false, input_html: {ckeditor: {resize_enabled: false, height: 380 }}
-	%noscript
-		%button.submit= f.submit "Save"
-		%button.cancel= link_to "Cancel", :back
-= simple_form_for @doc, validate: true, remote: true, method: :put, html: {id: @doc.to_param } do |f|
-	%fieldset
-		.title= f.input :title, required: true
-		.text= f.input :content, as: :ckeditor, label: false, input_html: { rows: 20, columns: 100 }, required: true
