@@ -255,21 +255,20 @@ class SectionAssignment
 
 	def self.import_from_hash(hash)
 		section,assignment = self.get_sa(hash)
-		
-		crit = SectionAssignment.where(assignment: assignment, block: hash[:block], section: section)
-		if crit.exists?
-			sa = crit.first
-			raise "no section_assignment" unless sa
-			sa.due_date = hash[:due_date]
-			sa.use = hash[:use] == 'Y'
-			sa.save!
-			return sa
-		else
+     # crit = SectionAssignment.where(assignment: assignment, block: hash[:block], section: section)
+    # if crit.exists?
+    #   sa = crit.first
+    #   raise "no section_assignment" unless sa
+    #   sa.due_date = hash[:due_date]
+    #   sa.use = hash[:use] == 'Y'
+    #   sa.save!
+    #   return sa
+    # else
 			hash[:use] = hash[:use] == 'Y'
 			hash[:assignment] = assignment
       hash.delete(:block) # Have to do this or the block delegation won't work
 			return section.section_assignments.create! hash
-		end
+    # end
 	end
 	
 	def self.get_sa(hash)
