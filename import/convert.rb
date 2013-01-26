@@ -311,7 +311,7 @@ class Assignment
 			author = Teacher.find_by(login: hash[:teacher_id])
 			raise "Couldn't find teacher #{hash[:teacher_id]}" unless author
 			hash.delete(:teacher_id)
-			return Assignment.create! hash.merge(owner: author.to_param)
+			return Assignment.create! hash.merge(last_editor: author.to_param)
 		end
 	end
 
