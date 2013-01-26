@@ -10,6 +10,6 @@ module SectionsHelper
 	end
 	
 	def occurrence_options
-		return (1..Settings.num_occurrences).collect { |i| [i.to_s, i.to_s] }
+		return (1..Settings.max_occurrences).collect { |i| [i.to_s, i.to_s] }
 	end
 end

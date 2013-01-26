@@ -8,7 +8,7 @@ defaults: &defaults
     minute: 30
   start_year: 2011
   last_block: H
-  num_occurrences: 5
+  max_occurrences: 5
   occurrences:
     - 1
     - 2
