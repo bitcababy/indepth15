@@ -9,7 +9,6 @@ class TextDocument < Document
     return true
   end
     
-  field :ti, as: :title, type: String, default: ''
 	field :co, as: :content, type: String, default: ''
   field :la, as: :locked_at, type: Time, default: nil
   
