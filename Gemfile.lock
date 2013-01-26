@@ -7,14 +7,6 @@ GIT
       mongoid (~> 3.0)
 
 GIT
-  remote: git://github.com/galetahub/ckeditor.git
-  revision: 91e7b1bb2deede00c43a7f2fbe913e0354cff9f0
-  specs:
-    ckeditor (4.0.0.rc2)
-      mime-types
-      orm_adapter
-
-GIT
   remote: git://github.com/lgs/mongoid_taggable_with_context.git
   revision: 4ff321867420b148a155bc845843c72a51578d58
   specs:
@@ -86,6 +78,9 @@ GEM
       mongoid-grid_fs (~> 1.3)
     childprocess (0.3.7)
       ffi (~> 1.0, >= 1.0.6)
+    ckeditor (4.0.0)
+      mime-types
+      orm_adapter
     client_side_validations (3.2.1)
     client_side_validations-mongoid (3.0.1)
       client_side_validations (~> 3.2.0)
@@ -224,9 +219,10 @@ GEM
     mongoid-grid_fs (1.7.0)
       mime-types (~> 1.19)
       mongoid (~> 3.0)
-    mongoid-history (0.3.1)
+    mongoid-history (0.3.2)
+      activesupport
       easy_diff
-      mongoid (~> 3.0.4)
+      mongoid (~> 3.0)
     mongoid-rspec (1.5.6)
       mongoid (>= 3.0.1)
       rake
@@ -368,7 +364,7 @@ DEPENDENCIES
   capybara
   carrierwave
   carrierwave-mongoid
-  ckeditor (= 4.0.0.rc2)!
+  ckeditor (~> 4.0.0)
   client_side_validations
   client_side_validations-mongoid
   client_side_validations-simple_form
