@@ -9,16 +9,10 @@
 		# Set up accordion
 		$("#home-page").accordion
 			heightStyle: "content"
-		btns = $('.edit-button')
 
 		$('#editor').dialogForm "init",
 			width: 700
 			height: 600
-			ckid: 'text_document_content'
+			ckid: 'department_document_content'
 	
 		$('#editor').dialogForm 'bindLinks', $('.edit-button')
-		$(btns).button
-			icons:
-				primary: 'ui-icon-pencil'
-			text: false
-		
