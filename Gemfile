@@ -79,9 +79,14 @@ gem 'yard'
 
 # gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
 
+group :production do
+  gem 'mongoid-locker', :git => 'git://github.com/bitcababy/mongoid-locker.git'
+  gem 'mongoid_ordered', :git => 'git://github.com/bitcababy/mongoid_ordered.git'
+end
+
 group :development, :test do
   gem 'heroku'
-  # gem 'heroku_san'
+  gem 'heroku_san'
 	gem 'rspec-rails'
 	gem 'watchr'#,  :git => 'git://github.com/bitcababy/watchr.git'
 	gem 'guard'

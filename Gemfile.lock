@@ -7,6 +7,23 @@ GIT
       mongoid (~> 3.0)
 
 GIT
+  remote: git://github.com/bitcababy/mongoid-locker.git
+  revision: 6936e0e0bdbb5acb111e764a7e56db538a5b5677
+  specs:
+    mongoid-locker (0.0.1)
+      activesupport
+      mongoid (~> 3.0)
+      state_machine
+
+GIT
+  remote: git://github.com/bitcababy/mongoid_ordered.git
+  revision: e317e11eba4adcd35b7a94483098a1a23c29c18d
+  specs:
+    mongoid_ordered (0.0.1)
+      mongoid (~> 3.0)
+      rspec
+
+GIT
   remote: git://github.com/lgs/mongoid_taggable_with_context.git
   revision: 4ff321867420b148a155bc845843c72a51578d58
   specs:
@@ -179,6 +196,9 @@ GEM
       rubyzip
     heroku-api (0.3.7)
       excon (~> 0.16.10)
+    heroku_san (4.0.8)
+      heroku-api (>= 0.1.2)
+      rake
     hike (1.2.1)
     hpricot (0.8.6)
     htmlentities (4.3.1)
@@ -393,6 +413,7 @@ DEPENDENCIES
   haml
   haml-rails
   heroku
+  heroku_san
   hpricot
   htmlentities
   jquery-rails
@@ -402,7 +423,9 @@ DEPENDENCIES
   mongoid
   mongoid-data_table!
   mongoid-history
+  mongoid-locker!
   mongoid-rspec
+  mongoid_ordered!
   mongoid_rails_migrations
   mongoid_taggable_with_context!
   nokogiri (= 1.5.2)
