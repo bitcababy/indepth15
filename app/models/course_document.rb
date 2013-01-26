@@ -1,9 +1,5 @@
 class CourseDocument < TextDocument
-  include Mongoid::Document
-  
-
-  # field :kind, type: String
-  # 
-  # TYPES = [:assignment, :worksheet, :test, :quiz, :retake, :benchmark, :classwork, :homework]
+  include Mongoid::Locker
+  enable_locking_with :locked_at
   
 end
