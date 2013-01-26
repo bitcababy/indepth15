@@ -1,16 +1,28 @@
 require 'spec_helper'
 
 describe CoursesController do
-	before :each do
-		@course = Fabricate :course
-	end
-
   describe "GET 'home'" do
     it "returns http success if the course exists" do
-      get 'home', id: @course.to_param
-			assigns[:course].should == @course
+      course = mock('course') do
+        stubs(:to_param).returns 1
+      end
+      Course.stubs(:find).returns course
+      get 'home', id: course.to_param
+			assigns[:course].should == course
       response.should be_success
       response.should render_template('home')
+    end
+  end
+  
+  describe "GET 'home_with_assignments" do
+    it "sets the section and returns the home page" do
+      Section.stubs(:find_by).returns "bar"
+      Course.stubs(:find).returns "foo"
+      as_user do
+        get 'home_with_assignments', id: 1, year: 2013, teacher_id: 'doej', block: 'B'
+      end
+      response.should be_success
+      response.should render_template('home_with_assignments')
     end
   end
 
