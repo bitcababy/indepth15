@@ -22,6 +22,7 @@ class Section
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
 	belongs_to :course, index: true
+  delegate :branches, to: :course
 	belongs_to :teacher, index: true
 
 	has_many :section_assignments
