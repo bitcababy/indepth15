@@ -10,9 +10,9 @@ class CoursesController < ApplicationController
 	end
 
   def home_with_assignments
-    @section = Section.find_by teacher: params[:teacher_id], block: params[:block], academic_year: params[:year]
+    @section = Section.find_by course: @course, teacher: params[:teacher_id], block: params[:block], academic_year: params[:year]
 		respond_to do |format|
-			format.html { render 'home'}
+			format.html { render }
 		end
   end
 
