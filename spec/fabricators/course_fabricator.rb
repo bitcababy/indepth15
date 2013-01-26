@@ -5,20 +5,11 @@ Fabricator(:course) do
 	full_name				{ |attrs| "Course #{attrs[:number]}"}
 	in_catalog			true
 	description			nil
-	information			nil
 	resources 			nil
 	policies				nil
 	news						nil
-	after_build { |obj|
-		obj.description ||= Fabricate :text_document, contents: "Description"
-		obj.information ||= Fabricate :text_document, contents: "information"
-		obj.resources ||= Fabricate :text_document, contents: "resources"
-		obj.information ||= Fabricate :text_document, contents: "policies"
-		obj.news ||= Fabricate :text_document, contents: "news"
-	}
+  occurrences     [ (1..5).to_a ]
 end
-
-Fabricate.sequence(:course_number, 321)
 
 Fabrication::Transform.define(:course, lambda { |number|
 			if Course.where(number: number).exists? then
