@@ -51,6 +51,7 @@ module Convert
 				'semesters' 			=> :semesters,
 				'policies' 				=> :policies,
 				'description'     => :description,
+				'info'           => :information,
 				},
 		::Section => {
 				"dept_id" => :dept_id,
@@ -101,7 +102,6 @@ module Convert
     # end
 		imported[:database][:table].collect {|h| h[:column]}
 	end
-	
 		
 	def self.one_record(klass, arr)
 		map = MAPPINGS[klass]
@@ -174,23 +174,20 @@ class Course
   	}
 
 		def import_from_hash(hash)
-			hash.delete(:information)
-			r = hash.delete(:resources)
-			p = hash.delete(:policies)
-			n = hash.delete(:news)
-			d = hash.delete(:description)
+			i = massage_content hash.delete(:information)
+			r = massage_content hash.delete(:resources)
+			p = massage_content hash.delete(:policies)
+			n = massage_content hash.delete(:news)
+			d = massage_content hash.delete(:description)
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
-      course.resources.content = massage_content(r)
-			course.resources.save!
-			course.policies.content = massage_content(p)
-			course.policies.save!
-			course.news.content = massage_content(n)
-			course.news.save!
-			course.description.content = massage_content(d)
-			course.description.save!
-			return course
+      course.resources.content = r
+      course.policies.content = p
+      course.news.content = n
+      course.description.content = d
+      course.information.content = i
+ 			return course.save!
 		end
 	end
 	def self.massage_content(txt)
@@ -300,19 +297,19 @@ class Assignment
 	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
 
 	def self.import_from_hash(hash)
-		assgt_id = hash[:assgt_id]
+    # assgt_id = hash[:assgt_id]
 		hash[:content] ||= ""
-		crit = self.with_assgt_id(assgt_id)
-		if crit.exists?
-			asst = crit.first
-			asst.content = hash[:content]
-			return asst.save!
-		else
+    # crit = self.with_assgt_id(assgt_id)
+    # if crit.exists?
+    #   asst = crit.first
+    #   asst.content = hash[:content]
+    #   return asst.save!
+    # else
 			author = Teacher.find_by(login: hash[:teacher_id])
 			raise "Couldn't find teacher #{hash[:teacher_id]}" unless author
 			hash.delete(:teacher_id)
 			return Assignment.create! hash.merge(last_editor: author.to_param)
-		end
+    # end
 	end
 
 	def self.massage_content(txt)
