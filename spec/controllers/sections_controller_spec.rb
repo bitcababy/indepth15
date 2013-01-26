@@ -19,18 +19,19 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe SectionsController do
-  include FabricationMacros
 
-  # describe "GET 'assignments_pane', xhr" do
-  #  it "display the assignments pane" do
-  #     section = section_with_assignments
-  #     section.teacher = Fabricate :teacher, login: "foo"
-  #     section.save!
-  #     
-  #     xhr :get, :assignments_pane, { course_id: section.course.to_param, year: section.academic_year, teacher_id: section.teacher.to_param, block: section.block}
-  #     response.should be_success
-  #     assigns(:section).should eq(section)
-  #   end
-  # end
+  describe "GET 'assignments_pane', xhr" do
+   it "display the assignments pane" do
+     section = mock('section') do
+       stubs(:course).returns "foo"
+       stubs(:to_param).returns 1
+     end
+     Section.stubs(:find).returns(section)
+      xhr :get, :assignments_pane, id: section.to_param
+      response.should be_success
+      assigns(:section).should eq(section)
+      assigns(:course).should eq("foo")
+    end
+  end
 
 end
