@@ -14,7 +14,7 @@ class DepartmentsController < ApplicationController
   end
 
   def edit_doc
-    @doc = TextDocument.find params[:doc_id]
+    @doc = DepartmentDocument.find params[:doc_id]
     if true || @doc.can_lock?(current_user)
       @doc.lock(current_user)
   		respond_to do |format|
