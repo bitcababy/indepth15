@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'xmlsimple'
 
 module Convert
@@ -173,7 +174,7 @@ class Course
   	}
 
 		def import_from_hash(hash)
-			i = hash.delete(:information)
+			hash.delete(:information)
 			r = hash.delete(:resources)
 			p = hash.delete(:policies)
 			n = hash.delete(:news)
@@ -181,9 +182,6 @@ class Course
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
-			course.information.content = massage_content(i)
-			course.information.save!
-			course.resources.content = massage_content(r)
 			course.resources.save!
 			course.policies.content = massage_content(p)
 			course.policies.save!
