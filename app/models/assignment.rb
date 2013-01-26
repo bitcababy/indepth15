@@ -11,7 +11,7 @@ class Assignment < TextDocument
   # A section_assignment is meaningless if the assignment is deleted
   has_many :section_assignments, dependent: :delete, autosave: true
   accepts_nested_attributes_for :section_assignments
-  has_and_belongs_to_many :branches
+  has_and_belongs_to_many :branches, inverse_of: nil
 
   track_history on: [:content],
                  modifier_field: :modifier, 
