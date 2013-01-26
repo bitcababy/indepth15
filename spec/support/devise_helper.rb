@@ -9,10 +9,10 @@ def as_user(user=nil, &block)
   else
     login_as(current_user, :scope => :user)
   end
+  request.env['warden'].stubs(:authenticate!).returns user
   block.call if block.present?
   return self
 end
-
 
 def as_visitor(user=nil, &block)
   current_user = user || Fabricate.stub(:user)
@@ -27,13 +27,13 @@ end
 
 module DeviseHelper
   def create_guest
-    guest = mock
+    guest = mock(:guest)
     request.env['warden'].stubs(:authenticate!).throws(:warden, {scope: :user})
     controller.stubs(:current_user).returns user
   end
   
   def create_user
-    user = mock
+    user = mock(:user)
     request.env['warden'].stubs(:authenticate!).returns user
     controller.stubs(:current_user).returns user
   end
