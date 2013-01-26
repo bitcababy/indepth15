@@ -1,7 +1,63 @@
 class TextDocumentsController < ApplicationController
- 	# before_filter :authenticate_user!
+  before_filter :authenticate_user!
 	before_filter :find_text_document, except: []
   
+  def edit
+    if request.xhr?
+      if true || @doc.can_lock?(current_user)
+        @doc.lock(current_user)
+    		respond_to do |format|
+    			format.html { render layout: false }
+        end
+      else
+        ## Smell: Is this the right way to do it?
+    		respond_to do |format|
+          format.html { head :bad_request }
+          # format.html { render template: 'shared/document_locked', layout: false}
+        end
+      end
+    else
+      if true || @doc.can_lock?(current_user)
+        @doc.lock(current_user)
+    		respond_to do |format|
+    			format.html { render }
+        end
+      else
+        ## Smell: Is this the right way to do it?
+    		respond_to do |format|
+          format.html { head :bad_request }
+        end
+      end
+    end
+      
+  end
+
+  # PUT text_documents/1
+  # PUT text_documents/1.json
+  def update
+    if request.xhr?
+      respond_to do |format|
+        if @doc.update_from_params(params[:text_document])
+          @doc.unlock
+          format.html { redirect_to :back, notice: 'Document was saved.' }
+        else
+          format.json { render json: @doc.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        if @doc.update_from_params(params[:text_document])
+          format.json { head :no_content }
+          format.html { redirect_to session[:goto_url], notice: 'TextDocument was successfully updated.' }
+        else
+          format.json { render json: @doc.errors, status: :unprocessable_entity }
+          format.html { render action: "edit_doc", error: 'Invalid parameters' }
+        end
+      end
+    end
+  end
+
+
   # # # GET text_documents
   # # GET text_documents.json
   # def index
@@ -55,45 +111,7 @@ class TextDocumentsController < ApplicationController
   #   end
   # end
   
-  def edit
-    if true || @doc.can_lock?(current_user)
-      @doc.lock(current_user)
-  		respond_to do |format|
-  			format.html { render layout: false }
-      end
-    else
-      ## Smell: Is this the right way to do it?
-  		respond_to do |format|
-        format.html { head :bad_request }
-        # format.html { render template: 'shared/document_locked', layout: false}
-      end
-    end
-  end
 
-  # PUT text_documents/1
-  # PUT text_documents/1.json
-  def update
-    if request.xhr?
-      respond_to do |format|
-        if @doc.update_attributes(params[:text_document])
-          @doc.unlock
-          format.html { redirect_to :back, notice: 'Document was saved.' }
-        else
-          format.json { render json: @doc.errors, status: :unprocessable_entity }
-        end
-      end
-    else
-      respond_to do |format|
-        if @doc.update_attributes(params[:text_document])
-          format.json { head :no_content }
-          format.html { redirect_to text_document_url(@doc), notice: 'TextDocument was successfully updated.' }
-        else
-          format.json { render json: @doc.errors, status: :unprocessable_entity }
-          format.html { render action: "edit" }
-        end
-      end
-    end
-  end
 
   def ping
     @doc.lock(current_user)
