@@ -1,7 +1,7 @@
 #sections_pane
 	#info
-		= "Course #{course.number} — #{duration_string(course.duration)}"
-	#brief_description
+		%span.text= "Course #{course.number} — #{duration_string(course.duration)}"
+	#description
 		!= course.description.content
 	#leadin
 		= "In the #{academic_year_string(Settings.academic_year)} academic year there #{is_are_number_mangler(course.current_sections.count, 'section')} of #{course.full_name}."
