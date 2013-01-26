@@ -64,6 +64,8 @@ InDepth::Application.routes.draw do
   
   get 'departments/edit_doc/:doc_id', to: 'departments#edit_doc', as: :edit_dept_doc
   get 'courses/edit_doc/:doc_id', to: 'courses#edit_doc', as: :edit_course_doc
+  
+  put 'department_document/:id', to: 'departments#save_doc', as: :department_document
 
   unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
