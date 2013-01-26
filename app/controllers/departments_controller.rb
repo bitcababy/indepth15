@@ -1,5 +1,5 @@
 class DepartmentsController < ApplicationController
-	before_filter :find_department, except: [:edit_doc]
+	before_filter :find_department, except: [:edit_doc, :save_doc]
   before_filter :authenticate_user!, only: [:edit_doc]
 
 	def home
@@ -29,6 +29,33 @@ class DepartmentsController < ApplicationController
       end
     end
   end
+  
+  # PUT text_documents/1
+  # PUT text_documents/1.json
+  def save_doc
+    doc = DepartmentDocument.find params[:id]
+    if request.xhr?
+      respond_to do |format|
+        if doc.update_attributes(params[:department_document])
+          doc.unlock
+          format.html { redirect_to :back, notice: 'Document was saved.' }
+        else
+          format.json { render json: doc.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+        if doc.update_from_params(params[:department_document])
+          format.json { head :no_content }
+          format.html { redirect_to session[:goto_url], notice: 'TextDocument was successfully updated.' }
+        else
+          format.json { render json: doc.errors, status: :unprocessable_entity }
+          format.html { render action: "edit_doc", error: 'Invalid parameters' }
+        end
+      end
+    end
+  end
+  
 
   protected
   def find_department
