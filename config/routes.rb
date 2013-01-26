@@ -42,7 +42,7 @@ InDepth::Application.routes.draw do
   get "home", controller: 'departments', action: 'home'
   get "about", controller: 'departments', action: 'about'
 
-	get "courses/:id/academic_year/:year/:teacher_id/:block/assignments", to: 'courses#home_with_assignments', as: :home_with_assignments
+	get "courses/:id/year/:year/teacher/:teacher_id/block/:block", to: 'courses#home_with_assignments', as: :home_with_assignments
   get "sections/:id/assignments_pane",  to: 'sections#assignments_pane', as: :assignments_pane
 
   
