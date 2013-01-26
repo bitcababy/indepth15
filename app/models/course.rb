@@ -1,27 +1,14 @@
 class Course
   include Mongoid::Document
-  include Mongoid::Timestamps if Rails.env == 'production'
+  include Mongoid::Timestamps
+  
+  after_create :add_branches
+  after_create :add_docs
 
 	FULL_YEAR = :full_year
 	FULL_YEAR_HALF_TIME = :halftime
 	FIRST_SEMESTER = :first_semester
 	SECOND_SEMESTER = :second_semester
-
-	BRANCH_MAP = {
-		321 => 'Geometry',
-		322 => 'Geometry',
-		326 => 'Algebra',
-		331 => 'Algebra',
-		332 => 'Algebra',
-		333 => 'Algebra',
-		341 => 'Precalculus',
-		342 => ['Precalculus', 'Statistics', 'Algebra'],
-		343 => 'Discrete Math',
-		352 => 'Precalculus',
-		361 => 'Calculus',
-		371 => 'Calculus',
-		391 => 'Statistics',
-	}
 
 	DURATIONS = [FULL_YEAR, FIRST_SEMESTER, SECOND_SEMESTER, FULL_YEAR_HALF_TIME]
 	SEMESTERS = [FIRST_SEMESTER, SECOND_SEMESTER]
@@ -47,22 +34,21 @@ class Course
 	field :ha, as: :has_assignments, type: Boolean, default: true
 	field :ic, as: :in_catalog, type: Boolean, default: true
 	field :de, as: :description, type: String, default: ""
-
+  field :oc, as: :occurrences, type: Array
+  
 	field :_id, type: Integer, default: ->{ number }
 	
 	##
 	## Associations
 	##
 	has_many :sections
-
-	has_and_belongs_to_many :branches
+  has_and_belongs_to_many :branches, inverse_of: nil
 	
-	belongs_to :information, class_name: 'TextDocument', inverse_of: :owner
-	belongs_to :resources, class_name:'TextDocument', inverse_of: :owner
-	belongs_to :policies, class_name: 'TextDocument', inverse_of: :owner
-	belongs_to :news, class_name: 'TextDocument', inverse_of: :owner
-	belongs_to :description, class_name: 'TextDocument', inverse_of: :owner
-	
+	belongs_to :resources, class_name:'CourseDocument', inverse_of: :owner
+	belongs_to :policies, class_name: 'CourseDocument', inverse_of: :owner
+	belongs_to :news, class_name: 'CourseDocument', inverse_of: :owner
+	belongs_to :description, class_name: 'CourseDocument', inverse_of: :owner
+  	
 	##
 	## Scopes
 	##
@@ -90,10 +76,20 @@ class Course
 	def menu_label
 		self.full_name
 	end
-		
-	class << self
-		
-		
-	end
 
+  def add_branches
+    return unless Branch::BRANCH_MAP[number]
+    keys = Branch::BRANCH_MAP[number].to_a
+    branches = Branch.in(name: keys)
+    self.save!
+  end
+  
+  def add_docs
+    self.resources ||= CourseDocument.create!
+    self.news ||= CourseDocument.create!
+    self.policies ||= CourseDocument.create!
+    self.description ||= CourseDocument.create!
+    self.save! if self.changed?
+  end
+     
 end
