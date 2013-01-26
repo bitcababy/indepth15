@@ -1,8 +1,15 @@
 class AssignmentsController < ApplicationController
  	# POST Assignments
   # POST assignments.json
-	#   protect_from_forgery except: [:create, :update, :show]
-	# before_filter :find_assignment, only: [:show, :update, :delete]
+  protect_from_forgery except: [:create, :update, :show]
+  before_filter :find_assignment, only: [:show, :update, :delete]
+  
+  def edit
+		respond_to do |format|
+			format.html { render layout: !request.xhr? }
+    end
+  end
+  
 	# 
   ## REST methods
   # def new
@@ -103,9 +110,9 @@ class AssignmentsController < ApplicationController
 	# 	end
 	# end
 	# 
-	# protected
-	# def find_assignment
-	# 	@assigment = Assignment.find(params['id'])
-	# end
+  protected
+  def find_assignment
+    @assigment = Assignment.find(params[:id])
+  end
 
 end
