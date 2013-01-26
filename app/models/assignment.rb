@@ -1,5 +1,7 @@
 class Assignment < TextDocument
   include Mongoid::History::Trackable
+  include Mongoid::TaggableWithContext
+  include Mongoid::TaggableWithContext::AggregationStrategy::RealTime
   
   if ::Settings.bridged
   	field :assgt_id, type: Integer
@@ -17,7 +19,7 @@ class Assignment < TextDocument
                  track_update: true, 
                  track_destroy: true
                  
-   taggable :major
-   taggable :minor
-  
+   taggable :major_tags
+   taggable :minor_tags
+     
 end
