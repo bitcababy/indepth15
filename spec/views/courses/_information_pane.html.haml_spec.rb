@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "courses/_information_pane.html.haml" do
+describe "courses/_information_pane" do
 	include CourseMockHelpers
 	it "displays the course information" do
     t = mock do
@@ -9,9 +9,8 @@ describe "courses/_information_pane.html.haml" do
 		course = mock do
 			stubs(:information).returns t
 		end
-    assign(:course, course)
     view.stubs(:editable?).returns false
-		render partial: 'courses/information_pane'
+		render partial: 'courses/information_pane', locals: {course: course}
 		rendered.should have_content(t.content)
 	end
 end
