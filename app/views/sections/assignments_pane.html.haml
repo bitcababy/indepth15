@@ -10,56 +10,59 @@
 	= "#{@section.course.full_name}, Block #{@section.block}"
 
 :coffeescript
-	nameColumnWidth = "7em"
-	dateColumnWidth = "8em"
+	$(document).ready ->
+		nameColumnWidth = "7em"
+		dateColumnWidth = "8em"
+		abs = $('.assignment-block')
+		$(abs[2]).addClass 'past'
 
-	$("#current").dataTable
-		bJQueryUI: true
-		bFilter: false
-		bInfo: false
-		bPaginate: false
-		bSort: false
-		aoColumnDefs: [
-			sWidth: nameColumnWidth
-			aTargets: [0]
-		,
-			sWidth: "8em"
-			aTargets: [1]
-		]
+		$("#current").dataTable
+			bJQueryUI: true
+			bFilter: false
+			bInfo: false
+			bPaginate: false
+			bSort: false
+			aoColumnDefs: [
+				sWidth: nameColumnWidth
+				aTargets: [0]
+			,
+				sWidth: "8em"
+				aTargets: [1]
+			]
 
-	$("#upcoming").dataTable
-		bJQueryUI: true
-		bFilter: false
-		bInfo: false
-		bPaginate: false
-		bSort: false
-		aoColumnDefs: [
-			sWidth: nameColumnWidth
-			aTargets: [0]
-		,
-			sWidth: dateColumnWidth
-			aTargets: [1]
-		]
+		$("#upcoming").dataTable
+			bJQueryUI: true
+			bFilter: false
+			bInfo: false
+			bPaginate: false
+			bSort: false
+			aoColumnDefs: [
+				sWidth: nameColumnWidth
+				aTargets: [0]
+			,
+				sWidth: dateColumnWidth
+				aTargets: [1]
+			]
 
-	$("#past").dataTable
-		bServerSide: false
-		bJQueryUI: true
-		bFilter: false
-		bInfo: false
-		bPaginate: true
-		bSort: false
-		iDisplayLength: 2
-		bLengthChange: true
-		iDeferLoading: true
-		aLengthMenu: [[
-			2, 5, 10, -1
-		], [2,5,10,"All"]]
-		aoColumnDefs: [
-			sWidth: nameColumnWidth
-			aTargets: [0]
-		,
-			sWidth: dateColumnWidth
-			aTargets: [1]
-		]
-		oLanguage:
-			sLengthMenu: "Display _MENU_ past assignments"
+		$("#past").dataTable
+			bServerSide: false
+			bJQueryUI: true
+			bFilter: false
+			bInfo: false
+			bPaginate: true
+			bSort: false
+			iDisplayLength: 2
+			bLengthChange: true
+			iDeferLoading: true
+			aLengthMenu: [[
+				2, 5, 10, -1
+			], [2,5,10,"All"]]
+			aoColumnDefs: [
+				sWidth: nameColumnWidth
+				aTargets: [0]
+			,
+				sWidth: dateColumnWidth
+				aTargets: [1]
+			]
+			oLanguage:
+				sLengthMenu: "Display _MENU_ past assignments"
