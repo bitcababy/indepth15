@@ -73,7 +73,7 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 # gem 'ckeditor', '4.0.0rc1' #, :path => File.expand_path('../lib/plugins/ckeditor', __FILE__)
 # gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 # gem 'ckeditor', :git => 'git@github.com:bitcababy/ckeditor.git'
-gem 'ckeditor', '4.0.0rc1'
+gem 'ckeditor', '4.0.0.rc2', :git => 'git://github.com/galetahub/ckeditor.git'
 gem 'ruby-mysql'
 gem 'tidy_ffi'
 gem 'daemons'
@@ -84,7 +84,7 @@ gem 'yard'
 
 group :development, :test do
   gem 'heroku'
-  gem 'heroku_san'
+  # gem 'heroku_san'
 	gem 'rspec-rails'
 	gem 'watchr'#,  :git => 'git://github.com/bitcababy/watchr.git'
 	gem 'guard'
@@ -121,7 +121,6 @@ group :test do
   gem 'rspec-rails-mocha'
   gem 'websocket'
   gem 'spork'
-  gem 'ZenTest'
 	# Warden stuff
 	gem 'warden'
 	gem 'rails_warden'
