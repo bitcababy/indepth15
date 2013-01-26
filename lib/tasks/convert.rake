@@ -4,6 +4,7 @@ namespace :convert do
     require Rails.root.join('import/convert')
     Branch.delete_all
     Branch.create_all
+    Document.delete_all
 	  Mongoid.unit_of_work(disable: :all) do
 			[Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
         puts "Converting #{klass.to_s}"
