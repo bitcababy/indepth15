@@ -182,6 +182,7 @@ class Course
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
+      course.resources.content = massage_content(r)
 			course.resources.save!
 			course.policies.content = massage_content(p)
 			course.policies.save!
