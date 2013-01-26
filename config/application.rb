@@ -73,7 +73,7 @@ module InDepth
 		  g.fixture_replacement :fabrication
 		end
 
-		config.mongoid.observers = [:section_observer, :course_observer]
+		config.mongoid.observers = []
   end
 end
 
