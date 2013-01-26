@@ -20,19 +20,20 @@
 		%li
 			%a{href: '#news', title: 'News'} News
 
-	#sections= render partial: 'courses/sections_pane', object: @course
-	#information= render partial: 'courses/information_pane', object: @course
-	#resources= render partial: 'courses/resources_pane', object: @course
-	#policies= render partial: 'courses/policies_pane', object: @course
-	#news= render partial: 'courses/news_pane', object: @course
+	#sections= render'courses/sections_pane', course: @course
+	#information= render 'courses/information_pane', course: @course
+	#resources= render 'courses/resources_pane', course: @course
+	#policies= render 'courses/policies_pane', course: @course
+	#news= render 'courses/news_pane', course: @course
 #editor
 
 :coffeescript
+	# Set up tabs
 	$(document).ready ->
-		# Set up tabs
-	  $("#tabs").tabs ajaxOptions:
-	    error: (xhr, status, index, anchor) ->
-	      $(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. "
+		$("#tabs").tabs ajaxOptions:
+			heightStyle: "auto"
+			error: (xhr, status, index, anchor) ->
+				$(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. "
 
 		$('#editor').dialogForm "init",
 			width: 700
@@ -40,4 +41,3 @@
 			closeAction: "close"
 			
 		$('#editor').dialogForm 'bindLinks', $('.edit-button')
-
