@@ -4,17 +4,17 @@
 - version 3.3.7deb7
 - http://www.phpmyadmin.net
 -
-- Host: outhouse.wildwoodweb.net
-- Generation Time: Aug 21, 2012 at 01:17 PM
-- Server version: 5.0.51
-- PHP Version: 5.3.3-7+squeeze8
+- Host: db1.xoala.net
+- Generation Time: Jan 25, 2013 at 12:42 PM
+- Server version: 5.5.19
+- PHP Version: 5.3.3-7+squeeze9
 -->
 
 <pma_xml_export version="1.0">
     <!--
-    - Database: 'wmdhs'
+    - Database: 'whsmd'
     -->
-    <database name="wmdhs">
+    <database name="whsmd">
         <!-- Table teachers -->
         <table name="teachers">
             <column name="id">1</column>
@@ -25,15 +25,15 @@
             <column name="base_URL">NULL</column>
             <column name="default_room">203</column>
             <column name="phrase">temp</column>
-            <column name="photo_URL">/files/abramsj/math4/picture.jpg</column>
-            <column name="personal_hp_URL">/files/abramsj/math4/quotes.html</column>
+            <column name="photo_URL">http://www.westonmath.org/teachers/abramsj/math4/picture.jpg</column>
+            <column name="personal_hp_URL">http://www.westonmath.org/teachers/abramsj/math4/quotes.html</column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
             <column name="extra_stuff"></column>
             <column name="logged_in">0</column>
             <column name="current">0</column>
             <column name="admin_level">none</column>
-            <column name="updated_at">2012-05-11 15:25:06</column>
+            <column name="updated_at">2012-08-25 13:29:37</column>
         </table>
         <table name="teachers">
             <column name="id">2</column>
@@ -91,11 +91,11 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="personal_hp_URL">http://www.larrydavidson.com/</column>
             <column name="generic_assgts_msg">&lt;p&gt;&lt;b&gt;Note: &lt;/b&gt;&lt;i&gt;These assignments combine classwork and homework.&lt;/i&gt;&lt;/p&gt;</column>
             <column name="upcoming_assgts_msg">&lt;p&gt;&lt;b&gt;Note: &lt;/b&gt;&lt;i&gt;Upcoming assignments are subject to change, depending on class activities and various other factors out of our control.&lt;/i&gt;&lt;/p&gt;</column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/davidsonl/davidson-schedule.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://old.westonmath.org/files/davidsonl/davidsonl-schedule.pdf&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">dept</column>
-            <column name="updated_at">2010-09-01 21:20:10</column>
+            <column name="updated_at">2013-01-16 12:54:58</column>
         </table>
         <table name="teachers">
             <column name="id">5</column>
@@ -110,7 +110,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/friedmans.html&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/friedmans.html&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">0</column>
             <column name="admin_level">none</column>
@@ -133,7 +133,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">none</column>
-            <column name="updated_at">2011-01-30 19:14:47</column>
+            <column name="updated_at">2012-09-06 11:16:12</column>
         </table>
         <table name="teachers">
             <column name="id">7</column>
@@ -148,7 +148,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg">Completed assignments must exhibit clear and organized work that the reader can follow.</column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/gonzalezd.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/gonzalezd.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">0</column>
             <column name="admin_level">none</column>
@@ -167,7 +167,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="personal_hp_URL">none</column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/grante.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/grante.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">0</column>
             <column name="admin_level">none</column>
@@ -243,7 +243,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/hosmerc.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/hosmerc.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">none</column>
@@ -337,11 +337,11 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="base_URL">NULL</column>
             <column name="default_room">6</column>
             <column name="phrase">there are only 24 hours in a day</column>
-            <column name="photo_URL">/files/mclaughlinj/admc/Picture 1.png</column>
+            <column name="photo_URL">http://www.westonmath.org/teachers/mclaughlinj/admc/Picture 1.png</column>
             <column name="personal_hp_URL">http://home.attbi.com/~mrpaul/index.html</column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/mclaughlinj.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/mclaughlinj.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">1</column>
             <column name="current">1</column>
             <column name="admin_level">dept</column>
@@ -359,9 +359,9 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="photo_URL"></column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg">&lt;p&gt; Note: Check the due dates of the current assignment carefully; once in a while the current assignment listed here may not be the &quot;current assignment&quot; for your section because different sections may have different due dates.&lt;/p&gt;
-  &lt;h2&gt; Remember: assignments without work will not receive credit.&lt;/h2&gt;</column>
+&lt;p&gt; &lt;h2&gt; Remember: assignments without work will not receive credit.&lt;/h2&gt; &lt;/p&gt;</column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/monzj.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/monzj.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">none</column>
@@ -380,7 +380,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/papagiannisk.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/papagiannisk.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">0</column>
             <column name="admin_level">none</column>
@@ -399,7 +399,7 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/reinhardtc.html&quot;&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/reinhardtc.html&quot;&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">0</column>
             <column name="admin_level">none</column>
@@ -583,18 +583,15 @@ Note: To check for earlier assignment, scroll done to the bottom.</column>
             <column name="base_URL">NULL</column>
             <column name="default_room">7</column>
             <column name="phrase">weston is not new london</column>
-            <column name="photo_URL">teachers/fidlerb/n14100561_31325776_5272.jpg</column>
+            <column name="photo_URL">files/fidlerb/n14100561_31325776_5272.jpg</column>
             <column name="personal_hp_URL"></column>
-            <column name="generic_assgts_msg">Here is a link to my schedule:
-&lt;a href=&quot;http://schedule.westonmath.org/faculty/schedule/fidlerb&quot;&gt; Mr Fidler's Schedule&lt;/a&gt;. Please do all your homework in pencil.  Homework is due at the start of class, and must be neatly completed with work for credit.  If problems from the book are assigned, copy the problem onto your homework, then give the answer with your work.  
-
-Remember: Don't give up on any problem, ever.  Even though it may be challenging, you can do it if you think about it, write down as much as you can, and believe in yourself.</column>
+            <column name="generic_assgts_msg">Please complete all assignments in a timely manner. If you are stuck, it is critical that you see me outside of class. If you miss a class, please do as much as you can of the posted assignment, then see me with any questions.  Enjoy!</column>
             <column name="upcoming_assgts_msg"></column>
             <column name="extra_stuff"></column>
             <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">none</column>
-            <column name="updated_at">2009-12-15 07:18:17</column>
+            <column name="updated_at">2012-09-24 12:49:32</column>
         </table>
         <table name="teachers">
             <column name="id">24</column>
@@ -628,7 +625,7 @@ Remember: Don't give up on any problem, ever.  Even though it may be challenging
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg"></column>
             <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff">&lt;a href=&quot;/files/schedule/friedmans.html&gt;Schedule&lt;/a&gt;</column>
+            <column name="extra_stuff">&lt;a href=&quot;http://www.westonmath.org/teachers/schedule/friedmans.html&gt;Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">0</column>
             <column name="admin_level">none</column>
@@ -683,13 +680,13 @@ Remember: Don't give up on any problem, ever.  Even though it may be challenging
             <column name="phrase">Lincoln and Sudbury share no common border.</column>
             <column name="photo_URL"></column>
             <column name="personal_hp_URL"></column>
-            <column name="generic_assgts_msg"></column>
-            <column name="upcoming_assgts_msg"></column>
-            <column name="extra_stuff"></column>
+            <column name="generic_assgts_msg">Below you'll find the current assignment.  However, whatever was assigned in class trumps the assignment below.  If you have any questions, please contact me.</column>
+            <column name="upcoming_assgts_msg">If there's an upcoming test or quiz and you're feeling underprepared, please send me an email and schedule a time to meet.</column>
+            <column name="extra_stuff">&lt;a href=&quot;/files/abendb/Mr. Abend's Schedule.pdf&quot;&gt;Mr. Abend's Schedule&lt;/a&gt;</column>
             <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">none</column>
-            <column name="updated_at">2012-08-14 14:43:17</column>
+            <column name="updated_at">2012-10-16 08:44:00</column>
         </table>
         <table name="teachers">
             <column name="id">29</column>
@@ -699,7 +696,7 @@ Remember: Don't give up on any problem, ever.  Even though it may be challenging
             <column name="title">Ms.</column>
             <column name="base_URL">NULL</column>
             <column name="default_room">0</column>
-            <column name="phrase">Toto, I have a feeling we're not in the Middle School anymore.</column>
+            <column name="phrase">Toto, we're not in the Middle School.</column>
             <column name="photo_URL"></column>
             <column name="personal_hp_URL"></column>
             <column name="generic_assgts_msg"></column>
@@ -708,7 +705,7 @@ Remember: Don't give up on any problem, ever.  Even though it may be challenging
             <column name="logged_in">0</column>
             <column name="current">1</column>
             <column name="admin_level">none</column>
-            <column name="updated_at">2012-08-14 14:15:15</column>
+            <column name="updated_at">2012-09-10 08:37:43</column>
         </table>
     </database>
 </pma_xml_export>

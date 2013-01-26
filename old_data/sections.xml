@@ -4,17 +4,17 @@
 - version 3.3.7deb7
 - http://www.phpmyadmin.net
 -
-- Host: outhouse.wildwoodweb.net
-- Generation Time: Aug 21, 2012 at 01:22 PM
-- Server version: 5.0.51
-- PHP Version: 5.3.3-7+squeeze8
+- Host: db1.xoala.net
+- Generation Time: Jan 25, 2013 at 12:41 PM
+- Server version: 5.5.19
+- PHP Version: 5.3.3-7+squeeze9
 -->
 
 <pma_xml_export version="1.0">
     <!--
-    - Database: 'wmdhs'
+    - Database: 'whsmd'
     -->
-    <database name="wmdhs">
+    <database name="whsmd">
         <!-- Table sections -->
         <table name="sections">
             <column name="dept_id">1</column>

@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Sep 10, 2012 at 12:36 PM
+- Generation Time: Jan 25, 2013 at 12:39 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -120,8 +120,10 @@ sometimes you may not be able to use your calculator.&lt;/p&gt;
 but you are usually allowed to use your notes on quizzes.
 &lt;/p&gt;
 
-&lt;p&gt;There will be an optional retake for each test or quiz,
-capped at a maximum grade of 83%.&lt;/p&gt;
+&lt;p&gt;There will be an optional retake for each test,
+counted as the sum of 1/3 of the original grade and 2/3 of the retake grade,
+capped at a maximum grade of 83%
+There are no retakes for quizzes, but the lowest quiz is dropped in each term.&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
 
@@ -168,8 +170,6 @@ Message!&lt;/a&gt;&lt;/p&gt;
 &lt;/p&gt; 
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-09-08 06:59:51</column>
-            <column name="sent">0</column>
         </table>
         <table name="courses">
             <column name="number">322</column>
@@ -324,8 +324,6 @@ The year is divided into four major topics of unequal length:
 
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">326</column>
@@ -380,8 +378,6 @@ http://www.interactivestuff.org/sums4fun/decchall.html&quot;&gt;The Decimal Chal
 &lt;p&gt;&lt;a href=&quot;http://www.funbrain.com/algebra/index.html&quot;&gt;Order of Operations&lt;/a&gt;&lt;/p&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">331</column>
@@ -642,8 +638,6 @@ classmates learn by participating fully in all class activities, discussions, an
 
 &lt;P&gt;&lt;/p&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-09-04 10:53:00</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">332</column>
@@ -915,8 +909,6 @@ tests or quizzes right away.&lt;/p&gt;
 --&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">333</column>
@@ -996,8 +988,6 @@ href=&quot;http://www.brainbashers.com/puzzles.asp&quot;&gt;Brainbashers&lt;/a&g
 &lt;A
 HREF=&quot;http://www.cryptograms.org/&quot;&gt;Try Solving Cryptograms!&lt;/a&gt;</column>
             <column name="has_assgts">0</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">334</column>
@@ -1167,8 +1157,6 @@ Whether you volunteer or not, you will be called on from time to time anyway, an
 &lt;li&gt;&lt;a href=&quot;http://www.zabaware.com/webhal&quot;&gt;Web Hal&lt;/a&gt;&lt;/li&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">336</column>
@@ -1276,8 +1264,6 @@ knowledge to the task of writing a video game or other substantial application.&
 &lt;/ul&gt;
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">341</column>
@@ -1374,13 +1360,20 @@ The adjusted score on the original version will be multiplied by 1/3, the adjust
 
 </column>
             <column name="resources">
-
 &lt;h2&gt;Links&lt;/h2&gt;
 
 &lt;ul&gt;
+&lt;li&gt;Online texts:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.opentextbookstore.com/precalc/1.2/Precalc.pdf&quot;&gt;Precalculus: An Investigation of Functions, by Lippman and Rasmussen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://stitz-zeager.com/Precalculus/Stitz_Zeager_Open_Source_Precalculus_files/SPreCalc07152011.pdf&quot;&gt;Precalculus, by Stitz and Zeager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mecmath.net/trig/trigbook.pdf&quot;&gt;Trigonometry, by Corral&lt;/a&gt;&lt;/li&gt;&lt;br /&gt;
+
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/teachers/davidsonl/precalch/prerequisites.pdf&quot;&gt;Prerequisites: skills and practice problems&lt;/a&gt;.&lt;br /&gt;
 &lt;br /&gt;
 &lt;/li&gt;
+
 &lt;li&gt;Fractal classwork on the Web:
 		&lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;http://tabish.freeshell.org/physics/fractal/frac.html&quot;&gt;Zoom in on Sierpinski&amp;#8217;s Triangle!&lt;/a&gt;&lt;/li&gt;
@@ -1462,7 +1455,8 @@ The adjusted score on the original version will be multiplied by 1/3, the adjust
 &lt;br&gt;
 &lt;/li&gt;
 
-&lt;li&gt;&lt;b&gt;Music &amp; Trig&lt;/b&gt; from the EECS 20 course at UC Berkeley
+&lt;li&gt;&lt;b&gt;
+Music &amp; Trig&lt;/b&gt; from the EECS 20 course at UC Berkeley
 (except for the last two links in this list):&lt;br /&gt;
 &lt;br /&gt;
 &lt;ul&gt;
@@ -1488,13 +1482,13 @@ The adjusted score on the original version will be multiplied by 1/3, the adjust
 
 
 
-&lt;p&gt;The final exam
-will be held on Wednesday, 6/13.
-You may use a calculator and &lt;i&gt;two &lt;/i&gt;3&quot;-by-5&quot; notecards during Part A.
-Here are some &lt;a href=&quot;/teachers/davidsonl/precalch/final-exam-review.pdf &quot;&gt;practice problems&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/precalch/final-exam-review-2012-solutions.pdf &quot;&gt;solutions thereto&lt;/a&gt;.
+&lt;p&gt;The fourth test of the year
+will be held on Tuesday, 1/8.
+You may use a calculator and &lt;i&gt;one &lt;/i&gt;3&quot;-by-5&quot; notecard during part of the test.&lt;!-- 
+Here are some &lt;a href=&quot;/teachers/davidsonl/precalch/final-exam-review.pdf &quot;&gt;practice problems&lt;/a&gt; and &lt;a href=&quot;/teachers/davidsonl/precalch/final-exam-review-2012-solutions.pdf &quot;&gt;solutions thereto&lt;/a&gt;. --&gt;
 &lt;!--Topics will be announced on or before 12/8.  --&gt;
-&lt;!-- You will be well-prepared if you can do the following: --&gt;
-The structure of the exam is as follows:
+ You will be well-prepared if you can do the following: 
+&lt;!--  The structure of the exam is as follows:
 &lt;/p&gt;
 &lt;b&gt;&lt;span style=&quot;font-size: 120%; text-decoration: underline;&quot;&gt;Part A&lt;/span&gt;&lt;/b&gt;
 &lt;li&gt;solve a trig equation (8 points)&lt;/li&gt;
@@ -1509,44 +1503,43 @@ The structure of the exam is as follows:
 &lt;li&gt;a problem with sums and limits (6 points)&lt;/li&gt;
 &lt;li&gt;a rational function problem (8 points)&lt;/li&gt;
 &lt;li&gt;a mathematical induction proof (8 points)&lt;/li&gt;
-&lt;li&gt;a complex number problem (6 points)&lt;/li&gt;
+&lt;li&gt;a complex number problem (6 points)&lt;/li&gt; --&gt;
 
 &lt;ol&gt;  
 			
-&lt;!-- &lt;li&gt;Represent vectors and complex numbers in graphs, polar form, and rectangular form.&lt;br&gt;&lt;br&gt;
-&lt;/li&gt;  --&gt;
 
-&lt;!-- &lt;li&gt;Use the appropriate form of a vector or complex number for any particular problem.&lt;br&gt;&lt;br&gt;
-&lt;/li&gt;  --&gt;
+
+&lt;li&gt;Use the appropriate form of a &lt;!-- vector or  --&gt;complex number for any particular problem.&lt;br&gt;&lt;br&gt;
+&lt;/li&gt; 
 			
-&lt;!-- &lt;li&gt;Represent complex numbers in graphs, polar form, &lt;i&gt;cis &lt;/i&gt;form, and rectangular form.&lt;br&gt;&lt;br&gt;
-&lt;/li&gt; --&gt;
+&lt;li&gt;Represent complex numbers in graphs, polar form,&lt;!--  &lt;i&gt;cis &lt;/i&gt;form, --&gt; and rectangular form.&lt;br&gt;&lt;br&gt;
+&lt;/li&gt;
 
 &lt;!-- &lt;li&gt;Use Newton&amp;#8217;s Method to find roots of complex numbers.&lt;br&gt;&lt;br&gt;
 &lt;/li&gt; --&gt;
 	
-&lt;!-- &lt;li&gt;Without the aid of a calculator, perform basic arithmetic and algebra (sums, differences, products, quotients, powers, and roots) on complex numbers, including appropriate use of conjugates.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
+&lt;li&gt;Without the aid of a calculator, perform basic arithmetic and algebra (sums, differences, products, quotients, powers, and roots) on complex numbers, including appropriate use of conjugates.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  
 
-&lt;!--  &lt;li&gt;Solve quadratic equations with complex as well as real solutions.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
+&lt;li&gt;Solve quadratic equations with complex as well as real solutions.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 
-&lt;!--  &lt;li&gt;Understand how to plot graphs of equations using polar coordinates.&lt;br /&gt;
+ &lt;li&gt;Understand how to plot graphs of equations using polar coordinates.&lt;br /&gt;
 &lt;br /&gt;
-&lt;/li&gt; --&gt;
+&lt;/li&gt; 
 
  &lt;!-- &lt;li&gt;Find the orbit of a complex number for a given function, and thereby determine whether that seed is a prisoner or an escapee and specifically what its fate is.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
 
 &lt;!--  &lt;li&gt;Find fixed points and periods for iteration for a function of a complex number.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
 
-&lt;!-- &lt;li&gt;
-Sketch any iteration of an unfamiliar geometric fractal for which you are given the initiator (seed) and generator (rule for iterating), and find its perimeter and area if they are based on simple geometry.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
+ &lt;li&gt;
+Sketch any iteration of an unfamiliar geometric fractal for which you are given the initiator (seed) and generator (rule for iterating), and find its perimeter and area if they are based on simple geometry.&lt;br&gt;&lt;br&gt;&lt;/li&gt; 
 
 &lt;!--  &lt;li&gt;
 Find the fractal dimension for any classical fractal.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
  			 --&gt;
 
-&lt;!--  &lt;li&gt;Convert between radians and degrees (in both directions).&lt;br /&gt;
+ &lt;li&gt;Convert between radians and degrees (in both directions).&lt;br /&gt;
 &lt;br /&gt;
-&lt;/li&gt;  --&gt;
+&lt;/li&gt; 
 
 &lt;!-- &lt;li&gt;Determine whether a given point is in a given function&amp;#146;s Filled Julia Set.&lt;br&gt;&lt;br&gt;
 &lt;/li&gt; --&gt;
@@ -1555,15 +1548,15 @@ Find the fractal dimension for any classical fractal.&lt;br&gt;&lt;br&gt;&lt;/li
 and interpret the connection between the two.&lt;/span&gt;&lt;br&gt;&lt;br&gt;
 &lt;/li&gt;  --&gt;
 
-&lt;!-- &lt;li&gt;Know and apply the sine, cosine, and tangent functions, from the original SOH-CAH-TOA definitions through the expansion to obtuse angles to the unit circle definitions.
+&lt;!--  &lt;li&gt;Know and apply the sine, cosine, and tangent functions, from the original SOH-CAH-TOA definitions through the expansion to obtuse angles to the unit circle definitions.
 &lt;br /&gt;
 &lt;br /&gt;
-&lt;/li&gt;   --&gt;
+&lt;/li&gt; --&gt;
 
-&lt;!-- &lt;li&gt;Compute values and sketch graphs of wrapping functions for any geometric object.
+&lt;!--  &lt;li&gt;Compute values and sketch graphs of wrapping functions for any geometric object.
 &lt;br /&gt;
 &lt;br /&gt;
-&lt;/li&gt;   --&gt;
+&lt;/li&gt;  --&gt;
 
 
 &lt;!--&lt;li&gt; &lt;i&gt;Notecard section only&lt;/i&gt;: Recall the formulas for sine and cosine of sums of
@@ -1576,34 +1569,36 @@ cosine, and tangent; apply all of these.&lt;br&gt;&lt;br&gt;
 &lt;br /&gt;
 &lt;/li&gt; --&gt;
 
-&lt;!-- &lt;li&gt;Find sides, angles, and all trigonometric functions for angles that are multiples of &amp;pi;/6 and &amp;pi;/4 (30&amp;deg; and 45&amp;deg;) without a calculator.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
+ &lt;li&gt;Find sides, angles, and all trigonometric functions for angles that are multiples of &amp;pi;/6 and &amp;pi;/4 (30&amp;deg; and 45&amp;deg;) without a calculator.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 
 &lt;!-- &lt;li&gt;Find the sine, cosine, tangent, secant, cosecant, and cotangent of any input, paying proper attention to domains and ranges.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
 			 
-&lt;!-- &lt;li&gt;Find the values of the inverse trig functions for all inputs in their domains, and correctly use the limited ranges of the arcsine, arccosine,
-and arctangent functions.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
+&lt;!--  &lt;li&gt;Find the values of the inverse trig functions for all inputs in their domains, and correctly use the limited ranges of the arcsine, arccosine,
+and arctangent functions.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
 			
 &lt;!-- &lt;li&gt;Sketch graphs of all six trig functions and the inverses of sin, cos, and tan.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
 				
  &lt;!-- &lt;li&gt;Interpret periodic functions as wrapping functions.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;   
 
-&lt;!-- &lt;li&gt;Construct and apply sinusoidal models of periodic phenomena with appropriate periods, amplitudes, vertical shifts, and horizontal shifts.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
-
+&lt;!--  &lt;li&gt;Construct and apply sinusoidal models of periodic phenomena with appropriate periods, amplitudes, vertical shifts, and horizontal shifts.&lt;br&gt;&lt;br&gt;&lt;/li&gt; 
+ --&gt;
 &lt;!-- &lt;li&gt;Construct and interpret graphs of musical tones, finding and using frequencies and amplitudes as needed.&lt;br /&gt;
 &lt;br /&gt;
-&lt;/li&gt; --&gt;
-
-&lt;!-- &lt;li&gt;Find and apply frequencies of notes in any given equal-tempered scale (there&amp;#8217;s no need to memorize any particular frequency or any particular scale).&lt;br /&gt;
-&lt;br /&gt;
 &lt;/li&gt;  --&gt;
+&lt;!-- 
+ &lt;li&gt;Find and apply frequencies of notes in any given equal-tempered scale (there&amp;#8217;s no need to memorize any particular frequency or any particular scale).&lt;br /&gt; 
+&lt;br /&gt;
+&lt;/li&gt;--&gt;
 	
 &lt;!--  &lt;li&gt;Perform appropriate transformations of equations in order to translate, reflect, and stretch their graphs.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
   
-&lt;!-- &lt;li&gt;Solve trigonometric equations using sin, cos, tan, sec, csc, and cot.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;!-- &lt;li&gt;Solve trigonometric equations using sin, cos, and tan.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
 
- &lt;li&gt;Use and prove trig identities.&lt;br&gt;&lt;br&gt;&lt;/li&gt; 
+&lt;!-- &lt;li&gt;Solve trigonometric equations using sin, cos, tan, sec, csc, and cot.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
 
- &lt;li&gt;Understand and apply domain restrictions in both of these situations.&lt;br&gt;&lt;br&gt;&lt;/li&gt;   --&gt;
+ &lt;!-- &lt;li&gt;Use and prove trig identities.&lt;br&gt;&lt;br&gt;&lt;/li&gt;  --&gt;
+
+ &lt;!-- &lt;li&gt;Understand and apply domain restrictions in both of these situations.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
 
 &lt;!--   &lt;li&gt;Use the Law of Sines and Law of Cosines appropriately to solve triangles.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
 &lt;!-- 			
@@ -1641,12 +1636,10 @@ including use of sigma notation.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
 		
 &lt;!-- &lt;li&gt;Prove theorems by mathematical induction.&lt;br&gt;&lt;br&gt;&lt;/li&gt; --&gt;
 
-&lt;!--  &lt;li&gt;Explain all of the above clearly and accurately.&lt;/li&gt;  --&gt;
+  &lt;li&gt;Explain all of the above clearly and accurately.&lt;/li&gt;  
 &lt;/ol&gt; 
 </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">342</column>
@@ -1755,8 +1748,6 @@ Fractal Geometry of the Mandelbrot Set&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">343</column>
@@ -2239,8 +2230,6 @@ HREF=&quot;http://serendip.brynmawr.edu/playground/pd.html&quot;&gt;Prisoner's D
 &lt;A
 HREF=&quot;http://www.iterated-prisoners-dilemma.net/&quot;&gt;Repeated Prisoner's Dilemma&lt;/a&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">352</column>
@@ -2389,8 +2378,6 @@ need to ask for it. You are not alone in this venture.&lt;/P&gt;</column>
 &lt;P&gt; For a copy of the Z- or T-probability tables, click on &lt;A HREF=&quot;/teachers/monzj/precalc2/NormalProbabilityTables.pdf&quot;&gt;Z- and T-TABLES&lt;/A&gt;.&lt;/P&gt;&lt;&lt;P&gt;For the MINITAB Random Rectangle sheet, click &lt;A HREF=&quot;/teachers/monzj/precalc2/Random Rectangles.MPJ&quot;&gt;HERE&lt;/A&gt;.&lt;/P&gt;
 &lt;P&gt;For the Sampling Distributions Activity click &lt;A HREF=&quot;/teachers/monzj/precalc2/Sampling SIM_1.exe&quot;&gt;HERE.&lt;/A&gt;&lt;/P&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">361</column>
@@ -2571,8 +2558,6 @@ CALCULUS&lt;/font&gt;&lt;/center&gt;&lt;/h1&gt;
 http://www.elmhurst.edu/~abigailh/fa00/math151-01/m151-01worksheets/worksheet8/worksheet8key.html&quot;&gt;http://www.elmhurst.edu/~abigailh/fa00/math151-01/m151-01worksheets/worksheet8/worksheet8key.html
 &lt;/a&gt;&lt;/p&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-09-04 09:15:24</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">371</column>
@@ -2648,8 +2633,6 @@ Solutions that are identical may not be given credit.&lt;/P&gt;
             <column name="resources">&lt;P&gt;For information about the AP Exam in BC Calculus go to &lt;A HREF=&quot;http://apcentral.collegeboard.com/article/0,1281,151-162-0-4348,00.html&quot;&gt;AP
 Central&lt;/A&gt;.&lt;/P&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">381</column>
@@ -2806,8 +2789,6 @@ Information from the College Board can be obtained at
 &lt;br&gt;
 &lt;A HREF=&quot;http://www.westonmath.org/teachers/mccowand/apcs/Monkey/SpanishPoems.txt&quot;&gt; Spanish poems&lt;/a&gt; </column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-08-28 14:21:49</column>
-            <column name="sent">1</column>
         </table>
         <table name="courses">
             <column name="number">391</column>
@@ -2892,8 +2873,6 @@ Text:  &lt;i&gt;Stats: Modeling the World&lt;/i&gt;, Bock, Velleman, DeVeaux, Pe
 Central&lt;/A&gt;.&lt;/P&gt;
 &lt;P&gt;For the activity on Normal Quantile Plots go to &lt;A HREF=&quot;/teachers/gonzalezd/apstats/normalplot.mpj&quot;&gt;NORMAL PLOTS&lt;/A&gt;.&lt;/P&gt;</column>
             <column name="has_assgts">1</column>
-            <column name="updated_at">2012-09-04 09:10:26</column>
-            <column name="sent">1</column>
         </table>
     </database>
 </pma_xml_export>

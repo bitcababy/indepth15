@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Nov 20, 2012 at 11:53 AM
+- Generation Time: Jan 25, 2013 at 12:39 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -4859,6 +4859,7 @@ While you're not &lt;i&gt;required &lt;/i&gt;to type your answers, you may want 
             <column name="assgt_id">615111</column>
             <column name="teacher_id">davidsonl</column>
             <column name="content">&lt;ul&gt;
+&lt;li&gt;Study &lt;a href=&quot;/files/davidsonl/geomh/Euclid1.pdf&quot;&gt;Euclid I&lt;/a&gt;, which you completed it class.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Read Section 1.5, and take notes about midpoints and bisectors.&lt;br /&gt;
 In Section 1.5, p. 34, do problems #18 (3), 19 (3), *21 (3), 22 (6), 23 (6), *24 (6).&lt;br /&gt;
 In Section 1.8, p. 48, do problem # *6 (3).&lt;br /&gt;&lt;br /&gt;
@@ -4911,8 +4912,28 @@ as well.
         <table name="assignments">
             <column name="assgt_id">615136</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">Study for the test.
-Topics will be announced in this space on or before 11/25.</column>
+            <column name="content">Practice for the test!
+The best way to do this is to return to earlier quizzes and homework assignments, cover up your answers, and do the problems again.
+&lt;br /&gt;&lt;br /&gt;
+Notes and calculators are not allowed. Be sure that you have tools with you:
+pencils,
+a straightedge, and a compass. You should have some other work to do in case you finish before the end of the period. You will not be given extra time unless you have a legal right to it because of an IEP or a 504, in which case you must arrange for the extra time in advance and must begin and end the test on the same day.
+&lt;br /&gt;&lt;br /&gt;
+You are responsible for knowing the material in assignments #1–25,
+but primarily in #20–25 (i.e., since the last test).
+Any or all of the following topics might appear on the test:
+&lt;ul&gt;&lt;li&gt;Isometries&lt;/li&gt;
+&lt;li&gt;Logic concepts, especially forms of conditionals&lt;/li&gt;
+&lt;li&gt;Definitions&lt;/li&gt;
+&lt;li&gt;Angles and bisectors&lt;/li&gt;
+&lt;li&gt;Complements and supplements&lt;/li&gt;
+&lt;li&gt;Perpendicularity&lt;/li&gt;
+&lt;li&gt;Linear systems and quadratics&lt;/li&gt;
+&lt;li&gt;Constructions&lt;/li&gt;
+&lt;li&gt;Definitions, constructions, and equations for the four basic triangle centers&lt;/li&gt;
+&lt;li&gt;Congruence, especially simple congruent triangle proofs&lt;/li&gt;
+&lt;/ul&gt;
+</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615144</column>
@@ -4970,7 +4991,26 @@ Finally, find the coordinates of the centroid of &amp;Delta;OAK.
         <table name="assignments">
             <column name="assgt_id">615146</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">TBA</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read Sections 3.6 and 3.7, and take notes
+about the types of triangles and the two theorems
+relating to isosceles triangles.
+Abbreviations will be given in class.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;Read the sample proofs on p. 144 in order to
+compare two-column proofs with paragraph proofs.&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;In Section 3.6, p. 146, do # *8 (4),
+*10 (4),
+13 (4),
+15 (6),
+*16 (6).&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;In Section 3.7, p. 154, do # *12 (4),
+*14 [&lt;i&gt;read it carefully&lt;/i&gt;] (6),
+19 (6),
+22 (8),
+*23 (8),
+25 (8).&lt;/li&gt;
+&lt;/ul&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615160</column>
@@ -4994,12 +5034,468 @@ In section 3.8 do problems #10, 12, 15, 16</column>
         <table name="assignments">
             <column name="assgt_id">615190</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">If you did not complete the &lt;a href=&quot;/teachers/gabrinerd/geomh/TriangleCentersLab.pdf&quot;&gt;Triangle Centers Lab&lt;/a&gt; then finish it on your own.&lt;br&gt;Be prepared to discuss it in class.&lt;br&gt;&lt;br&gt;Complete the &lt;a href=&quot;/teachers/gabrinerd/geomh/SlopeEquationsLines.pdf&quot;&gt;Slope and Equations of Lines&lt;/a&gt; practice. </column>
+            <column name="content">If you did not complete the &lt;a href=&quot;/teachers/gabrinerd/geomh/TriangleCentersLab.pdf&quot;&gt;Triangle Centers Lab&lt;/a&gt; then finish it on your own.&lt;br&gt;Be prepared to discuss it in class.&lt;br&gt;&lt;br&gt;Complete the &lt;a href=&quot;/teachers/gabrinerd/geomh/SlopeEquationsLines.pdf&quot;&gt;Slope and Equations of Lines&lt;/a&gt; practice. 
+&lt;br&gt;&lt;br&gt;
+Here are the answer keys:&lt;br&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/teachers/gabrinerd/geomh/MediansKey.pdf&quot;&gt;Centroid (the hard way)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/teachers/gabrinerd/geomh/CircumcenterKey.pdf&quot;&gt;Circumcenter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/teachers/gabrinerd/geomh/AltitudesKey.pdf&quot;&gt;Orthocenter&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615206</column>
             <column name="teacher_id">davidsonl</column>
             <column name="content">&lt;img src=&quot;/teachers/davidsonl/geomh/thanksgiving11.png&quot; /&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615247</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read Sections 3.8 and 4.1, and take notes &lt;i&gt;only &lt;/i&gt;about the HL
+Postulate (on p. 156).
+Please ignore the label of “detour proofs” (on p. 169),
+although you still need to be able to do such proofs.
+Also ignore the “midpoint formula” (on p. 170),
+as you already know how to find a midpoint on a coordinate grid.
+As always, study the sample problems and their solutions.
+&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;In Section 3.8, p. 159, do # *7 (6), 12 (6), *14 (6), 16 (8).&lt;br&gt;&lt;br&gt;&lt;/li&gt;
+&lt;li&gt;In Section 4.1, p. 173, do # *7 (6), *9 (6), 10 (6), 13 (8), 15 (6), *16 (8), 17 (8).&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615249</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 4.2, then do problems  8, 9, 12, 13, 14.&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615250</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 4.3 and do problems 9, 10, 12, 14</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615251</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 4.4 and do problems 4, 5, 7, 9, 10, 14, 19, 21, 23</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615252</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 4.5 and do problems 1, 2 and 4.&lt;br&gt;
+Read and study section 4.6 and do problems 8, 10, 13, 14, 17, and 18.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615253</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 5.1 and do problems 2,7,10,14,and 15.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615254</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 5.2 and do problems 12, 13, 17, 20, 22, 25, 27.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615255</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 5.3 and do problems 10, 14, 17, 22, 23, 28 and 30.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615256</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Test Today&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;Indirect Proof&lt;/li&gt;
+&lt;li&gt;Equidistance Theorems&lt;/li&gt;
+&lt;li&gt;Parallel Lines and Associated Angles
+&lt;ul&gt;
+  &lt;li&gt;Corresponding Angles&lt;/li&gt;
+  &lt;li&gt;Alternate Interior Angles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;&lt;li&gt;Proving Lines Parallel&lt;/li&gt;
+&lt;li&gt;Proofs Without Diagrams&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615260</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">No ergs: do all of this.
+&lt;ol&gt;
+&lt;li&gt;Read the NPR report on Persistence (&lt;a href=&quot;http://www.npr.org/blogs/health/2012/11/12/164793058/struggle-for-smarts-how-eastern-and-western-cultures-tackle-learning&quot;&gt;tinyurl.com/ch3zyz8&lt;/a&gt;) and my response to it (&lt;a href=&quot;http://blog.larrydavidson.com/index.php/2012/11/12/persistence/&quot;&gt;tinyurl.com/d5lkovb&lt;/a&gt;).
+Be prepared to discuss both documents in class on Wednesday.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/geomh/equidistance.pdf&quot;&gt;Equidistance&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615261</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Calculators will be allowed from now on (almost always).&lt;/li&gt;
+&lt;li&gt;Deadline for retakes on Quiz #4 is Thursday, 12/13.
+Deadline for retakes on Test #3 is Tuesday, 12/18.&lt;/li&gt;
+&lt;li&gt;Be sure you have your test with you in class, as we will be going over it in more detail. (We were quite rushed on Wednesday!)&lt;/li&gt;
+&lt;li&gt;Read Section 4.4, including the sample problems on pages 186-187.
+Be sure you can interpret the second theorem in the section,
+the one that we’re initially calling Weasley’s Theorem.
+When it says “each,” it means that one point is equidistant from the
+endpoints of the line segment &lt;i&gt;and &lt;/i&gt;that the other point is also equidistant from the
+endpoints of the line segment.
+&lt;/li&gt;
+&lt;li&gt;Section 4.4,
+p. 189, #
+*11(6),
+13 (8),
+16 (8),
+19 (8),
+*20 (10),
+21 (10),
+23 (10).
+Use equidistance theorems, not congruent triangles!
+&lt;/li&gt;
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615262</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;&lt;li&gt;We will use the following abbreviations for the Equidistance theorems:&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;Theorem 24 is now called &lt;b&gt;2ED &amp;rarr; PB&lt;/b&gt;.
+(This stands for “If 2 points are equidistant...then they determine the perpendicular bisector...”)&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;Theorem 25 is now called &lt;b&gt;1PB &amp;rarr; ED&lt;/b&gt;.
+(This stands for “Any 1 point on the perpendicular bisector...is equidistant...”)&lt;br /&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Chapter 4 Review Problems, p. 208, # *11 (6), *13 (8), 14 (8), 15 (8), *16 (8), *18 (6), 20 (8), 21 (8), 22 (8).&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615263</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Finish reading Plato&amp;#8217;s &amp;#8220;&lt;a href=&quot;/files/davidsonl/geomh/Platos-cave.Bloom.pdf&quot;&gt;Allegory of the Cave&lt;/a&gt;.&amp;#8221;
+(You may  want to start over again from the beginning,
+even though we will have read much of it aloud in class by this point.)
+Then write or type answers to the following questions:
+&lt;ol&gt;
+&lt;li&gt;Some readers think that the people in Plato’s cave are seeing shadows
+of real objects.
+For instance, they see a shadow of a dog, though they imagine that they are seeing a real dog.
+But it’s actually even more indirect than that.
+Explain what the people are really seeing.
+(Hint: Read section 515&lt;i&gt;a &lt;/i&gt;again.)&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;When we draw a square, to what extent is it &lt;i&gt;really &lt;/i&gt;a square? Be specific!&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Suppose we &lt;i&gt;constructed &lt;/i&gt;the square.
+How does that change your answer to the previous question?&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;How &lt;i&gt;real &lt;/i&gt;is the number –3? How about 1/3? How about 3?
+Is one of these more real than the others?&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Who is the person who “sees the light” in the dialog?
+If necessary, read section 516 again.
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Explain Socrates’s remark in 518&lt;i&gt;c&lt;/i&gt;: “Education is not what the professions
+of certain men assert it to be.
+They presumably assert that they put into the soul knowledge that isn’t in it,
+as though they were putting sight into blind eyes.”&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Draw a picture of what Plato is describing.
+Label anything in the picture that won’t be clear to your audience.
+It doesn’t have to be a work of art, but it does need to show accurately what Plato is describing.
+Be prepared to share your picture with the class.&lt;/li&gt;
+&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615264</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Practice for the test!
+The best way to do this is to return to earlier quizzes and homework assignments, cover up your answers, and do the problems again.
+&lt;br /&gt;&lt;br /&gt;
+Notes are not allowed, but now you may use calculators.
+There will be no constructions, so you don’t need
+a straightedge or a compass.
+You should have some other work to do in case you finish before the end of the period. You will not be given extra time unless you have a legal right to it because of an IEP or a 504, in which case you must arrange for the extra time in advance and must begin and end the test on the same day.
+&lt;br /&gt;&lt;br /&gt;
+You are responsible for knowing the material in assignments #1–31,
+but primarily in #26–31 (i.e., since the last test).
+Any or all of the following topics might appear on the test:
+&lt;ul&gt;&lt;li&gt;Isometries&lt;/li&gt;
+&lt;li&gt;Logic concepts, especially forms of conditionals&lt;/li&gt;
+&lt;li&gt;Definitions&lt;/li&gt;
+&lt;li&gt;Angles and bisectors&lt;/li&gt;
+&lt;li&gt;Complements and supplements&lt;/li&gt;
+&lt;li&gt;Perpendicularity&lt;/li&gt;
+&lt;li&gt;Linear systems and quadratics&lt;/li&gt;
+&lt;li&gt;Definitions and equation-solving for the four basic triangle centers&lt;/li&gt;
+&lt;li&gt;Congruence, especially congruent triangle proofs&lt;/li&gt;
+&lt;li&gt;Both equidistance theorems&lt;/li&gt;
+&lt;li&gt;Plato’s views as expressed in the &lt;i&gt;Allegory of the Cave&lt;/i&gt;&lt;/li&gt;
+&lt;/ul&gt;
+I will be available for an optional after-school review session from 3:00 to 3:35 on Tuesday, 12/18.&lt;br /&gt;
+Hand in your graph-paper notebook at the beginning of class on 12/20!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615308</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Please note that this assignment is not due until Wednesday!&lt;/li&gt;
+&lt;li&gt;Be sure that the list of theorems at the end of your notebook is up to date.&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/geomh/practice+challenges.pdf&quot;&gt;Practice and Challenges&lt;/a&gt; (&lt;i&gt;available now&lt;/i&gt;).
+Ergs are listed directly on the sheet.
+(If you’re using a black-and-white copy, you may have trouble with the colors in #1,
+but you’ll figure it out.)
+&lt;/li&gt;&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615309</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">No ergs this time; do everything.&lt;br /&gt;
+&lt;ul&gt; 
+&lt;li&gt;Complete
+&lt;a href=&quot;/files/davidsonl/geomh/xversal-angles.pdf&quot;&gt;Angles &amp; Transversals&lt;/a&gt;.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Read Section 5.2, and take careful notes.
+You may refer to “interior angles on the same side of the transversal”
+as “same side interior angles” if you so wish.
+In any case, you will need to know and apply Theorems 31, 33, 34, and 36,
+using these abbreviations (not theorem numbers!):
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&quot;font-size: 120%;&quot;&gt;AIA &lt;span style=&quot;font-size: 200%;&quot;&gt;&amp;cong;&lt;/span&gt; &amp;rarr; ||&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;font-size: 120%;&quot;&gt;CA &lt;span style=&quot;font-size: 200%;&quot;&gt;&amp;cong;&lt;/span&gt; &amp;rarr; ||&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;font-size: 120%;&quot;&gt;SSIA supp &amp;rarr; ||&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;font-size: 120%;&quot;&gt;2 &amp;perp; same &amp;rarr; ||&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br /&gt;
+&lt;li&gt;Section 5.2, p. 220, #4, 5, 9, 13, 25, 26, 27. 
+&lt;br /&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615331</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;table cellspacing=&quot;5&quot; cellpadding=&quot;5&quot;&gt;
+&lt;tr&gt;&lt;td background=&quot;http://images2.layoutsparks.com/1/186428/christmas-snow-fall-animated.gif&quot; style=&quot;border:4px solid #f00;&quot;&gt;&lt;span style=&quot;color: #FFFFFF; font-size: 200%;&quot;&gt;No homework. Enjoy the snow!&lt;/span&gt; &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/files/davidsonl/images/enjoy-the-snow.gif&quot;&gt;&lt;/td&gt;
+&lt;td&gt;
+Happy New Year! (How many of these languages can you identify?)&lt;br /&gt;
+&lt;img src = &quot;/files/davidsonl/images/happynewyear.gif&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615390</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Catch up on all homework and be prepared for second part of the test.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615391</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">No Homework!! Wahoo!!&lt;br&gt;
+
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615392</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 5.4 and do problems 1, 2, 3, 6, 7, 16 and 17.&lt;br&gt;&lt;br&gt;Create an IS-A hierarchy of quadrilaterals based on their definitions and properties. &lt;br&gt;Any descendant in the hierarchy &quot;is a&quot; member of the ancestor. Example: a square is a rectangle.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615393</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 5.5 and do problems 13, 14, 21, 23, 25, 26, and 29.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615394</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 5.6 and do problems 1, 4, 7, 11, 12, 16, 17, and 19.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615395</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 5.7 and do problems 6, 13, 14, 17, 18, 24, and 28.&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615427</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;b&gt;&lt;span style=&quot;font-size: 150%;&quot;&gt;&lt;span style=&quot;color: #FF0000;&quot;&gt;Note that this assignment is due on Wednesday, not on Monday!&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;
+&lt;ul&gt; &lt;li&gt;Complete all problems on &lt;a href=&quot;/files/davidsonl/geomh/quads.pdf&quot;&gt;Thinking about Quadrilaterals&lt;/a&gt;, which you started in class.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Read Section 5.3, and take notes.
+Ignore Theorems 38, 39, and 42.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Complete the usual 42 ergs’ worth of Section 5.3, p. 231, #*10 (8), *15 (8), 19 (10), 22 (10), 24 (10), 25 (12), 29 (16).&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;
+Skim Section 5.4; learn the definitions of the quadrilaterals on p. 236, but modify the definitions of &lt;i&gt;trapezoid &lt;/i&gt;and &lt;i&gt;isosceles trapezoid &lt;/i&gt;as presented in class.
+Be sure to copy these definitions into your notebook.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;b&gt;Notes:&lt;/b&gt;
+&lt;ol&gt;
+&lt;li&gt;Deadline for retakes on Quiz #5 and Test #4 is Weds, 1/16.
+(There is no actual retake for this quiz, but the test will serve as a virtual
+retake.)
+Teachers will be proctoring retake-and-makeup sessions after school on Wednesdays
+(1/9 and 1/16), so those would be good times for a retake if you can't fit it in during the school day.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;If I wrote a note on your test next to question #5 saying that you need
+to learn to solve quadratics successfully,
+you have an extra assignment that is due on Thursday, 1/10:
+&lt;a href=&quot;/files/davidsonl/geomh/QuadraticPractice.pdf&quot;&gt;Quadratic Practice&lt;/a&gt;,
+written by an anonymous math teacher.
+Solutions must be handed in &lt;i&gt;with work &lt;/i&gt;on Thursday.&lt;/li&gt;&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615468</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ol&gt;
+&lt;li&gt;Read Section 5.5, but take notes of only the following properties on pp. 241-242 (you can easily derive the others):&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt;Parallelograms #2, 3, 4.&lt;/li&gt;
+&lt;li&gt;Rectangles #3.&lt;/li&gt;
+&lt;li&gt;Kites #2.&lt;/li&gt;
+&lt;li&gt;Rhombi #4, 5.&lt;/li&gt;
+&lt;li&gt;Isosceles trapezoids #1, 3, 5. [&lt;i&gt;Explain in your notes
+whether these work under both definitions.&lt;/i&gt;]&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Section 5.5, p. 247, #*17 (4), *21 (4), 23 (8), 28 (10) [&lt;i&gt;find to the nearest hundredth of a degree rather than the nearest second&lt;/i&gt;], 29 (10).&lt;/li&gt;
+&lt;li&gt;Read Section 5.6, and take notes with the caveats presented in class.&lt;/li&gt;
+&lt;li&gt;Section 5.6, p. 253, #10 (4), *11 (6), 14 (6), 15 (6), *16 (6), 17 (6), 19 (10).&lt;/li&gt; &lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615469</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Make sure you have notes on:
+&lt;ul&gt;&lt;li&gt;determining a plane&lt;/li&gt;
+&lt;li&gt;intersections of planes and lines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+Read and study section 7.1 and do problems 9, 15, 17, 18, 19 (hint: draw the midline), 20, and 22.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615470</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 7.2 and do problems 8, 14, 15, 16, 17, and 20.&lt;br&gt;
+
+E block report to the Global Education Center in the science wing.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615471</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 7.3 and do problems 8, 10, 13, 14, and 24.
+&lt;br&gt;G block report to the Media Center.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615472</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">No homework weekend.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615473</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 7.4 and do problems 9, 10, 12, 13, 16, and 17.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615478</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read Section 5.7, and take notes on how to prove that a figure is a rectangle, rhombus, or whatever.
+Note that these are &lt;i&gt;sufficient &lt;/i&gt;conditions,
+which are different from &lt;i&gt;necessary &lt;/i&gt;properties.&lt;/i&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Section 5.7, p. 259, #9 (4), 12 (6), *13 (8), 18 (8), 28 (8).&lt;/li&gt;
+&lt;li&gt;Read Section 7.1, and take notes.
+You may abbreviate Theorem 50 as T180 and Theorem 51 as EAT.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Section 7.1, p. 299, # *9 (4), 12 (6), *15 (6), 17 (8), 19 (10), 21 (10).&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615504</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read Section 7.2, and take notes.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Section 7.2, p. 305, #  *9 (4), 13 (6), *15 (8), *16 (8), *17 (10), 18 (12), 20 (14).
+&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;color: #FF0000;&quot;&gt;&lt;b&gt;&lt;span style=&quot;font-size: 120%;&quot;&gt;
+Remember:
+Go directly to the Library (B Block) or the Media Center (D Block)
+at the beginning of the block on Thursday
+for the interactive talk by the visiting architect.
+Do not go to Room 14.&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Deadline for retakes on Quiz #6 is Jan. 23.&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615526</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">No Homework!! Wahoo!!&lt;br&gt;
+
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615530</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt; &lt;li&gt;Read Sections 7.3 and 7.4, and take notes.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Section 7.3, p. 310, #8 (4), *10 (4), *14 (6), 22 (8), 23 (8), 24 (12).&lt;/li&gt;
+&lt;li&gt;Section 7.4, p. 317, #10 (4), *13 (6), *14 (8), 16 (10).&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615531</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 8.1 and do problems 10,14,18,21, and 23.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615532</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 8.2 and do problems 10, 11, 13, 14, 15, and 18.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615533</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 8.3 and do problems 9, 12, 16, 18, 19.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615534</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 8.5 and do problems 3, 4, 7, 8, 13, 14, 20, 26, 27, and 29.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615535</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 9.1, then do problems 1, 4, 9, 10, 11, 12.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615536</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read and study section 9.2, then do problems 7, 13, 14, 15, 16.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615537</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Test Today&lt;br&gt;&lt;br&gt;
+Topics TBA</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615538</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h4&gt;American Mathematics Contest&lt;/h4&gt;
+When: C block (first block of the day)&lt;br&gt;
+Where:&lt;ul&gt;
+&lt;li&gt;E Block report to TBA.&lt;/li&gt;
+&lt;li&gt;G Block report to TBA.&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;br&gt;
+Let your C block teacher know you will be out.&lt;br&gt;&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615540</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Spend a reasonable amount of time on &lt;a href=&quot;/files/davidsonl/geomh/angles+polys-1.pdf&quot;&gt;Angles and Polygons I&lt;/a&gt;.
+No ergs this time, so do as much as you can.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610791</column>
@@ -8321,6 +8817,302 @@ For homework, complete &lt;a href=&quot;/files/gacsa/geom/Unit 1/Always, Sometim
             <column name="content">Mr. Gacs was out last class. Please do &lt;a href=&quot;/files/gacsa/geom/Unit 2/Quadrilateral Identification.pdf&quot;&gt; Quadrilateral Identification&lt;/a&gt; and &lt;a href=&quot;/files/gacsa/geom/Unit 2/Quadrilaterals more always sometimes never-1.pdf&quot;&gt; More Always, Sometimes, Never&lt;/a&gt; for classwork/homework. Feel free to collaborate! </column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">615222</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1.  Finish &lt;a href=&quot;/files/hosmerc/geom/3_congruence 1.pdf&quot;&gt;Congruence I&lt;/a&gt;.  
+&lt;br&gt;
+&lt;br&gt;
+2. Complete &lt;a href=&quot;/files/hosmerc/geom/4_congruence 2.pdf&quot;&gt;Congruence II&lt;/a&gt;.  
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615233</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/geom/5_corresponding parts.pdf&quot;&gt;Corresponding Parts&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615238</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;a href=&quot;/files/gacsa/geom/Unit 2/3_congruence 1.pdf&quot;&gt;Congruence I&lt;/a&gt; and &lt;a href=&quot;/files/gacsa/geom/Unit 2/4_congruence 2.pdf&quot;&gt;Congruence II.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615241</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1. Finish &lt;a href=&quot;/files/hosmerc/geom/6_using polygon congruency.pdf&quot;&gt;Using Polygon Congruency&lt;/a&gt;. 
+&lt;br&gt; 
+&lt;br&gt; 
+2. Complete problems 1 - 3 on &lt;a href=&quot;/files/hosmerc/geom/7_triangle congruency activity.pdf&quot;&gt;Triangle Congruency Activity&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615245</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Mr. Gacs was out last class. Please complete &lt;a href=&quot;/files/gacsa/geom/Unit 2/Warm Up 4.2 - Corresponding Parts Practice.pdf&quot;&gt;this practice sheet&lt;/a&gt; for homework.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615259</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/geom/6_using polygon congruency.pdf&quot;&gt;Using Polygon Congruency&lt;/a&gt;. 
+&lt;br&gt;
+&lt;br&gt;
+**Bring your protractor to class every day!**</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615268</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">&lt;a href=&quot;/files/abendb/geom/Worksheet 4.4 - Corresponding Parts Practice.pdf&quot;&gt;Worksheet 4.4 - Corresponding Parts Practice&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615269</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">&lt;a href=&quot;/files/abendb/geom/Worksheet 4.5 - Polygon Congruence.pdf&quot;&gt;Worksheet 4.5 - Polygon Congruence&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615280</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/geom/10_more triangle congruence.pdf&quot;&gt;More Triangle Congruence&lt;/a&gt;. 
+&lt;br&gt; 
+&lt;br&gt; 
+**Bring your protractor to class every day!**</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615288</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/geom/13_Weston Triangle Foundry.pdf&quot;&gt;Weston Triangle Foundry&lt;/a&gt;. 
+&lt;br&gt; 
+&lt;br&gt; 
+**Bring your protractor to class every day!** </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615301</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete as much as you can on &lt;a href=&quot;/files/hosmerc/geom/13_Weston Triangle Foundry.pdf&quot;&gt;Weston Triangle Foundry&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615311</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete the &quot;more triangle congruency&quot; worksheet given out in class last time.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615313</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Test #3 is on Monday, December 10.  
+&lt;br&gt;
+&lt;br&gt;
+On the test you may use both sides of a 3&quot;-by-5&quot; notecard that you have prepared in your own handwriting. Be sure that you have pencils and a functioning calculator. You should also have some other work to do in case you finish before the end of the period. You will not be given extra time unless you have a legal right to it because of an IEP or a 504.
+&lt;br&gt;
+&lt;br&gt;
+1. Finish &lt;a href=&quot;/files/hosmerc/geom/Test 3 Review Packet.pdf&quot;&gt;Test 3 Review Packet&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+2. For additional practice, complete &lt;a href=&quot;/files/hosmerc/geom/Triangle and Quadrilateral B Level Prep.pdf&quot;&gt;Triangle and Quadrilateral B Level Prep&lt;/a&gt; and/or &lt;a href=&quot;/files/hosmerc/geom/Triangle and Quadrilateral A Level Prep.pdf&quot;&gt;Triangle and Quadrilateral A Level Prep&lt;/a&gt; (cross out #4 and #5h on the A Level Prep - we haven't covered this yet, so it won't be on the test)</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615316</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Test on Triangles, Quadrilaterals, and Congruence.&lt;br&gt;&lt;br&gt;
+
+Here are the review packets: &lt;a href=&quot;/files/abendb/geom/Review 3 - Triangles, Quadrilaterals, and Congruence (All Levels).pdf&quot;&gt;both levels&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Review 3 - Triangles, Quadrilaterals, and Congruence (A-Level).pdf&quot;&gt;A-level&lt;/a&gt;, and &lt;a href=&quot;/files/abendb/geom/Review 3 - Triangles, Quadrilaterals, and Congruence (B-Level).pdf&quot;&gt;B-level&lt;/a&gt;.
+
+&lt;br&gt;&lt;br&gt;
+
+Answer Keys: &lt;a href=&quot;/files/abendb/geom/Review 3 - Triangles, Quadrilaterals, and Congruence (All Levels) (Key).pdf&quot;&gt;both levels key&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Review 3 - Triangles, Quadrilaterals, and Congruence (A-Level) (Key).pdf&quot;&gt;A-level key&lt;/a&gt;, and &lt;a href=&quot;/files/abendb/geom/Review 3 - Triangles, Quadrilaterals, and Congruence (B-Level) (Key).pdf&quot;&gt;B-level key&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615317</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">The &lt;a href=&quot;/files/abendb/geom/Worksheet 4.7 - Weston Triangle Foundry.pdf&quot;&gt;Weston Triangle Foundry Packet&lt;/a&gt; is due.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615318</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Process all the order forms from the &lt;a href=&quot;/files/gacsa/geom/Unit 2/WestonTriangleFoundry2013.pdf&quot;&gt;Weston Triangle Foundry.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615336</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/geom/15_more conditional statements.pdf&quot;&gt;More Conditional Statements&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615339</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Do both sides of &lt;a href=&quot;/files/gacsa/geom/Unit 2/Triangle and Quadrilateral Practice 2012.pdf&quot;&gt;Triangle and Quadrilateral Practice.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615341</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Complete &lt;a href=&quot;/files/abendb/geom/Homework 5.1 - Conditional Statements.pdf&quot;&gt;Homework 5.1 - Conditional Statements&lt;/a&gt;.
+
+&lt;br&gt;&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/geom/Worksheet 5.1 - Conditional Statements.pdf&quot;&gt;Worksheet 5.1 - Conditional Statements&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615353</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/geom/16_completing congruence statements for triangles.pdf&quot;&gt;Completing Congruence Statements for Triangles&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615361</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/geom/20_some proofs with machines.pdf&quot;&gt;Some Proofs with Machines&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615369</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish the first page on &lt;a href=&quot;/files/hosmerc/geom/20_some proofs with machines.pdf&quot;&gt;Some Proofs with Machines&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615373</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Finish &lt;a href=&quot;/files/abendb/geom/Homework 5.2 - Completing Triangle Congruence Statements.pdf&quot;&gt;Homework 5.2 - Completing Triangle Congruence Statements&lt;/a&gt;.
+&lt;br&gt;&lt;br&gt;
+Notes: Introduction to Proofs&lt;br&gt;
+Handouts: none</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615377</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Last class, we learned about &lt;a href=&quot;/files/gacsa/geom/Unit 2/Conditional Statements.pdf&quot;&gt;Conditional Statements&lt;/a&gt; and &lt;a href=&quot;/files/gacsa/geom/Unit 2/ProofMachineIntro2013.pdf&quot;&gt;Proof Machines.&lt;/a&gt; Then, we received our first &lt;a href=&quot;/files/gacsa/geom/Unit 2/FirstDefinitions2013.pdf&quot;&gt;Definition Machines&lt;/a&gt; and &lt;a href=&quot;/files/gacsa/geom/Unit 2/FirstSetMachines2013.pdf&quot;&gt;Postulate Machines.&lt;/a&gt; &lt;br&gt; For homework, please complete &lt;a href=&quot;/files/gacsa/geom/Unit 2/CongruenceStatementsTriangles2013.pdf&quot;&gt;Completing Triangle Congruence Statements.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615381</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Complete &lt;a href = &quot;/files/langsdorfa/geom/SomeStatementsFirstHalf.pdf&quot;&gt; this worksheet &lt;/a&gt; before class on Wednesday.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615385</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: none.&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/geom/Machine Set 1.pdf&quot;&gt;Machine Set 1&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Worksheet 5.2 - Some Proofs With Machines.pdf&quot;&gt;Worksheet 5.2 - Some Proofs With Machines&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615399</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/geom/22_some beginning proofs.pdf&quot;&gt;Some Beginning Proofs&lt;/a&gt; (except for #6). </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615404</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: none.&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/geom/Worksheet 5.3 - More Proofs With Machines.pdf&quot;&gt;Worksheet 5.3 - More Proofs With Machines&lt;/a&gt;.&lt;br&gt;
+Homework: have a wonderful and safe vacation!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615420</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: None.&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/geom/Warm Up 5.1 - Welcome Back!.pdf&quot;&gt;Warm Up 5.1 - Welcome Back!&lt;/a&gt;.&lt;br&gt;
+Homework: problem #2 on &lt;a href=&quot;/files/abendb/geom/Worksheet 5.4 - Even More Proofs With Machines.pdf&quot;&gt;Worksheet 5.4 - Even More Proofs With Machines&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615425</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;a href=&quot;/files/gacsa/geom/Unit 2/SomeBeginningProofs2013.pdf&quot;&gt;Some Beginning Proofs,&lt;/a&gt; writing all of your proofs carefully on a separate sheet of paper.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615432</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/geom/23_proof practice.pdf&quot;&gt;Proof Practice&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615434</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">In class on Thursday, we completed &lt;a href = &quot;/files/langsdorfa/geom/SomeOneMachineProofs2013.pdf&quot;&gt; Some One Machine Proofs&lt;/a&gt; and &lt;a href = &quot;/files/langsdorfa/geom/TwoMachineProofs2013.pdf&quot;&gt; Some Two Machine Proofs&lt;/a&gt;.  For homework, finish this &lt;a href = &quot;/files/langsdorfa/geom/ProofHomework2013.pdf&quot;&gt; Proof Homework.&lt;/a&gt;  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615441</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/geom/25_proof homework.pdf&quot;&gt;Proof Homework&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615442</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: none.&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/geom/Warm Up 5.2 - Three Quick Proofs.pdf&quot;&gt;Warm Up 5.2 - Three Quick Proofs&lt;/a&gt;&lt;br&gt;
+Assessments: Quiz 4 - Beginning Proofs.  Please make this up ASAP if you've missed it!&lt;br&gt;
+Homework: none.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615453</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">In class on Friday, we discussed the proof homework, took quiz #4, and learned a bit about math options for next year.  For homework, complete &lt;a href = &quot;/files/langsdorfa/geom/AnotherProofWithMachines2013.pdf&quot;&gt; Another Proof with Machines&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615455</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Test #4 is today. 
+&lt;br&gt;
+&lt;br&gt;
+On the test you may use both sides of a 3&quot;-by-5&quot; notecard that you have prepared in your own handwriting. Be sure that you have pencils and a functioning calculator. You should also have some other work to do in case you finish before the end of the period. You will not be given extra time unless you have a legal right to it because of an IEP or a 504.
+ </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615466</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">In class on Tuesday, we got back our quizzes from Friday.  Then, we worked on a variety of proof worksheets for about 45 minutes.  All of the worksheets are shown here in order of increasing difficulty, but there is no need to complete all of them.  Choose the practice that matches your previous understanding of proofs most closely. &lt;br&gt; &lt;br&gt;
+&lt;a href = &quot;/files/langsdorfa/geom/MachineProofPractice112013.pdf&quot;&gt; Machine Proof Practice 1.1&lt;/a&gt;&lt;br&gt;
+  &lt;a href = &quot;/files/langsdorfa/geom/MachineProofPractice122013.pdf&quot;&gt; Machine Proof Practice 1.2&lt;/a&gt;&lt;br&gt;
+  &lt;a href = &quot;/files/langsdorfa/geom/MachineProofPractice212013.pdf&quot;&gt; Machine Proof Practice 2.1&lt;/a&gt;&lt;br&gt;
+  &lt;a href = &quot;/files/langsdorfa/geom/MachineProofPractice222013.pdf&quot;&gt; Machine Proof Practice 2.2&lt;/a&gt;&lt;br&gt;
+  &lt;a href = &quot;/files/langsdorfa/geom/MachineProofPractice312013.pdf&quot;&gt; Machine Proof Practice 3.1&lt;/a&gt;&lt;br&gt;
+  &lt;a href = &quot;/files/langsdorfa/geom/MachineProofPractice322013.pdf&quot;&gt; Machine Proof Practice 3.2&lt;/a&gt;&lt;br&gt; &lt;br&gt;
+For homework, complete &lt;a href = &quot;/files/langsdorfa/geom/SomeProofPractice2013.pdf&quot;&gt; Some More Proof Practice&lt;/a&gt;.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615467</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Today in class we began our &quot;Proof Buffet&quot;!  Select ONE of the following worksheets to complete for homework.  The worksheets increase in difficulty as you move down the list.
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/geom/26_machine proof practice 1.1.pdf&quot;&gt;Machine Proof Practice 1.1&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/geom/27_machine proof practice 1.2.pdf&quot;&gt;Machine Proof Practice 1.2&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/geom/28_machine proof practice 2.1.pdf&quot;&gt;Machine Proof Practice 2.1&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/geom/29_machine proof practice 2.2.pdf&quot;&gt;Machine Proof Practice 2.2&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/geom/30_machine proof practice 3.1.pdf&quot;&gt;Machine Proof Practice 3.1&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/geom/31_machine proof practice 3.2.pdf&quot;&gt;Machine Proof Practice 3.2&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615487</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">&lt;b&gt;Test #4 - Proofs&lt;/b&gt;&lt;br&gt;
+You may bring a note card up to 4in x 6in but &lt;u&gt;you will be given the set of &lt;a href=&quot;/files/abendb/geom/Machine Set 1.pdf&quot;&gt;blank machines&lt;/a&gt;&lt;/u&gt;.&lt;br&gt;&lt;br&gt;
+
+Notes: Proof Goofs&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/geom/Warm Up 5.3 - Single Machine Practice.pdf&quot;&gt;Warm Up 5.3 - Single Machine Practice&lt;/a&gt;.&lt;br&gt;
+Homework: study for your test!  Here are the proofs you may want to use to review: Proof Practice &lt;a href=&quot;/files/abendb/geom/Worksheet 5.9 - Proof Practice 1.1.pdf&quot;&gt;1.1&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Worksheet 5.9 - Proof Practice 1.2.pdf&quot;&gt;1.2&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Worksheet 5.9 - Proof Practice 2.1.pdf&quot;&gt;2.1&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Worksheet 5.9 - Proof Practice 2.2.pdf&quot;&gt;2.2&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Worksheet 5.9 - Proof Practice 3.1.pdf&quot;&gt;3.1&lt;/a&gt;, &lt;a href=&quot;/files/abendb/geom/Worksheet 5.9 - Proof Practice 3.2.pdf&quot;&gt;3.2&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615488</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Instead of coming to class, we will be going to:&lt;br&gt;&lt;br&gt;
+
+D Block: Media Center&lt;br&gt;
+E Block: GEC (science wing)&lt;br&gt;
+&lt;br&gt;
+See you there!&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615517</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">On Wednesday, January 16, we had a guest speaker about architecture and its relevance to geometry.  We also build bridges out of paper and tape.  There is no homework.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615539</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete at least 2 proofs based on your list of 5 statements from &lt;a href=&quot;/files/hosmerc/geom/33_proofs in the land of parallel lines part 1.pdf&quot;&gt;Proofs in the Land of Parallel Lines&lt;/a&gt;. 
+&lt;br&gt;
+&lt;br&gt;
+The &lt;a href=&quot;/files/hosmerc/geom/32_5 new machines.pdf&quot;&gt;5 New Machines Reference Sheet&lt;/a&gt; might be useful as you work on these proofs.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615559</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Continue working on theorem two from &lt;a href=&quot;/files/hosmerc/geom/34_proofs in the land of parallel lines part 2.pdf&quot;&gt;Proofs in the Land of Parallel Lines Part II&lt;/a&gt;.  Use the diagram from &lt;a href=&quot;/files/hosmerc/geom/33_proofs in the land of parallel lines part 1.pdf&quot;&gt;Proofs in the Land of Parallel Lines&lt;/a&gt; to help with theorem two.</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610850</column>
             <column name="teacher_id">hosmerc</column>
             <column name="content">Create a machine with at least 3 input/output pairs but leave the rule blank.  You will be presenting this to your classmates and they will try to guess your rule.  Try to make it as challenging as possible so that your classmates will not guess it immediately.</column>
@@ -10809,6 +11601,174 @@ Last class, we did &lt;a href=&quot;/files/gacsa/alg2h/Unit 1/Warmup (log equati
             <column name="assgt_id">615198</column>
             <column name="teacher_id">griswoldn</column>
             <column name="content">&lt;p&gt;Do the practice &lt;a href=&quot;/teachers/griswoldn/alg2/honors/comp int hw.docx&quot;&gt;Interest&lt;/a&gt; problems from class.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615210</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Do &lt;a href=&quot;/teachers/griswoldn/alg2/honors/The Number e.doc&quot;&gt;these &lt;/a&gt; problems involving continuously compounding interest.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615216</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Finish the &lt;a href=&quot;/teachers/griswoldn/alg2/honors/Cts Growth Decay.docx&quot;&gt;Growth an Decay&lt;/a&gt; worksheet.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615220</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;A href=&quot;/files/gacsa/alg2h/Unit 2/Cts Growth Decay.pdf&quot;&gt;Continuous Growth and Decay.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615239</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;a href=&quot;/files/gacsa/alg2h/Unit 2/CompoundWU.pdf&quot;&gt; these practice problems.&lt;/a&gt; Mr. Gacs will be out on Friday, 11/30, but you should still complete this assignment by that day so that you're ready to complete the next assignment. Yes, this assignment has been given before. Do it again to make sure you understand it!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615243</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Mr. Gacs was out last class. For next time, work on &lt;a href=&quot;/files/gacsa/alg2h/Unit 2/IntrotoPiecewiseFunctions 1213.pdf&quot;&gt; this introduction to piecewise functions,&lt;/a&gt; preferably with a partner!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615244</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Mr. Gacs was out last class. For next time, work on this &lt;a href=&quot;/files/gacsa/alg2h/Unit 2/IntrotoPiecewiseFunctions 1213.pdf&quot;&gt; introduction to piecewise functions,&lt;/a&gt; preferably working with a partner.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615278</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Do &lt;a href=&quot;/teachers/griswoldn/alg2/honors/pieces.pdf&quot;&gt;these &lt;/a&gt; piecewise functions problems.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615279</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">If you didn't do so already, make sure to complete the &lt;a href=&quot;/files/gacsa/alg2h/Unit 2/IntrotoPiecewiseFunctions 1213.pdf&quot;&gt;  introduction to piecewise functions.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615290</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Finish the &lt;a href=&quot;/teachers/griswoldn/alg2/honors/logs no calc.pdf&quot;&gt;log worksheet &lt;/a&gt; from class without a calculator.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615306</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Finish the &lt;a href=&quot;/teachers/griswoldn/alg2/honors/Alg 2H Review for Test 3.docx&quot;&gt;Review Problems &lt;/a&gt; from class and &lt;a href=&quot;/teachers/griswoldn/alg2/honors/Alg 2H Review for Test 3 Solutions.docx&quot;&gt;here&lt;/a&gt; are the solutions.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615312</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Last time, we did &lt;a href=&quot;/files/gacsa/alg2h/piecewise/Warm Up Cellphone Plan.pdf&quot;&gt;this warm-up.&lt;/a&gt; For homework, please complete &lt;a href=&quot;/files/gacsa/alg2h/piecewise/Even More Piecewise Functions.pdf&quot;&gt;Even More Piecewise Functions,&lt;/a&gt; but don't worry too much about the physics problem, just try your best. Also do &lt;a href=&quot;/files/gacsa/alg2h/piecewise/pieces.pdf&quot;&gt;these examples.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615314</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;a href=&quot;/files/gacsa/alg2h/piecewise/Compound Function Problem.pdf&quot;&gt;Piecewise Practice.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615320</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Study for your Test. You may use a note card.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615326</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;a href=&quot;/files/gacsa/alg2h/Unit 2/More Calculator-Free Practice.pdf&quot;&gt;More Calc-Free Practice&lt;/a&gt; and &lt;a href=&quot;/files/gacsa/alg2h/Unit 2/More Calculator-Free Practice Solutions.pdf&quot;&gt;solutions.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615340</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Test 3 is today. Prepare by creating a six-sided 3&quot;x5&quot; note-card.&lt;br&gt;
+The review packet is &lt;a href=&quot;/files/gacsa/alg2h/Unit 2/Alg 2H Review for Test 3.pdf&quot;&gt;here,&lt;/a&gt; and the solutions are &lt;a href=&quot;/files/gacsa/alg2h/Unit 2/Alg 2H Review for Test 3 Solutions.pdf&quot;&gt;here.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615355</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Please complete &lt;a href=&quot;/files/gacsa/alg2h/Stat/Statistics Homework 1.pdf&quot;&gt;Statistics Homework 1.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615356</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Read &lt;a href=&quot;/teachers/griswoldn/alg2/honors/Intro to stats.doc&quot;&gt; this &lt;/a&gt; worksheet about Statistics, then answer the questions on the second page.&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615376</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">In class today, we discussed &lt;a href=&quot;/files/gacsa/alg2h/Stat/Stat Day 1 Warm Up.pdf&quot;&gt;this warm-up&lt;/a&gt; and did sections 1-2 and 1-5 from the book. For homework, please complete &lt;a href=&quot;/files/gacsa/alg2h/Stat/Intro to stats.pdf&quot;&gt;this intro worksheet.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615383</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Do &lt;a href=&quot;/teachers/griswoldn/alg2/honors/mean med mode hw.docx&quot;&gt; these &lt;/a&gt; measures of center problems.&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615419</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Please complete &lt;a href=&quot;/files/gacsa/alg2h/Stat/Stat book pp.48-52.pdf&quot;&gt;Activities 3-3, 3-4 and 3-5 from the textbook,&lt;/a&gt; carefully writing down all of your answers.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615433</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;a href=&quot;/files/gacsa/alg2h/Stat/Stat pp.78-79.pdf&quot;&gt;Activity 4-4&lt;/a&gt; if you didn't finish it in class.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615460</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Please complete &lt;a href=&quot;/files/gacsa/alg2h/Stat/calc-free stat practice.pdf&quot;&gt;this practice worksheet.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615474</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;a href=&quot;/files/gacsa/alg2h/Stat/Activity 5-7(pp.101-103).pdf&quot;&gt;Activity 5-7.&lt;/a&gt; We don't have access to the file downloads, so you can either calculate the statistics by hand or enter the data into your calculator, inputting the data values (1-9) into L1 and the frequencies for each class into your other lists. In order to calculate the basic statistics for a class whose frequencies are in L2, type &lt;br&gt; 1-Var Stats L1, L2
+&lt;br&gt; ENTER&lt;br&gt;
+Recall that 1-Var Stats is found under the STAT menu, and the comma is just above the 7.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615476</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Finish activity 5-5, 5-6, and 5-7.  I will be checking the rest of your work next week, so make sure you have them all done. &lt;a href=&quot;/teachers/griswoldn/alg2/honors/Activity list.docx&quot;&gt; Here's &lt;/a&gt; the list of activities.&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615483</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">In class today, we worked through &lt;a href=&quot;/files/gacsa/alg2h/Stat/Stat pp.97-100 (5-5 and 5-6).pdf&quot;&gt;Activities 5-5 and 5-6&lt;/a&gt; from the book. &lt;br&gt;
+
+For homework, finish &lt;a href=&quot;/files/gacsa/alg2h/Stat/Zscorepractice 2013.pdf&quot;&gt;Comparing Distributions.&lt;/a&gt; Then, do the following two problems: &lt;br&gt;&lt;br&gt;
+
+1) Create a set of 5 data points that have a mean of 104, a median of 83, a mode of 83, a range of 100 and a minimum value of 82.
+&lt;br&gt;
+2) Create a set of 10 data points that have a mean of 10.5, a median of 10, a range of 15, a mode of 5 and an IQR of 10.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615491</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Do &lt;a href=&quot;/teachers/gacsa/alg2h/Stat/Zscorepractice.pdf&quot;&gt; these &lt;/a&gt; problems comparing distributions.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615507</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Please complete the &lt;a href=&quot;/files/gacsa/alg2h/Stat/Normal Dist Problems.pdf&quot;&gt;Normal Distribution Problems.&lt;/a&gt; Use the &lt;a href=&quot;/files/gacsa/alg2h/Stat/z-tables.pdf&quot;&gt;z-tables&lt;/a&gt; to aid you.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615518</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;a href=&quot;http://online.redwoods.cc.ca.us/instruct/darnold/math15/aliaga/chapter04/fathomhtml/index.html&quot;&gt;Intro to Fathom&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615528</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Last class, we learned about &lt;a href=&quot;/files/gacsa/alg2h/Stat/Chebyshev 2013.pdf&quot;&gt;Chebyshev's Theorem.&lt;/a&gt; &lt;br&gt;We also introduced the project:&lt;br&gt;
+&lt;a href=&quot;/files/gacsa/alg2h/Stat/The Weston Globe.pdf&quot;&gt;news article&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;/files/gacsa/alg2h/Stat/Stat Project Description.pdf.pdf&quot;&gt;contract letter&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;/files/gacsa/alg2h/Stat/projectdata.pdf&quot;&gt;data&lt;/a&gt;&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615529</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Do &lt;a href=&quot;/teachers/griswoldn/alg2/honors/norm prob hw.docx&quot;&gt; these &lt;/a&gt; Normal Distribution problems for practice. Also, think about project partners.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615556</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Test today on one-variable statistics. &lt;a href=&quot;/files/gacsa/alg2h/Stat/1-var stat practice.pdf&quot;&gt;Here&lt;/a&gt; is the practice sheet we worked on in class last time.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610800</column>
@@ -18126,7 +19086,14 @@ Complete &lt;a href=&quot;/files/davidsonl/alg2/expt-fns-1.pdf&quot;&gt;Exponent
         <table name="assignments">
             <column name="assgt_id">615186</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">TBA</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/alg2/expt-fns-2.pdf&quot;&gt;Exponential Functions II&lt;/a&gt;.
+
+&lt;!--
+&lt;li&gt;Do at least problems #1(a–d) and 2(a) on &lt;a href=&quot;/files/davidsonl/alg2/exponential-practice.html&quot;&gt;NorthPark Exponential Practice&lt;/a&gt;
+(written by a professor at NorthPark, not by me).
+&lt;/li&gt;
+--&gt;
+</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615187</column>
@@ -18154,6 +19121,688 @@ Global Warming Problem&lt;/a&gt;
             <column name="assgt_id">615201</column>
             <column name="teacher_id">hosmerc</column>
             <column name="content">Do as much as you can on &lt;a href=&quot;/files/hosmerc/alg2/1_exponents review.pdf&quot;&gt;Exponents Review&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615211</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Exp-Func-1_new.pdf&quot;&gt;
+Exponential Functions I &lt;/a&gt;
+&lt;br&gt;
+Finish Packet</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615219</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/alg2/2_exponential functions 1.pdf&quot;&gt;Exponential Functions I&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615221</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Exponential Functions HW_new.pdf&quot;&gt;
+Exponential Functions HW &lt;a&gt;
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615223</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Warmup-1.pdf&quot;&gt;
+Exponential Function &amp; Logarithmic Functions &lt;a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615225</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1.  Finish &lt;a href=&quot;/files/hosmerc/alg2/3_exponential functions.pdf&quot;&gt;Exponential Functions&lt;/a&gt;. 
+&lt;br&gt;
+&lt;br&gt;
+2.  Complete the first page of &lt;a href=&quot;/files/hosmerc/alg2/4_intro to exponential functions.pdf&quot;&gt;Intro to Exponential Functions&lt;/a&gt;. 
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615226</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/alg2/exponential-practice.html&quot;&gt;NorthPark Exponential Practice&lt;/a&gt;
+(written by a professor at NorthPark, not by me).</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615234</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/alg2/3_exponential functions.pdf&quot;&gt;Exponential Functions&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615242</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1. Finish &lt;a href=&quot;/files/hosmerc/alg2/5_exponential growth.pdf&quot;&gt;Exponential Growth&lt;/a&gt;. 
+&lt;br&gt; 
+&lt;br&gt; 
+2. Complete &lt;a href=&quot;/files/hosmerc/alg2/6_exponential growth and decay.pdf&quot;&gt;Exponential Growth and Decay&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615246</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete the &lt;a href=&quot;/files/davidsonl/alg2/ExponentialLABsheetCOFFEE.pdf&quot;&gt;Exponential Regression Lab&lt;/a&gt;, which you might have started in class.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615257</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Complete all of the &lt;a href=&quot;/files/davidsonl/alg2/ExponentialLABsheetCOFFEE.pdf&quot;&gt;Exponential Regression Lab&lt;/a&gt;.
+&lt;/li&gt;
+&lt;li&gt;Complete question #1 (a–h) of &lt;a href=&quot;/files/davidsonl/alg2/expt-fns-3.pdf&quot;&gt;Exponential Functions III&lt;/a&gt;.
+&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615258</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1. Finish &lt;a href=&quot;/files/hosmerc/alg2/7_exponential regression coffee lab.pdf&quot;&gt;Exponential Regression Coffee Lab&lt;/a&gt;. 
+&lt;br&gt; 
+&lt;br&gt; 
+2. Complete only # 8 on &lt;a href=&quot;/files/hosmerc/alg2/8_exponential functions 2.pdf&quot;&gt;Exponential Functions II&lt;/a&gt;.  (note that today's actual National Debt is about 16,302 billions of dollars)</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615265</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete Lesson 1, Parts 1–2, of &lt;a href=&quot;/files/davidsonl/alg2/exponential-functions+credit-cards.pdf&quot;&gt;
+Kate Nowak’s three lessons on interest rates and credit cards&lt;/a&gt;.
+(Note that this is &lt;i&gt;all &lt;/i&gt;of page 1 plus the &lt;i&gt;top quarter &lt;/i&gt;of page 2.)</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615266</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Practice for the test.
+If you need practice on exponent rules, finish &lt;a href=&quot;/files/gajewskid/alg2/unit%202/Exponents%20review.pdf&quot;&gt;Ms. Gajewski's review sheet&lt;/a&gt;.
+&lt;br /&gt;&lt;br /&gt;
+You may use a 3&quot;-by-5&quot; notecard that you have
+prepared in your own handwriting.
+Be sure that you have pencils and a functioning calculator.
+You should also have some other work to do in case you finish before the end of the period.
+You will not be given extra time unless you have a legal right to it because of an IEP or a 504; in those cases you must begin and end the test on the same day,
+and you must arrange for your extended time beforehand.
+&lt;br /&gt;&lt;br /&gt;
+You will be well-prepared for the test if you can do the following:
+&lt;ol&gt;
+&lt;li&gt;Graph exponential functions and create them from their graphs and/or tables.&lt;/li&gt;
+&lt;li&gt;Find the output for a given input.&lt;/li&gt;
+&lt;li&gt;Find the growth factor, initial value, and equation for given data.&lt;/li&gt;
+&lt;li&gt;Use the quadratic formula to solve equations.&lt;/li&gt;
+&lt;li&gt;Find an input for a given output (by table or guess-and-check).&lt;/li&gt;
+&lt;li&gt;Perform linear, quadratic, and exponential regression,
+and use &lt;i&gt;r&lt;span style=&quot;font-size: 50%;&quot;&gt; &lt;/span&gt;&lt;/i&gt;&lt;sup&gt;2&lt;/sup&gt; to determine which is best.&lt;/li&gt;
+&lt;li&gt;Use growth/decay rate vs. growth/decay factor.&lt;/li&gt;
+&lt;li&gt;Calculate interest.&lt;/li&gt;
+&lt;li&gt;Compare tables and graphs of functions (linear, quadratic, exponential).&lt;/li&gt;
+&lt;li&gt;Apply the properties of exponents.&lt;/li&gt;
+&lt;li&gt;Explain all of the above clearly and correctly.&lt;/li&gt;
+&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615267</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete Lesson 1, Parts 3–4, of &lt;a href=&quot;/files/davidsonl/alg2/exponential-functions+credit-cards.pdf&quot;&gt;
+Kate Nowak’s three lessons on interest rates and credit cards&lt;/a&gt;.
+(Note that this is on page 2, and don’t forget that you can always use regression to find equations!)</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615270</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;!-- Complete Lesson 2 of &lt;a href=&quot;/files/davidsonl/alg2/exponential-functions+credit-cards.pdf&quot;&gt;Kate Nowak’s three lessons on interest rates and credit cards&lt;/a&gt; (page 3).
+--&gt;
+Complete Logarithmic Functions, &lt;a href=&quot;/files/davidsonl/alg2/logs-0.pdf&quot;&gt;Part Zero&lt;/a&gt; and &lt;a href=&quot;/files/davidsonl/alg2/logs-1.pdf&quot;&gt;Part One&lt;/a&gt;, which you worked on in class.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615289</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Today is test #3. 
+&lt;br&gt;
+&lt;br&gt;
+You may use one side of a 3&quot;-by-5&quot; notecard that you have prepared in your own handwriting. Be sure that you have pencils and a functioning calculator. You will not be given extra time unless you have a legal right to it because of an IEP or a 504; in those cases you must begin and end the test on the same day, and you must arrange for your extended time beforehand.
+&lt;br&gt;
+&lt;br&gt;
+You will be well-prepared for the test if you can do the following:
+&lt;br&gt;1.Graph exponential functions and create them from their graphs and/or tables.
+&lt;br&gt;2.Find the output for a given input.
+&lt;br&gt;3.Find the growth factor, initial value, and equation for given data.
+&lt;br&gt;4.Use the quadratic formula to solve equations.
+&lt;br&gt;5.Find an input for a given output (by table or guess-and-check).
+&lt;br&gt;6.Perform linear, quadratic, and exponential regression, and use r 2 to determine which is best.
+&lt;br&gt;7.Use growth/decay rate vs. growth/decay factor.
+ &lt;br&gt;8.Calculate interest based on a given growth rate.
+&lt;br&gt;9.Compare tables, graphs, and equations of functions (linear, quadratic, exponential).
+&lt;br&gt;10.Apply the properties of exponents.
+&lt;br&gt;11.Explain all of the above clearly and correctly.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615294</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/p.248.pdf&quot;&gt;
+Do p. 248 #1-3 &lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/p.249.pdf&quot;&gt;
+Do p. 249 #6 &lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615295</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Coffee Lab.pdf&quot;&gt;
+Coffee Lab &lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615296</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Test 3 Review.doc&quot;&gt;
+Test #3 Review Packet &lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615297</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1. Finish &lt;a href=&quot;/files/hosmerc/alg2/9_northpark exponential practice.pdf&quot;&gt;Northpark Exponential Practice&lt;/a&gt;. 
+&lt;br&gt; 
+&lt;br&gt; 
+2. Complete only # 1 (a-h) on &lt;a href=&quot;/files/hosmerc/alg2/10_exponential functions 3.pdf&quot;&gt;Exponential Functions III&lt;/a&gt;. 
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615300</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish #1(a-d) and #2a on &lt;a href=&quot;/files/hosmerc/alg2/9_northpark exponential practice.pdf&quot;&gt;Northpark Exponential Practice&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615302</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Test 3 Review Answers.pdf&quot;&gt;
+Test #3 Review Packet Answer Key &lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Test 3 Topics.pdf&quot;&gt;
+Topics covered on Test #3 &lt;/a&gt;
+&lt;br&gt;
+Extra Help Review Session for Test #3
+&lt;br&gt;
+Thursday Dec. 6- 3:30 pm @ the MS in Room 222</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615303</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">There will be an optional review session after school on Thursday, Dec. 6 in room 8.  Come prepared with questions about any of the material to be covered on test #3.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615304</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Practice for test #3 by completing &lt;a href=&quot;/files/hosmerc/alg2/Test 3 Review.pdf&quot;&gt;Test 3 Review&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615323</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete Logarithmic Functions, &lt;a href=&quot;/files/davidsonl/alg2/logs-2.pdf&quot;&gt;Part Two&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615327</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Exp Log Conversions.pdf&quot;&gt;
+Exponential/Logarithmic Conversions &lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/p.276 .pdf&quot;&gt;
+Textbook p. 276 Do #1 &amp; #3&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615337</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/alg2/12_logarithmic functions part 1.pdf&quot;&gt;Logarithmic Functions Part 1&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615343</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1.  Finish &lt;a href=&quot;/files/hosmerc/alg2/13_exponential-logarithmic Conversions.pdf&quot;&gt;Exponential/Logarithmic Conversions&lt;/a&gt; and &lt;a href=&quot;/files/hosmerc/alg2/14_textbook p.276.pdf&quot;&gt;Textbook p.276 #1 &amp; 3&lt;/a&gt;. 
+&lt;br&gt;
+&lt;br&gt;
+2.  Complete &lt;a href=&quot;/files/hosmerc/alg2/15_fractional exponents review.pdf&quot;&gt;Fractional Exponents Review&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615347</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/logs-2.pdf&quot;&gt;
+Logs2 worksheet&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615348</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/alg2/logs-3.pdf&quot;&gt;Logarithmic Functions, Part Three&lt;/a&gt;.
+You may want to refer to the &lt;a href=&quot;/files/davidsonl/alg2/building-with-logs.pdf&quot;&gt;Building with Logs&lt;/a&gt; handout.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615349</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Without using a calculator,
+complete #3–16 on &lt;a href=&quot;/files/davidsonl/alg2/logs-4.pdf&quot;&gt;Logarithmic Functions, Part Four&lt;/a&gt;.
+You may want to refer to the &lt;a href=&quot;/files/davidsonl/alg2/building-with-logs.pdf&quot;&gt;Building with Logs&lt;/a&gt; handout.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615350</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete problems #1–5 in &lt;a href=&quot;/files/davidsonl/alg2/practice-exps+logs.pdf&quot;&gt;Practice with Exponents and Logs&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615351</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;table cellspacing=&quot;5&quot; cellpadding=&quot;5&quot;&gt;
+&lt;tr&gt;&lt;td background=&quot;http://images2.layoutsparks.com/1/186428/christmas-snow-fall-animated.gif&quot; style=&quot;border:4px solid #f00;&quot;&gt;&lt;span style=&quot;color: #FFFFFF; font-size: 200%;&quot;&gt;No homework. Enjoy the snow!&lt;/span&gt; &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/files/davidsonl/images/enjoy-the-snow.gif&quot;&gt;&lt;/td&gt;
+&lt;td&gt;
+Happy New Year! (How many of these languages can you identify?)&lt;br /&gt;
+&lt;img src = &quot;/files/davidsonl/images/happynewyear.gif&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615352</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/alg2/16_logarithmic functions part 2.pdf&quot;&gt;Logarithmic Functions Part 2&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615357</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Solv.Exp.Eq.pdf&quot;&gt;
+Solve Each Exp. Equation for x using your notes as a guide. &lt;/a&gt;
+
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615358</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Solving exponentials using logs.pdf&quot;&gt;
+Solving Exponentials using Logs &lt;/a&gt;
+
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615360</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/alg2/17_logarithmic functions part 3.pdf&quot;&gt;Logarithmic Functions Part 3&lt;/a&gt; (all but #15).  You may want to use &lt;a href=&quot;/files/hosmerc/alg2/18_building with logs.pdf&quot;&gt;Building with Logs&lt;/a&gt; as a reference to help you.  
+&lt;br&gt;
+&lt;br&gt;
+If you didn't finish &lt;a href=&quot;/files/hosmerc/alg2/16_logarithmic functions part 2.pdf&quot;&gt;Logarithmic Functions Part 2&lt;/a&gt; in class, please complete this as well.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615370</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/logs-3.pdf&quot;&gt;
+Finish Classwork-Logs Part 3&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/building-with-logs.pdf&quot;&gt;
+Use your Building with Logs Handout as a resource&lt;/a&gt;
+&lt;br&gt;
+Extra Help Sessions at the MS in room 222
+&lt;br&gt;
+Tuesday 12/18 3:00 pm
+&lt;br&gt;
+Wed. 12/19 2:00 pm</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615372</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/alg2/17_logarithmic functions part 3.pdf&quot;&gt;Logarithmic Functions Part 3&lt;/a&gt; (all but #15).  You may want to use &lt;a href=&quot;/files/hosmerc/alg2/18_building with logs.pdf&quot;&gt;Building with Logs&lt;/a&gt; as a reference to help you. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615382</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete &lt;a href=&quot;/files/hosmerc/alg2/20_logarithmic functions part 4.pdf&quot;&gt;Logarithmic Functions Part 4&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615397</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/logs-4.pdf&quot;&gt;
+Finish Logs part 4-Calculators are NOT allowed &lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615398</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete #1-8 on &lt;a href=&quot;/files/hosmerc/alg2/20_logarithmic functions part 4.pdf&quot;&gt;Logarithmic Functions Part 4&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615401</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">If you didn't finish #9-16 on &lt;a href=&quot;/files/hosmerc/alg2/20_logarithmic functions part 4.pdf&quot;&gt;Logarithmic Functions Part 4&lt;/a&gt; in class, please complete these problems.
+&lt;br&gt;
+&lt;br&gt;
+Have a wonderful winter break!  See you all on January 2! </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615415</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/alg2/final-exps+logs.pdf&quot;&gt;Review of Exponents and Logs&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615416</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Catch up on any incomplete work on exponents and logarithms.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615417</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Practice for the test.
+You may use a calculator on part of the test,
+and &lt;i&gt;both sides &lt;/i&gt;of a 3&quot;-by-5&quot; notecard (which you have
+prepared in your own handwriting) on the entire test.
+Be sure that you have pencils and a functioning calculator.
+You should also have some other work to do in case you finish before the end of the period.
+You will not be given extra time unless you have a legal right to it because of an IEP or a 504; in those cases you must begin and end the test on the same day,
+and you must arrange for your extended time beforehand.
+&lt;br /&gt;&lt;br /&gt;
+You will be well-prepared for the test if you can do the following:
+&lt;ol&gt;
+&lt;li&gt;Tell whether a function is linear, exponential, quadratic, power, or none of these.&lt;/li&gt;
+&lt;li&gt;Apply exponential functions as models of real-world phenomena,
+including the use of regression.&lt;/li&gt;
+&lt;li&gt;Find the common ratio (growth factor) from exponential data.&lt;/li&gt;
+&lt;li&gt;Translate between exponential and logarithmic form.&lt;/li&gt;
+&lt;li&gt;Apply the properties of exponents and logarithms.&lt;/li&gt;
+&lt;li&gt;Represent functions as algebraic rules (formulas), tables, graphs, and function machines.&lt;/li&gt;
+&lt;li&gt;Distinguish exponential from power equations, and solve both.&lt;/li&gt;
+&lt;li&gt;Explain all of the above clearly and correctly.&lt;/li&gt;&lt;/ol&gt;
+As preparation, you should go over all your recent quizzes,
+handouts, and homework,
+as well as
+your Test #3.
+If you want/need additional practice problems,
+try &lt;a href=&quot;/files/davidsonl/alg2/papagiannis-test4-review.pdf&quot;&gt;this
+review packet written by a former teacher
+several years ago&lt;/a&gt;.
+It’s not a perfect match, but it’s extremely close:
+just change “Scheme” to “NetLogo” in question #3,
+change “evaluate” to “solve” in question #11,
+and note that the author does not always parenthesize the input to a log function.
+Answers are available 
+&lt;a href=&quot;/files/davidsonl/alg2/test4-practice-answers.pdf&quot;&gt;here&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615422</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1. Complete problems 1 and 2 on &lt;a href=&quot;/files/hosmerc/alg2/22_review of exponents and logs.pdf&quot;&gt;Review of Exponents and Logs&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+2.  If you didn't complete problems 1, 2, 3, and 5 on &lt;a href=&quot;/files/hosmerc/alg2/21_practice with exponents and logs.pdf&quot;&gt;Practice with Exponents and Logs&lt;/a&gt; during class, please complete these as well.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615428</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Practice w Exp and Logs.pdf&quot;&gt;
+Finish &quot;Practice with Exponents and Logs&quot;&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Prac Exp and Logs Key.pdf&quot;&gt;
+Answer Key&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615429</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Logarithms Practice.pdf&quot;&gt;
+Logarithms Practice &lt;/a&gt;
+&lt;br&gt;
+Test #4- Tuesday 1/8  (Part A Calc. allowed, Part B NO Calc.)
+&lt;br&gt;
+You can use a DOUBLE SIDED note card written in your own handwriting
+&lt;br&gt;
+Topics on Test-Logs, Exponents, Regression
+&lt;br&gt;
+Review/Help Sessions
+&lt;br&gt;
+Thursday 1/3   3:45 pm- MS room 222
+&lt;br&gt;
+Friday 1/4   2:00 pm-3:30 pm- HS Math office 
+&lt;br&gt;
+Monday 1/7   8:00 am- HS Math office
+&lt;br&gt;
+Monday 1/7 3:30 pm- MS- room 222
+&lt;br&gt;
+Or Email me to set up an appointment</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615430</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Logarithms Practice.pdf&quot;&gt;
+Logarithms Practice &lt;/a&gt;
+&lt;br&gt;
+Test #4- Monday 1/7  (Part A Calc. allowed, Part B NO Calc.)
+&lt;br&gt;
+You can use a DOUBLE SIDED note card written in your own handwriting
+&lt;br&gt;
+Topics on Test-Logs, Exponents, Regression
+&lt;br&gt;
+Review/Help Sessions
+&lt;br&gt;
+Thursday 1/3   3:45 pm- MS room 222
+&lt;br&gt;
+Friday 1/4   2:00 pm-3:30 pm @ HS Math Office
+&lt;br&gt;
+Monday 1/7 8:00 am @ HS Math office
+&lt;br&gt;
+Or Email me to set up an appointment
+
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615431</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Practice for Test #4.  This is best done by redoing problems from previous homework and quizzes, as well as the previous test. Also, you should complete &lt;a href=&quot;/files/hosmerc/alg2/Test 4 Review.pdf&quot;&gt;Test 4 Review&lt;/a&gt;.  You may check your answers on the &lt;a href=&quot;/files/hosmerc/alg2/Test 4 Review Answer Key.pdf&quot;&gt;Test 4 Review Answer Key&lt;/a&gt;.  .
+&lt;br&gt;
+&lt;br&gt;
+Test #4 will consist of two parts... you may use a calculator on part A, but you may NOT use a calculator on part B.
+&lt;br&gt;
+&lt;br&gt;
+You may use both sides of a 3&quot;-by-5&quot; notecard that you have prepared in your own handwriting. Be sure that you have pencils and a functioning calculator. You should also have some other work to do in case you finish before the end of the period. You will not be given extra time unless you have a legal right to it because of an IEP or a 504.
+&lt;br&gt;
+&lt;br&gt;
+You will be well-prepared for the test if you can do the following: 
+&lt;br&gt;
+1.Tell whether a function is linear, exponential, quadratic, power, or none of these.
+ &lt;br&gt;
+2.Apply exponential functions as models of real-world phenomena, including the use of regression.
+&lt;br&gt;
+3.Find the common ratio (growth factor) from exponential data.
+&lt;br&gt;
+4.Translate between exponential and logarithmic form.
+&lt;br&gt;
+5.Apply the properties of exponents and logarithms.
+&lt;br&gt;
+6.Represent functions as algebraic rules (formulas), tables, graphs, and function machines.
+&lt;br&gt;
+7.Distinguish exponential from power equations, and solve both.
+&lt;br&gt;
+8.Explain all of the above clearly and correctly.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615451</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Test 4 Review.pdf&quot;&gt;
+Test 4 Review Packet&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Test 4 Review Key.pdf&quot;&gt;
+Test 4 Review Packet Answer Key&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615452</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Rev of Exp and Logs.pdf&quot;&gt;
+Classwork-Review of Exponents and Logs&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Rev of Exp and Logs KEY.pdf&quot;&gt;
+Answer Key&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615462</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Logs Practice and Word Problems.pdf&quot;&gt;
+Logs Practice and Word Problems&lt;/a&gt;
+&lt;br&gt;
+Skip question 5</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615477</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete problems 1 and 2 on &lt;a href=&quot;/files/hosmerc/alg2/23_half-life applications.pdf&quot;&gt;Half-life Applications&lt;/a&gt;.  Be sure to check your answers to 2b and 2c... do they make sense given the half-life of carbon-14?  If no, why not?</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615481</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">In &lt;a href=&quot;/files/davidsonl/alg2/apps-of-logs.pdf&quot;&gt;Exponential and Logarithmic Models&lt;/a&gt;, read pp. 270–271 and do the five odd-numbered problems on p. 283.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615484</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Log Models.pdf&quot;&gt;
+Logarithmic Models Packet&lt;/a&gt;
+
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615492</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/alg2/23_half-life applications.pdf&quot;&gt;Half-life Applications&lt;/a&gt;.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615495</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">In &lt;a href=&quot;/files/davidsonl/alg2/apps-of-logs.pdf&quot;&gt;Exponential and Logarithmic Models&lt;/a&gt;, read from the middle of p. 276 to the middle of p. 279, and do problems #13, 23, 25, 27, 37, and 39 on pp. 284–288.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615496</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">In &lt;a href=&quot;/files/davidsonl/alg2/apps-of-logs.pdf&quot;&gt;Exponential and Logarithmic Models&lt;/a&gt;, read from the middle of p. 279 through p. 281, and do problems #29–32 on p. 286.&lt;br /&gt;&lt;br /&gt;
+Also, begin work on your project.
+Here are the
+&lt;a href=&quot;/files/davidsonl/alg2/project1/strontium.pdf&quot;&gt;description&lt;/a&gt;,
+&lt;a href=&quot;/files/davidsonl/alg2/project1/rubric.pdf&quot;&gt;rubric&lt;/a&gt;, and
+&lt;a href=&quot;/files/davidsonl/alg2/project1/statement-of-responsibility.pdf&quot;&gt;statement of responsibility&lt;/a&gt;.
+Partners for the project are as follows:
+&lt;ul&gt;
+&lt;li&gt;Luke and Chris&lt;/li&gt;
+&lt;li&gt;James and Sam&lt;/li&gt;
+&lt;li&gt;Mia and Anna&lt;/li&gt;
+&lt;li&gt;Ian and Brianna&lt;/li&gt;
+&lt;li&gt;Bejeana and Ned&lt;/li&gt;
+&lt;li&gt;Jono and Keri&lt;/li&gt;
+&lt;li&gt;Sarvani and Connor&lt;/li&gt;
+&lt;li&gt;Caitlin and Benton&lt;/li&gt;
+&lt;li&gt;Ivan and Max&lt;/li&gt;
+&lt;li&gt;Jay and Lucas&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615502</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Read the &lt;a href=&quot;/files/hosmerc/alg2/2_project description (D block).pdf&quot;&gt;Project Description&lt;/a&gt;.  Groups to be assigned in class.
+&lt;br&gt;
+&lt;br&gt;
+Please be sure to sign and date the &lt;a href=&quot;/files/hosmerc/alg2/1_statement of responsibility.pdf&quot;&gt;Statement of Responsibility&lt;/a&gt;.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615503</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Read the &lt;a href=&quot;/files/hosmerc/alg2/2_project description (E block).pdf&quot;&gt;Project Description&lt;/a&gt;. Groups to be assigned in class.
+&lt;br&gt;
+&lt;br&gt;
+Please be sure to sign and date the &lt;a href=&quot;/files/hosmerc/alg2/1_statement of responsibility.pdf&quot;&gt;Statement of Responsibility&lt;/a&gt;.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615506</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Read pages 276-279 in &lt;a href=&quot;/files/hosmerc/alg2/25_exponential and logarithmic models.pdf&quot;&gt;Exponential and Logarithmic Models&lt;/a&gt;, and complete problems 13(a, c, d), 23, 25, 27, 37(a), and 39 on pages 284-288.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615508</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Half Life Problems Sec.4.6.pdf&quot;&gt;
+Half Life Word Problem Packet&lt;/a&gt;
+&lt;br&gt;
+Please do # 3, 5, 7 on separate paper showing all of your work.  We solved the first part of #3 in class. 
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615509</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Half Life Problems Sec.4.6.pdf&quot;&gt;
+Half Life Word Problem Packet&lt;/a&gt;
+&lt;br&gt;
+Please do # 3, 5, 7, 9, 13 on separate paper showing all of your work.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615512</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">The Super Strontium-90 Project is due today!
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/alg2/2_project description (D block).pdf&quot;&gt;Project Description&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/alg2/3_project rubric.pdf&quot;&gt;Project Rubric&lt;/a&gt; 
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/alg2/1_statement of responsibility.pdf&quot;&gt;Statement of Responsibility&lt;/a&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615514</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">The Super Strontium-90 Project is due today!
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/alg2/2_project description (E block).pdf&quot;&gt;Project Description&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/alg2/3_project rubric.pdf&quot;&gt;Project Rubric&lt;/a&gt; 
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/alg2/1_statement of responsibility.pdf&quot;&gt;Statement of Responsibility&lt;/a&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615522</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Work on your project! And remember that Jan. 23 is the deadline for retakes on the test.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615523</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Project Strontium.pdf&quot;&gt;
+&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/Project Strontium Rubric.pdf&quot;&gt;
+&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&quot;/files/scaniol/alg2/Unit 2-Exp._ Logs/statement-of-responsibility.pdf&quot;&gt;
+&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615524</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Enjoy your no-homework weekend.&lt;br /&gt;
+&lt;img src=&quot;/teachers/gabrinerd/dancing_giraffees.gif&quot;&gt;
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615553</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/alg2/1_intro to systems.pdf&quot;&gt;Introduction to Systems of Equations&lt;/a&gt;. 
+&lt;br&gt;
+Continue to work on your Strontium-90 project!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615554</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ol&gt;
+&lt;li&gt;Complete Part One of &lt;a href=&quot;/files/davidsonl/alg2/sys-by-graph+subst.pdf&quot;&gt;Solving Systems by Graphing &amp; Substitution&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Read both pages of the &lt;i&gt;Solving by Graphing &lt;/i&gt;section
+of &lt;a href=&quot;http://www.coolmath.com/algebra/12-2x2-systems-of-equations/index.html&quot;&gt;2x2 Systems of Equations on CoolMath.com&lt;/a&gt;.
+&lt;li&gt;Continue working on your project.&lt;/li&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615558</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1. Finish part 1 on &lt;a href=&quot;/files/hosmerc/alg2/2_sys by graph subst.pdf&quot;&gt;Solving Systems by Graphing &amp; Substitution&lt;/a&gt;. 
+&lt;br&gt;
+2. Read both pages of the Solving by Graphing section on &lt;a href=&quot;http://www.coolmath.com/algebra/12-2x2-systems-of-equations/index.html&quot;&gt;2x2 Systems of Equations&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615563</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Project is due!!!</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">612697</column>
@@ -19057,6 +20706,13 @@ Turn in the following three items:&lt;ol&gt;
 &lt;/ol&gt;
 
 </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615494</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Fill out the
+&lt;a href=&quot;https://docs.google.com/a/my.weston.org/spreadsheet/viewform?formkey=dFZ0ZWhJaXFJdnJPbGxsRE5lS2U0V2c6MA#gid=0&quot;&gt; end of course form&lt;/a&gt;.&lt;br&gt;
+You can cut and paste your project reflection and grade justification if you have already written them.&lt;br&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610801</column>
@@ -22879,7 +24535,7 @@ Visit the online trig textbook &lt;a href=&quot;http://www.mecmath.net/trig/trig
         <table name="assignments">
             <column name="assgt_id">615204</column>
             <column name="teacher_id">fierabendm</column>
-            <column name="content">Here is a copy of &lt;a href=&quot;/files/fierabendm/precalch/17_trig+music-d.pdf&quot;&gt;Trig and Music part D&lt;/a&gt;.</column>
+            <column name="content">Here is a copy of &lt;a href=&quot;/files/fierabendm/precalch/17_trig+music-d.pdf&quot;&gt;Trig and Music part D&lt;/a&gt;. It will be collected today at the beginning of class.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615205</column>
@@ -22889,12 +24545,391 @@ Visit the online trig textbook &lt;a href=&quot;http://www.mecmath.net/trig/trig
         <table name="assignments">
             <column name="assgt_id">615207</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">&lt;img src=&quot;/teachers/davidsonl/geomh/thanksgiving11.png&quot; /&gt;</column>
+            <column name="content">&lt;img src=&quot;/teachers/davidsonl/geomh/thanksgiving11.png&quot; /&gt;
+&lt;!--
+&lt;br /&gt;
+Just testing... &amp;#8238;How does this look?&lt;br /&gt;
+Back.
+--&gt;
+</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615208</column>
             <column name="teacher_id">fierabendm</column>
             <column name="content">Here is a copy of the &lt;a href=&quot;/files/fierabendm/precalch/20_identities.pdf&quot;&gt;Identities&lt;/a&gt; that you will be responsible for. Please commit them to memory. Visit &lt;a href=&quot;http://www.themathpage.com/atrig/trigonometric-identities.htm#sum&quot;&gt;this link&lt;/a&gt; and read through the &lt;i&gt;reciprocal identities, tangent and cotangent identities, pythagorean identities, sum and difference formulas, and double-angle formulas&lt;/i&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615212</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Look at the identity chapter in your online text &lt;A HREF=&quot;http://www.mecmath.net/trig/trigbook.pdf&quot;&gt;TRIG IDENTITIES.&lt;/A&gt; Here is a website with a good discussion of proving identities:&lt;A HREF=&quot;http://www.intmath.com/analytic-trigonometry/1-trigonometric-identities.php#proving&quot;&gt; PROVING TRIG IDENTITIES. &lt;/A&gt;&lt;/p&gt; &lt;P&gt; Here is another copy of  trigonometry and music part D &lt;A HREF=&quot;/files/monzj/precalch/trig+music-d.pdf&quot;&gt;TRIG AND MUSIC D.&lt;/A&gt; &lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615227</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;i&gt;The Road to Complex Numbers, &lt;/i&gt;
+&lt;a href=&quot;/files/davidsonl/precalch/road-to-complex1.html&quot;&gt;Part One&lt;/a&gt;
+and &lt;a href=&quot;/files/davidsonl/precalch/road-to-complex2.html&quot;&gt;Part Two&lt;/a&gt;,
+as well as
+&lt;a href=&quot;/files/davidsonl/precalch/complex-num-practice1.pdf&quot;&gt;Practice with Complex Numbers&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615229</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete #'s 8, 9, 10 on &lt;a href=&quot;/files/fierabendm/precalch/20_WS11_sumanddiff.pdf&quot;&gt;worksheet 11&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615230</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete #'s 1-10 on &lt;a href=&quot;/files/fierabendm/precalch/20_WS11_sumanddiff.pdf&quot;&gt;worksheet 11&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615231</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">&lt;b&gt;Test #3 is today!! Look for test topics in the Calendar under the Resources tab&lt;/b&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615237</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/complexFurtherExploration.html&quot;&gt;Further Exploration of Complex Numbers&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615285</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Test 3 is today. Things to review: trig &amp; music, proving trig identities, sum, difference, and double-angle formulas, plotting points in the complex plane. Be sure you memorize - or quickly know how to reconstruct - our list of &lt;A HREF=&quot;/files/monzj/precalch/20_identities.pdf&quot;&gt;IDENTITIES.&lt;/A&gt;.&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615286</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/demoivre.pdf&quot;&gt;DeMoivre and cis&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615287</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Practice for the test.
+Topics have been announced, as usual, in the Calendar section of our Resources page.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615298</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Your identity challenge is due today! Make sure you've done 30 pts worth of problems. Please number each problem you do and put your name on the sheet. It will be collected.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615330</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;a href=&quot;/files/davidsonl/precalch/Gaussian-integers.pdf&quot;&gt;Multiples of Gaussian Integers&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615332</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete the interesting polar graphs that you started in class:
+&lt;ol&gt;
+&lt;li&gt;r = sin(&amp;theta;)&lt;/li&gt;
+&lt;li&gt;r = &amp;theta;&lt;/li&gt;
+&lt;li&gt;r = 1 &amp;ndash; sin(&amp;theta;)&lt;/li&gt;
+&lt;li&gt;r = 1 + 2 sin(&amp;theta;)&lt;/li&gt;
+&lt;/ol&gt;
+You can download polar graph paper &lt;a href=&quot;http://mason.gmu.edu/~mmankus/Handson/polar.gif&quot;&gt;here&lt;/a&gt;
+or
+&lt;a href=&quot;http://ck022.k12.sd.us/images/graph%20paper/graph5__4_radian_polar.jpg&quot;&gt;here&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615333</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">This is actually just &lt;i&gt;one problem, &lt;/i&gt;so do all four parts in the order given:&lt;br /&gt;
+&lt;ol&gt;
+&lt;li&gt;Carefully sketch these two polar curves on the same grid.
+Make sure your units allow both curves to be seen completely and clearly.&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;r &lt;/i&gt;= 3 + 2 cos(&amp;theta;)&lt;br /&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;i&gt;r &lt;/i&gt;= 5 sin(2&amp;theta;)&lt;br /&gt;
+&lt;/li&gt;
+
+&lt;li&gt;By eye, locate the coordinates of all eight points of intersection.&lt;/li&gt;
+&lt;li&gt;Plug all eight [r, &amp;theta;] pairs into each equation.&lt;/li&gt;
+&lt;li&gt;Explain any results that seem surprising.&lt;/li&gt;
+&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615334</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;table cellspacing=&quot;5&quot; cellpadding=&quot;5&quot;&gt;
+&lt;tr&gt;&lt;td background=&quot;http://images2.layoutsparks.com/1/186428/christmas-snow-fall-animated.gif&quot; style=&quot;border:4px solid #f00;&quot;&gt;&lt;span style=&quot;color: #FFFFFF; font-size: 200%;&quot;&gt;No homework. Enjoy the snow!&lt;/span&gt; &lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;/files/davidsonl/images/enjoy-the-snow.gif&quot;&gt;&lt;/td&gt;
+&lt;td&gt;
+Happy New Year! (How many of these languages can you identify?)&lt;br /&gt;
+&lt;img src = &quot;/files/davidsonl/images/happynewyear.gif&quot; /&gt;&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615345</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Do what you can on &lt;a href=&quot;/teachers/fierabendm/precalch/3_WS22_CN_prac.pdf&quot;&gt;Practice with Complex Numbers&lt;/a&gt;. Remember, the extra credit assignment is due Monday!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615346</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete &lt;a href=&quot;/teachers/fierabendm/precalch/3_WS22_CN_prac.pdf&quot;&gt;Practice with Complex Numbers&lt;/a&gt; and &lt;a href=&quot;http://old.westonmath.org/files/davidsonl/precalch/complexFurtherExploration.html&quot;&gt;Further Exploration with Complex Numbers&lt;/a&gt; for next class. Remember, the extra credit assignment is due Monday!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615359</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is a copy of &lt;a href=&quot;/files/fierabendm/precalch/17_trig+music-d.pdf&quot;&gt;Trig and Music part D&lt;/a&gt;. Please leave your completed work in the folder on my desk in the math office by the end of the day.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615362</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">&lt;b&gt;Test #4 is today! Check the Calendar section under the Resources tab for test topics.&lt;/b&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615365</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete &lt;a href=&quot;/teachers/fierabendm/precalch/3_WS22_CN_prac.pdf&quot;&gt;Practice with Complex Numbers&lt;/a&gt; and &lt;a href=&quot;http://old.westonmath.org/files/davidsonl/precalch/complexFurtherExploration.html&quot;&gt;Further Exploration with Complex Numbers&lt;/a&gt; for next class. Here is a copy of &lt;a href=&quot;/files/fierabendm/precalch/4_WS23_DMT.pdf&quot;&gt;De Moivre's Theorem and CIS&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615366</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete &lt;a href=&quot;/files/fierabendm/precalch/4_WS23_DMT.pdf&quot;&gt;De Moivre's Theorem and CIS&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+Have a good winter break!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615367</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete &lt;a href=&quot;/files/fierabendm/precalch/4_WS23_DMT.pdf&quot;&gt;De Moivre's Theorem and CIS&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615396</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Download some polar graph paper (&lt;a href=&quot;http://mason.gmu.edu/~mmankus/Handson/polar.gif&quot;&gt;here&lt;/a&gt; or &lt;a href=&quot;/files/fierabendm/precalch/5_polargraph-letter.pdf&quot;&gt;here&lt;/a&gt;) and complete these interesting polar graphs:&lt;br&gt;&lt;br&gt;
+1. r = sin(&amp;Theta;)&lt;br&gt;
+2. r = 2 + 2sin(&amp;Theta;)&lt;br&gt;
+3. r = 1 - sin(&amp;Theta;)&lt;br&gt;
+4. r = 4cos(2&amp;Theta;)&lt;br&gt;&lt;br&gt;
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615405</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/classical-fractals.html&quot;&gt;Classical Fractals I&lt;/a&gt;.
+
+&lt;!-- &lt;a href=&quot;/files/davidsonl/precalch/fractal-iteration-project/project-description.html&quot;&gt;description&lt;/a&gt;.
+--&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615421</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Practice for the test.
+Topics have been announced in the Calendar section of the course Resources page,
+as usual.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615435</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete #'s 1-8 on &lt;a href=&quot;/files/fierabendm/precalch/13_WS27_classical fractals.pdf&quot;&gt;Classical Fractals&lt;/a&gt;. Here is a copy of &lt;a href=&quot;/files/fierabendm/precalch/6_iteration-0.pdf&quot;&gt;Iteration 0&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615438</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/classical-fractals2.pdf&quot;&gt;Classical Fractals II: Approaching Sierpinski Transformationally&lt;/a&gt;
+and &lt;a href=&quot;/files/davidsonl/precalch/iteration-0.pdf&quot;&gt;Iteration, Part 0&lt;/a&gt;.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615479</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/iteration-1.pdf&quot;&gt;Iteration, Part 1&lt;/a&gt;.
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615480</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/iteration-2.pdf&quot;&gt;Iteration, Part 2&lt;/a&gt;.
+Here is Mr. Monz’s &lt;a href=&quot;/files/monzj/precalch/Iteration%20Spreadsheet.xlsx&quot;&gt;iteration spreadsheet&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615497</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt; Here is the&lt;A HREF=&quot;/files/monzj/precalch/Iteration Spreadsheet.xlsx&quot;&gt;ITERATION SPREADSHEET.&lt;/A&gt;&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615505</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is a copy of your &lt;a href=&quot;/files/davidsonl/precalch/fractal-iteration-project/project-description.html&quot;&gt;Fractal Project (including Topics)&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+Here is a link to an &lt;a href=&quot;/files/fierabendm/precalch/7_Iteration Spreadsheet.xlsx&quot;&quot;&gt;Iteration Spreadsheet&lt;/a&gt;. Use this sheet to explore the 4th family (quadratic iteration) by changing the c-value and entering various seeds. Remember to make a colored graph for each family.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615513</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Work on your project!
+Send me a description of your &lt;a href=&quot;/files/davidsonl/precalch/fractal-iteration-project/project-description.html&quot;&gt;project topic and medium&lt;/a&gt;.
+A couple of sentences will suffice,
+and I need only one message per group, not one per individual.
+The medium can be PowerPoint, a poster, or whatever else you’re planning.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615525</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Enjoy your no-homework weekend.&lt;br /&gt; &lt;img src=&quot;/teachers/gabrinerd/dancing_giraffees.gif&quot;&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615527</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is a link to Deterministic IFS - &lt;a href=&quot;http://classes.yale.edu/fractals/Software/detifs.html&quot;&gt;Deterministic IFS&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615541</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">
+These questions concern the &lt;a href=&quot;/files/davidsonl/precalch/sqrts-of-reals-by-newton.gif&quot;&gt;version of Newton&amp;#8217;s method that was shown in class&lt;/a&gt;:
+&lt;ol&gt;&lt;li&gt;In finding the square root of a positive number, what happens when the seed is negative?
+Prove that this conclusion is always correct.&lt;br /&gt;
+&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Through experimentation, come up with a &lt;i&gt;good &lt;/i&gt;conjecture for this question:
+Based on the seed,
+how can you predict which of the two square roots is found by Newton’s method when applied to a complex number?
+To be able to compare consistently, try the two square roots of –5–12&lt;i&gt;i &lt;/i&gt;(which are 2–3&lt;i&gt;i &lt;/i&gt;and –2+3&lt;i&gt;i&lt;/i&gt;),
+with a variety of seeds.
+Hint: try plotting the two two square roots along with each seed on a grid;
+then color-code the seed according to which square root it led to.
+&lt;/li&gt;&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615542</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/precalch/cube-roots.html&quot;&gt;Cube Roots Using Newton’s Method&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Continue working on your project.
+&lt;/li&gt;&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615543</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;li&gt;Be sure that the following definitions are in your notebook:
+&lt;blockquote&gt;When iterating any particular function...
+&lt;ul&gt;
+&lt;li&gt;The Filled-in Julia Set or, preferably, &lt;b&gt;Filled Julia Set&lt;/b&gt; (FJS) for that function is the set of all prisoners.&lt;/li&gt;
+&lt;li&gt;The &lt;b&gt;Julia Set&lt;/b&gt; for that function is the set of
+points on the edge or border of the FJS.
+These are a subset of the prisoners, namely those that can become escapees with the &lt;i&gt;slightest &lt;/i&gt;change; their orbit is chaotic.&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/precalch/iteration-3.pdf&quot;&gt;Iteration, Part 3&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615544</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ol&gt;
+&lt;li&gt;Write a detailed progress report for your project. You should include the following:
+&lt;ul&gt;
+&lt;li&gt;a description of what you have done so far&lt;/li&gt;
+&lt;li&gt;a description of just what you still have left to do&lt;/li&gt;
+&lt;li&gt;a full list of all your sources&lt;/li&gt;
+&lt;li&gt;an explanation of just what contribution each group member is making and is going to make (&lt;i&gt;be sure to name names&lt;/i&gt;)&lt;/li&gt;
+&lt;li&gt;a question that can assess whether your audience has grasped a Big Idea that your work is pointing out or exploring&lt;/li&gt;&lt;/ul&gt;
+One submission per group is sufficient: Write the report together with your group; then pick one representative to email it to me before the end of the day.&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;span style=&quot;color: #FF0000;&quot;&gt;
+&lt;b&gt;Do not forget the AMC 12 during C Block on Tuesday, 2/5.
+Room TBA.
+Attendance is required!&lt;/b&gt;&lt;/span&gt;
+&lt;/li&gt;&lt;/ol&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615545</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/exploring-julia-sets-2.html&quot;&gt;Exploring Julia Sets II&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615546</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Prepare a small but tasteful poster to advertise the Fractal Fair.
+Regular paper size (8.5&quot;x11&quot;) would be fine, although a few larger posters would be nice as well.
+Be sure to include the name (Fractal Fair), the date (Wed 2/13), the blocks (Activity Period and E Block), the time (10:00&amp;ndash;12:15), and the location (Library), as well as an appropriate picture or graphic.
+Use an image that illustrates your own project
+if you can create or find one that looks good.
+Otherwise just pick something fractaly.
+Get it approved by me before posting it, and then post it somewhere visible and legal.
+We are looking for one poster per student,
+although you could do them collectively with your group and make three or more altogether.
+Extra posters are always welcome!&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Also, be sure to read &lt;a href=&quot;/files/davidsonl/precalch/What-to-do-Fractal-Fair.pdf&quot;&gt;What to do before, during, and after the Fractal Fair&lt;/a&gt;.
+Do what it says, including inviting your parents and teachers to the Fractal Fair!&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/precalch/iter-fns-1.pdf&quot;&gt;Iterated Function Systems I&lt;/a&gt;.&lt;/li&gt;&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615547</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Be fully prepared for the February 13th Fractal Fair:
+your project should be completed &lt;i&gt;before &lt;/i&gt;the 13th!
+If you have a poster, model, booklet, or other physical object,
+bring it to the library promptly at 9:40 on the 13&lt;sup&gt;th&lt;/sup&gt;,
+and set it up in an appropriate place (Ms. Hanson will help you).
+If you have a PowerPoint or other computer demonstration,
+you should have duplicate copies, either on someone&amp;#8217;s email,
+a CD, or a flash drive.
+If it&amp;#8217;s on a laptop, don&amp;#8217;t ever leave it unattended!
+You can install any computer materials on a PC in the Library or on your own laptop if you wish.
+&lt;br /&gt;&lt;br /&gt;
+Since the Fractal Fair goes through lunch period,
+you can take turns going to lunch;
+Do not leave your project unstaffed at any point.
+Also, be sure to remember to remove your materials from the library by the end of
+the week,
+and to remove all your advertising posters on the 13th.
+(Please don&amp;#8217;t remove them until the Fair is over, however.)</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615548</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">A few things...&lt;br&gt;&lt;br&gt;
+1. Complete &lt;a href=&quot;/files/fierabendm/precalch/7_iteration-2.pdf&quot;&gt;Iteration Part 2&lt;/a&gt; for next class.&lt;br&gt;
+2. Complete the 3 problems from the board:&lt;br&gt;
+a. f(x) = -x + 2&lt;br&gt;
+b. f(x) = x&lt;br&gt;
+c. f(x) = x + 3&lt;br&gt;
+3. One person from each group needs to send me an email no later than Friday with your project topic and medium (please include your block in the subject line, and cc your group members in the email). Please let me know if you have any questions about the project!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615549</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is a copy of your &lt;a href=&quot;/files/davidsonl/precalch/fractal-iteration-project/project-description.html&quot;&gt;Fractal Project (including Topics)&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+Here are some suggested topics, some of which are on the list and rarely ever chosen (which might make for some very interesting and unique projects!):&lt;br&gt;
+-Quadratic/Non-Linear Iteration&lt;br&gt;
+-Graphical Iteration&lt;br&gt;
+-Population Growth (Logistic vs. Exponential Model)&lt;br&gt;
+-Bifurcation and Catastrophe Theory&lt;br&gt;
+-Iteration on the Real number line
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615555</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Finalize the 3rd family from Iteration part 1, and start working on the 4th family. Think about how to find fixed points for quadratic iteration rules. And remember to bring colored pens/pencils to class.&lt;br&gt;&lt;br&gt;
+One person from each group needs to send me an email no later than Friday with your project topic and medium (please include your block in the subject line, and cc your group members in the email). Please let me know if you have any questions about the project!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615567</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/iter-fns-2.pdf&quot;&gt;Iterated Function Systems II&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615568</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is our &lt;a href=&quot;/files/fierabendm/precalch/Schedule G block.pdf&quot;&gt;schedule for our Fractal Unit&lt;/a&gt;. Make sure you are working on our project outside of class.&lt;br&gt;&lt;br&gt;
+&lt;b&gt;If you have a laptop or ipad, please bring it to class with you for the next several weeks.&lt;/b&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615569</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is our &lt;a href=&quot;/files/fierabendm/precalch/Schedule C block.pdf&quot;&gt;schedule for our Fractal Unit&lt;/a&gt;. Make sure you are working on our project outside of class.&lt;br&gt;&lt;br&gt;
+&lt;b&gt;If you have a laptop or ipad, please bring it to class with you for the next several weeks.&lt;/b&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615570</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">&lt;b&gt;Test 5 is today!! More details to follow...&lt;/b&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610804</column>
@@ -26515,6 +28550,225 @@ Don't forget to email with questions!</column>
             <column name="content">Finish up the &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.4 - Law of Sines.pdf&quot;&gt;Law of Sines&lt;/a&gt; worksheet.</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">615228</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete #'s 1, 2, 4 on &lt;a href=&quot;/files/fierabendm/precalc1/11_more LOS and LOC practice-2.pdf&quot;&gt;More LOS and LOC practice&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615236</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Watch this video about the Law of Sines:  &lt;a href=&quot;http://www.wisc-online.com/objects/ViewObject.aspx?ID=TMH2702&quot;&gt;LOS video&lt;/a&gt;. Then see if you can do #1a from the packet you received in class today. &lt;a href=&quot;/files/fierabendm/precalc1/11_more LOS and LOC practice-2.pdf&quot;&gt;More LOS and LOC practice&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615282</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">First page of &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.7 - Law of Sines, Law of Cosines, and Area of a Triangle.pdf&quot;&gt;Worksheet 3.7 - Law of Sines, Law of Cosines, and Area of a Triangle&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615283</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Finish &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.7 - Law of Sines, Law of Cosines, and Area of a Triangle.pdf&quot;&gt;Worksheet 3.7 - Law of Sines, Law of Cosines, and Area of a Triangle&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615293</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Complete the first two pages of &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.4 - Law of Sines.pdf&quot;&gt;Worksheet 3.4 - Law of Sines&lt;/a&gt;.  The third page is two challenge problems; please try those out.
+&lt;br&gt;&lt;br&gt;
+Last class handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 3.4 - Solving Triangles I.pdf&quot;&gt;Warm Up 3.4 - Solving Triangles I&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.6 - Comparing Laws.pdf&quot;&gt;Worksheet 3.6 - Comparing Laws&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615299</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here is a copy of &lt;a href=&quot;/files/fierabendm/precalc1/11_more LOS and LOC practice-2.pdf&quot;&gt;More LOC and LOS practice&lt;/a&gt;. Here is a copy of &lt;a href=&quot;/files/fierabendm/precalc1/10_Extra Practice LOS-3.doc&quot;&gt;Extra practice - LOS&lt;/a&gt;. Here is a copy of &lt;a href=&quot;/files/fierabendm/precalc1/8_law_of_sines_hw.pdf&quot;&gt;Law of Sines homework&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615324</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Test 3 is today!  Please make a notecard with all the information you'll need for the test.  See me with any questions.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615328</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Test on Law of Sines, Law of Cosines, Area of a Triangle, and SOHCAHTOA (including word problems).  Your quiz and the two packets you'll get in class will be your review material.
+&lt;br&gt;&lt;br&gt;
+Review Material: &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.8 - Trigonometric Laws Practice.pdf&quot;&gt;Worksheet 3.8&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.9 - Trigonometric Laws Practice II.pdf&quot;&gt;Worksheet 3.9&lt;/a&gt;&lt;br&gt;
+Answer Keys: &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.8 - Trigonometric Laws Practice (Key).pdf&quot;&gt;Worksheet 3.8 (Key)&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.9 - Trigonometric Laws Practice II (Key).pdf&quot;&gt;Worksheet 3.9 (Key)&lt;/a&gt;
+&lt;br&gt;
+
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 3.9 - Triangle Basics.pdf&quot;&gt;Warm Up 3.9 - Triangle Basics&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615329</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Finish up &lt;a href=&quot;/files/abendb/precalc1/Worksheet 3.8 - Trigonometric Laws Practice.pdf&quot;&gt;Worksheet 3.8 - Trigonometric Laws Practice&lt;/a&gt;.
+&lt;br&gt;&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 3.8 - Trigonometric Laws.pdf&quot;&gt;Warm Up 3.8 - Trigonometric Laws&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615344</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Test 3 is today! You are allowed one 3&quot;x5&quot; notecard written on both sides. Please bring a pencil as well.&lt;br&gt;&lt;br&gt;
+Here is a copy of our &lt;a href=&quot;/files/fierabendm/precalc1/17_Triangle Review.docx&quot;&gt;triangle review&lt;/a&gt;, &lt;a href=&quot;/files/fierabendm/precalc1/14_wd probs LOSLOC 1.pdf&quot;&gt;word problems&lt;/a&gt;, &lt;a href=&quot;/files/fierabendm/precalc1/11_more fun problems.pdf&quot;&gt;more fun problems&lt;/a&gt;, and &lt;a href=&quot;/files/fierabendm/precalc1/area of a triangle.doc&quot;&gt;area of a triangle&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+Test topics:&lt;br&gt;
+1. Know/understand/apply LOS, LOC, SOHCAHTOA, Pythagorean Them.&lt;br&gt;
+2. Find the area of any triangle.&lt;br&gt;
+3. Solve triangles using the Laws and Theorems stated in #1.&lt;br&gt;
+4. Read a word problem, set up an appropriate diagram, and solve the problem using the information given.&lt;br&gt;
+5. If there is no solution, be able to state why with valid reasons.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615368</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">&lt;b&gt;Test 4 is today! You can bring one 4&quot;x6&quot; notecard, written on both sides!&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+Here are your test topics:&lt;br&gt;&lt;br&gt;
+1. Know terms associated with vectors.&lt;br&gt;
+2. Add/subtract vectors geometrically and algebraically.&lt;br&gt;
+3. Draw vectors correctly for a word problem/&lt;br&gt;
+4. Resolve vectors into horizontal and vertical components.&lt;br&gt;
+5. Identify and convert between rectangular and polar form for a vector.&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615374</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Finish &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.1 - Intro to Vectors.pdf&quot;&gt;Worksheet 4.1 - Intro to Vectors&lt;/a&gt;:
+&lt;br&gt;&lt;br&gt;
+B block: finish 1-4 parts a, b, and c.
+&lt;br&gt;
+H block: finish 1-4 all parts.
+&lt;br&gt;&lt;br&gt;
+Notes: Intro to Vectors&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.1 - Intro to Vectors.pdf&quot;&gt;Worksheet 4.1 - Intro to Vectors&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615375</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Complete &lt;a href=&quot;/files/abendb/precalc1/Extra Credit 1 - The Lake Problem.pdf&quot;&gt;The Lake Problem&lt;/a&gt; for extra credit.  Remember that vertices of the left path are not necessarily directly across from the vertices of the right path!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615384</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: Scalars, Vector Addition
+&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.1 - Intro to Vectors.pdf&quot;&gt;Warm Up 4.1 - Intro to Vectors&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Homework 4.1 - Adding Vectors.pdf&quot;&gt;Worksheet - Adding Vectors&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615403</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: Components of Vectors&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.2 - Direction and Magnitude.pdf&quot;&gt;Warm Up 4.2 - Direction and Magnitude&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.2 - Vector Problems.pdf&quot;&gt;Worksheet 4.2 - Vector Problems&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615423</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: none. &lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.3 - Welcome Back!.pdf&quot;&gt;Warm Up 4.3 - Welcome Back!&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.3 - Welcome Back!.pdf&quot;&gt;Worksheet 4.3 - Welcome Back!&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615436</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete #'s 3 and 4 on &lt;a href=&quot;/files/fierabendm/precalc1/6_more vector practice.pdf&quot;&gt;More vector practice&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615437</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete #'s 2-5 on &lt;a href=&quot;/files/fierabendm/precalc1/4_vector wd probs.pdf&quot;&gt;Vector word problems&lt;/a&gt;.&lt;br&gt;&lt;br&gt;
+Here are copies of &lt;a href=&quot;/files/fierabendm/precalc1/1_vectors_addition_1.pdf&quot;&gt; Vector addition 1&lt;/a&gt; and &lt;a href=&quot;/files/fierabendm/precalc1/6_more vector practice.pdf&quot;&gt;More vector practice&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615443</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Test 4 is today!  Make a notecard for this test with any information you'll need.  It will cover vectors and sinusoidal modeling.  See me with any questions.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615444</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: Course vs. Bearing. &lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.3 - Welcome Back!.pdf&quot;&gt;Warm Up 4.3 - Welcome Back!&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.3 - Welcome Back!.pdf&quot;&gt;Worksheet 4.3 - Welcome Back!&lt;/a&gt;&lt;br&gt;
+Homework: none.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615447</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: Course vs. Bearing. &lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.4 - Adding and Subtracting Vectors.pdf&quot;&gt;Warm Up 4.4 - Adding and Subtracting Vectors&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.4 - Course vs. Bearing.pdf&quot;&gt;Worksheet 4.4 - Course vs. Bearing&lt;/a&gt;&lt;br&gt;
+Homework: problems 1 and 2 on &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.5 - Course vs. Bearing Practice.pdf&quot;&gt;Worksheet 4.5 - Course vs. Bearing Practice&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615448</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: none. &lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.4 - Adding and Subtracting Vectors.pdf&quot;&gt;Warm Up 4.4 - Adding and Subtracting Vectors&lt;/a&gt;&lt;br&gt;
+Homework: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.4 - Adding and Subtracting Vectors.pdf&quot;&gt;Warm Up 4.4 - Adding and Subtracting Vectors&lt;/a&gt;, &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.5 - Course vs. Bearing Practice.pdf&quot;&gt;Worksheet 4.5 - Course vs. Bearing Practice&lt;/a&gt; &lt;br&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615450</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Complete the rest of &lt;a href=&quot;/files/fierabendm/precalc1/4_vector wd probs.pdf&quot;&gt;Vector word problems&lt;/a&gt;. &lt;b&gt;The direction for question 5 is 41.7 degrees! Sorry!&lt;/b&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615459</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Schedule Changes:  Test on vectors/sinusoidal modeling will be on &lt;b&gt;Tuesday, Jan 15th&lt;/b&gt; (original date was Friday, 1/11).  &lt;p&gt;&lt;p&gt;Friday, Jan 11th: We will be reviewing for our test in class.  Please do &lt;a href=&quot;/files/fidlerb/precalc1/Unit 2/7_even more vector practice 2012.pdf&quot;&gt;this&lt;/a&gt; assignment for class on Friday. &lt;p&gt;&lt;p&gt;&lt;b&gt;If you need to do a retake for our previous test, there are copies in the retake folder in the math office.  See any math teacher in the office for assistance.&lt;/b&gt;  Please complete these at any time.  Wednesday after school, retakes will be offered (see teachers in math office for location).</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615475</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Here are answers to the Vector word problems worksheet:&lt;br&gt;&lt;br&gt;
+1. magnitude = 7.12, direction = 104.5&lt;br&gt;
+2. magnitude = 30.41 mph&lt;br&gt;
+3. magnitude = 505.6 mi&lt;br&gt;
+4. magnitude = 18.87 mi&lt;br&gt;
+5. Needs to sail 70 mi on a bearing of E41.8degreesN&lt;br&gt;
+6. The plane flew 54 mi on a course of W26.8degreesS&lt;br&gt;
+7. The plane flew 158 mi on a course of S18.2degreesE&lt;br&gt;
+8. The diver swims 111.6 ft on a course N15degreesE&lt;br&gt;&lt;br&gt;
+Here are 3 practice problmes:&lt;br&gt;&lt;br&gt;
+1. Draw a picture of a vector having magnitude 5 and a direction of 213degrees. Then resolve the vector into horizontal and vertical components. Answer: -4.19i-2.72j (vector should be in the 3rd quadrant.&lt;br&gt;&lt;br&gt;
+2. A person leaves home and walks 2 miles due west. She then walks 3 miles southwest (W45degrees S). How far away from home is she? Record your answer as a direction and a distance. Answer: 4.6 miles in a direction of W27.4degrees S.&lt;br&gt;&lt;br&gt;
+3. A plane flies 30 mi on a bearing of W20degreesN and then turns and flies 40 mi on a bearing of W10degrees S. Find the resultant displacement vector as a distance and a bearing. Answer: 67.7 mi on a course of W2.8degreesN.&lt;br&gt;&lt;br&gt;
+&lt;b&gt;GOOD LUCK!!!&lt;/b&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615485</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">&lt;b&gt;Test #4 - Vectors&lt;/b&gt;&lt;br&gt;
+Feel free to bring a note card (up to 4x6 in size).
+&lt;br&gt;&lt;br&gt;
+Notes: none.&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Review - Vectors.pdf&quot;&gt;Review - Vectors&lt;/a&gt;.&lt;br&gt;
+Homework: Check your answers with &lt;a href=&quot;/files/abendb/precalc1/Review - Vectors (Key).pdf&quot;&gt;Review - Vectors (Key)&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615486</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: none.&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Warm Up 4.4 - Grin and Bearing It.pdf&quot;&gt;Warm Up 4.4 - Grin and Bearing It&lt;/a&gt;,&lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.6 - Course and Bearing Problems.pdf&quot;&gt;Worksheet 4.6 - Course and Bearing Problems&lt;/a&gt;.&lt;br&gt;
+Homework: finish &lt;a href=&quot;/files/abendb/precalc1/Worksheet 4.6 - Course and Bearing Problems.pdf&quot;&gt;Worksheet 4.6 - Course and Bearing Problems&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615499</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please work on these &lt;a href=&quot;/files/fierabendm/precalc1/14_sinusoid word problems.pdf&quot;&gt;Sinusoidal Word Problems&lt;/a&gt; for next class. These were part of the packet of problems you handed in, which will be returned to you next class. We will be going over these in class on Wednesday.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615500</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Please complete #'s 3 and 7 from the Sinusoidal word problem packet that we returned to you.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615511</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Notes: Polar vs. Rectangular Coordinates, conversions between them.&lt;br&gt;
+Handouts: &lt;a href=&quot;/files/abendb/precalc1/Worksheet 5.1 - Polar and Rectangular Coordinates.pdf&quot;&gt;Worksheet 5.1 - Polar and Rectangular Coordinates&lt;/a&gt;&lt;br&gt;
+Homework: finish &lt;a href=&quot;/files/abendb/precalc1/Worksheet 5.1 - Polar and Rectangular Coordinates.pdf&quot;&gt;Worksheet 5.1 - Polar and Rectangular Coordinates&lt;/a&gt;
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615550</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Today is your Sinusoidal Modeling quiz (1 question). You are allowed a notecard and a calculator (set in radians mode). See me if you have questions! </column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610803</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Please send me an email.  My email address is:
@@ -26742,6 +28996,55 @@ HREF=&quot;/files/fidlerb/admc/PSet1%202012.pdf&quot;&gt;Problem Set 1&lt;/a&gt;
 &lt;p&gt;
 &lt;/p&gt;
 The code for the tree program is AYF3XEUCSHCFLUWB .  You can get to it through remote access.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615310</column>
+            <column name="teacher_id">mclaughlinj</column>
+            <column name="content">
+&lt;A HREF=&quot;/files/mclaughlinj/admc/QueueingProblemSet12012.docx&quot;&gt;Problem set 3 &lt;/a&gt; is due!!!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615338</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">The queueing theory problem set is now due FRIDAY, DECEMBER 14th at the start of class.  We won't have much time (if any) to work in class Wednesday, but it will &lt;b&gt;not&lt;/b&gt; be late if it is turned in Friday.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615418</column>
+            <column name="teacher_id">mclaughlinj</column>
+            <column name="content">&lt;A HREF=&quot;/files/mclaughlinj/admc/OperationsResearchProblemSet2.pdf&quot;&gt;Problem set 4&lt;/a&gt; is due!!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615445</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Manhattan Metric Problem Set due today!  See me with any questions beforehand. &lt;b&gt; CHANGED!!!!! See next assignment!&lt;/b&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615446</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Test on Manhattan Metric is today!  Make a notecard, and see me with any questions. &lt;b&gt; CHANGED!!!!! See next assignment!&lt;/b&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615458</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Hi all. &lt;p&gt; &lt;p&gt;Schedule Changes:  The test for the Manhattan Metric is now going to be on &lt;b&gt;Monday, Jan 14&lt;/b&gt; (original date was 1/11).&lt;p&gt;&lt;p&gt;In class on Friday: We will spend approximately half the class talking about the test/reviewing, and half the class for finishing up the problem sets.  &lt;p&gt;&lt;b&gt;For help on the problem sets in the meantime:&lt;/b&gt; See Mr. McLaughlin or Mr. Wyman (in skills).&lt;p&gt;&lt;p&gt;&lt;a href=&quot;/files/fidlerb/admc/OperationsResearchProblemSet2 2012.docx&quot;&gt;Here&lt;/a&gt; is a spare copy of the problem set, if you need one.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615501</column>
+            <column name="teacher_id">mclaughlinj</column>
+            <column name="content">&lt;A
+HREF=&quot;https://docs.google.com/a/my.weston.org/spreadsheet/viewform?formkey=dHBnS0RENllDQ2N1YldHX0NnUlRsVFE6MA&quot;&gt;Survey&lt;/a&gt;
+
+&lt;p&gt;
+&lt;/p&gt;
+When you are done you can try the 
+&lt;A
+HREF=&quot;http://www.logicmazes.com/theseus.html&quot;&gt;Theseus and the Minotaur Maze&lt;/a&gt;.  It seems to work best with Firefox.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615515</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Here is the &lt;a href=&quot;https://docs.google.com/a/my.weston.org/spreadsheet/viewform?formkey=dFllV3ZKV1F2cDRCaS1odkxqMVZLWGc6MA#gid=0&quot;&gt;Mid-Year Survey&lt;/a&gt;&lt;p&gt;&lt;p&gt;
+When you are done, see how many levels you can win playing &lt;a href=&quot;http://www.tnelson.demon.co.uk/mazes/&quot;&gt;Theseus and the Minotaur&lt;/a&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610798</column>
@@ -27365,6 +29668,51 @@ Wednesday, November 16: Deadline for Retakes of Test 1 and 2</column>
             <column name="assgt_id">615181</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">Complete this &lt;a href =&quot;/files/langsdorfa/precalc2/AFirstLimitHomework2013.pdf&quot;&gt; worksheet&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615217</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Here is &lt;A HREF=&quot;/files/monzj/precalc2/ProblemSet32013.pdf&quot;&gt;Problem Set 3.&lt;/A&gt;&lt;/p&gt;&lt;P&gt; NOTE: in view of my absence Tuesday we'll postpone the test to next Tuesday, Dec. 4.&lt;/p&gt;&lt;P&gt;Here are the &lt;A HREF=&quot;/files/langsdorfa/precalc2/SelectedPS2Answers2013.pdf&quot;&gt;Answers.&lt;/A&gt;&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615315</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Here is &lt;A HREF=&quot;/files/monzj/precalc2/Slopes of Curves.pdf&quot;&gt;Slopes of Curves.&lt;/A&gt;&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615380</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Please complete the worksheet &lt;a href = &quot;/files/langsdorfa/precalc2/PowerRuleForDerivatives2013.pdf&quot;&gt; Power Rule for Derivatives&lt;/a&gt; before Thursday's class.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615424</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">In class on Wednesday/Thursday, we discussed Test #4.  We also worked on solving literal equations in our algebra reboot, and started the &lt;a href = &quot;/files/langsdorfa/precalc2/FarmingProblem2013.pdf&quot;&gt; Farming Problem&lt;/a&gt;.  Finish this problem for homework.  We will have both a quiz and a reboot quiz on Thursday, January 10.  The deadline to retake Test #4 is Friday, January 18.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615454</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">In class on Friday/Monday, we discussed the farming problem and solved some of the problems from this set of &lt;a href = &quot;/files/langsdorfa/precalc2/OptimizationProblems2013.pdf&quot;&gt; Optimization Problems&lt;/a&gt;.  The &lt;a href = &quot;/files/langsdorfa/precalc2/DormRoomProblem2013.pdf&quot;&gt; Dorm Room Problem&lt;/a&gt; is due on Monday, January 14.  Here is the &lt;a href = &quot;/files/langsdorfa/precalc2/DormRoomRubric2013.pdf&quot;&gt; rubric&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615456</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Here is the &lt;A HREF=&quot;/files/monzj/precalc2/DormRoomProblem2013.pdf&quot;&gt;Dorm Room Problem.&lt;/A&gt;&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615464</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">In class, we worked on using the elimination method of solving systems, continued practice with optimization, and started this &lt;a href = &quot;/files/langsdorfa/precalc2/DerivativeOptimizationReview2013.pdf&quot;&gt; quiz review sheet&lt;/a&gt;.  Remember that our quiz on derivatives and optimization and our reboot quiz are both on Thursday, January 10.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615516</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">After a snowy start to the day, we began our semester of statistics by working on some percentage problems for our Algebra Reboot.  Then, we completed &lt;a href = &quot;/files/langsdorfa/precalc2/StatisticsProbabilityDoneBackward2013.pdf&quot;&gt; Statistics: Probability Done Backward&lt;/a&gt;.   </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615557</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Read section 1.3 in your textbook and complete problems #1-10 on page 29.  </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610818</column>
@@ -28378,6 +30726,116 @@ Your Chapter 3 Test Corrections are due today!!!
             <column name="assgt_id">615197</column>
             <column name="teacher_id">griswoldn</column>
             <column name="content">Read 4-7 and do #1, 3, 5, 6. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615214</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content"> Read 10-4 then do #1.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615235</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 10-4 then do #5, 6, and 7.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615240</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Do these &lt;a href=&quot;/teachers/griswoldn/abcalc/RelatedRatesProblems2011.doc&quot;&gt; Related Rates&lt;/a&gt; problems.&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615276</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Finish the  &lt;a href=&quot;/teachers/griswoldn/abcalc/ch 4 rev probs.doc&quot;&gt; Chapter 4 Review &lt;/a&gt; problems.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615277</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Study for your Chapter 4 Test (with Related Rates). &lt;a href=&quot;/teachers/griswoldn/abcalc/know ch 4.docx&quot;&gt;Here's&lt;/a&gt; a list of concepts to know. And here's the Jeopardy link https://jeopardylabs.com/play/ab-calculus-chapter-4-jeopardy&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615307</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 8-2 then do #14, 16, 18, 19, 20, 24, 26. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615321</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">From 8-2 do #28, 31 with the following directions (forget what the book says): (a) Make a sign chart for f ' and f&quot;. (b) State the local and global max and mins and JUSTIFY! (c) State the inflection points and JUSTIFY!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615335</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Do these &lt;a href=&quot;/teachers/griswoldn/alg2/honors//maxminhw.docx&quot;&gt; Optimization &lt;/a&gt; problems.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615363</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 8-3 and do #1,3, and 5. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615364</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Do 8-3 #7, 10, 13, 24(a-c).  Also, your Chapter 4 Test Corrections are due!!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615402</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read section 7-4 and do problems #1(abc), 3, 4, 5, and 7. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615426</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Do problems 1-3 from the review sheet.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615457</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Test today on sections 7-4, 8-2, and 8-3.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615463</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 5-3 and do #1, 10-22(even), 28-36(even). </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615482</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 5-4 then do 2-42(even) and show checks.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615489</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 5-5 and do #4, 6, 8, and 9. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615490</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Your Test 5 (Slopefields and Applied Max/Min Problems) Test Corrections are due today!!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615519</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 5-6 then do #4,6, and 12.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615520</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 5-8 and do #1(a), 2(just find the exact value using the FTIC), 3 and 7.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615551</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 5-9 and do #1 - 9 (odd) and 10 - 30 (even). </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615565</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">Read 5-10 and do #1, 2, 4, 7. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615566</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Study for your Chapter 5 Test!! &lt;a href=&quot;/teachers/griswoldn/abcalc/For the Chapter 5 test you should know.doc&quot;&gt; Here's&lt;/a&gt; a list of concepts you should know .&lt;/p&gt; </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610830</column>
@@ -29506,6 +31964,151 @@ Read section 4.1 and do problems #2, 13, 24, 30&lt;br&gt;
 Check out this &lt;a href=&quot;http://www.math.ucla.edu/~ronmiech/Java_Applets/Riemann/index.html&quot;&gt;Riemann Sum applet&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">615215</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 4.2 do problems #12, 17, 33, 35, 37, 42, 47, 49, 68</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615232</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 4.3 and do problems #4, 7, 16, 24, 27, 31, 37, 53, 59, 64</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615248</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 4.4 and do problems 5, 7, 15, 25, 45, 49
+
+&lt;br&gt;&lt;br&gt;
+New webwork has been assigned.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615273</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 4.5 and do problems #9, 14, 22, 27, 36, 42, 46, 57</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615274</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 5.1 and do problems 6, 17, 31, 33, 47, 49, 58</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615275</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 5.2 and do problems 7, 11, 30, 48, 60</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615291</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 5.5 and so problems # 5, 7, 15, 17</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615292</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Test today.&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;Riemann Sums&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;Right Side&lt;/li&gt;
+&lt;li&gt;Left Side&lt;/li&gt;
+&lt;li&gt;Midpoint&lt;/li&gt;
+&lt;li&gt;Trapezoidal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;li&gt;Indefinite and Definite Integrals&lt;/li&gt;
+&lt;li&gt;Substitution Rule&lt;/li&gt;
+&lt;li&gt;Fundamental Theorem of Calculus&lt;/li&gt;
+&lt;li&gt;Related Rates&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615325</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 6.1 and do problems #5, 7, 13, 19, 22, 24, 25, 32, 43, 50</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615354</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read &quot;blue&quot; section 6.2* on page 421 and do problems 17, 20, 24, 39, 48, 49, 51, 60&lt;br&gt;&lt;br&gt;
+
+Finish the MC questions we began in class.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615386</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read &quot;blue&quot; section 6.2* on page 421 and do problems 9, 25, 28, 32, 67, 68, 70, 72, 77, 82, 89</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615387</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read &quot;blue&quot; section 6.3* on page 429 and do problems 4, 12, 27, 35, 50, 54, 55, 58, 62, 65, 80, 84, 85, 94</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615388</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">No Homework!! Wahoo!!&lt;br&gt;
+
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;
+&lt;img src=&quot;/teachers/gabrinerd/dancing_frosty.gif&quot;&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615389</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read &quot;blue&quot; section 6.4* on page 437 and do problems 5, 6, 15, 17, 23, 27, 32, 37, 47, 50, 52, 54, 55</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615439</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 6.6 and do problems #3, 6, 7, 10, 13, 23, 25, 38, 45, 50&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615440</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Test &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt;Integrals with log and exponential functions&lt;/li&gt;
+&lt;li&gt;Integrals with u-substitution&lt;/li&gt;
+&lt;li&gt;Derivatives with log and exponential functions&lt;/li&gt;
+&lt;li&gt;Volumes of revolution&lt;/li&gt;
+&lt;li&gt;Volumes of cross-sections&lt;/li&gt;
+&lt;li&gt;Taylor Series&lt;/li&gt;
+&lt;li&gt;Derivative of Inverse Functions&lt;/li&gt;
+&lt;li&gt;Derivative of Inverse Trig Functions&lt;/li&gt;
+&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615493</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 6.8 and do problems 12, 22, 25, 38, 52, 53, 55, 67, 91</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615510</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 7.1 and do problems #5, 11, 20, 33, 52, 54, 67</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615521</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">New webwork assigned.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615560</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Read section 7.4 up to page 511 and do problems #9, 13, 16, 53, 67 </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615561</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">&lt;h4&gt;American Mathematics Contest&lt;/h4&gt;
+When: C block (first block of the day)&lt;br&gt;
+Where: TBA&lt;br&gt;&lt;br&gt;
+Let your C block teacher know you will be out.&lt;br&gt;&lt;br&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615562</column>
+            <column name="teacher_id">gabrinerd</column>
+            <column name="content">Today is the deadline for AP registration.&lt;br&gt;
+You can find the &lt;a href=&quot;http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CDIQFjAA&amp;url=http%3A%2F%2Fmedia.collegeboard.com%2FhomeOrg%2Fcontent%2Fpdf%2F2012-13AP_Bulletin_Students_Parents.pdf&amp;ei=J5YBUbeLM6rC0AHGkYCgCQ&amp;usg=AFQjCNEDSIZ19w37oEVIsL674yAFUT240g&amp;bvm=bv.41524429,d.dmQ&amp;cad=rja&quot;&gt;AP Bulletin here&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610805</column>
             <column name="teacher_id">mccowand</column>
             <column name="content">Download DR Scheme version 4.2.1 onto your home computer.  -note this is not the most recent version. &lt;P&gt;&lt;/p&gt;
@@ -30075,6 +32678,16 @@ and &lt;A HREF=&quot;/teachers/mccowand/apcs/HuffmanEncode2.java&quot;&gt;Encode
             <column name="assgt_id">615151</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">Notes for quiz prep are &lt;a href = &quot;/files/langsdorfa/apcs/APCS065.docx&quot;&gt;  here&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615379</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">Test #2 is postponed until Wednesday, 12/19/12.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615465</column>
+            <column name="teacher_id">langsdorfa</column>
+            <column name="content">&lt;a href = &quot;/files/langsdorfa/apcs/APCS104.pdf&quot;&gt; Assignment 10.4&lt;/a&gt; is due on Friday, January 18.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610796</column>
@@ -31035,6 +33648,113 @@ For E block, 2 notes on the handout: 1) use a sample standard deviation of 3 in 
             <column name="assgt_id">615194</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Read the rest of Chapter 23 (pp 531-540).  Complete problems 16-18 on page 543.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615213</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read pages 491-497 in the textbook. The discussion is in the context of proportions - don't concern yourself with that, but look at the general ideas of errors, power, and sensitivity of a test. Also, here's another link to the power problems: &lt;A HREF=&quot;/files/monzj/apstats/Power Problems.pdf&quot;&gt;POWER PROBLEMS.&lt;/A&gt; &lt;/P&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615218</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content"> &lt;P&gt; Here are the &lt;A HREF=&quot;/files/monzj/apstats/HT Practice.pdf&quot;&gt;HYPOTHESIS TEST PRACTICE PROBLEMS.&lt;/A&gt; &lt;/P&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615224</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Read Chapter 21 in your textbook.  This chapter is still focused in proportions, so don't worry about the finer points there.  Hypothesis tests work nearly identically for proportions as they do for means, so the general idea is the important thing.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615271</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;p&gt;Read Ch. 11 in the textbook, pages 255-264, and do problems 7, 8, 10, 11, 21, 22, 23, 24, 31, and 37. For random numbers, use either the  &lt;A HREF=&quot;http://www.nist.gov/pml/wmd/pubs/upload/AppenB-HB133-05-Z.pdf&quot;&gt;RANDOM NUMBER TABLES &lt;/A&gt;  or  the integer generator at &lt;A HREF=&quot;http://www.random.org/integers/&quot;&gt;RANDOM.ORG. &lt;/A&gt;&lt;/P&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615272</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">For those who did not finish the quiz in the time allowed, please speak with me at some point within the next day or two.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615281</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Test 3 is today.  Stay tuned for a problem set.  Start looking over readings.  &lt;a href=&quot;/files/fidlerb/stat/Problem Set 3 2012-13.pdf&quot;&gt;Here&lt;/a&gt; is the latest problem set. It is due the day of the test. &lt;p&gt;&lt;p&gt; &lt;a href=&quot;/files/fidlerb/stat/Answers to Problem Set 3 2012-13.pdf&quot;&gt;Here&lt;/a&gt; are the answers.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615284</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;p&gt;Test 3 is today! Problem Set 3 is due - here it is:  &lt;A HREF=&quot;/files/monzj/apstats/Problem Set 3 2012-13.pdf&quot;&gt;PROBLEM SET 3.&lt;/A&gt; &lt;/P&gt; &lt;P&gt; ... and here are the:  &lt;A HREF=&quot;/files/monzj/apstats/Answers to Problem Set 3 2012-13.pdf&quot;&gt;ANSWERS.&lt;/A&gt; &lt;/P&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615305</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">https://oli.cmu.edu/jcourse/webui/guest/join.do?section=probstat &lt;p&gt;&lt;p&gt;(For in-class use)</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615319</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 12 in the textbook, pages 268-287. Do problems 5, 7, 9, 11, 13, and 15 on pages 288-289.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615406</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 14, pages 324 to 337. Do problems 11, 13, 15, 17, 19, 21, and 23 on pages 338 - 339.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615407</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Do problems 31, 32, 33, 34, 42, 43, and 44 on pages 340-341.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615408</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 15, pages 341 to 353. Do problems 3, 5, 6, 7, 9, 12, and 17 on pages 361-362.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615409</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Ch. 15, pages 353-360. Do problems 31, 33, 35, 37, 41, 43, and 45 on page 363.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615410</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 16, pages 366 - 382. Do problems 1, 3, 5, 7, 9, 11, and 13 on page 383.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615411</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Do problems 25, 27, 29, 33, 37, 39, 41, 43, and 45 on pages 384-386.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615412</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 17, pages 388-392. Do problems 1, 3, and 4 on page 401.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615413</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Read Chapter 17, pages 392-400. Do problems 5, 9, 11, 15, 17, 19, 25, and 27 on pages 401-403.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615414</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">Do problems 31, 35, 36, 37, 39, and 41 on pages 403-404.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615449</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Read Ch. 14 in the textbook, pages 326-339, and do problems 4, 7, 8, 10, 11, 12, and 15 on pages 339-343.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615461</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Hi all. &lt;p&gt;&lt;p&gt;I will be out of school until Thursday, Jan 10.  In the meantime, please complete the following assignment:&lt;p&gt;&lt;p&gt;
+Read Ch. 15 in the textbook, pages 344-355, and do problems 2, 3, 6, 8, 10, and 11 on pages 362-365.&lt;p&gt;&lt;p&gt;&lt;b&gt;If you need to do a retake for Test 3:&lt;/b&gt; There are copies in the retake folder.  Please complete this at any time.  Ask a math teacher for assistance in retrieval.  You may take either section, or both.  Make it clear to your proctor which section you'd like to retake.  Make sure you get a formula packet as well if you'd like one.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615564</column>
+            <column name="teacher_id">fidlerb</column>
+            <column name="content">Here is the &lt;a href=&quot;https://docs.google.com/spreadsheet/viewform?formkey=dGZwRVZYR3FmUWdFMS1ibGhldmY2YkE6MA#gid=0&quot;&gt;Mid-Year Survey&lt;/a&gt;&lt;p&gt;&lt;p&gt;
+When you are done, see how many levels you can win playing &lt;a href=&quot;http://www.tnelson.demon.co.uk/mazes/&quot;&gt;Theseus and the Minotaur&lt;/a&gt;</column>
         </table>
     </database>
 </pma_xml_export>
