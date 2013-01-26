@@ -46,11 +46,10 @@ module Convert
 				'in_catalog' 			=> :in_catalog,
 				'occurrences' 		=> :occurrences,
 				'has_assignments' => :has_assignments,
-				'info' 						=> :information,
 				'resources' 			=> :resources,
 				'semesters' 			=> :semesters,
 				'policies' 				=> :policies,
-				'prog_of_studies_descr' => :description,
+				'description'     => :description,
 				},
 		::Section => {
 				"dept_id" => :dept_id,
@@ -148,16 +147,16 @@ end
 class Department
   include Mongoid::Document
   def self.import_from_hash(hash)
-    dept = Department.new
-    dept.name = hash[:name]
+    DepartmentDocument.delete_all
+    dept = Department.create name: hash[:name]
+    dept.homepage_docs.create(title: "How to use the new Westonmath app", content: hash[:how_to_use], pos: 0)
+    dept.homepage_docs.create(title: "Why not Teacherweb?", content: hash[:why], pos: 1)
+    dept.homepage_docs.create(title: "Objectives", content: hash[:objectives], pos: 2)
+    dept.homepage_docs.create(title: "News", content: hash[:news], pos: 3)
+    dept.homepage_docs.create(title: "Resources", content: hash[:resources], pos: 4)
+    dept.homepage_docs.create(title: "Puzzle", content: hash[:puzzle], pos: 5)
+    
     dept.save!
-    i = 0
-    TextDocument.create(title: "How to use the new Westonmath app", content: hash[:how_to_use], owner: dept, position: ++i)
-    TextDocument.create(title: "Why not Teacherweb?", content: hash[:why], owner: dept, position: ++i)
-    TextDocument.create(title: "Objectives", content: hash[:objectives], owner: dept, position: ++i)
-    TextDocument.create(title: "News", content: hash[:news], owner: dept, position: ++i)
-    TextDocument.create(title: "Resources", content: hash[:resources], owner: dept, position: ++i)
-    TextDocument.create(title: "Puzzle", content: hash[:puzzle], owner: dept, position: ++i)
   end
   
 end
