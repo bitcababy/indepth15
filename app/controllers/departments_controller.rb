@@ -36,7 +36,7 @@ class DepartmentsController < ApplicationController
     doc = DepartmentDocument.find params[:id]
     if request.xhr?
       respond_to do |format|
-        if doc.update_attributes(params[:department_document])
+        if doc.update_from_params(params[:department_document])
           doc.unlock
           format.html { redirect_to :back, notice: 'Document was saved.' }
         else
