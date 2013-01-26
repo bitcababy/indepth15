@@ -3,7 +3,6 @@ require 'spec_helper'
 describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number)}
-	it { should belong_to :information }
 	it { should belong_to :resources }
 	it { should belong_to :policies }
 	it { should belong_to :news }
