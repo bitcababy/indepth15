@@ -5,25 +5,28 @@
 @import 'colors';
 @import 'fonts';
 
-div#sections_pane {
+#sections_pane {
 	@extend .serif;
 
-	div#info {
-		@extend .sans;
+	#info {
 		text-align: center;
-		valign: bottom;
-//		margin-bottom: 12px;
 		font-weight: bold;
-	}
-	div#description {
+		font-size: 110%;
+		.text {
+			border-top: solid #111 1px;
+			border-bottom: solid #111 1px;
+		}
 		margin-bottom: 12px;
 	}
-	div#leadin {
+	#description {
 		margin-bottom: 12px;
+	}
+	#leadin {
+		margin-bottom: 0px;
 	}
 }
 
-div#tabs ul li a {
+.tabs ul li a {
 	@extend .sans;
 }
 
