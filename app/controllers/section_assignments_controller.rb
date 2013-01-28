@@ -1,5 +1,5 @@
 class SectionAssignmentsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:find_sa]
 	before_filter :find_sa, except: []
 
   def edit
