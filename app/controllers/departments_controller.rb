@@ -15,18 +15,8 @@ class DepartmentsController < ApplicationController
 
   def edit_doc
     @doc = DepartmentDocument.find params[:doc_id]
-    if true || @doc.can_lock?(current_user)
-      @doc.lock(current_user)
-  		respond_to do |format|
-  			format.html { render layout: false }
-        # format.html { render layout: !request.xhr? }
-      end
-    else
-      ## Smell: Is this the right way to do it?
-  		respond_to do |format|
-        format.html { head :bad_request }
-        # format.html { render template: 'shared/document_locked', layout: !request.xhr?}
-      end
+		respond_to do |format|
+			format.html { render layout: !request.xhr?  }
     end
   end
   
@@ -37,7 +27,6 @@ class DepartmentsController < ApplicationController
     if request.xhr?
       respond_to do |format|
         if doc.update_from_params(params[:department_document])
-          doc.unlock
           format.html { redirect_to :back, notice: 'Document was saved.' }
         else
           format.json { render json: doc.errors, status: :unprocessable_entity }
