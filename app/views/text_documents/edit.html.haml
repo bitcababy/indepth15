@@ -1,3 +1,4 @@
 = simple_form_for @doc, validate: false, remote: true, method: :put do |f|
 	%fieldset
+		= f.hidden :lock_version
 		.text= f.input :content, as: :ckeditor, label: false, input_html: {ckeditor: {resize_enabled: false, height: 380 }}
