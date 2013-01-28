@@ -1,6 +1,6 @@
 class DepartmentsController < ApplicationController
 	before_filter :find_department, except: [:edit_doc, :save_doc]
-  before_filter :authenticate_user!, only: [:edit_doc]
+  before_filter :authenticate_user!, except [:home, :about]
 
 	def home
     @panes = @dept.homepage_docs.sort
