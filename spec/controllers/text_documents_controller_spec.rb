@@ -88,36 +88,22 @@ describe TextDocumentsController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         TextDocument.any_instance.expects(:update_attributes).with({'these' => 'params'})
-        put :update, {:id => text_document.to_param, :text_document => {'these' => 'params'}}
+        subject.stubs(:redirect_to)
+        as_user do
+          put :update, {:id => text_document.to_param, :text_document => {'these' => 'params'}}
+        end
+        response.should be_success
       end
-
-      it "assigns the requested text_document as @text_document" do
-        text_document = Fabricate :text_document, valid_attributes
-        put :update, {:id => text_document.to_param, :text_document => valid_attributes}
-        assigns(:text_document).should eq(text_document)
-      end
-
-      it "redirects to the text_document" do
-        text_document = Fabricate :text_document, valid_attributes
-        put :update, {:id => text_document.to_param, :text_document => valid_attributes}
-        response.should redirect_to(text_document_url(text_document))
-      end
-    end
+    end # with valid params
 
     describe "with invalid params" do
-      it "assigns the text_document as @text_document" do
-        text_document = Fabricate :text_document, valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        TextDocument.any_instance.stubs(:save).returns(false)
-        put :update, {:id => text_document.to_param, :text_document => {}}
-        assigns(:text_document).should eq(text_document)
-      end
-
       it "re-renders the 'edit' template" do
         text_document = Fabricate :text_document, valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         TextDocument.any_instance.stubs(:save).returns(false)
-        put :update, {:id => text_document.to_param, :text_document => {}}
+        as_user do
+          put :update, {:id => text_document.to_param, :text_document => {}}
+        end
         response.should render_template("edit")
       end
     end
