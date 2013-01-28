@@ -1,3 +1,0 @@
-class CourseDocument < TextDocument
-  
-end
