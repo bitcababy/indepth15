@@ -5,15 +5,6 @@
 	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @section.upcoming_assignments, message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
 	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments, message: "", title: 'Past assignments'}
 	
-	/ .assignment-block
-	/ 	.title.ui-widget-header.ui-corner-top.ui-state-active   Past assignments
-	/ 	- if @section.past_assignments.count > 0
-	/ 		%table#past
-	/ 			= render partial: 'sections/assignment_table', locals: { sas: @section.past_assignments }
-	/ 	- else
-	/ 		.none
-	/ 			%i None
-	
 - content_for :page_header do
 	= render partial: 'shared/course_link', locals: {course: @section.course}
 - content_for :page_title do
