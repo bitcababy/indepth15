@@ -9,7 +9,19 @@ describe ApplicationHelper do
 			academic_year_string(2012).should == "2011–2012"
 		end
 	end
-	
+  
+  describe '#is_are_number_mangler' do
+    it "returns no fools if 0 is passed in" do
+      is_are_number_mangler(0, "fool").should == "are no fools"
+    end
+    it "returns 1 fool if 1 is passed in" do
+      is_are_number_mangler(1, "fool").should == "is 1 fool"
+    end
+    it "returns 2 fools if 2 is passed in" do
+      is_are_number_mangler(2, "fool").should == "are 2 fools"
+    end
+  end
+  
 	describe '#assignment_date_string' do
 		it "returns the dotw, followed by the month and day" do
 			assignment_date_string(Date.new(2012, 7, 12)).should == "Thu, Jul 12"
@@ -28,7 +40,6 @@ describe ApplicationHelper do
 			attrs['style'].should_not == 'display: none'
 			# puts content_tag('div', attrs)
 		end
-		
 	end
 
   describe '#section_assignments' do
