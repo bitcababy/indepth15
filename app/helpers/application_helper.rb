@@ -38,7 +38,7 @@ module ApplicationHelper
 		end
 	end
 
-	def custom_form_for(object, *args, &block)
+  def custom_form_for(object, *args, &block)
 		options = args.extract_options!
 		simple_form_for(object, *(args << options.merge(:builder => CustomFormBuilder)), &block)
   end
@@ -54,8 +54,28 @@ module ApplicationHelper
 		return home_with_assignments_path(section.course.to_param, section.academic_year, section.teacher.to_param, section.block)
 	end
   
-  def editable?
-    return user_signed_in?
-  end
+    ## Note: Unclear why I need any of these
+  	##
+  	## Devise methods
+  	##
+    def current_user
+      return @current_user ||= warden.authenticate(:scope => :user)
+    end
+  
+    def current_user_name
+      return user_signed_in? ? current_user.full_name : "Guest"
+    end
+  
+    def user_signed_in?
+      return !!current_user
+    end
+    # 
+    def user_session
+      return current_user && warden.session(:user)
+    end
+
+    def editable?
+      return user_signed_in?
+    end
 
 end
