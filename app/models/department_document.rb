@@ -1,6 +1,7 @@
 class DepartmentDocument < TextDocument
   include Mongoid::Ordered
-  include Mongoid::Locker
+  # include Mongoid::Locker
+  # enable_locking_with :locked_at
 
   field :title, type: String, default: ""
   
@@ -9,5 +10,4 @@ class DepartmentDocument < TextDocument
   ordered_on :pos
   belongs_to :department
 
-  enable_locking_with :locked_at
 end

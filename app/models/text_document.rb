@@ -1,6 +1,6 @@
 class TextDocument < Document
   include Mongoid::History::Trackable
-  include Mongoid::Locker
+  # include Mongoid::Locker
 
   before_save :update_for_save
     
