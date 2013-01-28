@@ -4,32 +4,14 @@ class TextDocumentsController < ApplicationController
   
   def edit
     if request.xhr?
-      if true || @doc.can_lock?(current_user)
-        @doc.lock(current_user)
-    		respond_to do |format|
-    			format.html { render layout: false }
-        end
-      else
-        ## Smell: Is this the right way to do it?
-    		respond_to do |format|
-          format.html { head :bad_request }
-          # format.html { render template: 'shared/document_locked', layout: false}
-        end
+  		respond_to do |format|
+  			format.html { render layout: false }
       end
     else
-      if true || @doc.can_lock?(current_user)
-        @doc.lock(current_user)
-    		respond_to do |format|
-    			format.html { render }
-        end
-      else
-        ## Smell: Is this the right way to do it?
-    		respond_to do |format|
-          format.html { head :bad_request }
-        end
+  		respond_to do |format|
+  			format.html { render }
       end
     end
-      
   end
 
   # PUT text_documents/1
@@ -38,7 +20,6 @@ class TextDocumentsController < ApplicationController
     if request.xhr?
       respond_to do |format|
         if @doc.update_from_params(params[:text_document])
-          @doc.unlock
           format.html { redirect_to :back, notice: 'Document was saved.' }
         else
           format.json { render json: @doc.errors, status: :unprocessable_entity }
@@ -48,10 +29,10 @@ class TextDocumentsController < ApplicationController
       respond_to do |format|
         if @doc.update_from_params(params[:text_document])
           format.json { head :no_content }
-          format.html { redirect_to session[:goto_url], notice: 'TextDocument was successfully updated.' }
+          format.html { redirect_to :back, notice: 'TextDocument was successfully updated.' }
         else
           format.json { render json: @doc.errors, status: :unprocessable_entity }
-          format.html { render action: "edit_doc", error: 'Invalid parameters' }
+          format.html { render action: "edit", error: 'Invalid parameters' }
         end
       end
     end
@@ -114,14 +95,12 @@ class TextDocumentsController < ApplicationController
 
 
   def ping
-    @doc.lock(current_user)
     respond_to do |format|
       format.any {render json: "pong", status: :ok}
     end
   end
   
   def unlock
-    @doc.unlock
     respond_to do |format|
       format.any {render json: "unlocked", status: :ok}
     end
