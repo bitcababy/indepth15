@@ -40,6 +40,15 @@ testing:
     - scheduler:standard
     - memcachier:5mb
 
+viewing:
+  stack: cedar
+  app: in-depth-viewing
+  config: *default
+  addons:
+    - mongolab:starter
+    - scheduler:standard
+    - memcachier:5mb
+
 demo: 
   stack: cedar
   app: in-depth-demo
