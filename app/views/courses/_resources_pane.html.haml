@@ -1,4 +1,4 @@
-!= course.resources.content
+.pane-content!= course.resources.content
 - if editable?
 	#course-edit
 		%button.edit-button= link_to "Edit", edit_text_document_path(course.resources)
