@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
 	before_filter :find_course, except: []
-	before_filter :authenticate_user!, except: [:home]
+	before_filter :authenticate_user!, only: []
 	
 	def home
 		respond_to do |format|
