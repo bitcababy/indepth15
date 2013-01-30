@@ -15,7 +15,16 @@ class CoursesController < ApplicationController
 			format.html { render }
 		end
   end
-
+  
+  def get_pane
+    pane = params[:pane_id]
+      
+    respond_to do |format|
+      format.html { render partial: "courses/#{pane}_pane", locals: {course: @course }}
+    end
+  end
+  
+ 
 	##
 	## Rest routes
 	##
