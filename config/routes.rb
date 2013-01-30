@@ -29,8 +29,18 @@ InDepth::Application.routes.draw do
       get :edit_doc
     end
   end
-	resources :teachers, only: [:show]
   
+  get 'courses/:id/pane/:pane_id', to: 'courses#get_pane', as: :show_course_pane
+  get 'departments/:id/pane/:pos', to: 'departments#get_pane', as: :get_dept_pane
+  get 'departments/edit_doc/:doc_id/edit', to: 'departments#edit_doc', as: :edit_dept_doc
+  get 'departments/edit_doc/:doc_id', to: 'departments#edit_doc', as: :dept_doc
+  
+  resources :sections, only: [] do
+    member do
+      get :assignments_pane
+    end
+  end
+
  	# Unrestful routes
 
 	# Temporary routes to deal with old links
@@ -43,9 +53,8 @@ InDepth::Application.routes.draw do
   get "about", controller: 'departments', action: 'about'
 
 	get "courses/:id/year/:year/teacher/:teacher_id/block/:block", to: 'courses#home_with_assignments', as: :home_with_assignments
-  get "sections/:id/assignments_pane",  to: 'sections#assignments_pane', as: :assignments_pane
-
-  
+      
+   
 	# get 'menus/home', to: 'menus#home', as: :home_menu
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
 	# get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
@@ -62,7 +71,6 @@ InDepth::Application.routes.draw do
   
   # match 'departments/update_doc/:value/:id', as: :update_dept_doc, to: 'departments#update_doc'
   
-  get 'departments/edit_doc/:doc_id', to: 'departments#edit_doc', as: :edit_dept_doc
   get 'courses/edit_doc/:doc_id', to: 'courses#edit_doc', as: :edit_course_doc
   
   put 'department_document/:id', to: 'departments#save_doc', as: :department_document
