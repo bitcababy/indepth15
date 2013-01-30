@@ -11,7 +11,7 @@
 			heightStyle: "content"
 
 		editor = $("#editor")
-		editor.setupEditor = ->
+		editor.setupAccordionEditor = (accDiv) ->
 			div = this
 			div.dialogForm "init",
 				width: 700
@@ -20,14 +20,14 @@
 	
 			div.dialogForm 'bindLinks', $('.edit-button')
 			div.on 'savedAndClosed', ->
-				pn = $("#home-page").accordion "option", "active"
+				pn = accDiv.accordion "option", "active"
 				$.get "/departments/1/pane/" + pn, (data, textStatus, jqxhr) ->
-					title = $('.ui-accordion-header-active', "#home-page").find('.title')
-					content = $('.ui-accordion-content-active', "#home-page").find('.contents')
+					title = $('.ui-accordion-header-active', accDiv).find('.title')
+					content = $('.ui-accordion-content-active', accDiv).find('.contents')
 					$(title).text data.title
 					$(content).html data.content
 				, 'json'
-				$("#home-page").accordion "refresh"
+				accDiv.accordion "refresh"
 
-		editor.setupEditor()
+		editor.setupAccordionEditor $("#home-page")
 		
