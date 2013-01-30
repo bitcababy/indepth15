@@ -32,22 +32,17 @@
 		};
 		var data, settings;
 
-		// Rails CSRF hack (thanks to Yvan Barthelemy)
-		// var csrf_token = $('meta[name=csrf-token]')
-		// 	.attr('content');
-		// var csrf_param = $('meta[name=csrf-param]')
-		// 	.attr('content');
-				
 		this.closeDialog = function() {
 			var settings = this.data(dataKey);
-	    this.dialog(settings.closeAction);
-	    this.empty();
 			if (settings.ckid) {
 				var instance = CKEDITOR.instances[settings.ckid];
 				if (instance) {
-					// instance.remove();
+					instance.destroy();
 				}
 			}
+	    this.dialog(settings.closeAction);
+	    this.empty();
+			this.trigger('dialogClosed');
 	    return this;
 		}
 
@@ -59,8 +54,8 @@
 
 		this.handleSaveResponse = function(status, data, errorMsg, jqxhr) {
 	    if (status === "success") {
-				this.trigger('afterSave');
 	      this.closeDialog();
+				this.trigger('savedAndClosed');
 	    } else {
 	      this._saveFailed();
 	    }
@@ -127,6 +122,7 @@
 			
 		function btnClickHandler(evt) {
 	    var $form = evt.data, btn = evt.target;
+			$form.buttonClicked = btn;
 			var url = btn.href;
 			var context = document.body;
 	    var jqxhr = $.ajax({
@@ -156,6 +152,7 @@
 				this.data(dataKey, extended_defaults);
 			}
 			data = this.data(dataKey);
+			return this;
 		}
 		
 		var methods = {
