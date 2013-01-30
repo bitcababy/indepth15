@@ -8,7 +8,7 @@
 	%ul
 		- if @section
 			%li#assignments
-				%a{href: assignments_pane_path(@section), title: 'Assignments'}= "Assignments for #{@course.full_name}, Block #{@section.block}"
+				%a{href: assignments_pane_section_path(@section), title: 'Assignments'}= "Assignments for #{@course.full_name}, Block #{@section.block}"
 		%li
 			%a{href: show_course_pane_path(@course, :sections), title: 'Sections'} Sections
 		%li
