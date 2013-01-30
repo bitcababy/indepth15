@@ -13,6 +13,14 @@ class DepartmentsController < ApplicationController
   def about
   end
 
+  def get_pane
+    which = params[:pos].to_i
+    doc = @dept.homepage_docs.find_by(pos: which)
+		respond_to do |format|
+      format.json {render json: {title: doc.title, content: doc.content}}
+    end
+  end
+    
   def edit_doc
     @doc = DepartmentDocument.find params[:doc_id]
 		respond_to do |format|
@@ -44,7 +52,6 @@ class DepartmentsController < ApplicationController
       end
     end
   end
-  
 
   protected
   def find_department
