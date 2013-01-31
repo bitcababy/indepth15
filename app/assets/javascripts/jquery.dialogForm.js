@@ -54,8 +54,11 @@
 
 		this.handleSaveResponse = function(status, data, errorMsg, jqxhr) {
 	    if (status === "success") {
+				var form = $('form', this)[0];
+				var url = form.action;
+				$(this).attr('url', form.action);
 	      this.closeDialog();
-				this.trigger('savedAndClosed');
+				this.trigger('savedAndClosed', url);
 	    } else {
 	      this._saveFailed();
 	    }
@@ -122,7 +125,6 @@
 			
 		function btnClickHandler(evt) {
 	    var $form = evt.data, btn = evt.target;
-			$form.buttonClicked = btn;
 			var url = btn.href;
 			var context = document.body;
 	    var jqxhr = $.ajax({
@@ -151,7 +153,6 @@
 			if (!data ) {
 				this.data(dataKey, extended_defaults);
 			}
-			data = this.data(dataKey);
 			return this;
 		}
 		
