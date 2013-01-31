@@ -3,14 +3,8 @@ class TextDocumentsController < ApplicationController
 	before_filter :find_text_document, except: []
   
   def edit
-    if request.xhr?
-  		respond_to do |format|
-  			format.html { render layout: false }
-      end
-    else
-  		respond_to do |format|
-  			format.html { render }
-      end
+		respond_to do |format|
+			format.html { render layout: !request.xhr? }
     end
   end
 
