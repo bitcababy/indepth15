@@ -22,12 +22,7 @@
 #editor
 
 :coffeescript
-	# Set up tabs
 	$(document).ready ->
-		$("#tabs").tabs ajaxOptions:
-			heightStyle: "auto"
-			error: (xhr, status, index, anchor) ->
-				$(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. "
 		editor = $('#editor')
 
 		setupTabEditor = (editor, tabDiv) ->
@@ -42,4 +37,8 @@
 				
 		setupTabEditor editor, '#tabs'
 			
-		$('#editor').dialogForm 'bindLinks', $('.edit-button')
+		$("#tabs").tabs
+			event: 'click'
+			load: (evt, ui) ->
+				btns = $('.edit-button', ui.panel)
+				editor.dialogForm 'bindLinks', $('.edit-button', ui.panel)
