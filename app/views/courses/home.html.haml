@@ -28,10 +28,18 @@
 			heightStyle: "auto"
 			error: (xhr, status, index, anchor) ->
 				$(anchor.hash).html "Couldn't load this tab. We'll try to fix this as soon as possible. "
+		editor = $('#editor')
 
-		$('#editor').dialogForm "init",
-			width: 700
-			height: 600
-			closeAction: "close"
+		setupTabEditor = (editor, tabDiv) ->
+			editor.dialogForm "init",
+				width: 700
+				height: 600
+				ckid: 'text_document_content'
+
+			editor.on 'savedAndClosed', (evt, url) ->
+				pn = $(tabDiv).tabs "option", "active"
+				$(tabDiv).tabs 'load', pn
+				
+		setupTabEditor editor, '#tabs'
 			
 		$('#editor').dialogForm 'bindLinks', $('.edit-button')
