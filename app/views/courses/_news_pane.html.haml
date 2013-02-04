@@ -1,4 +1,3 @@
 .pane-content!= course.news.content.empty? ? 'No news is good news. Right?' : course.news.content
 - if editable?
-	#course-edit
-		%button.edit-button= link_to "Edit", edit_text_document_path(course.news)
+	%button.edit-button= link_to "Edit", edit_course_document_path(course.news)
