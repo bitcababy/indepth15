@@ -13,14 +13,9 @@ class Assignment < TextDocument
   accepts_nested_attributes_for :section_assignments
   has_and_belongs_to_many :branches, inverse_of: nil
 
-  track_history on: [:content],
-                 modifier_field: :modifier, 
-                 version_field: :version, 
-                 track_create: true, 
-                 track_update: true, 
-                 track_destroy: true
-                 
-   taggable :major_tags
-   taggable :minor_tags
+  taggable :major_tags
+  taggable :minor_tags
      
+  track_history except: [:assgt_id], version_field: :version, track_create: true
+
 end
