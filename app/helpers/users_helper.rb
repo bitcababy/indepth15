@@ -1,31 +1,31 @@
 module UsersHelper
 	def resource_class
-		User
+		return User
 	end
 
 	def resource_name
-		:user
+		return :user
 	end
 
 	def resource
-		@resource || User.new
+		return @resource || User.new
 	end
 
 	def devise_mapping
-		@devise_mapping ||= Devise.mappings[:user]
+		return @devise_mapping ||= Devise.mappings[:user]
 	end
 
 	def resource_name
-		devise_mapping.name
+		return devise_mapping.name
 	end
 
 	def resource_class
-		devise_mapping.to
+		return devise_mapping.to
 	end
 
 	def authenticate_user!(opts={})
 		opts[:scope] = :user
-		warden.authenticate!(opts) if !devise_controller? || opts.delete(:force)
+		return warden.authenticate!(opts) if !devise_controller? || opts.delete(:force)
 	end
 end
 
