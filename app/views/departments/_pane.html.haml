@@ -3,6 +3,6 @@
 		%span.title= pane.title
 %div.pane-content
 	- if editable?
-		%button.edit-button= link_to "Edit", edit_dept_doc_path(pane)
+		%button.edit-button= link_to "Edit", edit_department_document(pane)
 	.contents!= pane.content
 
