@@ -1,5 +1,5 @@
 Fabricator(:course) do
-	number					{ sequence(:course_number, 321) {|i| i}}
+	number					{ sequence(:number, 321) }
 	duration				{ [:full_year, :first_semester, :second_semester].sample }
 	credits					{ [ 5.0, 2.5].sample }
 	full_name				{ |attrs| "Course #{attrs[:number]}"}
@@ -18,3 +18,4 @@ Fabrication::Transform.define(:course, lambda { |number|
 			 Fabricate :course, number: number 
 			end
 		})
+
