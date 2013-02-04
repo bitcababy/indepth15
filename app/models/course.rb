@@ -1,6 +1,7 @@
 class Course
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::History::Trackable
   
   after_create :add_branches
   after_create :create_docs
@@ -45,7 +46,9 @@ class Course
   belongs_to :policies, class_name: 'TextDocument', inverse_of: nil, autosave: true
   belongs_to :description, class_name: 'TextDocument', inverse_of: nil, autosave: true
 	
-	##
+  track_history except: [:number], version_field: :version, track_create: true
+
+ 	##
 	## Associations
 	##
 	has_many :sections
