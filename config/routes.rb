@@ -26,15 +26,14 @@ InDepth::Application.routes.draw do
 	resources :courses, only: [:show] do
     member do
       get :home
-      get :edit_doc
     end
   end
   
+  resources :department_documents, only: [:edit, :update]
+  
   get 'courses/:id/pane/:pane_id', to: 'courses#get_pane', as: :show_course_pane
   get 'departments/:id/pane/:pos', to: 'departments#get_pane', as: :get_dept_pane
-  get 'departments/edit_doc/:doc_id/edit', to: 'departments#edit_doc', as: :edit_dept_doc
-  get 'departments/edit_doc/:doc_id', to: 'departments#edit_doc', as: :dept_doc
-  
+   
   resources :sections, only: [] do
     member do
       get :assignments_pane
@@ -67,25 +66,15 @@ InDepth::Application.routes.draw do
   get 'teachers/:teacher_id/courses/:course_id/assignments/new', as: :new_assignment
   resources :assignments, except: [:new]
 
-  # put 'text_documents/:id(.:format)', as: :update_text_document, to: 'text_documents#update'
   
   # match 'departments/update_doc/:value/:id', as: :update_dept_doc, to: 'departments#update_doc'
   
   get 'courses/edit_doc/:doc_id', to: 'courses#edit_doc', as: :edit_course_doc
   
-  put 'department_document/:id', to: 'departments#save_doc', as: :department_document
-
   unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
   end
  
-  resources :text_documents, only: [:edit, :update] do
-    member do
-      get :ping
-      get :unlock
-    end
-  end
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
