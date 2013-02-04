@@ -1,6 +1,7 @@
 class User
 	include Mongoid::Document
   include Mongoid::Timestamps if Rails.env == 'production'
+  include Mongoid::History::Trackable
 
 	HONORIFICS = %W(Mr. Mrs. Ms Dr. Ms.)
 
@@ -28,6 +29,8 @@ class User
 	validates :login, presence: true, uniqueness: true, length: { minimum: 3}
 	field :_id, type: String, default: ->{ login }
 	
+  track_history on: [:honorific, :first_name, :last_name, :middle_name, :last_name, :email, :login ], version_field: :version
+
 	def formal_name
 		return "#{self.honorific} #{self.last_name}"
 	end
