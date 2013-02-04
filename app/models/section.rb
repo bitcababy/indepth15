@@ -3,6 +3,7 @@
 class Section
 	include Mongoid::Document
   include Mongoid::Timestamps if Rails.env == 'production'
+  include Mongoid::History::Trackable
 
 	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
@@ -36,6 +37,8 @@ class Section
 	scope :for_block, ->(b) { where(block: b) }
 	scope :for_course, ->(c) { where(course: c) }
 	
+  track_history version_field: :version
+
 	def to_s
 		"#{self.academic_year}/#{self.course.number}/#{self.teacher.login}/#{self.block}"
 	end
