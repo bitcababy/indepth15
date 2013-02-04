@@ -74,6 +74,10 @@ module InDepth
 		end
 
 		config.mongoid.observers = []
+    # From http://bibwild.wordpress.com/2011/12/08/jquery-ui-css-and-images-and-rails-asset-pipeline/
+    initializer :after_append_asset_paths, group: :all, after: :append_assets_paths do
+      config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
+    end
   end
 end
 
