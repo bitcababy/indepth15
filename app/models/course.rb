@@ -90,11 +90,11 @@ class Course
   end
   
   def create_docs
-    self.resources = TextDocument.create!
-    self.news = TextDocument.create!
-    self.policies = TextDocument.create!
-    self.description = TextDocument.create!
-    self.information = TextDocument.create!
+    self.resources = CourseDocument.create!
+    self.news = CourseDocument.create!
+    self.policies = CourseDocument.create!
+    self.description = CourseDocument.create!
+    self.information = CourseDocument.create!
     
     self.save!
   end
@@ -107,5 +107,4 @@ class Course
     self.information.destroy
   end
     
-     
 end
