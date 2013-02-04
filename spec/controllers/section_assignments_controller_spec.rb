@@ -1,32 +1,28 @@
 require 'spec_helper'
 
 describe SectionAssignmentsController do
+  include DeviseHelpers
+
   before :each do
-    @section = mock('Section') do
-      stubs(:to_param).returns 1
-    end
-    SectionAssignment.stubs(:find).returns @section
+    @sa = Fabricate :section_assignment
   end
     
   describe "GET 'edit'" do
+    login_user
     it "returns http success" do
-      as_user do
-        get 'edit', id: @section.to_param
-      end
+      get 'edit', id: @sa.to_param
       response.should be_success
+      response.should render_template(:edit)
     end
   end
 
-  describe "GET 'update'" do
+  describe "PUT 'update'" do
+    login_user
     it "returns http success" do
-      @section.stubs(:update_attributes).returns true
-      subject.stubs(:redirect_to)
-      as_user do
-        get 'update', id: @section.to_param, section_assignment: []
-      end
-      response.should be_success
+      session[:goto_url] = "/"
+      put 'update', {id: @sa.to_param, section_assignment: [name: "foo"]}
+      response.should redirect_to '/'
     end
   end
-
 
 end

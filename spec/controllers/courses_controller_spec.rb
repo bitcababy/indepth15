@@ -15,12 +15,11 @@ describe CoursesController do
   end
   
   describe "GET 'home_with_assignments" do
+    login_user
     it "sets the section and returns the home page" do
       Section.stubs(:find_by).returns "bar"
       Course.stubs(:find).returns "foo"
-      as_user do
-        get 'home_with_assignments', id: 1, year: 2013, teacher_id: 'doej', block: 'B'
-      end
+      get 'home_with_assignments', id: 1, year: 2013, teacher_id: 'doej', block: 'B'
       response.should be_success
       response.should render_template('home_with_assignments')
     end
