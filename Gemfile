@@ -108,26 +108,27 @@ group :development do
 end
 
 group :test do
-	gem 'cucumber-rails', :require => false
 	gem 'rspec-instafail'
-	gem 'nokogiri', '= 1.5.2'
 	gem 'mongoid-rspec'
+  gem 'spork-rails'
+  gem 'rspec-rails-mocha'
+  gem 'rspec-html-matchers'
+  gem 'rspec-given'
+
+	gem 'nokogiri', '= 1.5.2'
 	gem 'capybara'
 	gem 'database_cleaner'
-	gem 'akephalos2', :require => 'akephalos'
+  gem 'capybara-webkit'
 	gem 'hpricot'
 	gem 'simplecov', :require => false
   gem 'simplecov-rcov', :require => false
 	gem 'email_spec'
 	gem 'webrat'
-  gem 'rspec-rails-mocha'
   gem 'websocket'
-  gem 'spork'
 	# Warden stuff
 	gem 'warden'
 	gem 'rails_warden'
 	gem 'guard-sass', :require => false
   gem 'rb-fsevent', '~>0.9.1'
-  # gem 'turnip'
 end
 
