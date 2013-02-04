@@ -1,29 +1,19 @@
 require 'spec_helper'
 
 describe DepartmentsController do
-  include DepartmentHelper
-  include DeviseHelper
+  # 
+  # get :home do
+  #   should_render :home
+  #   should_assign @dept, :dept => [Department, :first]
+  # end
 
   describe 'GET :home' do
-    it "uses the first department" do
+    it "show the page of the first department" do
       dept = Fabricate :department
       get :home
       assigns(:dept).should == dept
+      response.should render_template :home
     end
   end
   
-  describe '#edit_doc, logged in' do
-    before :each do
-      @doc = Fabricate :department_document
-    end
-
-    it "gets the doc referenced by params[:doc_id]" do
-      as_user do
-        get :edit_doc, doc_id: @doc.to_param
-      end
-      assigns(:doc).should == @doc
-    end
-    
-  end
-	
 end
