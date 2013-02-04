@@ -1,9 +1,8 @@
 class SectionAssignment
 	include Mongoid::Document
   include Mongoid::Timestamps
-  include Mongoid::TaggableWithContext
+  include Mongoid::History::Trackable
 	include Utils
-
 
 	field :dd, as: :due_date, type: Date
 	field :na, as: :name, type: String, default: ""
@@ -28,7 +27,7 @@ class SectionAssignment
 	scope :for_section, ->(s) { where(section: s) }
 	scope :published, -> { where(use: true) }
 
-  taggable :type
+  track_history version_field: :version, track_create: true
 
 	def to_s
 		return "#{self.section}/#{self.assignment.assgt_id}"
