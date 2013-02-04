@@ -11,6 +11,9 @@ InDepth::Application.configure do
   config.serve_static_assets = true
   config.static_cache_control = "public, max-age=3600"
 
+  # Note: need this to make webkit scenarios work
+  config.assets.debug = true
+
   # Log error messages when you accidentally call methods on nil
   config.whiny_nils = true
 
@@ -32,7 +35,15 @@ InDepth::Application.configure do
 	config.action_mailer.default_url_options = { host: 'localhost:3000' }
 	config.action_mailer.perform_deliveries = false
 
+  # Do not compress assets
+  config.assets.compress = false
+
+	config.generators do |g|
+		g.fixture_replacement :fabrication
+	end
+
+  config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
 
   # Print deprecation notices to the stderr
-  config.active_support.deprecation = :stderr
+  config.active_support.deprecation = :log
 end
