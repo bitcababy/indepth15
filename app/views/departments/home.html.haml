@@ -12,14 +12,14 @@
 
 		editor = $("#editor")
 		editor.setupAccordionEditor = (accDiv) ->
-			div = this
-			div.dialogForm "init",
+			that = this
+			this.dialogForm 'init'
 				width: 700
 				height: 600
 				ckid: 'department_document_content'
-	
-			div.dialogForm 'bindLinks', $('.edit-button')
-			div.on 'savedAndClosed', ->
+			
+			this.dialogForm 'bindLinks', $('.edit-button')
+			this.on 'savedAndClosed', ->
 				pn = accDiv.accordion "option", "active"
 				$.get "/departments/1/pane/" + pn, (data, textStatus, jqxhr) ->
 					title = $('.ui-accordion-header-active', accDiv).find('.title')
