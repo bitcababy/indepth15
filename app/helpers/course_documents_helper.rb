@@ -1,0 +1,2 @@
+module CourseDocumentsHelper
+end
