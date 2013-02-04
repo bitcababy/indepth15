@@ -1,4 +1,4 @@
-module MenuItemHelper
+module MenuItemConstructors
 	def item_with_link(opts={})
 		opts.merge!({label: "Google", link: 'http://google.com' })
 		Fabricate :menu_item, opts

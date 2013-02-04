@@ -1,4 +1,4 @@
-= simple_form_for @doc, validate: false, remote: true, method: :put do |f|
+= simple_form_for @doc, validate: false, remote: true, method: :put, html: {"data-type" => :json} do |f|
 	%fieldset
 		= f.input :lock_version, as: :hidden
 		.title= f.input :title, required: true

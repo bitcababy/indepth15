@@ -1,4 +1,11 @@
 module CourseMockHelpers
+  
+  def mock_and_stub(name, opts)
+		mock name do
+      opts.each { |k,v| stubs(k).returns(v) }
+    end
+  end
+    
 	def mock_teacher(opts={})
     defaults = {
         login: 'doej',
@@ -8,11 +15,9 @@ module CourseMockHelpers
         current_msg: "Current msg", 
         upcoming_msg: "Upcoming_msg"}
     opts = defaults.merge(opts)
+    # opts[:menu_label] = opts[:formal_name]
     # opts.merge!(defaults) {|key, v1, v2| v1}
-		mock(opts[:full_name]) do
-			opts.each_pair {|k, v| stubs(k).returns v}
-      stubs(:menu_label).returns opts[:formal_name]
-		end
+    mock_and_stub opts[:full_name], opts
 	end
 
 	def mock_section(opts={})
@@ -23,52 +28,39 @@ module CourseMockHelpers
     opts = defaults.merge(opts)
 		opts[:teacher] = mock_teacher unless opts[:teacher]
 		opts[:course] = mock_course unless opts[:course]
-		mock("Section #{opts[:block]}") do
-			opts.each_pair {|k, v| stubs(k).returns v}
-		end
+		mock_and_stub "Section #{opts[:block]}", opts
 	end
 	
 	def mock_text_doc(txt)
-		mock('text_document') do
-			stubs(:content).returns txt
-		end
+		mock 'text_document' do
+      stubs(:content).returns txt
+    end
 	end
 
 	def mock_course(opts={})
-		areas = [:description, :policies, :resources, :information, :news]
 		opts.merge!({number: 321, 
         duration: Course::FULL_YEAR, credits: 5.0, 
 				full_name: "Fractals 101"
         }) {|key, v1, v2| v1}
     
-		docs = {}
-		areas.each do |area|
-			docs[area] = mock_text_doc("#{area.to_s.capitalize} for course #{opts[:number]}")
+		[:description, :policies, :resources, :information, :news].each do |area|
+			opts[area] =  mock_text_doc("#{area.to_s.capitalize} for course #{opts[:number]}")
 		end
-		mock("Course #{opts[:number]}") do
-			opts.each_pair {|k, v| stubs(k).returns v}
-			areas.each do |area|
-				stubs(:area).returns docs[area]
-			end
-      stubs(:menu_label).returns opts[:full_name]
-		end
+    opts[:menu_label] = opts[:full_name]
+		mock_and_stub "Course #{opts[:number]}", opts
 	end
 
 	def mock_section_assignment(opts={})
 		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20), use: true }) {|key, v1, v2| v1}
-		sa = mock("section_assignment") do
-			opts.each_pair {|k, v| stubs(k).returns v}
-		end
 		if opts[:name]
-			sa.stubs(:assignment).returns mock_assignment("This is assignment #{opts[:name]}")
+			opts[:name] = mock_assignment("This is assignment #{opts[:name]}")
 		end
-		return sa
+    
+		 mock_and_stub "section_assignment", opts
 	end
 	
 	def mock_assignment(txt)
-		mock('assignment') do
-			stubs(:content).returns txt
-		end
+		mock 'assignment', content: txt
 	end
 	
 	def mock_section_assignments(n=3)
@@ -158,44 +150,5 @@ module CourseMockHelpers
 		return course
 	end	
 		
-
-	# def do_the_mock(name, opts)
-	# 	as_new = opts.delete(:new)
-	# 	as_new ? mock(name, *opts).as_new_object : mock(name, *opts)
-	# end
-	# 	
-	# def make_teacher(opts={})
-	# 	opts.merge!({formal_name: "Mr. " + %W(Black Blue Orange Purple).sample,
-	# 		generic_message: "This is a generic message.",
-	# 		current_message: "This is a current message.",
-	# 		upcoming_message: "This is an upcoming message.",
-	#  		})
-	# 	do_the_mock(:teacher, opts)
-	# end
-	# 
-	# def make_course(opts={})
-	# 	opts.merge(teacher: make_teacher)
-	# 	do_the_mock(:course, opts)
-	# end
-	# 
-	# def make_section(opts={})
-	# 	opts.merge!(teacher: make_teacher, course: make_course)
-	# 	do_the_mock(:section, opts)
-	# end
-	# 
-	# def mock_assignment(opts={})
-	# 	future = opts.delete(:future)
-	# 
-	# 	opts.merge!(content: "Lorum ipsum blah blah yadda yadda yadda", name: "Foobar")
-	# 	opts.merge(due_date: Date.today + (future ? rand(1..3) : rand(-3..-1)))
-	# 	do_the_mock(:assignment, opts)
-	# end
-	# 
-	# def mock_assignments(n, opts={})
-	# 	assigments = []
-	# 	n.times { assigments << mock_assignment(opts) }
-	# 	return assigments
-	# end
-
 end
 		
