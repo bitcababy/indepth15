@@ -182,11 +182,11 @@ class Course
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = self.create! hash
-      course.resources.content = r
-      course.policies.content = p
-      course.news.content = n
-      course.description.content = d
-      course.information.content = i
+      course.documents.create kind: :resources, content: r
+      course.documents.create kind: :policies, content: p
+      course.documents.create kind: :news, content: n
+      course.documents.create kind: :description, content: d
+      course.documents.create kind: :information, content: i
  			return course.save!
 		end
 	end

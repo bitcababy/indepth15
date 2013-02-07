@@ -3,9 +3,7 @@ require 'spec_helper'
 describe Course do
 	it { should have_many(:sections) }
 	it { should validate_uniqueness_of(:number)}
-	it { should belong_to :resources }
-	it { should belong_to :policies }
-	it { should belong_to :news }
+	it { should embed_many :documents }
 	
 	context "Fabricator" do
 		it "creates courses with unique numbers" do

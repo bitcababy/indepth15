@@ -4,8 +4,6 @@ class Course
   include Mongoid::History::Trackable
   
   after_create :add_branches
-  after_create :create_docs
-  after_destroy :destroy_docs
 
 	FULL_YEAR = :full_year
 	FULL_YEAR_HALF_TIME = :halftime
@@ -40,13 +38,14 @@ class Course
   
 	field :_id, type: Integer, default: ->{ number }
   
-  belongs_to :resources, class_name: 'TextDocument', inverse_of: nil, autosave: true
-  belongs_to :information, class_name: 'TextDocument', inverse_of: nil, autosave: true
-  belongs_to :news, class_name: 'TextDocument', inverse_of: nil, autosave: true
-  belongs_to :policies, class_name: 'TextDocument', inverse_of: nil, autosave: true
-  belongs_to :description, class_name: 'TextDocument', inverse_of: nil, autosave: true
-	
-  track_history except: [:number], version_field: :version, track_create: true
+  # embeds_one :resources, class_name: 'CourseDocument'
+  # embeds_one :information, class_name: 'CourseDocument'
+  # embeds_one :news, class_name: 'CourseDocument'
+  # embeds_one :policies, class_name: 'CourseDocument'
+  # embeds_one :description, class_name: 'CourseDocument'
+
+  embeds_many :documents, class_name: 'CourseDocument'
+  track_history except: [:number], track_create: true
 
  	##
 	## Associations
@@ -58,6 +57,10 @@ class Course
 	## Scopes
 	##
 	scope :in_catalog, where(in_catalog: true).asc(:number)
+  
+  def doc_of_kind(k)
+    return self.documents.where(kind: k).first
+  end
 
 	def current_sections
 		sections = self.sections.current
@@ -90,21 +93,14 @@ class Course
   end
   
   def create_docs
-    self.resources = CourseDocument.create!
-    self.news = CourseDocument.create!
-    self.policies = CourseDocument.create!
-    self.description = CourseDocument.create!
-    self.information = CourseDocument.create!
+    self.course_documents.create kind: :resources
+    self.course_documents.create kind: :news
+    self.course_documents.create kind: :policies
+    self.course_documents.create kind: :information
+    self.course_documents.create kind: :description
     
     self.save!
   end
   
-  def destroy_docs
-    self.resources.destroy
-    self.news.destroy
-    self.policies.destroy
-    self.description.destroy
-    self.information.destroy
-  end
     
 end
