@@ -13,6 +13,11 @@ namespace :convert do
 			end
 		end
 	end
+  task :dept => :environment do
+    require Rails.root.join('import/convert')
+    arr = Convert.import_xml_file "departments.xml"
+		Convert.from_hashes Department, arr
+  end
 end
 
 namespace :update do
