@@ -6,20 +6,16 @@ Fabricator :user do
 	login										{ |attrs| attrs[:last_name] + attrs[:first_name][0]}
 	email										{ |attrs| attrs[:login] + "@example.com"}
 	suffix									{ sequence }
-  encrypted_password      "password"
+  password                'secret'
 end
 
 
 # Fabricate.sequence :first_name, {|i| }
 
-Fabricator :author, from: :user, class_name: :author do
-	authentication_token		'author'
-end
-
 Fabricator :guest, from: :user  do
 end
 
-Fabricator :teacher, from: :author, class_name: :teacher do
+Fabricator :teacher, from: :user, class_name: :teacher do
 	current									true
 	authentication_token		'teacher'
 	general_msg							"This is the general leadin"

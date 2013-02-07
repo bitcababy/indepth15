@@ -1,4 +1,4 @@
-class Teacher < Author
+class Teacher < User
   include Mongoid::History::Trackable
 
 	field :cu, as: :current, type: Boolean
