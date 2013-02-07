@@ -5,7 +5,7 @@ class Users::SessionsController < Devise::SessionsController
     login = params[:user][:login] 
     password = params[:user][:password] 
     user = User.find_for_database_authentication({:login => login})
-    if (!user.nil?) && (user.valid_password?(password)) 
+    if (!user.nil?) && (Rails.env == 'test' || user.valid_password?(password)) 
       sign_in user, event: :authentication
       redirect_to :back
       # render :status => 200, :json => { :error => "Success" }  
@@ -28,7 +28,7 @@ class Users::SessionsController < Devise::SessionsController
     # We actually need to hardcode this as Rails default responder doesn't
     # support returning empty response on GET request
     respond_to do |format|
-      format.all { redirect_to :back }
+      format.all { render json: {error: "Success" } }
     end
   end
 
