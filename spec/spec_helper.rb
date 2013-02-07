@@ -31,9 +31,10 @@ Spork.prefork do
     end
   end
 
-  Devise.setup do |config|
-    config.stretches = 0
-  end
+  # Devise.setup do |config|
+  #   config.stretches = 1
+  # end
+
 
   include Utils
 
@@ -41,6 +42,7 @@ Spork.prefork do
   	c.default_driver = :rack_test
   	c.javascript_driver = :webkit
   	c.default_selector = :css
+    c.default_wait_time = 5
   end
 
   # Requires supporting ruby files with custom matchers and macros, etc,
@@ -79,7 +81,14 @@ Spork.prefork do
   	config.before(:each) do
   		DatabaseCleaner.clean
   	end
-	
+    
+    config.before :each do
+      Warden.test_mode!
+    end
+    config.after(:each) do
+      Warden.test_reset!
+    end
+
   end
 end
 
