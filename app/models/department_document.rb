@@ -1,10 +1,24 @@
-class DepartmentDocument < TitledDocument
+class DepartmentDocument < Document
   include Mongoid::Ordered
   include Mongoid::History::Trackable
 
+  field :ti, as: :title, type: String, default: ""
+  validates :title, presence: true
+  field :co, as: :content, type: String, default: ""
+  validates :content, presence: true
+
   ordered_on :pos
-  belongs_to :department
+  embedded_in :department
 
-  track_history version_field: :version
+  track_history track_create: true
+  
+  def to_s
+    return "Doc entitled #{title}"
+  end
 
+  def update_from_params(params)
+    self.title = params[:title]
+    self.content = params[:content]
+    self.department.save
+  end
 end
