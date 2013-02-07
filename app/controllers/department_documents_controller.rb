@@ -1,5 +1,6 @@
 class DepartmentDocumentsController < ApplicationController
   before_filter :find_doc
+	before_filter :authenticate_user!
 
   def edit
 		respond_to do |format|
