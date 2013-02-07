@@ -1,19 +1,20 @@
-RSpec::Matchers.define :contain do |a|
-	match do |arr|
-		arr.contains? a
+RSpec::Matchers.define :contain do |expected|
+	match do |actual|
+		actual.contains? expected
+	end
+
+	description do
+		"expected #{expected} to contain #{actual}"
 	end
 
 	failure_message_for_should do |elem|
-		"Expected #{arr} to contain #{elem}"
+		"Expected #{expected} to contain #{actual}"
 	end
 	
 	failure_message_for_should_not do |elem|
-		"Expected #{arr} to not contain #{elem}"
+		"Expected #{expected} to not contain #{elem}"
 	end
 	
-	description do
-		"expected an object that's in #{arr}"
-	end
 end
 	
 RSpec::Matchers.define :exist do
