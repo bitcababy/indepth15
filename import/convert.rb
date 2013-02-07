@@ -152,10 +152,9 @@ class Department
     dept = Department.create name: hash[:name]
     dept.homepage_docs.create(title: "How to use the new Westonmath app", content: hash[:how_to_use], pos: 0)
     dept.homepage_docs.create(title: "Why not Teacherweb?", content: hash[:why], pos: 1)
-    dept.homepage_docs.create(title: "Objectives", content: hash[:objectives], pos: 2)
-    dept.homepage_docs.create(title: "News", content: hash[:news], pos: 3)
-    dept.homepage_docs.create(title: "Resources", content: hash[:resources], pos: 4)
-    dept.homepage_docs.create(title: "Puzzle", content: hash[:puzzle], pos: 5)
+    dept.homepage_docs.create(title: "News", content: hash[:news], pos: 2)
+    dept.homepage_docs.create(title: "Resources", content: hash[:resources], pos: 3)
+    dept.homepage_docs.create(title: "Puzzle", content: hash[:puzzle], pos: 4)
     
     dept.save!
   end
