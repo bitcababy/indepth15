@@ -5,9 +5,9 @@ class Department
   include Mongoid::Timestamps if Rails.env == 'production'
   
 	field :n, as: :name, type: String
-  validates :name, presence: true, length: {minimum: 4}
+  validates :name, presence: true, length: { minimum: 3 }
   field :_id, type: String, default: -> { n }
 
-  has_many :homepage_docs, class_name: 'DepartmentDocument', dependent: :delete
-  	
-end
+  embeds_many :homepage_docs, class_name: 'DepartmentDocument'
+  
+ end
