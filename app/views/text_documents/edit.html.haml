@@ -1,4 +1,0 @@
-= simple_form_for @doc, remote: true, method: :put do |f|
-	%fieldset
-		= f.input :lock_version, as: :hidden
-		.text= f.input :content, as: :ckeditor, label: false, input_html: {ckeditor: {resize_enabled: false, height: 380 }}
