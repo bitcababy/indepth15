@@ -11,11 +11,23 @@ class SectionAssignmentsController < ApplicationController
    # PUT text_documents/1
    # PUT text_documents/1.json
    def update
-     respond_to do |format|
-       if @sa.update_attributes(params[:section_assignment])
-         format.html { redirect_to :back, notice: 'Section assignment was saved.' }
-       else
-         format.json { render json: @sa.errors, status: :unprocessable_entity }
+     if request.xhr?
+       respond_to do |format|
+         if @sa.update_attributes(params[:department_document])
+           format.html { redirect_to :back, notice: 'Document was saved.' }
+         else
+           format.json { render json: doc.errors, status: :unprocessable_entity }
+         end
+       end
+     else
+       respond_to do |format|
+         if @sa.update_attributes(params[:department_document])
+           format.html { redirect_to session[:goto_url], notice: 'SectionAssignment was successfully updated.' }
+           format.json { head :no_content }
+         else
+           format.html { render action: "edit", error: 'Invalid parameters' }
+           format.json { render json: doc.errors, status: :unprocessable_entity }
+         end
        end
      end
   end
