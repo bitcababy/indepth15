@@ -28,12 +28,12 @@ InDepth::Application.routes.draw do
       get :home
     end
   end
-  
-  resources :department_documents, only: [:edit, :update]
-  
-  get 'courses/:id/pane/:pane_id', to: 'courses#get_pane', as: :show_course_pane
+    
+  get 'courses/:id/pane/:kind', to: 'courses#get_pane', as: :show_course_pane
   get 'departments/:id/pane/:pos', to: 'departments#get_pane', as: :get_dept_pane
-   
+  # get 'department/:id/pane/:which/edit', to: 'departments#edit_doc', as: :edit_department_doc
+  
+  
   resources :sections, only: [] do
     member do
       get :assignments_pane
@@ -53,6 +53,10 @@ InDepth::Application.routes.draw do
 
 	get "courses/:id/year/:year/teacher/:teacher_id/block/:block", to: 'courses#home_with_assignments', as: :home_with_assignments
       
+  get 'departments/:dept_id/documents/:id/edit', to: 'department_documents#edit', as: :edit_dept_doc
+  put 'departments/:dept_id/documents/:id', to: 'department_documents#update', as: :update_dept_doc
+  get 'courses/:course_id/documents/:id/edit', to: 'course_documents#edit', as: :edit_course_doc
+  put 'courses/:dept_id/documents/:id', to: 'course_documents#update', as: :update_course_doc
    
 	# get 'menus/home', to: 'menus#home', as: :home_menu
 	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
