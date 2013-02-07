@@ -1,0 +1,3 @@
+.pane-content!= pane.content
+- if editable?
+	%button.edit-button= link_to "Edit", edit_course_doc_path(pane.course, pane)
