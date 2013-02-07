@@ -37,20 +37,20 @@ class Section
 	scope :for_block, ->(b) { where(block: b) }
 	scope :for_course, ->(c) { where(course: c) }
 	
-  track_history version_field: :version
+  track_history track_create: true
 
 	def to_s
-		"#{self.academic_year}/#{self.course.number}/#{self.teacher.login}/#{self.block}"
+		return "#{self.academic_year}/#{self.course.number}/#{self.teacher.login}/#{self.block}"
 	end
 	
-	def label_for_teacher
-		return "#{self.course.short_name || self.course.full_name}, Block #{self.block}"
-	end
-		
-	def label_for_course
-		return "#{self.teacher.formal_name}, Block #{self.block}"
-	end
-
+  def label_for_teacher
+    return "#{self.course.short_name || self.course.full_name}, Block #{self.block}"
+  end
+    
+  def label_for_course
+    return "#{self.teacher.formal_name}, Block #{self.block}"
+  end
+  
 	def upcoming_assignments
 		return self.section_assignments.upcoming.asc(:due_date).published
 	end
@@ -62,7 +62,7 @@ class Section
       return []
     end
 	end
-	
+
 	def future_assignments
 		return self.section_assignments.future.asc(:due_date).published
 	end
@@ -82,6 +82,6 @@ class Section
 		
 	def days_for_section
 		return (self.occurrences.map &:day).sort
-	end	
-
+	end
+  
 end
