@@ -145,6 +145,12 @@ module Convert
 	
 end
 
+class Occurrence
+	def self.import_from_hash(hash)
+		return Occurrence.create! hash
+	end
+end
+
 class Department
   include Mongoid::Document
   def self.import_from_hash(hash)
@@ -163,6 +169,76 @@ end
 
 class Course
   include Mongoid::Document
+	BRANCH_MAP = {
+		321 => 'Geometry',
+		322 => 'Geometry',
+		326 => 'Algebra',
+		331 => 'Algebra',
+		332 => 'Algebra',
+		333 => 'Algebra',
+		341 => 'Precalculus',
+		342 => ['Precalculus', 'Statistics', 'Algebra'],
+		343 => 'Discrete Math',
+		352 => 'Precalculus',
+		361 => 'Calculus',
+		371 => 'Calculus',
+		391 => 'Statistics',
+	}
+	MAJOR_TAGS = {
+		'Geometry' => [
+			'Transformations', 'Similarity', 'Congruence', 'Logic/Proof',
+			'Measurement', 'Non-Euclidean', 'Circles', 'Polygons', 'Parallel Lines'
+			],
+		'Algebra' => [
+			'Functions',
+			'Quadratics',
+			'Exponents/Logs',
+			'Systems of Equations',
+			'Number Theory',
+			'Probability/Combinatorics',
+			'Data Distributions',
+			'Correlation/Regression',
+		],
+		'Precalculus' => [
+			'Functions',
+			'Trigonometry',
+			'Probability/Combinatorics',
+			'Complex Numbers',
+			'Polynomials',
+			'Iteration',
+			'Rational Functions',
+			'Logic/Proof',
+			'Number Theory',
+		],
+		'Calculus' => [
+			'Limits',
+			'Sequences/Series',
+			'Derivatives',
+			'Integrals',
+			],
+		'Statistics' => [
+			'Data Distributions',
+			'Data Collection',
+			'Sampling Distributions',
+			'Inference',
+			'Correlation/Regression',
+			],
+		'Discrete Math' => [
+			'Inference',
+			'Data Collection',
+			'Queueing Theory',
+			'Manhattan Metric',
+			'Game Theory',
+			'Graph Theory',
+			'Emergence',
+			'Risk Analysis',
+			],
+	}
+
+  def add_major_tags
+    branches = BRANCH_MAP[self.number].to_a
+    self.major_tags = (branches.collect {|b| MAJOR_TAGS[b]}).flatten.uniq
+  end
 
 	class << self
   	SEMESTER_MAP = {
@@ -180,7 +256,8 @@ class Course
 			d = massage_content hash.delete(:description)
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
-			course = self.create! hash
+			course = Department.first.courses.create hash
+      course.add_major_tags
       course.documents.create kind: :resources, content: r
       course.documents.create kind: :policies, content: p
       course.documents.create kind: :news, content: n
@@ -238,11 +315,13 @@ class Section
 		teacher = Teacher.find_by login: teacher_id
 		hash[:teacher] = teacher
 		section = course.sections.create!(hash)
-
+  
 		occurrences = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
 		for occ in occurrences
-			section.occurrences.find_or_create_by(block: section.block, number: occ)
+      section.days << Occurrence.find_by(block: section.block, number: occ).day
 		end
+    section.days.sort!
+    section.save!
 		return section
 	end
 end
@@ -325,4 +404,3 @@ class Assignment
 		self.content = Assignment.massage_content(self.content)
 	end
 end
-
