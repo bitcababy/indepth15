@@ -9,5 +9,6 @@ class Department
   field :_id, type: String, default: -> { n }
 
   embeds_many :homepage_docs, class_name: 'DepartmentDocument'
+  has_many :courses
   
  end
