@@ -8,7 +8,7 @@ module Utils
 		end
 
 		def after_cutoff?(time)
-			return time.hour > Settings.cutoff.hour || (time.hour == Settings.cutoff.hour && time.min >= Settings.cutoff.minute)
+			return time.hour > Settings.cutoff[:hour] || (time.hour == Settings.cutoff[:hour] && time.min >= Settings.cutoff[:minute])
 		end
 
 		def future_due_date
@@ -38,7 +38,7 @@ module Utils
 	end
 
 	def after_cutoff?(time)
-		return time.hour > Settings.cutoff.hour || (time.hour == Settings.cutoff.hour && time.min >= Settings.cutoff.minute)
+		return time.hour > Settings.cutoff[:hour] || (time.hour == Settings.cutoff[:hour] && time.min >= Settings.cutoff[:minute])
 	end
 
 	def future_due_date
