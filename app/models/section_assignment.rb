@@ -33,6 +33,10 @@ class SectionAssignment
 		return "#{self.section}/#{self.assignment.assgt_id}"
 	end
   
+  def potential_major_tags
+    self.course.major_tags
+  end
+  
 	def self.upcoming
 		na = self.next_assignment.first
 		if na
