@@ -30,7 +30,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # To use debugger
 # gem 'debugger'
@@ -44,6 +44,7 @@ gem 'mongoid-data_table', :git => 'git://github.com/shamanime/mongoid-data_table
 # gem 'acts_as_list_mongoid'
 gem 'mongoid_rails_migrations'
 # gem 'locomotive_mongoid_acts_as_tree'
+gem 'mongoid-app_settings'
 gem 'mongoid_taggable_with_context', :git => 'git://github.com/lgs/mongoid_taggable_with_context.git'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
 gem 'thin'
@@ -53,7 +54,7 @@ gem 'coffee-filter'
 # gem "cells", :git => "git://github.com/apotonick/cells.git"
 gem 'bson_ext'
 gem 'delayed_job'
-gem 'settingslogic'
+# gem 'settingslogic'
 gem 'xml-simple'
 gem 'state_machine'
 gem 'state_machine-audit_trail'
@@ -78,11 +79,6 @@ gem 'pry'
 gem 'yard'
 
 # gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
-
-group :production do
-  gem 'mongoid-locker', :git => 'git://github.com/bitcababy/mongoid-locker.git'
-  gem 'mongoid_ordered', :git => 'git://github.com/bitcababy/mongoid_ordered.git'
-end
 
 group :development, :test do
   gem 'heroku'
