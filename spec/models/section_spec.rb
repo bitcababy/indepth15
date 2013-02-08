@@ -47,16 +47,6 @@ describe Section do
 		end
 	end
 	
-	describe '#days_for_section' do
-		it "returns an array of days for its occurrences" do
-			section = Fabricate :section, valid_attributes
-			(1..5).each do |i|
-				section.occurrences.create! number: i, block: section.block, day: i
-			end
-			section.days_for_section.should eql([1,2,3,4,5])
-		end
-	end
-	
 	describe '#add_assignment(name, asst, due_date)' do
 		it "adds the assignment and due_date to the assignments hash" do
 			subject = Section.create! valid_attributes

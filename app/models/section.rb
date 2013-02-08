@@ -19,6 +19,7 @@ class Section
 
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	validates :academic_year, presence: true, numericality: true
+  field :days, type: Array, default: []
 	
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
@@ -28,9 +29,6 @@ class Section
 
 	has_many :section_assignments
 
-	has_and_belongs_to_many :occurrences, inverse_of: nil
-	# accepts_nested_attributes_for :occurrences
-	
 	scope :for_year, ->(y){ where(academic_year: y)}
 	scope :current, ->{ where(academic_year: Settings.academic_year)}
 	scope :for_teacher, ->(t) { where(teacher: t) }
@@ -80,8 +78,4 @@ class Section
 		"#{course.full_name}, Block #{self.block}"
 	end
 		
-	def days_for_section
-		return (self.occurrences.map &:day).sort
-	end
-  
 end
