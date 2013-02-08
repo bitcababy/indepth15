@@ -14,9 +14,6 @@ class Occurrence
   
   track_history version_field: :version
 	
-	def self.import_from_hash(hash)
-		return Occurrence.create! hash
-	end
 	
 	def to_s
 		"#{block}#{number}"
