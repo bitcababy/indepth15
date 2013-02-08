@@ -1,2 +1,0 @@
-Fabricator(:branch) do
-end

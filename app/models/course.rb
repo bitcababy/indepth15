@@ -3,8 +3,6 @@ class Course
   include Mongoid::Timestamps
   include Mongoid::History::Trackable
   
-  after_create :add_branches
-
 	FULL_YEAR = :full_year
 	FULL_YEAR_HALF_TIME = :halftime
 	FIRST_SEMESTER = :first_semester
@@ -35,6 +33,7 @@ class Course
 	field :ic, as: :in_catalog, type: Boolean, default: true
 	field :de, as: :description, type: String, default: ""
   field :oc, as: :occurrences, type: Array
+  field :mt, as: :major_tags, type: Array
   
 	field :_id, type: Integer, default: ->{ number }
   
@@ -46,12 +45,12 @@ class Course
 
   embeds_many :documents, class_name: 'CourseDocument'
   track_history except: [:number], track_create: true
+  belongs_to :department
 
  	##
 	## Associations
 	##
 	has_many :sections
-  has_and_belongs_to_many :branches, inverse_of: nil
 	
 	##
 	## Scopes
@@ -85,12 +84,6 @@ class Course
 		self.full_name
 	end
 
-  def add_branches
-    return unless Branch::BRANCH_MAP[number]
-    keys = Branch::BRANCH_MAP[number].to_a
-    self.branches = Branch.in(name: keys)
-    self.save!
-  end
   
   def create_docs
     self.course_documents.create kind: :resources
