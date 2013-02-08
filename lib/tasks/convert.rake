@@ -2,8 +2,6 @@
 namespace :convert do
 	task :data => :environment do
     require Rails.root.join('import/convert')
-    Branch.delete_all
-    Branch.create_all
     Document.delete_all
 	  Mongoid.unit_of_work(disable: :all) do
 			[Department, Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
@@ -16,7 +14,7 @@ namespace :convert do
   task :dept => :environment do
     require Rails.root.join('import/convert')
     arr = Convert.import_xml_file "departments.xml"
-		Convert.from_hashes Department, arr
+		Convert.from_hashes DepartmentB, arr
   end
 end
 
