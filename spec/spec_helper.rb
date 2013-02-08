@@ -80,11 +80,10 @@ Spork.prefork do
   	# Clear out 
   	config.before(:each) do
   		DatabaseCleaner.clean
+      Warden.test_mode!
+      Mongoid::IdentityMap.clear
   	end
     
-    config.before :each do
-      Warden.test_mode!
-    end
     config.after(:each) do
       Warden.test_reset!
     end
