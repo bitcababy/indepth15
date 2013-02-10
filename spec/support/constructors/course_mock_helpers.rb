@@ -81,7 +81,7 @@ module CourseMockHelpers
 		end
 		the_section = mock_section course: the_course, teacher: the_teacher, block: "B"
 		the_course.stubs(:sections).returns [the_section]
-		the_course.stubs(:current_sections).returns [the_section]
+		the_course.stubs(:sorted_sections).returns [sections]
 	
 		sas = []
 		1.times do |i|
@@ -146,7 +146,7 @@ module CourseMockHelpers
 			sections << mock_section
 		end
 		course.stubs(:sections).returns sections
-		course.stubs(:current_sections).returns sections
+		course.stubs(:sorted_sections).returns sections
 		return course
 	end	
 		
