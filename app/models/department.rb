@@ -9,6 +9,11 @@ class Department
   field :_id, type: String, default: -> { n }
 
   embeds_many :homepage_docs, class_name: 'DepartmentDocument'
-  has_many :courses
+  
+  has_many :courses do
+    def in_catalog
+      @target.select {|c| c.in_catalog }
+    end
+  end
   
  end
