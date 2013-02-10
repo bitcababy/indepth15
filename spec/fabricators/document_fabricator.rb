@@ -1,11 +1,6 @@
 Fabricator :document do
 end
 
-Fabricator :assignment, from: :document, class_name: :assignment  do
-	content							""
-	section_assignments	[]
-	assgt_id						{ sequence(1) }
-end
 
 Fabricator :department_document, from: :document, class_name: :department_document do
   title     { sequence :title }
