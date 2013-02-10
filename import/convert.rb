@@ -313,6 +313,7 @@ class Section
 		[:course_num, :semesters].each {|k| hash.delete(k)}
 
 		teacher = Teacher.find_by login: teacher_id
+
 		hash[:teacher] = teacher
 		section = course.sections.create!(hash)
   
@@ -323,45 +324,6 @@ class Section
     section.days.sort!
     section.save!
 		return section
-	end
-end
-
-class SectionAssignment
-  include Mongoid::Document
-
-	def self.import_from_hash(hash)
-		section,assignment = self.get_sa(hash)
-     # crit = SectionAssignment.where(assignment: assignment, block: hash[:block], section: section)
-    # if crit.exists?
-    #   sa = crit.first
-    #   raise "no section_assignment" unless sa
-    #   sa.due_date = hash[:due_date]
-    #   sa.use = hash[:use] == 'Y'
-    #   sa.save!
-    #   return sa
-    # else
-			hash[:use] = hash[:use] == 'Y'
-			hash[:assignment] = assignment
-      hash.delete(:block) # Have to do this or the block delegation won't work
-			return section.section_assignments.create! hash
-    # end
-	end
-	
-	def self.get_sa(hash)
-		assgt_id = hash.delete(:assgt_id)
-		year = hash[:year]
-		course_num = hash.delete(:course_num).to_i
-		block = hash[:block]
-		name = hash[:name]
-		teacher_id = hash.delete(:teacher_id)
-		course = Course.find_by(number: course_num)
-		raise "Course #{course_num} not found" unless course
-		teacher = Teacher.find_by(login: teacher_id)
-		raise "Course #{teacher_id} not found" unless teacher
-		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
-		raise "Section #{course}/#{block}/#{teacher_id} not found" unless teacher
-		assignment = Assignment.find_by(assgt_id: assgt_id)
-		return section,assignment
 	end
 end
 
@@ -404,3 +366,33 @@ class Assignment
 		self.content = Assignment.massage_content(self.content)
 	end
 end
+
+class SectionAssignment
+  include Mongoid::Document
+
+	def self.import_from_hash(hash)
+		section,assignment = self.get_sa(hash)
+ 		hash[:use] = hash[:use] == 'Y'
+		hash[:assignment] = assignment
+    hash.delete(:block) # Have to do this or the block delegation won't work
+		return section.section_assignments.create! hash
+	end
+	
+	def self.get_sa(hash)
+		assgt_id = hash.delete(:assgt_id)
+		year = hash[:year]
+		course_num = hash.delete(:course_num).to_i
+		block = hash[:block]
+		name = hash[:name]
+		teacher_id = hash.delete(:teacher_id)
+		course = Course.find_by(number: course_num)
+		raise "Course #{course_num} not found" unless course
+		teacher = Teacher.find_by(login: teacher_id)
+		raise "Course #{teacher_id} not found" unless teacher
+		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
+		raise "Section #{course}/#{block}/#{teacher_id} not found" unless teacher
+		assignment = Assignment.find_by(assgt_id: assgt_id)
+		return section,assignment
+	end
+end
+
