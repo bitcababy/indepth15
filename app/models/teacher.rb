@@ -10,20 +10,23 @@ class Teacher < User
 
   track_history on: [:current, :default_room, :home_page, :generic_msg, :current_msg, :upcoming_msg], version_field: :version
 
-	has_many :sections
-	
 	index({current: -1})
 
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
+  
+  has_many :sections do
+    def current
+      @target.select {|s| s.academic_year == Settings.academic_year }
+    end
+  end
 
-	def courses
-		return self.sections.map(&:course).uniq
-	end
-		
-	def course_names
-		return self.courses.map(&:full_name).sort
-	end
+  def courses
+    return self.sections.map(&:course).uniq
+  end
 
+  def course_names
+    return self.courses.map(&:full_name).sort
+  end
 
 end
