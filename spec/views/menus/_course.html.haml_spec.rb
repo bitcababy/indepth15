@@ -5,7 +5,7 @@ describe 'menus/_course' do
 		sections = []
 		course = mock('course') do
 			stubs(:menu_label).returns "Fractals 101"
-			stubs(:current_sections).returns sections
+			stubs(:sorted_sections).returns sections
 			stubs(:number).returns 321
 		end
 		render partial: 'menus/course', locals: {course: course}
