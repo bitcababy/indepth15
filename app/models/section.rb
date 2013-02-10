@@ -7,6 +7,9 @@ class Section
 
 	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
+	belongs_to :course, index: true
+	belongs_to :teacher, index: true
+
 	field :de, as: :dept, type: Integer
 
 	field :bl, as: :block, type: String
@@ -19,15 +22,21 @@ class Section
 
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	validates :academic_year, presence: true, numericality: true
+  
   field :days, type: Array, default: []
-	
+  
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
-	belongs_to :course, index: true
-  delegate :branches, to: :course
-	belongs_to :teacher, index: true
+  
+  # field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
+  
+	has_many :section_assignments do
+    def assignments
+      @target.map( &:assignment).uniq
+    end
+  end
 
-	has_many :section_assignments
+  # has_many :assignments, inverse_of: nil
 
 	scope :for_year, ->(y){ where(academic_year: y)}
 	scope :current, ->{ where(academic_year: Settings.academic_year)}
