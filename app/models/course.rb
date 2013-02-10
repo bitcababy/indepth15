@@ -37,21 +37,19 @@ class Course
   
 	field :_id, type: Integer, default: ->{ number }
   
-  # embeds_one :resources, class_name: 'CourseDocument'
-  # embeds_one :information, class_name: 'CourseDocument'
-  # embeds_one :news, class_name: 'CourseDocument'
-  # embeds_one :policies, class_name: 'CourseDocument'
-  # embeds_one :description, class_name: 'CourseDocument'
-
-  embeds_many :documents, class_name: 'CourseDocument'
   track_history except: [:number], track_create: true
-  belongs_to :department
-
  	##
 	## Associations
 	##
-	has_many :sections
-	
+	has_many :sections do
+    def current
+      @target.select {|s| s.academic_year == Settings.academic_year}
+    end
+  end
+
+  embeds_many :documents, class_name: 'CourseDocument'
+  belongs_to :department, index: true
+
 	##
 	## Scopes
 	##
@@ -61,7 +59,7 @@ class Course
     return self.documents.where(kind: k).first
   end
 
-	def current_sections
+	def sorted_sections
 		sections = self.sections.current
 		return sections.sort do |a, b|
 			teacher_a = a.teacher
@@ -83,7 +81,6 @@ class Course
 	def menu_label
 		self.full_name
 	end
-
   
   def create_docs
     self.course_documents.create kind: :resources
@@ -95,5 +92,4 @@ class Course
     self.save!
   end
   
-    
 end
