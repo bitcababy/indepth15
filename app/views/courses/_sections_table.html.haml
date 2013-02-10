@@ -5,7 +5,7 @@
 			%th.block Block<br/><i>(Click for assignments)</i>
 			%th.room Room
 	%tbody
-		= render partial: 'courses/section_table_row', collection: course.current_sections, as: 'section'
+		= render partial: 'courses/section_table_row', collection: course.sorted_sections, as: 'section'
 
 :coffeescript
 	$(document).ready ->

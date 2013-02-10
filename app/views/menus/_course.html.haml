@@ -1,8 +1,8 @@
 %li.course
 	= render partial: 'shared/course_link', locals: {course: course}
-	- if course.current_sections.empty?
+	- if course.sorted_sections.empty?
 		%p
 			%i Not taught this year
 	- else
 		%ul.sections
-			= render partial: 'menus/csection', collection: course.current_sections, as: :section
+			= render partial: 'menus/csection', collection: course.sorted_sections, as: :section
