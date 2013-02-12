@@ -16,6 +16,7 @@ class Assignment < Document
   
   # A section_assignment is meaningless if the assignment is deleted
   has_many :section_assignments, dependent: :delete, autosave: true
+  belongs_to :teacher
   accepts_nested_attributes_for :section_assignments
 
   taggable :major_tags

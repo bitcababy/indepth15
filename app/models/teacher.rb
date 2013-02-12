@@ -11,6 +11,8 @@ class Teacher < User
   track_history on: [:current, :default_room, :home_page, :generic_msg, :current_msg, :upcoming_msg], version_field: :version
 
 	index({current: -1})
+  
+  has_many :assignments
 
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
