@@ -93,3 +93,11 @@ div#main {
 .block-display {
 	display: block;
 }
+
+.table { display: table;}
+.row { display: table-row; }
+.thead { display: table-header-group; }
+.tfoot { display: table-footer-group; }
+.tr { display: table-row; }
+.col { display: table-column; }
+.td, .th {display: table-cell; }
