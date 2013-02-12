@@ -1,8 +1,5 @@
 InDepth::Application.routes.draw do
 	
-	# post 'assignments/create_or_update'
-	# get 'assignments/get_one/:assgt_id', controller: :assignments, action: :get_one, as: :get_one_assignment
-
   mount Ckeditor::Engine => '/ckeditor'
 
   authenticated :user do
@@ -14,13 +11,7 @@ InDepth::Application.routes.draw do
 	## Resources
 	##
 	resources :teachers, only: [:show]
-  
-  # resources :teachers, only: [:show] do
-  #     resources :courses, only: [] do
-  #       resources :assignments, only: [:new, :edit, :update, :show], shallow: true
-  #     end
-  #   end      
-  
+    
   resources :section_assignments, only: [:edit, :update]
    
 	resources :courses, only: [:show] do
@@ -56,25 +47,13 @@ InDepth::Application.routes.draw do
   get 'departments/:dept_id/documents/:id/edit', to: 'department_documents#edit', as: :edit_dept_doc
   put 'departments/:dept_id/documents/:id', to: 'department_documents#update', as: :update_dept_doc
   get 'courses/:course_id/documents/:id/edit', to: 'course_documents#edit', as: :edit_course_doc
-  put 'courses/:dept_id/documents/:id', to: 'course_documents#update', as: :update_course_doc
+  put 'courses/:course_id/documents/:id', to: 'course_documents#update', as: :update_course_doc
    
-	# get 'menus/home', to: 'menus#home', as: :home_menu
-	# get 'menus/courses', to: 'menus#courses', as: :courses_menu
-	# get 'menus/faculty', to: 'menus#faculty', as: :faculty_menu
-	# get 'menus/manage', to: 'menus#manage', as: :manage_menu
-  
-  # resources :assignments
-
 	devise_for :users, controllers: {sessions: 'users/sessions'}
-	
-  get 'teachers/:teacher_id/courses/:course_id/assignments/new', as: :new_assignment
-  resources :assignments, except: [:new]
+	  
+  get 'courses/:course_id/teachers/:teacher_id/assignments/new', to: 'assignments#new', as: :new_assignment
+  resources :assignments, only: [:update, :edit, :create]
 
-  
-  # match 'departments/update_doc/:value/:id', as: :update_dept_doc, to: 'departments#update_doc'
-  
-  get 'courses/edit_doc/:doc_id', to: 'courses#edit_doc', as: :edit_course_doc
-  
   unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
   end
