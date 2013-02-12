@@ -10,6 +10,24 @@ class AssignmentsController < ApplicationController
     end
   end
   
+  def new
+    course = Course.find params[:course_id]
+    teacher = Teacher.find params[:teacher_id]
+    sections = course.sections.current.select {|s| s.teacher == teacher }
+    @assignment = Assignment.new
+    dd = Date.today + 1
+    dd += 2 if dd.saturday?
+    dd += 1 if dd.sunday?
+    @sas = sections.collect {|s| SectionAssignment.new section: s, assignment: @assignment, due_date: dd}
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def create
+    
+  end
+  
 	# 
   ## REST methods
   # def new
@@ -52,9 +70,9 @@ class AssignmentsController < ApplicationController
 	#   end
 	# 
 	# # def create_or_update
-	# # 	assgt_id = params['assgt_id'].to_i
-	# # 	if Assignment.where(assgt_id: assgt_id).exists?
-	# # 		@assignment = Assignment.find_by(assgt_id: assgt_id)
+	# # 	oid = params['oid'].to_i
+	# # 	if Assignment.where(oid: oid).exists?
+	# # 		@assignment = Assignment.find_by(oid: oid)
 	# # 		logger.warn "@assignment is nil" unless @assignment
 	# # 	else
 	# # 		redirect_to create
@@ -63,10 +81,10 @@ class AssignmentsController < ApplicationController
 	# 
 	#   def create
 	# 	# This is temporary, until the system is finished
-	# 	aid = params['assignment']['assgt_id']
+	# 	aid = params['assignment']['oid']
 	# 
-	# 	if aid && Assignment.where(assgt_id: aid.to_i).exists?
-	# 		assignment = Assignment.find_by(assgt_id: aid.to_i)
+	# 	if aid && Assignment.where(oid: aid.to_i).exists?
+	# 		assignment = Assignment.find_by(oid: aid.to_i)
 	# 		params['id'] = assignment.to_param
 	# 		redirect_to update
 	# 		return
@@ -100,9 +118,9 @@ class AssignmentsController < ApplicationController
 	#   end
 	# 
 	# def get_one
-	# 	assgt_id = params['assgt_id'].to_i
-	# 	if Assignment.where(assgt_id: assgt_id).exists?
-	# 		assignment = Assignment.find_by(assgt_id: assgt_id)
+	# 	oid = params['oid'].to_i
+	# 	if Assignment.where(oid: oid).exists?
+	# 		assignment = Assignment.find_by(oid: oid)
 	# 		render json: assignment.to_json
 	# 		return
 	# 	else

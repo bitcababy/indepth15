@@ -1,6 +1,31 @@
 require 'spec_helper'
 
 describe 'assignments/new' do
+  before :each do
+    teacher = Fabricate :teacher, login: "xyzzy"
+    course = Fabricate :course
+    sections = (0..2).collect {|i| 
+      Fabricate :section, teacher: teacher, course: course, academic_year: Settings.academic_year, block: ('A'..'H').to_a[i]
+    }
+    assignment = Fabricate.build :assignment
+    @sas = sections.collect {|section| Fabricate :section_assignment, section: section}
+    assign(:assignment, assignment)
+    assign(:sas, @sas)
+    render
+  end
+  
+  it "displays a form" do
+    response.should have_selector('form')
+  end
+  
+  it "should have fields for the block, due date, and use of each section assignment" do
+    @sas.each do |sa|
+      response.should have_selector('input', value: sa.block)
+    end
+  end 
+  
+  
+  
   # before :each do
   #   section1 = Fabricate :section, block: "A"
   #   section2 = Fabricate :section, block: "B"
@@ -10,7 +35,7 @@ describe 'assignments/new' do
   #   sa1 = Fabricate :section_assignment, section: section1, due_date: Date.today, use: true
   #   sa1.block.should == 'A'
   #   sa2 = Fabricate :section_assignment, section: section2, due_date: Date.today, use: true
-  #   assignment.stubs(:section_assignments).returns [sa1,sa2]
+  #   assignment.stub(:section_assignments).and_return [sa1,sa2]
   #   assignment.section_assignments.count.should == 2
   #   assignment.section_assignments.first.block.should == 'A'
   #   assign(:assignment, assignment)
