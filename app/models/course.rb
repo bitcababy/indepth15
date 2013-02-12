@@ -31,13 +31,13 @@ class Course
 
 	field :ha, as: :has_assignments, type: Boolean, default: true
 	field :ic, as: :in_catalog, type: Boolean, default: true
-	field :de, as: :description, type: String, default: ""
   field :oc, as: :occurrences, type: Array
   field :mt, as: :major_tags, type: Array
   
 	field :_id, type: Integer, default: ->{ number }
   
   track_history except: [:number], track_create: true
+
  	##
 	## Associations
 	##
@@ -88,7 +88,6 @@ class Course
     self.course_documents.create kind: :policies
     self.course_documents.create kind: :information
     self.course_documents.create kind: :description
-    
     self.save!
   end
   
