@@ -328,51 +328,31 @@ class Section
 end
 
 class Assignment
-  include Mongoid::Document
-  before_save :fix_content
-
-	scope :dupes, ->(a) { where(:assgt_id.gt => a.assgt_id, :content => a.content) }
-
-	index( {assgt_id: 1}, {unique: true})
-	scope :with_assgt_id, ->(i) {where(assgt_it: i)}
-
+  before_create :fix_content
+  
 	def self.import_from_hash(hash)
-    # assgt_id = hash[:assgt_id]
-		hash[:content] ||= ""
-    # crit = self.with_assgt_id(assgt_id)
-    # if crit.exists?
-    #   asst = crit.first
-    #   asst.content = hash[:content]
-    #   return asst.save!
-    # else
-			author = Teacher.find_by(login: hash[:teacher_id])
-			raise "Couldn't find teacher #{hash[:teacher_id]}" unless author
-			hash.delete(:teacher_id)
-			return Assignment.create! hash.merge(last_editor: author.to_param)
-    # end
-	end
-
-	def self.massage_content(txt)
-		txt.gsub!(/http:\/\/www\.westonmath\.org/, "")
-		txt.gsub!(/http:\/\/westonmath\.org/, "")
-		txt.gsub!(/\/teachers\//, "/files/")
-		txt.gsub!(/href\s+=\s+'teachers\//, "href='/files/")
-		txt.gsub!(/href\s+=\s+"teachers\//, "href=\"/files/")
-		txt.gsub!(/href\s+=\s+(["'])teachers/, "href=\1/files")
-		return txt
     hash[:oid] = hash[:oid].to_i
+ 		return Assignment.create! hash
 	end
 
 	def fix_content
-		self.content = Assignment.massage_content(self.content)
+		self.content.gsub!(/http:\/\/www\.westonmath\.org/, "")
+		self.content.gsub!(/http:\/\/westonmath\.org/, "")
+		self.content.gsub!(/\/?teachers\//, "/files/")
+		self.content.gsub!(/href\s+=\s+'teachers\//, "href='/files/")
+		self.content.gsub!(/href\s+=\s+"teachers\//, "href=\"/files/")
+		self.content.gsub!(/href\s+=\s+(["'])teachers/, "href=\1/files")
 	end
+
 end
 
 class SectionAssignment
   include Mongoid::Document
 
 	def self.import_from_hash(hash)
-		section,assignment = self.get_sa(hash)
+		section, assignment = self.get_sa(hash)
+    assignment.name = hash.delete(:name)
+    assignment.save
  		hash[:use] = hash[:use] == 'Y'
 		hash[:assignment] = assignment
     hash.delete(:block) # Have to do this or the block delegation won't work
@@ -384,7 +364,6 @@ class SectionAssignment
 		year = hash[:year]
 		course_num = hash.delete(:course_num).to_i
 		block = hash[:block]
-		name = hash[:name]
 		teacher_id = hash.delete(:teacher_id)
 		course = Course.find_by(number: course_num)
 		raise "Course #{course_num} not found" unless course
