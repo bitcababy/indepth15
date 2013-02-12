@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
+  # before_filter :reload_settings
+  
+  def reload_settings
+    Settings.reload
+  end
+
 	# For ajax requests
 	# skip_before_filter :verify_authenticity_token, :only => [:name_of_your_action] 
 	
