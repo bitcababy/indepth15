@@ -30,5 +30,9 @@ class Teacher < User
   def course_names
     return self.courses.map(&:full_name).sort
   end
+  
+  def current_sections
+    return self.sections.current
+  end
 
 end
