@@ -4,8 +4,6 @@ class Assignment < Document
   include Mongoid::TaggableWithContext::AggregationStrategy::RealTime
   
   if ::Settings.bridged
-  	field :assgt_id, type: Integer
-  	validates :assgt_id, uniqueness: true
   	field :oid, type: Integer
   	validates :oid, uniqueness: true
   	index( {oid: 1}, {unique: true})
@@ -13,6 +11,7 @@ class Assignment < Document
   end
   
   field :co, as: :content, type: String, default: ""
+  field :name, type: String, default: ""
   
   # A section_assignment is meaningless if the assignment is deleted
   has_many :section_assignments, dependent: :delete, autosave: true

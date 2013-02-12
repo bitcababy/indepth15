@@ -4,8 +4,7 @@ class SectionAssignment
   include Mongoid::History::Trackable
 
 	field :dd, as: :due_date, type: Date
-	field :na, as: :name, type: String, default: ""
-	field :use, type: Boolean
+	field :use, type: Boolean, default: true
   
   if Settings.bridged
   	field :oi, as: :old_id, type: Integer
@@ -15,7 +14,9 @@ class SectionAssignment
 	
 	belongs_to :section, index: true
 	belongs_to :assignment, index: true
+  
   delegate :content, :content=, to: :assignment
+  delegate :name, to: :assignment
   delegate :block, to: :section
 
 	scope :due_after,	->(date) { gt(due_date: date) }
@@ -26,10 +27,10 @@ class SectionAssignment
 	scope :for_section, ->(s) { where(section: s) }
 	scope :published, -> { where(use: true) }
 
-  track_history version_field: :version, track_create: true
+  track_history track_create: true
 
 	def to_s
-		return "#{self.section}/#{self.assignment.assgt_id}"
+		return "#{self.section}/#{self.assignment.oid}"
 	end
   
   def potential_major_tags
