@@ -1,10 +1,16 @@
-= simple_form_for @assignment do |f|
-	.inputs
-		= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false
-		#section-assignments
-		%table
-			= f.simple_fields_for :section_assignments,@assignment.section_assignments  do |ff|
-				%tr
-					%td= ff.input :block, disabled: true
-					%td= ff.input :due_date, as: :datepicker
-					%td= ff.input :use, as: :check_boxes
+#new_assignment
+	= simple_form_for @assignment do |f|
+		%fieldset
+			.table
+				%span.thead
+					%span.td.block Block
+					%span.td.due_date Due date
+					%span.td.use Use?
+					= f.simple_fields_for :section_assignments, @sas do |ff|
+						%span.tr
+							%span.td.block= ff.input :block, disabled: true, label: false
+							%span.td.due_date= ff.input :due_date, as: :datepicker, label: false, input_html: { size:10, value: ff.object.due_date.strftime("%m/%d/%Y") }
+							%span.td.use= ff.input :use, label: false, as: :boolean
+			= f.input :name, input: { size: 20 }
+			= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false
+		%button.f.submit Save
