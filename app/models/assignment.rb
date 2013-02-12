@@ -6,6 +6,10 @@ class Assignment < Document
   if ::Settings.bridged
   	field :assgt_id, type: Integer
   	validates :assgt_id, uniqueness: true
+  	field :oid, type: Integer
+  	validates :oid, uniqueness: true
+  	index( {oid: 1}, {unique: true})
+  	scope :with_oid, ->(i) {where(oid: i)}
   end
   
   field :co, as: :content, type: String, default: ""
@@ -17,6 +21,6 @@ class Assignment < Document
   taggable :major_tags
   taggable :minor_tags
      
-  track_history except: [:assgt_id], version_field: :version, track_create: true
+  track_history except: [:oid], track_create: true
 
 end

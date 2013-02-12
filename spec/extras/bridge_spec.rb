@@ -4,7 +4,7 @@ describe Bridge do
 
 	context "assignments" do
 		before :each do
-			@hash = { 'assgt_id' => 123, 'content' => "Foo bar" }
+			@hash = { 'oid' => 123, 'content' => "Foo bar" }
 		end
 
 		describe 'Bridge.create_assignment' do
@@ -25,7 +25,7 @@ describe Bridge do
 		
 			it "returns true if the assignment is updated" do
 				Bridge.create_assignment(@hash)
-				Bridge.update_assignment('assgt_id' => 123, 'content' => "quux").should be_true
+				Bridge.update_assignment('oid' => 123, 'content' => "quux").should be_true
 			end
 		end
 	end
@@ -56,7 +56,7 @@ describe Bridge do
 			s.teacher = t
 			a = Fabricate :assignment
 			Fabricate :section_assignment, section: s, assignment: a
-			@hash = {'course_id' => s.course.number, 'teacher_id' => s.teacher_id, 'block' => s.block, 'academic_year' => s.academic_year, 'assgt_id' => a.assgt_id}
+			@hash = {'course_id' => s.course.number, 'teacher_id' => s.teacher_id, 'block' => s.block, 'academic_year' => s.academic_year, 'oid' => a.oid}
 		end
 		
 		it "returns false if the section doesn't exist" do
@@ -69,7 +69,7 @@ describe Bridge do
 			
 	describe "Bridge.delete_assignment" do
 		it "returns false if the assignment doesn't exist" do
-			Bridge.delete_assignment('assgt_id' => 123, 'content' => "Foo bar").should be_false
+			Bridge.delete_assignment('oid' => 123, 'content' => "Foo bar").should be_false
 		end
 		
 		it "returns false if the assignment doesn't exist"

@@ -32,7 +32,7 @@ module Convert
 			'default_room' 		=> :default_room,
 		},
 		::Assignment => {
-			"assgt_id" 							=> :assgt_id,
+			"assgt_id" 							=> :oid,
 			"teacher_id"						=> :teacher_id,
 			"content"								=> :content,
 			},
@@ -52,7 +52,7 @@ module Convert
 				'policies' 				=> :policies,
 				'description'     => :description,
 				'info'           => :information,
-				},
+			},
 		::Section => {
 				"dept_id" => :dept_id,
 				"course_num" => :course_num,
@@ -360,6 +360,7 @@ class Assignment
 		txt.gsub!(/href\s+=\s+"teachers\//, "href=\"/files/")
 		txt.gsub!(/href\s+=\s+(["'])teachers/, "href=\1/files")
 		return txt
+    hash[:oid] = hash[:oid].to_i
 	end
 
 	def fix_content
@@ -391,7 +392,7 @@ class SectionAssignment
 		raise "Course #{teacher_id} not found" unless teacher
 		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
 		raise "Section #{course}/#{block}/#{teacher_id} not found" unless teacher
-		assignment = Assignment.find_by(assgt_id: assgt_id)
+		assignment = Assignment.find_by(oid: assgt_id)
 		return section,assignment
 	end
 end
