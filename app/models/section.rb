@@ -28,7 +28,7 @@ class Section
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
   
-  # field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
+  field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
   
 	has_many :section_assignments do
     def assignments
