@@ -3,6 +3,7 @@ class AssignmentsController < ApplicationController
   # POST assignments.json
   protect_from_forgery except: [:create, :update, :show]
   before_filter :find_assignment, only: [:show, :update, :delete]
+  before_filter :authenticate_user!
   
   def edit
 		respond_to do |format|
