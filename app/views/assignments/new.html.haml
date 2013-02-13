@@ -14,4 +14,15 @@
 							%td.block= ff.input :block, disabled: true, label: false, input_html: {size: 1}
 							%td.due_date= ff.input :due_date, as: :datepicker, label: false, input_html: { size:10, value: ff.object.due_date.strftime("%m/%d/%Y") }
 							%td.use= ff.input :use, label: false, as: :boolean
-		%button.f.submit Save							=ff.input :section, as: :hidden		%button.f.submit Save
+							=ff.input :section, as: :hidden
+			%fieldset#bottom
+				.table
+					%span.tr
+						#tags.td
+							%b="Major tags"
+							= f.input :major_tags, collection: options_for_select(@course.major_tags), input_html: {size: [10, @course.major_tags.count].min, multiple: true}, label: false
+							/ =select 'assignment', "major_tags", options_for_select(@course.major_tags), {size: [10, @course.major_tags.count].min, multiple: true} 
+						#assignment.td
+						.name= f.input :name, input: { size: 20 }
+						.content= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false
+		%button.f.submit Save
