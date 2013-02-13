@@ -2,7 +2,7 @@
 
 class Department
   include Mongoid::Document
-  include Mongoid::Timestamps if Rails.env == 'production'
+  include Mongoid::Timestamps if Rails.env.production?
   
 	field :n, as: :name, type: String
   validates :name, presence: true, length: { minimum: 3 }
