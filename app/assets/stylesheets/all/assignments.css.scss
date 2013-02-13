@@ -36,25 +36,27 @@
 }
 
 
-
 #new_assignment {
 	background: white;
-		.table {
-			padding: 2px;
-			border: 1px solid $dark-blue;
-			margin-bottom: 12px;
-			table-layout: fixed;
-			width: 21.5em;
-		}
-		.thead {
-			padding: 2px;
-			background-color: $dark-blue;
-			color: white;
-		}
-		span.block { 
-			width: 20%;
-			text-align: center;
-		}
-		span.block { width: 5em; }
-		span.due_date {width: 14em;}
+	fieldset#top {
+		margin-bottom: 20px;
+	}
+	fieldset#bottom {
+	}
+	table {
+		padding: 2px;
+		border: 1px solid $dark-blue;
+		margin-bottom: 12px;
+	}
+	thead {
+		padding: 2px;
+		background-color: $dark-blue;
+		color: white;
+	}
+	.block {
+		width: 20%;
+	}
+	.td {
+		vertical-align: top;
+	}
 }
