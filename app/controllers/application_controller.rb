@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
-  # before_filter :reload_settings
+  before_filter :reload_settings
   
   def reload_settings
-    Settings.reload
+    Settings.reload unless Rails.env.test?
   end
 
 	# For ajax requests
