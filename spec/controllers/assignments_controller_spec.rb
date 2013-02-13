@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe AssignmentsController do
+  include DeviseHelpers
+  login_user
+  
   describe "GET 'new'" do
     before :each do
       teacher = Fabricate :teacher, login: "xyzzy"
@@ -34,22 +37,46 @@ describe AssignmentsController do
   end
   
   # {"utf8"=>"✓",
-  #  "authenticity_token"=>"Dg2hSqMqJnqxMxJm8wAwc74Yqk57LYHviLUR8/5ea/s=",
-  #  "assignment"=>{"section_assignments_attributes"=>{"0"=>{"due_date"=>"2013-02-12",
-  #  "use"=>"1"},
-  #  "1"=>{"due_date"=>"2013-02-12",
-  #  "use"=>"1"}},
-  #  "content"=>""}}
-  
-  describe "PUT create" do
-    it "saves the assignment" do
-      put :create, assignment: {"section_assignments_attributes"=>{"0"=>{"due_date"=>"2013-02-12",
-             "use"=>"1"},
-             "1"=>{"due_date"=>"2013-02-12",
-             "use"=>"1"}},
-             "content"=>"Some content"}
+  #  "authenticity_token"=>"DhPaLUa1M8OtPHUYOS3IZ4J0KgXw/WTB+SfDZAxqyus=",
+  #  "assignment"=>{
+  #    "teacher_id"=>"davidsonl",
+  #    "section_assignments_attributes"=>{
+  #      "0"=>{"due_date"=>"2013-02-14", "use"=>"1", "section"=>"2013/321/davidsonl/B"},
+  #      "1"=>{"due_date"=>"2013-02-14", "use"=>"1", "section"=>"2013/321/davidsonl/D"}},
+  #      "major_tags"=>["", "Similarity", "Measurement"],
+  #      "name"=>"",
+  #      "content"=>""
+  #   }
+  # }   
+   describe "PUT create" do
+    before :each do
+      teacher = Fabricate :teacher
+      s1 = Fabricate :section
+      s2 = Fabricate :section
+      @parms = {
+        assignment: {
+          "teacher_id" => teacher.to_param,
+          "section_assignments_attributes"=>{
+          "0"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"B", "section"=>s1.to_param},
+          "1"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"D", "section"=>s2.to_param}
+          },
+          "major_tags"=>["", "Similarity", "Measurement"],
+          "content"=>"Some content",
+          "name" => "foo",
+         }
+       }
+       session[:form] = {}
+       session[:form][:redirect_url] = "/"
     end
-    it "saves the section assignments"
+
+    it "creates the assignment" do
+      expect { put :create, @parms
+      }.to change{ Assignment.count }.by(1)
+    end
+    it "creates the section_assignments" do
+      expect { put :create, @parms
+      }.to change{ SectionAssignment.count }.by(2)
+    end
   end
       
 end

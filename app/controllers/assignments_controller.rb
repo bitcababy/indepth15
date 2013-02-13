@@ -12,10 +12,11 @@ class AssignmentsController < ApplicationController
   end
   
   def new
-    course = Course.find params[:course_id]
+    @course = Course.find params[:course_id]
     teacher = Teacher.find params[:teacher_id]
-    sections = course.sections.current.select {|s| s.teacher == teacher }
+    sections = @course.sections.current.select {|s| s.teacher == teacher }
     @assignment = Assignment.new
+    @assignment.teacher = teacher
     dd = Date.today + 1
     dd += 2 if dd.saturday?
     dd += 1 if dd.sunday?
@@ -24,9 +25,23 @@ class AssignmentsController < ApplicationController
       format.html
     end
   end
-  
+
   def create
+    asst_params = params[:assignment]
+    mjs = asst_params[:major_tags]
+    mjs = mjs ?( mjs.reject {|mj| mj.empty? }) : ""
+    mjs = mjs.join(",")
     
+    teacher = Teacher.find asst_params[:teacher_id]
+    sa_params = asst_params[:section_assignments_attributes]
+    begin
+      asst = teacher.assignments.create name: asst_params[:name], content: asst_params[:content], major_tags: mjs
+      sa_params.values.each do |attrs|
+        section = Section.find attrs[:section]
+        section.section_assignments.create assignment: asst, due_date: attrs[:due_date], use: attrs[:use]
+       end
+    end
+    redirect_to session[:form][:redirect_url]
   end
   
 	# 
