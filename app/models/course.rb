@@ -97,10 +97,9 @@ class Course
 	field :ha, as: :has_assignments, type: Boolean, default: true
 	field :ic, as: :in_catalog, type: Boolean, default: true
   field :oc, as: :occurrences, type: Array
+
 	field :_id, type: Integer, default: ->{ number }
   
-  track_history except: [:number], track_create: true
-
  	##
 	## Associations
 	##
@@ -118,6 +117,9 @@ class Course
 	## Scopes
 	##
 	scope :in_catalog, where(in_catalog: true).asc(:number)
+	default_scope where(in_catalog: true).asc(:number)
+  
+  track_history except: [:number]
   
   def doc_of_kind(k)
     return self.documents.where(kind: k).first
