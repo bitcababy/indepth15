@@ -27,6 +27,7 @@ class SectionAssignment
 	scope :next_assignment, -> { gte(due_date: future_due_date).asc(:due_date).published.limit(1) }
 	scope :for_section, ->(s) { where(section: s) }
 	scope :published, -> { where(use: true) }
+  default_scope where(use: true)
 
   track_history track_create: true
 
