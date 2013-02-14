@@ -187,7 +187,6 @@ class Course
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
 			course = Department.first.courses.create hash
-      course.add_major_tags
       course.documents.create kind: :resources, content: r
       course.documents.create kind: :policies, content: p
       course.documents.create kind: :news, content: n
@@ -282,11 +281,11 @@ class SectionAssignment
 	def self.import_from_hash(hash)
 		section, assignment = self.get_sa(hash)
     assignment.name = hash.delete(:name)
-    assignment.save
+    assignment.save!
  		hash[:use] = hash[:use] == 'Y'
 		hash[:assignment] = assignment
     hash.delete(:block) # Have to do this or the block delegation won't work
-		return section.section_assignments.create! hash
+		section.section_assignments.create! hash
 	end
 	
 	def self.get_sa(hash)
@@ -302,7 +301,6 @@ class SectionAssignment
 		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
 		raise "Section #{course}/#{block}/#{teacher_id} not found" unless teacher
 		assignment = Assignment.find_by(oid: assgt_id)
-		return section,assignment
+		return section, assignment
 	end
 end
-
