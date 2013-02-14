@@ -1,22 +1,17 @@
+CLASSES = %W[department occurrence teacher course section assignment section_assignment]
 
 namespace :convert do
-	task :data => :environment do
-    require Rails.root.join('import/convert')
-    Document.delete_all
-	  Mongoid.unit_of_work(disable: :all) do
-			[Department, Occurrence, Teacher, Course, Section, Assignment, SectionAssignment].each do |klass|
-        puts "Converting #{klass.to_s}"
-				arr = Convert.import_xml_file "#{klass.to_s.tableize}.xml"
-				Convert.from_hashes klass, arr
-			end
-		end
-	end
-  task :dept => :environment do
-    require Rails.root.join('import/convert')
-    arr = Convert.import_xml_file "departments.xml"
-		Convert.from_hashes DepartmentB, arr
+	CLASSES.each do |klass|
+    task klass.downcase.intern => :environment do
+      require Rails.root.join('import/convert')
+      puts "Converting #{klass}"
+  		arr = Convert.import_xml_file "#{klass.tableize}.xml"
+  		Convert.from_hashes klass.camelize.constantize, arr
+    end
   end
-end
+    
+	task :all => CLASSES.collect {|c| c.intern } 
+ end
 
 namespace :update do
 	task :assignments => :environment do
