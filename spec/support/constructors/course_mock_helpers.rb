@@ -40,7 +40,7 @@ module CourseMockHelpers
 	def mock_course(opts={})
 		opts.merge!({number: 321, 
         duration: Course::FULL_YEAR, credits: 5.0, 
-				full_name: "Fractals 101"
+				full_name: "Fractals 101", 
         }) {|key, v1, v2| v1}
     
 		[:description, :policies, :resources, :information, :news].each do |area|
