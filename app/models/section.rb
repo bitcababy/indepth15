@@ -7,15 +7,10 @@ class Section
 
 	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
-	belongs_to :course, index: true
-	belongs_to :teacher, index: true
-
-	field :de, as: :dept, type: Integer
-
 	field :bl, as: :block, type: String
 	validates :block, presence: true, inclusion: {in: Settings.blocks}
 
-	field :rm, as: :room, type: String
+	field :rm, as: :room, type: String, default: ""
 
 	field :se, as: :semester, type: Symbol
 	validates :semester, presence: true, inclusion: {in: SEMESTERS}
@@ -25,10 +20,10 @@ class Section
   
   field :days, type: Array, default: []
   
+  field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
+
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
-  
-  field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
   
 	has_many :section_assignments do
     def assignments
@@ -36,13 +31,17 @@ class Section
     end
   end
 
-  # has_many :assignments, inverse_of: nil
+	belongs_to :course, index: true
+	belongs_to :teacher, index: true
 
 	scope :for_year, ->(y){ where(academic_year: y)}
 	scope :current, ->{ where(academic_year: Settings.academic_year)}
 	scope :for_teacher, ->(t) { where(teacher: t) }
 	scope :for_block, ->(b) { where(block: b) }
 	scope :for_course, ->(c) { where(course: c) }
+  
+  delegate :major_tags, to: :course
+  delegate :department, to: :course
 	
   track_history track_create: true
 
