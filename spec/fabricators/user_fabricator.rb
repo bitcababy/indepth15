@@ -1,19 +1,14 @@
 Fabricator :user do
 	honorific								{ %W(Mr. Mrs. Ms Dr.).sample }
 	first_name							{ %W(John Jane Jake Dan Larry).sample }
-	last_name								{ "Jones" + sequence(:teacher_num, 1).to_s }
+	last_name								{ "jones" + sequence(1).to_s }
 	authentication_token		"user"
-	login										{ |attrs| attrs[:last_name] + attrs[:first_name][0]}
+	login										{ |attrs| attrs[:last_name] + attrs[:first_name][0] unless attrs[:login]}
 	email										{ |attrs| attrs[:login] + "@example.com"}
 	suffix									{ sequence }
   password                'secret'
 end
 
-
-# Fabricate.sequence :first_name, {|i| }
-
-Fabricator :guest, from: :user  do
-end
 
 Fabricator :teacher, from: :user, class_name: :teacher do
 	current									true
@@ -30,12 +25,9 @@ Fabricator :test_teacher, from: :teacher, class_name: :teacher do
 end
 
 Fabricator :test_admin, from: :user, class_name: :admin  do
-	honorific					{ %W(Mr. Mrs. Ms. Dr.).sample }
-	first_name				{ %W(John Jane Jake Dan Larry).sample }
-	last_name					{ %W(Black White Orange Red).sample }
-	current						true
-	login							'test_admin'
+	login							    'test_admin'
 	authentication_token	'test_admin'
+	authentication_token	"admin"
 end
 
 Fabrication::Transform.define(:teacher, lambda { |formal_name|
