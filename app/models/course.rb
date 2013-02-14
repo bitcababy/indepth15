@@ -97,8 +97,6 @@ class Course
 	field :ha, as: :has_assignments, type: Boolean, default: true
 	field :ic, as: :in_catalog, type: Boolean, default: true
   field :oc, as: :occurrences, type: Array
-  field :mt, as: :major_tags, type: Array
-  
 	field :_id, type: Integer, default: ->{ number }
   
   track_history except: [:number], track_create: true
@@ -114,6 +112,7 @@ class Course
 
   embeds_many :documents, class_name: 'CourseDocument'
   belongs_to :department, index: true
+  has_and_belongs_to_many :major_tags
 
 	##
 	## Scopes
