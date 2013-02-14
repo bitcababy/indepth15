@@ -73,7 +73,7 @@ module InDepth
 		  g.fixture_replacement :fabrication
 		end
 
-		config.mongoid.observers = []
+		config.mongoid.observers = [:course_observer, :section_assignment_observer]
     # From http://bibwild.wordpress.com/2011/12/08/jquery-ui-css-and-images-and-rails-asset-pipeline/
     initializer :after_append_asset_paths, group: :all, after: :append_assets_paths do
       config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
