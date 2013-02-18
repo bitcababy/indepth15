@@ -10,15 +10,15 @@
 			%li#assignments
 				%a{href: assignments_pane_section_path(@section), title: 'Assignments'}= "Assignments for #{@course.full_name}, Block #{@section.block}"
 		%li
-			%a{href: show_course_pane_path(@course, :sections), title: 'Sections'} Sections
+			%a{href: get_course_pane_path(@course, :sections), title: 'Sections'} Sections
 		%li
-			%a{href: show_course_pane_path(@course, :information), title: 'Information'} Information
+			%a{href: get_course_pane_path(@course, :information), title: 'Information'} Information
 		%li
-			%a{href: show_course_pane_path(@course, :resources), title: 'Resources'} Resources
+			%a{href: get_course_pane_path(@course, :resources), title: 'Resources'} Resources
 		%li
-			%a{href: show_course_pane_path(@course, :policies), title: 'Policies'} Policies
+			%a{href: get_course_pane_path(@course, :policies), title: 'Policies'} Policies
 		%li
-			%a{href: show_course_pane_path(@course, :news), title: 'News'} News
+			%a{href: get_course_pane_path(@course, :news), title: 'News'} News
 #editor
 
 :coffeescript
