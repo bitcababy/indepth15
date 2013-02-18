@@ -4,6 +4,7 @@ class CoursesController < ApplicationController
 	
 	def home
 		respond_to do |format|
+    remember_current_page
 			format.html { render }
 			format.json { render json: @course}
 		end
