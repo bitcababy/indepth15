@@ -13,12 +13,10 @@ class CourseDocumentsController < ApplicationController
   def update
     # Should this do the redirecting?
     if request.xhr?
-      respond_to do |format|
-        if @doc.update_from_params(params[:course_document])
-          format.html { redirect_to redirect_url, notice: 'Document was saved.' }
-        else
-          format.json { render json: doc.errors, status: :unprocessable_entity }
-        end
+      if @doc.update_from_params(params[:course_document])
+        format.json { render json: stored_page, notice: 'Document was saved.' }
+      else
+        format.json { render json: doc.errors, status: :unprocessable_entity }
       end
     else
       respond_to do |format|
