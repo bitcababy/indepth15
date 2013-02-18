@@ -8,6 +8,13 @@ describe AssignmentsController do
     before :each do
       teacher = Fabricate :teacher, login: "xyzzy"
       course = Fabricate :course
+      @course.major_topics = [
+        Fabricate(:none_topic),
+        Fabricate(:major_topic, name: "Quadratics"), 
+        Fabricate(:major_topic, name: "Functions"), 
+        Fabricate(:major_topic, name: 'Exponents/Logs'),
+        Fabricate(:major_topic, name: 'Systems of Equations'), 
+      ]
       @cs = (0..2).collect {|i| 
         Fabricate :section, teacher: teacher, course: course, academic_year: Settings.academic_year, block: ('A'..'H').to_a[i]
       }
