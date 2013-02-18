@@ -15,10 +15,10 @@ class CoursesController < ApplicationController
     kind = params[:kind]
     if kind == 'sections'
       respond_to do |format|
-        format.html { render partial: "courses/sections_pane", locals: {course: @course }}
+        format.any { render partial: "courses/sections_pane", locals: {course: @course }}
       end
     else
-      pane = @course.doc_of_kind(params[:kind])
+      pane = @course.doc_of_kind kind
       respond_to do |format|
         format.html { render partial: "courses/pane", locals: {pane: pane }}
       end
@@ -71,6 +71,14 @@ class CoursesController < ApplicationController
 	#			end
 	#		end
 	protected
+  
+  def get_section
+    if params[:teacher_id] && params[:teacher_id] && params[:block] && params[:year]
+      return Section.find_by course: @course, teacher: params[:teacher_id], block: params[:block], academic_year: params[:year]
+    else
+      return nil
+    end
+  end
 	
 	def find_course
 		@course = Course.find(params[:id])
