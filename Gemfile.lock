@@ -7,6 +7,13 @@ GIT
       mongoid (~> 3.0)
 
 GIT
+  remote: git://github.com/bitcababy/file_browser.git
+  revision: 450a8c5ddedc63d3240457dc0c591ceac57cc60e
+  specs:
+    file_browser (0.1.4)
+      rails (> 3.1)
+
+GIT
   remote: git://github.com/shamanime/mongoid-data_table.git
   revision: 33ff3c1368e942d45fc7cbdc965c44d919ac13da
   specs:
@@ -385,6 +392,7 @@ DEPENDENCIES
   devise
   email_spec
   fabrication (>= 2.0)
+  file_browser!
   foreman
   google-webfonts
   growl_notify

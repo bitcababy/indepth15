@@ -41,7 +41,7 @@ gem 'mongoid'
 gem 'mongoid-history'
 gem 'mongoid-data_table', :git => 'git://github.com/shamanime/mongoid-data_table.git'
 gem 'mongoid_rails_migrations'
-gem 'mongoid-app_settings'
+# gem 'mongoid-app_settings'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
 gem 'thin'
 gem 'devise'
@@ -53,6 +53,8 @@ gem 'state_machine'
 gem 'state_machine-audit_trail'
 gem 'htmlentities'
 gem 'google-webfonts'
+gem 'mongoid-app_settings'
+
 # Client side validations
 gem 'client_side_validations'
 gem 'client_side_validations-mongoid'
@@ -60,14 +62,20 @@ gem 'client_side_validations-simple_form'
 
 gem 'simple_form'
 gem 'memcache-client'
+
+# Editor-related
+gem 'ckeditor', '~> 4.0.0'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
-gem 'ckeditor', '~> 4.0.0'
+gem 'file_browser', git: 'git://github.com/bitcababy/file_browser.git'
+gem 'cloudfiles' # http://rubydoc.info/gems/cloudfiles/1.5.0.1/frames
+
 gem 'ruby-mysql'
 gem 'tidy_ffi'
 gem 'daemons'
 gem 'pry'
+
 gem 'yard'
 
 # gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
