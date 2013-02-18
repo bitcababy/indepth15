@@ -6,14 +6,15 @@ feature "Logging in" do
   before :each do
     @dept = Fabricate :department_with_docs
     @user = Fabricate :user, login: 'doej', first_name: 'John', last_name: 'Doe', password: 'secret'
-    puts @user.attributes
   end
 
   def open_login_dialog
     visit home_path
     menu = page.first '#usermenu'
+    menu.should_not be_nil
     menu.click
-    signin = menu.first '#sign_in_out'
+    signin = menu.first '#signin'
+    signin.should_not be_nil
     signin.click
   end
   
@@ -22,7 +23,6 @@ feature "Logging in" do
     open_login_dialog
     page.should have_selector('.ui-dialog')
   end
-  
   
   scenario "valid user should be able to sign in", js: true do
     open_login_dialog
@@ -33,6 +33,7 @@ feature "Logging in" do
       fill_in 'Password', with: 'secret'
     end
     click_button 'Sign in'
-    pending
+    # current_user.should_not be_nil
+    pending "unfinished test"
   end
 end
