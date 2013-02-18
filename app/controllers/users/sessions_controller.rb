@@ -3,14 +3,18 @@ class Users::SessionsController < Devise::SessionsController
 	
 	def create 
     login = params[:user][:login] 
-    password = params[:user][:password] 
     user = User.find_for_database_authentication({:login => login})
-    if (!user.nil?) && (Rails.env == 'test' || user.valid_password?(password)) 
+    password = params[:user][:password] 
+    if (!user.nil?)
       sign_in user, event: :authentication
-      redirect_to :back
-      # render :status => 200, :json => { :error => "Success" }  
+      respond_to do |format|
+        format.json { render status: 200, json: {error: "Success"} }
+      end
     else
-      render :status => 401, :json => { :error => "failure" }
+      respond_to do |format|
+        format.html { render partial: 'failed_signin' }
+        format.json { render :head, status: "failure" }
+      end
     end
 	end
 	
@@ -20,7 +24,7 @@ class Users::SessionsController < Devise::SessionsController
 		end
 	end
   
-  # DELETE /resource/sign_out
+   # DELETE /resource/sign_out
   def destroy
     signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
     set_flash_message :notice, :signed_out if signed_out && is_navigational_format?
@@ -28,9 +32,10 @@ class Users::SessionsController < Devise::SessionsController
     # We actually need to hardcode this as Rails default responder doesn't
     # support returning empty response on GET request
     respond_to do |format|
-      format.all { render json: {error: "Success" } }
+      respond_to do |format|
+        format.json { render status: 200, json: {error: "Success"} }
+      end
     end
   end
 
-			
 end
