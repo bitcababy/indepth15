@@ -3,6 +3,6 @@
 	%ul
 		%li#sign_in_out
 			- if user_signed_in?
-				= link_to 'Sign out', destroy_user_session_path, method: :delete, id: 'signout'
+				#signout= link_to 'Sign out', destroy_user_session_path, method: :delete, id: 'signout'
 			- else
-				= link_to 'Sign in', new_user_session_path, method: :get, remote: true, id: 'signin'
+				#signin= link_to 'Sign in', new_user_session_path, method: :get, remote: true, id: 'signin'
