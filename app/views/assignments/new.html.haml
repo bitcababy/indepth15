@@ -1,5 +1,5 @@
 #new_assignment
-	= simple_form_for @assignment do |f|
+	= simple_form_for @assignment, validation: true, remote: true do |f|
 		%fieldset#top
 			= f.input :teacher_id, as: :hidden
 			%table
@@ -16,13 +16,7 @@
 							%td.use= ff.input :use, label: false, as: :boolean
 							=ff.input :section, as: :hidden
 			%fieldset#bottom
-				.table
-					%span.tr
-						#tags.td
-							%b="Major tags"
-							= f.input :major_tags, collection: options_for_select(@course.major_tags), input_html: {size: [10, @course.major_tags.count].min, multiple: true}, label: false
-							/ =select 'assignment', "major_tags", options_for_select(@course.major_tags), {size: [10, @course.major_tags.count].min, multiple: true} 
-						#assignment.td
-						.name= f.input :name, input: { size: 20 }
-						.content= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false
+				.name= f.input :name, input: { size: 20 }, required: true
+				.content= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false, required: true
 		%button.f.submit Save
+
