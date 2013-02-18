@@ -1,7 +1,27 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
   before_filter :reload_settings
+
+  ##
+  # Stuff to store and return to last recorded page
+  ##
+  def remember_current_page
+    flash[:notice] = nil
+    flash[:error] = nil
+    # logger.warn "***#{request.original_fullpath}***"
+    cookies.signed[:last_page] = request.original_fullpath
+  end
   
+  def stored_page
+    cookies[:last_page]
+  end
+  
+  def return_to_last_page(args = {})
+    flash[:notice] = args[:notice]
+    flash[:error] = args[:error]
+    redirect_to stored_page
+  end
+
   def reload_settings
     Settings.reload unless Rails.env.test?
   end
