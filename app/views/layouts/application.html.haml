@@ -13,7 +13,7 @@
 		= csrf_meta_tags
 
 	%body
-		#signinform.nodisplay= render 'shared/signinform'
+		#signinform.nodisplay= render partial: 'users/sessions/signin_form'
 		%header#page_header= content_for?(:page_header) ? (content_for :page_header) : "Fix me!"
 		= render 'menus/menubar'
 		#notice
