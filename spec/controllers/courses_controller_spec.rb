@@ -8,56 +8,29 @@ describe CoursesController do
       end
       Course.stubs(:find).returns course
       get 'home', id: course.to_param
-			assigns[:course].should == course
+			assigns[:course].should eq course
+      response.should be_success
+      response.should render_template('home')
+    end
+    it "sets the section and returns the home page if section params are passed" do
+      Section.stubs(:find_by).returns "bar"
+      Course.stubs(:find).returns "foo"
+      get :home, id: 1, year: 2013, teacher_id: 'doej', block: 'B'
       response.should be_success
       response.should render_template('home')
     end
   end
   
-  describe "GET 'home_with_assignments" do
-    login_user
-    it "sets the section and returns the home page" do
-      Section.stubs(:find_by).returns "bar"
-      Course.stubs(:find).returns "foo"
-      get 'home_with_assignments', id: 1, year: 2013, teacher_id: 'doej', block: 'B'
+  describe '/course/:id/get_pane:kind' do
+    it "returns the contents of a pane" do
+      course = mock('course') do
+        stubs(:to_param).returns 1
+        stubs(:doc_of_kind).returns "foo"
+      end
+      Course.stubs(:find).returns course
+      xhr :get, :get_pane, id: course.to_param, kind: :foo
       response.should be_success
-      response.should render_template('home_with_assignments')
     end
   end
-
-  # describe "GET 'resources_pane'" do
-  #   it "returns http success" do
-  #       get 'resources_pane', id: @course.to_param
-  #     response.should be_success
-  #   end
-  # end
-  # 
-  # describe "GET 'information_pane'" do
-  #   it "returns http success" do
-  #       get 'information_pane', id: @course.to_param
-  #     response.should be_success
-  #   end
-  # end
-  # 
-  # describe "GET 'sections_pane'" do
-  #   it "returns http success" do
-  #       get 'sections_pane', id: @course.to_param
-  #     response.should be_success
-  #   end
-  # end
-  # 
-  # describe "GET 'news_pane'" do
-  #   it "returns http success" do
-  #       get 'news_pane', id: @course.to_param
-  #     response.should be_success
-  #   end
-  # end
-  # 
-  # describe "GET 'policies_pane'" do
-  #   it "returns http success" do
-  #       get 'policies_pane', id: @course.to_param
-  #     response.should be_success
-  #   end
-  # end
-
+      
 end
