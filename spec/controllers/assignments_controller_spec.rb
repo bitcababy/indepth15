@@ -55,7 +55,35 @@ describe AssignmentsController do
   #      "content"=>""
   #   }
   # }   
-   describe "PUT create" do
+  describe "PUT create" do
+    before :each do
+      teacher = Fabricate :teacher
+      s1 = Fabricate :section
+      s2 = Fabricate :section
+      @parms = {
+        assignment: {
+          "teacher_id" => teacher.to_param,
+          "section_assignments_attributes"=>{
+          "0"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"B", "section"=>s1.to_param},
+          "1"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"D", "section"=>s2.to_param}
+          },
+          "content"=>"Some content",
+          "name" => "foo",
+         }
+       }
+    end
+
+    it "creates the assignment" do
+      expect { put :create, @parms }
+      .to change{ Assignment.count }.by(1)
+    end
+    it "creates the section_assignments" do
+      expect { put :create, @parms }
+      .to change{ SectionAssignment.count }.by(2)
+    end
+  end
+
+  describe "PUT create, xhr" do
     before :each do
       teacher = Fabricate :teacher
       s1 = Fabricate :section
