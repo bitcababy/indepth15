@@ -14,7 +14,7 @@ class DepartmentDocumentsController < ApplicationController
     if request.xhr?
       respond_to do |format|
         if @doc.update_from_params(params[:department_document])
-          format.html { redirect_to :back, notice: 'Document was saved.' }
+          format.json { render json: stored_page, status: :success }
         else
           format.json { render json: doc.errors, status: :unprocessable_entity }
         end
@@ -23,7 +23,7 @@ class DepartmentDocumentsController < ApplicationController
       respond_to do |format|
         if @doc.update_from_params(params[:department_document])
           format.json { head :no_content }
-          format.html { redirect_to :back, notice: 'Document was successfully updated.' }
+          format.html { return_to_last_page notice: 'Document was successfully updated.' }
         else
           format.json { render json: doc.errors, status: :unprocessable_entity }
           format.html { render action: "edit", error: 'Invalid parameters' }
@@ -37,4 +37,5 @@ class DepartmentDocumentsController < ApplicationController
     dept = Department.find params[:dept_id]
     @doc = dept.homepage_docs.find params[:id]
   end
+
 end
