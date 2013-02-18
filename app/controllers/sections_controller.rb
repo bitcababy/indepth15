@@ -1,4 +1,5 @@
 class SectionsController < ApplicationController
+  before_filter :authenticate_user!, only: []
 	before_filter :find_section, except: [:assignments]
 
   def assignments_pane
