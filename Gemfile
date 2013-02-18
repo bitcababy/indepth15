@@ -59,7 +59,6 @@ gem 'client_side_validations-mongoid'
 gem 'client_side_validations-simple_form'
 
 gem 'simple_form'
-gem 'cloudfiles'
 gem 'memcache-client'
 gem 'mini_magick'
 gem 'carrierwave'
