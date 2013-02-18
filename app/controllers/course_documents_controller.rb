@@ -1,5 +1,6 @@
 class CourseDocumentsController < ApplicationController
   before_filter :find_doc
+  before_filter :authenticate_user!
 
   def edit
 		respond_to do |format|
@@ -10,10 +11,11 @@ class CourseDocumentsController < ApplicationController
   # PUT text_documents/1
   # PUT text_documents/1.json
   def update
+    # Should this do the redirecting?
     if request.xhr?
       respond_to do |format|
         if @doc.update_from_params(params[:course_document])
-          format.html { redirect_to :back, notice: 'Document was saved.' }
+          format.html { redirect_to redirect_url, notice: 'Document was saved.' }
         else
           format.json { render json: doc.errors, status: :unprocessable_entity }
         end
@@ -22,7 +24,7 @@ class CourseDocumentsController < ApplicationController
       respond_to do |format|
         if @doc.update_from_params(params[:course_document])
           format.json { head :no_content }
-          format.html { redirect_to session[:goto_url], notice: 'Document was successfully updated.' }
+          format.html { return_to_last_page notice: 'Document was successfully updated.' }
         else
           format.json { render json: doc.errors, status: :unprocessable_entity }
           format.html { render action: "edit", error: 'Invalid parameters' }
