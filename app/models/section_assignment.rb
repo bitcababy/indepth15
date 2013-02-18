@@ -18,7 +18,7 @@ class SectionAssignment
   delegate :content, :content=, to: :assignment
   delegate :name, to: :assignment
   delegate :block, to: :section
-  delegate :major_tags, to: :section
+  delegate :major_topics, to: :section
 
 	scope :due_after,	->(date) { gt(due_date: date) }
   scope :due_on, ->(date) { where(due_date: date) }
@@ -35,8 +35,8 @@ class SectionAssignment
 		return "#{self.section}/#{self.assignment.oid}"
 	end
   
-  def potential_major_tags
-    self.course.major_tags
+  def potential_major_topics
+    self.course.major_topics
   end
   
 	def self.upcoming

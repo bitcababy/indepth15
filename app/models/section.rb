@@ -40,7 +40,7 @@ class Section
 	scope :for_block, ->(b) { where(block: b) }
 	scope :for_course, ->(c) { where(course: c) }
   
-  delegate :major_tags, to: :course
+  delegate :major_topics, to: :course
   delegate :department, to: :course
 	
   track_history track_create: true
