@@ -10,7 +10,7 @@ InDepth::Application.routes.draw do
 	##
 	## Resources
 	##
-	resources :teachers, only: [:show]
+	resources :teachers, only: []
     
   resources :section_assignments, only: [:edit, :update]
    
@@ -20,22 +20,29 @@ InDepth::Application.routes.draw do
     end
   end
     
-  get 'courses/:id/pane/:kind', to: 'courses#get_pane', as: :show_course_pane
-  get 'departments/:id/pane/:pos', to: 'departments#get_pane', as: :get_dept_pane
-  # get 'department/:id/pane/:which/edit', to: 'departments#edit_doc', as: :edit_department_doc
-  
-  
   resources :sections, only: [] do
     member do
       get :assignments_pane
     end
   end
+  
+  resources :department, only: [] do
+    member do
+      get :home
+      get :about
+    end
+  end
 
- 	# Unrestful routes
+  resources :assignments, only: [:update, :edit, :create]
 
-	# Temporary routes to deal with old links
-	match 'files/*path', via: :get, controller: :files, action: :pass_on
-	match 'teachers/*path', via: :get, controller: :files, action: :pass_on
+	##
+	## Other
+
+	devise_for :users, controllers: {sessions: 'users/sessions'}
+  
+ 
+  get 'courses/:id/pane/:kind', to: 'courses#get_pane', as: :get_course_pane
+  get 'departments/:id/pane/:pos', to: 'departments#get_pane', as: :get_dept_pane
 
 	get 'xyzzy', controller: :bridge, action: :import
 	
@@ -49,11 +56,11 @@ InDepth::Application.routes.draw do
   get 'courses/:course_id/documents/:id/edit', to: 'course_documents#edit', as: :edit_course_doc
   put 'courses/:course_id/documents/:id', to: 'course_documents#update', as: :update_course_doc
    
-	devise_for :users, controllers: {sessions: 'users/sessions'}
-	  
   get 'courses/:course_id/teachers/:teacher_id/assignments/new', to: 'assignments#new', as: :new_assignment
-  resources :assignments, only: [:update, :edit, :create]
 
+	# Temporary routes to deal with old links
+	match 'files/*path', via: :get, controller: :files, action: :pass_on
+	match 'teachers/*path', via: :get, controller: :files, action: :pass_on
   unless Rails.application.config.consider_all_requests_local
     match '*not_found', to: 'errors#error_404'
   end
