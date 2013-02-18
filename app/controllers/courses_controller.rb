@@ -3,20 +3,14 @@ class CoursesController < ApplicationController
 	before_filter :authenticate_user!, only: []
 	
 	def home
-		respond_to do |format|
     remember_current_page
+    @section = get_section
+ 		respond_to do |format|
 			format.html { render }
 			format.json { render json: @course}
 		end
 	end
 
-  def home_with_assignments
-    @section = Section.find_by course: @course, teacher: params[:teacher_id], block: params[:block], academic_year: params[:year]
-		respond_to do |format|
-			format.html { render }
-		end
-  end
-  
   def get_pane
     kind = params[:kind]
     if kind == 'sections'
