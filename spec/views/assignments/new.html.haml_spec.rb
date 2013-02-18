@@ -4,11 +4,16 @@ describe 'assignments/new' do
   before :each do
     teacher = Fabricate :teacher, login: "xyzzy"
     course = Fabricate :course
+    course.major_topics = [
+      Fabricate(:major_topic, name: "Sequence"),
+      Fabricate(:major_topic, name: "Exponentials"),
+    ]
     sections = (0..2).collect {|i| 
       Fabricate :section, teacher: teacher, course: course, academic_year: Settings.academic_year, block: ('A'..'H').to_a[i]
     }
     assignment = Fabricate.build :assignment
     @sas = sections.collect {|section| Fabricate :section_assignment, section: section}
+    assign(:course, course)
     assign(:assignment, assignment)
     assign(:sas, @sas)
     render
@@ -17,15 +22,14 @@ describe 'assignments/new' do
   it "displays a form" do
     response.should have_selector('form')
   end
-  
+
   it "should have fields for the block, due date, and use of each section assignment" do
     @sas.each do |sa|
       response.should have_selector('input', value: sa.block)
     end
-  end 
-  
-  
-  
+  end
+
+
   # before :each do
   #   section1 = Fabricate :section, block: "A"
   #   section2 = Fabricate :section, block: "B"
