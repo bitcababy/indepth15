@@ -9,7 +9,7 @@ Fabricator(:course) do
 	policies				nil
 	news						nil
   occurrences     [ (1..5).to_a ]
-  major_tags        []
+  major_topics    []
 end
 
 Fabrication::Transform.define(:course, lambda { |number|
