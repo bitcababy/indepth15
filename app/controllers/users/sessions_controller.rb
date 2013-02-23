@@ -4,15 +4,13 @@ class Users::SessionsController < Devise::SessionsController
 	def create 
     login = params[:user][:login] 
     user = User.find_for_database_authentication({:login => login})
-    password = params[:user][:password] 
+    password = params[:user][:password]
     if (!user.nil?)
       sign_in user, event: :authentication
-      respond_to do |format|
-        format.json { render status: 200, json: {error: "Success"} }
-      end
+      redirect_to stored_page
+        # format.json { render json: { goto: stored_page, error: "Success" }, status: :success}
     else
       respond_to do |format|
-        format.html { render partial: 'failed_signin' }
         format.json { render :head, status: "failure" }
       end
     end
@@ -31,11 +29,7 @@ class Users::SessionsController < Devise::SessionsController
 
     # We actually need to hardcode this as Rails default responder doesn't
     # support returning empty response on GET request
-    respond_to do |format|
-      respond_to do |format|
-        format.json { render status: 200, json: {error: "Success"} }
-      end
-    end
+    return_to_last_page
   end
 
 end
