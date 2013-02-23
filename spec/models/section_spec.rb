@@ -10,18 +10,29 @@ describe Section do
 			room: 501,
 			academic_year: Settings.academic_year,
 			semester: Course::FIRST_SEMESTER,
+      course: Fabricate(:course),
+      teacher: Fabricate(:teacher),
 			block: "B"
 		}
 	end
 	
 	it { should belong_to :teacher }
+	it { should belong_to :course }
 	it { should have(0).section_assignments }
+  
+  context "Fabrication" do
+    it "should have a course" do
+      s = Fabricate :section
+      s.course.should_not be_nil
+      s.teacher.should_not be_nil
+    end
+  end
 	
 	context "scopes" do
 		it "should have a 'for_year scope" do
 			2.times { Fabricate :section, academic_year: 2013 }
 			3.times { Fabricate :section, academic_year: 2010 }
-			Section.for_year(2013).count.should == 2
+			Section.for_year(2013).count.should eq 2
 		end
 
 		# it "should have a 'for_course scope'" do
@@ -35,17 +46,17 @@ describe Section do
 		it { should validate_presence_of :semester }
 	end
 	
-	describe 'fabricator' do
-		it "creates a valid section" do
-			teacher = Fabricate :teacher
-			teacher.should_not be_nil
-			section = Fabricate.build :section, block: "E", teacher: teacher
-			section.should be_valid
-			section.teacher.should_not be_nil
-			section.teacher.should == teacher
-			section.course.should_not be_nil
-		end
-	end
+  # describe 'fabricator' do
+  #   it "creates a valid section" do
+  #     teacher = Fabricate :teacher
+  #     teacher.should_not be_nil
+  #     section = Fabricate.build :section, block: "E", teacher: teacher
+  #     section.should be_valid
+  #     section.teacher.should_not be_nil
+  #     section.teacher.should eq teacher
+  #     section.course.should_not be_nil
+  #   end
+  # end
 	
 	describe '#add_assignment(name, asst, due_date)' do
 		it "adds the assignment and due_date to the assignments hash" do
@@ -62,14 +73,14 @@ describe Section do
 			@section = Fabricate :section, valid_attributes
 			3.times {|i| @section.add_assignment "future#{i}", Fabricate(:assignment), future_due_date + i }
 			2.times {|i| @section.add_assignment "past#{i}", Fabricate(:assignment), future_due_date - i - 1 }
-			@section.section_assignments.to_a.count.should == 5
+			@section.section_assignments.to_a.count.should eq 5
 		end
 	
 		it "should be able to return all future or past assignments" do
-			@section.future_assignments.to_a.count.should == 3
-			@section.past_assignments.to_a.count.should == 2
-			@section.current_assignments.to_a.count.should == 1
-			@section.upcoming_assignments.to_a.count.should == 2
+			@section.future_assignments.to_a.count.should eq 3
+			@section.past_assignments.to_a.count.should eq 2
+			@section.current_assignments.to_a.count.should eq 1
+			@section.upcoming_assignments.to_a.count.should eq 2
 		end
 	end
 	
