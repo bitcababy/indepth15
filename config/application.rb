@@ -73,7 +73,7 @@ module InDepth
 		  g.fixture_replacement :fabrication
 		end
 
-    # config.mongoid.observers = [:course_observer, :section_assignment_observer]
+    config.mongoid.observers = [:course_observer, :section_observer, :section_assignment_observer]
     # From http://bibwild.wordpress.com/2011/12/08/jquery-ui-css-and-images-and-rails-asset-pipeline/
     initializer :after_append_asset_paths, group: :all, after: :append_assets_paths do
       config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
@@ -116,9 +116,9 @@ end
 
 class SortedSet 
   def mongoize
-    super
+    self.to_a
   end
-  
+
   class << self
     def demongoize(obj)
       SortedSet.new obj
@@ -127,16 +127,17 @@ class SortedSet
     def mongoize(obj)
       case obj
       when SortedSet then obj.mongoize
+      when Set then obj.mongoize
       else obj
       end
     end
     
-    def evolve(obj)
-      case object
-      when SortedSet then obj.mongoize
-      else obj
-      end
-    end
+    # def evolve(obj)
+    #   case object
+    #   when SortedSet then obj.mongoize
+    #   else obj
+    #   end
+    # end
   end
 end
 
