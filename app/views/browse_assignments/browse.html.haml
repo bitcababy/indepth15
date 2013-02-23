@@ -1,0 +1,61 @@
+%table#sas
+	%thead
+		%tr
+			%th Year
+			%th Course
+			%th Teacher
+			%th Block
+			%th Date due
+			%th Name
+			%th Assignment
+	%tbody
+		= render partial: 'browse_assignmnets/row', collection: @brs
+		
+:coffeescript
+	$(document).ready ->
+		$('#sas').dataTable
+			bjQueryUI: true
+			bPaginate: true
+			bFilter: true
+			iDisplayLength: 20
+			bServerSide: true
+			sAjaxSource: 'retrieve_for_browsing'
+			bSort: true
+			aoColumnDefs:[
+				sName: 'academic_year'
+				aTargets: [0]
+				aDataSort: [0, 1, 2, 3, 4]
+				asSorting: ['desc', 'asc', 'asc', 'asc', 'desc']
+				bSearchable: false
+			,
+				sName: 'course'
+				aTargets: [1]
+				aDataSort: [1, 0, 2, 3, 4]
+				asSorting: ['asc', 'desc', 'asc', 'asc', 'desc']
+				bSearchable: false
+			,
+				sName: 'teacher'
+				aTargets: [2]
+				bSearchable: false
+			,
+				sName: 'block'
+				aTargets: [3]
+				bSearchable: false
+			,
+				sName: 'due_date'
+				aTargets: [4]
+				bSearchable: false
+			,
+				sName: 'name'
+				aTargets: [5]
+				bSearchable: false
+				bSortable: false
+			,
+				sName: 'content'
+				aTargets: [6]
+				bSearchable: true
+				bSortable: false
+			]
+
+	
+		
