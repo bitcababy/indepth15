@@ -1,4 +1,5 @@
 class AssignmentsController < ApplicationController
+  include Utils
  	# POST Assignments
   # POST assignments.json
   protect_from_forgery except: [:create, :update, :show]
@@ -18,10 +19,7 @@ class AssignmentsController < ApplicationController
     @assignment = Assignment.new
     @assignment.teacher = teacher
     @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
-
-    dd = Date.today + 1
-    dd += 2 if dd.saturday?
-    dd += 1 if dd.sunday?
+    dd = next_school_day
     @sas = sections.collect {|s| SectionAssignment.new section: s, assignment: @assignment, due_date: dd}
     respond_to do |format|
       format.html
@@ -41,7 +39,7 @@ class AssignmentsController < ApplicationController
 
       sa_params.values.each do |attrs|
         section = Section.find attrs[:section]
-        section.section_assignments.create assignment: asst, due_date: attrs[:due_date], use: attrs[:use]
+        section.section_assignments.create assignment: asst, due_date: attrs[:due_date], published: attrs[:published]
        end
     end
     redirect_to stored_page || home_path
