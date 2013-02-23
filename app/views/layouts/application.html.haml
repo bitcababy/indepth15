@@ -26,18 +26,18 @@
 
 :coffeescript
 	$(document).ready ->
-		$('#signinform').removeClass('nodisplay').addClass('block-display')
-		$('#signinform').dialog
+		$('#signinform')
+		.removeClass('nodisplay')
+		.addClass('block-display')
+		.dialog
 			autoOpen: false
 			width: 500
 			height: 300
 			modal: true
 			resizable: true
 			buttons: 
-				'Sign in': -> 
-					$('form', '#signinform')[0].submit()
-				'Cancel': ->
-					$('#signinform').dialog "close"
-			
-		$('#signin').bind 'click', (evt) ->
-			$('#signinform').dialog "open"
+				'Sign in': -> $('form', '#signinform').submit()
+				'Cancel': -> 	$('#signinform').dialog "close"
+		$('#signin')
+		.bind( 'click', (evt) ->
+			$('#signinform').dialog "open")
