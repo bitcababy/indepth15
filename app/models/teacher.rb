@@ -13,20 +13,18 @@ class Teacher < User
 	index({current: -1})
   
   has_many :assignments
+  has_many :browser_records, autosave: true
+  # has_and_belongs_to_many :courses
 
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
   
-  has_many :sections do
-    def current
-      @target.select {|s| s.academic_year == Settings.academic_year }
-    end
-  end
+  has_many :sections
 
   def courses
     return self.sections.map(&:course).uniq
   end
-
+  
   def course_names
     return self.courses.map(&:full_name).sort
   end
