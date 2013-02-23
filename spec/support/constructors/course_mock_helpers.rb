@@ -1,5 +1,6 @@
 module CourseMockHelpers
-  
+  include Utils
+
   def mock_and_stub(name, opts)
 		mock name do
       opts.each { |k,v| stubs(k).returns(v) }
@@ -9,6 +10,8 @@ module CourseMockHelpers
 	def mock_teacher(opts={})
     defaults = {
         login: 'doej',
+        first_name: "John",
+        last_name: "Doe",
         formal_name: "Mr. Doe",
         full_name: "John Doe",
         generic_msg: "Generic msg", 
@@ -51,7 +54,7 @@ module CourseMockHelpers
 	end
 
 	def mock_section_assignment(opts={})
-		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20), use: true }) {|key, v1, v2| v1}
+		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20), published: true }) {|key, v1, v2| v1}
 		if opts[:name]
 			opts[:name] = mock_assignment("This is assignment #{opts[:name]}")
 		end
@@ -60,7 +63,9 @@ module CourseMockHelpers
 	end
 	
 	def mock_assignment(txt)
-		mock 'assignment', content: txt
+		mock 'assignment' do
+      stubs(:content).returns txt
+    end
 	end
 	
 	def mock_section_assignments(n=3)
@@ -88,7 +93,7 @@ module CourseMockHelpers
 			name = "1#{i}"
 			asst = mock_assignment "Assignment #{name}"
 			sas << mock_section_assignment(assignment: asst, 
-				due_date: Utils.future_due_date + i, 
+				due_date: future_due_date + i, 
 				name: name,
 				section: the_section
 				)
@@ -100,7 +105,7 @@ module CourseMockHelpers
 			name = "2#{i}"
 			asst = mock_assignment "Assignment #{name}"
 			sas << mock_section_assignment(assignment: asst, 
-				due_date: Utils.future_due_date + i, 
+				due_date: future_due_date + i, 
 				name: name,
 				section: the_section
 				)
@@ -112,7 +117,7 @@ module CourseMockHelpers
 			name = "1#{i}"
 			asst = mock_assignment "Assignment #{name}"
 			sas << mock_section_assignment(assignment: asst, 
-						due_date: Utils.future_due_date - i,
+						due_date: future_due_date - i,
 						name: name,
 						section: @the_section
 						)
@@ -127,13 +132,13 @@ module CourseMockHelpers
 		3.times do |i|
 			name = "2#{i}"
 			asst = mock_assignment "Assignment #{name}"
-			sas << mock_section_assignment(due_date:  Utils.future_due_date + i + 1, name: name, section: section, assignment: asst)
+			sas << mock_section_assignment(due_date:  future_due_date + i + 1, name: name, section: section, assignment: asst)
 		end
 
 		4.times do |i|
 			name = "2#{i}"
 			asst = mock_assignment "Assignment #{name}"
-			sas << mock_section_assignment(due_date:  Utils.future_due_date - i - 1, name: name, section: section, assignment: asst)
+			sas << mock_section_assignment(due_date:  future_due_date - i - 1, name: name, section: section, assignment: asst)
 		end
 
 		return section
