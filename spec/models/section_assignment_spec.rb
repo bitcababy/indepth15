@@ -3,8 +3,17 @@ require 'spec_helper'
 describe SectionAssignment do
 	it { should belong_to :section }
 	it { should belong_to :assignment }
-  # it { should accept_nested_attributes_for :section }
   it { should respond_to :block }
+  
+  context "Fabrication" do
+    it "should have associated records" do
+      sa = Fabricate :section_assignment
+      sa.section.should_not be_nil
+      sa.section.course.should_not be_nil
+      sa.assignment.should_not be_nil
+      sa.assignment.name.should_not be_nil
+    end
+  end
 	
 	context "scoping and delegation" do
 		before :each do
@@ -13,6 +22,14 @@ describe SectionAssignment do
 			4.times {|i| Fabricate :past_section_assignment, section: @section }
 		end
     
+    it "has a 'due_on_or_after', scope" do
+      @section.section_assignments.due_on_or_after(Date.today).to_a.count.should eq 3
+    end
+      
+    it "has a 'due_after' scope" do
+      @section.section_assignments.due_after(Date.today).to_a.count.should eq 3
+    end
+
     it "should be able to get its block from its section" do
       sa = Fabricate :section_assignment, section: @section
       sa.block.should == "B"
@@ -49,5 +66,13 @@ describe SectionAssignment do
       @sa.update_attributes({name: "foo"}).should be_true
     end
   end
+
+  # describe "published validation" do
+  #   it "can't have published set if the assignment's name or contents are empty" do
+  #     asst = Fabricate :assignment, name: "", content: ""
+  #     sa = Fabricate.build :section_assignment, assignment: asst, published: true
+  #     sa.should_not be_valid
+  #   end
+  # end
 
 end
