@@ -5,6 +5,7 @@ namespace :convert do
     task klass.downcase.intern => :environment do
       require Rails.root.join('import/convert')
       puts "Converting #{klass}"
+      BrowserRecord.delete_all
   		arr = Convert.import_xml_file "#{klass.tableize}.xml"
   		Convert.from_hashes klass.camelize.constantize, arr
     end
