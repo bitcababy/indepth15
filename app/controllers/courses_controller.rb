@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
     kind = params[:kind]
     if kind == 'sections'
       respond_to do |format|
-        format.any { render partial: "courses/sections_pane", locals: {course: @course }}
+        format.html { render partial: "courses/sections_pane", locals: {course: @course }}
       end
     else
       pane = @course.doc_of_kind kind
