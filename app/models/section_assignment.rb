@@ -15,6 +15,8 @@ class SectionAssignment
 	belongs_to :section, index: true
 	belongs_to :assignment, index: true
   
+  has_one :browser_record, autosave: true
+ 
   delegate :content, :content=, to: :assignment
   delegate :name, to: :assignment
   delegate :block, to: :section

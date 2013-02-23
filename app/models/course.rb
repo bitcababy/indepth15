@@ -114,6 +114,7 @@ class Course
   embeds_many :documents, class_name: 'CourseDocument'
   belongs_to :department, index: true
   has_and_belongs_to_many :major_topics
+  has_many :browser_records, autosave: true
 
 	##
 	## Scopes

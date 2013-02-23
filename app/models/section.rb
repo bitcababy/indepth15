@@ -31,6 +31,7 @@ class Section
     end
   end
 
+  has_many :browser_records, autosave: true
 	belongs_to :course, index: true
 	belongs_to :teacher, index: true
 

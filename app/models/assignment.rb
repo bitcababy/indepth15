@@ -14,6 +14,7 @@ class Assignment < Document
   
   # A section_assignment is broken if the assignment is deleted
   has_many :section_assignments, dependent: :delete
+  has_many :browser_records
   belongs_to :teacher
   
   has_and_belongs_to_many :major_topics
