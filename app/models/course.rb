@@ -3,7 +3,7 @@ class Course
   include Mongoid::Timestamps
   include Mongoid::History::Trackable
   
-  after_create :add_major_topics
+  # before_create :add_major_topics
   
 	FULL_YEAR = :full_year
 	FULL_YEAR_HALF_TIME = :halftime
@@ -91,10 +91,10 @@ class Course
 	validates :credits, presence: true, numericality: true
 	
 	field :fn, as: :full_name, type: String, default: ""
-	validates :full_name, presence: true
+	validates :full_name, presence: true, length: { minimum: 3 }
 
-	field :sn, as: :short_name, type: String, default: ""
-	field :sc, as: :schedule_name, type: String, default: ""
+	field :sn, as: :short_name, type: String, default: ->{ full_name }
+	field :sc, as: :schedule_name, type: String, default: ->{ full_name }
 
 	field :ha, as: :has_assignments, type: Boolean, default: true
 	field :ic, as: :in_catalog, type: Boolean, default: true
@@ -105,17 +105,15 @@ class Course
  	##
 	## Associations
 	##
-	has_many :sections do
-    def current
-      @target.select {|s| s.academic_year == Settings.academic_year}
-    end
-  end
+	has_many :sections
 
   embeds_many :documents, class_name: 'CourseDocument'
   belongs_to :department, index: true
   has_and_belongs_to_many :major_topics
   has_many :browser_records, autosave: true
 
+  # has_and_belongs_to_many :teachers
+    
 	##
 	## Scopes
 	##
@@ -124,17 +122,23 @@ class Course
   
   track_history except: [:number]
   
+  
+  def branches
+    BRANCH_MAP[self.number].to_a
+  end
+
+  def current_teachers
+    return self.sections.current.map(&:teacher).uniq
+  end
+ 
   def add_major_topics
-    branches = Course::BRANCH_MAP[self.number].to_a
-    tags = (branches.collect {|b| Course::MAJOR_TOPIC_MAP[b]}).flatten
-    tags.uniq!
-    mts = tags.collect { |tag| MajorTopic.find_or_create_by name: tag }
-    mts << MajorTopic.none_topic
+    return unless self.branches
+    topics = (self.branches.collect {|b| MAJOR_TOPIC_MAP[b]}).flatten
+    topics.uniq!
+    mts = topics.collect { |topic| MajorTopic.find_or_create_by name: topic }
     self.major_topics = mts
-    self.save!
   end
     
-  
   def doc_of_kind(k)
     return self.documents.where(kind: k).first
   end
