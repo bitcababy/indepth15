@@ -57,8 +57,8 @@ describe AssignmentsController do
   #  "assignment"=>{
   #    "teacher_id"=>"davidsonl",
   #    "section_assignments_attributes"=>{
-  #      "0"=>{"due_date"=>"2013-02-14", "use"=>"1", "section"=>"2013/321/davidsonl/B"},
-  #      "1"=>{"due_date"=>"2013-02-14", "use"=>"1", "section"=>"2013/321/davidsonl/D"}},
+  #      "0"=>{"due_date"=>"2013-02-14", "published"=>"1", "section"=>"2013/321/davidsonl/B"},
+  #      "1"=>{"due_date"=>"2013-02-14", "published"=>"1", "section"=>"2013/321/davidsonl/D"}},
   #      "major_topics"=>["", "Similarity", "Measurement"],
   #      "name"=>"",
   #      "content"=>""
@@ -73,8 +73,8 @@ describe AssignmentsController do
         assignment: {
           "teacher_id" => teacher.to_param,
           "section_assignments_attributes"=>{
-          "0"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"B", "section"=>s1.to_param},
-          "1"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"D", "section"=>s2.to_param}
+          "0"=>{"due_date"=>"2013-02-12", "published"=>"1", "block"=>"B", "section"=>s1.to_param},
+          "1"=>{"due_date"=>"2013-02-12", "published"=>"1", "block"=>"D", "section"=>s2.to_param}
           },
           "content"=>"Some content",
           "name" => "foo",
@@ -101,8 +101,8 @@ describe AssignmentsController do
         assignment: {
           "teacher_id" => teacher.to_param,
           "section_assignments_attributes"=>{
-          "0"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"B", "section"=>s1.to_param},
-          "1"=>{"due_date"=>"2013-02-12", "use"=>"1", "block"=>"D", "section"=>s2.to_param}
+          "0"=>{"due_date"=>"2013-02-12", "published"=>"1", "block"=>"B", "section"=>s1.to_param},
+          "1"=>{"due_date"=>"2013-02-12", "published"=>"1", "block"=>"D", "section"=>s2.to_param}
           },
           "content"=>"Some content",
           "name" => "foo",
