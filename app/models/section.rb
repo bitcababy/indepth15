@@ -2,18 +2,18 @@
 
 class Section
 	include Mongoid::Document
-  include Mongoid::Timestamps if Rails.env == 'production'
+  include Mongoid::Timestamps
   include Mongoid::History::Trackable
 
 	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
 
 	field :bl, as: :block, type: String
-	validates :block, presence: true, inclusion: {in: Settings.blocks}
+	validates :block, presence: true, inclusion: { in: Settings.blocks }
 
 	field :rm, as: :room, type: String, default: ""
 
 	field :se, as: :semester, type: Symbol
-	validates :semester, presence: true, inclusion: {in: SEMESTERS}
+	validates :semester, presence: true, inclusion: { in: SEMESTERS }
 
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	validates :academic_year, presence: true, numericality: true
@@ -25,23 +25,19 @@ class Section
 	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
   
-	has_many :section_assignments do
-    def assignments
-      @target.map( &:assignment).uniq
-    end
-  end
-
+	has_many :section_assignments
   has_many :browser_records, autosave: true
 	belongs_to :course, index: true
 	belongs_to :teacher, index: true
 
-	scope :for_year, ->(y){ where(academic_year: y)}
-	scope :current, ->{ where(academic_year: Settings.academic_year)}
-	scope :for_teacher, ->(t) { where(teacher: t) }
-	scope :for_block, ->(b) { where(block: b) }
-	scope :for_course, ->(c) { where(course: c) }
+  scope :current, ->{ where(academic_year: Settings.academic_year) }
+
+  scope :for_year, ->(y){ where(academic_year: y)}
+  scope :for_teacher, ->(t){ where(teacher: t) }
+  scope :for_block, ->(b){ where(block: b) }
+  scope :for_course, ->(c){ where(course: c) }
   
-  delegate :major_topics, to: :course
+  # delegate :major_topics, to: :course
   delegate :department, to: :course
 	
   track_history track_create: true
@@ -79,8 +75,8 @@ class Section
 		n ? ret.limit(n) : ret
 	end
 	
-	def add_assignment(name, asst, due_date, use=true)
-		return self.section_assignments.create! name: name, due_date: due_date, assignment: asst, use: use
+	def add_assignment(name, asst, due_date, published=true)
+		return self.section_assignments.create! name: name, due_date: due_date, assignment: asst, published: published
 	end
 	
 	def page_header
