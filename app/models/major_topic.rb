@@ -2,11 +2,11 @@ class MajorTopic
   include Mongoid::Document
   field :n, as: :name, type: String, default: ""
   validate :name, uniqueness: true, size: { minimum: 3 }
-  field :s, as: :subtopics, type: Set, default: Set.new
+  field :s, as: :subtopics, type: SortedSet, default: SortedSet.new
   field :_id, type: String, default: ->{ name }
  
-  has_and_belongs_to_many :assignments
-  has_and_belongs_to_many :courses
+  # has_and_belongs_to_many :assignments
+  # has_and_belongs_to_many :courses
   
   cattr_reader :none_topic
   
