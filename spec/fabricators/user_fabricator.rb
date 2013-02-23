@@ -5,7 +5,6 @@ Fabricator :user do
 	authentication_token		"user"
 	login										{ |attrs| attrs[:last_name] + attrs[:first_name][0] unless attrs[:login]}
 	email										{ |attrs| attrs[:login] + "@example.com"}
-	suffix									{ sequence }
   password                'secret'
 end
 
