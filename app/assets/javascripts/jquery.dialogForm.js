@@ -54,6 +54,7 @@
 
 		this.handleSaveResponse = function(status, data, errorMsg, jqxhr) {
 	    if (status === "success") {
+				console.dir(data);
 				var form = $('form', this)[0];
 				var url = form.action;
 				$(this).attr('url', form.action);
@@ -74,14 +75,15 @@
 	    var settings = this.data(dataKey);
 			var form = $('form', this)[0];
 			$('#' + settings.ckid, form).val(CKEDITOR.instances[settings.ckid].getData());
-			var data = $(form).serialize();
+			var formdata = $(form).serialize();
 			var $this = this;
 	    $.ajax({
 	      type: settings.method,
 	      url: form.action,
         dataType: 'json',
-        data: data,
+        data: formdata,
         success: function(data, status, jqxhr) {
+					console.dir(data);
           $this.handleSaveResponse(status, data, null, jqxhr);
         },
         error: function(jqxhr, status, errorMsg) {
