@@ -2,6 +2,7 @@
 require 'xmlsimple'
 
 module Convert
+
 	MAPPINGS = {
     ::Occurrence =>   {
       'block_name' => :block,
@@ -70,7 +71,7 @@ module Convert
 			"course_num" 			=> :course_num,
 			"block" 					=> :block,
 			"assgt_id" 				=> :assgt_id,
-			"use_assgt" 			=> :use,
+			"use_assgt" 			=> :published,
 			"due_date" 				=> :due_date,
 			"name"						=> :name
 		},
@@ -239,18 +240,19 @@ class Section
 		course = Course.find_by(number: course_number)
 		hash[:course] = course
 		
-		[:course_num, :semesters].each {|k| hash.delete(k)}
-
 		teacher = Teacher.find_by login: teacher_id
+    teacher.courses << course
+    teacher.save!
 
 		hash[:teacher] = teacher
-		section = course.sections.create!(hash)
+		section = course.sections.build(hash)
   
 		occurrences = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
 		for occ in occurrences
       section.days << Occurrence.find_by(block: section.block, number: occ).day
 		end
     section.days.sort!
+
     section.save!
 		return section
 	end
@@ -282,12 +284,13 @@ class SectionAssignment
 		section, assignment = self.get_sa(hash)
     assignment.name = hash.delete(:name)
     assignment.save!
- 		hash[:use] = hash[:use] == 'Y'
+ 		hash[:published] = hash[:published] == 'Y'
+    hash[:published] = false if assignment.content.empty? && assignment.name.empty?
 		hash[:assignment] = assignment
     hash.delete(:block) # Have to do this or the block delegation won't work
 		section.section_assignments.create! hash
 	end
-	
+
 	def self.get_sa(hash)
 		assgt_id = hash.delete(:assgt_id)
 		year = hash[:year]
