@@ -8,10 +8,10 @@ class ApplicationController < ActionController::Base
   def remember_current_page
     flash[:notice] = nil
     flash[:error] = nil
-    # logger.warn "***#{request.original_fullpath}***"
-    cookies.signed[:last_page] = request.original_fullpath
+    cookies[:last_page] = request.original_fullpath
   end
-  
+
+  helper_method :stored_page
   def stored_page
     cookies[:last_page]
   end
