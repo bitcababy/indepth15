@@ -18,7 +18,7 @@ class Section
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	validates :academic_year, presence: true, numericality: true
   
-  field :days, type: Array, default: []
+  field :days, type: Array, default: (1..5).to_a
   
   field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
 
