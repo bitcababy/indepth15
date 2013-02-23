@@ -2,34 +2,51 @@ class SectionAssignment
 	include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::History::Trackable
-
+  
 	field :dd, as: :due_date, type: Date
-	field :use, type: Boolean, default: true
+	field :published, type: Boolean, default: false
   
   if Settings.bridged
   	field :oi, as: :old_id, type: Integer
   end
 
-	index({due_date: -1, use: 1})
+	index({due_date: -1, published: 1})
 	
-	belongs_to :section, index: true
-	belongs_to :assignment, index: true
+	belongs_to :section
+	belongs_to :assignment
   
   has_one :browser_record, autosave: true
  
   delegate :content, :content=, to: :assignment
   delegate :name, to: :assignment
-  delegate :block, to: :section
   delegate :major_topics, to: :section
+  delegate :course, to: :section
+  delegate :block, to: :section
+  delegate :content, to: :assignment
 
-	scope :due_after,	->(date) { gt(due_date: date) }
+  scope :due_after,  ->(date) { gt(due_date: date) }
+  scope :due_on_or_after,  ->(date) { gte(due_date: date) }
   scope :due_on, ->(date) { where(due_date: date) }
-	scope :past, -> { lt(due_date: future_due_date) }
-	scope :future, -> { gte(due_date: future_due_date) }
-	scope :next_assignment, -> { gte(due_date: future_due_date).asc(:due_date).published.limit(1) }
-	scope :for_section, ->(s) { where(section: s) }
-	scope :published, -> { where(use: true) }
-  default_scope where(use: true)
+  scope :due_before, ->(date) { lt(due_date: date) }
+  scope :published, -> { where(published: true) }
+  scope :for_section, ->(s) { where(section: s) }
+    
+  scope :past, -> { due_before(future_due_date).published }
+  scope :future, -> { due_on_or_after(future_due_date ).published }
+  scope :next_assignment, -> { due_on_or_after(future_due_date).published.asc(:due_date).limit(1) }
+      
+  validate do |sa|
+    errors.add(:base, 'SectionAssignment must have course') unless sa.course
+    errors.add(:base, 'SectionAssignment must have assignment') unless sa.assignment
+  end
+  
+  after_create do |sa|
+    BrowserRecord.create_from_sa(sa)
+  end
+  
+  # validate do |sa|
+  #   errors.add(:base, 'Assignment must have name and content to be used') unless sa.assignment.name.size > 0 && sa.assignment.content.size > 0
+  # end
 
   track_history track_create: true
 
