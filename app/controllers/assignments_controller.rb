@@ -20,9 +20,9 @@ class AssignmentsController < ApplicationController
     @assignment.teacher = teacher
     # @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
     dd = next_school_day
-    @sas = sections.collect {|s| SectionAssignment.new section: s, assignment: @assignment, due_date: dd}
+    sections.each {|s| @assignment.section_assignments.new section: s, due_date: dd}
     respond_to do |format|
-      format.html
+      format.html { render layout: !request.xhr?}
     end
   end
 
