@@ -1,2 +1,0 @@
-Fabricator(:setting) do
-end
