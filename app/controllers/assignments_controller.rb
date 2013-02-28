@@ -18,7 +18,7 @@ class AssignmentsController < ApplicationController
     sections = course.sections.current.select {|s| s.teacher == teacher }
     @assignment = Assignment.new
     @assignment.teacher = teacher
-    @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
+    # @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
     dd = next_school_day
     @sas = sections.collect {|s| SectionAssignment.new section: s, assignment: @assignment, due_date: dd}
     respond_to do |format|

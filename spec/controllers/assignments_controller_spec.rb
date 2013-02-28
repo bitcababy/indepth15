@@ -45,6 +45,11 @@ describe AssignmentsController do
       names = MajorTopic.names_for_topics(assigns[:major_topics])
       assigns[:major_topics].should == names
     end
+    # it "should assign all of topic names to @major_topics" do
+    #   assigns[:major_topics].should be_kind_of Array
+    #   names = MajorTopic.names_for_topics(assigns[:major_topics])
+    #   assigns[:major_topics].should == names
+    # end
     
     it "should render the 'new' template" do
       response.should render_template :new
