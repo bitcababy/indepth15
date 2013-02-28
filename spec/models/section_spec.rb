@@ -35,10 +35,15 @@ describe Section do
 			Section.for_year(2013).count.should eq 2
 		end
 
-		# it "should have a 'for_course scope'" do
-		# 	course = Fabricate :course
+    it "should have a 'for_semester' scope" do
+			5.times { Fabricate :section, academic_year: 2013, semesters: Course::FULL_YEAR }
+			2.times { Fabricate :section, academic_year: 2013, semesters: Course::FIRST_SEMESTER }
+			3.times { Fabricate :section, academic_year: 2013, semesters: Course::SECOND_SEMESTER }
+      Section.for_first_semester.count.should eq 7
+      Section.for_semester(Course::FIRST_SEMESTER).count.should eq 7
+    end
 			
-	end
+	end # Scopes
 		
 	context "validation" do
 		it { should validate_presence_of :block }
