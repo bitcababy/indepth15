@@ -232,7 +232,8 @@ class Section
 		return if year < Settings.start_year
 
 		occurrences = hash.delete(:which_occurrences)
-		hash[:semester] = (hash.delete(:semesters) == 2) ? Course::SECOND_SEMESTER : Course::FIRST_SEMESTER
+      
+		hash[:semesters] = (hash[:semesters] == 2) ? Course::SECOND_SEMESTER : Course::FIRST_SEMESTER
 		teacher_id = hash.delete(:teacher_id)
 		hash[:room] = hash[:room].to_s
 		

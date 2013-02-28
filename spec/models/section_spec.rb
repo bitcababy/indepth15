@@ -9,7 +9,7 @@ describe Section do
 		{
 			room: 501,
 			academic_year: Settings.academic_year,
-			semester: Course::FIRST_SEMESTER,
+			semesters: Course::FIRST_SEMESTER,
       course: Fabricate(:course),
       teacher: Fabricate(:teacher),
 			block: "B"
@@ -43,7 +43,7 @@ describe Section do
 	context "validation" do
 		it { should validate_presence_of :block }
 		it { should validate_presence_of :academic_year }
-		it { should validate_presence_of :semester }
+		it { should validate_presence_of :semesters }
 	end
 	
   # describe 'fabricator' do

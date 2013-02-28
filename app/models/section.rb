@@ -5,15 +5,13 @@ class Section
   include Mongoid::Timestamps
   include Mongoid::History::Trackable
 
-	SEMESTERS = [Course::FIRST_SEMESTER, Course::SECOND_SEMESTER]
-
 	field :bl, as: :block, type: String
 	validates :block, presence: true, inclusion: { in: Settings.blocks }
 
 	field :rm, as: :room, type: String, default: ""
 
-	field :se, as: :semester, type: Symbol
-	validates :semester, presence: true, inclusion: { in: SEMESTERS }
+	field :se, as: :semesters, type: Symbol
+	validates :semesters, presence: true, inclusion: { in: Course::DURATIONS }
 
 	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
 	validates :academic_year, presence: true, numericality: true
@@ -22,7 +20,7 @@ class Section
   
   field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
 
-	index({ academic_year: -1, semester: 1, block: 1 }, { name: 'ysb' } )
+	index({ academic_year: -1, semesters: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
   
 	has_many :section_assignments

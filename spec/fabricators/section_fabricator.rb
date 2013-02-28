@@ -1,6 +1,6 @@
 Fabricator(:section) do
 	academic_year	{ |attrs| attrs[:academic_year] || Settings.academic_year }
-	semester			{ Section::SEMESTERS.sample }
+	semesters			{ Course::DURATIONS.sample }
 	block					{ |attrs| attrs[:block] || sequence(:block) {|i| Settings.blocks[i%Settings.blocks.length]} }
   room          { sequence(:room) {|i| "Room #{i}"} }
   section_assignments []
