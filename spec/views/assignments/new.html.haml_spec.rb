@@ -24,6 +24,7 @@ describe 'assignments/new' do
   end
 
   it "should have fields for the block, due date, and published status of each section assignment" do
+    pending "unfinished test"
     @sas.each do |sa|
       response.should have_selector('input', value: sa.block)
     end
