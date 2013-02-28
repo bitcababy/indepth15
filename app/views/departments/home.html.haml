@@ -12,13 +12,11 @@
 
 		editor = $("#editor")
 		editor.setupAccordionEditor = (accDiv) ->
-			that = this
 			this.dialogForm 'init'
 				width: 700
 				height: 600
 				ckid: 'department_document_content'
 			
-			this.dialogForm 'bindLinks', $('.edit-button')
 			this.on 'savedAndClosed', ->
 				pn = accDiv.accordion "option", "active"
 				$.get "/departments/1/pane/" + pn, (data, textStatus, jqxhr) ->
@@ -29,5 +27,5 @@
 				, 'json'
 				accDiv.accordion "refresh"
 
-		editor.setupAccordionEditor $("#home-page")
+		$('.edit-button').on 'click', -> editor.setupAccordionEditor $("#home-page")
 		
