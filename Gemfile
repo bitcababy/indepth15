@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'rails', '>= 3.2.6'
 
@@ -41,7 +41,7 @@ gem 'mongoid'
 gem 'mongoid-history'
 gem 'mongoid-data_table', :git => 'git://github.com/shamanime/mongoid-data_table.git'
 gem 'mongoid_rails_migrations'
-# gem 'mongoid-app_settings'
+gem 'mongoid-app_settings'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
 gem 'thin'
 gem 'devise'
@@ -49,11 +49,10 @@ gem 'haml'
 gem 'bson_ext'
 gem 'delayed_job'
 gem 'xml-simple'
-gem 'state_machine'
-gem 'state_machine-audit_trail'
+# gem 'state_machine'
+# gem 'state_machine-audit_trail'
 gem 'htmlentities'
 gem 'google-webfonts'
-gem 'mongoid-app_settings'
 
 # Client side validations
 gem 'client_side_validations'
@@ -111,7 +110,7 @@ group :test do
   gem 'rspec-html-matchers'
   gem 'rspec-given'
 
-	gem 'nokogiri', '= 1.5.2'
+  # gem 'nokogiri', '= 1.5.2'
 	gem 'capybara'
 	gem 'database_cleaner'
   gem 'capybara-webkit'
@@ -119,7 +118,6 @@ group :test do
 	gem 'simplecov', :require => false
   gem 'simplecov-rcov', :require => false
 	gem 'email_spec'
-	gem 'webrat'
   gem 'websocket'
 	# Warden stuff
 	gem 'warden'
