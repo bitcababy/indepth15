@@ -36,6 +36,9 @@ class Section
   scope :for_teacher, ->(t){ where(teacher: t) }
   scope :for_block, ->(b){ where(block: b) }
   scope :for_course, ->(c){ where(course: c) }
+  scope :for_first_semester, ->{  any_in(semesters: [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::FIRST_SEMESTER]) }
+  scope :for_second_semester, ->{  any_in(semesters: [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::SECOND_SEMESTER]) }
+  scope :for_semester, ->(s){ (s == Course::FIRST_SEMESTER) ? for_first_semester : for_second_semester }
   
   # delegate :major_topics, to: :course
   delegate :department, to: :course
