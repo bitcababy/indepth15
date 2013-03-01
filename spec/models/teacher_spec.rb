@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Teacher do
 	it { should have_many(:sections) }
+  it { should embed_many :asst_numbers }
 		
 	# context "scopes" do
 	# 	it "should return current teachers" do
@@ -35,11 +36,18 @@ describe Teacher do
 				@teacher.course_names.should == ["Fractals", "Geometry Honors"]
 			end
 		end
+    
+    describe '#update_number_for_course' do
+      it "updates the asst_number for its course" do
+        t = Fabricate :teacher
+        c = Fabricate :course, number: 42
+        t.update_number_for_course(c, 2)
+        t.asst_numbers.where(course: c).should exist
+        t.asst_numbers.find_by(course: c).number.should eq 2
+      end
+    end
 			
-
 	end
-			
-			
 	
 	context "Fabrication testing" do
 		it "should accept a login override" do
@@ -47,6 +55,7 @@ describe Teacher do
 			Teacher.where(login: 'greenx' ).should exist
 		end
 	end
+  
 	
 	
 end
