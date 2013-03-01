@@ -17,12 +17,8 @@ class SectionAssignment
   
   has_one :browser_record, autosave: true
  
-  delegate :content, :content=, to: :assignment
-  delegate :name, to: :assignment
-  delegate :major_topics, to: :section
-  delegate :course, to: :section
-  delegate :block, to: :section
-  delegate :content, to: :assignment
+  delegate :name, :content, :content=, to: :assignment
+  delegate :course, :teacher, :block, :major_topics, to: :section
 
   scope :due_after,  ->(date) { gt(due_date: date) }
   scope :due_on_or_after,  ->(date) { gte(due_date: date) }
