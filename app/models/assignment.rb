@@ -8,8 +8,8 @@ class Assignment < Document
   	scope :with_oid, ->(i) {where(oid: i)}
   end
   
+  field :n, as: :name, type: String, default: ""
   field :co, as: :content, type: String, default: ""
-  field :name, type: String, default: ""
   field :mit, as: :minor_topics, type: SortedSet, default: SortedSet.new
   
   # A section_assignment is broken if the assignment is deleted
@@ -22,6 +22,8 @@ class Assignment < Document
   accepts_nested_attributes_for :section_assignments
 
   track_history except: [:oid], track_create: true
+  
+  index({name: -1})
   
   def add_major_topics(tags=[])
     for tag in tags do
