@@ -1,26 +1,11 @@
-#new_assignment
-	= simple_form_for @assignment, validation: true, remote: true do |f|
-		%fieldset#top
-			= f.input :teacher_id, as: :hidden
-			%table#sas
-				%thead
-					%tr
-						%th.block Block
-						%th.due_date Due date
-						%th.use Use?
-				%tbody
-					= f.simple_fields_for :section_assignments, @sas do |ff|
-						%tr
-							%td.block= ff.input :block, disabled: true, label: false, input_html: {size: 1}
-							%td.due_date= ff.input :due_date, as: :datepicker, label: false, input_html: { size:10, value: ff.object.due_date.strftime("%m/%d/%Y") }
-							%td.published= ff.input :published, label: false, as: :boolean
-							=ff.input :section, as: :hidden
-			%fieldset#bottom
-				.name= f.input :name, input: { size: 20 }, required: true
-				.content= f.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false, required: true
-		%button.save= f.submit "Create"
-		%button.cancel= f.submit "Cancel"
+#new_assignment.ui-widget.ui-corner-all
+	.ui-widget-header= "New assignment"
+	.ui-widget-content
+		= render partial: 'assignments/form', as: :assignment, object: @assignment
 
 :coffeescript
 	$(document).ready ->
-		
+		$(".save").button
+			label: "Create"
+		$(".cancel").button
+			label: "Cancel"
