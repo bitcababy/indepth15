@@ -1,10 +1,8 @@
 class AssignmentsController < ApplicationController
   include Utils
- 	# POST Assignments
-  # POST assignments.json
   protect_from_forgery except: [:create, :update, :show]
-  before_filter :find_assignment, only: [:show, :update, :delete]
   before_filter :authenticate_user!
+  before_filter :find_assignment, only: [:show, :update, :delete]
   
   def edit
 		respond_to do |format|
@@ -28,14 +26,10 @@ class AssignmentsController < ApplicationController
 
   def create
     asst_params = params[:assignment]
-    # mjs = asst_params[:major_topics]
-    # mjs = mjs ?( mjs.reject {|mj| mj.empty? }) : ""
-    
     teacher = Teacher.find asst_params[:teacher_id]
     sa_params = asst_params[:section_assignments_attributes]
     begin
       asst = teacher.assignments.create name: asst_params[:name], content: asst_params[:content]
-      # asst.add_major_topics(mjs)
 
       sa_params.values.each do |attrs|
         section = Section.find attrs[:section]
