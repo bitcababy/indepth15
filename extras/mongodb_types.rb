@@ -1,0 +1,20 @@
+module MongodbTypes
+  DOUBLE = 1
+  STRING = 2
+  OBJECT = 3
+  ARRAY = 4
+  BINARY = 5
+  OBJECT_IT = 7
+  BOOLEAN = 8
+  DATE = 9
+  NULL = 10
+  REGEX = 11
+  JS = 13
+  SYMBOL = 14
+  JS_WITHSCOPE = 15
+  INTEGER32 = 16
+  TIMESTAMP = 17
+  INTEGER64 = 18
+  MIN_KEY = 255
+  MAX_KEY = 127
+   
