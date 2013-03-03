@@ -1,10 +1,10 @@
 class SectionObserver < Mongoid::Observer
 
- 	# def after_initialize(obj)
- 	# 	(1..Settings.max_occurrences).each do |i|
- 	# 		obj.occurrences.find_or_initialize_by(number: i, block: obj.block)
- 	# 	end
- 	# 	return obj
- 	# end
+  def after_create(s)
+    unless s.teacher.courses.include? s.course
+      s.teacher.courses << s.course
+      s.save
+    end
+  end
  
 end
