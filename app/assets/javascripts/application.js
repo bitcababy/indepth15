@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ckeditor/init
+//= require jquery-ui-1.10.0.custom
 //= require rails.validations
 //= require rails.validations.simple_form
+//= require ckeditor/init
 //= require_tree .
