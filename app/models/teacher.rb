@@ -13,6 +13,7 @@ class Teacher < User
 	index({current: -1})
   
   has_many :assignments
+  has_and_belongs_to_many :courses
 
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
