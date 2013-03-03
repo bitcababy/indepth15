@@ -8,7 +8,7 @@ class Assignment < Document
   	scope :with_oid, ->(i) {where(oid: i)}
   end
   
-  field :n, as: :name, type: String, default: ""
+  field :n, as: :name
   field :co, as: :content, type: String, default: ""
   field :mit, as: :minor_topics, type: SortedSet, default: SortedSet.new
   
