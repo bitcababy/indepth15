@@ -5,35 +5,41 @@ class SectionAssignment
   
 	field :dd, as: :due_date, type: Date
 	field :assigned, type: Boolean, default: false
+  field :bl, as: :block, type: String
+  field :ay, as: :academic_year, type: Integer
   
-  if Settings.bridged
-  	field :oi, as: :old_id, type: Integer
-  end
-
 	index({due_date: -1, assigned: 1})
 	
 	belongs_to :section
 	belongs_to :assignment
+  belongs_to :course, index: true
+  belongs_to :teacher, index: true
   
   delegate :name, :content, :content=, to: :assignment
-  delegate :course, :teacher, :block, :major_topics, to: :section
 
-  scope :due_after,  ->(date) { gt(due_date: date) }
-  scope :due_on_or_after,  ->(date) { gte(due_date: date) }
-  scope :due_on, ->(date) { where(due_date: date) }
-  scope :due_before, ->(date) { lt(due_date: date) }
-  scope :for_section, ->(s) { where(section: s) }
+  scope :due_after,         ->(date){ gt(due_date: date) }
+  scope :due_on_or_after,   ->(date) { gte(due_date: date) }
+  scope :due_on,            ->(date){ where(due_date: date) }
+  scope :due_before,        ->(date) { lt(due_date: date) }
   scope :assigned,          -> { where(assigned: true) }
+  scope :past,              -> { due_before(future_due_date).assigned }
+  scope :future,            -> { due_on_or_after(future_due_date ).assigned }
+  scope :next_assignment,   -> { due_on_or_after(future_due_date).assigned.asc(:due_date).limit(1) }
     
-  scope :past, -> { due_before(future_due_date).published }
-  scope :future, -> { due_on_or_after(future_due_date ).published }
-  scope :next_assignment, -> { due_on_or_after(future_due_date).published.asc(:due_date).limit(1) }
-      
+  scope :for_section,       ->(s) { where(section: s) }
+  scope :for_year,          -> (y) { where(academic_year: y) }
+  scope :for_teacher,       -> (t) { where(teacher: t) }
+  scope :for_course,        -> (c) { where(course: c) }
+ 
   validate do |sa|
-    errors.add(:base, 'SectionAssignment must have course') unless sa.course
     errors.add(:base, 'SectionAssignment must have assignment') unless sa.assignment
   end
   
+  before_create do |sa|
+    sa.block = sa.section.block
+    sa.teacher = sa.section.teacher
+    sa.course = sa.section.course
+    sa.academic_year = sa.section.academic_year
   end
   
   # validate do |sa|
