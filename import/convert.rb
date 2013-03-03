@@ -293,8 +293,8 @@ class SectionAssignment
 		section, assignment = self.get_sa(hash)
     assignment.name = hash.delete(:name)
     assignment.save!
+ 		hash[:assigned] = hash[:assigned] == 'Y'
 		hash[:assignment] = assignment
-    hash.delete(:block) # Have to do this or the block delegation won't work
 		section.section_assignments.create! hash
 	end
 
