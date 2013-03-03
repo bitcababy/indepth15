@@ -24,7 +24,6 @@ class Section
 	index({academic_year: -1}, {name: 'ay'})
   
 	has_many :section_assignments
-  has_many :browser_records, autosave: true
 	belongs_to :course, index: true
 	belongs_to :teacher, index: true
 

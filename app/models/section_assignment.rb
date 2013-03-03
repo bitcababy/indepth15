@@ -15,8 +15,6 @@ class SectionAssignment
 	belongs_to :section
 	belongs_to :assignment
   
-  has_one :browser_record, autosave: true
- 
   delegate :name, :content, :content=, to: :assignment
   delegate :course, :teacher, :block, :major_topics, to: :section
 

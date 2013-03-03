@@ -11,7 +11,6 @@ describe Course do
 	it { should have_many(:sections) }
   it { should belong_to :department }
   it { should have_and_belong_to_many :major_topics }
-  it { should have_many :browser_records }
   # it { should have_and_belong_to_many :teachers }
   # 
   

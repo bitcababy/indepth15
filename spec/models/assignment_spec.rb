@@ -7,7 +7,6 @@ describe Assignment do
   it { should accept_nested_attributes_for :section_assignments }
   it { should belong_to :teacher }
   it { should have_and_belong_to_many :major_topics }
-  it { should have_many :browser_records }
   
   specify { subject.minor_topics.should be_kind_of SortedSet }
 
