@@ -1,8 +1,9 @@
 require 'spec_helper'
 
 describe SectionAssignment do
-	it { should belong_to :section }
-	it { should belong_to :assignment }
+  %i(section assignment course teacher).each {|rel|
+    it { should belong_to rel}
+  }
   it { should respond_to :block }
   
   context "Fabrication" do
@@ -55,6 +56,11 @@ describe SectionAssignment do
 			SectionAssignment.upcoming.to_a.count.should == 2
 		end
 		
+    it "has a for_year scope" do
+      s = Fabricate :section, academic_year: 2012
+      2.times { Fabricate :section_assignment, section: s }
+      SectionAssignment.for_year(2012).to_a.count.should eq 2
+    end
 	end
 	
   describe "test updating" do
@@ -67,10 +73,10 @@ describe SectionAssignment do
     end
   end
 
-  # describe "published validation" do
-  #   it "can't have published set if the assignment's name or contents are empty" do
+  # describe "assigned validation" do
+  #   it "can't have assigned set if the assignment's name or contents are empty" do
   #     asst = Fabricate :assignment, name: "", content: ""
-  #     sa = Fabricate.build :section_assignment, assignment: asst, published: true
+  #     sa = Fabricate.build :section_assignment, assignment: asst, assigned: true
   #     sa.should_not be_valid
   #   end
   # end
