@@ -105,7 +105,14 @@ class Course
  	##
 	## Associations
 	##
-	has_many :sections
+	has_many :sections do
+    def for_year(y)
+      where(academic_year: y)
+    end
+    def for_teacher(t)
+      where(teacher: t)
+    end
+  end
 
   embeds_many :documents, class_name: 'CourseDocument'
   belongs_to :department, index: true
