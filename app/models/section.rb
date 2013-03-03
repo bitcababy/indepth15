@@ -55,28 +55,28 @@ class Section
   end
   
 	def upcoming_assignments
-		return self.section_assignments.upcoming.asc(:due_date).published
+		return self.section_assignments.upcoming.asc(:due_date).assigned
 	end
 	
 	def current_assignments
     if na = self.section_assignments.next_assignment.first
-      return self.section_assignments.due_on(na.due_date).all.published
+      return self.section_assignments.due_on(na.due_date).all.assigned
     else
       return []
     end
 	end
 
 	def future_assignments
-		return self.section_assignments.future.asc(:due_date).published
+		return self.section_assignments.future.asc(:due_date).assigned
 	end
 
 	def past_assignments(n=nil)
-		ret = self.section_assignments.past.desc(:due_date).published
+		ret = self.section_assignments.past.desc(:due_date).assigned
 		n ? ret.limit(n) : ret
 	end
 	
-	def add_assignment(name, asst, due_date, published=true)
-		return self.section_assignments.create! name: name, due_date: due_date, assignment: asst, published: published
+	def add_assignment(name, asst, due_date, assigned=true)
+		return self.section_assignments.create! name: name, due_date: due_date, assignment: asst, assigned: assigned
 	end
 	
 	def page_header

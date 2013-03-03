@@ -124,7 +124,7 @@ module Bridge
 		def create_sa(section, hash)
 			sa = section.section_assignments.new name: hash['name'],  due_date: hash['due_date'], 
 					assignment: Assignment.find_by(assgt_id: hash['assgt_id']), 
-					published: hash['published'], old_id: hash['old_id']
+					assigned: hash['assigned'], old_id: hash['old_id']
 			if sa.valid?
 				return sa.save!
 			else
@@ -134,14 +134,14 @@ module Bridge
 		
 		def update_sa(sa, hash)
 			sa.due_date = hash['due_date']
-			sa.published = hash['published']
+			sa.assigned = hash['assigned']
 			sa.name = hash['name']
 			return sa.save!
 		end
 		
 		def create_or_update_sa(hash)
 			hash['oid'] = hash['assgt_id'].to_i
-			hash['published'] = hash['use_assgt'] == 'Y'
+			hash['assigned'] = hash['use_assgt'] == 'Y'
 			hash['academic_year'] = hash['academic_year'].to_i
 			hash['course_id'] = hash['course_id'].to_i
 			hash['due_date'] = Date.parse(hash['due_date'])

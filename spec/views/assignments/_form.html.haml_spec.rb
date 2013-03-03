@@ -31,7 +31,7 @@ describe 'assignments/_form' do
     expect(rendered).to have_table('sas')
   end
 
-  it "should have fields for the block, due date, and published status of each section assignment"
+  it "should have fields for the block, due date, and assigned status of each section assignment"
   
   it "should have a field for the assignment's name and content" 
     
@@ -42,9 +42,9 @@ describe 'assignments/_form' do
   #   
   #   assignment = Assignment.new
   #    
-  #   sa1 = Fabricate :section_assignment, section: section1, due_date: Date.today, published: true
+  #   sa1 = Fabricate :section_assignment, section: section1, due_date: Date.today, assigned: true
   #   expect(sa1.block).to eq 'A'
-  #   sa2 = Fabricate :section_assignment, section: section2, due_date: Date.today, published: true
+  #   sa2 = Fabricate :section_assignment, section: section2, due_date: Date.today, assigned: true
   #   assignment.stub(:section_assignments).and_return [sa1,sa2]
   #   expect(assignment.section_assignments.count).to eq 2
   #   expect(assignment.section_assignments.first.block).to eq 'A'
@@ -63,7 +63,7 @@ describe 'assignments/_form' do
   #     end
   #   end
   # 
-  #   it "allows setting the due date and published status for each section_assignment" do
+  #   it "allows setting the due date and assigned status for each section_assignment" do
   #     expect(rendered).to have_selector('form') do |form|
   #       expect(form).to have_selector('#assignment_section_assignments_attributes_0_block', value: 'A')
   #       expect(form).to have_selector('#assignment_section_assignments_attributes_1_block', value: 'B')

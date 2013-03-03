@@ -23,7 +23,7 @@ describe 'assignments/new' do
     response.should have_selector('form')
   end
 
-  it "should have fields for the block, due date, and published status of each section assignment" do
+  it "should have fields for the block, due date, and assigned status of each section assignment" do
     pending "unfinished test"
     @sas.each do |sa|
       response.should have_selector('input', value: sa.block)
@@ -37,9 +37,9 @@ describe 'assignments/new' do
   #   
   #   assignment = Assignment.new
   #    
-  #   sa1 = Fabricate :section_assignment, section: section1, due_date: Date.today, published: true
+  #   sa1 = Fabricate :section_assignment, section: section1, due_date: Date.today, assigned: true
   #   sa1.block.should == 'A'
-  #   sa2 = Fabricate :section_assignment, section: section2, due_date: Date.today, published: true
+  #   sa2 = Fabricate :section_assignment, section: section2, due_date: Date.today, assigned: true
   #   assignment.stub(:section_assignments).and_return [sa1,sa2]
   #   assignment.section_assignments.count.should == 2
   #   assignment.section_assignments.first.block.should == 'A'
@@ -58,7 +58,7 @@ describe 'assignments/new' do
   #     end
   #   end
   # 
-  #   it "allows setting the due date and published status for each section_assignment" do
+  #   it "allows setting the due date and assigned status for each section_assignment" do
   #     rendered.should have_selector('form') do |form|
   #       form.should have_selector('#assignment_section_assignments_attributes_0_block', value: 'A')
   #       form.should have_selector('#assignment_section_assignments_attributes_1_block', value: 'B')

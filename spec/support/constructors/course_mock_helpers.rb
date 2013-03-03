@@ -54,7 +54,7 @@ module CourseMockHelpers
 	end
 
 	def mock_section_assignment(opts={})
-		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20), published: true }) {|key, v1, v2| v1}
+		opts.merge!( {name: "21", due_date: Date.new(2012, 7, 20), assigned: true }) {|key, v1, v2| v1}
 		if opts[:name]
 			opts[:name] = mock_assignment("This is assignment #{opts[:name]}")
 		end

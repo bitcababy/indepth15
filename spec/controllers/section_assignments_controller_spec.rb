@@ -4,7 +4,7 @@ describe SectionAssignmentsController do
   include DeviseHelpers
 
   before :each do
-    @sa = Fabricate :section_assignment, published: true
+    @sa = Fabricate :section_assignment, assigned: true
   end
     
   describe "GET 'edit'" do

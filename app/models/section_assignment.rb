@@ -4,13 +4,13 @@ class SectionAssignment
   include Mongoid::History::Trackable
   
 	field :dd, as: :due_date, type: Date
-	field :published, type: Boolean, default: false
+	field :assigned, type: Boolean, default: false
   
   if Settings.bridged
   	field :oi, as: :old_id, type: Integer
   end
 
-	index({due_date: -1, published: 1})
+	index({due_date: -1, assigned: 1})
 	
 	belongs_to :section
 	belongs_to :assignment
@@ -22,8 +22,8 @@ class SectionAssignment
   scope :due_on_or_after,  ->(date) { gte(due_date: date) }
   scope :due_on, ->(date) { where(due_date: date) }
   scope :due_before, ->(date) { lt(due_date: date) }
-  scope :published, -> { where(published: true) }
   scope :for_section, ->(s) { where(section: s) }
+  scope :assigned,          -> { where(assigned: true) }
     
   scope :past, -> { due_before(future_due_date).published }
   scope :future, -> { due_on_or_after(future_due_date ).published }
@@ -34,8 +34,6 @@ class SectionAssignment
     errors.add(:base, 'SectionAssignment must have assignment') unless sa.assignment
   end
   
-  after_create do |sa|
-    BrowserRecord.create_from_sa(sa)
   end
   
   # validate do |sa|

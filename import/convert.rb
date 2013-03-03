@@ -71,7 +71,7 @@ module Convert
 			"course_num" 			=> :course_num,
 			"block" 					=> :block,
 			"assgt_id" 				=> :assgt_id,
-			"use_assgt" 			=> :published,
+			"use_assgt" 			=> :assigned,
 			"due_date" 				=> :due_date,
 			"name"						=> :name
 		},
@@ -293,8 +293,6 @@ class SectionAssignment
 		section, assignment = self.get_sa(hash)
     assignment.name = hash.delete(:name)
     assignment.save!
- 		hash[:published] = hash[:published] == 'Y'
-    hash[:published] = false if assignment.content.empty? && assignment.name.empty?
 		hash[:assignment] = assignment
     hash.delete(:block) # Have to do this or the block delegation won't work
 		section.section_assignments.create! hash
