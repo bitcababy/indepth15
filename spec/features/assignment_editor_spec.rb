@@ -18,7 +18,7 @@ feature "Creating an assignment" do
        scenario "initial state", :js do
          div = page.find('#sas')
       
-         use_fields = div.all('td.published div label input')
+         use_fields = div.all('td.assigned div label input')
          use_fields.count.should eq 2
          use_fields.each do |uf|
            uf.value.should == "1"
