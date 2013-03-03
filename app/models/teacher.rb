@@ -39,10 +39,8 @@ class Teacher < User
     return self.sections.current
   end
   
-  def update_number_for_course(c, n)
-    rec = self.asst_numbers.find_or_initialize_by(course: c)
-    rec.number = [rec.number, n.to_i].max
-    self.save
+  def next_asst_for_course(c)
+    
   end
 
 end
