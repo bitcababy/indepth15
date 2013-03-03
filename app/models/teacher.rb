@@ -18,8 +18,14 @@ class Teacher < User
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
   
-  has_many :sections
-  embeds_many :asst_numbers
+  has_many :sections do
+    def for_course(c)
+      where(course: c)
+    end
+    def current
+      where(academic_year: Settings.academic_year)
+    end
+  end
 
   def courses
     return self.sections.map(&:course).uniq
