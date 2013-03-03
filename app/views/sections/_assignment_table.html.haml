@@ -4,6 +4,7 @@
 		%th.due_date Date due
 		%th.contents Assignment
 		- if editable?
+			%th.assign Assign
 			%th.actions Actions
 %tbody
 	= render partial: 'sections/assignment_row', collection: sas, as: 'sa'
