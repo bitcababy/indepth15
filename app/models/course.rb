@@ -114,13 +114,16 @@ class Course
     end
   end
 
-  embeds_many :documents, class_name: 'CourseDocument'
   belongs_to :department, index: true
   has_and_belongs_to_many :major_topics
   has_many :assignments
-
-  # has_and_belongs_to_many :teachers
+  has_and_belongs_to_many :teachers do
+    def current
+      where(current: true)
+    end
+  end
     
+  embeds_many :documents, class_name: 'CourseDocument'
 	##
 	## Scopes
 	##
