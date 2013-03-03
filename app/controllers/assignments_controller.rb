@@ -28,15 +28,21 @@ class AssignmentsController < ApplicationController
     asst_params = params[:assignment]
     teacher = Teacher.find asst_params[:teacher_id]
     sa_params = asst_params[:section_assignments_attributes]
+
     begin
       asst = teacher.assignments.create name: asst_params[:name], content: asst_params[:content]
+      redirect_to :edit unless asst
 
       sa_params.values.each do |attrs|
         section = Section.find attrs[:section]
-        section.section_assignments.create assignment: asst, due_date: attrs[:due_date], published: attrs[:published]
-       end
-    end
-    redirect_to stored_page || home_path
+        section.section_assignments.create assignment: asst, due_date: attrs[:due_date], assigned: attrs[:assigned]
+      end
+    rescue
+      logger.warn 'AssignmentController#create failed!'
+    end #begin
+
+   logger.warn "stored_page is #{stored_page}"
+   redirect_to stored_page || home_path
   end
   
 	# 
