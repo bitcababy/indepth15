@@ -11,8 +11,7 @@ describe Course do
 	it { should have_many(:sections) }
   it { should belong_to :department }
   it { should have_and_belong_to_many :major_topics }
-  # it { should have_and_belong_to_many :teachers }
-  # 
+  it { should have_and_belong_to_many :teachers }
   
   describe '#branches' do
     it "returns the branches that a course belongs to" do
@@ -20,7 +19,6 @@ describe Course do
       course.branches.should be_kind_of Array
     end
   end
-
     
   describe '#add_major_topics' do
     it "adds the the major topics from the BRANCH_MAP" do
@@ -42,7 +40,6 @@ describe Course do
     end
   end
   
-	
   # expect {
   #   sections << Fabricate(:section, course: @course)
   # }.to change { subject.sections.count }.by(1)
