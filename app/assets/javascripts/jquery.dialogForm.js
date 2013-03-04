@@ -146,6 +146,7 @@
 	
 		this.bindLinks = function(btns) {
 			btns.on('click', this, btnClickHandler);
+			return this;
 		}
 
 		this.init = function(options) {
