@@ -12,12 +12,13 @@
 
 		editor = $("#editor")
 		editor.setupAccordionEditor = (accDiv) ->
-			this.dialogForm 'init'
+			div = this
+			div.dialogForm "init",
 				width: 700
 				height: 600
 				ckid: 'department_document_content'
-			
-			this.on 'savedAndClosed', ->
+			div.dialogForm 'bindLinks', $('.edit-button')
+			div.on 'savedAndClosed', ->
 				pn = accDiv.accordion "option", "active"
 				$.get "/departments/1/pane/" + pn, (data, textStatus, jqxhr) ->
 					title = $('.ui-accordion-header-active', accDiv).find('.title')
@@ -26,6 +27,5 @@
 					$(content).html data.content
 				, 'json'
 				accDiv.accordion "refresh"
-
-		$('.edit-button').on 'click', -> editor.setupAccordionEditor $("#home-page")
+		editor.setupAccordionEditor $("#home-page")
 		
