@@ -23,7 +23,7 @@ class Section
 	index({ academic_year: -1, semesters: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
   
-	has_many :section_assignments
+	has_many :section_assignments, dependent: :delete, autosave: true
 	belongs_to :course, index: true
 	belongs_to :teacher, index: true
 
