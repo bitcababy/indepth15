@@ -27,10 +27,6 @@ class Teacher < User
     end
   end
 
-  def courses
-    return self.sections.map(&:course).uniq
-  end
-  
   def course_names
     return self.courses.map(&:full_name).sort
   end
