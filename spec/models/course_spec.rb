@@ -13,6 +13,14 @@ describe Course do
   it { should have_and_belong_to_many :major_topics }
   it { should have_and_belong_to_many :teachers }
   
+  describe "Fabricator" do
+    it "creates a valid course" do
+      c = Fabricate.build :course
+      c.should be_valid
+      Fabricate :course
+    end
+  end
+  
   describe '#branches' do
     it "returns the branches that a course belongs to" do
       course = Fabricate.build :course, number: Course::BRANCH_MAP.keys.sample
@@ -39,6 +47,20 @@ describe Course do
       course.current_teachers.should contain t2
     end
   end
+  
+  context 'association extensions' do
+    describe 'sections.for_year' do
+      it "should return sections for the given year" do
+        course = Fabricate :course
+        3.times { Fabricate :section, course: course, academic_year: 2013 }
+        2.times { Fabricate :section, course: course, academic_year: 2012 }
+        course.sections.should_not be_empty
+        course.sections.for_year(2013).count.should eq 3
+        course.sections.for_year(2012).count.should eq 2
+      end
+    end
+  end
+      
   
   # expect {
   #   sections << Fabricate(:section, course: @course)
