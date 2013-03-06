@@ -41,7 +41,7 @@ gem 'mongoid'
 gem 'mongoid-history'
 gem 'mongoid-data_table', :git => 'git://github.com/shamanime/mongoid-data_table.git'
 gem 'mongoid_rails_migrations'
-gem 'mongoid-app_settings'
+# gem 'mongoid-app_settings'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
 gem 'thin'
 gem 'devise'
@@ -61,6 +61,7 @@ gem 'client_side_validations-simple_form'
 
 gem 'simple_form'
 gem 'memcache-client'
+gem 'settingslogic', :git => 'git://github.com/bitcababy/settingslogic.git'
 
 # Editor-related
 gem 'ckeditor', '~> 4.0.0'
