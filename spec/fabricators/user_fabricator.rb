@@ -15,6 +15,9 @@ Fabricator :teacher, from: :user, class_name: :teacher do
 	general_msg							"This is the general leadin"
 	current_msg							"This is the current leadin"
 	upcoming_msg						"This is the current leadin"
+  assignments             []
+  courses                 []
+  sections                []
 end
 
 Fabricator :test_teacher, from: :teacher, class_name: :teacher do
