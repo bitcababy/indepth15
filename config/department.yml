@@ -1,0 +1,15 @@
+defaults: &defaults
+  dept_name:  Math Department
+  past_assts_num: 5
+  cutoff:
+    hour: 19
+    minute: 30
+
+development:
+  <<: *defaults
+  
+test:
+  <<: *defaults
+  
+production:
+  <<: *defaults
