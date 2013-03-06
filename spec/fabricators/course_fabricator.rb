@@ -1,16 +1,14 @@
 Fabricator(:course) do
 	number					{ sequence(:number, 42) }
-	duration				{ [:full_year, :first_semester, :second_semester].sample }
-	credits					{ [ 5.0, 2.5].sample }
+	duration				{ Course::DURATIONS.sample }
+	credits					5.0
 	full_name				{ |attrs| "Course #{attrs[:number]}"}
   occurrences     (1..5).to_a
+  department
+  after_build     {|c|
+    # c.sections.clear
+    # c.teachers.clear
+    # c.major_topics.clear
+    # c.assignments.clear
+  }
 end
-
-Fabrication::Transform.define(:course, lambda { |number|
-			if Course.where(number: number).exists? then
-				Course.find_by(number: number)
-			else
-			 Fabricate :course, number: number 
-			end
-		})
-
