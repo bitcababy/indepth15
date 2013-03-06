@@ -78,8 +78,10 @@ Spork.prefork do
       DatabaseCleaner.strategy = :truncation
       DatabaseCleaner.orm = 'mongoid'
     end
+    
   	# Clear out 
   	config.before(:each) do
+      Settings.reload!
   		DatabaseCleaner.clean
       Warden.test_mode!
       Mongoid::IdentityMap.clear
@@ -88,7 +90,6 @@ Spork.prefork do
     config.after(:each) do
       Warden.test_reset!
     end
-
   end
 end
 
