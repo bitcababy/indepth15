@@ -117,11 +117,7 @@ class Course
   belongs_to :department, index: true
   has_and_belongs_to_many :major_topics
   has_many :assignments
-  has_and_belongs_to_many :teachers do
-    def current
-      where(current: true)
-    end
-  end
+  has_and_belongs_to_many :teachers
     
   embeds_many :documents, class_name: 'CourseDocument'
 	##
@@ -138,7 +134,7 @@ class Course
   end
 
   def current_teachers
-    return self.sections.current.map(&:teacher).uniq
+    return self.teachers.current
   end
  
   def add_major_topics
