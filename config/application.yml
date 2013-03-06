@@ -24,7 +24,7 @@ defaults: &defaults
     - F
     - G
     - H
-  bridged: true
+  bridged: false
   lock_timeout: 2
 
 development:
