@@ -11,20 +11,25 @@ describe Assignment do
   specify { subject.minor_topics.should be_kind_of SortedSet }
 
 	context "Fabricator" do
-		subject { Fabricate(:assignment) }
-		specify { subject.content.should_not be_nil }
+    it "creates a useful assignment" do
+      asst = Fabricate :assignment
+      asst.content.should_not be_nil
+    end
+    it "adds itself to the course assignments if there's a course" do
+      course = Fabricate :course
+      asst = Fabricate :assignment, course: course
+      asst.course.should eq course
+      course.assignments.should contain asst
+    end
+    it "adds itself to the teacher's assignments if there's a teacher" do
+      teacher = Fabricate :teacher
+      asst = Fabricate :assignment, teacher: teacher
+      asst.teacher.should eq teacher
+      teacher.assignments.should contain asst
+    end
 	end
 
-  describe '#course' do
-    it "returns the course it belong to" do
-      t = Fabricate :teacher
-      c = Fabricate :course
-      s = Fabricate :section, teacher: t, course: c
-      a = Fabricate :assignment
-      sa = Fabricate :section_assignment, section: s, assignment: a
-      sa.course.should eq c
-    end
-    end
+  describe '#set_course_and_teacher' do
+    it "sets the course and teacher from the section"
   end
-  
 end
