@@ -24,17 +24,6 @@ describe Assignment do
       sa = Fabricate :section_assignment, section: s, assignment: a
       sa.course.should eq c
     end
-  end
-  
-  describe '#update_asst_number' do
-    it "updates the asst_number for its teacher/course" do
-      t = Fabricate :teacher
-      c = Fabricate :course
-      s = Fabricate :section, teacher: t, course: c
-      a = Fabricate.build :assignment, name: "10"
-      a.section_assignments.new section: s, due_date: Date.today
-      a.save
-      t.asst_numbers.find_by(course: c).number.should eq 10
     end
   end
   
