@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
-  before_filter :reload_settings
+  # before_filter :reload_settings
 
   ##
   # Stuff to store and return to last recorded page
