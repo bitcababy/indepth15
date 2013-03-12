@@ -1,6 +1,6 @@
 class Course
   include Mongoid::Document
-  include Mongoid::Timestamps
+  include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable
   
   # before_create :add_major_topics

@@ -1,6 +1,6 @@
 class SectionAssignment
 	include Mongoid::Document
-  include Mongoid::Timestamps
+  include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable
   
 	field :dd, as: :due_date, type: Date

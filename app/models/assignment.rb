@@ -1,5 +1,5 @@
 class Assignment < Document
-  include Mongoid::History::Trackable
+  include Mongoid::Timestamps::Short
   
   field :n, as: :name
   field :co, as: :content, type: String, default: ""

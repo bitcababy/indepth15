@@ -2,7 +2,7 @@
 
 class Department
   include Mongoid::Document
-  include Mongoid::Timestamps if Rails.env.production?
+  include Mongoid::Timestamps::Short
   
 	field :n, as: :name, type: String
   field :_id, type: String, default: -> { n }

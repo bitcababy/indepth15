@@ -1,6 +1,6 @@
 class User
 	include Mongoid::Document
-  include Mongoid::Timestamps if Rails.env == 'production'
+  include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable
 
 	HONORIFICS = %W(Mr. Mrs. Ms Dr. Ms.)

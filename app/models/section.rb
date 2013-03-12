@@ -2,7 +2,7 @@
 
 class Section
 	include Mongoid::Document
-  include Mongoid::Timestamps
+  include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable
 
 	field :bl, as: :block, type: String
