@@ -9,23 +9,23 @@
 # 
 #     describe 'Bridge.create_assignment' do
 #       it "creates an assignment from a hash and returns true" do
-#         Bridge.create_assignment(@hash).should be_true
+#         expect(Bridge.create_assignment(@hash)).to be_true
 #       end
 #     
 #       it "returns false if the creation fails" do
 #         Bridge.create_assignment(@hash)
-#         Bridge.create_assignment(@hash).should be_false
+#         expect(Bridge.create_assignment(@hash)).to be_false
 #       end    
 #     end
 #   
 #     describe "Bridge.update_assignment" do
 #       it "returns false if the assignment doesn't exist" do
-#         Bridge.update_assignment(@hash).should be_false
+#         expect(Bridge.update_assignment(@hash)).to be_false
 #       end
 #     
 #       it "returns true if the assignment is updated" do
 #         Bridge.create_assignment(@hash)
-#         Bridge.update_assignment('oid' => 123, 'content' => "quux").should be_true
+#         Bridge.update_assignment('oid' => 123, 'content' => expect("quux")).to be_true
 #       end
 #     end
 #   end
@@ -43,7 +43,7 @@
 #         }
 #     end
 #     it "returns false if the assignment doesn't exist" do
-#       Bridge.update_course(@hash).should be_false
+#       expect(Bridge.update_course(@hash)).to be_false
 #     end
 #   end
 #       
@@ -56,20 +56,20 @@
 #       s.teacher = t
 #       a = Fabricate :assignment
 #       Fabricate :section_assignment, section: s, assignment: a
-#       @hash = {'course_id' => s.course.number, 'teacher_id' => s.teacher_id, 'block' => s.block, 'academic_year' => s.academic_year, 'oid' => a.oid}
+#       @hash = {'course_id' => s.course.number, 'teacher_id' => s.teacher_id, 'block' => s.block, 'year' => s.year, 'oid' => a.oid}
 #     end
 #     
 #     it "returns false if the section doesn't exist" do
 #       pending "Unfinished test"
 #       h = Hash[@hash]
 #       h['course_id'] += 1
-#       Bridge.delete_sa(hash).should be_false
+#       expect(Bridge.delete_sa(hash)).to be_false
 #     end
 #   end
 #       
 #   describe "Bridge.delete_assignment" do
 #     it "returns false if the assignment doesn't exist" do
-#       Bridge.delete_assignment('oid' => 123, 'content' => "Foo bar").should be_false
+#       Bridge.delete_assignment('oid' => 123, 'content' => "Foo expect(bar")).to be_false
 #     end
 #     
 #     it "returns false if the assignment doesn't exist"

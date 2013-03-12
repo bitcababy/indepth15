@@ -7,7 +7,7 @@ describe Occurrence do
 	describe 'to_s' do
 		it "returns the block followed by the number" do
 			o = Fabricate :occurrence, block: "B", number: 1
-			o.to_s.should eql("B1")
+			expect(o.to_s).to eql("B1")
 		end
 	end
 	

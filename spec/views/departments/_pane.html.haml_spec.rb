@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe "departments/_pane.html" do
   include ViewMacros
+  before do
+    view.stubs(:edit_dept_doc_path).returns ""
+  end
+
   it "displays one of the department's panes" do
     pane = Fabricate :titled_document, title: "The title", content: "The content"
     as_guest
@@ -15,7 +19,7 @@ describe "departments/_pane.html" do
     pane = d.homepage_docs.create title: "The title", content: "The content"
     as_user
     render 'departments/pane', pane: pane
-    rendered.should have_selector('button', text: 'Edit')
+    expect(rendered).to have_selector('button', text: 'Edit')
   end
 
   it "doesn't show an edit button if it's a guest" do
@@ -23,7 +27,7 @@ describe "departments/_pane.html" do
     pane = d.homepage_docs.create title: "The title", content: "The content"
     as_guest
     render 'departments/pane', pane: pane
-    rendered.should_not have_selector('button', text: 'Edit')
+    expect(rendered).to_not have_selector('button', text: 'Edit')
   end
     
 

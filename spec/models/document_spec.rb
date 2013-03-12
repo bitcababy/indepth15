@@ -9,13 +9,13 @@ describe Document do
   describe 'lock checking' do
     it "starts out with a version of 1" do
       doc = TestDocument.create
-      doc.version.should == 1
+      expect(doc.version).to eq 1
     end
     
     it "bumps the version when it's updated" do
       doc = TestDocument.create
       doc.update_attributes content: "Foo"
-      doc.version.should == 2
+      expect(doc.version).to eq 2
     end
     
     it "raises an StaleDocument exception if someone else has updated it" do

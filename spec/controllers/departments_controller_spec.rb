@@ -15,8 +15,8 @@ describe DepartmentsController do
     end
   
     it "show the page of the first department" do
-      assigns(:dept).should eq @dept
-      response.should render_template :home
+      expect(assigns(:dept)).to eq @dept
+      expect(response).to render_template :home
     end
   end
   

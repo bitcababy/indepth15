@@ -13,12 +13,12 @@ describe ApplicationController do
 		it "handles ActionController::RoutingError" do
 			pending "Unfinished test"
 			raise ActionController::RoutingError, 'foo'
-			assigns[:not_found_path].should == 'foo'
+			expect(assigns[:not_found_path]).to eq 'foo'
 		end
 
 		it "sets @not_found_path to the error message" do
 			pending "Unfinished test"
-			assigns[:not_found_path].should_not be_nil
+			expect(assigns[:not_found_path]).to_not be_nil
 		end
 		pending "Unfinished test"
 	end

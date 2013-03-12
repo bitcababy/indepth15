@@ -64,7 +64,7 @@ require 'spec_helper'
 #   end
 #   
 #   it "should have a table" do
-#     response.should have_selector('table#sas')
+#     expect(response).to have_selector('table#sas')
 #     pending
 #    end
 #       

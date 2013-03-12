@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe Course do
-  [:number, :duration, :credits, :full_name].each do |field|
-	  it { should validate_presence_of(field)}
+  %i(number duration credits full_name).each do |field|
+	  it { should validate_presence_of(field) }
   end
 
-	it { should validate_uniqueness_of(:number)}
+	it { should validate_uniqueness_of(:number) }
   
 	it { should embed_many :documents }
 	it { should have_many(:sections) }
@@ -15,16 +15,19 @@ describe Course do
   
   describe "Fabricator" do
     it "creates a valid course" do
-      c = Fabricate.build :course
-      c.should be_valid
-      Fabricate :course
+      expect(Fabricate.build :course).to be_valid
+     end
+    it "can create sections" do
+      course = Fabricate :course, num_sections: 3
+      expect(course.sections.count).to eq 3
     end
   end
   
   describe '#branches' do
     it "returns the branches that a course belongs to" do
-      course = Fabricate.build :course, number: Course::BRANCH_MAP.keys.sample
-      course.branches.should be_kind_of Array
+      expect( 
+        Fabricate(:course, number: Course::BRANCH_MAP.keys.sample).branches
+      ).to be_kind_of Array
     end
   end
     
@@ -36,32 +39,38 @@ describe Course do
     end
   end
 
-  describe '#current_teachers' do
-    it "should return the teachers of the current sections" do
-      t1 = Fabricate :teacher
-      t2 = Fabricate :teacher
+  describe '#current?' do
+    it "should return true iff it has sections" do
       course = Fabricate :course
-      Fabricate :section, teacher: t1, course: course
-      Fabricate :section, teacher: t2, course: course
-      course.current_teachers.should contain t1
-      course.current_teachers.should contain t2
+      expect {
+        course.sections << Fabricate(:section, course: course) 
+      }.to change { course.current? }.from(false).to(true)
     end
   end
-  
-  context 'association extensions' do
-    describe 'sections.for_year' do
-      it "should return sections for the given year" do
-        course = Fabricate :course
-        3.times { Fabricate :section, course: course, academic_year: 2013 }
-        2.times { Fabricate :section, course: course, academic_year: 2012 }
-        course.sections.should_not be_empty
-        course.sections.for_year(2013).count.should eq 3
-        course.sections.for_year(2012).count.should eq 2
+
+  context "extensions" do
+    describe 'sections.for_teacher' do
+      it "returns the section taught by a given teacher" do
+        t1 = Fabricate :teacher
+        t2 = Fabricate :teacher
+        course = Fabricate :course, teacher: t1, num_sections: 3
+        2.times { course.sections << Fabricate(:section, course: course, teacher: t2) }
+        expect(course.sections.count).to eq 5
+        expect(course.sections.for_teacher(t1).count).to eq 3
+        expect(course.sections.for_teacher(t2).count).to eq 2
       end
     end
   end
-      
-  
+    
+  it "should return the teachers of the current sections" do
+    t1 = Fabricate :teacher
+    t2 = Fabricate :teacher
+    course = Fabricate :course
+    Fabricate :section, teacher: t1, course: course
+    Fabricate :section, teacher: t2, course: course
+    expect(course.current_teachers).to contain t1
+    expect(course.current_teachers).to contain t2
+  end
   # expect {
   #   sections << Fabricate(:section, course: @course)
   # }.to change { subject.sections.count }.by(1)
@@ -73,7 +82,7 @@ describe Course do
 	# 		t2 = Fabricate(:teacher)
 	# 		3.times {Fabricate :section, course: course, teacher: t1}
 	# 		2.times {Fabricate :section, course: course, teacher: t2}
-	# 		course.teachers.count.should == 2
+	# 		expect(course.teachers.count).to == 2
 	# 	end
 	# end
 		

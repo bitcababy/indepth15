@@ -11,8 +11,8 @@ describe SectionAssignmentsController do
     login_user
     it "returns http success" do
       get 'edit', id: @sa.to_param
-      response.should be_success
-      response.should render_template(:edit)
+      expect(response).to be_success
+      expect(response).to render_template(:edit)
     end
   end
 
@@ -21,7 +21,7 @@ describe SectionAssignmentsController do
     it "returns http success" do
       session[:goto_url] = "/"
       put 'update', {id: @sa.to_param, section_assignment: [name: "foo"]}
-      response.should redirect_to '/'
+      expect(response).to redirect_to '/'
     end
   end
 

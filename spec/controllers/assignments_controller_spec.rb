@@ -23,14 +23,15 @@ describe AssignmentsController do
       3.times {
         @course.sections << Fabricate(:section, teacher: teacher, year: Settings.year)
       }
-      
+      expect(@course.sections.count).to eq 3
       get :new, teacher_id: teacher.to_param, course_id: @course.to_param
-      response.should be_success
+      expect(response).to be_success
     end
 
     it "should build an assignment and section assignments for each current section" do
-      assigns[:assignment].should be_kind_of Assignment
-      pending "unfinished test"
+      expect(asst = assigns[:assignment]).to be_kind_of Assignment
+      expect(asst).to_not be_persisted
+      expect(asst.section_assignments.to_a.count).to eq 3
     end
     
     it "should not create section assignments for old sections"
@@ -42,10 +43,10 @@ describe AssignmentsController do
     # end
     
     it "should render the 'new' template" do
-      response.should render_template :new
+      expect(response).to render_template :new
     end
       
-  end
+  end # "GET 'new'"
   
   # {"utf8"=>"✓",
   #  "authenticity_token"=>"DhPaLUa1M8OtPHUYOS3IZ4J0KgXw/WTB+SfDZAxqyus=",

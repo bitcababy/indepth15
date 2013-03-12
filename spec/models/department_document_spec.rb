@@ -17,8 +17,8 @@ describe DepartmentDocument do
       doc.department.expects :save
       doc.update_from_params(hash)
       doc = @dept.homepage_docs.first
-      doc.title.should eq hash[:title]
-      doc.content.should eq hash[:content]
+      expect(doc.title).to eq hash[:title]
+      expect(doc.content).to eq hash[:content]
     end
   end
       

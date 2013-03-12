@@ -28,9 +28,9 @@ describe SectionsController do
      end
      Section.stubs(:find).returns(section)
       xhr :get, :assignments_pane, id: section.to_param
-      response.should be_success
-      assigns(:section).should eq(section)
-      assigns(:course).should eq("foo")
+      expect(response).to be_success
+      expect(assigns(:section)).to eq(section)
+      expect(assigns(:course)).to eq("foo")
     end
   end
 

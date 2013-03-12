@@ -7,12 +7,24 @@ describe Teacher do
 	# 	it "should return current teachers" do
 	# 		3.times {Fabricate(:teacher, current: true)}
 	# 		2.times {Fabricate(:teacher, current: false)}
-	# 		Teacher.count.should == 5
-	# 		Teacher.current.count.should == 3
+	# 		expect(Teacher.count).to eq 5
+	# 		expect(Teacher.current.count).to eq 3
 	# 	end
 	# end
 	# 
 	
+	context "Fabrication" do
+    it "should produce a valid teacher" do
+      expect(Fabricate(:teacher)).to be_valid
+    end
+    
+    it "can create sections" do
+      t = Fabricate :teacher, section_count: 3
+      expect(t.sections.count).to eq 3
+    end
+      
+	end
+
 	context "courses" do
 		before :each do
 			@teacher = Fabricate(:teacher)
@@ -26,25 +38,16 @@ describe Teacher do
 			
 		describe '#courses' do
 			it "should return the courses that a teacher is teaching" do
-				@teacher.courses.count.should == 2
+				expect(@teacher.courses.count).to eq 2
 			end
 		end
 		
 		describe '#course_names' do
 			it "should return the names of the courses that a teacher is teaching" do
-				@teacher.course_names.should == ["Fractals", "Geometry Honors"]
+				expect(@teacher.course_names).to eq ["Fractals", "Geometry Honors"]
 			end
 		end
     
 	end
-	
-	context "Fabrication testing" do
-		it "should accept a login override" do
-			Fabricate(:teacher, login: 'greenx')
-			Teacher.where(login: 'greenx' ).should exist
-		end
-	end
-  
-	
 	
 end

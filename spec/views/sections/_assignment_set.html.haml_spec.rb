@@ -14,8 +14,8 @@ describe 'sections/_assignment_set' do
 
 		render partial: 'sections/assignment_set', 
 				locals: {table_id: 'current', sas: [sa], message: "Message", title: 'Some assignments'}
-		rendered.should have_selector('div.assignment-block') do |div|
-			div.should contain('Some assignments')
+		expect(rendered).to have_selector('div.assignment-block') do |div|
+			expect(div).to contain('Some assignments')
 		end
 	end
 end

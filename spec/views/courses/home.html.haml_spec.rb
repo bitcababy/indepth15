@@ -14,9 +14,9 @@ describe 'courses/home' do
     end
 		assign(:course, course)
 		render
-		rendered.should have_selector('#tabs ul') do |ul|
+		expect(rendered).to have_selector('#tabs ul') do |ul|
 			for tab_name in %W(Sections Information Resources Policies News) do
-				ul.should have_selector('li a', title: tab_name, content: tab_name)
+				expect(ul).to have_selector('li a', title: tab_name, content: tab_name)
 			end
 		end
 	end

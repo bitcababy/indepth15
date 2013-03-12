@@ -9,9 +9,9 @@ describe 'menus/_course' do
 			stubs(:number).returns 321
 		end
 		render partial: 'menus/course', locals: {course: course}
-		rendered.should have_selector('li.course', text: 'Fractals 101') do |li|
+		expect(rendered).to have_selector('li.course', text: 'Fractals 101') do |li|
 			pending "This needs a real model."
-			# li.should have_selector('a', href: '/courses/321')
+			# expect(li).to have_selector('a', href: '/courses/321')
 		end
 	end
 

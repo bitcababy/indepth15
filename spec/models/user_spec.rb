@@ -10,42 +10,42 @@ describe User do
   describe 'to_s' do
     it "returns the full name of a teacher" do
       teacher = Fabricate(:teacher, first_name: "John", last_name: "Doe")
-      teacher.to_s.should == "John Doe"
+      expect(teacher.to_s).to eq "John Doe"
     end
   end
 
   describe 'menu_label' do
     it "returns the full name of a teacher" do
       teacher = Fabricate(:teacher, first_name: "John", last_name: "Doe")
-      teacher.menu_label.should == teacher.full_name
+      expect(teacher.menu_label).to eq teacher.full_name
     end
   end
 
 	context "Fabrication testing" do
 		context ":user" do
 			subject {Fabricate :user, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
-			specify { subject.login.should == 'kramdenr' }
+			specify { expect(subject.login).to eq 'kramdenr' }
 
 			it "should accept a login override" do
 				Fabricate(:user, login: 'greenx')
-				User.where(login: 'greenx' ).should exist
+				expect(User.where(login: 'greenx')).to exist
 			end
 		end
 		
     # context ":teacher" do
     #   subject {Fabricate :teacher, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
-    #   specify { subject.login.should == 'kramdenr' }
-    #   specify { subject.should be_kind_of Teacher}
+    #   specify { expect(subject.login).to eq 'kramdenr' }
+    #   specify { expect(subject).to be_kind_of Teacher}
     # end
     # 
     # context ":test_teacher" do
     #   subject {Fabricate :test_teacher, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
-    #   specify { subject.should be_kind_of Teacher}
+    #   specify { expect(subject).to be_kind_of Teacher}
     # end
     # 
     # context ":test_admin" do
     #   subject {Fabricate :test_admin, first_name: 'Ralph', last_name: 'Kramden', login: 'kramdenr'}
-    #   specify { subject.should be_kind_of Admin}
+    #   specify { expect(subject).to be_kind_of Admin}
     # end
 
 	end
@@ -53,14 +53,14 @@ describe User do
 	describe '#formal_name' do
 		it "should return the honorific + the last name" do
 			user = Fabricate :user, honorific: "Mr.", last_name: "Masterson"
-			user.formal_name.should == "Mr. Masterson"
+			expect(user.formal_name).to eq "Mr. Masterson"
 		end
 	end
 	
 	describe '#full_name' do
 		it "should return the honorific + the last name" do
 			user = Fabricate :user, first_name: "Bat", last_name: "Masterson"
-			user.full_name.should == "Bat Masterson"
+			expect(user.full_name).to eq "Bat Masterson"
 		end
 	end
 	

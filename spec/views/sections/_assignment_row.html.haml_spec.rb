@@ -15,10 +15,10 @@ describe 'sections/_assignment_row' do
 		end
 
 		render partial: 'sections/assignment_row', locals: {sa: sa}
-		rendered.should have_selector('tr.assignment') do |row|
-			row.should have_selector('td', content: "21") 
-			row.should have_selector('td', content: "Fri, Jul 20")
-			row.should have_selector('td', content: txt)
+		expect(rendered).to have_selector('tr.assignment') do |row|
+			expect(row).to have_selector('td', content: "21") 
+			expect(row).to have_selector('td', content: "Fri, Jul 20")
+			expect(row).to have_selector('td', content: txt)
 		end
 	end
 end

@@ -59,15 +59,15 @@
 #         has_assignments:true
 #       }
 #       course = Course.import_from_hash hash
-#       course.should be_kind_of Course
-#       course.number.should == 321
-#       course.full_name.should == "Geometry Honors"
-#       course.short_name.should == ''
-#       course.schedule_name.should == "GeomH"
-#       course.duration.should == Course::FULL_YEAR
-#       course.credits.should == 5.0
-#       # course.branches.count.should > 0
-#       course.description.content.should == "This is the description"
+#       expect(course).to be_kind_of Course
+#       expect(course.number).to eq 321
+#       expect(course.full_name).to eq "Geometry Honors"
+#       expect(course.short_name).to eq ''
+#       expect(course.schedule_name).to eq "GeomH"
+#       expect(course.duration).to eq Course::FULL_YEAR
+#       expect(course.credits).to eq 5.0
+#       # expect(course.branches.count).to > 0
+#       expect(course.description.content).to eq "This is the description"
 #     end
 #   end
 # end

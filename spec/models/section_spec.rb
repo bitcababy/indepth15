@@ -5,87 +5,59 @@ require 'spec_helper'
 describe Section do
 	include Utils
 
-	def valid_attributes
-		{
-			room: 501,
-			academic_year: Settings.academic_year,
-			semesters: Course::FIRST_SEMESTER,
-      course: Fabricate(:course),
-      teacher: Fabricate(:teacher),
-			block: "B"
-		}
-	end
-	
 	it { should belong_to :teacher }
 	it { should belong_to :course }
 	it { should have(0).section_assignments }
   
   context "Fabrication" do
-    it "should have a course" do
+    it "should create a valid section" do
+      s = Fabricate.build :section
+      expect(s).to be_valid
+    end
+
+    it "should have a course and teacher" do
       s = Fabricate :section
-      s.course.should_not be_nil
-      s.teacher.should_not be_nil
+      expect(s.course).to_not be_nil
+      expect(s.teacher).to_not be_nil
+    end
+    
+    it "can create section_assignments" do
+      s = Fabricate :section, sas_count: 3
+      expect(s.section_assignments.count).to eq 3
     end
   end
+
+  subject { Fabricate :section }
 	
 	context "scopes" do
-		it "should have a 'for_year scope" do
-			2.times { Fabricate :section, academic_year: 2013 }
-			3.times { Fabricate :section, academic_year: 2010 }
-			Section.for_year(2013).count.should eq 2
-		end
-
     it "should have a 'for_semester' scope" do
-			5.times { Fabricate :section, academic_year: 2013, semesters: Course::FULL_YEAR }
-			2.times { Fabricate :section, academic_year: 2013, semesters: Course::FIRST_SEMESTER }
-			3.times { Fabricate :section, academic_year: 2013, semesters: Course::SECOND_SEMESTER }
-      Section.for_first_semester.count.should eq 7
-      Section.for_semester(Course::FIRST_SEMESTER).count.should eq 7
+			5.times { Fabricate :section, semesters: Course::FULL_YEAR }
+			2.times { Fabricate :section, semesters: Course::FIRST_SEMESTER }
+			3.times { Fabricate :section, semesters: Course::SECOND_SEMESTER }
+      expect(Section.for_first_semester.count).to eq 7
+      expect(Section.for_semester(Course::FIRST_SEMESTER).count).to eq 7
     end
 			
 	end # Scopes
 		
 	context "validation" do
 		it { should validate_presence_of :block }
-		it { should validate_presence_of :academic_year }
 		it { should validate_presence_of :semesters }
-	end
-	
-  # describe 'fabricator' do
-  #   it "creates a valid section" do
-  #     teacher = Fabricate :teacher
-  #     teacher.should_not be_nil
-  #     section = Fabricate.build :section, block: "E", teacher: teacher
-  #     section.should be_valid
-  #     section.teacher.should_not be_nil
-  #     section.teacher.should eq teacher
-  #     section.course.should_not be_nil
-  #   end
-  # end
-	
-	describe '#add_assignment(name, asst, due_date)' do
-		it "adds the assignment and due_date to the assignments hash" do
-			subject = Section.create! valid_attributes
-			asst = Fabricate :assignment
-			expect {
-				subject.add_assignment("foo", asst, Date.today)
-			}.to change {subject.section_assignments.count}.by(1)
-		end
 	end
 	
 	context "past and future assignment handling" do
 		before do
-			@section = Fabricate :section, valid_attributes
-			3.times {|i| @section.add_assignment "future#{i}", Fabricate(:assignment), future_due_date + i }
-			2.times {|i| @section.add_assignment "past#{i}", Fabricate(:assignment), future_due_date - i - 1 }
-			@section.section_assignments.to_a.count.should eq 5
+			@section = Fabricate :section
+			3.times {|i| @section.section_assignments << Fabricate(:section_assignment_future) }
+			2.times {|i| @section.section_assignments << Fabricate(:section_assignment_past) }
+			expect(@section.section_assignments.to_a.count).to eq 5
 		end
 	
 		it "should be able to return all future or past assignments" do
-			@section.future_assignments.to_a.count.should eq 3
-			@section.past_assignments.to_a.count.should eq 2
-			@section.current_assignments.to_a.count.should eq 1
-			@section.upcoming_assignments.to_a.count.should eq 2
+			expect(@section.future_assignments.to_a.count).to eq 3
+			expect(@section.past_assignments.to_a.count).to eq 2
+			expect(@section.current_assignments.to_a.count).to eq 1
+			expect(@section.upcoming_assignments.to_a.count).to eq 2
 		end
 	end
 	

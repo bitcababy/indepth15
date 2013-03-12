@@ -42,13 +42,13 @@ describe 'assignments/edit' do
   #  end
   # 
   #  it "should have a form to create the assignment" do
-  #    rendered.should have_selector('form')
+  #    expect(rendered).to have_selector('form')
   #  end
   #  
   #  it "should have an area to edit the assignment" do
-  #    rendered.should have_selector('#editor') do |div|
-  #      div.should have_selector('label', content: 'Contents')
-  #      div.should have_selector('textarea')
+  #    expect(rendered).to have_selector('#editor') do |div|
+  #      expect(div).to have_selector('label', content: 'Contents')
+  #      expect(div).to have_selector('textarea')
   #    end
   #  end
   # 

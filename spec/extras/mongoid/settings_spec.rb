@@ -21,7 +21,7 @@
 #   describe ':[]' do
 #     it "returns the value of a key" do
 #       Foo[:blocks] = [1,2,3]
-#       Foo[:blocks].should eq [1, 2, 3]
+#       expect(Foo[:blocks]).to eq [1, 2, 3]
 #     end
 #   end
 #       

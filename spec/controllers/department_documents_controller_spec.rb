@@ -12,7 +12,7 @@ describe DepartmentDocumentsController do
     it "gets the doc referenced by params[:doc_id]" do
       doc = @dept.homepage_docs.first
       xhr :get, :edit, dept_id: @dept.to_param, id: doc.to_param
-      assigns(:doc).should == doc
+      expect(assigns(:doc)).to eq doc
     end
   end
   
@@ -22,8 +22,8 @@ describe DepartmentDocumentsController do
       pending
       # put :update, dept_id: @dept.to_param, id: doc.to_param, department_document: {title: "Foo" }
       xhr :put, :update, dept_id: @dept.to_param, id: doc.to_param, department_document: {title: "Foo" }
-      assigns(:doc).should == doc
-      response.should =~ /.*\/home$/
+      expect(assigns(:doc)).to eq doc
+      expect(response).to =~ /.*\/home$/
     end
   end
       

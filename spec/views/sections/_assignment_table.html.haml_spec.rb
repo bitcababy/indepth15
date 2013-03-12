@@ -4,8 +4,8 @@ describe 'sections/_assignment_table' do
 	context "guest mode" do
 		it "display a table with the provided assignments" do
 			render partial: 'sections/assignment_table', locals: {sas: []}
-			rendered.should have_selector('thead tr') do |row|
-				['#', 'Date due', 'Assignment'].each {|hdr| row.should have_selector('th', content: hdr)}
+			expect(rendered).to have_selector('thead tr') do |row|
+				['#', 'Date due', 'Assignment'].each {|hdr| expect(row).to have_selector('th', content: hdr)}
 			end
 		end
 	end

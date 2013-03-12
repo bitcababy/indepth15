@@ -8,28 +8,28 @@ describe Assignment do
   it { should belong_to :teacher }
   it { should have_and_belong_to_many :major_topics }
   
-  specify { subject.minor_topics.should be_kind_of SortedSet }
-
 	context "Fabricator" do
-    it "creates a useful assignment" do
+    it "creates a valid assignment" do
       asst = Fabricate :assignment
-      asst.content.should_not be_nil
+      expect(asst).to be_valid
+      expect(asst.content).to_not be_nil
     end
     it "adds itself to the course assignments if there's a course" do
       course = Fabricate :course
       asst = Fabricate :assignment, course: course
-      asst.course.should eq course
-      course.assignments.should contain asst
+      expect(asst.course).to eq course
+      expect(course.assignments).to contain asst
     end
     it "adds itself to the teacher's assignments if there's a teacher" do
       teacher = Fabricate :teacher
       asst = Fabricate :assignment, teacher: teacher
-      asst.teacher.should eq teacher
-      teacher.assignments.should contain asst
+      expect(asst.teacher).to eq teacher
+      expect(teacher.assignments).to contain asst
     end
 	end
+  
+  subject { Fabricate :assignment }
 
-  describe '#set_course_and_teacher' do
-    it "sets the course and teacher from the section"
-  end
+  # specify { expect(subject.minor_topics).to be_kind_of SortedSet }
+  
 end

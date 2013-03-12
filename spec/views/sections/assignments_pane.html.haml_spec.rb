@@ -17,44 +17,44 @@ describe "sections/assignments_pane" do
   # 
   # it "displays the teacher's generic message" do
   #   render
-  #   rendered.should have_selector('div#generic-msg', content: "This is a generic message")
+  #   expect(rendered).to have_selector('div#generic-msg', content: "This is a generic message")
   # end
   # 
   # it "displays the current assignment of a section" do
   #   render
-  #   rendered.should have_selector('table#current')
+  #   expect(rendered).to have_selector('table#current')
   # end
   # 
   # it "skips displaying the teacher's current assignment message and the table if there isn't a current assignment" do
   #   @section.unstubs(:current_assignments)
   #   @section.stubs(:current_assignments).returns []
   #   render
-  #   rendered.should_not have_selector('table#current')
+  #   expect(rendered).to_not have_selector('table#current')
   # end
   # 
   # it "displays the past assignments of a section" do
   #   render
-  #   rendered.should have_selector('table#past')
+  #   expect(rendered).to have_selector('table#past')
   # end
   # 
   # it "skips displaying the table for past assignments if there aren't any" do
   #   @section.unstubs(:past_assignments)
   #   @section.stubs(:past_assignments).returns []
   #   render
-  #   rendered.should_not have_selector('table#past')
+  #   expect(rendered).to_not have_selector('table#past')
   # end
   # 
   # 
   # it "displays the upcoming assignments of a section" do
   #   render
-  #   rendered.should have_selector('table#upcoming')
+  #   expect(rendered).to have_selector('table#upcoming')
   # end
   # 
   # it "skips displaying the table for upcoming assignments if there aren't any" do
   #   @section.unstubs(:upcoming_assignments)
   #   @section.stubs(:upcoming_assignments).returns []
   #   render
-  #   rendered.should_not have_selector('table#upcoming')
+  #   expect(rendered).to_not have_selector('table#upcoming')
   # end
 		
 		

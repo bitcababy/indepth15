@@ -20,13 +20,13 @@ describe 'assignments/new' do
   end
   
   it "displays a form" do
-    response.should have_selector('form')
+    expect(response).to have_selector('form')
   end
 
   it "should have fields for the block, due date, and assigned status of each section assignment" do
     pending "unfinished test"
     @sas.each do |sa|
-      response.should have_selector('input', value: sa.block)
+      expect(response).to have_selector('input', value: sa.block)
     end
   end
 
@@ -38,51 +38,51 @@ describe 'assignments/new' do
   #   assignment = Assignment.new
   #    
   #   sa1 = Fabricate :section_assignment, section: section1, due_date: Date.today, assigned: true
-  #   sa1.block.should == 'A'
+  #   expect(sa1.block).to eq 'A'
   #   sa2 = Fabricate :section_assignment, section: section2, due_date: Date.today, assigned: true
   #   assignment.stub(:section_assignments).and_return [sa1,sa2]
-  #   assignment.section_assignments.count.should == 2
-  #   assignment.section_assignments.first.block.should == 'A'
+  #   expect(assignment.section_assignments.count).to eq 2
+  #   expect(assignment.section_assignments.first.block).to eq 'A'
   #   assign(:assignment, assignment)
   #   render
   # end
   # 
   # it "displays a form" do
-  #   rendered.should have_selector('form')
+  #   expect(rendered).to have_selector('form')
   # end
   # 
   # context 'inputs' do
   #   it "displays an editor for the assignment" do
-  #     rendered.should have_selector('form') do |form|
-  #       form.should have_selector('textarea', name: 'assignment[content]')
+  #     expect(rendered).to have_selector('form') do |form|
+  #       expect(form).to have_selector('textarea', name: 'assignment[content]')
   #     end
   #   end
   # 
   #   it "allows setting the due date and assigned status for each section_assignment" do
-  #     rendered.should have_selector('form') do |form|
-  #       form.should have_selector('#assignment_section_assignments_attributes_0_block', value: 'A')
-  #       form.should have_selector('#assignment_section_assignments_attributes_1_block', value: 'B')
-  #       form.should have_selector('#assignment_section_assignments_attributes_0_due_date')
-  #       form.should have_selector('#assignment_section_assignments_attributes_1_due_date')
+  #     expect(rendered).to have_selector('form') do |form|
+  #       expect(form).to have_selector('#assignment_section_assignments_attributes_0_block', value: 'A')
+  #       expect(form).to have_selector('#assignment_section_assignments_attributes_1_block', value: 'B')
+  #       expect(form).to have_selector('#assignment_section_assignments_attributes_0_due_date')
+  #       expect(form).to have_selector('#assignment_section_assignments_attributes_1_due_date')
   #     end
   #   end 
   # end
   # 
   # context 'buttons' do
   #   it "should have a create button" do
-  #     rendered.should have_selector('form') do |form|
-  #       form.should have_selector('input', class: 'btn', label: 'Create')
+  #     expect(rendered).to have_selector('form') do |form|
+  #       expect(form).to have_selector('input', class: 'btn', label: 'Create')
   #     end
   #   end
   #   it "should have a cancel button" do
-  #     rendered.should have_selector('form') do |form|
-  #       form.should have_selector('input', class: 'btn', label: 'Cancel')
+  #     expect(rendered).to have_selector('form') do |form|
+  #       expect(form).to have_selector('input', class: 'btn', label: 'Cancel')
   #     end
   #   end
   # 
   #   it "should have a reset button" do
-  #     rendered.should have_selector('form') do |form|
-  #       form.should have_selector('input', class: 'btn', label: 'Reset')
+  #     expect(rendered).to have_selector('form') do |form|
+  #       expect(form).to have_selector('input', class: 'btn', label: 'Reset')
   #     end
   #   end
   # end
