@@ -50,8 +50,8 @@ module ApplicationHelper
 		content_tag('div', attributes, &block) if block
 	end
 
-	def section_to_assignments_path(section)
-		return home_with_assignments_path(section.course.to_param, section.academic_year, section.teacher.to_param, section.block)
+	def course_home_with_assignments(section)
+		return home_with_assignments_path(section.course.to_param, section.teacher.to_param, section.block)
 	end
   
     ## Note: Unclear why I need any of these
