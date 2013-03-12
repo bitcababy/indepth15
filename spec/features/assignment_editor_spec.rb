@@ -39,7 +39,7 @@ feature "To create an assignment" do
   #        due_dates = div.all('.due_date-alt')
   #        expect(due_dates.count).to eq 2
   #        initial_date = Utils.next_school_day
-  #        due_dates.each {|dd| expect(Date.parse(dd.value)).to eq initial_date}
+  #        expect(due_dates.each {|dd| Date.parse(dd.value)).to eq initial_date
   #      end
   #    end
   #  end

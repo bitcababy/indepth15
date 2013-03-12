@@ -4,7 +4,7 @@
 #   describe 'import_xml_file' do
 #     it "imports a file using XmlSimple and returns an array of name, content hashes" do
 #       res = Convert.import_xml_file('teachers.xml')
-#       res.should be_kind_of Array
+#       expect(res).to be_kind_of Array
 #     end
 #   end
 #   
@@ -15,13 +15,13 @@
 #       
 #     describe 'one_record' do
 #       it "turns an array of name/content hashes into a hash of name => content hashes" do
-#         Convert.one_record(Teacher, @res[0]).should be_kind_of Teacher
+#         expect(Convert.one_record(Teacher, @res[0])).to be_kind_of Teacher
 #       end
 #     end
 #   
 #     describe 'from_hashes' do
 #       it "fixed an entire set of hashes (see flatten_one)" do
-#         Convert.from_hashes(Teacher, @res).should be_kind_of Array
+#         expect(Convert.from_hashes(Teacher, @res)).to be_kind_of Array
 #       end
 #     end
 #     

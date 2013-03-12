@@ -25,7 +25,7 @@
 #     
 #       it "returns true if the assignment is updated" do
 #         Bridge.create_assignment(@hash)
-#         Bridge.update_assignment('oid' => 123, 'content' => expect("quux")).to be_true
+#         expect(Bridge.update_assignment('oid' => 123, 'content' => "quux")).to be_true
 #       end
 #     end
 #   end
@@ -69,7 +69,7 @@
 #       
 #   describe "Bridge.delete_assignment" do
 #     it "returns false if the assignment doesn't exist" do
-#       Bridge.delete_assignment('oid' => 123, 'content' => "Foo expect(bar")).to be_false
+#       expect(Bridge.delete_assignment('oid' => 123, 'content' => "Foo bar")).to be_false
 #     end
 #     
 #     it "returns false if the assignment doesn't exist"

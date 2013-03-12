@@ -30,6 +30,6 @@ describe Assignment do
   
   subject { Fabricate :assignment }
 
-  # specify { expect(subject.minor_topics).to be_kind_of SortedSet }
+  # specify { subject.minor_topics.should be_kind_of SortedSet }
   
 end
