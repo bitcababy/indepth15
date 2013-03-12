@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
-  before_filter :get_year
+  before_filter :set_year
 
   # before_filter :reload_settings
 
@@ -111,8 +111,8 @@ class ApplicationController < ActionController::Base
 		end
 		
 	private
-  def get_year
-    @year = params[:year] || Settings.academic_year
+  def set_year
+     params[:year] ||= Settings.academic_year
   end
 
   def render_404(exception)
