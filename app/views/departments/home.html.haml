@@ -4,6 +4,7 @@
 	= render partial: 'departments/pane', collection: @panes
 #editor
 
+	
 :coffeescript
 	$(document).ready ->
 		# Set up accordion
@@ -29,3 +30,21 @@
 				accDiv.accordion "refresh"
 		editor.setupAccordionEditor $("#home-page")
 		
+
+/ :coffeescript
+/ 	$(document).ready ->
+/ 		# Set up accordion
+/ 		$("#home-page").accordion
+/ 			heightStyle: "content"
+/ 		
+/ 		if "#{user_signed_in?}" is "true"
+/ 			$('.editable').each (i, elem) ->
+/ 				$(elem).on('dblclick', ->
+/ 					mommy = $(elem).parent
+/ 					console.dir mommy
+/ 					CKEDITOR.replace $(elem).attr('name')
+/ 					return elem
+/ 				).on('blur', ->
+/ 					alert("blurred")
+/ 				)
+					

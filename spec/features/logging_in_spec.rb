@@ -1,46 +1,26 @@
 require 'spec_helper'
 
-feature "Logging in" do
-  include DeviseHelpers
+feature "The sign-in process" do
   include Warden::Test::Helpers
 
-  before :each do
+  background do
     @dept = Fabricate :department_with_docs
-    @user = Fabricate :user
-    logout
+    @user = Fabricate :user, login: "foo", password: "password"
   end
 
-  def open_login_dialog
+  scenario "signs me in", js: true do
+    logout
     visit home_path
-    menu = page.first '#usermenu'
-    menu.should_not be_nil
-    menu.click
-    signin = menu.first '#signin'
-    signin.should_not be_nil
-    signin.click
-  end
-  
-  scenario "Guest logged in" do
-    visit home_path
-    page.should have_selector('#username', text: "Guest")
-  end
-  
-  scenario "clicking 'Sign in' should bring up a sign-in dialog", js: true do
-    # Have to be on a pages
-    open_login_dialog
-    page.should have_selector('.ui-dialog')
-  end
-  
-  scenario "valid user should be able to sign in", js: true do
-    open_login_dialog
-    dialog = page.first '.ui-dialog'
-    dialog.should_not be_nil
-    within '.ui-dialog form' do
+    expect(page).to have_selector('#username', text: "Guest")
+    expect(page).to_not have_selector('#username', text: @user.full_name)
+    signin_link = page.first '#signin'
+    signin_link.click
+    
+    within '#signinform form' do
       fill_in 'Login', with: @user.login
       fill_in 'Password', with: @user.password
     end
     click_button 'Sign in'
-    page.should have_selector('#username')
-    page.should have_selector('#username', text: @user.full_name)
+    expect(page).to have_selector('#username', text: @user.full_name)
   end
 end

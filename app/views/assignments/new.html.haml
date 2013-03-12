@@ -1,3 +1,5 @@
+- content_for :page_title, 'Assignment editor'
+- content_for :page_header, 'New assignment'
 #new_assignment.ui-widget.ui-corner-all
 	.ui-widget-header= "New assignment"
 	.ui-widget-content
@@ -5,7 +7,7 @@
 
 :coffeescript
 	$(document).ready ->
-		$(".save").button
+		$("#save").button
 			label: "Create"
-		$(".cancel").button
+		$("#cancel").button
 			label: "Cancel"

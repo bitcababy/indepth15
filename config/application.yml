@@ -6,7 +6,6 @@ defaults: &defaults
   cutoff:
     hour: 19
     minute: 30
-  start_year: 2011
   last_block: H
   max_occurrences: 5
   occurrences:
@@ -24,8 +23,13 @@ defaults: &defaults
     - F
     - G
     - H
+  credits:
+    - 5.0
+    - 2.5
   bridged: false
   lock_timeout: 2
+  start_year: 2011
+  first_year: 2003
 
 development:
   <<: *defaults

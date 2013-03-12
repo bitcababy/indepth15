@@ -13,7 +13,7 @@ class DepartmentDocument < Document
   track_history track_create: true
   
   def to_s
-    return "Doc entitled #{title}"
+    return "Doc titled #{title}"
   end
 
   def update_from_params(params)
@@ -21,4 +21,5 @@ class DepartmentDocument < Document
     self.content = params[:content]
     self.department.save
   end
+
 end

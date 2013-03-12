@@ -1,19 +1,18 @@
 Fabricator(:section) do
-	academic_year	{ |attrs| attrs[:academic_year] || Settings.academic_year }
-	semesters			{ Course::DURATIONS.sample }
-	block					{ |attrs| attrs[:block] || sequence(:block) {|i| Settings.blocks[i%Settings.blocks.length]} }
-  room          { sequence(:room) {|i| "Room #{i}"} }
-  section_assignments []
+  transient             :sas_count
 	year	                { Settings.academic_year }
+	semesters			        { Course::DURATIONS.sample }
+  room                  { sequence(:room) {|i| "Room #{i}"} }
+	block	                { sequence(:block_name) {|i| Settings.blocks[i%Settings.blocks.length]} }
+  section_assignments   []
   course
   teacher
+  after_create          { |section, t| 
+    (t[:sas_count] || 0 ).times { section.section_assignments << Fabricate(:section_assignment) }
+  }
 end
 
-Fabrication::Transform.define(:in_block, lambda {|b| 
-	if Section.where(block: b).exists?
-		Section.find_by(block: b)
-	else
-		Fabricate(:section, block: b)
-	end
-	})
-	
+Fabricator :section_earlier_year, from: :section do
+  transient             :offset
+	year	                { |attrs| Settings.academic_year - (attrs[:offset] || 1) }
+end

@@ -6,20 +6,15 @@ describe AssignmentsController do
   
   describe "GET 'new'" do
     before :each do
-      teacher = Fabricate :teacher, login: "xyzzy"
+      teacher = Fabricate :teacher
       @course = Fabricate :course
       @course.major_topics = [
         Fabricate(:none_topic),
         Fabricate(:major_topic, name: "Quadratics"), 
         Fabricate(:major_topic, name: "Functions"), 
         Fabricate(:major_topic, name: 'Exponents/Logs'),
-        Fabricate(:major_topic, name: 'Systems of Equations'), 
+        Fabricate(:major_topic, name: 'Systems of Equations'),
       ]
-      @cs = (0..2).collect {|i| 
-        Fabricate :section, teacher: teacher, course: @course, academic_year: Settings.academic_year, block: ('A'..'H').to_a[i]
-      }
-      @os = (0..1).collect {|i| 
-        Fabricate :section, teacher: teacher, course: @course, academic_year: Settings.academic_year-1, block: ('A'..'H').to_a[i]
       3.times {
         @course.sections << Fabricate(:section, teacher: teacher, year: Settings.year)
       }
@@ -33,15 +28,7 @@ describe AssignmentsController do
       expect(asst).to_not be_persisted
       expect(asst.section_assignments.to_a.count).to eq 3
     end
-    
-    it "should not create section assignments for old sections"
-    
-    # it "should assign all of topic names to @major_topics" do
-    #   assigns[:major_topics].should be_kind_of Array
-    #   names = MajorTopic.names_for_topics(assigns[:major_topics])
-    #   assigns[:major_topics].should == names
-    # end
-    
+     
     it "should render the 'new' template" do
       expect(response).to render_template :new
     end
@@ -60,6 +47,7 @@ describe AssignmentsController do
   #      "content"=>""
   #   }
   # }   
+  
   describe "PUT create" do
     before :each do
       teacher = Fabricate :teacher

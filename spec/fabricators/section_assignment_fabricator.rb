@@ -1,17 +1,17 @@
 Fabricator(:section_assignment) do
-	due_date			      { Date.today }
-  assigned           false
-	section
+	due_date			    { Date.today }
+  assigned          false
+	section           
 	assignment
 end
 
-Fabricator :past_section_assignment, from: :section_assignment do
-	due_date			{ Date.today - sequence(:past, 2) }
+Fabricator :section_assignment_past, from: :section_assignment do
+	due_date			{ sequence(:future_date, 1) {|i| Date.today - i } }
   assigned     true
 end
 
-Fabricator :future_section_assignment, from: :section_assignment do
-	due_date			{ Date.today + sequence(:future, 2)  }
+Fabricator :section_assignment_future, from: :section_assignment do
+	due_date			{ sequence(:future_date, 1) {|i| Date.today + i } }
   assigned     true
 end
-	
+

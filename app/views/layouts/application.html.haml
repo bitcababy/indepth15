@@ -38,6 +38,7 @@
 			buttons: 
 				'Sign in': -> $('form', '#signinform').submit()
 				'Cancel': -> 	$('#signinform').dialog "close"
+
 		$('#signin')
 		.bind( 'click', (evt) ->
 			$('#signinform').dialog "open")
