@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
+  before_filter :get_year
+
   # before_filter :reload_settings
 
   ##
@@ -82,8 +84,6 @@ class ApplicationController < ActionController::Base
   #   return  User.find(session[:guest_user_id].nil? ? session[:guest_user_id] = create_guest_user.id : session[:guest_user_id])
   # end
 
-	private
-
 	# called (once) when the user logs in, insert any code your application needs
 	# to hand off from guest_user to current_user.
   # def logging_in
@@ -111,6 +111,10 @@ class ApplicationController < ActionController::Base
 		end
 		
 	private
+  def get_year
+    @year = params[:year] || Settings.academic_year
+  end
+
   def render_404(exception)
     @not_found_path = exception.message
 		##
