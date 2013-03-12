@@ -13,7 +13,7 @@ class Assignment < Document
 
   accepts_nested_attributes_for :section_assignments
 
-  track_history except: [:oid], track_create: true
+  track_history track_create: true
   
   index({name: -1})
   
