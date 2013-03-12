@@ -10,53 +10,55 @@ InDepth::Application.routes.draw do
 	##
 	## Resources
 	##
-	resources :teachers, only: []
-    
-  resources :section_assignments, only: [:edit, :update]
-   
-	resources :courses, only: [:show] do
-    member do
-      get :home
-    end
-  end
-    
-  resources :sections, only: [] do
-    member do
-      get :assignments_pane
-    end
-  end
-  
-  resources :department, only: [] do
+	# 
+	resources :department, only: [] do
     member do
       get :home
       get :about
     end
+    resources :courses, only: []
   end
 
-  resources :assignments, only: [:update, :edit, :create]
+  resources :courses, only: [] do
+    member do
+      get :home
+    end
+    resources :document, only: [:edit, :update]
+    resources :sections, only: [] do
+      member do
+        get :assignments_pane
+      end
+      resources :assignments, only: []
+    end
+    resources :teachers, only: [] do
+      authenticated :user do
+        resources :assignments, only: [:new, :delete, :edit, :update, :create]
+      end
+    end
+    resources :assignments, only: []
+  end
+  
+  resources :sections, only: [] do
+    get :assignments_pane, on: :member
+  end
+  
+  resources :teachers, only: []
+    
+  authenticated :user do
+    resources :assignments, only: [:new, :update, :edit, :create]
+  end
 
 	##
 	## Other
 
 	devise_for :users, controllers: {sessions: 'users/sessions'}
   
- 
   get 'courses/:id/pane/:kind', to: 'courses#get_pane', as: :get_course_pane
+
   get 'departments/:id/pane/:pos', to: 'departments#get_pane', as: :get_dept_pane
 
-	get 'xyzzy', controller: :bridge, action: :import
-	
   get "home", controller: 'departments', action: 'home'
   get "about", controller: 'departments', action: 'about'
-
-	get "courses/:id/year/:year/teacher/:teacher_id/block/:block", to: 'courses#home_with_assignments', as: :home_with_assignments
-      
-  get 'departments/:dept_id/documents/:id/edit', to: 'department_documents#edit', as: :edit_dept_doc
-  put 'departments/:dept_id/documents/:id', to: 'department_documents#update', as: :update_dept_doc
-  get 'courses/:course_id/documents/:id/edit', to: 'course_documents#edit', as: :edit_course_doc
-  put 'courses/:course_id/documents/:id', to: 'course_documents#update', as: :update_course_doc
-   
-  get 'courses/:course_id/teachers/:teacher_id/assignments/new', to: 'assignments#new', as: :new_assignment
 
 	# Temporary routes to deal with old links
 	match 'files/*path', via: :get, controller: :files, action: :pass_on
