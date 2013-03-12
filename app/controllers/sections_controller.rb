@@ -1,9 +1,8 @@
 class SectionsController < ApplicationController
   before_filter :authenticate_user!, only: []
-	before_filter :find_section, except: [:assignments]
+	before_filter :find_section
 
   def assignments_pane
-     # @section = Section.find_by course_id: params[:course_id].to_i, academic_year: params[:year].to_i, teacher_id: params[:teacher_id], block: params[:block].upcase
      @course = @section.course
      respond_to do |format|
        format.html {render layout: !request.xhr?}
