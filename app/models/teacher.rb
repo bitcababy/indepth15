@@ -22,13 +22,14 @@ class Teacher < User
     def for_course(c)
       where(course: c)
     end
-    def current
-      where(academic_year: Settings.academic_year)
-    end
+  end
+  
+  def all_course_names
+    return self.sections.map(:full_name).sort.uniq
   end
 
   def course_names
-    return self.courses.map(&:full_name).sort
+    return self.current_sections.map(:course).uniq.map(&:full_name).sort
   end
   
   def current_sections
