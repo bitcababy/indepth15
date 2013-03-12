@@ -4,12 +4,6 @@ class AssignmentsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :find_assignment, only: [:show, :update, :delete]
   
-  def edit
-		respond_to do |format|
-			format.html { render layout: !request.xhr? }
-    end
-  end
-  
   def new
     course = Course.find params[:course_id]
     teacher = Teacher.find params[:teacher_id]
@@ -21,6 +15,12 @@ class AssignmentsController < ApplicationController
     sections.each {|s| @assignment.section_assignments.new section: s, due_date: dd, block: s.block}
     respond_to do |format|
       format.html { render layout: !request.xhr?}
+    end
+  end
+
+  def edit
+		respond_to do |format|
+			format.html { render layout: !request.xhr? }
     end
   end
 
@@ -45,41 +45,6 @@ class AssignmentsController < ApplicationController
    redirect_to stored_page || home_path
   end
   
-	# 
-  ## REST methods
-  
-	# # PUT assignments/1
-	#   # PUT assignments/1.json
-	#   def update
-	#     respond_to do |format|
-	#       if @assignment.update_attributes(params[:assignment])
-	#         format.html { redirect_to assignment_path(@assignment), notice: 'assignment was successfully updated.' }
-	#         format.json { head :no_content }
-	#       else
-	#         format.html { render action: "edit" }
-	#         format.json { render json: @assignment.errors, status: :unprocessable_entity }
-	#       end
-	#     end
-	# 	return
-	#   end
-	# 
-	# # def create_or_update
-	# # 	oid = params['oid'].to_i
-	# # 	if Assignment.where(oid: oid).exists?
-	# # 		@assignment = Assignment.find_by(oid: oid)
-	# # 		logger.warn "@assignment is nil" unless @assignment
-	# # 	else
-	# # 		redirect_to create
-	# # 	end
-	# # end
-	# def show
-	#     respond_to do |format|
-	#       format.html { render :layout => !request.xhr? }
-	# 		format.js
-	# 		format.json { render json: @assignment}
-	# 	end
-	# end
-	# 
   
   protected
   def find_assignment
