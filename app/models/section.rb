@@ -5,17 +5,15 @@ class Section
   include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable
 
-	field :bl, as: :block, type: String
-	validates :block, presence: true, inclusion: { in: Settings.blocks }
-
-	field :rm, as: :room, type: String, default: ""
+  field :bl, as: :block, type: String
+  validates :block, presence: true, inclusion: { in: Settings.blocks }
 
 	field :se, as: :semesters, type: Symbol
 	validates :semesters, presence: true, inclusion: { in: Course::DURATIONS }
-
-	field :ay, as: :academic_year, type: Integer, default: Settings.academic_year
-	validates :academic_year, presence: true, numericality: true
   
+  field :y, as: :year, type: Integer
+  validates :year, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: Settings.first_year, less_than_or_equal_to: Settings.academic_year + 1}
+
   field :days, type: Array, default: (1..5).to_a
   
   field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}

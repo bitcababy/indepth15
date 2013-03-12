@@ -82,13 +82,13 @@ class Course
 	## Fields
 	##
 	field :no, as: :number, type: Integer
-	validates :number, presence: true, uniqueness: true
-
+	validates :number, presence: true, uniqueness: true, numericality: {only_integer: true}
+  
 	field :du, as: :duration, type: Symbol, default: FULL_YEAR
 	validates :duration, presence: true, inclusion: {in: DURATIONS}
 	
 	field :cr, as: :credits, type: BigDecimal, default: 5.0
-	validates :credits, presence: true, numericality: true
+	validates :credits, presence: true, numericality: true, inclusion: Settings.credits
 	
 	field :fn, as: :full_name, type: String, default: ""
 	validates :full_name, presence: true, length: { minimum: 3 }
