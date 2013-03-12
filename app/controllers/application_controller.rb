@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
     return user_signed_in? ? current_user.full_name : "Guest"
   end
   
-  # helper_method :user_signed_in?
+  helper_method :user_signed_in?
   # 
   def user_signed_in?
     return !!current_user
