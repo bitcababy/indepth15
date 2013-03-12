@@ -8,7 +8,7 @@ class Assignment < Document
   # A section_assignment is broken if the assignment is deleted
   has_many :section_assignments, dependent: :delete, autosave: true
   belongs_to :teacher
-  belongs_to :course
+  belongs_to :course, counter_cache: true
   has_and_belongs_to_many :major_topics
 
   accepts_nested_attributes_for :section_assignments

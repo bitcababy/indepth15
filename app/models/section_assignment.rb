@@ -10,8 +10,8 @@ class SectionAssignment
   
 	index({due_date: -1, assigned: 1})
 	
-	belongs_to :section
-	belongs_to :assignment
+	belongs_to :section, counter_cache: true
+	belongs_to :assignment, counter_cache: true
   belongs_to :course, index: true
   belongs_to :teacher, index: true
   
