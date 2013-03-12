@@ -5,7 +5,8 @@ class Department
   include Mongoid::Timestamps::Short
   
 	field :n, as: :name, type: String
-  field :_id, type: String, default: -> { n }
+  field :fn, as: :full_name, type: String, default: -> { name }
+  field :_id, type: String, default: -> { name }
 
   validates :name, presence: true, length: { minimum: 3 }, uniqueness: true
  
