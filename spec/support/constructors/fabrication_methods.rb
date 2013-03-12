@@ -24,7 +24,7 @@ module FabricationMacros
 
 	def section_with_assignments(options = {})
 		c = options[:course]
-		section = Fabricate(:section, academic_year: Settings.academic_year)
+		section = Fabricate(:section, year: Settings.academic_year)
 		section.course = c if c
 		nf = options[:future] || DEFAULT_FUTURE
 		np = options[:past] || DEFAULT_PAST

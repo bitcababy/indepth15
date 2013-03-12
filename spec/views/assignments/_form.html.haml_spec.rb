@@ -12,7 +12,7 @@ describe 'assignments/_form' do
     ]
     @assignment = Fabricate.build :assignment
     sections = (0..2).collect {|i| 
-      Fabricate :section, teacher: teacher, course: course, academic_year: Settings.academic_year, block: ('A'..'H').to_a[i]
+      Fabricate :section, teacher: teacher, course: course, year: Settings.academic_year, block: ('A'..'H').to_a[i]
     }
     dd = next_school_day
     for section in sections do

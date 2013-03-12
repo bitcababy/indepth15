@@ -142,7 +142,7 @@ module Bridge
 		def create_or_update_sa(hash)
 			hash['oid'] = hash['assgt_id'].to_i
 			hash['assigned'] = hash['use_assgt'] == 'Y'
-			hash['academic_year'] = hash['academic_year'].to_i
+			hash['year'] = hash['year'].to_i
 			hash['course_id'] = hash['course_id'].to_i
 			hash['due_date'] = Date.parse(hash['due_date'])
 			old_id = hash['old_id'] = hash['old_id'].to_i
@@ -150,7 +150,7 @@ module Bridge
 				return update_sa(SectionAssignment.find_by(old_id: old_id), hash)
 			else
 				puts hash
-				section = Section.find_by course: hash['course_id'].to_i, teacher_id: hash['teacher_id'], block: hash['block'], academic_year: hash['academic_year']
+				section = Section.find_by course: hash['course_id'].to_i, teacher_id: hash['teacher_id'], block: hash['block'], year: hash['year']
 				return create_sa(section, hash)
 			end
 		end
@@ -160,7 +160,7 @@ module Bridge
 				begin
 					conn.query("UPDATE assgt_dates_status SET sent=1 WHERE sent=0 AND new=1 AND deleted=1")
 					conn.query("SELECT section_assignments.id AS old_id, assgt_id, name, course_num 
-								AS course_id,teacher_id,block,due_date,year AS academic_year,use_assgt 
+								AS course_id,teacher_id,block,due_date,year AS year,use_assgt 
 								FROM section_assignments,assgt_dates_status 
 								WHERE section_assignments.id=assgt_dates_status.id 
 								AND assgt_dates_status.sent=0 AND assgt_dates_status.deleted=0").each_hash do |hash|

@@ -20,6 +20,8 @@ describe AssignmentsController do
       }
       @os = (0..1).collect {|i| 
         Fabricate :section, teacher: teacher, course: @course, academic_year: Settings.academic_year-1, block: ('A'..'H').to_a[i]
+      3.times {
+        @course.sections << Fabricate(:section, teacher: teacher, year: Settings.year)
       }
       
       get :new, teacher_id: teacher.to_param, course_id: @course.to_param

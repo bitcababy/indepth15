@@ -74,7 +74,7 @@ class CoursesController < ApplicationController
   
   def get_section
     if params[:teacher_id] && params[:teacher_id] && params[:block] && params[:year]
-      return Section.find_by course: @course, teacher: params[:teacher_id], block: params[:block], academic_year: params[:year]
+      return Section.find_by course: @course, teacher: params[:teacher_id], block: params[:block], year: params[:year]
     else
       return nil
     end

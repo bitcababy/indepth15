@@ -4,6 +4,7 @@ Fabricator(:section) do
 	block					{ |attrs| attrs[:block] || sequence(:block) {|i| Settings.blocks[i%Settings.blocks.length]} }
   room          { sequence(:room) {|i| "Room #{i}"} }
   section_assignments []
+	year	                { Settings.academic_year }
   course
   teacher
 end

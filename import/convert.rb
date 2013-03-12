@@ -228,7 +228,7 @@ end
 class Section
   include Mongoid::Document
 	def self.import_from_hash(hash)
-		year = hash[:academic_year] = hash.delete(:year)
+		year = hash[:year]
 		return if year < Settings.start_year
 
 		occurrences = hash.delete(:which_occurrences)
@@ -308,7 +308,7 @@ class SectionAssignment
 		raise "Course #{course_num} not found" unless course
 		teacher = Teacher.find_by(login: teacher_id)
 		raise "Course #{teacher_id} not found" unless teacher
-		section = Section.find_by(course: course, block: block, academic_year: year, teacher: teacher)
+		section = Section.find_by(course: course, block: block, year: year, teacher: teacher)
 		raise "Section #{course}/#{block}/#{teacher_id} not found" unless teacher
 		assignment = Assignment.find_by(oid: assgt_id)
 		return section, assignment

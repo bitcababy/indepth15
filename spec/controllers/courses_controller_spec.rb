@@ -5,6 +5,7 @@ describe CoursesController do
     it "returns http success if the course exists" do
       course = mock('course') do
         stubs(:to_param).returns 1
+        stubs(:year).returns Settings.academic_year
       end
       Course.stubs(:find).returns course
       get 'home', id: course.to_param

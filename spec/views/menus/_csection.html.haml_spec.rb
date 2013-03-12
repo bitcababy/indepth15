@@ -15,7 +15,7 @@ describe 'menus/_csection' do
 			stubs(:block).returns block
 			stubs(:block).returns "B"
 			stubs(:teacher).returns teacher
-			stubs(:academic_year).returns 2013
+			stubs(:year).returns 2013
 			stubs(:label_for_course).returns "Mr. Ed, Block B"
 		end
 		render partial: 'menus/csection', locals: {section: section}

@@ -28,12 +28,12 @@ require 'spec_helper'
 # 
 #     sections = (1..5).collect do |i|
 #       mock("Section #{i}") do
-#         stubs(:academic_year).returns 2013
+#         stubs(:year).returns 2013
 #       end
 #     end
 #     sections += (6..10).collect do |i|
 #       mock("Section #{i}") do
-#         stubs(:academic_year).returns 2012
+#         stubs(:year).returns 2012
 #       end
 #     end
 #   
@@ -51,7 +51,7 @@ require 'spec_helper'
 #     end
 # 
 #     for sas in @sas do
-#       sas.stubs(:academic_year).returns sas.section.academic_year
+#       sas.stubs(:year).returns sas.section.year
 #       sas.stubs(:course).returns sas.section.course
 #       sas.stubs(:teacher).returns sas.section.teacher
 #       sas.stubs(:block).returns sas.section.block

@@ -24,7 +24,7 @@ module CourseMockHelpers
 	end
 
 	def mock_section(opts={})
-		defaults = {academic_year: 2013, 
+		defaults = {year: 2013, 
         block: Settings.blocks.sample, 
         days_for_section: [1,2,3,4,5], 
         room: "222"}
@@ -43,6 +43,7 @@ module CourseMockHelpers
 	def mock_course(opts={})
 		opts.merge!({number: 321, 
         duration: Course::FULL_YEAR, credits: 5.0, 
+        year: Settings.academic_year,
 				full_name: "Fractals 101", 
         }) {|key, v1, v2| v1}
     

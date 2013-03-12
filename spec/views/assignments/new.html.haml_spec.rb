@@ -9,7 +9,7 @@ describe 'assignments/new' do
       Fabricate(:major_topic, name: "Exponentials"),
     ]
     sections = (0..2).collect {|i| 
-      Fabricate :section, teacher: teacher, course: course, academic_year: Settings.academic_year, block: ('A'..'H').to_a[i]
+      Fabricate :section, teacher: teacher, course: course, year: Settings.academic_year, block: ('A'..'H').to_a[i]
     }
     assignment = Fabricate.build :assignment
     @sas = sections.collect {|section| Fabricate :section_assignment, section: section}

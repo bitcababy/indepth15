@@ -16,7 +16,7 @@ class Section
 
   field :days, type: Array, default: (1..5).to_a
   
-  field :_id, type: String, default: ->{ "#{academic_year}/#{course.to_param}/#{teacher.to_param}/#{block}"}
+  field :_id, type: String, default: ->{ "#{year}-#{course.to_param}-#{teacher.to_param}-#{block}" }
 
 	index({ academic_year: -1, semesters: 1, block: 1 }, { name: 'ysb' } )
 	index({academic_year: -1}, {name: 'ay'})
@@ -26,8 +26,8 @@ class Section
 	belongs_to :teacher, index: true
 
   scope :current, ->{ where(academic_year: Settings.academic_year) }
+  scope :current,               -> { where(year: Settings.academic_year) }
 
-  scope :for_year, ->(y){ where(academic_year: y)}
   scope :for_teacher, ->(t){ where(teacher: t) }
   scope :for_block, ->(b){ where(block: b) }
   scope :for_course, ->(c){ where(course: c) }
@@ -41,21 +41,21 @@ class Section
   track_history track_create: true
 
 	def to_s
-		return "#{self.academic_year}/#{self.course.number}/#{self.teacher.login}/#{self.block}"
+		return "#{self.year}/#{self.course.to_param}/#{self.teacher.login}/#{self.block}"
 	end
 	
   def label_for_teacher
     return "#{self.course.short_name || self.course.full_name}, Block #{self.block}"
   end
-    
+
   def label_for_course
     return "#{self.teacher.formal_name}, Block #{self.block}"
   end
-  
+
 	def upcoming_assignments
 		return self.section_assignments.upcoming.asc(:due_date).assigned
 	end
-	
+
 	def current_assignments
     if na = self.section_assignments.next_assignment.first
       return self.section_assignments.due_on(na.due_date).all.assigned

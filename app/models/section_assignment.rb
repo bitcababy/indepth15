@@ -17,6 +17,7 @@ class SectionAssignment
   
   delegate :name, :content, :content=, to: :assignment
 
+  scope :for_year,          -> (y) { where(year: y) }
   scope :due_after,         ->(date){ gt(due_date: date) }
   scope :due_on_or_after,   ->(date) { gte(due_date: date) }
   scope :due_on,            ->(date){ where(due_date: date) }
@@ -27,7 +28,6 @@ class SectionAssignment
   scope :next_assignment,   -> { due_on_or_after(future_due_date).assigned.asc(:due_date).limit(1) }
     
   scope :for_section,       ->(s) { where(section: s) }
-  scope :for_year,          -> (y) { where(academic_year: y) }
   scope :for_teacher,       -> (t) { where(teacher: t) }
   scope :for_course,        -> (c) { where(course: c) }
  
