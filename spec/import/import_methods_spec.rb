@@ -18,12 +18,12 @@
 #       end
 #       
 #       it "returns an assignment" do
-#         Assignment.import_from_hash(@hash).should be_kind_of Assignment
+#         expect(Assignment.import_from_hash(@hash)).to be_kind_of Assignment
 #       end
 #   
 #       it "has an author" do
 #         asst = Assignment.import_from_hash(@hash)
-#         asst.owner.should == @teacher
+#         expect(asst.owner).to eq @teacher
 #       end
 #       it "creates a new assignment if the assgt_id is new" do
 #         expect {
@@ -90,13 +90,13 @@
 #       course = Fabricate :course, number: @hash[:course_num]
 #       Fabricate :assignment, assgt_id: @hash[:assgt_id]
 #       teacher = Fabricate :teacher, login: @hash[:teacher_id]
-#       @section = Fabricate :section, academic_year: @hash[:year].to_i, block: @hash[:block], course: course, teacher: teacher
+#       @section = Fabricate :section, year: @hash[:year].to_i, block: @hash[:block], course: course, teacher: teacher
 # 
 #     end
 # 
 #     it "should create a SectionAssignment if it's new" do
 #       sa = SectionAssignment.import_from_hash(Hash[@hash])
-#       sa.should be_kind_of SectionAssignment
+#       expect(sa).to be_kind_of SectionAssignment
 #     end
 #     
 #     it "should update a SectionAssignment if it's old" do
@@ -107,8 +107,8 @@
 #       }.to change(@section.section_assignments.to_a, :count).by(0)
 #       @hash[:due_date] = "2012-09-08"
 #       sa = SectionAssignment.import_from_hash(Hash[@hash])
-#       sa.should be_kind_of SectionAssignment
-#       sa.due_date.should == Date.new(2012, 9, 8)
+#       expect(sa).to be_kind_of SectionAssignment
+#       expect(sa.due_date).to eq Date.new(2012, 9, 8)
 #     end
 #   end
 # end
@@ -124,17 +124,17 @@
 #           :photo_url=>"http://www.westonmath.org/teachers/abramsj/math4/picture.jpg", 
 #           :phrase=>"this is a password", :login=>"abramsj", :upcoming_msg=>"Upcoming message"}
 #         @teacher = Teacher.import_from_hash(@hash)
-#         @teacher.should_not be_nil
+#         expect(@teacher).to_not be_nil
 #       end
 #     
 #       it "creates an email address from the teacher_id" do
-#         @teacher.email.should == "abramsj@mail.weston.org"
+#         expect(@teacher.email).to eq "abramsj@mail.weston.org"
 #       end
 #       it "creates a password from the phrase" do
-#         @teacher.password.should == "tiap"
+#         expect(@teacher.password).to eq "tiap"
 #       end
 #       it "sets current from old_current" do
-#         @teacher.current.should be_true
+#         expect(@teacher.current).to be_true
 #       end
 #       
 #     end
@@ -149,7 +149,7 @@
 #       hash = {:dept_id=>1, :course_num=>332, :number=>4, :semesters=>12, :block=>"G", :year=>2011, 
 #               :which_occurrences=>"all", :room=>200, :teacher_id=>"davidsonl"}
 #       section = Section.import_from_hash(hash)
-#       section.should be_kind_of Section
+#       expect(section).to be_kind_of Section
 #       pending "Unfinished test"
 #     end
 #   end
