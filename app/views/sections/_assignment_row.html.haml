@@ -1,9 +1,4 @@
-- if sa.assignment
-	%tr.assignment
-		%td.name= sa.name
-		%td.due_date= assignment_date_string(sa.due_date)
-		%td.asst-content!= sa.assignment ? sa.assignment.content : 'Something is wrong with this assignment. Please let Mr. Davidson know.'
-		- if editable?
-			%td.assigned=sa.assigned
-			%td
-				%button= link_to "Edit", edit_section_assignment_path(sa)
+%tr.assignment
+	%td.name= sa.assignment.name
+	%td.due_date= assignment_date_string(sa.due_date)
+	%td.asst-content!= a.assignment.content
