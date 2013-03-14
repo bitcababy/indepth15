@@ -133,6 +133,8 @@ class Course
   
   def current?
     self.sections.count > 0
+  def <=>(c)
+    self.number <=> c.number
   end
 
   def branches

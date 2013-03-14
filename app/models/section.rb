@@ -39,6 +39,14 @@ class Section
   end
 
   track_history track_create: true
+  
+  def <=>(s)
+    return self.year <=> s.year unless self.year == s.year
+    return self.course <=> s.course unless self.course == s.course
+    return self.teacher <=> s.teacher unless self.teacher == s.teacher
+    return self.block <=> s.block unless self.block == s.block
+  end
+  
     
 	def to_s
 		return "#{self.year}/#{self.course.to_param}/#{self.teacher.login}/#{self.block}"
