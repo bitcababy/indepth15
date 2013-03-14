@@ -5,19 +5,13 @@ describe 'assignments/_form' do
 
   before :each do
     teacher = Fabricate :teacher
-    course = Fabricate :course
-    course.major_topics = [
-      Fabricate(:major_topic, name: "Sequence"),
-      Fabricate(:major_topic, name: "Exponentials"),
-    ]
+    course = Fabricate :course, num_sections: 3
     @assignment = Fabricate.build :assignment
-    sections = (0..2).collect {|i| 
-      Fabricate :section, teacher: teacher, course: course, year: Settings.academic_year, block: ('A'..'H').to_a[i]
-    }
     dd = next_school_day
-    for section in sections do
+    for section in course.sections do
       @assignment.section_assignments.build section: section, due_date: dd
     end
+  
   	render partial: 'assignments/form', as: :assignment, object: @assignment
   end
   

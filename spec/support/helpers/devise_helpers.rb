@@ -12,7 +12,7 @@ module DeviseHelpers
   end
 
   def as_visitor(user=nil, &block)
-    current_user = user || Fabricate.stub(:user)
+    current_user = user || Fabricate.stubs(:user)
     if request.present?
       sign_out(current_user)
     else

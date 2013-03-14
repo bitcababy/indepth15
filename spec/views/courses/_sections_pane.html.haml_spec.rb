@@ -19,7 +19,7 @@ describe "courses/_sections_pane" do
     expect(rendered).to have_selector('div#sections_pane') do |div|
       expect(div).to contain('Course 321 — Full Year ')
       expect(div).to contain("Some description")
-      expect(div).to contain("In the #{academic_year_string(Settings.year)} academic year there are 6 sections of Fractals 101.")
+      expect(div).to contain("In the #{academic_year_string(Settings.academic_year)} academic year there are 6 sections of Fractals 101.")
     end
   end
 	
