@@ -16,7 +16,7 @@ describe AssignmentsController do
         Fabricate(:major_topic, name: 'Systems of Equations'),
       ]
       3.times {
-        @course.sections << Fabricate(:section, teacher: teacher, year: Settings.year)
+        @course.sections << Fabricate(:section, teacher: teacher, year: Settings.academic_year)
       }
       expect(@course.sections.count).to eq 3
       get :new, teacher_id: teacher.to_param, course_id: @course.to_param
