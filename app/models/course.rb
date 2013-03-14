@@ -120,9 +120,6 @@ class Course
   end
 
   belongs_to :department, index: true
-  has_many :assignments
-  has_and_belongs_to_many :major_topics
-  has_and_belongs_to_many :teachers
   has_many :assignments, autosave: true
   has_and_belongs_to_many :major_topics, autosave: true
   has_and_belongs_to_many :teachers, autosave: true
@@ -132,24 +129,28 @@ class Course
 	##
 	## Scopes
 	##
+	# 
+	
   track_history except: [:number]
   
-  def current?
-    self.sections.count > 0
   def <=>(c)
     self.number <=> c.number
   end
 
-  def branches
-    BRANCH_MAP[self.number].to_a
   def to_s
     self.full_name
   end
   
+  def current?
+    return self.sections.where(year: Settings.academic_year).exists?
   end
 
   def current_teachers
-    return self.teachers.current
+    return self.sections.current.map(&:teacher).uniq
+  end
+
+  def branches
+    BRANCH_MAP[self.number].to_a
   end
 
   def add_major_topics
