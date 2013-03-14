@@ -20,7 +20,7 @@ class DepartmentsController < ApplicationController
     
   protected
   def find_department
-    @dept = Department.first
+    @dept = params[:dept_id] ? Department.find(params[:dept_id]) : Department.first
   end
 
 end
