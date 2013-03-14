@@ -227,6 +227,11 @@ end
 
 class Section
   include Mongoid::Document
+  DUR_MAP = {
+    1 => Course::FIRST_SEMESTER,
+    2 => Course::SECOND_SEMESTER,
+    3 => Course::FULL_YEAR,
+    12 => Course::FULL_YEAR,
 	def self.import_from_hash(hash)
 		year = hash[:year]
 		return if year < Settings.start_year
@@ -252,6 +257,7 @@ class Section
 		teacher = Teacher.find_by login: teacher_id
     teacher.courses << course
     teacher.save!
+		duration = DUR_MAP[hash[:semester]] || Course::FULL_YEAR
 
 		hash[:teacher] = teacher
 		section = course.sections.build(hash)

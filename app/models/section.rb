@@ -8,8 +8,8 @@ class Section
   field :bl, as: :block, type: String
   validates :block, presence: true, inclusion: { in: Settings.blocks }
 
-	field :se, as: :semesters, type: Symbol
-	validates :semesters, presence: true, inclusion: { in: Course::DURATIONS }
+	field :du, as: :duration, type: Symbol
+	validates :duration, presence: true, inclusion: { in: Course::DURATIONS }
   
   field :y, as: :year, type: Integer
   validates :year, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: Settings.first_year, less_than_or_equal_to: Settings.academic_year + 1}

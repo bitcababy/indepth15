@@ -1,7 +1,7 @@
 Fabricator(:section) do
   transient             :sas_count
 	year	                { Settings.academic_year }
-	semesters			        { Course::DURATIONS.sample }
+	duration			        { Course::DURATIONS.sample }
   room                  { sequence(:room) {|i| "Room #{i}"} }
 	block	                { sequence(:block_name) {|i| Settings.blocks[i%Settings.blocks.length]} }
   section_assignments   []
