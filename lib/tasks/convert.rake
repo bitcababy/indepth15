@@ -2,10 +2,9 @@ CLASSES = %W[department occurrence teacher course section assignment section_ass
 
 namespace :convert do
 	CLASSES.each do |klass|
-    task klass.downcase.intern => :environment do
+    task klass.downcase.pluralize.intern => :environment do
       require Rails.root.join('import/convert')
       puts "Converting #{klass}"
-      BrowserRecord.delete_all
   		arr = Convert.import_xml_file "#{klass.tableize}.xml"
   		Convert.from_hashes klass.camelize.constantize, arr
     end
