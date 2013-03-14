@@ -17,6 +17,8 @@ describe 'assignments/new' do
     assign(:assignment, assignment)
     assign(:sas, @sas)
     render
+  before do
+    stub_template 'assignments/_form' => "form"
   end
   
   it "displays a form" do

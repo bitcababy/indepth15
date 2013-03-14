@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe 'sections/_assignment_set' do
+  before do
+    stub_template 'sections/_assignment_table' => "foo"
+  end
 	it "renders a table containing a set of assignments" do
 		asst = mock('assignment') do
 			stubs(:content).returns "Assignment content"
