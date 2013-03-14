@@ -14,6 +14,7 @@ Spork.prefork do
   require 'capybara/rspec'
   require 'devise/test_helpers'
   require 'mongoid-history'
+  require 'fabrication/syntax/make'
 
   class HistoryTracker
     include Mongoid::History::Tracker
@@ -35,14 +36,13 @@ Spork.prefork do
   #   config.stretches = 1
   # end
 
-
   include Utils
 
   Capybara.configure do |c|
   	c.default_driver = :rack_test
   	c.javascript_driver = :webkit
   	c.default_selector = :css
-    c.default_wait_time = 5
+    c.default_wait_time = 10
   end
 
   # Requires supporting ruby files with custom matchers and macros, etc,
@@ -58,6 +58,9 @@ Spork.prefork do
     config.mock_with :mocha
     # config.mock_with :flexmock
     # config.mock_with :rr
+    # 
+    
+    # config.syntax = :expect
 
     # If true, the base class of anonymous controllers will be inferred
     # automatically. This will be the default behavior in future versions of
@@ -69,20 +72,32 @@ Spork.prefork do
     config.include(EmailSpec::Helpers)
     config.include(EmailSpec::Matchers)
     config.include Devise::TestHelpers, :type => :controller
-    config.include Devise::TestHelpers, :type => :view
+    # config.include Devise::TestHelpers, :type => :routing
+    config.include Warden::Test::Helpers, type: :feature
 
     DatabaseCleaner.orm = "mongoid"
 
+    # per http://p373.net/2012/08/07/capybara-ajax-requirejs-and-how-to-pull-your-hair-out-in-8-easy-hours/
     require 'database_cleaner'
     config.before :suite do
       DatabaseCleaner.strategy = :truncation
       DatabaseCleaner.orm = 'mongoid'
     end
     
+    config.before :each do
+      DatabaseCleaner.start
+    end
+    config.after :each do
+      DatabaseCleaner.clean
+    end
+    
+    config.after :suite do
+      DatabaseCleaner.clean
+    end
+    
   	# Clear out 
   	config.before(:each) do
       Settings.reload!
-  		DatabaseCleaner.clean
       Warden.test_mode!
       Mongoid::IdentityMap.clear
   	end
