@@ -57,7 +57,7 @@ module Convert
 		::Section => {
 				"dept_id" => :dept_id,
 				"course_num" => :course_num,
-				"semester" => :semesters,
+				"semester" => :semester,
 				"block" => :block,
 				"year" => :year,
 				"room" => :room,
@@ -156,12 +156,12 @@ class Department
   include Mongoid::Document
   def self.import_from_hash(hash)
     DepartmentDocument.delete_all
-    dept = Department.create name: hash[:name]
-    dept.homepage_docs.create(title: "How to use the new Westonmath app", content: hash[:how_to_use], pos: 0)
-    dept.homepage_docs.create(title: "Why not Teacherweb?", content: hash[:why], pos: 1)
-    dept.homepage_docs.create(title: "News", content: hash[:news], pos: 2)
-    dept.homepage_docs.create(title: "Resources", content: hash[:resources], pos: 3)
-    dept.homepage_docs.create(title: "Puzzle", content: hash[:puzzle], pos: 4)
+    dept = Department.new name: 'whs_md', full_name: 'Math Department'
+    dept.homepage_docs.build(title: "How to use the new Westonmath app", content: hash[:how_to_use], pos: 0)
+    dept.homepage_docs.build(title: "Why not Teacherweb?", content: hash[:why], pos: 1)
+    dept.homepage_docs.build(title: "News", content: hash[:news], pos: 2)
+    dept.homepage_docs.build(title: "Resources", content: hash[:resources], pos: 3)
+    dept.homepage_docs.build(title: "Puzzle", content: hash[:puzzle], pos: 4)
     
     dept.save!
   end
@@ -187,12 +187,12 @@ class Course
 			d = massage_content hash.delete(:description)
 			
 			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
-			course = Department.first.courses.create hash
-      course.documents.create kind: :resources, content: r
-      course.documents.create kind: :policies, content: p
-      course.documents.create kind: :news, content: n
-      course.documents.create kind: :description, content: d
-      course.documents.create kind: :information, content: i
+			course = Department.first.courses.new hash
+      course.documents.build kind: :resources, content: r
+      course.documents.build kind: :policies, content: p
+      course.documents.build kind: :news, content: n
+      course.documents.build kind: :description, content: d
+      course.documents.build kind: :information, content: i
  			return course.save!
 		end
 	end
@@ -220,54 +220,37 @@ class Teacher
 		# puts "#{hash[:generic_msg]}"
 		hash[:upcoming_msg] = coder.decode(hash[:upcoming_msg])
 		[:phrase, :old_current, :teacher_id, :orig_id].each {|k| hash.delete(k)}
-		teacher = self.create! hash
-		return teacher
+		return Department.first.teachers.create! hash
 	end
 end
 
 class Section
-  include Mongoid::Document
   DUR_MAP = {
     1 => Course::FIRST_SEMESTER,
     2 => Course::SECOND_SEMESTER,
     3 => Course::FULL_YEAR,
     12 => Course::FULL_YEAR,
+  }
 	def self.import_from_hash(hash)
 		year = hash[:year]
 		return if year < Settings.start_year
 
-		occurrences = hash.delete(:which_occurrences)
-    
-		hash[:semesters] = case
-    when 1
-      Course::FIRST_SEMESTER
-    when 2
-      Course::SECOND_SEMESTER
-    when 3
-    when 12
-      Course::FULL_YEAR
-    end
-		teacher_id = hash.delete(:teacher_id)
-		hash[:room] = hash[:room].to_s
-		
-		course_number = hash.delete(:course_num)
-		course = Course.find_by(number: course_number)
-		hash[:course] = course
-		
-		teacher = Teacher.find_by login: teacher_id
-    teacher.courses << course
-    teacher.save!
+		occurrences = hash[:which_occurrences]
+		room = hash[:room].to_s
+    block = hash[:block]
 		duration = DUR_MAP[hash[:semester]] || Course::FULL_YEAR
+		course = Course.find_by(number: hash[:course_num])
+		teacher = Teacher.find_by login: hash[:teacher_id]
 
-		hash[:teacher] = teacher
-		section = course.sections.build(hash)
-  
 		occurrences = (occurrences == 'all') ? (1..5).to_a : (occurrences.split(',').collect {|x| x.to_i})
+    days = []
 		for occ in occurrences
-      section.days << Occurrence.find_by(block: section.block, number: occ).day
+      days << Occurrence.find_by(block: block, number: occ).day
 		end
-    section.days.sort!
-
+    days.sort!
+  
+		section = course.sections.build block: block, duration: duration, year: year, days: days, room: room, course: course, teacher: teacher
+    puts section.attributes unless section.valid?
     section.save!
 		return section
 	end
