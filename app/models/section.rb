@@ -16,8 +16,10 @@ class Section
 
   field :days, type: Array, default: (1..5).to_a
 	field :rm, as: :room, type: String, default: ""
+  
+  index({year: -1, block: 1})
 
-  field :_id, type: String, default: ->{ "#{year}-#{course.to_param}-#{teacher.to_param}-#{block}" }
+ # field :_id, type: String, default: ->{ "#{year}-#{course.to_param}-#{teacher.to_param}-#{block}-#{duration}" }
 
 	has_many :section_assignments, dependent: :delete, autosave: true
 	belongs_to :course, index: true
@@ -27,8 +29,8 @@ class Section
   scope :for_teacher,           ->(t){ where(teacher: t) }
   scope :for_block,             ->(b){ where(block: b) }
   scope :for_course,            ->(c){ where(course: c) }
-  scope :for_first_semester,    ->{ any_in(semesters: [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::FIRST_SEMESTER]) }
-  scope :for_second_semester,   ->{ any_in(semesters: [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::SECOND_SEMESTER]) }
+  scope :for_first_semester,    ->{ where(:duration.in => [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::FIRST_SEMESTER]) }
+  scope :for_second_semester,   ->{ where(:duration.in => [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::SECOND_SEMESTER]) }
   scope :for_semester,          ->(s){ (s == Course::FIRST_SEMESTER) ? for_first_semester : for_second_semester }
 
   # delegate :major_topics, to: :course
@@ -45,11 +47,15 @@ class Section
     return self.course <=> s.course unless self.course == s.course
     return self.teacher <=> s.teacher unless self.teacher == s.teacher
     return self.block <=> s.block unless self.block == s.block
+    super
   end
   
+  def current?
+    self.year == Settings.academic_year
+  end
     
 	def to_s
-		return "#{self.year}/#{self.course.to_param}/#{self.teacher.login}/#{self.block}"
+		return "#{self.year}/#{self.course.to_param}/#{self.teacher.login}/#{self.block}/#{duration}"
 	end
 
   def label_for_teacher
