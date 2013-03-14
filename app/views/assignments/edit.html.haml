@@ -1,4 +1,5 @@
 = simple_form_for @assignment, as: :assignment, method: :put do |f|
 	%fieldset
 		#editor= f.input :content, as: :ckeditor, input_html: { height: 600, toolbar: "Full" }, label: 'Contents'
-	
+	- content_for :page_title, 'Assignment editor'
+- content_for :page_header, 'Update assignment'
