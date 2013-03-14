@@ -12,8 +12,6 @@ class Teacher < User
 
 	index({current: -1})
   
-  has_many :assignments
-  has_and_belongs_to_many :courses
   has_many :assignments, autosave: true
   has_and_belongs_to_many :courses, autosave: true do
     def current
@@ -35,18 +33,14 @@ class Teacher < User
     end
   end
   
-  def all_course_names
+   def all_course_names
     return self.sections.map(:full_name).sort.uniq
   end
 
   def course_names
-    return self.current_sections.map(:course).uniq.map(&:full_name).sort
+    return self.courses.current.map(&:full_name).sort
   end
-  
-  def current_sections
-    return self.sections.current
-  end
-  
+   
   def next_asst_for_course(c)
     
   end
