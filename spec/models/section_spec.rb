@@ -30,19 +30,34 @@ describe Section do
   subject { Fabricate :section }
 	
 	context "scopes" do
+    before do
+			2.times { Fabricate :section, duration: Course::FULL_YEAR }
+			3.times { Fabricate :section, duration: Course::FIRST_SEMESTER }
+			4.times { Fabricate :section, duration: Course::SECOND_SEMESTER }
+    end
+
+    it "should have a 'current' scope" do
+      expect(Section.current.count).to eq 9
+    end
+    
+    it "should have a 'for_first_semester' scope" do
+      expect(Section.for_first_semester.count).to eq 5
+    end
+    
+    it "should have a 'for_second_semester' scope" do
+      expect(Section.for_second_semester.count).to eq 6
+    end
+      
     it "should have a 'for_semester' scope" do
-			5.times { Fabricate :section, semesters: Course::FULL_YEAR }
-			2.times { Fabricate :section, semesters: Course::FIRST_SEMESTER }
-			3.times { Fabricate :section, semesters: Course::SECOND_SEMESTER }
-      expect(Section.for_first_semester.count).to eq 7
-      expect(Section.for_semester(Course::FIRST_SEMESTER).count).to eq 7
+      expect(Section.for_semester(Course::FIRST_SEMESTER).count).to eq 5
+      expect(Section.for_semester(Course::SECOND_SEMESTER).count).to eq 6
     end
 			
 	end # Scopes
 		
 	context "validation" do
 		it { should validate_presence_of :block }
-		it { should validate_presence_of :semesters }
+		it { should validate_presence_of :duration }
 	end
 	
 	context "past and future assignment handling" do
