@@ -37,7 +37,7 @@ describe ApplicationHelper do
 		it "doesn't add 'display: none' if the condition is false" do
 			attrs = {}
 			hidden_div_if(false, attrs)
-			expect(attrs['style']).to_not == 'display: none'
+			expect(attrs['style']).to_not eq 'display: none'
 			# puts content_tag('div', attrs)
 		end
 	end
