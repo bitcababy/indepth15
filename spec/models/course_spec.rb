@@ -60,6 +60,15 @@ describe Course do
         expect(course.sections.for_teacher(t2).count).to eq 2
       end
     end
+    
+    describe 'sections.current' do
+      it "returns the sections taught this year" do
+        course = Fabricate :course, num_sections: 2
+        3.times { course.sections << Fabricate(:section, course: course, year: Settings.academic_year - 1) }
+        expect(course.sections.current.count).to eq 2
+      end
+    end
+        
   end
     
   it "should return the teachers of the current sections" do
