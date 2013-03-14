@@ -22,25 +22,36 @@ describe Teacher do
       t = Fabricate :teacher, section_count: 3
       expect(t.sections.count).to eq 3
     end
-      
 	end
 
-	context "courses" do
-		before :each do
+	context "courses & sections" do
+		before do
 			@teacher = Fabricate(:teacher)
-			course2 = Fabricate(:course, full_name: "Geometry Honors")
-			course1 = Fabricate(:course, full_name: "Fractals")
-			Fabricate(:section, teacher: @teacher, course: course1, block: "A")
-			Fabricate(:section, teacher: @teacher, course: course1, block: "B")
-			Fabricate(:section, teacher: @teacher, course: course2, block: "C")
-			Fabricate(:section, teacher: @teacher, course: course2, block: "D")
+			c1 = Fabricate(:course, full_name: "Geometry Honors", teacher: @teacher)
+			c2 = Fabricate(:course, full_name: "Fractals", teacher: @teacher)
+      3.times {Fabricate :section, course: c1, teacher: @teacher }
+      2.times {Fabricate :section, course: c2, teacher: @teacher }
+      6.times {Fabricate :section_earlier_year, course: c1, teacher: @teacher }
 		end
-			
+    
+    describe 'sections.current' do
+      it "should return all sections taught this year" do
+        expect(@teacher.sections.count).to eq 11
+        expect(@teacher.sections.current.count).to eq 5
+      end
+    end
+ 			
 		describe '#courses' do
 			it "should return the courses that a teacher is teaching" do
 				expect(@teacher.courses.count).to eq 2
 			end
 		end
+    
+    describe 'courses.current' do
+      it "should return the courses that a teacher is teaching this year" do
+        expect(@teacher.courses.current.count).to eq 2
+      end
+    end
 		
 		describe '#course_names' do
 			it "should return the names of the courses that a teacher is teaching" do
