@@ -1,0 +1,13 @@
+%tr.assignment
+	%td.name
+		= sa.assignment.name
+	%td.due_date
+		= simple_form_for sa, method: :put do |f|
+			= f.input :due_date, as: :date_picker
+	%td.asst-content!= sa.assignment ? sa.assignment.content : 'Something is wrong with this assignment. Please let Mr. Davidson know.'
+	- if editable?
+		%td.assigned
+			= simple_form_for sa, method: :put do |f|
+				= f.input :assigned, as: :checkbox
+		%td
+			%button= link_to "Edit", edit_assignment(sa.assignment)
