@@ -2,54 +2,16 @@ InDepth::Application.routes.draw do
 	
   mount Ckeditor::Engine => '/ckeditor'
 
-  authenticated :user do
-    root to: "departments#home"
-  end
-	root to: "departments#home"
-	
-	##
-	## Resources
-	##
-	# 
-	resources :department, only: [] do
-    member do
-      get :home
-      get :about
-    end
-    resources :courses, only: []
-  end
-
-  resources :courses, only: [] do
-    member do
-      get :home
-    end
-    resources :document, only: [:edit, :update]
-    resources :sections, only: [] do
-      member do
-        get :assignments_pane
-      end
-      resources :assignments, only: []
-    end
-    resources :teachers, only: [] do
-      authenticated :user do
-        resources :assignments, only: [:new, :delete, :edit, :update, :create]
-      end
-    end
-    resources :assignments, only: []
-  end
+ 	root to: "departments#home"
   
-  resources :sections, only: [] do
-    get :assignments_pane, on: :member
-  end
+  get 'sections/:id/assignments_pane', to: 'sections#assignments_pane'
   
-  resources :teachers, only: []
-    
-  authenticated :user do
-    resources :assignments, only: [:new, :update, :edit, :create]
-  end
+  get 'courses/:course_id/teachers/:teacher_id/assignments/new', to: 'assignments#new', as: :new_assignment
+  resources :assignments, only: [:create, :edit, :update, :delete]
 
 	##
 	## Other
+	# 
 
 	devise_for :users, controllers: {sessions: 'users/sessions'}
   
@@ -59,6 +21,14 @@ InDepth::Application.routes.draw do
 
   get "home", controller: 'departments', action: 'home'
   get "about", controller: 'departments', action: 'about'
+
+  get 'departments/:dept_id/edit_dept_doc/:id', to: 'department_documents#edit', as: :edit_dept_doc
+  put 'departments/:dept_id/update_dept_doc/:id', to: 'department_documents#update', as: :update_dept_doc
+  
+  get 'courses/:id/home', to: 'courses#home', as: :course_home
+  get 'courses/:id/home/:section_id', to: 'courses#home', as: :course_home_with_assts
+  
+  resources :section_assignments, only: [:update]
 
 	# Temporary routes to deal with old links
 	match 'files/*path', via: :get, controller: :files, action: :pass_on
