@@ -114,6 +114,9 @@ class Course
     def for_teacher(t)
       where(teacher: t)
     end
+    def current
+      @target.select {|section| section.current? }
+    end
   end
 
   belongs_to :department, index: true

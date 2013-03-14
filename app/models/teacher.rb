@@ -30,6 +30,9 @@ class Teacher < User
     def for_course(c)
       where(course: c)
     end
+    def current
+      @target.select { |s| s.current? }
+    end
   end
   
   def all_course_names
