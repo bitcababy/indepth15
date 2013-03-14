@@ -139,6 +139,10 @@ class Course
 
   def branches
     BRANCH_MAP[self.number].to_a
+  def to_s
+    self.full_name
+  end
+  
   end
 
   def current_teachers

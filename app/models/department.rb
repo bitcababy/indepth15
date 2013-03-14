@@ -12,7 +12,6 @@ class Department
  
   embeds_many :homepage_docs, class_name: 'DepartmentDocument'
   
-  has_many :courses 
   has_many :courses, autosave: true
   has_and_belongs_to_many :teachers, autosave: true do
     def current
@@ -20,4 +19,8 @@ class Department
     end
   end
   
- end
+  def to_s
+    self.full_name
+  end
+
+end

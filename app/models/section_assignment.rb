@@ -49,7 +49,7 @@ class SectionAssignment
   track_history track_create: true
 
 	def to_s
-		return "#{self.section}/#{self.assignment.oid}"
+		return "#{due_date}/#{assigned}"
 	end
   
   def potential_major_topics
