@@ -8,8 +8,13 @@ describe Department do
   it { should have_many :courses }
   
   context "Fabrication" do
-    it "fabricates a validate department" do
+    it "fabricates a valid department" do
       expect(Fabricate(:department)).to be_valid
     end
+    
+    it "fabricates a valid department with documents" do
+      expect(Fabricate(:department_with_docs)).to be_valid
+    end
+      
   end
 end
