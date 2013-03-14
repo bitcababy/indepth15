@@ -120,6 +120,9 @@ class Course
   has_many :assignments
   has_and_belongs_to_many :major_topics
   has_and_belongs_to_many :teachers
+  has_many :assignments, autosave: true
+  has_and_belongs_to_many :major_topics, autosave: true
+  has_and_belongs_to_many :teachers, autosave: true
 
   embeds_many :documents, class_name: 'CourseDocument'
 

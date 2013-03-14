@@ -14,6 +14,14 @@ class Teacher < User
   
   has_many :assignments
   has_and_belongs_to_many :courses
+  has_many :assignments, autosave: true
+  has_and_belongs_to_many :courses, autosave: true do
+    def current
+      @target.select {|c| c.current? }
+    end
+  end
+
+  has_and_belongs_to_many :departments, autosave: true
 
 	scope :current, where(current: true)
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
