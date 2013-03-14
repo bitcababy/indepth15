@@ -10,8 +10,12 @@ Fabricator(:course) do
   department
   occurrences     (1..5).to_a
   after_create     { |course, t|
+    if teacher = t[:teacher]
+      teacher.courses << course
+      teacher.save
+    end
     if (n = t[:num_sections])
-      teacher = t[:teacher] || Fabricate(:teacher)
+      teacher ||= Fabricate(:teacher)
       n.times { course.sections << Fabricate(:section, teacher: teacher) } 
     end
   }
