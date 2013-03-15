@@ -10,7 +10,7 @@ namespace :convert do
     end
   end
     
-	task :all => CLASSES.collect {|c| c.intern } 
+	task :all => CLASSES.collect {|c| c.downcase.pluralize.intern } 
  end
 
 namespace :update do
