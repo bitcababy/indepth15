@@ -16,11 +16,10 @@ describe 'courses/_section_table_row' do
       
     render partial: 'courses/section_table_row', locals: {section: section}
   
-    expect(rendered).to have_selector('tr') do |row|
-      expect(row).to have_selector('td.block', content: "B")
-      expect(row).to have_selector('td.teacher', content: "Mr. Ed")
-      expect(row).to have_selector('td.room', content: "5")
-    end
+    expect(rendered).to have_selector('tr')
+    expect(rendered).to have_selector('td.block', text: "B")
+    expect(rendered).to have_selector('td.teacher', text: "Mr. Ed")
+    expect(rendered).to have_selector('td.room', text: "5")
   end
 	
 end
