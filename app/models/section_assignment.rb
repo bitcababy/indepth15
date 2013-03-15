@@ -2,6 +2,7 @@ class SectionAssignment
 	include Mongoid::Document
   include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable
+  include Utils
   
 	field :dd, as: :due_date, type: Date, default: -> { Utils.future_due_date }
 	field :assigned, type: Boolean, default: false
