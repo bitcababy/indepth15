@@ -8,22 +8,22 @@
 	%ul
 		- if @section
 			%li#assignments
-				%a{href: assignments_pane_section_path(@section), title: 'Assignments'}= "Assignments for #{@course.full_name}, Block #{@section.block}"
-		%li
-			%a{href: get_course_pane_path(@course, :sections), title: 'Sections'} Sections
-		%li
-			%a{href: get_course_pane_path(@course, :information), title: 'Information'} Information
-		%li
-			%a{href: get_course_pane_path(@course, :resources), title: 'Resources'} Resources
-		%li
-			%a{href: get_course_pane_path(@course, :policies), title: 'Policies'} Policies
-		%li
-			%a{href: get_course_pane_path(@course, :news), title: 'News'} News
+				%a{href: assignments_pane_path(@section)}= "Assignments for #{@course.full_name}, Block #{@section.block}"
+		%li.sections
+			%a{href: get_course_pane_path(@course, :sections)} Sections
+		%li.information
+			%a{href: get_course_pane_path(@course, :information)} Information
+		%li.resources
+			%a{href: get_course_pane_path(@course, :resources)} Resources
+		%li.policies
+			%a{href: get_course_pane_path(@course, :policies)} Policies
+		%li.home
+			%a{href: get_course_pane_path(@course, :news)} News
 #editor
 
 :coffeescript
 	$(document).ready ->
-		editor = $('#editor')
+		editor = $('#editor')	
 
 		setupTabEditor = (editor, tabDiv) ->
 			editor.dialogForm "init",
