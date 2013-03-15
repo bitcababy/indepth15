@@ -4,9 +4,6 @@ ruby '2.0.0'
 
 gem 'rails', '>= 3.2.6'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,8 +29,6 @@ gem 'jquery-rails'
 # Use unicorn as the app server
 gem 'unicorn'
 
-# To use debugger
-# gem 'debugger'
 
 gem 'bundler'
 gem 'mongo'
@@ -97,6 +92,8 @@ group :development, :test do
 	gem 'fabrication', '>= 2.0'
 	gem 'foreman'
   # gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
+  # To use debugger
+  gem 'debugger'
 end
 
 group :development do
