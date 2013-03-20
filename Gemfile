@@ -104,10 +104,9 @@ group :test do
 	gem 'rspec-instafail'
 	gem 'mongoid-rspec'
   gem 'spork-rails'
-  gem 'rspec-rails-mocha'
+  # gem 'rspec-rails-mocha'
   gem 'rspec-html-matchers'
   gem 'rspec-given'
-
   # gem 'nokogiri', '= 1.5.2'
 	gem 'capybara'
 	gem 'database_cleaner'
