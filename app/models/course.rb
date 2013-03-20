@@ -110,7 +110,7 @@ class Course
  	##
 	## Associations
 	##
-	has_many :sections do
+	has_many :sections, autosave: true do
     def for_teacher(t)
       where(teacher: t)
     end
@@ -119,10 +119,9 @@ class Course
     end
   end
 
-  belongs_to :department, index: true
+  belongs_to :department
   has_many :assignments, autosave: true
   has_and_belongs_to_many :major_topics, autosave: true
-  has_and_belongs_to_many :teachers, autosave: true
 
   embeds_many :documents, class_name: 'CourseDocument'
 
@@ -141,12 +140,16 @@ class Course
     self.full_name
   end
   
-  def current?
-    return self.sections.where(year: Settings.academic_year).exists?
+  def teachers
+    return (sections.map &:teacher).uniq
+  end
+  
+  def current_teachers
+    return teachers.select {|t| t.current}
   end
 
-  def current_teachers
-    return self.sections.current.map(&:teacher).uniq
+  def current?
+    return self.sections.limit(1).where(year: Settings.academic_year).exists?
   end
 
   def branches

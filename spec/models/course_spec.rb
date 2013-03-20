@@ -11,7 +11,6 @@ describe Course do
 	it { should have_many(:sections) }
   it { should belong_to :department }
   it { should have_and_belong_to_many :major_topics }
-  it { should have_and_belong_to_many :teachers }
   
   describe "Fabricator" do
     it "creates a valid course" do
@@ -68,31 +67,26 @@ describe Course do
         expect(course.sections.current.count).to eq 2
       end
     end
-        
+  end
+  
+  it "should return the teachers of a course" do
+    t1 = Fabricate :teacher
+    t2 = Fabricate :teacher
+    course = Fabricate :course, num_sections: 1, teacher: t1
+    Fabricate :section, teacher: t2, course: course
+    expect(course.teachers).to include t1
+    expect(course.teachers).to include t2
   end
     
   it "should return the teachers of the current sections" do
     t1 = Fabricate :teacher
     t2 = Fabricate :teacher
-    course = Fabricate :course
+    course = Fabricate :course, num_sections: 1, teacher: t1
     Fabricate :section, teacher: t1, course: course
     Fabricate :section, teacher: t2, course: course
-    expect(course.current_teachers).to contain t1
-    expect(course.current_teachers).to contain t2
+    expect(course.sections.count).to eq 3
+    expect(course.current_teachers).to include t1
+    expect(course.current_teachers).to include t2
   end
-  # expect {
-  #   sections << Fabricate(:section, course: @course)
-  # }.to change { subject.sections.count }.by(1)
-
-	# context '#teachers' do
-	# 	it "should return a list of the teachers teaching the course" do 
-	# 		course = Fabricate(:course)
-	# 		t1 = Fabricate(:teacher)
-	# 		t2 = Fabricate(:teacher)
-	# 		3.times {Fabricate :section, course: course, teacher: t1}
-	# 		2.times {Fabricate :section, course: course, teacher: t2}
-	# 		expect(course.teachers.count).to == 2
-	# 	end
-	# end
 		
 end
