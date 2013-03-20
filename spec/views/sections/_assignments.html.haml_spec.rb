@@ -3,7 +3,6 @@
 require 'spec_helper'
 
 describe "sections/_assignments" do
-	include CourseMockHelpers
 	
   # before :each do
   #   teacher = mock_teacher

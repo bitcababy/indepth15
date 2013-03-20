@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'courses/_sections_table' do
-	include CourseMockHelpers
 
   it "creates a table of a courses sections" do
     course = stub_model Course
