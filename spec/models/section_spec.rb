@@ -20,20 +20,36 @@ describe Section do
       expect(s.course).to_not be_nil
       expect(s.teacher).to_not be_nil
     end
+  
+    it "should be included in the course's sections" do
+      t = Fabricate :teacher
+      s = Fabricate :section, teacher: t
+      expect(t.sections).to include s
+    end
     
     it "can create section_assignments" do
       s = Fabricate :section, sas_count: 3
       expect(s.section_assignments.count).to eq 3
     end
+    
+    it "can fabricate a section for an earlier year" do
+      s = Fabricate :section, offset: 2
+      expect(s.year).to eq Settings.academic_year - 2
+    end
   end
 
   subject { Fabricate :section }
+	
+	context "validation" do
+		it { should validate_presence_of :block }
+		it { should validate_presence_of :duration }
+	end
 	
 	context "scopes" do
     before do
 			2.times { Fabricate :section, duration: Course::FULL_YEAR }
 			3.times { Fabricate :section, duration: Course::FIRST_SEMESTER }
-			4.times { Fabricate :section, duration: Course::SECOND_SEMESTER }
+			4.times { Fabricate :section, duration: Course::SECOND_SEMESTER}
     end
 
     it "should have a 'current' scope" do
@@ -52,14 +68,21 @@ describe Section do
       expect(Section.for_semester(Course::FIRST_SEMESTER).count).to eq 5
       expect(Section.for_semester(Course::SECOND_SEMESTER).count).to eq 6
     end
+      
+    it "should have a 'for_course' scope" do
+      c = Fabricate :course
+      8.times { Fabricate :section, course: c }
+      expect(Section.for_course(c).count).to eq 8
+    end
+      
+    it "should have a 'for_teacher' scope" do
+      t = Fabricate :teacher
+      8.times { Fabricate :section, teacher: t }
+      expect(Section.for_teacher(t).count).to eq 8
+    end
 			
 	end # Scopes
 		
-	context "validation" do
-		it { should validate_presence_of :block }
-		it { should validate_presence_of :duration }
-	end
-	
 	context "past and future assignment handling" do
 		before do
 			@section = Fabricate :section

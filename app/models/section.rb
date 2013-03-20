@@ -12,26 +12,25 @@ class Section
 	validates :duration, presence: true, inclusion: { in: Course::DURATIONS }
   
   field :y, as: :year, type: Integer
-  validates :year, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: Settings.first_year, less_than_or_equal_to: Settings.academic_year + 1}
+  validates :year, presence: true, numericality: { only_integer: true, less_than_or_equal_to: Settings.academic_year + 1}
 
   field :days, type: Array, default: (1..5).to_a
 	field :rm, as: :room, type: String, default: ""
   
   index({year: -1, block: 1})
 
- # field :_id, type: String, default: ->{ "#{year}-#{course.to_param}-#{teacher.to_param}-#{block}-#{duration}" }
-
 	has_many :section_assignments, dependent: :delete, autosave: true
-	belongs_to :course, index: true
-	belongs_to :teacher, index: true
+	belongs_to :course, index: true, autosave: true
+	belongs_to :teacher, index: true, autosave: true
 
   scope :current,               -> { where(year: Settings.academic_year) }
-  scope :for_teacher,           ->(t){ where(teacher: t) }
   scope :for_block,             ->(b){ where(block: b) }
-  scope :for_course,            ->(c){ where(course: c) }
   scope :for_first_semester,    ->{ where(:duration.in => [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::FIRST_SEMESTER]) }
   scope :for_second_semester,   ->{ where(:duration.in => [Course::FULL_YEAR, Course::FULL_YEAR_HALF_TIME, Course::SECOND_SEMESTER]) }
   scope :for_semester,          ->(s){ (s == Course::FIRST_SEMESTER) ? for_first_semester : for_second_semester }
+  scope :for_year,              ->(y) { where(year: y) }
+  scope :for_course,            ->(c){ where(course: c) }
+  scope :for_teacher,           ->(t){ where(teacher: t) }
 
   # delegate :major_topics, to: :course
   if Rails.env.test?
@@ -41,6 +40,7 @@ class Section
   end
 
   track_history track_create: true
+  
   
   def <=>(s)
     return self.year <=> s.year unless self.year == s.year
@@ -87,10 +87,6 @@ class Section
 		n ? ret.limit(n) : ret
 	end
 
-  # def add_assignment(name, asst, due_date, assigned=true)
-  #   return self.section_assignments.create! name: name, due_date: due_date, assignment: asst, assigned: assigned
-  # end
-  # 
 	def page_header
 		"#{course.full_name}, Block #{self.block}"
 	end
