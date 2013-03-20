@@ -16,7 +16,7 @@ class SectionAssignment
 	belongs_to :assignment, counter_cache: true, autosave: true
   
   delegate :name, :content, :content=, to: :assignment
-  delegate :block, :course, :teacher, :year to: :section
+  delegate :block, :course, :teacher, :year, to: :section
 
   scope :for_section,       ->(s) { where(section: s) }
 
