@@ -13,7 +13,7 @@ require 'spec_helper'
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 #
 # Compared to earlier versions of this generator, there is very limited use of
-# stubs and message expectations in this spec.	Stubs are only used when there
+# stub and message expectations in this spec.	Stubs are only used when there
 # is no simpler way to get a handle on the object needed for the example.
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
@@ -22,16 +22,15 @@ describe SectionsController do
 
   describe "GET 'assignments_pane', xhr" do
    it "display the assignments pane" do
-     section = mock('section') do
-       stubs(:course).returns "foo"
-       stubs(:to_param).returns 1
-     end
-     Section.stubs(:find).returns(section)
-      xhr :get, :assignments_pane, id: section.to_param
-      expect(response).to be_success
-      expect(assigns(:section)).to eq(section)
-      expect(assigns(:course)).to eq("foo")
-    end
+     section = mock_model 'Section'
+     section.stub(:course).and_return "foo"
+     section.stub(:to_param).and_return 1
+     Section.stub(:find).and_return(section)
+     xhr :get, :assignments_pane, id: section.to_param
+     expect(response).to be_success
+     expect(assigns(:section)).to eq(section)
+     expect(assigns(:course)).to eq("foo")
+   end
   end
 
 end
