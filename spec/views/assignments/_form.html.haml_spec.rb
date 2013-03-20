@@ -2,33 +2,37 @@ require 'spec_helper'
 
 describe 'assignments/_form' do
   include Utils
+  include CapybaraExtras
+
+  def sas_to_rows(sas)
+    return sas.collect do |sa|
+      [sa.block, sa.due_date, sa.assigned]
+    end
+  end
 
   before :each do
     teacher = Fabricate :teacher
-    course = Fabricate :course, num_sections: 3
+    course = Fabricate :course, num_sections: 3, teacher: teacher
     @assignment = Fabricate.build :assignment
     dd = next_school_day
     for section in course.sections do
       @assignment.section_assignments.build section: section, due_date: dd
     end
   
-  	render partial: 'assignments/form', as: :assignment, object: @assignment
+  	render partial: 'assignments/form', as: :assignment, object: @assignment, locals: {method: 'post'}
   end
   
   it "displays a form" do
-    expect(rendered).to have_selector('form') do |form|
-      puts form.class
-    end
+    expect(rendered).to have_selector('#asst_form form')
+    form = page.find('#asst_form form')
+    expect(form).to have_table('sas')
+    table = form.find('table#sas')
+    expect(table_headers(table)).to eq ['Block', 'Due date', 'Use?']
+    pending "unfinished test"
+    cells =  + sas_to_rows(@assignment.section_assignments)
+    expect(table_to_array(table)).to eq cells
   end
   
-  it "contains a table for the section assignments" do
-    expect(rendered).to have_table('sas')
-  end
-
-  it "should have fields for the block, due date, and assigned status of each section assignment"
-  
-  it "should have a field for the assignment's name and content" 
-    
 
   # before :each do
   #   section1 = Fabricate :section, block: "A"
