@@ -6,17 +6,15 @@ Fabricator(:course) do
 	credits					{ Settings.credits.sample }
 	full_name				{ |attrs| "Course #{attrs[:number]}" }
   sections        []
-  teachers        []
-  department
   occurrences     (1..5).to_a
-  after_create     { |course, t|
-    if teacher = t[:teacher]
-      teacher.courses << course
-      teacher.save
-    end
+  after_build     { |course, t|
     if (n = t[:num_sections])
-      teacher ||= Fabricate(:teacher)
-      n.times { course.sections << Fabricate(:section, teacher: teacher) } 
+      teacher = t[:teacher] || Fabricate.build(:teacher)
+      n.times { 
+        s = Fabricate.build(:section, teacher: teacher, course: course)
+        course.sections << s
+        teacher.sections << s
+      }
     end
   }
 end

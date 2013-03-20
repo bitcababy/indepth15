@@ -10,16 +10,16 @@ end
 
 
 Fabricator :teacher, from: :user, class_name: :teacher do
-  transient               :courses
   transient               :section_count
+  transient               :courses
 	current									true
 	authentication_token		'teacher'
 	general_msg							"This is the general leadin"
 	current_msg							"This is the current leadin"
   assignments             []
-  courses                 { |attrs| [attrs[:courses]].compact }
   sections                []
-  after_create            { |teacher, t| 
+  departments             []
+  after_build             { |teacher, t| 
     if (n = t[:section_count])
       courses = (t[:courses] || Fabricate(:course)).to_a
       n.times { Fabricate :section, course: courses.sample, teacher: teacher } 
