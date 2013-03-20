@@ -1,11 +1,9 @@
-class DepartmentDocument < Document
+class DepartmentDocument < TextDocument
   include Mongoid::Ordered
   include Mongoid::History::Trackable
 
   field :ti, as: :title, type: String, default: ""
   validates :title, presence: true
-  field :co, as: :content, type: String, default: ""
-  validates :content, presence: true
 
   ordered_on :pos
   embedded_in :department
