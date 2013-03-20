@@ -27,29 +27,27 @@ describe Teacher do
 	context "courses & sections" do
 		before do
 			@teacher = Fabricate(:teacher)
-			c1 = Fabricate(:course, full_name: "Geometry Honors", teacher: @teacher)
-			c2 = Fabricate(:course, full_name: "Fractals", teacher: @teacher)
-      3.times {Fabricate :section, course: c1, teacher: @teacher }
-      2.times {Fabricate :section, course: c2, teacher: @teacher }
-      6.times {Fabricate :section_earlier_year, course: c1, teacher: @teacher }
+			c1 = Fabricate(:course, full_name: "Geometry Honors", teacher: @teacher, num_sections: 2)
+			Fabricate(:course, full_name: "Fractals", teacher: @teacher, num_sections: 2)
+      2.times { Fabricate :section, course: c1, teacher: @teacher, year: Settings.academic_year - 2 }
+      expect(@teacher.sections.count).to eq 6
 		end
     
     describe 'sections.current' do
       it "should return all sections taught this year" do
-        expect(@teacher.sections.count).to eq 11
-        expect(@teacher.sections.current.count).to eq 5
+        expect(@teacher.sections.current.count).to eq 4
       end
     end
  			
 		describe '#courses' do
 			it "should return the courses that a teacher is teaching" do
-				expect(@teacher.courses.count).to eq 2
+				expect(@teacher.courses(all: true).count).to eq 2
 			end
 		end
     
-    describe 'courses.current' do
+    describe 'current courses' do
       it "should return the courses that a teacher is teaching this year" do
-        expect(@teacher.courses.current.count).to eq 2
+        expect(@teacher.courses.count).to eq 2
       end
     end
 		
