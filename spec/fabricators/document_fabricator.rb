@@ -1,8 +1,6 @@
 Fabricator :document do
 end
 
-Fabricator :titled_document do
-  title   ""
   content ""
 end
 
