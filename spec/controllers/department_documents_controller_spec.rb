@@ -11,17 +11,17 @@ describe DepartmentDocumentsController do
   describe '#edit, logged in' do
     it "gets the doc referenced by params[:doc_id]" do
       doc = @dept.homepage_docs.first
+      expect(doc).to_not be_nil
       xhr :get, :edit, dept_id: @dept.to_param, id: doc.to_param
       expect(assigns(:doc)).to eq doc
     end
   end
-  
+
   describe '#save, logged_in' do
     it "updates the doc" do
       doc = @dept.homepage_docs.first
       pending
-      # put :update, dept_id: @dept.to_param, id: doc.to_param, department_document: {title: "Foo" }
-      xhr :put, :update, dept_id: @dept.to_param, id: doc.to_param, department_document: {title: "Foo" }
+      xhr :put, :update, dept_id: @dept.to_param, id: doc.to_param
       expect(assigns(:doc)).to eq doc
       expect(response).to =~ /.*\/home$/
     end
