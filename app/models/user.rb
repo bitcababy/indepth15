@@ -31,11 +31,16 @@ class User
 	
   track_history on: [:honorific, :first_name, :last_name, :middle_name, :last_name, :email, :login ], version_field: :version
 
+  # def ==(u)
+  #   return false unless u.class == self.class
+  #   return self.login == u.login
+  # end
+
   def <=>(u)
     return self.last_name <=> u.last_name unless self.last_name == u.last_name
     return self.first_name <=> u.first_name unless self.first_name == u.first_name
     return self.middle_name <=> u.middle_name unless self.middle_name == u.middle_name
-    return self.login <=>u.login
+    return self.login <=> u.login
   end
 
 	def formal_name
