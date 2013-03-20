@@ -15,6 +15,8 @@ class SectionAssignment
 	belongs_to :assignment, counter_cache: true
   belongs_to :course, index: true
   belongs_to :teacher, index: true
+	belongs_to :section, counter_cache: true, autosave: true
+	belongs_to :assignment, counter_cache: true, autosave: true
   
   delegate :name, :content, :content=, to: :assignment
   delegate :block, :course, :teacher, :year to: :section

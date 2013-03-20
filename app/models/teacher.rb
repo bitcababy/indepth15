@@ -25,6 +25,7 @@ class Teacher < User
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
   
   has_many :sections do
+  has_many :sections, autosave: true do
     def for_course(c)
       where(course: c)
     end
