@@ -7,5 +7,9 @@
 			%th.assign Assign
 			%th.actions Actions
 %tbody
-	= render partial: 'sections/assignment_row', collection: sas, as: 'sa'
+	- if editable?
+		= render partial: 'sections/editable_assignment_row', collection: sas, as: 'sa'
+	- else
+		= render partial: 'sections/assignment_row', collection: sas, as: 'sa'
+	- end
 

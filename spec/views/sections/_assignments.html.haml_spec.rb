@@ -6,10 +6,10 @@ describe "sections/_assignments" do
 	
   # before :each do
   #   teacher = mock_teacher
-  #     teacher.stubs(:generic_msg).returns "This is a generic message"
+  #     teacher.stub(:generic_msg).and_return "This is a generic message"
   #   course = mock_course(number: 321, menu_label: "Fractals 101")
   #   @section = mock_section_with_assignments(course: course, teacher: teacher)
-  #   @section.stubs(:page_header).returns "Page header"
+  #   @section.stub(:page_header).and_return "Page header"
   #   assign(:section, @section)
   # end
   # 
@@ -25,7 +25,7 @@ describe "sections/_assignments" do
   # 
   # it "skips displaying the teacher's current assignment message and the table if there isn't a current assignment" do
   #   @section.unstub(:current_assignments)
-  #   @section.stubs(:current_assignments).returns []
+  #   @section.stub(:current_assignments).and_return []
   #   render
   #   expect(rendered).to_not have_selector('table#current')
   # end
@@ -37,7 +37,7 @@ describe "sections/_assignments" do
   # 
   # it "skips displaying the table for past assignments if there aren't any" do
   #   @section.unstub(:past_assignments)
-  #   @section.stubs(:past_assignments).returns []
+  #   @section.stub(:past_assignments).and_return []
   #   render
   #   expect(rendered).to_not have_selector('table#past')
   # end
@@ -50,7 +50,7 @@ describe "sections/_assignments" do
   # 
   # it "skips displaying the table for upcoming assignments if there aren't any" do
   #   @section.unstub(:upcoming_assignments)
-  #   @section.stubs(:upcoming_assignments).returns []
+  #   @section.stub(:upcoming_assignments).and_return []
   #   render
   #   expect(rendered).to_not have_selector('table#upcoming')
   # end

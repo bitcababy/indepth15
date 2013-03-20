@@ -6,13 +6,13 @@ describe 'sections/_assignment_set' do
   end
 	it "renders a table containing a set of assignments" do
 		asst = mock('assignment') do
-			stubs(:content).returns "Assignment content"
+			stub(:content).and_return "Assignment content"
 		end
 
 		sa = mock('section_assignment') do
-			stubs(:name).returns '21'
-			stubs(:due_date).returns Date.new(2012, 7, 20)
-			stubs(:assignment).returns asst
+			stub(:name).and_return '21'
+			stub(:due_date).and_return Date.new(2012, 7, 20)
+			stub(:assignment).and_return asst
 		end
 
 		render partial: 'sections/assignment_set', 
