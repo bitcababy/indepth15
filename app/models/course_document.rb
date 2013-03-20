@@ -1,4 +1,4 @@
-class CourseDocument < Document
+class CourseDocument < TextDocument
   include Mongoid::History::Trackable
 
   field :co, as: :content, type: String, default: ""
