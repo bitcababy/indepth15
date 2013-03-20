@@ -1,4 +1,5 @@
 class Assignment < Document
+class Assignment < TextDocument
   include Mongoid::Timestamps::Short
   
   field :n, as: :name
