@@ -1,2 +1,2 @@
 %li.home
-	%a{href: (current_page?(controller: :departments, action: :home) ? '#' : "/")}= "Home"
+	= link_to "Home", current_page?(controller: :departments, action: :home) ? '#' : "/"
