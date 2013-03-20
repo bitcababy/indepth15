@@ -9,7 +9,7 @@ class AssignmentsController < ApplicationController
     teacher = Teacher.find params[:teacher_id]
     sections = course.sections.current.select {|s| s.teacher == teacher }
     @assignment = Assignment.new
-    @assignment.teacher = teacher
+    
     # @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
     dd = next_school_day
     sections.each {|s| @assignment.section_assignments.new section: s, due_date: dd, block: s.block}
@@ -26,23 +26,22 @@ class AssignmentsController < ApplicationController
 
   def create
     asst_params = params[:assignment]
-    teacher = Teacher.find asst_params[:teacher_id]
+    name = asst_params[:name]
+    name = name.to_i if name =~ /\d+/
+
     sa_params = asst_params[:section_assignments_attributes]
 
-    begin
-      asst = teacher.assignments.create name: asst_params[:name], content: asst_params[:content]
-      redirect_to :edit unless asst
-
+    asst = Assignment.create(name: name, content: asst_params[:content])
+    if asst
       sa_params.values.each do |attrs|
-        section = Section.find attrs[:section]
+        section = Section.find attrs[:section_id]
         section.section_assignments.create assignment: asst, due_date: attrs[:due_date], assigned: attrs[:assigned]
       end
-    rescue
-      logger.warn 'AssignmentController#create failed!'
-    end #begin
-
-   logger.warn "stored_page is #{stored_page}"
-   redirect_to stored_page || home_path
+      flash[:info] = "Assignment created"
+      redirect_to stored_page || home_path
+    else
+      redirect_to :edit
+    end
   end
   
   
