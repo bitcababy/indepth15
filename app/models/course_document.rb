@@ -1,7 +1,6 @@
 class CourseDocument < TextDocument
   include Mongoid::History::Trackable
 
-  field :co, as: :content, type: String, default: ""
   field :kind, type: Symbol
   embedded_in :course
   
