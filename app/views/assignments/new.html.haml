@@ -3,11 +3,13 @@
 #new_assignment.ui-widget.ui-corner-all
 	.ui-widget-header= "New assignment"
 	.ui-widget-content
-		= render partial: 'assignments/form', as: :assignment, object: @assignment
+		= render partial: 'assignments/form', as: :assignment, object: @assignment, locals: { method: :post }
 
-:coffeescript
-	$(document).ready ->
-		$("#save").button
-			label: "Create"
-		$("#cancel").button
-			label: "Cancel"
+/ :coffeescript
+/ 	$(document).ready ->
+/ 		$("#save").button
+/ 			label: "Create"
+/ 		$("#cancel").button
+/ 			label: "Cancel"
+/ 		console.dir $('form', '#form')
+/ 		

@@ -1,5 +1,13 @@
-= simple_form_for @assignment, as: :assignment, method: :put do |f|
-	%fieldset
-		#editor= f.input :content, as: :ckeditor, input_html: { height: 600, toolbar: "Full" }, label: 'Contents'
-	- content_for :page_title, 'Assignment editor'
+- content_for :page_title, 'Assignment editor'
 - content_for :page_header, 'Update assignment'
+#edit_assignment.ui-widget.ui-corner-all
+	.ui-widget-header= "Edit assignment"
+	.ui-widget-content
+		= render partial: 'assignments/form', as: :assignment, object: @assignment, locals: { method: :put }
+
+:coffeescript
+	$(document).ready ->
+		$("#save").button
+			label: "Save"
+		$("#cancel").button
+			label: "Cancel"
