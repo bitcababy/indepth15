@@ -7,9 +7,6 @@ class SectionAssignment
 	field :dd, as: :due_date, type: Date, default: -> { Utils.future_due_date }
 	field :assigned, type: Boolean, default: false
   
-  attr_accessor :block
-  attr_accessor :year
-  
   validates :due_date, presence: true
   
 	index({due_date: -1, assigned: 1})
