@@ -11,8 +11,8 @@ feature "View home page" do
 
   scenario "should show an accordion", js: true do
     visit home_path
-    assert_accordion_open
-    within '.ui-accordion' do
+    expect(page).to have_css 'div.ui-accordion'
+    within 'div.ui-accordion' do
       titles = page.all('.pane-title')
       expect(titles.count).to eq @docs.count
       contents = page.all('.pane-content')
@@ -21,14 +21,13 @@ feature "View home page" do
         expect(titles[i].text).to eq @docs[i].title
         expect(contents[i].text).to eq @docs[i].content
       end
-      expect(titles[0]).to have_class 'ui-state-active'
+      expect(titles[0]['aria-selected']).to be_true
     end
   end # User visits the home page
   
   scenario "should toggle panes", js: true do
     visit home_path
-    assert_accordion_open
-    within '.ui-accordion' do
+    within 'div.ui-accordion' do
       titles = page.all('.pane-title')
       titles[1].click
       expect(titles[1]).to have_class 'ui-state-active'
@@ -39,8 +38,7 @@ feature "View home page" do
   scenario "should show edit buttons for logged-in users", js: true do
     login_as Fabricate :user
     visit home_path
-    assert_accordion_open
-    within '.ui-accordion' do
+    within 'div.ui-accordion' do
       for cont in page.all('.pane-content') do
         expect(cont).to have_selector('button.edit-button')
       end
@@ -50,7 +48,6 @@ feature "View home page" do
   scenario "should open an editor in a dialog when an edit button is clicked", js: true do
     login_as Fabricate :user
     visit home_path
-    assert_accordion_open
     expect(page).to have_selector('button.edit-button')
     btn = first('button.edit-button')
     pending "Clicking on this doesn't seem to hit the jQuery hook"
