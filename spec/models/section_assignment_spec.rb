@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 describe SectionAssignment do
-  %i(section assignment course teacher).each {|rel|
+  %i(section assignment).each {|rel|
     it { should belong_to rel}
   }
-  it { should respond_to :block }
   
   context "Fabrication" do
     it "should be valid" do
@@ -21,6 +20,22 @@ describe SectionAssignment do
     it "should be able to create past sas" do
       expect(Fabricate(:section_assignment_past).due_date).to be < Date.today
     end
+    
+    it "should be able to specify a teacher" do
+      teacher = Fabricate :teacher
+      sa = Fabricate :section_assignment, teacher: teacher
+      expect(sa.section.teacher).to eq teacher
+    end
+    it "should be able to specify a course" do
+      course = Fabricate :course
+      sa = Fabricate :section_assignment, course: course
+      expect(sa.section.course).to eq course
+    end
+    it "should be able to specify a year" do
+      sa = Fabricate :section_assignment, year: Settings.academic_year - 1
+      expect(sa.section.year).to eq Settings.academic_year - 1
+    end
+    
   end
   
   subject { Fabricate :section_assignment }
@@ -53,11 +68,6 @@ describe SectionAssignment do
       expect(@section.section_assignments.due_after(Date.today).to_a.count).to eq 3
     end
 
-    it "should be able to get its block from its section" do
-      sa = Fabricate :section_assignment, section: @section
-      expect(sa.block).to eq "B"
-    end
-		
 		it "has a future scope" do
 			expect(SectionAssignment.for_section(@section).future.to_a.count).to eq 3
 		end
@@ -74,22 +84,43 @@ describe SectionAssignment do
 			expect(SectionAssignment.upcoming.to_a.count).to eq 2
 		end
 		
+      
 	end
 	
-  describe "test updating" do
-    before :each do
-      @sa = Fabricate :section_assignment
-    end
-    
-    it "should update itself"
-  end
-
-  # describe "assigned validation" do
-  #   it "can't have assigned set if the assignment's name or contents are empty" do
-  #     asst = Fabricate :assignment, name: "", content: ""
-  #     sa = Fabricate.build :section_assignment, assignment: asst, assigned: true
-  #     expect(sa).to_not be_valid
+  # describe "#filter_by" do
+  #   it "should be able to filter by teacher" do
+  #     t1 = Fabricate(:teacher)
+  #     t2 = Fabricate(:teacher)
+  #     2.times { Fabricate :section_assignment, teacher: t1 }
+  #     3.times { Fabricate :section_assignment, teacher: t2 }
+  #      expect(SectionAssignment.filter_by(teacher: t1).count).to eq 2
+  #   end
+  #   
+  #   it "should be able to filter by course" do
+  #     c1 = Fabricate(:course)
+  #     c2 = Fabricate(:course)
+  #     2.times { Fabricate :section_assignment, course: c1 }
+  #     3.times { Fabricate :section_assignment, course: c2 }
+  #     expect(SectionAssignment.filter_by(course: c1).count).to eq 2
+  #   end
+  #   
+  #   it "should be able to filter by teacher and course" do
+  #     t1 = Fabricate(:teacher)
+  #     t2 = Fabricate(:teacher)
+  #     c1 = Fabricate(:course)
+  #     c2 = Fabricate(:course)
+  #     2.times { Fabricate :section_assignment, course: c1, teacher: t1 }
+  #     3.times { Fabricate :section_assignment, course: c1, teacher: t2 }
+  #     4.times { Fabricate :section_assignment, course: c2, teacher: t2 }
+  #     8.times { Fabricate :section_assignment, course: c2, teacher: t1 }
+  #     expect(SectionAssignment.filter_by(course: c1, teacher: t1).count).to eq 2
+  #   end
+  #           
+  #   it "should be able to filter by year" do
+  #     2.times { Fabricate :section_assignment, year: 2003 }
+  #     3.times { Fabricate :section_assignment, year: 2004 }
+  #     expect( SectionAssignment.filter_by(year: 2003).count).to eq 2
   #   end
   # end
-
+    
 end
