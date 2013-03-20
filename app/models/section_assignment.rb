@@ -2,6 +2,7 @@ class SectionAssignment
 	include Mongoid::Document
   include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable
+  include Mongoid::DataTable
   include Utils
   
 	field :dd, as: :due_date, type: Date, default: -> { Utils.future_due_date }
@@ -11,20 +12,13 @@ class SectionAssignment
   
 	index({due_date: -1, assigned: 1})
 	
-	belongs_to :section, counter_cache: true
-	belongs_to :assignment, counter_cache: true
-  belongs_to :course, index: true
-  belongs_to :teacher, index: true
-	belongs_to :section, counter_cache: true, autosave: true
+	belongs_to :section, counter_cache: true, autosave: true 
 	belongs_to :assignment, counter_cache: true, autosave: true
   
   delegate :name, :content, :content=, to: :assignment
   delegate :block, :course, :teacher, :year to: :section
 
   scope :for_section,       ->(s) { where(section: s) }
-  scope :for_year,          -> (y) { where(year: y) }
-  scope :for_teacher,       -> (t) { where(teacher: t) }
-  scope :for_course,        -> (c) { where(course: c) }
 
   scope :due_after,         ->(date){ gt(due_date: date) }
   scope :due_on_or_after,   ->(date) { gte(due_date: date) }
@@ -35,36 +29,23 @@ class SectionAssignment
   scope :future,            -> { due_on_or_after(future_due_date ).assigned }
   scope :next_assignment,   -> { due_on_or_after(future_due_date).assigned.asc(:due_date).limit(1) }
     
-  validate do |sa|
-    errors.add(:base, 'SectionAssignment must have assignment') unless sa.assignment
-  end
-  
-  def block
-    @block ||= self.section.block
-  end
-  
-  def year
-    @year ||= self.section.year
-  end
-    
-  # after_build :transfer_props
-  # 
-  # def transfer_props
-  #   if sa.section
-  #     sa.block = sa.section.block
-  #     sa.teacher = sa.section.teacher
-  #     sa.course = sa.section.course
-  #     sa.year = sa.section.year
-  #     touch(sa)
-  #   end
-  # end
-        
-   # validate do |sa|
-  #   errors.add(:base, 'Assignment must have name and content to be used') unless sa.assignment.name.size > 0 && sa.assignment.content.size > 0
-  # end
+  data_table_options.merge!({
+    fields: %w(year course teacher semester block name asst),
+    dataset: ->(sa) {
+      {
+        0 => sa.section.year,
+        1 => sa.section.course.full_name,
+        2 => sa.section.teacher.full_name,
+        3 => sa.section.duration,
+        4 => sa.section.block,
+        5 => sa.assignment.name,
+        6 => sa.assignment.content
+      }
+    }
+  })
 
   track_history track_create: true
-
+  
 	def to_s
 		return "#{due_date}/#{assigned}"
 	end
@@ -82,5 +63,17 @@ class SectionAssignment
 		end
 	end
   
+  # def self.filter_by(year: nil, teacher: nil, course: nil, limit: nil)
+  #   crit = limit ? SectionAssignment.limit(limit) : SectionAssignment.all
+  #   crit = crit.for_teacher(teacher) if teacher
+  #   crit = crit.for_course(course) if course
+  #   crit = crit.for_year(year) if year
+  #   return crit
+  # end
+  # 
+  # def self.sort_by(crit, year: :desc)
+  #   crit = crit.order_by(year: year)
+  # end
+      
 end
 
