@@ -41,7 +41,6 @@ class Section
 
   track_history track_create: true
   
-  
   def <=>(s)
     return self.year <=> s.year unless self.year == s.year
     return self.course <=> s.course unless self.course == s.course

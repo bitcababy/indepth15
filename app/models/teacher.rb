@@ -12,7 +12,6 @@ class Teacher < User
 
 	index({current: -1})
   
-  has_many :assignments, autosave: true
   has_and_belongs_to_many :departments, autosave: true
 
 	scope :order_by_name, order_by(:last_name.asc, :first_name.asc)
@@ -43,5 +42,5 @@ class Teacher < User
   def next_asst_for_course(c)
     
   end
-
+ 
 end

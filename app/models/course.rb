@@ -120,11 +120,10 @@ class Course
   end
 
   belongs_to :department
-  has_many :assignments, autosave: true
   has_and_belongs_to_many :major_topics, autosave: true
 
   embeds_many :documents, class_name: 'CourseDocument'
-
+  
 	##
 	## Scopes
 	##
