@@ -50,32 +50,28 @@ module ApplicationHelper
 		content_tag('div', attributes, &block) if block
 	end
 
-	def course_home_with_assignments(section)
-		return home_with_assignments_path(section.course.to_param, section.teacher.to_param, section.block)
-	end
+  ## Note: Unclear whether I need any of these
+	##
+	## Devise methods
+	##
+  def current_user
+    return @current_user ||= warden.authenticate(:scope => :user)
+  end
   
-    ## Note: Unclear why I need any of these
-  	##
-  	## Devise methods
-  	##
-    def current_user
-      return @current_user ||= warden.authenticate(:scope => :user)
-    end
+  def current_user_name
+    return user_signed_in? ? current_user.full_name : "Guest"
+  end
   
-    def current_user_name
-      return user_signed_in? ? current_user.full_name : "Guest"
-    end
-  
-    def user_signed_in?
-      return !!current_user
-    end
-    # 
-    def user_session
-      return current_user && warden.session(:user)
-    end
+  def user_signed_in?
+    return !!current_user
+  end
+  # 
+  def user_session
+    return current_user && warden.session(:user)
+  end
 
-    def editable?
-      return user_signed_in?
-    end
+  def editable?
+    return user_signed_in?
+  end
 
 end
