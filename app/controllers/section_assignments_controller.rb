@@ -1,13 +1,7 @@
 class SectionAssignmentsController < ApplicationController
   before_filter :authenticate_user!, except: [:find_sa]
-	before_filter :find_sa, except: []
+	before_filter :find_sa, only: [:update]
 
-  def edit
-		respond_to do |format|
-			format.html { render layout: !request.xhr? }
-    end
-   end
-  
    # PUT text_documents/1
    # PUT text_documents/1.json
    def update
@@ -30,8 +24,8 @@ class SectionAssignmentsController < ApplicationController
          end
        end
      end
-  end
-
+   end
+  
   private
   def find_sa
     @sa = SectionAssignment.find params[:id]
