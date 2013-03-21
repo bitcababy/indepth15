@@ -34,7 +34,7 @@ gem 'bundler'
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid-history'
-gem 'mongoid-data_table', :git => 'git://github.com/shamanime/mongoid-data_table.git'
+# gem 'mongoid-data_table', path: 'lib/plugins/mongoid-data_table'
 gem 'mongoid_rails_migrations'
 # gem 'mongoid-app_settings'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
@@ -57,6 +57,7 @@ gem 'client_side_validations-simple_form'
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic', :git => 'git://github.com/bitcababy/settingslogic.git'
+# gem 'kaminari'
 
 # Editor-related
 gem 'ckeditor', '~> 4.0.0'
@@ -94,6 +95,7 @@ group :development, :test do
   # gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
   # To use debugger
   gem 'debugger'
+  # gem 'inherited_resources'
 end
 
 group :development do
