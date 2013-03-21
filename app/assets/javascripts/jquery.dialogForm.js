@@ -133,7 +133,6 @@
 				method: 'GET',
 				timeout: 1000,
 				url: url,
-				context: document.body,
 				success: function(data, textStatus, jqxhr) {
 					$form.handleGet(jqxhr, data, null, textStatus);
 				},

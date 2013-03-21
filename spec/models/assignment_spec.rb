@@ -15,24 +15,4 @@ describe Assignment do
     end
  	end
   
-   describe '#course' do
-    it "returns the course for this assignment" do
-      c = Fabricate :course
-      s = Fabricate :section, course: c
-      a = Fabricate :assignment
-      sa = Fabricate :section_assignment, section: s, assignment: a
-      expect(a.course).to eq c
-    end
-  end
-      
-  describe '#teacher' do
-    it "returns the course for this assignment" do
-      t = Fabricate :teacher
-      s = Fabricate :section, teacher: t
-      a = Fabricate :assignment
-      sa = Fabricate :section_assignment, section: s, assignment: a
-      expect(a.teacher).to eq t
-    end
-  end
-  
 end

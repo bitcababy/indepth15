@@ -5,7 +5,7 @@ Fabricator(:section) do
 	duration			        { Course::DURATIONS.sample }
   room                  { sequence(:room) {|i| "Room #{i}"} }
 	block	                { sequence(:block_name) {|i| Settings.blocks[i%Settings.blocks.length]} }
-  section_assignments   {[]}
+  section_assignments   []
   course
   teacher
   after_build           { |section, t| 
