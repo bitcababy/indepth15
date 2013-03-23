@@ -19,6 +19,7 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe SectionsController do
+  include SectionsHelpers
 
   describe "GET 'assignments_pane', xhr" do
    it "display the assignments pane" do
@@ -31,6 +32,18 @@ describe SectionsController do
      expect(assigns(:section)).to eq(section)
      expect(assigns(:course)).to eq("foo")
    end
+  end
+  
+  describe "GET 'sections', retrieval" do
+    it "returns matching sections" do
+      teacher = Fabricate :teacher
+      course = Fabricate :course
+      section = Fabricate :section, course: course, teacher: teacher
+      
+      get(:retrieve, course_id: course.to_param)
+      puts response.body
+      puts ActiveSupport::JSON.decode(response.body)
+    end
   end
 
 end

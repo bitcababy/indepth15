@@ -89,5 +89,21 @@ class Section
 	def page_header
 		"#{course.full_name}, Block #{self.block}"
 	end
+  
+  class << self
+    def retrieve(year: Settings.academic_year, teacher: nil, course: nil, block: nil, limit: nil)
+      return [] unless year || teacher || course
+      crit = self
+      crit = crit.limit(limit) if limit
+      crit = crit.without(:c_at, :u_at)
+      crit = crit.for_year(year) if year
+      crit = crit.for_course(course) if course
+      crit = crit.for_teacher(teacher) if teacher
+      crit = crit.for_block(block) if block
+      return crit
+    end
+  end
+      
+        
 		
 end

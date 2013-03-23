@@ -4,6 +4,7 @@ require 'spec_helper'
 
 describe Section do
 	include Utils
+  include SectionsHelpers
 
 	it { should belong_to :teacher }
 	it { should belong_to :course }
@@ -42,7 +43,7 @@ describe Section do
 	
 	context "validation" do
 		it { should validate_presence_of :block }
-		it { should validate_presence_of :duration }
+		it { should validate_presence_of :year }
 	end
 	
 	context "scopes" do
@@ -99,5 +100,37 @@ describe Section do
 		end
 	end
 	
+  describe "Section.retrieve" do
+    
+    before :each do
+      create_some_sections(courses: 2, teachers: 3, years: 2)
+    end
+    
+    it "finds all sections for a given year" do
+      expect(Section.retrieve(year: Settings.academic_year - 1).size).to eq 6
+    end
+    
+    it "allows limits" do
+      expect(Section.retrieve(year: Settings.academic_year - 1, limit: 2).to_a.size).to eq 2
+    end
+  
+    it "finds all sections for a given teacher" do
+      expect(Section.retrieve(teacher: Teacher.first, year: nil).size).to eq 4
+    end
+
+    it "finds all sections for a given course" do
+      expect(Section.retrieve(course: Course.first, year: nil).size).to eq 6
+    end
+    
+    it "finds all sections for a given year and teacher" do
+      expect(Section.retrieve(teacher: Teacher.first).size).to eq 2
+    end
+      
+    it "finds all sections for a given year and course" do
+      expect(Section.retrieve(course: Course.first).size).to eq 3
+    end
+    
+  end # Section.retrieve
+      
 			
 end

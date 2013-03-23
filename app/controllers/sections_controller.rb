@@ -8,6 +8,16 @@ class SectionsController < ApplicationController
        format.html {render layout: !request.xhr?}
      end
    end
+    if params[:year]
+      ss =  Section.retrieve(year: params[:year], teacher: params[:teacher], course: params[:course], block: params[:block], limit: params[:limit])
+    else
+      ss =  Section.retrieve(teacher: params[:teacher], course: params[:course], block: params[:block], limit: params[:limit)
+    end
+    
+    respond_to do |format|
+      format.any { render json: ss }
+    end
+  end
  
 	# protected
 	def find_section
