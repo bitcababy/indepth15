@@ -5,10 +5,10 @@ class Course
   
   # before_create :add_major_topics
   
-	FULL_YEAR = :full_year
-	FULL_YEAR_HALF_TIME = :halftime
-	FIRST_SEMESTER = :first_semester
-	SECOND_SEMESTER = :second_semester
+	FULL_YEAR = 12
+	FULL_YEAR_HALF_TIME = 3
+	FIRST_SEMESTER = 1
+	SECOND_SEMESTER = 2
 
 	DURATIONS = [ FULL_YEAR, FIRST_SEMESTER, SECOND_SEMESTER, FULL_YEAR_HALF_TIME ]
 	SEMESTERS = [ FIRST_SEMESTER, SECOND_SEMESTER ]
@@ -84,7 +84,7 @@ class Course
 	field :no, as: :number, type: Integer
 	validates :number, presence: true, uniqueness: true, numericality: {only_integer: true}
   
-	field :du, as: :duration, type: Symbol, default: FULL_YEAR
+	field :du, as: :duration, default: FULL_YEAR
 	validates :duration, presence: true, inclusion: {in: DURATIONS}
 	
 	field :cr, as: :credits, type: BigDecimal, default: 5.0
@@ -100,7 +100,7 @@ class Course
   field :oc, as: :occurrences, type: Array
   
   field :ic, as: :in_catalog, type: Boolean, default: true
-
+  
 	field :_id, type: String, default: ->{ number }
 
   index( {number: -1} )
