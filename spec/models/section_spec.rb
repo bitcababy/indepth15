@@ -5,10 +5,6 @@ require 'spec_helper'
 describe Section do
 	include Utils
   include SectionsHelpers
-
-	it { should belong_to :teacher }
-	it { should belong_to :course }
-	it { should have(0).section_assignments }
   
   context "Fabrication" do
     it "should create a valid section" do
@@ -39,12 +35,24 @@ describe Section do
     end
   end
 
+  describe '#sync_with_sas' do
+    it "update its block, year, course, and teacher to all of its section_assignments" do
+      s = Fabricate.build :section
+      sa = Fabricate.build :section_assignment, section: s
+      expect(s.section_assignments).to include sa
+      expect(sa.block).to be_nil
+      expect(sa.year).to be_nil
+      expect(sa.course).to be_nil
+      expect(sa.teacher).to be_nil
+      s.save
+      expect(sa.block).to eq s.block
+      expect(sa.year).to eq s.year
+      expect(sa.course).to eq s.course
+      expect(sa.teacher).to eq s.teacher
+    end
+  end
+
   subject { Fabricate :section }
-	
-	context "validation" do
-		it { should validate_presence_of :block }
-		it { should validate_presence_of :year }
-	end
 	
 	context "scopes" do
     before do
