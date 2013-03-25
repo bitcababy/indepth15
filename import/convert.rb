@@ -212,13 +212,13 @@ end
 class Teacher
   include Mongoid::Document
 	def self.import_from_hash(hash)
-		email = hash[:login] + "@mail.weston.org"
-		password = (hash[:phrase].split(' ').map &:first).join('') if (hash[:phrase])
-		current = hash[:old_current] == 1
+		hash[:email] = hash[:login] + "@mail.weston.org"
+		hash[:password] = (hash[:phrase].split(' ').map &:first).join('') if (hash[:phrase])
+		hash[:current] = hash[:old_current] == 1
 		coder = HTMLEntities.new
-		generic_msg = coder.decode(hash[:generic_msg])
-		upcoming_msg = coder.decode(hash[:upcoming_msg])
-		Department.first.teachers.create email: email, password: password, current: current, first_name: hash[:first_name], last_name: hash[:last_name], honorific: hash[:honorific], generic_msg: generic_msg, upcoming_msg: upcoming_msg
+		hash[:generic_msg] = coder.decode(hash[:generic_msg])
+		hash[:upcoming_msg] = coder.decode(hash[:upcoming_msg])
+		Teacher.create hash
 	end
 end
 
