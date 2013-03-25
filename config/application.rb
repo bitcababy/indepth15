@@ -6,13 +6,14 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "sprockets/railtie"
-# require "rails/test_unit/railtie"
+
+# # require "rails/test_unit/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  # Bundler.require(*Rails.groups(:assets => %w(development test)))
   # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
+  Bundler.require(:default, :assets, Rails.env)
 end
 
 module InDepth
@@ -73,7 +74,7 @@ module InDepth
 		  g.fixture_replacement :fabrication
 		end
 
-    config.mongoid.observers = [:course_observer, :section_observer, :section_assignment_observer]
+    # config.mongoid.observers = [:course_observer, :section_observer, :section_assignment_observer]
     # From http://bibwild.wordpress.com/2011/12/08/jquery-ui-css-and-images-and-rails-asset-pipeline/
     initializer :after_append_asset_paths, group: :all, after: :append_assets_paths do
       config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
