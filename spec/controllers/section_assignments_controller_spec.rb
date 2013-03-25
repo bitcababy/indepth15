@@ -7,15 +7,6 @@ describe SectionAssignmentsController do
     @sa = Fabricate :section_assignment, assigned: true
   end
     
-  describe "GET 'edit'" do
-    login_user
-    it "returns http success" do
-      get 'edit', id: @sa.to_param
-      expect(response).to be_success
-      expect(response).to render_template(:edit)
-    end
-  end
-
   describe "PUT 'update'" do
     login_user
     it "returns http success" do
