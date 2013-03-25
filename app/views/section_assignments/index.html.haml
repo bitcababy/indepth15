@@ -1,3 +1,5 @@
+- content_for :title, "Assignment Browser"
+- content_for :header, "Assignment Browser"
 %table#sa-browser
 	%thead
 		%tr
@@ -9,16 +11,89 @@
 			%th Name
 			%th Assignment
 			
-		/ aaSorting: [[0, 'asc'], [1, 'asc'], [2, 'asc'], [3, 'asc'], [4, 'asc']]
-
 :coffeescript
 	$("#sa-browser").dataTable
 		bjQueryUI: true
 		bPaginate: true
 		bFilter: true
-		iDisplayLength: 20
+		bDeferRender: true
+		iDisplayLength: 10
 		bServerSide: true
-		sAjaxSource: '/section_assignments.json'
+		sAjaxSource: '/section_assignments/retrieve'
 		bSort: true
-	.fnSetFilteringDelay()		
-			
+		bLengthChange: false
+		bSearchable: false
+		bInfo: true
+		bProcessing: true
+		bAutoWidth: false
+		aaSorting: [[0, 'desc'], [1, 'asc'], [2, 'asc'], [3, 'asc'], [4, 'asc']]
+		aoColumnDefs: [
+			aTargets: [0]
+			sName: 'year'
+		,
+			aTargets: [0]
+			asSorting: ["desc"]
+		,
+			aTargets: [0]
+			sWidth: "4em"
+		,
+			aTargets: [0]
+			aDataSort: [0, 7, 8, 3, 4]
+		,
+			aTargets: [1]
+			sName: 'course'
+		,
+			aTargets: [1]
+			iDataSort: 7
+		,
+			aTargets: [2]
+			sName: 'teacher'
+		,
+			aTargets: [2]
+			iDataSort: 8
+		,
+			sName: 'block'
+			aTargets: [3]
+		,
+			sName: 'due_date'
+			aTargets: [4]
+		,
+			sName: 'name'
+			aTargets: [5]
+		,
+			sName: 'content'
+			aTargets: [6]
+		,
+			sName: 'course_id'
+			aTargets: [7]
+		,
+			aTargets: [8]
+			sName: 'teacher_id'
+		,
+			aTargets: [7, 8]
+			bVisible: false
+		,
+			bSortable: false
+			aTargets: [4,5,6]
+		, 
+			bSearchable: false
+			aTargets: [0,1,2,3,4,5,6]
+		]
+
+
+/ :javascript
+/ 	function initSABrowser() {
+/ 		$('#sa-browser').dataTable( {
+/ 			"bjQueryUI": true,
+/ 			"bPaginate": true,
+/ 			"bFilter": true,
+/ 			"iDisplayLength": 20,
+/ 			"bServerSide": true,
+/ 			"sAjaxSource": '/section_assignments.json',
+/ 			"aoColumnDefs": [
+/ 				{ "sName": "year", "aTargets": [ 0 ] },
+/ 				{ "sName": "course", "aTargets": [ 1 ] }
+/ 			]
+/ 		})
+/ 	}
+/ 			
