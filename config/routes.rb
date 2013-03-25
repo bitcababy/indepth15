@@ -28,7 +28,7 @@ InDepth::Application.routes.draw do
   get 'courses/:id/home', to: 'courses#home', as: :course_home
   get 'courses/:id/home/:section_id', to: 'courses#home', as: :course_home_with_assts
   
-  resources :section_assignments, only: [:update]
+  resources :section_assignments, only: [:index, :update]
 
 	# Temporary routes to deal with old links
 	match 'files/*path', via: :get, controller: :files, action: :pass_on
