@@ -75,17 +75,94 @@ class SectionAssignment
 		end
 	end
   
-  def self.filter_by(year: nil, teacher: nil, course: nil, limit: nil)
-    crit = limit ? SectionAssignment.limit(limit) : SectionAssignment.all
-    crit = crit.for_teacher(teacher) if teacher
-    crit = crit.for_course(course) if course
-    crit = crit.for_year(year) if year
-    return crit
-  end
+  # {"sEcho"=>"1", 
+  #   "iColumns"=>"10", 
+  #   "sColumns"=>"year,course,teacher,block,due_date,name,content,last_name,first_name,course_id", 
+  #   "iDisplayStart"=>"0", 
+  #   "iDisplayLength"=>"20",
+  #   "iSortCol_0"=>"0", 
+  #   "sSortDir_0"=>"asc", 
+  #   "iSortCol_1"=>"1", 
+  #   "sSortDir_1"=>"asc", 
+  #   "iSortCol_2"=>"7", 
+  #   "sSortDir_2"=>"asc", 
+  #   "iSortCol_3"=>"8", 
+  #   "sSortDir_3"=>"asc", 
+  #   "iSortCol_4"=>"3", 
+  #   "sSortDir_4"=>"asc", 
+  #   "iSortCol_5"=>"4", 
+  #   "sSortDir_5"=>"asc", 
+  #   "iSortingCols"=>"6", 
+  #   "bSortable_0"=>"true", 
+  #   "bSortable_1"=>"true", 
+  #   "bSortable_2"=>"true", "bSortable_3"=>"false", "bSortable_4"=>"false", "bSortable_5"=>"false", "bSortable_6"=>"false", "bSortable_7"=>"true", "bSortable_8"=>"true", "bSortable_9"=>"true", "_"=>"1364230910350"}
+   
   
-  # def self.sort_by(crit, year: :desc)
-  #   crit = crit.order_by(year: year)
-  # end
+#
+  def SectionAssignment.process_data_request(h)
+    return nil if h.empty?
+    cols = h["sColumns"].split(",")
+    start = h["iDisplayStart"]
+    limit = h["iDisplayLength"]
+    crit = SectionAssignment.skip(start).limit(limit)
+
+    # Get the order
+    order = []
+    cols.count.times do |i|
+      dir = h["sSortDir_#{i}"]
+      next unless dir
       
+      col_no = h["iSortCol_#{i}"].to_i
+      col = cols[col_no]
+      logger.warn "*#{col_no}:#{col}"
+      
+      order << "#{col} #{dir}"
+    end
+    logger.warn "***order is: #{order}"
+    crit = crit.order_by(order.join(','))
+       
+    data = self.get_data(crit, cols)
+
+    res = {}
+    res["iTotalRecords"] = SectionAssignment.count
+    res["iTotalDisplayRecords"] = data.count
+    res["sEcho"] = h["sEcho"]
+    res["aaData"] = data
+    return res
+  end
+
+  def self.get_data(sas, cols)
+    data = []
+    sas.each do |sa|
+      row = []
+      for col in cols do
+        datum = case col
+        when "year"
+        sa.year
+        when "course"
+        sa.course.menu_label
+        when "teacher"
+        sa.teacher.full_name
+        when "block"
+        sa.block
+        when "due_date"
+        sa.due_date
+        when "name"
+        sa.assignment.name
+        when "content"
+        sa.assignment.content
+        when "course_id"
+        sa.course.to_param
+        when "teacher_id"
+        sa.teacher.to_param
+        end
+        row << datum
+      end
+      data << row
+    end
+    return data
+  end #get_data
+  
+   
 end
 
