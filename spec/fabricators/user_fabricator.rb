@@ -12,6 +12,7 @@ end
 Fabricator :teacher, from: :user, class_name: :teacher do
   transient               :section_count
   transient               :courses
+  transient               :dept
 	current									true
 	authentication_token		'teacher'
 	general_msg							"This is the general leadin"
@@ -24,6 +25,7 @@ Fabricator :teacher, from: :user, class_name: :teacher do
       courses = (t[:courses] || Fabricate(:course)).to_a
       n.times { Fabricate :section, course: courses.sample, teacher: teacher } 
     end
+    teacher.departments << t[:dept] if t[:dept]
   }
 end
 

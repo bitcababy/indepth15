@@ -32,7 +32,7 @@ module ApplicationHelper
 	
 	def section_label_for_menu(section)
 		if section.teacher then
-			return section.label_for_course
+			return section.menu_label
 		else
 			return section.to_s
 		end

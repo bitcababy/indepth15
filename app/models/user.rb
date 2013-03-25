@@ -13,6 +13,7 @@ class User
 
 	field :mn, as: :middle_name, type: String, default: ""
 	field :ln, as: :last_name, type: String, default: ""
+
 	validates :last_name, presence: true#, length: { minimum: 2 }
 		
  # Include default devise modules. Others available are:

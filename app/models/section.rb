@@ -79,7 +79,7 @@ class Section
     return "#{self.course.short_name || self.course.full_name}, Block #{self.block}"
   end
 
-  def label_for_course
+  def menu_label
     return "#{self.teacher.formal_name}, Block #{self.block}"
   end
 
