@@ -33,17 +33,5 @@ describe SectionsController do
      expect(assigns(:course)).to eq("foo")
    end
   end
-  
-  describe "GET 'sections', retrieval" do
-    it "returns matching sections" do
-      teacher = Fabricate :teacher
-      course = Fabricate :course
-      section = Fabricate :section, course: course, teacher: teacher
-      
-      get(:retrieve, course_id: course.to_param)
-      puts response.body
-      puts ActiveSupport::JSON.decode(response.body)
-    end
-  end
 
 end
