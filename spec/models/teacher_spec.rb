@@ -15,7 +15,7 @@ describe Teacher do
 	
 	context "Fabrication" do
     it "should produce a valid teacher" do
-      expect(Fabricate(:teacher)).to be_valid
+      expect(Fabricate.build(:teacher)).to be_valid
     end
     
     it "can create sections" do
