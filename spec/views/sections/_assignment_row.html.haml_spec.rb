@@ -10,26 +10,16 @@ describe 'sections/_assignment_row' do
 		@sa.stub(:assignment).and_return @asst
   end
   
-  shared_examples_for 'any assignment row' do
-    it "display the name, due date, and content of an assignment" do
-      as_guest do
-    		render partial: 'sections/assignment_row', locals: {sa: @sa}
-        expect(page).to have_selector('tr')
-        row = page.find('tr')
-  			expect(row).to have_selector('td', text: @sa.name) 
-  			expect(row).to have_selector('td', text: assignment_date_string(@sa.due_date))
-  			expect(row).to have_selector('td', text: @asst.content)
-      end
-    end
+  it "display the name, due date, and content of an assignment" do
+		render partial: 'sections/assignment_row', locals: {sa: @sa}
+    expect(page).to have_selector('tr')
+    row = page.find('tr')
+		expect(row).to have_selector('td', text: @sa.assignment.name) 
+		expect(row).to have_selector('td', text: assignment_date_string(@sa.due_date))
+		expect(row).to have_selector('td', text: @sa.assignment.content)
   end
     
-  context 'guest mode' do
-    it_behaves_like 'any assignment row'
-  end
-  
   context 'user mode' do
-    it_behaves_like 'any assignment row'
-    
     it "adds stuff for editing" do
       view.stub(:editable?).and_return true
       render partial: 'sections/assignment_row', locals: {sa: @sa}
