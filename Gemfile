@@ -29,14 +29,18 @@ gem 'jquery-rails'
 # Use unicorn as the app server
 gem 'unicorn'
 
-
 gem 'bundler'
+
+## Mongoid
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid-history'
 # gem 'mongoid-data_table', path: 'lib/plugins/mongoid-data_table'
 gem 'mongoid_rails_migrations'
 gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
+gem 'mongoid-cached-json'
+gem 'mongodb_fulltext_search'
+
 gem 'thin'
 gem 'devise'
 gem 'haml'
