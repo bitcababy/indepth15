@@ -67,6 +67,7 @@ gem 'ckeditor', '~> 4.0.0'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'fog'
 gem 'file_browser', git: 'git://github.com/bitcababy/file_browser.git'
 gem 'cloudfiles' # http://rubydoc.info/gems/cloudfiles/1.5.0.1/frames
 
