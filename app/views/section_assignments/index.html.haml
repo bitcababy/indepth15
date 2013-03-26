@@ -1,85 +1,120 @@
-- content_for :title, "Assignment Browser"
-- content_for :header, "Assignment Browser"
-%table#sa-browser
-	%thead
-		%tr
-			%th Year
-			%th Course
-			%th Teacher
-			%th Block
-			%th Date due
-			%th Name
-			%th Assignment
+- content_for :page_title, "Assignment Browser"
+- content_for :page_header, "Assignment Browser"
+
+#asst-browser
+	#search_filter
+		= select_tag 'Year', year_options_for_search, prompt: "Year"
+		= select_tag 'Course', course_options_for_search, prompt: "Course"
+		= select_tag 'Teacher', teacher_options_for_search, prompt: "Teacher"
+		#filter_button= button_tag "Filter"
+
+	%table#sa-browser
+		%thead
+			%tr
+				%th Year
+				%th Course
+				%th Teacher
+				%th Block
+				%th Date due
+				%th Name
+				%th Assignment
 			
 :coffeescript
-	$("#sa-browser").dataTable
-		bjQueryUI: true
-		bPaginate: true
-		bFilter: true
-		bDeferRender: true
-		iDisplayLength: 10
-		bServerSide: true
-		sAjaxSource: '/section_assignments/retrieve'
-		bSort: true
-		bLengthChange: false
-		bSearchable: false
-		bInfo: true
-		bProcessing: true
-		bAutoWidth: false
-		aaSorting: [[0, 'desc'], [1, 'asc'], [2, 'asc'], [3, 'asc'], [4, 'asc']]
-		aoColumnDefs: [
-			aTargets: [0]
-			sName: 'year'
-		,
-			aTargets: [0]
-			asSorting: ["desc"]
-		,
-			aTargets: [0]
-			sWidth: "4em"
-		,
-			aTargets: [0]
-			aDataSort: [0, 7, 8, 3, 4]
-		,
-			aTargets: [1]
-			sName: 'course'
-		,
-			aTargets: [1]
-			iDataSort: 7
-		,
-			aTargets: [2]
-			sName: 'teacher'
-		,
-			aTargets: [2]
-			iDataSort: 8
-		,
-			sName: 'block'
-			aTargets: [3]
-		,
-			sName: 'due_date'
-			aTargets: [4]
-		,
-			sName: 'name'
-			aTargets: [5]
-		,
-			sName: 'content'
-			aTargets: [6]
-		,
-			sName: 'course_id'
-			aTargets: [7]
-		,
-			aTargets: [8]
-			sName: 'teacher_id'
-		,
-			aTargets: [7, 8]
-			bVisible: false
-		,
-			bSortable: false
-			aTargets: [4,5,6]
-		, 
+	$(document).ready ->
+		year = ""
+		course = ""
+		teacher = ""
+		$("#sa-browser").dataTable
+			bjQueryUI: true
+			bPaginate: true
+			bLengthChange: true
+			bFilter: true
+			bDeferRender: true
+			bServerSide: true
+			bSort: true
 			bSearchable: false
-			aTargets: [0,1,2,3,4,5,6]
-		]
-
+			bInfo: true
+			bProcessing: true
+			bAutoWidth: false
+			bLengthChange: false
+			bFilter: true
+			sAjaxSource: '/section_assignments/retrieve'
+			iDisplayLength: 10
+			aaSorting: [[0, 'desc'], [1, 'asc'], [2, 'asc'], [3, 'asc'], [4, 'asc']]
+			sDom: 'W<"clear"><"H"lfr>t<"F"ip>'
+			oColumnFilterWidgets: 
+				aiExclude: [4,5,6,7,8]
+			aoColumnDefs: [
+				aTargets: [0]
+				sName: 'year'
+				asSorting: ["desc"]
+				sWidth: "4em"
+				aDataSort: [0, 7, 8, 3, 4]
+			,
+				aTargets: [1]
+				sName: 'course'
+				iDataSort: 7
+			,
+				aTargets: [2]
+				sName: 'teacher'
+				iDataSort: 8
+			,
+				sName: 'block'
+				aTargets: [3]
+			,
+				sName: 'due_date'
+				aTargets: [4]
+			,
+				sName: 'name'
+				aTargets: [5]
+			,
+				sName: 'content'
+				aTargets: [6]
+			,
+				sName: 'course_id'
+				aTargets: [7]
+			,
+				aTargets: [8]
+				sName: 'teacher_id'
+			,
+				aTargets: [7, 8]
+				bVisible: false
+			,
+				bSortable: false
+				aTargets: [4,5,6]
+			, 
+				bSearchable: false
+				aTargets: [0,1,2,3,4,5,6]
+			]
+			fnServerParams: (aoData) ->
+				aoData.push
+					name: "year"
+					value: year
+				aoData.push
+					name: "teacher"
+					value: teacher
+				aoData.push
+					name: "course"
+					value: course
+				
+		$('select#Year').on 'change', (evt) ->
+			year = evt.target.value
+			
+		$('select#Teacher').on 'change', (evt) ->
+			teacher = evt.target.value
+		
+		$('select#Course').on 'change', (evt) ->
+			console.log evt
+			course = evt.target.value
+		
+		$('#filter_button').on 'click', ->
+			oTable = $("#sa-browser").dataTable();
+			oTable.fnDraw();
+	
+/ $(".year select", 'thead').change ->
+/ 	oTable = $("#sa-browser").dataTable();
+/ 	oTable.fnFilter $(this).val(), 0
+/ 	oTable.fnDraw();
 
 / :javascript
 / 	function initSABrowser() {
