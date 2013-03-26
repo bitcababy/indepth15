@@ -82,8 +82,8 @@ module InDepth
   end
 end
 
-Mongoid.logger.level = Logger::WARN
-Moped.logger.level = Logger::WARN
+# Mongoid.logger.level = Logger::WARN
+# Moped.logger.level = Logger::WARN
 
 class Array
 	alias contains? include?
