@@ -105,7 +105,9 @@ class SectionAssignment
     start = h["iDisplayStart"]
     limit = h["iDisplayLength"]
     crit = SectionAssignment.skip(start).limit(limit)
-
+    crit = crit.for_year(h["year"].to_i) unless h["year"].empty?
+    crit = crit.for_course(h["course"].to_i) unless h["course"].empty?
+    crit = crit.for_teacher(h["teacher"]) unless h["teacher"].empty?
     # Get the order
     order = []
     cols.count.times do |i|
@@ -118,7 +120,7 @@ class SectionAssignment
       
       order << "#{col} #{dir}"
     end
-    logger.warn "***order is: #{order}"
+    
     crit = crit.order_by(order.join(','))
        
     data = self.get_data(crit, cols)
