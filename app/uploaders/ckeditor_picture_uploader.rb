@@ -7,14 +7,14 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   # include CarrierWave::ImageScience
 
-  if Rails.env.production?
-    storage :cloud_files
-  else
+  # if Rails.env.production?
+  #   storage :cloud_files
+  # else
     storage :file
     def store_dir
       "uploads/ckeditor/attachments/#{model.id}"
     end
-  end
+  # end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
