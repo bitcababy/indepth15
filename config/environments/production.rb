@@ -49,7 +49,8 @@ InDepth::Application.configure do
   # config.assets.precompile += %w( search.js )
 	config.assets.precompile += %w(application-all.css application-print.css)
   config.assets.precompile += %w(application-screen.css application-ie.css application-shared.css)
-  config.assets.precompile += %w(ckeditor/init)
+  config.assets.precompile += %w(jquery.dialogForm jquery.dcmegamenu.1.3.4 jquery.dataTables)
+  # config.assets.precompile += %w(ckeditor/init)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
