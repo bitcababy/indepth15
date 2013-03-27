@@ -105,32 +105,42 @@ class SectionAssignment
     start = h["iDisplayStart"]
     limit = h["iDisplayLength"]
     crit = SectionAssignment.skip(start).limit(limit)
-    crit = crit.for_year(h["year"].to_i) unless h["year"].empty?
-    crit = crit.for_course(h["course"].to_i) unless h["course"].empty?
-    crit = crit.for_teacher(h["teacher"]) unless h["teacher"].empty?
+    crit = crit.for_year(h["sSearch_0"].to_i) unless h["sSearch_0"].empty?
+    crit = crit.for_course(h["sSearch_1"].to_i) unless h["sSearch_1"].empty?
+    crit = crit.for_teacher(h["sSearch_2"]) unless h["sSearch_2"].empty?
     # Get the order
-    order = []
-    cols.count.times do |i|
-      dir = h["sSortDir_#{i}"]
-      next unless dir
-      
-      col_no = h["iSortCol_#{i}"].to_i
-      col = cols[col_no]
-      logger.warn "*#{col_no}:#{col}"
-      
-      order << "#{col} #{dir}"
-    end
-    
+    order = self.get_order(cols, h)
     crit = crit.order_by(order.join(','))
        
     data = self.get_data(crit, cols)
 
     res = {}
     res["iTotalRecords"] = SectionAssignment.count
-    res["iTotalDisplayRecords"] = data.count
+    res["iTotalDisplayRecords"] = crit.count
     res["sEcho"] = h["sEcho"]
     res["aaData"] = data
     return res
+  end
+  
+  def SectionAssignment.get_order(cols, h)
+    order = []
+    0.upto(2) do |i|
+      dir = h["sSortDir_#{i}"]
+      next unless dir
+      
+      col_no = h["iSortCol_#{i}"].to_i
+      col = cols[col_no]
+      logger.warn "*#{col_no}/#{col}/#{dir}"
+      
+      order << "#{col} #{dir}"
+    end
+    order << "year desc" unless h["sSortDir_0"]
+    order << "course_id asc" unless h["sSortDir_1"]
+    order << "teacher_id asc" unless h["sSortDir_2"]
+    order << "block asc"
+    order << "due_date asc"
+  
+    return order
   end
 
   def self.get_data(sas, cols)

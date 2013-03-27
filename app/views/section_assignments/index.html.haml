@@ -6,7 +6,7 @@
 		= select_tag 'Year', year_options_for_search, prompt: "Year"
 		= select_tag 'Course', course_options_for_search, prompt: "Course"
 		= select_tag 'Teacher', teacher_options_for_search, prompt: "Teacher"
-		#filter_button= button_tag "Filter"
+		#filter_button.ui-button= button_tag "Filter"
 
 	%table#sa-browser
 		%thead
@@ -34,6 +34,7 @@
 			bSort: true
 			bSearchable: false
 			bInfo: true
+			bStateSave: true
 			bProcessing: true
 			bAutoWidth: false
 			bLengthChange: false
@@ -47,21 +48,17 @@
 			aoColumnDefs: [
 				aTargets: [0]
 				sName: 'year'
-				asSorting: ["desc"]
 				sWidth: "4em"
-				aDataSort: [0, 7, 8, 3, 4]
 				bSearchable: false
 			,
 				aTargets: [1]
 				sName: 'course'
 				iDataSort: 7
-				aDataSort: [7, 0, 8, 3, 4]
 				bSearchable: false
 			,
 				aTargets: [2]
 				sName: 'teacher'
 				iDataSort: 8
-				aDataSort: [8, 0, 7, 3, 4]
 				bSearchable: false
 			,
 				sName: 'block'
@@ -98,13 +95,13 @@
 			]
 			fnServerParams: (aoData) ->
 				aoData.push
-					name: "year"
+					name: "sSearch_0"
 					value: year
 				aoData.push
-					name: "teacher"
+					name: "sSearch_1"
 					value: teacher
 				aoData.push
-					name: "course"
+					name: "sSearch_2"
 					value: course
 				
 		$('select#Year').on 'change', (evt) ->
@@ -120,6 +117,10 @@
 		$('#filter_button').on 'click', ->
 			oTable = $("#sa-browser").dataTable();
 			oTable.fnDraw();
+		
+/ oTable = $("#sa-browser").dataTable()
+/ oTable.fnSortListener document.getElementById('sorter'), 0, ->
+/ 	alert("got sort hook")
 	
 / $(".year select", 'thead').change ->
 / 	oTable = $("#sa-browser").dataTable();
