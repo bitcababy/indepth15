@@ -17,5 +17,7 @@
 *= require rails.validations
 *= require rails.validations.simple_form
 *= require ckeditor/init
+*= require jquery.dialogForm
+*= require jquery.dcmegamenu.1.3.4
 *= require_tree .
 */
