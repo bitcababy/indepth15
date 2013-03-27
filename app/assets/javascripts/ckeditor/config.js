@@ -7,7 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
     // Define changes to default configuration here.
 	// For the complete reference:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
-	config.extraPlugins = 'equation';
+	// config.extraPlugins = 'equation'; #Take out equation for now, since it keeps giving an error
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [
