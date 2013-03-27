@@ -19,6 +19,6 @@
 *= require ckeditor/init
 *= require jquery.dataTables
 *= require jquery.dialogForm
-*= require jquery.dcmegamenu.1.2.3
+*= require jquery.dcmegamenu
 *= require_tree .
 */
