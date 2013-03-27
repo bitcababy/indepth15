@@ -8,7 +8,7 @@
 #
 #
 
-# (($) ->
+(($, window) ->
   $.fn.MegaMenu = (opts) ->
     defaults =
       direction: "horizontal"
@@ -192,4 +192,4 @@
       clWidget = defaults.classWidget
       megaSetup()
 
-# ) jQuery
+)(jQuery, window)
