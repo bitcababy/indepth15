@@ -20,5 +20,6 @@
 *= require jquery.dataTables
 *= require jquery.dialogForm
 *= require jquery.dcmegamenu
+*= require dates
 *= require_tree .
 */
