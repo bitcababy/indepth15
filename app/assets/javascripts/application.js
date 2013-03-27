@@ -14,9 +14,6 @@
 *= require jquery
 *= require jquery_ujs
 *= require jquery-ui-1.10.2.custom
-*= require jquery.dataTables
-*= require jquery.dcmegamenu.1.3.4
-*= require jquery.dialogForm
 *= require rails.validations
 *= require rails.validations.simple_form
 *= require ckeditor/init
