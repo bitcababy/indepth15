@@ -12,9 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui-1.10.0.custom
+//= require jquery-ui-1.10.2.custom
 //= require rails.validations
 //= require rails.validations.simple_form
 //= require ckeditor/init
-//= require jquery.dataTables.js
 //= require_tree .
