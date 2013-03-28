@@ -4,11 +4,9 @@
 		%th.due_date Date due
 		%th.contents Assignment
 		- if editable?
-			%th.assign Assign
+			%th.assign Assigned
 			%th.actions Actions
 %tbody
-	- if editable?
-		= render partial: 'sections/editable_assignment_row', collection: sas, as: 'sa'
-	- else
-		= render partial: 'sections/assignment_row', collection: sas, as: 'sa'
+	= render partial: 'sections/assignment_row', collection: sas, as: 'sa'
 
+s
