@@ -2,7 +2,7 @@ class AssignmentsController < ApplicationController
   include Utils
   protect_from_forgery except: [:create, :update, :show]
   before_filter :authenticate_user!
-  before_filter :find_assignment, only: [:show, :update, :delete]
+  before_filter :find_assignment, only: [:update, :delete, :edit]
   
   def new
     course = Course.find params[:course_id]
