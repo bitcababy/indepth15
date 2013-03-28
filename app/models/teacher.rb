@@ -21,7 +21,12 @@ class Teacher < User
     def for_course(c)
       where(course: c)
     end
+    def for_year(y)
+      where(year: y)
+    end
   end
+  
+  has_many :assignments
   
   def courses(all: false)
     if all
@@ -38,9 +43,16 @@ class Teacher < User
   def course_names
     return self.courses.map(&:full_name).sort
   end
-   
-  def next_asst_for_course(c)
-    
+  
+  def collect_assignments
+     self.sections.each {|s| self.assignments += s.assignments}
+     self.save
   end
- 
+   
+  def last_asst_number(c)
+    sas = SectionAssignment.for_course(c).for_year(Settings.academic_year).includes(:assignment).select do |sa|
+      sa.assignment.name.kind_of? Integer
+    end
+    ((sas.collect {|sa| sa.assignment.name})<<0).max
+  end
 end
