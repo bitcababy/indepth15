@@ -1,9 +1,10 @@
 #assignments
-	#add_asst= button_to "New assignment", new_assignment_path(@section.course, @section.teacher), method: :get
+	- if user_signed_in?
+		#add_asst= button_to "New assignment", new_assignment_path(@section.course, @section.teacher), method: :get
 	#generic-msg!= @section.teacher.generic_msg
-	= render partial: 'sections/assignment_set', locals: {table_id: 'current', sas: @section.current_assignments, message: @section.teacher.current_msg, title: 'Current assignment'}
-	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @section.upcoming_assignments, message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
-	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @section.past_assignments, message: "", title: 'Past assignments'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'current', sas: @current, message: @section.teacher.current_msg, title: 'Current assignment'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'upcoming', sas: @upcoming, message: @section.teacher.upcoming_msg, title: 'Upcoming assignments'}
+	= render partial: 'sections/assignment_set', locals: {table_id: 'past', sas: @past, message: "", title: 'Past assignments'}
 	
 - content_for :page_header do
 	= render partial: 'shared/course_link', locals: {course: @section.course}

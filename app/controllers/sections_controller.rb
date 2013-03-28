@@ -4,7 +4,15 @@ class SectionsController < ApplicationController
 
   def assignments_pane
     remember_current_page
-    @course = @section.course
+    @current = @section.current_assignments
+    @upcoming =  @section.upcoming_assignments
+    @past = @section.past_assignments
+    unless user_signed_in?
+      @current = @current.assigned unless @current.empty?
+      @upcoming = @upcoming.assigned unless @upcoming.empty?
+      @past = @past.assigned unless @past.empty?
+    end
+     
     respond_to do |format|
       format.html {render layout: !request.xhr?}
     end
