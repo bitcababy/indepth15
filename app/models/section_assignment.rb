@@ -105,9 +105,9 @@ class SectionAssignment
     start = h["iDisplayStart"]
     limit = h["iDisplayLength"]
     crit = SectionAssignment.skip(start).limit(limit)
-    crit = crit.for_year(h["sSearch_0"].to_i) unless h["sSearch_0"].empty?
-    crit = crit.for_course(h["sSearch_1"].to_i) unless h["sSearch_1"].empty?
-    crit = crit.for_teacher(h["sSearch_2"]) unless h["sSearch_2"].empty?
+    crit = crit.for_year(h["sFilter_0"].to_i) unless h["sFilter_0"].empty?
+    crit = crit.for_course(h["sFilter_1"].to_i) unless h["sFilter_1"].empty?
+    crit = crit.for_teacher(h["sFilter_2"]) unless h["sFilter_2"].empty?
     # Get the order
     order = self.get_order(cols, h)
     crit = crit.order_by(order.join(','))

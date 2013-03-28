@@ -23,7 +23,7 @@
 	$(document).ready ->
 		year = ""
 		course = ""
-		teacher = ""
+		teacher = "" 
 		$("#sa-browser").dataTable
 			bjQueryUI: true
 			bPaginate: true
@@ -32,7 +32,7 @@
 			bDeferRender: true
 			bServerSide: true
 			bSort: true
-			bSearchable: false
+			bSearchable: true
 			bInfo: true
 			bStateSave: true
 			bProcessing: true
@@ -49,17 +49,14 @@
 				aTargets: [0]
 				sName: 'year'
 				sWidth: "4em"
-				bSearchable: false
 			,
 				aTargets: [1]
 				sName: 'course'
 				iDataSort: 7
-				bSearchable: false
 			,
 				aTargets: [2]
 				sName: 'teacher'
 				iDataSort: 8
-				bSearchable: false
 			,
 				sName: 'block'
 				aTargets: [3]
@@ -95,14 +92,14 @@
 			]
 			fnServerParams: (aoData) ->
 				aoData.push
-					name: "sSearch_0"
+					name: "sFilter_0"
 					value: year
 				aoData.push
-					name: "sSearch_1"
-					value: teacher
-				aoData.push
-					name: "sSearch_2"
+					name: "sFilter_1"
 					value: course
+				aoData.push
+					name: "sFilter_2"
+					value: teacher
 				
 		$('select#Year').on 'change', (evt) ->
 			year = evt.target.value
