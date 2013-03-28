@@ -8,7 +8,8 @@ class AssignmentsController < ApplicationController
     course = Course.find params[:course_id]
     teacher = Teacher.find params[:teacher_id]
     sections = course.sections.current.select {|s| s.teacher == teacher }
-    @assignment = Assignment.new
+    name = teacher.last_asst_number(course)
+    @assignment = Assignment.new name: name + 1
     
     # @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
     dd = next_school_day
