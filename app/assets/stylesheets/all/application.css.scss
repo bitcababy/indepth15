@@ -53,8 +53,10 @@ div#main {
 		padding-left: 16px;
 	}
 	.content {
+		background: white;
 		position: relative;
 		padding: 8px;
+		margin: 8px;
 		label {
 			@extend .sans;			
 			font-weight: bold;
