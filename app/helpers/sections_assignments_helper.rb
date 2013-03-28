@@ -6,7 +6,7 @@ module SectionsAssignmentsHelper
   end
   
   def course_options_for_search
-    return options_for_select(Course.asc(:number).collect {|c| [c.menu_label, c.to_param] })
+    return options_for_select(Course.asc(:number).collect {|c| [c.short_name || c.full_name, c.to_param] })
   end
   
   def teacher_options_for_search
