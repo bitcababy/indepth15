@@ -3,6 +3,7 @@ class SectionsController < ApplicationController
 	before_filter :find_section, except: [:retrieve]
 
   def assignments_pane
+    remember_current_page
     @course = @section.course
     respond_to do |format|
       format.html {render layout: !request.xhr?}
