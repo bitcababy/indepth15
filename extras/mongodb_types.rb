@@ -17,4 +17,4 @@ module MongodbTypes
   INTEGER64 = 18
   MIN_KEY = 255
   MAX_KEY = 127
-   
+end
