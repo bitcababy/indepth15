@@ -3,6 +3,6 @@
 	%td.due_date= assignment_date_string(sa.due_date)
 	%td.asst-content!= sa.assignment.content
 	- if editable?
-		%td.assigned= sa.assigned
+		%td.assigned= check_box_tag "", 1, sa.assigned, disabled: true
 		%td
 			%button= link_to "Edit", edit_assignment_path(sa.assignment)
