@@ -29,10 +29,9 @@ class AssignmentsController < ApplicationController
     name = asst_params[:name]
     name = name.to_i if name =~ /\d+/
 
-    sa_params = asst_params[:section_assignments_attributes]
-
     asst = Assignment.create(name: name, content: asst_params[:content])
     if asst
+      sa_params = asst_params[:section_assignments_attributes]
       sa_params.values.each do |attrs|
         section = Section.find attrs[:section_id]
         section.section_assignments.create assignment: asst, due_date: attrs[:due_date], assigned: attrs[:assigned]
@@ -44,10 +43,26 @@ class AssignmentsController < ApplicationController
     end
   end
   
+  def update
+    asst_params = params[:assignment]
+    name = asst_params[:name]
+    if @assignment.update_attributes(name: name, content: asst_params[:content])
+      sa_params = asst_params[:section_assignments_attributes]
+      sa_params.values.each do |attrs|
+        section = Section.find attrs[:section_id]
+        sa = section.section_assignments.find_by(section: section, assignment: @assignment)
+        sa.update_attributes due_date: attrs[:due_date], assigned: attrs[:assigned]
+      end
+      flash[:info] = "Assignment updated"
+      redirect_to stored_page || home_path
+    else
+      redirect_to :edit
+    end
+  end
   
   protected
   def find_assignment
-    @assigment = Assignment.find(params[:id])
+    @assignment = Assignment.find(params[:id])
   end
 
 end
