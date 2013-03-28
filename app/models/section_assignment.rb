@@ -15,6 +15,7 @@ class SectionAssignment
 	
 	belongs_to :section, counter_cache: true, autosave: true 
 	belongs_to :assignment, counter_cache: true, autosave: true
+      
   belongs_to :teacher
   belongs_to :course
   
@@ -28,9 +29,9 @@ class SectionAssignment
   scope :due_on,            ->(date){ where(due_date: date) }
   scope :due_before,        ->(date) { lt(due_date: date) }
   scope :assigned,          -> { where(assigned: true) }
-  scope :past,              -> { due_before(future_due_date).assigned }
-  scope :future,            -> { due_on_or_after(future_due_date ).assigned }
-  scope :next_assignment,   -> { due_on_or_after(future_due_date).assigned.asc(:due_date).limit(1) }
+  scope :past,              -> { due_before(future_due_date) }
+  scope :future,            -> { due_on_or_after(future_due_date ) }
+  scope :next_assignment,   -> { due_on_or_after(future_due_date).asc(:due_date).limit(1) }
   
   before_create :sync_with_section
   
@@ -67,7 +68,7 @@ class SectionAssignment
   end
   
 	def self.upcoming
-		na = self.next_assignment.first
+		na = self.future.assigned.asc.first
 		if na
 			return self.due_after(na.due_date)
 		else
