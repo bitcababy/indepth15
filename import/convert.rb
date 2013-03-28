@@ -280,6 +280,9 @@ class SectionAssignment
 	def self.import_from_hash(hash)
 		section, assignment = self.get_sa(hash)
     assignment.name = hash.delete(:name)
+    assignment.name = assignment.name.to_i if assignment.name =~ /^\d+$/
+    assignment.teacher = section.teacher
+    section.teacher.assignments << assignment
     assignment.save!
  		hash[:assigned] = hash[:assigned] == 'Y'
 		hash[:assignment] = assignment
