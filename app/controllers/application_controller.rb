@@ -1,16 +1,16 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
-  before_filter :set_year
+  # before_filter :set_year
 
   # before_filter :reload_settings
 
   ##
   # Stuff to store and return to last recorded page
   ##
-  def remember_current_page
+  def remember_current_page(url=nil)
     flash[:notice] = nil
     flash[:error] = nil
-    cookies[:last_page] = request.original_fullpath
+    cookies[:last_page] = url || request.original_fullpath
   end
 
   helper_method :stored_page
