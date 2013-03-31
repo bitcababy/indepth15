@@ -13,12 +13,14 @@ class SectionAssignment
   
 	index({due_date: -1, assigned: 1})
 	
-	belongs_to :section, counter_cache: true, autosave: true 
-	belongs_to :assignment, counter_cache: true, autosave: true
+	belongs_to :section, counter_cache: true, autosave: true, index: true
+	belongs_to :assignment, counter_cache: true, autosave: true, index: true
       
-  belongs_to :teacher
-  belongs_to :course
+  belongs_to :teacher, index: true
+  belongs_to :course, index: true
   
+  index({year: -1, course_id: 1, teacher_id: 1, block: 1, due_date: 1})
+ 
   scope :for_section,       ->(s) { where(section: s) }
   scope :for_course,        ->(c) { where(course: c) }
   scope :for_teacher,       ->(t) { where(teacher: t) }
@@ -131,7 +133,6 @@ class SectionAssignment
       
       col_no = h["iSortCol_#{i}"].to_i
       col = cols[col_no]
-      logger.warn "*#{col_no}/#{col}/#{dir}"
       
       order << "#{col} #{dir}"
     end
@@ -153,7 +154,7 @@ class SectionAssignment
         when "year"
         sa.year
         when "course"
-        sa.course.menu_label
+        sa.course.short_name
         when "teacher"
         sa.teacher.full_name
         when "block"
