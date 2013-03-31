@@ -65,7 +65,7 @@ class User
 	#
   field :ep, as: :encrypted_password, :type => String, :default => ""
 
-  validates_presence_of :encrypted_password # SMELL: breaks testing
+  validates_presence_of :encrypted_password
 
   ## Recoverable
   field :rt, as: :reset_password_token,   :type => String
@@ -93,7 +93,10 @@ class User
   field :la, as: :locked_at,       :type => Time
 
   ## Token authenticatable
-  field :at, as: :authentication_token, :type => String
+  # field :at, as: :authentication_token, :type => String
+  # 
+  
+  attr_accessible :login, :password, :password_confirmation, :remember_me
 
 end
 
