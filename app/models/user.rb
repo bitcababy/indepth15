@@ -93,10 +93,10 @@ class User
   field :la, as: :locked_at,       :type => Time
 
   ## Token authenticatable
-  # field :at, as: :authentication_token, :type => String
-  # 
+  field :at, as: :authentication_token, :type => String
   
-  attr_accessible :login, :password, :password_confirmation, :remember_me
+  
+  # attr_accessible :login, :password, :password_confirmation, :remember_me
 
 end
 
