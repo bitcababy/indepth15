@@ -13,16 +13,9 @@ class ApplicationController < ActionController::Base
     flash[:error] = nil
     cookies[:last_page] = url || request.original_fullpath
   end
-
-  helper_method :stored_page
-  def stored_page
-    cookies[:last_page]
-  end
   
-  def return_to_last_page(args = {})
-    flash[:notice] = args[:notice]
-    flash[:error] = args[:error]
-    redirect_to stored_page
+  def stored_page
+    return cookies[:last_page]
   end
 
   def reload_settings
@@ -120,7 +113,7 @@ class ApplicationController < ActionController::Base
   def set_year
      params[:year] ||= Settings.academic_year
   end
-
+  
   def render_404(exception)
     @not_found_path = exception.message
 		##
@@ -144,10 +137,13 @@ class ApplicationController < ActionController::Base
       format.all { render nothing: true, status: 500}
     end
   end
-	  
   
   def adjust_format_for_iphone
     request.format = :ios if request.env["HTTP_USER_AGENT"] =~ %r{Mobile/.+Safari}
   end
     
+  def after_sign_in_path_for(resource)
+    stored_page
+  end
+  
 end
