@@ -2,23 +2,27 @@ class Users::SessionsController < Devise::SessionsController
 	skip_before_filter :verify_authenticity_token, :only => [] 
 	
 	def create 
-    login = params[:user][:login] 
-    user = User.find_for_database_authentication({:login => login})
-    password = params[:user][:password]
-    if (!user.nil?)
-      sign_in user, event: :authentication
-      redirect_to stored_page
-        # format.json { render json: { goto: stored_page, error: "Success" }, status: :success}
-    else
-      respond_to do |format|
-        format.json { render :head, status: "failure" }
-      end
-    end
+    super
+    # login = params[:user][:login] 
+  #   password = params[:user][:password]
+  #   
+  #   user = User.find_for_database_authentication({:login => login})
+  #   if (!user.nil? && user.valid_password?(params[:user][:password]))
+  #     sign_in user, event: :authentication
+  #     redirect_to stored_page
+  #       # format.json { render json: { goto: stored_page, error: "Success" }, status: :success}
+  #   else
+  #     respond_to do |format|
+  #       format.json { render :head, status: "failure" }
+  #       format.html { render :new }
+  #     end
+  #   end
 	end
 	
 	def new
+    remember_current_page
     respond_to do |format| 
-      format.html { render :new, layout: nil }
+      format.html { render layout: !request.xhr? }
 		end
 	end
   
