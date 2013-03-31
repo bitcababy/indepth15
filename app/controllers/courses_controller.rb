@@ -2,6 +2,7 @@ class CoursesController < ApplicationController
 	before_filter :find_course, except: []
 	before_filter :authenticate_user!, only: []
 	
+	before_filter :find_course, except: []
 	def home
     remember_current_page
     @section = get_section

@@ -1,0 +1,15 @@
+- content_for :page_title, "Sign in"
+- content_for :page_header, "Sign in"
+
+#sign-in 
+	%h2 Sign in
+	= simple_form_for resource, as: resource_name, url: user_session_path do |f|
+		.form-inputs#form-inputs
+			= f.input :login, required: true
+			= f.input :password, required: true
+			- if devise_mapping.rememberable?
+				= f.label :remember_me
+				= f.check_box :remember_me
+		.form-actions#form-actions
+			= f.submit 'Sign in'
+		= render "devise/shared/links"
