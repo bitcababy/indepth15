@@ -27,7 +27,7 @@ class User
 	validates :email, presence: true#, uniqueness: true
 
 	field :lo, as: :login, type: String
-	validates :login, presence: true, uniqueness: true, length: { minimum: 3}
+	validates :login, presence: true, uniqueness: true, length: { minimum: 3}#, case_sensitive: false
 	field :_id, type: String, default: ->{ login }
 	
   track_history on: [:honorific, :first_name, :last_name, :middle_name, :last_name, :email, :login ], version_field: :version
