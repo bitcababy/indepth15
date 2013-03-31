@@ -5,4 +5,5 @@
 			- if user_signed_in?
 				#signout= link_to 'Sign out', destroy_user_session_path, method: (Rails.env.test? ? :get : :delete), id: 'signout'
 			- else
-				#signin= link_to 'Sign in', new_user_session_path, method: :get, remote: true, id: 'signin'
+				/ #signin= link_to 'Sign in', new_user_session_path, method: :get, remote: true, id: 'signin'
+				%a#signin{href: new_user_session_path}= 'Sign in'
