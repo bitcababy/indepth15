@@ -1,17 +1,17 @@
 # From: https://github.com/plataformatec/devise/wiki/How-To:-Do-not-redirect-to-login-page-after-session-timeout
 class CustomFailureApp < Devise::FailureApp
   def http_auth
-    logger.warn "***http_auth"
+    # logger.warn "***http_auth"
     super
   end
 
   def recall
-    logger.warn "***recall"
+    # logger.warn "***recall" 
     super
   end
 
   def respond
-    logger.warn "***respond"
+    # logger.warn "***respond"
     super
   end
 
