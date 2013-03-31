@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
+  before_filter :adjust_format_for_iphone
   # before_filter :set_year
 
   # before_filter :reload_settings
@@ -144,4 +145,9 @@ class ApplicationController < ActionController::Base
     end
   end
 	  
+  
+  def adjust_format_for_iphone
+    request.format = :ios if request.env["HTTP_USER_AGENT"] =~ %r{Mobile/.+Safari}
+  end
+    
 end
