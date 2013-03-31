@@ -1,8 +1,20 @@
 class Users::SessionsController < Devise::SessionsController
 	skip_before_filter :verify_authenticity_token, :only => [] 
 	
-	def create 
+	def create
     super
+    # if user_signed_in?
+    #    respond_to do |format|
+    #       format.html { redirect_to stored_page }
+    #       format.json { render json: { goto: stored_page, error: "Success" }, status: :success}
+    #     end
+    # else
+    #   respond_to do |format|
+    #     format.json { render :head, status: "failure" }
+    #     format.html { render :new }
+    #   end
+    # end
+       
     # login = params[:user][:login] 
   #   password = params[:user][:password]
   #   
@@ -20,7 +32,6 @@ class Users::SessionsController < Devise::SessionsController
 	end
 	
 	def new
-    remember_current_page
     respond_to do |format| 
       format.html { render layout: !request.xhr? }
 		end
