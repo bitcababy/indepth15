@@ -54,24 +54,24 @@ module ApplicationHelper
 	##
 	## Devise methods
 	##
-  def current_user
-    return @current_user ||= warden.authenticate(:scope => :user)
-  end
-  
-  def current_user_name
-    return user_signed_in? ? current_user.full_name : "Guest"
-  end
-  
-  def user_signed_in?
-    return !!current_user
-  end
+  # def current_user
+  #   return @current_user ||= warden.authenticate(:scope => :user)
+  # end
   # 
-  def user_session
-    return current_user && warden.session(:user)
-  end
-
-  def editable?
-    return user_signed_in?
-  end
-
+  # def current_user_name
+  #   return user_signed_in? ? current_user.full_name : "Guest"
+  # end
+  # 
+  # def user_signed_in?
+  #   return !!current_user
+  # end
+  # # 
+  # def user_session
+  #   return current_user && warden.session(:user)
+  # end
+  # 
+  # def editable?
+  #   return user_signed_in?
+  # end
+  # 
 end
