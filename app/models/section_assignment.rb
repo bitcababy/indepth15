@@ -20,6 +20,7 @@ class SectionAssignment
   belongs_to :course, index: true
   
   index({year: -1, course_id: 1, teacher_id: 1, block: 1, due_date: 1})
+  index({year: -1, course_id: 1, teacher_id: 1})
  
   scope :for_section,       ->(s) { where(section: s) }
   scope :for_course,        ->(c) { where(course: c) }
