@@ -29,6 +29,11 @@ class Section
 	has_many :section_assignments, dependent: :delete, autosave: true
 	belongs_to :course, index: true, autosave: true
 	belongs_to :teacher, index: true, autosave: true
+  
+  validates :course_id, presence: true
+  validates :teacher_id, presence: true
+  
+  field :_id, default: -> { "#{year%100}-#{course_id}-#{teacher_id}-#{block}"}
 
   validates_uniqueness_of :block, scope: [:course_id, :teacher_id, :year]
   validates_uniqueness_of :teacher_id, scope: [:course_id, :block, :year]
