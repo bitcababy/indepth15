@@ -23,6 +23,7 @@ class SectionAssignment
   index({year: -1, course_id: 1, teacher_id: 1})
  
   validates_presence_of :due_date, :assigned, :block, :assignment_id, :section_id
+
   scope :for_section,       ->(s) { where(section: s) }
   scope :for_course,        ->(c) { where(course: c) }
   scope :for_teacher,       ->(t) { where(teacher: t) }
@@ -109,13 +110,18 @@ class SectionAssignment
     cols = h["sColumns"].split(",")
     start = h["iDisplayStart"]
     limit = h["iDisplayLength"]
-    crit = SectionAssignment.skip(start).limit(limit)
-    crit = crit.for_year(h["sFilter_0"].to_i) unless h["sFilter_0"].empty?
-    crit = crit.for_course(h["sFilter_1"].to_i) unless h["sFilter_1"].empty?
-    crit = crit.for_teacher(h["sFilter_2"]) unless h["sFilter_2"].empty?
+    crit = SectionAssignment.limit(limit).skip(start)
+    
+    conds = {}
+    conds[:year] = h["sFilter_0"].to_i unless h["sFilter_0"].empty?
+    conds[:course] = (h["sFilter_1"].to_i) unless h["sFilter_1"].empty?
+    consd[:teacher] = (h["sFilter_2"]) unless h["sFilter_2"].empty?
+    
+    crit = crit.and(conds)
+    
     # Get the order
     order = self.get_order(cols, h)
-    crit = crit.order_by(order.join(','))
+    crit = crit.order_by(order)
        
     data = self.get_data(crit, cols)
 
@@ -144,12 +150,12 @@ class SectionAssignment
     order << "block asc"
     order << "due_date asc"
   
-    return order
+    return order.join(',')
   end
 
   def self.get_data(sas, cols)
     data = []
-    sas.each do |sa|
+    sas.includes(:assignment).each do |sa|
       row = []
       for col in cols do
         datum = case col
@@ -168,9 +174,9 @@ class SectionAssignment
         when "content"
         sa.assignment.content
         when "course_id"
-        sa.course.to_param
+        sa.course_id
         when "teacher_id"
-        sa.teacher.to_param
+        sa.teacher_id
         end
         row << datum
       end
