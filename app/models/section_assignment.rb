@@ -22,6 +22,7 @@ class SectionAssignment
   index({year: -1, course_id: 1, teacher_id: 1, block: 1, due_date: 1})
   index({year: -1, course_id: 1, teacher_id: 1})
  
+  validates_presence_of :due_date, :assigned, :block, :assignment_id, :section_id
   scope :for_section,       ->(s) { where(section: s) }
   scope :for_course,        ->(c) { where(course: c) }
   scope :for_teacher,       ->(t) { where(teacher: t) }
@@ -102,8 +103,6 @@ class SectionAssignment
   #   "bSortable_0"=>"true", 
   #   "bSortable_1"=>"true", 
   #   "bSortable_2"=>"true", "bSortable_3"=>"false", "bSortable_4"=>"false", "bSortable_5"=>"false", "bSortable_6"=>"false", "bSortable_7"=>"true", "bSortable_8"=>"true", "bSortable_9"=>"true", "_"=>"1364230910350"}
-   
-  
 #
   def SectionAssignment.process_data_request(h)
     return nil if h.empty?
