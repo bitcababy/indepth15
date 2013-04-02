@@ -1,1 +1,1 @@
-= render partial: 'menus/courses', locals: {courses: @courses.asc}
+= render partial: 'menus/courses', locals: { courses: @courses.in_catalog.asc(:number) }
