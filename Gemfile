@@ -54,6 +54,8 @@ gem 'client_side_validations'
 gem 'client_side_validations-mongoid'
 gem 'client_side_validations-simple_form'
 
+gem 'validates_email_format_of'
+
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic', :git => 'git://github.com/bitcababy/settingslogic.git'
