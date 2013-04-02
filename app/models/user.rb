@@ -24,11 +24,12 @@ class User
  				 
   ## Database authenticatable
   field :em, as: :email, :type => String
-	validates :email, presence: true#, uniqueness: true
+	validates :email, presence: true
 
 	field :lo, as: :login, type: String
-	validates :login, presence: true, uniqueness: true, length: { minimum: 3}#, case_sensitive: false
 	validates :login, presence: true, length: { minimum: 3}#, case_sensitive: false
+
+  validates_uniqueness_of :email, :login, case_sensitive: false
 
 	field :_id, type: String, default: ->{ login }
 	
@@ -40,10 +41,7 @@ class User
   # end
 
   def <=>(u)
-    return self.last_name <=> u.last_name unless self.last_name == u.last_name
-    return self.first_name <=> u.first_name unless self.first_name == u.first_name
-    return self.middle_name <=> u.middle_name unless self.middle_name == u.middle_name
-    return self.login <=> u.login
+    return self.login.downcase <=> u.login.downcase
   end
 
 	def formal_name
