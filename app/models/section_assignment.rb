@@ -8,8 +8,8 @@ class SectionAssignment
 	field :as, as: :assigned, type: Boolean, default: false
   field :bl, as: :block, type: String
   field :y, as: :year, type: Integer
-
-  validates :due_date, presence: true
+  field :tn, as: :teacher_name, type: String
+  field :cn, as: :course_name, type: String
   
 	index({due_date: -1, assigned: 1})
 	
@@ -42,6 +42,8 @@ class SectionAssignment
     self.course = self.section.course
     self.block = self.section.block
     self.teacher = self.section.teacher
+    self.course_name = self.course.short_name
+    self.teacher_name = self.teacher.full_name
   end
     
   # data_table_options.merge!({
@@ -154,9 +156,9 @@ class SectionAssignment
         when "year"
         sa.year
         when "course"
-        sa.course.short_name
+        sa.course_name
         when "teacher"
-        sa.teacher.full_name
+        sa.teacher_name
         when "block"
         sa.block
         when "due_date"
