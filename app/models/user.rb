@@ -28,6 +28,8 @@ class User
 
 	field :lo, as: :login, type: String
 	validates :login, presence: true, uniqueness: true, length: { minimum: 3}#, case_sensitive: false
+	validates :login, presence: true, length: { minimum: 3}#, case_sensitive: false
+
 	field :_id, type: String, default: ->{ login }
 	
   track_history on: [:honorific, :first_name, :last_name, :middle_name, :last_name, :email, :login ], version_field: :version
