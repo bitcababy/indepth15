@@ -47,7 +47,7 @@ development: &defaults
 
     # Raise an error when defining a scope with the same name as an
     # existing method. (default: false)
-    # scope_overwrite_exception: false
+    scope_overwrite_exception: true
 
     # Skip the database version check, used when connecting to a db without
     # admin access. (default: false)
@@ -67,7 +67,7 @@ test:
     # allow_dynamic_fields: true
 
     # Enable the identity map, needed for eager loading. (default: false)
-    identity_map_enabled: true
+    identity_map_enabled: false
   sessions:
     default:
       <<: *default_session
@@ -78,14 +78,20 @@ testing:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
+	options:
+    identity_map_enabled: true
 
 staging:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
+	options:
+    identity_map_enabled: true
 
 production:
   sessions:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
+	options:
+    identity_map_enabled: true
 <% end %>
