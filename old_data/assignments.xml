@@ -5,7 +5,7 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Mar 31, 2013 at 01:11 PM
+- Generation Time: Apr 03, 2013 at 03:02 PM
 - Server version: 5.5.19
 - PHP Version: 5.3.3-7+squeeze9
 -->
@@ -5979,7 +5979,9 @@ Answers:&lt;br /&gt;
         <table name="assignments">
             <column name="assgt_id">615849</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">Read and study section 10.6 and do problems 8, 11, 16, 27, and 28.</column>
+            <column name="content">Read and study section 10.6 and do problems 8, 11, 16, 27, and 28.&lt;br&gt;
+Quiz on clock problems.&lt;br&gt;
+Last day to retake test #6.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615850</column>
@@ -5989,42 +5991,44 @@ Answers:&lt;br /&gt;
         <table name="assignments">
             <column name="assgt_id">615851</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read and study section 10.8 and do problems 5,7,8,9,16,18, and 20.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615852</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read and study section 10.9 and do problems 6, 8-10, and 13-17.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615853</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read and study 11.1 and do problems 8, 10, 12, 13, 15, 16, 17</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615854</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read Chapter One of &lt;i&gt;Journey through Genius, &lt;/i&gt;and
+answer the questions in the &lt;a href=&quot;/files/gabrinerd/geomh/JTG Study Questions.pdf&quot;&gt;Study Questions for Chapter One&lt;/a&gt;.
+&lt;br&gt;Your answers MUST be typed.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615855</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read and study 11.2 and do problems 14, 17, 21, 22, 23, 25, 26, 28, 31 </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615856</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read and study 11.3 and do problems 10-18, 20.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615857</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read and study section 11.4 and do problems 4-10, and 13.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615858</column>
             <column name="teacher_id">gabrinerd</column>
-            <column name="content">TBA</column>
+            <column name="content">Read and study section 11.5 do problems 9-11, 15, 17, 19-21, 26.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615859</column>
@@ -6076,12 +6080,37 @@ Take notes accordingly.&lt;br /&gt;&lt;/li&gt;
         <table name="assignments">
             <column name="assgt_id">615895</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">TBA</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Read, study, and take notes on Sections 10.4 and 10.9,
+but replace the definition of &lt;i&gt;tangent &lt;/i&gt;with the one we’ve been using (see
+assgt #53).&lt;/li&gt;
+&lt;li&gt;Learn the definitions of &lt;i&gt;internally and externally tangent circles, &lt;/i&gt;and the definitions of &lt;i&gt;common internal and external tangents, &lt;/i&gt;on pp. 460–461. Then study the four sample problems that follow these definitions. Pay particular attention to the common-tangent procedure in the box on p. 462, and admire the surprisingly correct use of the hyphen.&lt;/li&gt;
+&lt;li&gt;On p. 465, do problems # *14 (6), *16 (8), 18 (8), 22 (8), 27 (12).&lt;/li&gt;
+&lt;li&gt;On p. 502, do problems #12 (6), *14 (8), 15 (6), 17 (8).&lt;/li&gt;
+&lt;/ul&gt;
+Answers:&lt;br /&gt;14: 6&lt;br /&gt;
+16: 3, 5, 8&lt;br /&gt;
+18: {use ITT, PotP, subtraction}&lt;br /&gt;
+27: 8&amp;#8730;10/3&lt;br /&gt;
+&lt;br /&gt;
+12: 13&amp;#960;&lt;br /&gt;
+14: 12+9&amp;#960;&lt;br /&gt;
+15: 10&amp;#960;&lt;br /&gt;
+17: 24&amp;#8730;3+22&amp;#960;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615905</column>
             <column name="teacher_id">davidsonl</column>
             <column name="content">No homework for &lt;i&gt;you. &lt;/i&gt;Your cat will do it for you:&lt;br /&gt;&lt;br /&gt; &lt;img src=&quot;/files/davidsonl/images/cat-did-hw.jpg&quot;&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615913</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/geomh/more-angles+segments+circles.pdf&quot;&gt;More Angles, Line Segments, and Circles&lt;/a&gt;,
+which you worked on in class.&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/geomh/more-clocks!.pdf&quot;&gt;More Clocks!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610791</column>
@@ -9998,7 +10027,23 @@ Homework: Finish Worksheet 6.1 and Worksheet 6.2 from class.</column>
         <table name="assignments">
             <column name="assgt_id">615902</column>
             <column name="teacher_id">hosmerc</column>
-            <column name="content">Test 6 is today.  It will cover Similarity, Pythagorean Theorem and Trigonometry.  Stay tuned for a review sheet.</column>
+            <column name="content">Test 6 is today.  It will cover Similarity, Pythagorean Theorem and Trigonometry.  Please finish the
+ &lt;a href=&quot;/files/hosmerc/geom/Test 6reviewproblems.pdf&quot;&gt;Review Packet&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615915</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;a href=&quot;/files/gacsa/geom/Unit 3/Trig 1.pdf&quot;&gt;Trigonometry 1&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615916</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">&lt;a href=&quot;/files/gacsa/geom/Unit 3/trigonometry practice.pdf&quot;&gt;Trigonometry Practice&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615927</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Looking for new assignments? &lt;b&gt;From now on you must go to &lt;a href=&quot;http://www.westonmath.org&quot;&gt;www.westonmath.org&lt;/a&gt;!&lt;/b&gt; See you there!</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610850</column>
@@ -12857,6 +12902,16 @@ For homework, please read &lt;a href=&quot;/files/gacsa/alg2h/Crypto/Le Chiffre 
             <column name="assgt_id">615900</column>
             <column name="teacher_id">gacsa</column>
             <column name="content">&lt;a href=&quot;/files/gacsa/alg2h/Crypto/affine practice (good and bad ciphers).pdf&quot;&gt;Affine Practice.&lt;/a&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615911</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Decipher &lt;a href=&quot;/teachers/griswoldn/alg2/honors/vigenere homework.docx&quot;&gt; these &lt;/a&gt;messages.&lt;/p&gt; </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615925</column>
+            <column name="teacher_id">gacsa</column>
+            <column name="content">Complete &lt;a href=&quot;/files/gacsa/alg2h/Crypto/Matrices1.pdf&quot;&gt;Matrices.&lt;/a&gt; If you have trouble with matrix operations, find a helpful website that explains the process--there are many!</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610800</column>
@@ -21495,7 +21550,7 @@ which you also have on a card.
         <table name="assignments">
             <column name="assgt_id">615894</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">TBA</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/alg2/affine-2.html&quot;&gt;Affine Ciphers II&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615896</column>
@@ -21518,6 +21573,41 @@ which you also have on a card.
             <column name="assgt_id">615909</column>
             <column name="teacher_id">davidsonl</column>
             <column name="content">No homework for &lt;i&gt;you. &lt;/i&gt;Your cat will do it for you:&lt;br /&gt;&lt;br /&gt; &lt;img src=&quot;/files/davidsonl/images/cat-did-hw.jpg&quot;&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615910</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">Finish reading &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/10_solving congruences with unknowns.pdf&quot;&gt;Solving congruences with unknowns&lt;/a&gt; and complete problems a through d.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615914</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">&lt;ul&gt;
+&lt;li&gt;Be sure that you have filled in the multiplication tables in &lt;a href=&quot;/files/davidsonl/alg2/mods5-6-multiplication-tables.pdf&quot;&gt;mod 5, mod 6&lt;/a&gt;, and &lt;a href=&quot;/files/davidsonl/alg2/mod26-multiplication-table.pdf&quot;&gt;mod 26&lt;/a&gt;.
+In particular, hold onto the mod 26 table.
+&lt;/li&gt;
+&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/alg2/practice-affine.pdf&quot;&gt;Affine Practice&lt;/a&gt;. &lt;/li&gt;&lt;/ul&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615919</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Complete 1-5 inclusive on &lt;a href=&quot;/files/hosmerc/alg2/affinceciphers2.pdf&quot;&gt;Affine Ciphers 2&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615920</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish &lt;a href=&quot;/files/hosmerc/alg2/affineciphers1.html&quot;&gt;Affine Ciphers 1&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615924</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/alg2/solving-congruences.html&quot;&gt;Solving Congruences&lt;/a&gt;
+and &lt;a href=&quot;/files/davidsonl/alg2/russian-crypto.pdf&quot;&gt;In Honor of Dr. Korsunsky&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615926</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">Finish the &lt;a href=&quot;/files/hosmerc/alg2/mod5and6table.pdf&quot;&gt;Mod 6 Table&lt;/a&gt;. </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">612697</column>
@@ -26805,7 +26895,12 @@ so be sure to budget enough time for it.</column>
         <table name="assignments">
             <column name="assgt_id">615893</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">TBA</column>
+            <column name="content">Carefully read Chapter 6 of &lt;i&gt;Journey through Genius, &lt;/i&gt;and write answers to all the &lt;a href=&quot;/files/davidsonl/precalch/jtg-6.html&quot;&gt;study questions&lt;/a&gt; as you read.
+Submit your answers, either by email or on paper.
+Note that this assignment is due on Thursday,
+so budget your time accordingly.
+&lt;br /&gt;
+Also, if you did not pick up the &lt;a href=&quot;/files/davidsonl/precalch/conics_info.pdf&quot;&gt;Conics Info Sheet&lt;/a&gt; in class, you should see me or a classmate to help you fill in the details.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615907</column>
@@ -26814,6 +26909,22 @@ so be sure to budget enough time for it.</column>
 but if you have not caught up on back homework you should do so.
 I will check Conics 3 and 4 on Monday.
 Perhaps your cat will do your work for you:&lt;br /&gt;&lt;br /&gt; &lt;img src=&quot;/files/davidsonl/images/cat-did-hw.jpg&quot;&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615918</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Class will not meet today. Please complete Conics Part III: Shotspotter (this can be downloaded from Mr. Davidson's page). Also be sure to complete #'s 1-4 on the Ellipse practice worksheet.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615921</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/delFerro-etc.pdf&quot;&gt;Solving higher-degree polynomial equations&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615922</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Carefully read Chapter 6 of Journey through Genius, and write answers to all the &lt;A HREF=&quot;/files/davidsonl/precalch/jtg-6.html&quot;&gt;STUDY QUESTIONS.&lt;/A&gt;   as you read. Submit your answers, either by email or on paper. Note that this assignment is due on next Tuesday, so budget your time accordingly.&lt;/p&gt;
+&lt;P&gt;Also, if you did not pick up the Conics Info Sheet in class, you can find a copy &lt;A HREF=&quot;/files/davidsonl/precalch/conics_info.pdf&quot;&gt;HERE.&lt;/A&gt;&lt;/p&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610804</column>
@@ -30826,6 +30937,11 @@ Here is a link to the &lt;a href=&quot;http://math.bu.edu/DYSYS/applets/Quadr.ht
 &lt;a href=&quot;http://donlehmanjr.com/Science/24%20Leftovers/243.htm&quot;&gt;Helpful for bulb addition!&lt;/a&gt;</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">615917</column>
+            <column name="teacher_id">fierabendm</column>
+            <column name="content">Class will not meet today. Please download and complete &lt;a href=&quot;/files/fierabendm/precalc1/polynomial graph analysis.pdf&quot;&gt;Polynomial Graph Analysis&lt;/a&gt;.</column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610803</column>
             <column name="teacher_id">fidlerb</column>
             <column name="content">Please send me an email.  My email address is:
@@ -31812,6 +31928,11 @@ Wednesday, November 16: Deadline for Retakes of Test 1 and 2</column>
             <column name="assgt_id">615817</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">The answers to &lt;a href = &quot;/files/langsdorfa/precalc2/Stat PSet 2 2013.pdf&quot;&gt; Problem Set 2 &lt;/a&gt; are listed in items 2 through 9 of &lt;a href = &quot;/files/langsdorfa/precalc2/Answers to Stat Problem Set 2.pdf&quot;&gt; this document&lt;/a&gt;.  </column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615923</column>
+            <column name="teacher_id">monzj</column>
+            <column name="content">&lt;P&gt;Here is &lt;A HREF=&quot;/files/monzj/precalc2/Problem Set 7.pdf&quot;&gt;Problem Set 7.&lt;/A&gt;&lt;/p&gt;&lt;P&gt;Here are the &lt;A HREF=&quot;/files/monzj/precalc2/Answers to Problem Set 7 2013.pdf&quot;&gt;Answers.&lt;/A&gt;&lt;/p&gt;</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610818</column>
@@ -33040,6 +33161,11 @@ Your Chapter 3 Test Corrections are due today!!!
             <column name="assgt_id">615887</column>
             <column name="teacher_id">griswoldn</column>
             <column name="content">&lt;p&gt;Study for your &lt;a href=&quot;/teachers/griswoldn/abcalc/know for ch7810 test.doc&quot;&gt; Test on Chapters 7, 8, and 10&lt;/a&gt;.&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615912</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Finish the &lt;a href=&quot;/teachers/griswoldn/abcalc/review 7 8 10 2013.docx&quot;&gt; review problems &lt;/a&gt;from class.&lt;/p&gt; </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610830</column>
