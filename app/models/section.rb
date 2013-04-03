@@ -56,7 +56,7 @@ class Section
     delegate :department, to: :course
   end
 
-  track_history track_create: true
+  track_history track_create: false
   
   before_save :sync_with_sas
   

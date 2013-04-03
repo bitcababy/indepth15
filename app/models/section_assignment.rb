@@ -64,7 +64,7 @@ class SectionAssignment
  #    }
  #  })
 
-  track_history track_create: true
+  track_history track_create: false
   
 	def to_s
 		return "#{due_date}/#{assigned}"

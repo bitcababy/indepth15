@@ -2,7 +2,7 @@ require 'spec_helper'
 
 class TestDocument < Document
   field :content, type: String, default: ""
-  track_history on: :content, track_create: true
+  track_history on: :content, track_create: false
 end
 
 describe Document do

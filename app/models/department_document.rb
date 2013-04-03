@@ -8,7 +8,7 @@ class DepartmentDocument < TextDocument
   ordered_on :pos
   embedded_in :department
 
-  track_history track_create: true
+  track_history track_create: false
   
   def to_s
     return "Doc titled #{title}"

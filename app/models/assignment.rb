@@ -18,7 +18,7 @@ class Assignment < TextDocument
 
   accepts_nested_attributes_for :section_assignments
 
-  track_history track_create: true
+  track_history track_create: false
   
   index({name: -1})
   
