@@ -4,16 +4,16 @@ class Document
   include Mongoid::Timestamps::Short
   include Mongoid::History::Trackable 
     
-  before_update :check_lock_version
-
-  # This is for optimistic locking
-  def check_lock_version
-    prev = self.history_tracks.last
-    if prev.version > self.version
-      # Someone's saved it while I was editing it
-      raise StaleDocument
-    end
-  end
+  # before_update :check_lock_version
+  # 
+  # # This is for optimistic locking
+  # def check_lock_version
+  #   prev = self.history_tracks.last
+  #   if prev.version > self.version
+  #     # Someone's saved it while I was editing it
+  #     raise StaleDocument
+  #   end
+  # end
 
 end
 
