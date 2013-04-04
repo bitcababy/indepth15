@@ -93,5 +93,5 @@ production:
     default:
       uri: <%= ENV['MONGOLAB_URI'] %>
   options:
-    identity_map_enabled: true
+    identity_map_enabled: false
 <% end %>
