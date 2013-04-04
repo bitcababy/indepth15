@@ -115,7 +115,7 @@ class SectionAssignment
     conds = {}
     conds[:year] = h["sFilter_0"].to_i unless h["sFilter_0"].empty?
     conds[:course] = (h["sFilter_1"].to_i) unless h["sFilter_1"].empty?
-    consd[:teacher] = (h["sFilter_2"]) unless h["sFilter_2"].empty?
+    conds[:teacher] = (h["sFilter_2"]) unless h["sFilter_2"].empty?
     
     crit = crit.and(conds)
     
