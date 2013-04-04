@@ -89,7 +89,7 @@ class Section
   end
 
 	def upcoming_assignments
-		return self.section_assignments.upcoming.asc(:due_date)
+    return self.future_assignments - self.current_assignments
 	end
 
 	def current_assignments
