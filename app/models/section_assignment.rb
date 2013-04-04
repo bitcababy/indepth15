@@ -22,7 +22,7 @@ class SectionAssignment
   index({year: -1, course_id: 1, teacher_id: 1, block: 1, due_date: 1})
   index({year: -1, course_id: 1, teacher_id: 1})
  
-  validates_presence_of :due_date, :assigned, :block, :assignment_id, :section_id
+  validates_presence_of :due_date, :assigned, :assignment_id, :section_id#, :block
 
   scope :for_section,       ->(s) { where(section: s) }
   scope :for_course,        ->(c) { where(course: c) }
