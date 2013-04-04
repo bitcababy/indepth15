@@ -7,7 +7,7 @@ CKEDITOR.editorConfig = function( config ) {
     // Define changes to default configuration here.
 	// For the complete reference:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
-	// config.extraPlugins = 'equation'; #Take out equation for now, since it keeps giving an error
+	// config.extraPlugins = 'equation'; 
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [
@@ -44,22 +44,22 @@ CKEDITOR.editorConfig = function( config ) {
 	//     { name: 'tools',       items : [ 'Maximize', 'ShowBlocks','-','About' ] }
 	// ];
 	
-	config.toolbar_Full =
+	config.toolbar_Custom =
 	[
- 	 		{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+ 	 	{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
 	    { name: 'clipboard',   items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
 	    { name: 'editing',     items : [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
-	    { name: 'document',    items : [ 'Source'] },
+	    { name: 'document',    items : [ 'Maximize', 'Source'] },
 	    '/',
-	    { name: 'paragraph',   items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
-	    { name: 'links',       items : [ 'Link','Unlink','Anchor' ] },
-	    { name: 'insert',      items : [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar'] },
+	    { name: 'paragraph',   items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','-','BidiLtr','BidiRtl' ] },
+	    { name: 'links',       items : [ 'Link','Unlink' ] },
+	    { name: 'insert',      items : [ 'Table','HorizontalRule','-', 'Smiley','SpecialChar'] },
 	    '/',
 	    { name: 'styles',      items : [ 'Styles','Format','Font','FontSize' ] },
 	    { name: 'colors',      items : [ 'TextColor','BGColor' ] },
-	    { name: 'tools',       items : [ 'Maximize', 'ShowBlocks','-',, 'Equation', '-','About' ] }
+	    { name: 'tools',       items : [ 'About' ] }
 	];
-	config.toolbar = "Full"
+	config.toolbar = "Custom"
 	config.autogrow = true
 	// Remove some buttons, provided by the standard plugins, which we don't
 	// need to have in the Standard(s) toolbar.
