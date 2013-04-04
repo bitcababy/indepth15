@@ -9,7 +9,7 @@ class SectionsController < ApplicationController
     @past = @section.past_assignments
     unless user_signed_in?
       @current = @current.assigned unless @current.empty?
-      @upcoming = @upcoming.assigned unless @upcoming.empty?
+      @upcoming = @upcoming.select { |s| s.assigned } unless @upcoming.empty?
       @past = @past.assigned unless @past.empty?
     end
      
