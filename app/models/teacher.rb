@@ -50,7 +50,7 @@ class Teacher < User
   end
    
   def last_asst_number(c)
-    sas = SectionAssignment.for_course(c).for_year(Settings.academic_year).includes(:assignment).select do |sa|
+    sas = SectionAssignment.for_course(c).for_year(Settings.academic_year).for_teacher(self).includes(:assignment).select do |sa|
       sa.assignment.name.kind_of? Integer
     end
     ((sas.collect {|sa| sa.assignment.name})<<0).max
