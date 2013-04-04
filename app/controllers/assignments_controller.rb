@@ -35,7 +35,7 @@ class AssignmentsController < ApplicationController
       sa_params = asst_params[:section_assignments_attributes]
       sa_params.values.each do |attrs|
         section = Section.find attrs[:section_id]
-        section.section_assignments.create assignment: asst, due_date: attrs[:due_date], assigned: attrs[:assigned]
+        section.section_assignments.create assignment: asst, due_date: attrs[:due_date], assigned: attrs[:assigned] == "1"
       end
       flash[:info] = "Assignment created"
       redirect_to stored_page || home_path
