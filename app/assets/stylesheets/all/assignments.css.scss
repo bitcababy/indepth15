@@ -12,24 +12,27 @@
 	vertical-align: top;
 	td.name {
 		text-align: right;
-		font-size: 85%;
+		font-size: 100%;
 	}
 	td.due_date {
-		font-size: 90%;
+		font-size: 100%;
 	}
 	td.asst-content {
-		ul {
+/*		ul {
 			margin-top: 2px;
 		}
-		li {
+*/		li {
 			padding-bottom: 4px;
 		}
-		font-size: 100%;
+		p:first-child, ul:first-child {
+			margin-top: 0;
+		}
+		font-size: 110%;
 		line-height: 130%;
 	}
 	img {
 		border-width: 1;
-		border-color: $dark-blue;
+		border-color: white;
 		border-style: solid;
 		margin: 2px;
 	}
