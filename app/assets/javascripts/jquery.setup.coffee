@@ -1,5 +1,5 @@
 $.datepicker.setDefaults
-	altFormat: 'yy-mm-dd'
+	altFormat:	"yy-mm-dd"
+	dateFormat: 'mm-dd-yy'
 	gotoCurrent: true
 	hideIfNoPrevNext: true
-	dateFormat:	"yy-mm-dd"
