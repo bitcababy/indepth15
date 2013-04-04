@@ -6,4 +6,5 @@
 *= require jquery.dialogForm
 *= require jquery.dcmegamenu
 *= require dates
+*= require jquery.setup
  */
