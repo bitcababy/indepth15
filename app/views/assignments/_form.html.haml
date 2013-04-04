@@ -14,7 +14,8 @@
 							%td.block
 								= saf.object.block
 								= saf.input :block, disabled: true, label: false, input_html: {size: 1}, as: :hidden
-							%td.due_date= saf.input :due_date, as: :datepicker, label: false, input_html: { size:10, value: saf.object.due_date.strftime("%m/%d/%Y") }
+							%td.due_date
+								= saf.input :due_date, as: :datepicker, label: false, input_html: { size:10, type: "date", value: saf.object.due_date.strftime("%m/%d/%Y") }
 							%td.assigned= saf.input :assigned, label: false, as: :boolean
 							= saf.input :section_id, as: :hidden
 		%fieldset#bottom
@@ -22,3 +23,10 @@
 			= af.input :content, as: :ckeditor, input_html: { height: 400, toolbar: "Full" }, label: false, required: true
 		%button#save= af.submit "Save"
 		%button#cancel= af.submit "Cancel"
+
+:coffeescript
+	$(document).ready ->
+		$("input.datepicker").each (i) ->
+			$(this).datepicker
+				altField: $(this).next()
+				altFormat: 'yyyy-mm-dd'
