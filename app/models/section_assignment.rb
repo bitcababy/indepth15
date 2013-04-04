@@ -75,8 +75,10 @@ class SectionAssignment
   end
   
 	def self.upcoming
-		na = self.future.assigned.asc.first
+		na = self.next_assignment.assigned.first
 		if na
+      dd = na.due_date
+      puts "***Due date is #{dd}"
 			return self.due_after(na.due_date)
 		else
 			return self.future
@@ -105,18 +107,27 @@ class SectionAssignment
   #   "bSortable_1"=>"true", 
   #   "bSortable_2"=>"true", "bSortable_3"=>"false", "bSortable_4"=>"false", "bSortable_5"=>"false", "bSortable_6"=>"false", "bSortable_7"=>"true", "bSortable_8"=>"true", "bSortable_9"=>"true", "_"=>"1364230910350"}
 #
+# 
+
+YEAR_FILTER = "sFilter_0"
+COURSE_FILTER = "sFilter_1"
+TEACHER_FILTER = "sFilter_2"
+BLOCK_FILTER = "sFilter_3"
+
   def SectionAssignment.process_data_request(h)
     return nil if h.empty?
+    
     cols = h["sColumns"].split(",")
     start = h["iDisplayStart"]
     limit = h["iDisplayLength"]
     crit = SectionAssignment.limit(limit).skip(start)
     
     conds = {}
-    conds[:year] = h["sFilter_0"].to_i unless h["sFilter_0"].empty?
-    conds[:course] = (h["sFilter_1"].to_i) unless h["sFilter_1"].empty?
-    conds[:teacher] = (h["sFilter_2"]) unless h["sFilter_2"].empty?
-    
+    conds[:year] = h[YEAR_FILTER].to_i unless h[YEAR_FILTER].empty?
+    conds[:course] = (h[COURSE_FILTER].to_i) unless h[COURSE_FILTER].empty?
+    conds[:teacher] = (h[TEACHER_FILTER]) unless h[TEACHER_FILTER].empty?
+    conds[:block] = (h[BLOCK_FILTER]) unless h[BLOCK_FILTER].empty?
+    puts "Conds are #{conds}"
     crit = crit.and(conds)
     
     # Get the order
@@ -132,7 +143,7 @@ class SectionAssignment
     res["aaData"] = data
     return res
   end
-  
+
   def SectionAssignment.get_order(cols, h)
     order = []
     0.upto(2) do |i|
@@ -144,7 +155,7 @@ class SectionAssignment
       
       order << "#{col} #{dir}"
     end
-    order << "year desc" unless h["sSortDir_0"]
+    order << "year desc" unless h["sSortDir_0"] 
     order << "course_id asc" unless h["sSortDir_1"]
     order << "teacher_id asc" unless h["sSortDir_2"]
     order << "block asc"

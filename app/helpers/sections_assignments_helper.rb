@@ -1,5 +1,3 @@
-# encoding: UTF-8
-
 module SectionsAssignmentsHelper
   def year_options_for_search
     return options_for_select((Settings.start_year..Settings.academic_year).to_a.reverse)
@@ -12,5 +10,9 @@ module SectionsAssignmentsHelper
   def teacher_options_for_search
     return options_for_select(Teacher.asc(:login).collect {|t| [t.menu_label, t.to_param] })
   end
-    
+  
+  def block_options_for_search
+    return options_for_select(Settings.blocks)
+  end
+  
 end

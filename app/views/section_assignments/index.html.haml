@@ -6,6 +6,7 @@
 		= select_tag 'Year', year_options_for_search, prompt: "Year"
 		= select_tag 'Course', course_options_for_search, prompt: "Course"
 		= select_tag 'Teacher', teacher_options_for_search, prompt: "Teacher"
+		= select_tag 'Block', block_options_for_search, prompt: "Block"
 		#filter_button.ui-button= button_tag "Filter assignments"
 
 	%table#sa-browser
@@ -24,6 +25,7 @@
 		year = ""
 		course = ""
 		teacher = "" 
+		block = ""
 		$("#sa-browser").dataTable
 			bjQueryUI: true
 			bPaginate: true
@@ -58,8 +60,8 @@
 				sName: 'teacher'
 				iDataSort: 8
 			,
-				sName: 'block'
 				aTargets: [3]
+				sName: 'block'
 				bSearchable: false
 			,
 				sName: 'due_date'
@@ -100,6 +102,9 @@
 				aoData.push
 					name: "sFilter_2"
 					value: teacher
+				aoData.push
+					name: "sFilter_3"
+					value: block
 				
 		$('select#Year').on 'change', (evt) ->
 			year = evt.target.value
@@ -108,9 +113,11 @@
 			teacher = evt.target.value
 		
 		$('select#Course').on 'change', (evt) ->
-			console.log evt
 			course = evt.target.value
 		
+		$('select#Block').on 'change', (evt) ->
+			block = evt.target.value
+
 		$('#filter_button').on 'click', ->
 			oTable = $("#sa-browser").dataTable();
 			oTable.fnDraw();
