@@ -47,6 +47,7 @@ class AssignmentsController < ApplicationController
   def update
     asst_params = params[:assignment]
     name = asst_params[:name]
+    name = name.to_i if name =~ /\d+/
     if @assignment.update_attributes(name: name, content: asst_params[:content])
       sa_params = asst_params[:section_assignments_attributes]
       sa_params.values.each do |attrs|
