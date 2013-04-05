@@ -3,3 +3,7 @@ $.datepicker.setDefaults
 	dateFormat: 'mm-dd-yy'
 	gotoCurrent: true
 	hideIfNoPrevNext: true
+	autoSize: true
+	firstDay: 1
+	showAnim: "slideDown"
+	yearRange: "c:c+1"
