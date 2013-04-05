@@ -18,14 +18,18 @@
 		font-size: 100%;
 	}
 	td.asst-content {
-/*		ul {
-			margin-top: 2px;
+		padding-top: 0;
+		ul, ol {
+			padding-left: 16px;
 		}
-*/		li {
+		li {
 			padding-bottom: 4px;
 		}
-		p:first-child, ul:first-child {
+		p:first-child, ul:first-child, ol:first-child {
 			margin-top: 0;
+		}
+		p+ul, p+ol, br+ul, br+ol {
+			padding-left: 40px;
 		}
 		font-size: 110%;
 		line-height: 130%;
