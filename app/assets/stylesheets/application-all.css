@@ -1,6 +1,8 @@
 /**
  * application-all.css
  *
- *= require_self
+ *= require all/jquery-ui-1.10.2.custom
+ *= require all/jquery.dataTables_themeroller
+ *= require all/jquery-ui-overrides
  *= require_tree ./all
  */
