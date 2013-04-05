@@ -15,7 +15,10 @@
 								= saf.object.block
 								= saf.input :block, disabled: true, label: false, input_html: {size: 1}, as: :hidden
 							%td.due_date
-								= saf.input :due_date, as: :datepicker, label: false, input_html: { size:10, type: "date", value: saf.object.due_date.strftime("%m/%d/%Y") }
+								- if browser.chrome?
+									= saf.input :due_date, label: false, validate: false, input_html: { size: 11, value: saf.object.due_date.strftime("%Y/%m/%d") }
+								- else
+									= saf.input :due_date, as: :datepicker, label: false, input_html: { size:10, type: "date", value: saf.object.due_date.strftime("%m/%d/%Y") }
 							%td.assigned= saf.input :assigned, label: false, as: :boolean
 							= saf.input :section_id, as: :hidden
 		%fieldset#bottom
