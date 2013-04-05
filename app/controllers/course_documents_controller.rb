@@ -34,6 +34,6 @@ class CourseDocumentsController < ApplicationController
   private
   def find_doc
     course = Course.find params[:course_id]
-    @doc = course.docs.find params[:id]
+    @doc = course.documents.find params[:id]
   end
 end

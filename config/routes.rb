@@ -25,12 +25,15 @@ InDepth::Application.routes.draw do
   get 'departments/:dept_id/edit_dept_doc/:id', to: 'department_documents#edit', as: :edit_dept_doc
   put 'departments/:dept_id/update_dept_doc/:id', to: 'department_documents#update', as: :update_dept_doc
   
+  get 'courses/:course_id/edit_course_doc/:id', to: 'course_documents#edit', as: :edit_course_doc
+  put 'courses/:course_id/update_course_doc/:id', to: 'course_documents#update', as: :update_course_doc
+  
   get 'courses/:id/home', to: 'courses#home', as: :course_home
   get 'courses/:id/home/:section_id', to: 'courses#home', as: :course_home_with_assts
   
   resources :section_assignments, only: [:index, :update]
   get 'section_assignments/retrieve', to: 'section_assignments#retrieve'
-
+  
 	# Temporary routes to deal with old links
 	match 'files/*path', via: :get, controller: :files, action: :pass_on
 	match 'teachers/*path', via: :get, controller: :files, action: :pass_on
