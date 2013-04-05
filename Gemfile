@@ -56,6 +56,7 @@ gem 'client_side_validations-simple_form'
 
 gem 'validates_email_format_of'
 
+gem 'browser'
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic', :git => 'git://github.com/bitcababy/settingslogic.git'
