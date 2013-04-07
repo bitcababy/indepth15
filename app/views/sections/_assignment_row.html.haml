@@ -5,4 +5,4 @@
 	- if editable?
 		%td.assigned= check_box_tag "", 1, sa.assigned, disabled: true
 		%td
-			%button= link_to "Edit", edit_assignment_path(sa.assignment)
+			= button_to "Edit", edit_assignment_path(sa.assignment), method: :get
