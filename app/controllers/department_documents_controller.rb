@@ -11,24 +11,10 @@ class DepartmentDocumentsController < ApplicationController
   # PUT text_documents/1
   # PUT text_documents/1.json
   def update
-    if request.xhr?
-      respond_to do |format|
-        if @doc.update_from_params(params[:department_document])
-          format.json { render json: stored_page, status: :success }
-        else
-          format.json { render json: doc.errors, status: :unprocessable_entity }
-        end
-      end
+    if @doc.update_from_params(params[:department_document])
+      render json: @doc, status: :ok
     else
-      respond_to do |format|
-        if @doc.update_from_params(params[:department_document])
-          format.json { head :no_content }
-          format.html { return_to_last_page notice: 'Document was successfully updated.' }
-        else
-          format.json { render json: doc.errors, status: :unprocessable_entity }
-          format.html { render action: "edit", error: 'Invalid parameters' }
-        end
-      end
+      render json: doc.errors, status: :unprocessable_entity
     end
   end
   

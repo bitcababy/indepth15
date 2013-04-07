@@ -1,4 +1,4 @@
 = simple_form_for @doc, validate: false, remote: true, method: :put, url: update_course_doc_path(@doc.course, @doc), html: {"data-type" => :json} do |f|
 	%fieldset
-		= f.input :version, as: :hidden
+		/ = f.input :version, as: :hidden
 		.text= f.input :content, as: :ckeditor, label: false, input_html: {ckeditor: {resize_enabled: false, height: 380 }}
