@@ -393,7 +393,6 @@ DEPENDENCIES
   daemons
   database_cleaner
   debugger
-  delayed_job
   delayed_job_mongoid!
   devise
   email_spec

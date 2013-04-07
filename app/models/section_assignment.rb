@@ -114,88 +114,88 @@ COURSE_FILTER = "sFilter_1"
 TEACHER_FILTER = "sFilter_2"
 BLOCK_FILTER = "sFilter_3"
 
-  def SectionAssignment.process_data_request(h)
-    return nil if h.empty?
+  class << self
+    def process_data_request(h)
+      return nil if h.empty?
     
-    cols = h["sColumns"].split(",")
-    start = h["iDisplayStart"]
-    limit = h["iDisplayLength"]
-    crit = SectionAssignment.limit(limit).skip(start)
+      cols = h["sColumns"].split(",")
+      start = h["iDisplayStart"].to_i
+      limit = h["iDisplayLength"].to_i
+      crit = SectionAssignment.limit(limit).skip(start).includes(:assignment)
     
-    conds = {}
-    conds[:year] = h[YEAR_FILTER].to_i unless h[YEAR_FILTER].empty?
-    conds[:course] = (h[COURSE_FILTER].to_i) unless h[COURSE_FILTER].empty?
-    conds[:teacher] = (h[TEACHER_FILTER]) unless h[TEACHER_FILTER].empty?
-    conds[:block] = (h[BLOCK_FILTER]) unless h[BLOCK_FILTER].empty?
-    puts "Conds are #{conds}"
-    crit = crit.and(conds)
+      conds = {}
+      conds[:year] = h[YEAR_FILTER].to_i unless h[YEAR_FILTER].empty?
+      conds[:course] = (h[COURSE_FILTER].to_i) unless h[COURSE_FILTER].empty?
+      conds[:teacher] = (h[TEACHER_FILTER]) unless h[TEACHER_FILTER].empty?
+      conds[:block] = (h[BLOCK_FILTER]) unless h[BLOCK_FILTER].empty?
+      crit = crit.and(conds)
     
-    # Get the order
-    order = self.get_order(cols, h)
-    crit = crit.order_by(order)
+      # Get the order
+      order = self.get_order(cols, h)
+      crit = crit.order_by(order)
        
-    data = self.get_data(crit, cols)
+      data = self.get_data(crit, cols)
 
-    res = {}
-    res["iTotalRecords"] = SectionAssignment.count
-    res["iTotalDisplayRecords"] = crit.count
-    res["sEcho"] = h["sEcho"]
-    res["aaData"] = data
-    return res
-  end
-
-  def SectionAssignment.get_order(cols, h)
-    order = []
-    0.upto(2) do |i|
-      dir = h["sSortDir_#{i}"]
-      next unless dir
-      
-      col_no = h["iSortCol_#{i}"].to_i
-      col = cols[col_no]
-      
-      order << "#{col} #{dir}"
+      res = {}
+      res["iTotalRecords"] = SectionAssignment.count
+      res["iTotalDisplayRecords"] = crit.count
+      res["sEcho"] = h["sEcho"]
+      res["aaData"] = data
+      return res
     end
-    order << "year desc" unless h["sSortDir_0"] 
-    order << "course_id asc" unless h["sSortDir_1"]
-    order << "teacher_id asc" unless h["sSortDir_2"]
-    order << "block asc"
-    order << "due_date asc"
-  
-    return order.join(',')
-  end
 
-  def self.get_data(sas, cols)
-    data = []
-    sas.includes(:assignment).each do |sa|
-      row = []
-      for col in cols do
-        datum = case col
-        when "year"
-        sa.year
-        when "course"
-        sa.course_name
-        when "teacher"
-        sa.teacher_name
-        when "block"
-        sa.block
-        when "due_date"
-        sa.due_date
-        when "name"
-        sa.assignment.name
-        when "content"
-        sa.assignment.content
-        when "course_id"
-        sa.course_id
-        when "teacher_id"
-        sa.teacher_id
-        end
-        row << datum
+    def get_order(cols, h)
+      order = []
+      0.upto(2) do |i|
+        dir = h["sSortDir_#{i}"]
+        next unless dir
+      
+        col_no = h["iSortCol_#{i}"].to_i
+        col = cols[col_no]
+      
+        order << "#{col} #{dir}"
       end
-      data << row
-    end
-    return data
-  end #get_data
+      order << "year desc" unless h["sSortDir_0"] 
+      order << "course_id asc" unless h["sSortDir_1"]
+      order << "teacher_id asc" unless h["sSortDir_2"]
+      order << "block asc"
+      order << "due_date asc"
   
+      return order.join(',')
+    end
+
+    def get_data(sas, cols)
+      data = []
+      sas.includes(:assignment).each do |sa|
+        row = []
+        for col in cols do
+          datum = case col
+          when "year"
+          sa.year
+          when "course"
+          sa.course_name
+          when "teacher"
+          sa.teacher_name
+          when "block"
+          sa.block
+          when "due_date"
+          sa.due_date
+          when "name"
+          sa.assignment.name
+          when "content"
+          sa.assignment.content
+          when "course_id"
+          sa.course_id
+          when "teacher_id"
+          sa.teacher_id
+          end
+          row << datum
+        end
+        data << row
+      end
+      return data
+    end #get_data
+  end
    
 end
 

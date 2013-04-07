@@ -1,7 +1,7 @@
 %ul#menubar.hmenu.hidden
 	= render 'menus/home'
-	= render partial: 'menus/courses', locals: {courses: Course.in_catalog.asc(:number)}
-	= render partial: 'menus/faculty', locals: {teachers: Teacher.current.asc(:login)}
+	= render partial: 'menus/courses', locals: {courses: Course.in_catalog.asc(:number).includes(:sections)}
+	= render partial: 'menus/faculty', locals: {teachers: Teacher.current.asc(:login).includes(:sections)}
 	- if user_signed_in?
 		= render 'menus/manage'
 	= render 'menus/username'
