@@ -1,8 +1,8 @@
 class AssignmentsController < ApplicationController
   include Utils
-  protect_from_forgery except: [:create, :update, :show]
+  protect_from_forgery
   before_filter :authenticate_user!
-  before_filter :find_assignment, only: [:update, :delete, :edit]
+  before_filter :find_assignment, only: [:update, :edit, :destroy]
   
   def new
     course = Course.find params[:course_id]
@@ -38,7 +38,7 @@ class AssignmentsController < ApplicationController
         section.section_assignments.create assignment: asst, due_date: attrs[:due_date], assigned: attrs[:assigned] == "1"
       end
       flash[:info] = "Assignment created"
-      redirect_to stored_page || home_path
+      load_stored_page
     else
       redirect_to :edit
     end
@@ -56,10 +56,15 @@ class AssignmentsController < ApplicationController
         sa.update_attributes due_date: attrs[:due_date], assigned: attrs[:assigned]
       end
       flash[:info] = "Assignment updated"
-      redirect_to stored_page || home_path
+      load_stored_page
     else
       redirect_to :edit
     end
+  end
+  
+  def destroy
+    @assignment.destroy
+    load_stored_page
   end
   
   protected

@@ -7,8 +7,7 @@ InDepth::Application.routes.draw do
   get 'sections/:id/assignments_pane', to: 'sections#assignments_pane', as: :assignments_pane
   
   get 'courses/:course_id/teachers/:teacher_id/assignments/new', to: 'assignments#new', as: :new_assignment
-  resources :assignments, only: [:create, :edit, :update, :delete]
-
+  resources :assignments, only: [:create, :edit, :update, :destroy]
 	##
 	## Other
 	# 

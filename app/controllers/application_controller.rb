@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
   end
   
   def stored_page
-    return cookies[:last_page]
+    return cookies[:last_page] || home_path
+  end
+  
+  def load_stored_page
+    redirect_to stored_page
   end
 
   def reload_settings

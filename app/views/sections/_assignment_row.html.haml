@@ -6,3 +6,4 @@
 		%td.assigned= check_box_tag "", 1, sa.assigned, disabled: true
 		%td
 			= button_to "Edit", edit_assignment_path(sa.assignment), method: :get
+			= button_to "Delete", "/assignments/#{sa.assignment.to_param}", method: :delete, confirm: "Are you sure?"

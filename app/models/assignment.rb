@@ -5,7 +5,7 @@ class Assignment < TextDocument
   field :mit, as: :minor_topics, type: SortedSet, default: SortedSet.new
   
   # A section_assignment is broken if the assignment is deleted
-  has_many :section_assignments, dependent: :delete, autosave: true do
+  has_many :section_assignments, dependent: :destroy, autosave: true do
     def for_course(c)
       @target.select {|sa| sa.course == c}
     end
