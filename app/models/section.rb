@@ -26,7 +26,7 @@ class Section
   field :days, type: Array, default: (1..5).to_a
 	field :rm, as: :room, type: String, default: ""
   
-	has_many :section_assignments, dependent: :delete, autosave: true
+	has_many :section_assignments, dependent: :destroy, autosave: true
 	belongs_to :course, index: true, autosave: true
 	belongs_to :teacher, index: true, autosave: true
   
@@ -94,18 +94,18 @@ class Section
 
 	def current_assignments
     if na = self.future_assignments.assigned.limit(1).first
-      return self.section_assignments.due_on(na.due_date)
+      return self.section_assignments.due_on(na.due_date).includes(:assignment)
    else
       return []
     end
 	end
 
 	def future_assignments
-	  return self.section_assignments.future.asc(:due_date)
+	  return self.section_assignments.future.asc(:due_date).includes(:assignment)
 	end
 
-	def past_assignments(all: false)
-		return self.section_assignments.past.desc(:due_date)
+	def past_assignments
+		return self.section_assignments.past.desc(:due_date).includes(:assignment)
 	end
 
 	def page_header
@@ -117,7 +117,7 @@ class Section
       limit: nil, block: nil, order: {}
       )
       return [] unless year || teacher || course
-      crit = self
+      crit = self.includes(:assignment)
       crit = crit.limit(limit) if limit
       crit = crit.without(:c_at, :u_at)
       crit = crit.for_year(year) if year
