@@ -143,7 +143,7 @@ class ApplicationController < ActionController::Base
   end
   
   def adjust_format_for_iphone
-    request.format = :ios if request.env["HTTP_USER_AGENT"] =~ %r{Mobile/.+Safari}
+    # request.format = :ios if request.env["HTTP_USER_AGENT"] =~ %r{Mobile/.+Safari}
   end
     
   def after_sign_in_path_for(resource)
