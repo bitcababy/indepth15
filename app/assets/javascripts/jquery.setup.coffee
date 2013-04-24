@@ -4,6 +4,6 @@ $.datepicker.setDefaults
 	gotoCurrent: true
 	hideIfNoPrevNext: true
 	autoSize: true
-	firstDay: 1
+	firstDay: 0
 	showAnim: "slideDown"
 	yearRange: "c:c+1"
