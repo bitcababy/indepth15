@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
   before_filter :adjust_format_for_iphone
+  
   # before_filter :set_year
 
   # before_filter :reload_settings
@@ -21,7 +22,7 @@ class ApplicationController < ActionController::Base
   def load_stored_page
     redirect_to stored_page
   end
-
+  
   def reload_settings
     Settings.reload unless Rails.env.test?
   end
@@ -112,7 +113,11 @@ class ApplicationController < ActionController::Base
 		def ckeditor_filebrowser_scope(options = {})
 			super({ :assetable_id => current_user.id, :assetable_type => 'User' }.merge(options))
 		end
-		
+    
+    def check_for_cancel
+     load_stored_page if params[:cancel]
+    end
+
 	private
   def set_year
      params[:year] ||= Settings.academic_year
