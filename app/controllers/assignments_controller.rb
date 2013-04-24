@@ -2,6 +2,7 @@ class AssignmentsController < ApplicationController
   include Utils
   protect_from_forgery
   before_filter :authenticate_user!
+  before_filter :check_for_cancel, only: [:create, :update]
   before_filter :find_assignment, only: [:update, :edit, :destroy]
   
   def new
