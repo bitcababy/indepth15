@@ -14,16 +14,7 @@ module ApplicationHelper
 	end
 	
 	def duration_string(duration)
-		return case duration
-		when :full_year
-			'Full Year'
-		when :first_semester
-			'First Semester'
-		when :second_semester
-			'Second Semester'
-		when :halftime
-			'Full Year, half time'
-		end
+    return {full_year: 'Full Year', first_semester: 'First Semester', second_semester: 'Second Semester', halftime: 'Full Year, half time'}[duration]
 	end
 	
 	def assignment_date_string(date)
