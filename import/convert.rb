@@ -279,6 +279,7 @@ class SectionAssignment
 
 	def self.import_from_hash(hash)
 		section, assignment = self.get_sa(hash)
+    return if SectionAssignment.where(section: section, assignment: assignment).exists?
     assignment.name = hash.delete(:name)
     assignment.name = assignment.name.to_i if assignment.name =~ /^\d+$/
     assignment.teacher = section.teacher
