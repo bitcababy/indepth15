@@ -23920,17 +23920,6 @@
             <column name="assgt_id">610803</column>
         </table>
         <table name="2011_sas">
-            <column name="id">22315</column>
-            <column name="teacher_id">mclaughlinj</column>
-            <column name="year">2011</column>
-            <column name="course_num">343</column>
-            <column name="block">G</column>
-            <column name="due_date">2010-09-03</column>
-            <column name="name">1</column>
-            <column name="use_assgt">Y</column>
-            <column name="assgt_id">610821</column>
-        </table>
-        <table name="2011_sas">
             <column name="id">22316</column>
             <column name="teacher_id">mclaughlinj</column>
             <column name="year">2011</column>
