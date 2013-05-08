@@ -14,7 +14,7 @@ module ApplicationHelper
 	end
 	
 	def duration_string(duration)
-    return {full_year: 'Full Year', first_semester: 'First Semester', second_semester: 'Second Semester', halftime: 'Full Year, half time'}[duration]
+    return {Course::FULL_YEAR => 'Full Year', Course::FIRST_SEMESTER => 'First Semester', Course::SECOND_SEMESTER => 'Second Semester', Course::FULL_YEAR_HALF_TIME => 'Full Year, half time'}[duration]
 	end
 	
 	def assignment_date_string(date)
