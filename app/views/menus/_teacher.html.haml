@@ -1,6 +1,6 @@
 %li.teacher
 	%a{href: '#'}= teacher.menu_label
 	%ul.sections
-		= render partial: 'menus/tsection', collection: teacher.sections.current, as: :section
+		= render partial: 'menus/tsection', collection: teacher.sections.current.to_a.sort {|a,b| a.label_for_teacher <=> b.label_for_teacher}, as: :section
 		%br
 		%a{href: "mailto: #{teacher.email}", title: "Email"} Send mail
