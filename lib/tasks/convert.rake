@@ -56,7 +56,7 @@ namespace :add_2011 do
   # 
 	task :sas => :environment do
     require Rails.root.join('import/convert')
-		arr = Convert.import_xml_file "2011_sas.xml", 'updates'
+		arr = Convert.import_xml_file "2011_sas.xml"
 		Convert.from_hashes SectionAssignment, arr, false
 	end
 	
