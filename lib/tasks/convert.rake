@@ -38,5 +38,32 @@ namespace :update do
 	
 end
 
+
+namespace :add_2011 do	
+  # task :courses => :environment do
+  #     require Rails.root.join('import/convert')
+  #   arr = Convert.import_xml_file "2011_sections.xml", 'updates'
+  #   Convert.from_hashes Course, arr, false
+  # end
+  # 
+  # task :assignments => :environment do
+  #     require Rails.root.join('import/convert')
+  #   arr = Convert.import_xml_file "2011_assignments.xml", 'updates'
+  #   Convert.from_hashes Assignment, arr, false
+  #   # path = File.join(File.join(Rails.root, 'updates'), 'updated_assignments.xml')
+  #   # puts path
+  # end
+  # 
+	task :sas => :environment do
+    require Rails.root.join('import/convert')
+		arr = Convert.import_xml_file "2011_sas.xml", 'updates'
+		Convert.from_hashes SectionAssignment, arr, false
+	end
+	
+	task :all => [:sections, :assignments, :sas]
+	
+end
+
+
 task :default do
 end
