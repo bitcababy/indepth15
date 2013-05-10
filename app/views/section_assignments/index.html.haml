@@ -28,9 +28,6 @@
 		block = ""
 		$("#sa-browser").dataTable
 			bjQueryUI: true
-			bPaginate: true
-			bLengthChange: true
-			aLengthMenu: [50, 100, 150]
 			bFilter: true
 			bDeferRender: true
 			bServerSide: true
@@ -39,19 +36,24 @@
 			bInfo: true
 			bStateSave: true
 			bProcessing: true
-			bAutoWidth: false
-			bLengthChange: true
+			bAutoWidth: true
 			bFilter: true
 			sAjaxSource: '/section_assignments/retrieve'
-			iDisplayLength: 75
+
+			bPaginate: true
+			bLengthChange: true
+			aLengthMenu: [100, 150, 200]
+			iDisplayLength: 100
+
 			aaSorting: [[0, 'desc'], [1, 'asc'], [2, 'asc'], [3, 'asc'], [4, 'asc']]
 			sDom: '<"H"lfr>t<"F"ip>'
 			oColumnFilterWidgets: 
-				aiExclude: [4,5,6,7,8]
+				aiExclude: [4,5,6]
+
 			aoColumnDefs: [
 				aTargets: [0]
 				sName: 'year'
-				sWidth: "4em"
+				sWidth: "3em"
 			,
 				aTargets: [1]
 				sName: 'course'
@@ -72,9 +74,11 @@
 				sName: 'name'
 				aTargets: [5]
 				bSearchable: false
+				sClass: "name"
 			,
 				sName: 'content'
 				aTargets: [6]
+				sClass: "asst-content"
 			,
 				sName: 'course_id'
 				aTargets: [7]
