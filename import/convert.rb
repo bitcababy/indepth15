@@ -278,8 +278,10 @@ class SectionAssignment
   include Mongoid::Document
 
 	def self.import_from_hash(hash)
+    return if Course.where(number: hash[:course_num].to_i).exists?
+#    return if hash[:course_num].to_i == 343
+    # return if hash[:course_num].to_i == 343
 		section, assignment = self.get_sa(hash)
-    return if SectionAssignment.where(section: section, assignment: assignment).exists?
     assignment.name = hash.delete(:name)
     assignment.name = assignment.name.to_i if assignment.name =~ /^\d+$/
     assignment.teacher = section.teacher
