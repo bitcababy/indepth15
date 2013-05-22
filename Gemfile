@@ -81,6 +81,7 @@ gem 'yard'
 # gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
 
 group :development, :test do
+  gem 'taps'
   gem 'heroku'
   gem 'heroku_san'
 	gem 'rspec-rails'
