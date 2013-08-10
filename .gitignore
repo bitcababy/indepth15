@@ -19,6 +19,10 @@ public/assets
 stashed
 .env
 .akephalos
+.sass-cache
+backups
+.ruby-gemset*
+.ruby-version*
 
 lib/plugins/
 vendor/cache
