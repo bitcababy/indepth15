@@ -9,7 +9,13 @@ namespace :convert do
   		Convert.from_hashes klass.camelize.constantize, arr
     end
   end
-    
+  
+  task :sas => :environment do
+    require Rails.root.join('import/convert')
+      arr = Convert.import_xml_file "section_assignments.xml"
+      Convert.from_hashes SectionAssignment, arr
+  end
+
 	task :all => CLASSES.collect {|c| c.downcase.pluralize.intern } 
  end
 

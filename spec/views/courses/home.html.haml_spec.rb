@@ -16,8 +16,8 @@ describe 'courses/home' do
 	end
 
   it "shows the assignments tab if a section is provided" do
-    section = stub_model Section, block: "B"
-    assign(:section,section)
+    section = Fabricate :section
+    assign(:section, section)
     render
     expect(page).to have_selector('li#assignments', 
       text: "Assignments for #{@course.full_name}, Block #{section.block}")

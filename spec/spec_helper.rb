@@ -9,8 +9,8 @@ Spork.prefork do
   ENV["RAILS_ENV"] ||= 'test'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
-  require 'email_spec'
   require 'rspec/autorun'
+  require 'email_spec'
   require 'capybara/rspec'
   require 'devise/test_helpers'
   require 'mongoid-history'

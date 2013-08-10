@@ -172,12 +172,12 @@ class Course
   include Mongoid::Document
 
 	class << self
-  	SEMESTER_MAP = {
-  		12 => FULL_YEAR,
-  		1 => FIRST_SEMESTER,
-  		2 => SECOND_SEMESTER,
-  		3 => FULL_YEAR_HALF_TIME,
-  	}
+  	# SEMESTER_MAP = {
+  	# 	12 => FULL_YEAR,
+  	# 	1 => FIRST_SEMESTER,
+  	# 	2 => SECOND_SEMESTER,
+  	# 	3 => FULL_YEAR_HALF_TIME,
+  	# }
 
 		def import_from_hash(hash)
 			i = massage_content hash.delete(:information)
@@ -186,7 +186,7 @@ class Course
 			n = massage_content hash.delete(:news)
 			d = massage_content hash.delete(:description)
 			
-			hash[:duration] = SEMESTER_MAP[hash.delete(:semesters).to_i]
+			hash[:duration] = hash.delete(:semesters).to_i
       hash[:short_name] ||= hash[:full_name]
 			course = Department.first.courses.new hash
       course.documents.build kind: :resources, content: r
@@ -224,12 +224,12 @@ class Teacher
 end
 
 class Section
-  DUR_MAP = {
-    1 => Course::FIRST_SEMESTER,
-    2 => Course::SECOND_SEMESTER,
-    3 => Course::FULL_YEAR,
-    12 => Course::FULL_YEAR,
-  }
+  # DUR_MAP = {
+  #   1 => Course::FIRST_SEMESTER,
+  #   2 => Course::SECOND_SEMESTER,
+  #   3 => Course::FULL_YEAR,
+  #   12 => Course::FULL_YEAR,
+  # }
 	def self.import_from_hash(hash)
 		year = hash[:year]
 		return if year < Settings.start_year
@@ -237,7 +237,7 @@ class Section
 		occurrences = hash[:which_occurrences]
 		room = hash[:room].to_s
     block = hash[:block]
-		duration = DUR_MAP[hash[:semester]] || Course::FULL_YEAR
+		duration = hash[:semester] || 12
 		course = Course.find_by(number: hash[:course_num])
 		teacher = Teacher.find_by login: hash[:teacher_id]
 
@@ -278,7 +278,7 @@ class SectionAssignment
   include Mongoid::Document
 
 	def self.import_from_hash(hash)
-    return if Course.where(number: hash[:course_num].to_i).exists?
+    return unless Course.where(number: hash[:course_num].to_i).exists?
 #    return if hash[:course_num].to_i == 343
     # return if hash[:course_num].to_i == 343
 		section, assignment = self.get_sa(hash)

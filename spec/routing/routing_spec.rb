@@ -42,26 +42,26 @@ describe "routing" do
   
   end
   
-  it "retrieves sections in a variety of ways" do
-    expect(get: "sections/retrieve/321/davidsonl/B/2013").to route_to(
-    controller: 'sections',
-    action: 'retrieve',
-    course_id: "321",
-    teacher_id: "davidsonl",
-    block: "B",
-    year: "2013"
-    )
+  # it "retrieves sections in a variety of ways" do
+  #   expect(get: "sections/retrieve/321/davidsonl/B/2013").to route_to(
+  #   controller: 'sections',
+  #   action: 'retrieve',
+  #   course_id: "321",
+  #   teacher_id: "davidsonl",
+  #   block: "B",
+  #   year: "2013"
+  #   )
     
-    expect(get: "sections/retrieve").to route_to(
-    controller: "sections",
-    action: "retrieve"
-    )
+  #   expect(get: "sections/retrieve").to route_to(
+  #   controller: "sections",
+  #   action: "retrieve"
+  #   )
       
-    expect(get: "/sections/retrieve/231/foobar").to route_to(
-    controller: 'sections',
-    action: 'retrieve',
-    course_id: "231",
-    teacher_id: "foobar"
-    )
-  end
+  #   expect(get: "/sections/retrieve/231/foobar").to route_to(
+  #   controller: 'sections',
+  #   action: 'retrieve',
+  #   course_id: "231",
+  #   teacher_id: "foobar"
+  #   )
+  # end
 end

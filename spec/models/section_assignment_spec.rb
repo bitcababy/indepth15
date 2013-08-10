@@ -94,54 +94,54 @@ describe SectionAssignment do
 		
 	end
 	
-  describe "#filter_by" do
-    it "should be able to filter by teacher" do
-      t1 = Fabricate(:teacher)
-      t2 = Fabricate(:teacher)
-      s1 = Fabricate :section, teacher: t1
-      s2 = Fabricate :section, teacher: t2
-      2.times { Fabricate :section_assignment, section: s1 }
-      3.times { Fabricate :section_assignment, section: s2 }
-      SectionAssignment.each do |sa|
-        expect(sa.teacher).to_not be_nil
-      end
-      expect(SectionAssignment.filter_by(teacher: t1).count).to eq 2
-    end
+  # describe "#filter_by" do
+  #   it "should be able to filter by teacher" do
+  #     t1 = Fabricate(:teacher)
+  #     t2 = Fabricate(:teacher)
+  #     s1 = Fabricate :section, teacher: t1
+  #     s2 = Fabricate :section, teacher: t2
+  #     2.times { Fabricate :section_assignment, section: s1 }
+  #     3.times { Fabricate :section_assignment, section: s2 }
+  #     SectionAssignment.each do |sa|
+  #       expect(sa.teacher).to_not be_nil
+  #     end
+  #     expect(SectionAssignment.filter_by(teacher: t1).count).to eq 2
+  #   end
     
-    it "should be able to filter by course" do
-      c1 = Fabricate(:course)
-      c2 = Fabricate(:course)
-      s1 = Fabricate :section, course: c1
-      s2 = Fabricate :section, course: c2
-      2.times { Fabricate :section_assignment, section: s1 }
-      3.times { Fabricate :section_assignment, section: s2 }
-      expect(SectionAssignment.filter_by(course: c1).count).to eq 2
-    end
+  #   it "should be able to filter by course" do
+  #     c1 = Fabricate(:course)
+  #     c2 = Fabricate(:course)
+  #     s1 = Fabricate :section, course: c1
+  #     s2 = Fabricate :section, course: c2
+  #     2.times { Fabricate :section_assignment, section: s1 }
+  #     3.times { Fabricate :section_assignment, section: s2 }
+  #     expect(SectionAssignment.filter_by(course: c1).count).to eq 2
+  #   end
     
-    it "should be able to filter by teacher and course" do
-      t1 = Fabricate(:teacher)
-      t2 = Fabricate(:teacher)
-      c1 = Fabricate(:course)
-      c2 = Fabricate(:course)
-      s11 = Fabricate :section, course: c1, teacher: t1
-      s12 = Fabricate :section, course: c1, teacher: t2
-      s21 = Fabricate :section, course: c2, teacher: t1
-      s22 = Fabricate :section, course: c2, teacher: t2
+  #   it "should be able to filter by teacher and course" do
+  #     t1 = Fabricate(:teacher)
+  #     t2 = Fabricate(:teacher)
+  #     c1 = Fabricate(:course)
+  #     c2 = Fabricate(:course)
+  #     s11 = Fabricate :section, course: c1, teacher: t1
+  #     s12 = Fabricate :section, course: c1, teacher: t2
+  #     s21 = Fabricate :section, course: c2, teacher: t1
+  #     s22 = Fabricate :section, course: c2, teacher: t2
       
-      2.times { Fabricate :section_assignment, section: s11 }
-      3.times { Fabricate :section_assignment, section: s12 }
-      4.times { Fabricate :section_assignment, section: s21 }
-      8.times { Fabricate :section_assignment, section: s21 }
-      expect(SectionAssignment.filter_by(course: c1, teacher: t1).count).to eq 2
-    end
+  #     2.times { Fabricate :section_assignment, section: s11 }
+  #     3.times { Fabricate :section_assignment, section: s12 }
+  #     4.times { Fabricate :section_assignment, section: s21 }
+  #     8.times { Fabricate :section_assignment, section: s21 }
+  #     expect(SectionAssignment.filter_by(course: c1, teacher: t1).count).to eq 2
+  #   end
             
-    it "should be able to filter by year" do
-      s1 = Fabricate :section, year: 2003
-      s2 = Fabricate :section, year: 2004
-      2.times { Fabricate :section_assignment, section: s1 }
-      3.times { Fabricate :section_assignment, section: s2 }
-      expect( SectionAssignment.filter_by(year: 2003).count).to eq 2
-    end
-  end
+  #   it "should be able to filter by year" do
+  #     s1 = Fabricate :section, year: 2003
+  #     s2 = Fabricate :section, year: 2004
+  #     2.times { Fabricate :section_assignment, section: s1 }
+  #     3.times { Fabricate :section_assignment, section: s2 }
+  #     expect( SectionAssignment.filter_by(year: 2003).count).to eq 2
+  #   end
+  # end
     
 end

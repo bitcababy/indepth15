@@ -22,13 +22,13 @@ describe Course do
     end
   end
   
-  describe '#branches' do
-    it "returns the branches that a course belongs to" do
-      expect( 
-        Fabricate(:course, number: Course::BRANCH_MAP.keys.sample).branches
-      ).to be_kind_of Array
-    end
-  end
+  # describe '#branches' do
+  #   it "returns the branches that a course belongs to" do
+  #     expect( 
+  #       Fabricate(:course, number: Course::BRANCH_MAP.keys.sample).branches
+  #     ).to be_kind_of Array
+  #   end
+  # end
     
   describe '#add_major_topics' do
     it "adds the the major topics from the BRANCH_MAP" do

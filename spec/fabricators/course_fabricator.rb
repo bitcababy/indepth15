@@ -2,7 +2,7 @@ Fabricator(:course) do
   transient       :num_sections
   transient       :teacher
 	number					{ sequence(:course_number, 42) }
-	duration				{ Course::DURATIONS.sample }
+	duration				{ Durations::DURATIONS.sample }
 	credits					{ Settings.credits.sample }
 	full_name				{ |attrs| "Course #{attrs[:number]}" }
   sections        []
@@ -20,22 +20,22 @@ Fabricator(:course) do
 end
 
 Fabricator :course_full_year, from: :course do
-  duration      Course::FULL_YEAR
+  duration      Durations::FULL_YEAR
   credits       5.0
 end
 
 Fabricator :course_first_semester, from: :course do
-  duration      Course::FIRST_SEMESTER
+  duration      Durations::FIRST_SEMESTER
   credits       2.5
 end
 
 Fabricator :course_second_semester, from: :course do
-  duration      Course::SECOND_SEMESTER
+  duration      Durations::SECOND_SEMESTER
   credits       2.5
 end
 
 Fabricator :course_half_time, from: :course do
-  duration      Course::FULL_YEAR_HALF_TIME
+  duration      Durations::FULL_YEAR_HALF_TIME
   credits       2.5
 end
 

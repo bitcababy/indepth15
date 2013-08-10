@@ -1,0 +1,12 @@
+#section_editor
+  = simple_form_for @section, validate: false , method: :post do |f|
+    %fieldset
+      = f.input :course,  collection: Course.to_options
+      = f.input :semester, collection: ::Durations.semesters_to_options
+      = f.input :block, collection: options_for_select(Settings.blocks)
+      = f.input :room, as: :text
+      = f.input :teacher, collection: Teacher.current
+    %span#buttons
+      %button#save= f.submit "Save"
+      %button#cancel{name: :cancel}= f.submit "Cancel"
+		

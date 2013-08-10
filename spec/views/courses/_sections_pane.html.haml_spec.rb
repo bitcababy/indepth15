@@ -9,7 +9,7 @@ describe "courses/_sections_pane" do
   end
 
   it "display a pane with the sections of a course" do
-    course = mock_model Course, number: 321, duration: Course::FULL_YEAR, credits: 5.0, full_name: "Fractals 101"
+    course = mock_model Course, number: 321, duration: Durations::FULL_YEAR, credits: 5.0, full_name: "Fractals 101"
     course.stub(:sections).and_return course
     course.stub(:current).and_return [1,2,3]
     course.stub(:doc_of_kind).and_return mock_model(TextDocument, content: "Some description")
