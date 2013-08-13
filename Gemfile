@@ -41,6 +41,7 @@ gem 'mongodb_fulltext_search'
 gem 'thin'
 gem 'devise'
 gem 'haml'
+# gem 'haml-contrib'
 gem 'bson_ext'
 # gem 'delayed_job'
 gem 'xml-simple'
@@ -69,7 +70,7 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog'
 gem 'file_browser', git: 'git://github.com/bitcababy/file_browser.git'
-gem 'cloudfiles' # http://rubydoc.info/gems/cloudfiles/1.5.0.1/frames
+# gem 'cloudfiles' # http://rubydoc.info/gems/cloudfiles/1.5.0.1/frames
 
 gem 'ruby-mysql'
 gem 'tidy_ffi'

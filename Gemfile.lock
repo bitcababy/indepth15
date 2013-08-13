@@ -84,8 +84,6 @@ GEM
     client_side_validations-simple_form (2.1.0)
       client_side_validations (~> 3.2.5)
       simple_form (~> 2.1.0)
-    cloudfiles (1.5.0.2)
-      json
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -180,6 +178,8 @@ GEM
       sprockets (~> 2.0)
     haml (4.0.3)
       tilt
+    haml-contrib (1.0.0.1)
+      haml (>= 3.2.0.alpha.13)
     haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
       activesupport (>= 3.1, < 4.1)
@@ -405,7 +405,6 @@ DEPENDENCIES
   client_side_validations
   client_side_validations-mongoid
   client_side_validations-simple_form
-  cloudfiles
   coffee-rails (~> 3.2.1)
   daemons
   database_cleaner
@@ -427,7 +426,7 @@ DEPENDENCIES
   guard-rspec
   guard-sass
   guard-sprockets2
-  haml
+  haml-contrib
   haml-rails
   heroku
   heroku_san
