@@ -178,8 +178,6 @@ GEM
       sprockets (~> 2.0)
     haml (4.0.3)
       tilt
-    haml-contrib (1.0.0.1)
-      haml (>= 3.2.0.alpha.13)
     haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
       activesupport (>= 3.1, < 4.1)
@@ -426,7 +424,7 @@ DEPENDENCIES
   guard-rspec
   guard-sass
   guard-sprockets2
-  haml-contrib
+  haml
   haml-rails
   heroku
   heroku_san
