@@ -7,7 +7,8 @@ CKEDITOR.editorConfig = function( config ) {
     // Define changes to default configuration here.
 	// For the complete reference:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
-	// config.extraPlugins = 'equation'; 
+
+	config.skin = 'moonocolor';
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [
@@ -50,9 +51,9 @@ CKEDITOR.editorConfig = function( config ) {
 	    { name: 'clipboard',   items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
 	    { name: 'editing',     items : [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
 	    { name: 'document',    items : [ 'Maximize', 'Source'] },
+	    { name: 'upload',	   items : ['ImageButton', '-', 'Link', 'Unlink'] },
 	    '/',
 	    { name: 'paragraph',   items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv','-','JustifyLeft','JustifyCenter','JustifyRight','-','BidiLtr','BidiRtl' ] },
-	    { name: 'links',       items : [ 'Link','Unlink' ] },
 	    { name: 'insert',      items : [ 'Table','HorizontalRule','-', 'Smiley','SpecialChar'] },
 	    '/',
 	    { name: 'styles',      items : [ 'Styles','Format','Font','FontSize' ] },
