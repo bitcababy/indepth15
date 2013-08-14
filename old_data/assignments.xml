@@ -5,9 +5,9 @@
 - http://www.phpmyadmin.net
 -
 - Host: db1.xoala.net
-- Generation Time: Apr 03, 2013 at 03:02 PM
+- Generation Time: Aug 14, 2013 at 10:40 AM
 - Server version: 5.5.19
-- PHP Version: 5.3.3-7+squeeze9
+- PHP Version: 5.3.3-7+squeeze15
 -->
 
 <pma_xml_export version="1.0">
@@ -6109,7 +6109,7 @@ Answers:&lt;br /&gt;14: 6&lt;br /&gt;
             <column name="content">&lt;ul&gt;
 &lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/geomh/more-angles+segments+circles.pdf&quot;&gt;More Angles, Line Segments, and Circles&lt;/a&gt;,
 which you worked on in class.&lt;/li&gt;
-&lt;li&gt;Complete &lt;a href=&quot;/files/davidsonl/geomh/more-clocks!.pdf&quot;&gt;More Clocks!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Also, complete &lt;a href=&quot;/files/davidsonl/geomh/more-clocks!.pdf&quot;&gt;More Clocks!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</column>
         </table>
         <table name="assignments">
@@ -10046,6 +10046,20 @@ Homework: Finish Worksheet 6.1 and Worksheet 6.2 from class.</column>
             <column name="content">Looking for new assignments? &lt;b&gt;From now on you must go to &lt;a href=&quot;http://www.westonmath.org&quot;&gt;www.westonmath.org&lt;/a&gt;!&lt;/b&gt; See you there!</column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">615931</column>
+            <column name="teacher_id">abendb</column>
+            <column name="content">Testing.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615934</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">1. Finish the group work called &lt;a href=&quot;/files/hosmerc/geom/Circle Scavenger Hunt.pdf&quot;&gt;Circle Scavenger Hunt&lt;/a&gt;. 
+&lt;br&gt;
+2. Complete page 1 only of &lt;a href=&quot;/files/hosmerc/geom/Circle vocab hmwk.pdf&quot;&gt;Circle vocab&lt;/a&gt;.
+
+ </column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">610850</column>
             <column name="teacher_id">hosmerc</column>
             <column name="content">Create a machine with at least 3 input/output pairs but leave the rule blank.  You will be presenting this to your classmates and they will try to guess your rule.  Try to make it as challenging as possible so that your classmates will not guess it immediately.</column>
@@ -12912,6 +12926,11 @@ For homework, please read &lt;a href=&quot;/files/gacsa/alg2h/Crypto/Le Chiffre 
             <column name="assgt_id">615925</column>
             <column name="teacher_id">gacsa</column>
             <column name="content">Complete &lt;a href=&quot;/files/gacsa/alg2h/Crypto/Matrices1.pdf&quot;&gt;Matrices.&lt;/a&gt; If you have trouble with matrix operations, find a helpful website that explains the process--there are many!</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615932</column>
+            <column name="teacher_id">griswoldn</column>
+            <column name="content">&lt;p&gt;Finish the &lt;a href=&quot;/teachers/griswoldn/alg2/honors/Matrices with mods.docx&quot;&gt; Matrix Problems&lt;/a&gt; from class.&lt;/p&gt; </column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610800</column>
@@ -21610,6 +21629,45 @@ and &lt;a href=&quot;/files/davidsonl/alg2/russian-crypto.pdf&quot;&gt;In Honor 
             <column name="content">Finish the &lt;a href=&quot;/files/hosmerc/alg2/mod5and6table.pdf&quot;&gt;Mod 6 Table&lt;/a&gt;. </column>
         </table>
         <table name="assignments">
+            <column name="assgt_id">615928</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">Complete the &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/14_mod 26 multiplication table.pdf&quot;&gt;Mod 26 Multiplication Table&lt;/a&gt;.
+
+Also, be sure to have the &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/13_mods 5-6 multiplication tables.pdf&quot;&gt;Mod 5 &amp; Mod 6 Multiplication Tables&lt;/a&gt; completed.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615929</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">Finish reading &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/12_using reciprocals.pdf&quot;&gt;Using reciprocals to solve congruences&lt;/a&gt; and complete problems 2a and 2b.
+&lt;br&gt;
+&lt;br&gt;
+Also, be sure to have the &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/13_mods 5-6 multiplication tables.pdf&quot;&gt;Mod 5 &amp; Mod 6 Multiplication Tables&lt;/a&gt; and the &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/14_mod 26 multiplication table.pdf&quot;&gt;Mod 26 Multiplication Table&lt;/a&gt; completed.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615933</column>
+            <column name="teacher_id">hosmerc</column>
+            <column name="content">No homework.  For those of you that missed last class (absent or the Lacrosse game), please complete both the 
+&lt;br&gt;
+&lt;a href=&quot;/files/hosmerc/alg2/mod5and6table.pdf&quot;&gt;Mod 6 Table&lt;/a&gt;
+&lt;br&gt; and the &lt;a href=&quot;/files/hosmerc/alg2/mod 26 multiplication table copy.pdf&quot;&gt;Mod 26 Table&lt;/a&gt;.
+
+
+
+</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615935</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">Complete problems 1 and 2(a-d) on &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/15_solving congruences.pdf&quot;&gt;Solving Congruences&lt;/a&gt;. 
+&lt;br&gt;
+If you did not finish &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/12_using reciprocals.pdf&quot;&gt;Using reciprocals to solve congruences&lt;/a&gt; during class, be sure to do so.</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615936</column>
+            <column name="teacher_id">scaniol</column>
+            <column name="content">Complete &lt;a href=&quot;/files/scaniol/alg2/Unit 4-Cryptography &amp; Number Theory/15_solving congruences.pdf&quot;&gt;Solving Congruences&lt;/a&gt;. </column>
+        </table>
+        <table name="assignments">
             <column name="assgt_id">612697</column>
             <column name="teacher_id">langsdorfa</column>
             <column name="content">On the first day of Topics, we introduced ourselves, discussed the &lt;a href = &quot;/teachers/langsdorfa/precalc2/SyllabusforLangsdorfTopics2011.pdf&quot;&gt; course information &lt;/a&gt;, and filled out some student surveys.  </column>
@@ -26918,13 +26976,20 @@ Perhaps your cat will do your work for you:&lt;br /&gt;&lt;br /&gt; &lt;img src=
         <table name="assignments">
             <column name="assgt_id">615921</column>
             <column name="teacher_id">davidsonl</column>
-            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/delFerro-etc.pdf&quot;&gt;Solving higher-degree polynomial equations&lt;/a&gt;.</column>
+            <column name="content">&lt;!-- Complete &lt;a href=&quot;/files/davidsonl/precalch/delFerro-etc.pdf&quot;&gt;Solving higher-degree polynomial equations&lt;/a&gt;.
+--&gt;
+Complete &lt;a href=&quot;/files/davidsonl/precalch/poly-4.pdf&quot;&gt;Polynomials IV&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">615922</column>
             <column name="teacher_id">monzj</column>
             <column name="content">&lt;P&gt;Carefully read Chapter 6 of Journey through Genius, and write answers to all the &lt;A HREF=&quot;/files/davidsonl/precalch/jtg-6.html&quot;&gt;STUDY QUESTIONS.&lt;/A&gt;   as you read. Submit your answers, either by email or on paper. Note that this assignment is due on next Tuesday, so budget your time accordingly.&lt;/p&gt;
 &lt;P&gt;Also, if you did not pick up the Conics Info Sheet in class, you can find a copy &lt;A HREF=&quot;/files/davidsonl/precalch/conics_info.pdf&quot;&gt;HERE.&lt;/A&gt;&lt;/p&gt;</column>
+        </table>
+        <table name="assignments">
+            <column name="assgt_id">615930</column>
+            <column name="teacher_id">davidsonl</column>
+            <column name="content">Complete &lt;a href=&quot;/files/davidsonl/precalch/delFerro-etc.pdf&quot;&gt;Solving Higher-Degree Polynomial Equations&lt;/a&gt;.</column>
         </table>
         <table name="assignments">
             <column name="assgt_id">610804</column>
