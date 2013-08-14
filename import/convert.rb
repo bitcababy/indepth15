@@ -186,7 +186,7 @@ class Course
       n = massage_content hash.delete(:news)
       d = massage_content hash.delete(:description)
 
-      hash[:duration] = ::Duration.old_to_new(hash.delete(:semesters).to_i)
+      hash[:duration] = ::Durations.old_to_new(hash.delete(:semesters).to_i)
       hash[:short_name] ||= hash[:full_name]
       course = Department.first.courses.new hash
       course.documents.build kind: :resources, content: r
