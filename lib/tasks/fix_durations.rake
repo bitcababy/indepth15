@@ -1,7 +1,7 @@
 namespace :fix_durations do
   task :courses  => :environment do
     Course.each do |c|
-      c.duration = Durations.old_to_new(c.duration)
+      c.duration = Durations.old_to_new(c.duration) if c.duration.kind_of? Integer
       for section in c.sections
         section.duration = c.duration if section.duration.kind_of? Integer
         section.save!
