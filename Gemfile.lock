@@ -282,6 +282,11 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.1)
     rails_warden (0.5.7)
       warden (>= 1.0.0)
     railties (3.2.14)
@@ -444,6 +449,8 @@ DEPENDENCIES
   mongoid_rails_migrations
   pry
   rails (>= 3.2.6, < 4.0.0)
+  rails_12factor
+  rails_serve_static_assets
   rails_warden
   rb-fsevent (~> 0.9.1)
   rspec-formatter-webkit
