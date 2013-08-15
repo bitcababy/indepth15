@@ -28,7 +28,9 @@ module InDepth
       group: :all, 
       after: :append_assets_paths do
       config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
-    end
+      config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor")
+      config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor", "images")
+   end
 
     config.autoload_paths += %W(#{config.root}/extras)
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
