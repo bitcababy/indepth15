@@ -1,5 +1,5 @@
 defaults: &defaults
-  academic_year: 2013
+  academic_year: 2014
   school_name: Weston High School
   dept_name:  Math Department
   past_assts_num: 5
@@ -26,8 +26,6 @@ defaults: &defaults
   credits:
     - 5.0
     - 2.5
-  bridged: false
-  lock_timeout: 2
   start_year: 2011
   first_year: 2003
 
