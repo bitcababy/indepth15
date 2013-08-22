@@ -28,7 +28,7 @@ namespace :fix_durations do
         s.section_assignments.each {|sa| sa.section = new_s; sa.save!}
         puts new_s.to_param if new_s.section_assignments.count == 0
         new_s.save!
-        s.delete
+        s.delete unless new_s.section_assignments.count == 0
       rescue
         puts s.to_param
         puts new_s.attributes

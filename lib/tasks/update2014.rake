@@ -1,6 +1,5 @@
 namespace :update2014 do
   task :teachers => :environment do
-    require Rails.root.join('import/convert')
 
     t = Teacher.find 'abendb'
     t.current = false
@@ -19,6 +18,7 @@ namespace :update2014 do
   end
 
   task :sections => :environment do
+    require Rails.root.join('import/convert')
     Section.where(year: 2014).delete_all
     arr = Convert.import_xml_file "sections2014.xml"
     Convert.from_hashes Section, arr, false
