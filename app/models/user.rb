@@ -1,7 +1,6 @@
 class User
 	include Mongoid::Document
   include Mongoid::Timestamps::Short
-  include Mongoid::History::Trackable
 
 	HONORIFICS = %W(Mr. Mrs. Ms Dr. Ms.)
 
@@ -33,7 +32,8 @@ class User
 
 	field :_id, type: String, default: ->{ login }
 	
-  track_history on: [:honorific, :first_name, :last_name, :middle_name, :last_name, :email, :login ], version_field: :version
+
+  has_many :tags
 
   # def ==(u)
   #   return false unless u.class == self.class

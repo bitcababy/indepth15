@@ -1,7 +1,6 @@
 class Section
   include Mongoid::Document
   include Mongoid::Timestamps::Short
-  include Mongoid::History::Trackable
 
   CURRENT_VERSION = 2
 

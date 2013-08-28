@@ -2,7 +2,6 @@ class Document
 	include Mongoid::Document
 	include Mongoid::Paranoia unless Rails.env.test?
   include Mongoid::Timestamps::Short
-  include Mongoid::History::Trackable 
     
   # before_update :check_lock_version
   # 

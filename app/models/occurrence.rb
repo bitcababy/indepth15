@@ -1,6 +1,5 @@
 class Occurrence
   include Mongoid::Document
-  include Mongoid::History::Trackable
 
 	field :n, as: :number, type: Integer
 	field :bn, as: :block, type: String
@@ -10,10 +9,7 @@ class Occurrence
 	index( {number: 1, block: 1} )
 	
 	validates :block, presence: true
-	validates :number, presence: true, numericality: true
-  
-  track_history version_field: :version
-	
+	validates :number, presence: true, numericality: true	
 	
 	def to_s
 		"#{block}#{number}"

@@ -1,7 +1,6 @@
 class Course
   include Mongoid::Document
   include Mongoid::Timestamps::Short
-  include Mongoid::History::Trackable
 
   # before_create :add_major_topics
 
@@ -62,8 +61,6 @@ class Course
   ## Scopes
   ##
   #
-
-  track_history except: [:number]
 
   def <=>(c)
     self.number <=> c.number

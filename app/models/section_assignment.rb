@@ -1,7 +1,6 @@
 class SectionAssignment
   include Mongoid::Document
   include Mongoid::Timestamps::Short
-  include Mongoid::History::Trackable
   include Utils
 
   field :dd, as: :due_date, type: Date, default: -> { Utils.future_due_date }
@@ -64,7 +63,6 @@ class SectionAssignment
   #    }
   #  })
 
-  track_history track_create: false
 
   def to_s
     return "#{due_date}/#{assigned}"
@@ -190,11 +188,11 @@ class SectionAssignment
               sa.teacher_id
             end
             row << datum
-          end
-          data << row
         end
-        return data
-      end #get_data
-    end
-
+        data << row
+      end
+      return data
+    end #get_data
   end
+
+end
