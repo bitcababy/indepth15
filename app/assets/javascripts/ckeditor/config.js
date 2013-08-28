@@ -59,12 +59,13 @@ CKEDITOR.editorConfig = function( config )
 	    { name: 'colors',      items : [ 'TextColor','BGColor' ] },
 	    { name: 'tools',       items : [ 'About' ] }
 	];
-	config.toolbar = "Custom"
+	// config.toolbar = "Custom"
 	config.autogrow = true
 	// Remove some buttons, provided by the standard plugins, which we don't
 	// need to have in the Standard(s) toolbar.
 	config.removeButtons = 'Save,Preview';
-	config.removeButtons = 'Form, Checkbox,Radio,TextField,Textarea,Select,Button,HiddenField'
+	config.removeButtons = 'Table, Form, Checkbox,Radio,TextField,Textarea,Select,Button,HiddenField'
+	config.removeButtons = '';
 	// config.autoGrow.onStartup = true;
 
   // Define changes to default configuration here. For example:
@@ -151,4 +152,4 @@ CKEDITOR.editorConfig = function( config )
       }
     }
   });
-};    // Define changes to default configuration here.
+};
