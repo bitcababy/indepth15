@@ -1,5 +1,5 @@
 # encoding: utf-8
-class CkeditorPictureUploader < CarrierWave::Uploader::Base
+class CkeditorPictureUploader < AssetUploader
   include Ckeditor::Backend::CarrierWave
 
   # Include RMagick or ImageScience support:
@@ -7,14 +7,11 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   # include CarrierWave::ImageScience
 
-  # if Rails.env.production?
-  #   storage :cloud_files
-  # else
-    storage :file
-    def store_dir
-      "uploads/ckeditor/attachments/#{model.id}"
-    end
-  # end
+   # Override the directory where uploaded files will be stored.
+  # This is a sensible default for uploaders that are meant to be mounted:
+  def store_dir
+    "uploads/ckeditor/pictures/#{model.id}"
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
@@ -44,10 +41,4 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   def extension_white_list
     Ckeditor.image_file_types
   end
-
-  # Override the filename of the uploaded files:
-  # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
 end
