@@ -7,16 +7,15 @@ class Section
   field :bl, as: :block, type: String
   validates :block, presence: true, length: { minimum: 1, maximum: 2 }
 
-
-  field :du, as: :duration
+  # field :du, as: :duration
   # validates :duration, presence: true, inclusion: { in: Course::DURATIONS }
 
   field :se, as: :semester#, type: Symbol
   validates :semester, inclusion: { in: Durations::SEMESTERS }, allow_nil: true
 
-  field :mv, as: :model_version, type: Integer
+  field :mv, as: :model_version, type: Integer, default: CURRENT_VERSION
 
-  field :eb, as: :extended_block, type: String, default: -> { "#{block}#{Durations.semester_to_i(semester)}"}
+  # field :eb, as: :extended_block, type: String, default: -> { "#{block}#{Durations.semester_to_i(semester)}"}
 
   field :y, as: :year, type: Integer
   validates :year, presence: true, numericality: { only_integer: true, less_than_or_equal_to: Settings.academic_year + 1}
@@ -30,6 +29,8 @@ class Section
 
   validates :course_id, presence: true
   validates :teacher_id, presence: true
+
+  attr_readonly :year, :course_id, :teacher_id, :block, :semester
 
   field :_id, default: -> { "#{year%100}-#{course_id}-#{teacher_id}-#{extended_block}"}
 
@@ -52,24 +53,33 @@ class Section
     delegate :department, to: :course
   end
 
-  track_history track_create: false
+  # before_save :sync_with_sas
 
-  before_save :sync_with_sas
+  # def clone(save: true, delete: false)
+  #   attrs = self.attributes
+  #   attrs[:model_version] = CURRENT_VERSION
+  #   sec = self.class.new attrs
+  #   return self if Section.where(_id: sec._id).exists?
+  #   self.section_assignments.each {|sa| sa.section = sec}
+  #   self.delete if delete
+  #   sec.save! if save
+  #   return sec
+  # end
 
-  def clone(save: true, delete: false)
-    attrs = self.attributes
-    attrs[:model_version] = CURRENT_VERSION
-    sec = self.class.new attrs
-    return self if Section.where(_id: sec._id).exists?
-    self.section_assignments.each {|sa| sa.section = sec}
-    self.delete if delete
-    sec.save! if save
-    return sec
+  def change_sas_to(new_section)    
+    return if self.to_param == new_section.to_param
+    self.section_assignments.each {|sa| sa.section = new_section}
+    new_section.touch
+    new_section.save!
   end
 
-  def sync_with_sas
-    self.section_assignments.update_all(block: self.block, year: self.year, course_id: self.course_id, teacher_id: self.teacher_id)
+  def extended_block
+    "#{block}#{Durations.semester_to_i(semester)}"
   end
+
+  # def sync_with_sas
+  #   self.section_assignments.update_all(block: self.block, year: self.year, course_id: self.course_id, teacher_id: self.teacher_id)
+  # end
 
   def <=>(s)
     return self.year <=> s.year unless self.year == s.year
@@ -92,7 +102,11 @@ class Section
   end
 
   def menu_label
-    return "#{self.teacher.formal_name}, Block #{self.block}"
+    if self.semester == ::Durations::FULL_YEAR
+      return "#{self.teacher.formal_name}, Block #{self.block}"
+    else
+      return "#{self.teacher.formal_name}, Block #{self.extended_block}"
+    end
   end
 
   def upcoming_assignments
