@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '>= 3.2.6', '<4.0.0'
+gem 'railties'
 
 group :production do
   gem 'rails_12factor'
@@ -31,6 +32,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 gem 'bundler'
+# gem 'strong_parameters' # Getting ready for Rails 4
 
 ## Mongoid
 gem 'mongo'
@@ -42,7 +44,6 @@ gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mong
 gem 'mongoid-cached-json'
 gem 'mongodb_fulltext_search'
 
-gem 'thin'
 gem 'devise'
 gem 'haml'
 # gem 'haml-contrib'
@@ -67,12 +68,14 @@ gem 'memcache-client'
 gem 'settingslogic', :git => 'git://github.com/bitcababy/settingslogic.git'
 gem 'kaminari'
 
-# Editor-related
 gem 'ckeditor', '~> 4.0.0'
-gem 'mini_magick'
+
+# Uploads
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog'
+gem 'mini_magick'
+
 gem 'file_browser', git: 'git://github.com/bitcababy/file_browser.git'
 # gem 'cloudfiles' # http://rubydoc.info/gems/cloudfiles/1.5.0.1/frames
 
@@ -115,6 +118,7 @@ group :development do
 end
 
 group :test do
+  gem 'thin'
 	gem 'rspec-instafail'
 	gem 'mongoid-rspec'
   gem 'spork-rails'
