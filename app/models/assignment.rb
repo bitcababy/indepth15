@@ -18,8 +18,6 @@ class Assignment < TextDocument
 
   accepts_nested_attributes_for :section_assignments
 
-  track_history track_create: false
-  
   index({name: -1})
   
   def add_major_topics(tags=[])
