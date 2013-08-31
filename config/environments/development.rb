@@ -36,6 +36,4 @@ InDepth::Application.configure do
 		g.fixture_replacement :fabrication
 	end
 
-  config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
-
 end

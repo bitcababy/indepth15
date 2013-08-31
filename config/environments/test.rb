@@ -42,8 +42,6 @@ InDepth::Application.configure do
 		g.fixture_replacement :fabrication
 	end
 
-  config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
-
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :log
 end
