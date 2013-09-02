@@ -8,6 +8,7 @@ CarrierWave.configure do |config|
   config.asset_host = 'http://files.westonmath.org'
   # config.asset_host = 'https://bace7f7158181dd9d70a-5a9101a0fdfe9adb52a508fedafcfb04.r0.cf1.rackcdn.com'
   config.root = Rails.root.join('tmp')
-  # config.cache_dir = Rails.root.join('tmp', "uploads")
-  config.cache_dir = 'carrierWave'
+  # This is needed for Heroku
+  config.cache_dir = Rails.root.join('tmp', "uploads")
+  # config.cache_dir = 'carrierWave'
 end
