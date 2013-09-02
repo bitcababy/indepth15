@@ -11,6 +11,8 @@ class AssignmentsController < ApplicationController
     sections = course.sections.current.select {|s| s.teacher == teacher }
     name = teacher.last_asst_number(course)
     @assignment = Assignment.new name: name + 1
+
+    @page_header = page_header course: course, teacher: teacher
     
     # @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
     dd = next_school_day
@@ -21,8 +23,12 @@ class AssignmentsController < ApplicationController
   end
 
   def edit
-		respond_to do |format|
-			format.html { render layout: !request.xhr? }
+    sa = @assignment.section_assignments.first
+    course = sa.course
+    teacher = sa.teacher
+    @page_header = page_header course: course, teacher: teacher
+      respond_to do |format|
+    format.html { render layout: !request.xhr? }
     end
   end
 
@@ -71,6 +77,10 @@ class AssignmentsController < ApplicationController
   protected
   def find_assignment
     @assignment = Assignment.find(params[:id])
+  end
+
+  def page_header(course: course, teacher: teacher)
+    return "#{course.menu_label}, #{teacher.formal_name}'s sections"
   end
 
 end
