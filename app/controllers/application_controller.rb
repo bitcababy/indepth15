@@ -112,7 +112,7 @@ class ApplicationController < ActionController::Base
 	protected
     # Per https://github.com/galetahub/ckeditor/issues/222
 		def ckeditor_filebrowser_scope(options = {})
-			super({assetable_id: current_user.id, assetable_type: 'User' }.merge(options))
+			super({assetable_id: current_user.id, assetable_type: 'Teacher' }.merge(options))
 		end
     
     def check_for_cancel
