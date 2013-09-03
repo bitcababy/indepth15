@@ -7,12 +7,17 @@ class CkeditorPictureUploader < AssetUploader
   include CarrierWave::MiniMagick
   # include CarrierWave::ImageScience
 
-   # Override the directory where uploaded files will be stored.
+  # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/ckeditor/pictures/#{model.id}"
+  if Rails.env.production? || Rails.env.development?
+    def store_dir
+      "uploads/ckeditor/pictures/#{model.id}"
+    end
+  else
+    def store_dir
+      "public/ckeditor/pictures/#{model.id}"
+    end
   end
-
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
@@ -24,7 +29,7 @@ class CkeditorPictureUploader < AssetUploader
   # def scale(width, height)
   #   # do something
   # end
-  
+
   process :read_dimensions
 
   # Create different versions of your uploaded files:
