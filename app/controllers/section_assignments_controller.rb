@@ -27,6 +27,7 @@ class SectionAssignmentsController < ApplicationController
   def index
   end
   
+  # This is the assignment browser
   def retrieve
     res = SectionAssignment.process_data_request params
     render json: res
