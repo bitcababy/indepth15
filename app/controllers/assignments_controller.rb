@@ -35,7 +35,7 @@ class AssignmentsController < ApplicationController
   def create
     asst_params = params[:assignment]
     name = asst_params[:name]
-    name = name.to_i if name =~ /\d+/
+    name = name.to_i if name =~ /^\d+$/
 
     asst = Assignment.create(name: name, content: asst_params[:content])
     if asst
