@@ -16,6 +16,9 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# sort of from https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-Make-Carrierwave-work-on-Heroku
+# use Rack::Static, urls: ['/carrierwave'], root: 'tmp'
+
 module InDepth
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
