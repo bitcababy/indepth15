@@ -17,7 +17,7 @@ if defined?(Bundler)
 end
 
 # sort of from https://github.com/carrierwaveuploader/carrierwave/wiki/How-to:-Make-Carrierwave-work-on-Heroku
-use Rack::Static, urls: ['/carrierwave'], root: 'tmp'
+# use Rack::Static, urls: ['/carrierwave'], root: 'tmp'
 
 module InDepth
   class Application < Rails::Application
