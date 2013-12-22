@@ -6,6 +6,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
   config.mailer_sender = "webmaster@westonmath.org"
 
+  config.secret_key = '0a711f8d836e0b688d2248798e64a7ea929257a356f086ade08f94676dcfbe273c3237d544f0bbded892900d681406c0b3005fc43e0416e445db04b7c69616a8'
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
 
@@ -41,7 +42,7 @@ Devise.setup do |config|
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [ :email ]
-
+  config.allow_insecure_token_lookup = true
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]` will
@@ -180,7 +181,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key
-  # config.token_authentication_key = :auth_token
+  config.token_authentication_key = :auth_token
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
