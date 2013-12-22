@@ -18,7 +18,7 @@ class User
  # Include default devise modules. Others available are:
   # ::confirmable
   # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :token_authenticatable,
+  devise :database_authenticatable,
          :recoverable, :rememberable, :timeoutable, :trackable, :lockable
  				 
   ## Database authenticatable
@@ -92,10 +92,6 @@ class User
   field :ut, as: :unlock_token,    :type => String # Only if unlock strategy is :email or :both
   field :la, as: :locked_at,       :type => Time
 
-  ## Token authenticatable
-  field :at, as: :authentication_token, :type => String
-  
-  
   # attr_accessible :login, :password, :password_confirmation, :remember_me
 
 end
