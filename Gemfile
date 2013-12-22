@@ -55,6 +55,8 @@ gem 'xml-simple'
 gem 'htmlentities'
 gem 'google-webfonts'
 
+gem 'el_finder'
+
 # Client side validations
 gem 'client_side_validations'
 gem 'client_side_validations-mongoid'
