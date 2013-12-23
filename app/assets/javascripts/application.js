@@ -15,6 +15,5 @@
 *= require jquery_ujs
 *= require jquery-ui-1.10.2.custom
 *= require ckeditor/init
-*= require extras
 *= require_tree .
 */
