@@ -21,6 +21,7 @@ InDepth::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.assets.debug = false # Just to be safe
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
@@ -50,7 +51,7 @@ InDepth::Application.configure do
   # config.assets.precompile += %w( search.js )
 	config.assets.precompile += %w(application-all.css application-print.css)
   config.assets.precompile += %w(application-screen.css application-ie.css application-shared.css)
-	config.assets.precompile += %w(extras.js)
+	# config.assets.precompile += %w(extras.js)
   # config.assets.precompile += %w(ckeditor/init)
 
   # Disable delivery errors, bad email addresses will be ignored
