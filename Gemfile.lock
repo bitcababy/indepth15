@@ -1,19 +1,4 @@
 GIT
-  remote: git://github.com/asavartsov/delayed_job_mongoid.git
-  revision: b4a040d82436ddc7e4a10715e739a50bee7b807a
-  specs:
-    delayed_job_mongoid (2.0.0)
-      delayed_job (~> 3.0)
-      mongoid (~> 3.0)
-
-GIT
-  remote: git://github.com/bitcababy/file_browser.git
-  revision: 450a8c5ddedc63d3240457dc0c591ceac57cc60e
-  specs:
-    file_browser (0.1.4)
-      rails (> 3.1)
-
-GIT
   remote: git://github.com/bitcababy/settingslogic.git
   revision: 433100e155ff9fc404d4496f74bce830d2e051aa
   specs:
@@ -110,8 +95,6 @@ GEM
       debugger-ruby_core_source (~> 1.2.4)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.4)
-    delayed_job (3.0.5)
-      activesupport (~> 3.0)
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -122,8 +105,6 @@ GEM
     docile (1.1.1)
     dotenv (0.9.0)
     easy_diff (0.0.2)
-    el_finder (1.1.10)
-      image_size (>= 1.0.0)
     email_spec (1.5.0)
       launchy (~> 2.1)
       mail (~> 2.2)
@@ -205,7 +186,6 @@ GEM
     hpricot (0.8.6)
     htmlentities (4.3.1)
     i18n (0.6.9)
-    image_size (1.1.4)
     journey (1.0.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
@@ -232,17 +212,11 @@ GEM
     mini_portile (0.5.2)
     mongo (1.9.2)
       bson (~> 1.9.2)
-    mongodb_fulltext_search (0.0.14)
-      rails (~> 3.1)
     mongoid (3.1.6)
       activemodel (~> 3.2)
       moped (~> 1.4)
       origin (~> 1.0)
       tzinfo (~> 0.3.29)
-    mongoid-cached-json (1.5.1)
-      activesupport
-      hpricot
-      mongoid (>= 3.0.0)
     mongoid-grid_fs (1.9.0)
       mime-types (~> 1.19)
       mongoid (~> 3.0)
@@ -254,11 +228,6 @@ GEM
       mongoid (>= 3.0.1)
       rake
       rspec (>= 2.14)
-    mongoid_rails_migrations (1.0.1)
-      activesupport (>= 3.2.0)
-      bundler (>= 1.0.0)
-      rails (>= 3.2.0)
-      railties (>= 3.2.0)
     moped (1.5.1)
     multi_json (1.8.2)
     multi_test (0.0.2)
@@ -421,12 +390,9 @@ DEPENDENCIES
   daemons
   database_cleaner
   debugger
-  delayed_job_mongoid!
   devise
-  el_finder
   email_spec
   fabrication (>= 2.0)
-  file_browser!
   fog
   foreman
   google-webfonts
@@ -451,12 +417,9 @@ DEPENDENCIES
   memcache-client
   mini_magick
   mongo
-  mongodb_fulltext_search
   mongoid
-  mongoid-cached-json
   mongoid-history
   mongoid-rspec
-  mongoid_rails_migrations
   pry
   rails (>= 3.2.6, < 4.0.0)
   rails_12factor

@@ -39,10 +39,10 @@ gem 'mongo'
 gem 'mongoid'
 gem 'mongoid-history'
 # gem 'mongoid-data_table', path: 'lib/plugins/mongoid-data_table'
-gem 'mongoid_rails_migrations'
-gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
-gem 'mongoid-cached-json'
-gem 'mongodb_fulltext_search'
+# gem 'mongoid_rails_migrations'
+# gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
+# gem 'mongoid-cached-json'
+# gem 'mongodb_fulltext_search'
 
 gem 'devise'
 gem 'haml'
@@ -55,7 +55,7 @@ gem 'xml-simple'
 gem 'htmlentities'
 gem 'google-webfonts'
 
-gem 'el_finder'
+# gem 'el_finder'
 
 # Client side validations
 gem 'client_side_validations'
@@ -78,7 +78,7 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog'
 gem 'mini_magick'
 
-gem 'file_browser', git: 'git://github.com/bitcababy/file_browser.git'
+# gem 'file_browser', git: 'git://github.com/bitcababy/file_browser.git'
 # gem 'cloudfiles' # http://rubydoc.info/gems/cloudfiles/1.5.0.1/frames
 
 gem 'ruby-mysql'
