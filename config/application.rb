@@ -11,7 +11,7 @@ require "sprockets/railtie"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(*Rails.groups(:assets => %w(development test staging)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -73,66 +73,4 @@ module InDepth
 		end
 
   end
-end
-
-# Mongoid.logger.level = Logger::WARN
-# Moped.logger.level = Logger::WARN
-
-# class Array
-# 	alias contains? include?
-# end
-
-# class Set 
-#   def mongoize
-#     self.to_a
-#   end
-  
-#   class << self
-#     def demongoize(obj)
-#       Set.new obj
-#     end
-    
-#     def mongoize(obj)
-#       case obj
-#       when Set then obj.mongoize
-#       else obj
-#       end
-#     end
-    
-#     def evolve(obj)
-#       case object
-#       when Set then obj.mongoize
-#       else obj
-#       end
-#     end
-#   end
-# end
-
-# class SortedSet 
-#   def mongoize
-#     self.to_a
-#   end
-
-#   class << self
-#     def demongoize(obj)
-#       SortedSet.new obj
-#     end
-    
-#     def mongoize(obj)
-#       case obj
-#       when SortedSet then obj.mongoize
-#       when Set then obj.mongoize
-#       else obj
-#       end
-#     end
-    
-#     # def evolve(obj)
-#     #   case object
-#     #   when SortedSet then obj.mongoize
-#     #   else obj
-#     #   end
-#     # end
-#   end
-# end
-
-  
+end 
