@@ -31,6 +31,7 @@ InDepth::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  config.assets.prefix = "/dev-assets"
 
 	config.generators do |g|
 		g.fixture_replacement :fabrication
