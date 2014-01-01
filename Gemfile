@@ -20,8 +20,11 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'turbo-sprockets-rails3'
 end
 
+gem 'asset_sync'
 gem 'jquery-rails'
 gem 'thin'
 
@@ -92,7 +95,6 @@ gem 'yard'
 
 group :development, :test do
   gem 'taps'
-  gem 'heroku'
   gem 'heroku_san'
   gem 'launchy'
   gem 'rspec-rails'
