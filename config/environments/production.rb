@@ -49,8 +49,8 @@ InDepth::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-	config.assets.precompile += %w(application-all.css application-print.css)
-  config.assets.precompile += %w(application-screen.css application-ie.css application-shared.css)
+	# config.assets.precompile += %w(application-all.css application-print.css)
+ #  config.assets.precompile += %w(application-screen.css application-ie.css application-shared.css)
 	# config.assets.precompile += %w(extras.js)
   # config.assets.precompile += %w(ckeditor/init)
 
