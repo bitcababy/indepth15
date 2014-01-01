@@ -11,9 +11,9 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 /*
-*= require jquery
-*= require jquery_ujs
-*= require jquery-ui-1.10.2.custom
+*= require_tree ./jquery
+*= require ckeditor/override
 *= require ckeditor/init
-*= require_tree .
+*= require ckeditor/ckeditor
+
 */
