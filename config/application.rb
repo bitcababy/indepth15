@@ -25,15 +25,14 @@ module InDepth
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # config.mongoid.observers = [:course_observer, :section_observer, :section_assignment_observer]
-    # From http://bibwild.wordpress.com/2011/12/08/jquery-ui-css-and-images-and-rails-asset-pipeline/
-    initializer :after_append_asset_paths, 
-      group: :all, 
-      after: :append_assets_paths do
-      config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
-   #    config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor")
-   #    config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor", "images")
-   end
+    # From http://www.peeep.us/92a9f4b0
+   #  initializer :after_append_asset_paths, 
+   #    group: :all, 
+   #    after: :append_assets_paths do
+   #    config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
+   # #    config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor")
+   # #    config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor", "images")
+   # end
 
     config.autoload_paths += %W(#{config.root}/extras)
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
@@ -70,6 +69,7 @@ module InDepth
 			g.helper_spec 				false
 		  g.test_framework      :rspec, fixture: true
 		  g.fixture_replacement :fabrication
+      g.assets              false
 		end
 
   end
