@@ -15,7 +15,6 @@
 /tmp
 .DS_Store
 coverage
-public/assets
 stashed
 .env
 .akephalos
