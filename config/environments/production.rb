@@ -67,5 +67,10 @@ InDepth::Application.configure do
   # Send deprecation notices to registered listeners
   # config.active_support.deprecation = :silence
 
+  # For asset_sync
+  config.action_controller.asset_host = "files.westonmath.org"
+
+  config.assets.debug = true # Turn off after file browser works
+
 end
 
