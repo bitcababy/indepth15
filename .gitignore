@@ -25,4 +25,4 @@ backups
 
 lib/plugins/
 vendor/cache
-
+public/assets
