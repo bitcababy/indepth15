@@ -25,4 +25,5 @@ backups
 
 lib/plugins/
 vendor/cache
-public/assets
+public/assets/*
+!public/assets/manifest.yml
