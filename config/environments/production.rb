@@ -48,11 +48,6 @@ InDepth::Application.configure do
   config.action_controller.asset_host = "http://files.westonmath.org"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
-	# config.assets.precompile += %w(application-all.css application-print.css)
- #  config.assets.precompile += %w(application-screen.css application-ie.css application-shared.css)
-	# config.assets.precompile += %w(extras.js)
-  # config.assets.precompile += %w(ckeditor/init)
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
@@ -66,9 +61,6 @@ InDepth::Application.configure do
 
   # Send deprecation notices to registered listeners
   # config.active_support.deprecation = :silence
-
-  # For asset_sync
-  config.action_controller.asset_host = "files.westonmath.org"
 
   config.assets.debug = true # Turn off after file browser works
 
