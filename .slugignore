@@ -1,5 +1,6 @@
 /spec
-/old_data
 /old_features
 *.psd
 *.pdf
+/updates
+/coverage
