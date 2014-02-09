@@ -73,8 +73,8 @@ sort_desc.png: sort_desc.png
 sort_desc/index.png: sort_desc.png
 sort_desc_disabled.png: sort_desc_disabled.png
 sort_desc_disabled/index.png: sort_desc_disabled.png
-application.js: application.js
-application/index.js: application.js
+application.js: application-dcbd7770e55969c98ddb57b4641378e2.js
+application/index.js: application-dcbd7770e55969c98ddb57b4641378e2.js
 ckeditor/config.js: ckeditor/config.js
 ckeditor/config/index.js: ckeditor/config.js
 ckeditor/contents.css: ckeditor/contents.css
