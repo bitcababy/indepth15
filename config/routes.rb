@@ -36,12 +36,12 @@ InDepth::Application.routes.draw do
 	# Temporary routes to deal with old links
 	match 'files/*path', via: :get, controller: :files, action: :pass_on
 	match 'teachers/*path', via: :get, controller: :files, action: :pass_on
-  unless Rails.application.config.consider_all_requests_local
-    match '*not_found', to: 'errors#error_404'
-  end
+  # unless Rails.application.config.consider_all_requests_local
+  #   match '*not_found', to: 'errors#error_404'
+  # end
 
   resources :sections, only: [:new, :create, :edit, :update, :destroy]
- 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
