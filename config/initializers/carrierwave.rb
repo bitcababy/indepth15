@@ -3,8 +3,9 @@
 CarrierWave.configure do |config|
   config.root = Rails.root.join('tmp')
   config.cache_dir = '/carrierwave'
+  # config.cache_dir = '/carrierwave'
   # This is needed for Heroku, maybe
-  # config.cache_dir = "#{Rails.root}/tmp/uploads"
+  config.cache_dir = "uploads"
 
   config.fog_credentials = {
     provider: 'Rackspace',
