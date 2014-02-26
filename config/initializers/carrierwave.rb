@@ -13,6 +13,6 @@ CarrierWave.configure do |config|
   }
   config.fog_directory = 'whsmd'
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
+  config.fog_public     = false
   config.asset_host = 'http://files.westonmath.org'
-  # config.asset_host = 'https://bace7f7158181dd9d70a-5a9101a0fdfe9adb52a508fedafcfb04.r0.cf1.rackcdn.com'
 end
