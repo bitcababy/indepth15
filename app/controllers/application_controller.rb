@@ -135,7 +135,7 @@ class ApplicationController < ActionController::Base
 		end
 
     respond_to do |format|
-      format.html { render template: 'errors/error_404', layout: 'layouts/application', status: 404 }
+      format.html { render template: 'errors/error_404', layout: nil, status: 404 }
       format.all { render nothing: true, status: 404 }
     end
   end
@@ -143,7 +143,7 @@ class ApplicationController < ActionController::Base
   def render_500(exception)
     @error = exception
     respond_to do |format|
-      format.html { render template: 'errors/error_500', layout: 'layouts/application', status: 500 }
+      format.html { render template: 'errors/error_500', layout: nil, status: 500 }
       format.all { render nothing: true, status: 500}
     end
   end
