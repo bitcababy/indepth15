@@ -17,3 +17,4 @@ namespace :update2015 do
     Convert.from_hashes Section, arr, false
   end
 end
+
