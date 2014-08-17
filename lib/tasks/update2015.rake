@@ -1,4 +1,5 @@
 namespace :update2015 do
+  task :teachers => :environment do
 
     unless Teacher.where(_id: 'desandrea').exists?
       Teacher.create! current: true, last_name: 'DeSandre', first_name: 'Alyssa', \
@@ -9,6 +10,7 @@ namespace :update2015 do
       Teacher.create! current: true, last_name: 'Gettys', first_name: 'Andi', \
         title: 'Ms', password: 'VT7tpm', login: 'gettysa', email: 'gettysa@weston.org'
     end
+end
 
   task :sections => :environment do
     require Rails.root.join('import/convert')
