@@ -395,7 +395,7 @@
             <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">7</column>
-            <column name="teacher_id">gacsa/column>
+            <column name="teacher_id">gacsa</column>
         </table>
         <table name="sections2015">
             <column name="dept_id">1</column>
