@@ -226,7 +226,7 @@ end
 class Section
   def self.import_from_hash(hash)
     year = hash[:year]
-    return if year < Settings.start_year
+    #return if year < Settings.start_year
 
     occurrences = hash[:which_occurrences]
     room = hash[:room].to_s

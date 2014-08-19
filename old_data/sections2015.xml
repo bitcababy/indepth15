@@ -409,8 +409,20 @@
         </table>
         <table name="sections2015">
             <column name="dept_id">1</column>
+            <column name="course_num">322</column>
+            <column name="semester">0</column>
+            <column name="block">D</column>
+            <column name="block">G</column>
+            <column name="year">2015</column>
+            <column name="which_occurrences">all</column>
+            <column name="room">20</column>
+            <column name="teacher_id">langsdorfa</column>
+        </table>
+        <table name="sections2015">
+            <column name="dept_id">1</column>
             <column name="course_num">381</column>
             <column name="semester">0</column>
+            <column name="block">C</column>
             <column name="block">D</column>
             <column name="year">2015</column>
             <column name="which_occurrences">all</column>
@@ -421,20 +433,11 @@
             <column name="dept_id">1</column>
             <column name="course_num">381</column>
             <column name="semester">0</column>
+            <column name="block">G</column>
             <column name="block">C</column>
             <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">201</column>
-            <column name="teacher_id">langsdorfa</column>
-        </table>
-        <table name="sections2015">
-            <column name="dept_id">1</column>
-            <column name="course_num">322</column>
-            <column name="semester">0</column>
-            <column name="block">G</column>
-            <column name="year">2015</column>
-            <column name="which_occurrences">all</column>
-            <column name="room">20</column>
             <column name="teacher_id">langsdorfa</column>
         </table>
         <table name="sections2015">
