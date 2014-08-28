@@ -17,7 +17,7 @@
     <pma:structure_schemas>
         <pma:database name="whsmd" collation="utf8_bin" charset="utf8">
             <pma:view name="sections2015">
-                CREATE ALGORITHM=UNDEFINED DEFINER=`ljd`@`%` SQL SECURITY DEFINER VIEW `whsmd`.`sections2015` AS select `whsmd`.`master_schedule`.`dept_id` AS `dept_id`,`whsmd`.`master_schedule`.`course_num` AS `course_num`,`whsmd`.`master_schedule`.`semester` AS `semester`,`whsmd`.`master_schedule`.`block` AS `block`,`whsmd`.`master_schedule`.`year` AS `YEAR`,`whsmd`.`master_schedule`.`which_occurrences` AS `which_occurrences`,`whsmd`.`master_schedule`.`room` AS `room`,`whsmd`.`master_schedule`.`teacher_id` AS `teacher_id` from `whsmd`.`master_schedule` where (`whsmd`.`master_schedule`.`year` = '2015') order by `whsmd`.`master_schedule`.`teacher_id` limit 0,60;
+                CREATE ALGORITHM=UNDEFINED DEFINER=`ljd`@`%` SQL SECURITY DEFINER VIEW `whsmd`.`sections2015` AS select `whsmd`.`master_schedule`.`dept_id` AS `dept_id`,`whsmd`.`master_schedule`.`course_num` AS `course_num`,`whsmd`.`master_schedule`.`semester` AS `semester`,`whsmd`.`master_schedule`.`block` AS `block`,`whsmd`.`master_schedule`.`year` AS `year`,`whsmd`.`master_schedule`.`which_occurrences` AS `which_occurrences`,`whsmd`.`master_schedule`.`room` AS `room`,`whsmd`.`master_schedule`.`teacher_id` AS `teacher_id` from `whsmd`.`master_schedule` where (`whsmd`.`master_schedule`.`year` = '2015') order by `whsmd`.`master_schedule`.`teacher_id` limit 0,60;
             </pma:view>
         </pma:database>
     </pma:structure_schemas>
@@ -32,7 +32,7 @@
             <column name="course_num">321</column>
             <column name="semester">0</column>
             <column name="block">A</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">14</column>
             <column name="teacher_id">davidsonl</column>
@@ -42,7 +42,7 @@
             <column name="course_num">321</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">14</column>
             <column name="teacher_id">davidsonl</column>
@@ -52,7 +52,7 @@
             <column name="course_num">332</column>
             <column name="semester">0</column>
             <column name="block">E</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">14</column>
             <column name="teacher_id">davidsonl</column>
@@ -62,7 +62,7 @@
             <column name="course_num">332</column>
             <column name="semester">0</column>
             <column name="block">G</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">14</column>
             <column name="teacher_id">davidsonl</column>
@@ -72,7 +72,7 @@
             <column name="course_num">322</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">7</column>
             <column name="teacher_id">desandrea</column>
@@ -82,7 +82,7 @@
             <column name="course_num">322</column>
             <column name="semester">0</column>
             <column name="block">A</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">7</column>
             <column name="teacher_id">desandrea</column>
@@ -92,7 +92,7 @@
             <column name="course_num">342</column>
             <column name="semester">0</column>
             <column name="block">D</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">8</column>
             <column name="teacher_id">fidlerb</column>
@@ -102,7 +102,7 @@
             <column name="course_num">343</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">8</column>
             <column name="teacher_id">fidlerb</column>
@@ -112,7 +112,7 @@
             <column name="course_num">391</column>
             <column name="semester">0</column>
             <column name="block">H</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">8</column>
             <column name="teacher_id">fidlerb</column>
@@ -122,7 +122,7 @@
             <column name="course_num">343</column>
             <column name="semester">0</column>
             <column name="block">D</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">fidlerb</column>
@@ -132,7 +132,7 @@
             <column name="course_num">341</column>
             <column name="semester">0</column>
             <column name="block">E</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">16</column>
             <column name="teacher_id">fierabendm</column>
@@ -142,7 +142,7 @@
             <column name="course_num">341</column>
             <column name="semester">0</column>
             <column name="block">G</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">22</column>
             <column name="teacher_id">fierabendm</column>
@@ -152,7 +152,7 @@
             <column name="course_num">342</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">16</column>
             <column name="teacher_id">fierabendm</column>
@@ -162,7 +162,7 @@
             <column name="course_num">343</column>
             <column name="semester">0</column>
             <column name="block">A</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">16</column>
             <column name="teacher_id">fierabendm</column>
@@ -172,7 +172,7 @@
             <column name="course_num">334</column>
             <column name="semester">2</column>
             <column name="block">H</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">201</column>
             <column name="teacher_id">gabrinerd</column>
@@ -182,7 +182,7 @@
             <column name="course_num">352</column>
             <column name="semester">0</column>
             <column name="block">D</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">gabrinerd</column>
@@ -192,7 +192,7 @@
             <column name="course_num">352</column>
             <column name="semester">0</column>
             <column name="block">G</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">gabrinerd</column>
@@ -202,7 +202,7 @@
             <column name="course_num">336</column>
             <column name="semester">1</column>
             <column name="block">H</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">201</column>
             <column name="teacher_id">gabrinerd</column>
@@ -212,7 +212,7 @@
             <column name="course_num">371</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">16</column>
             <column name="teacher_id">gabrinerd</column>
@@ -222,7 +222,7 @@
             <column name="course_num">333</column>
             <column name="semester">3</column>
             <column name="block">F</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">1,3,4</column>
             <column name="room">7</column>
             <column name="teacher_id">gacsa</column>
@@ -232,7 +232,7 @@
             <column name="course_num">331</column>
             <column name="semester">0</column>
             <column name="block">G</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">7</column>
             <column name="teacher_id">gacsa</column>
@@ -242,7 +242,7 @@
             <column name="course_num">331</column>
             <column name="semester">0</column>
             <column name="block">B</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">7</column>
             <column name="teacher_id">gacsa</column>
@@ -252,7 +252,7 @@
             <column name="course_num">333</column>
             <column name="semester">3</column>
             <column name="block">H</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">2,3,5</column>
             <column name="room">7</column>
             <column name="teacher_id">gacsa</column>
@@ -262,7 +262,7 @@
             <column name="course_num">342</column>
             <column name="semester">0</column>
             <column name="block">E</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">7</column>
             <column name="teacher_id">gacsa</column>
@@ -272,7 +272,7 @@
             <column name="course_num">322</column>
             <column name="semester">0</column>
             <column name="block">F</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">14</column>
             <column name="teacher_id">gajewskid</column>
@@ -282,7 +282,7 @@
             <column name="course_num">332</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">18</column>
             <column name="teacher_id">gettysa</column>
@@ -292,7 +292,7 @@
             <column name="course_num">361</column>
             <column name="semester">0</column>
             <column name="block">A</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">griswoldn</column>
@@ -302,7 +302,7 @@
             <column name="course_num">331</column>
             <column name="semester">0</column>
             <column name="block">D</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">griswoldn</column>
@@ -312,7 +312,7 @@
             <column name="course_num">331</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">griswoldn</column>
@@ -322,7 +322,7 @@
             <column name="course_num">361</column>
             <column name="semester">0</column>
             <column name="block">F</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">griswoldn</column>
@@ -332,7 +332,7 @@
             <column name="course_num">321</column>
             <column name="semester">0</column>
             <column name="block">F</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">8</column>
             <column name="teacher_id">hamavida</column>
@@ -342,7 +342,7 @@
             <column name="course_num">321</column>
             <column name="semester">0</column>
             <column name="block">G</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">8</column>
             <column name="teacher_id">hamavida</column>
@@ -352,7 +352,7 @@
             <column name="course_num">332</column>
             <column name="semester">0</column>
             <column name="block">B</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">18</column>
             <column name="teacher_id">hamavida</column>
@@ -362,7 +362,7 @@
             <column name="course_num">326</column>
             <column name="semester">0</column>
             <column name="block">F</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">18</column>
             <column name="teacher_id">hosmerc</column>
@@ -372,7 +372,7 @@
             <column name="course_num">342</column>
             <column name="semester">0</column>
             <column name="block">H</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">18</column>
             <column name="teacher_id">hosmerc</column>
@@ -382,7 +382,7 @@
             <column name="course_num">342</column>
             <column name="semester">0</column>
             <column name="block">G</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">18</column>
             <column name="teacher_id">hosmerc</column>
@@ -392,7 +392,7 @@
             <column name="course_num">332</column>
             <column name="semester">0</column>
             <column name="block">A</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">18</column>
             <column name="teacher_id">hosmerc</column>
@@ -402,7 +402,7 @@
             <column name="course_num">322</column>
             <column name="semester">0</column>
             <column name="block">G</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">langsdorfa</column>
@@ -412,7 +412,7 @@
             <column name="course_num">381</column>
             <column name="semester">0</column>
             <column name="block">D</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">22</column>
             <column name="teacher_id">langsdorfa</column>
@@ -422,7 +422,7 @@
             <column name="course_num">381</column>
             <column name="semester">0</column>
             <column name="block">F</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">22</column>
             <column name="teacher_id">langsdorfa</column>
@@ -432,7 +432,7 @@
             <column name="course_num">322</column>
             <column name="semester">0</column>
             <column name="block">E</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">20</column>
             <column name="teacher_id">langsdorfa</column>
@@ -442,7 +442,7 @@
             <column name="course_num">341</column>
             <column name="semester">0</column>
             <column name="block">H</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">14</column>
             <column name="teacher_id">mclaughlinj</column>
@@ -452,7 +452,7 @@
             <column name="course_num">341</column>
             <column name="semester">0</column>
             <column name="block">D</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">14</column>
             <column name="teacher_id">mclaughlinj</column>
@@ -462,7 +462,7 @@
             <column name="course_num">391</column>
             <column name="semester">0</column>
             <column name="block">B</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">2</column>
             <column name="teacher_id">monzj</column>
@@ -472,7 +472,7 @@
             <column name="course_num">391</column>
             <column name="semester">0</column>
             <column name="block">C</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">22</column>
             <column name="teacher_id">monzj</column>
@@ -482,7 +482,7 @@
             <column name="course_num">352</column>
             <column name="semester">0</column>
             <column name="block">A</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">22</column>
             <column name="teacher_id">monzj</column>
@@ -492,7 +492,7 @@
             <column name="course_num">352</column>
             <column name="semester">0</column>
             <column name="block">E</column>
-            <column name="YEAR">2015</column>
+            <column name="year">2015</column>
             <column name="which_occurrences">all</column>
             <column name="room">22</column>
             <column name="teacher_id">monzj</column>
