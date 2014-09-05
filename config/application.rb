@@ -30,6 +30,8 @@ module InDepth
    #    group: :all, 
    #    after: :append_assets_paths do
    #    config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
+	config.encoding = "utf-8"
+
    # #    config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor")
    # #    config.assets.paths.unshift Rails.root.join("app", "assets", "javascripts", "ckeditor", "skins", "moonocolor", "images")
    # end
