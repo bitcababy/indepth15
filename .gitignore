@@ -22,6 +22,7 @@ stashed
 backups
 .ruby-gemset*
 .ruby-version*
+*.swp
 
 lib/plugins/
 vendor/cache
