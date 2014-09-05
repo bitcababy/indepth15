@@ -12,9 +12,9 @@
 
 	%body
 		/ #signinform.nodisplay= render partial: 'users/sessions/signin_form'
-/		- flash.each do |name, msg|
-/			- if msg.is_a? String
-/				= content_tag :div, msg, id: "flash_#{name}"
+		/ - flash.each do |name, msg|
+		 	/ - if msg.is_a? String
+				/ = content_tag :div, msg, id: "flash_#{name}"
 	
 		%header#page_header= content_for?(:page_header) ? (content_for :page_header) : "Fix me!"
 		= render 'menus/menubar'
