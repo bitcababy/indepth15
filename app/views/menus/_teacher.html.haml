@@ -3,4 +3,4 @@
 	%ul.sections
 		= render partial: 'menus/tsection', collection: teacher.sections.current.to_a.sort {|a,b| a.label_for_teacher <=> b.label_for_teacher}, as: :section
 		%li
-		%a{href: "mailto: #{teacher.email}", title: "Email"} Send mail
+			%a{href: "mailto: #{teacher.email}", title: "Email"} Send mail
