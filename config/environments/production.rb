@@ -33,7 +33,7 @@ InDepth::Application.configure do
   # config.force_ssl = true
 
   # See everything in the log (default is :info)
-  config.log_level = :debug
+  config.log_level = :info
 
   # Prepend all log lines with the following tags
   # config.log_tags = [ :subdomain, :uuid ]
@@ -62,7 +62,7 @@ InDepth::Application.configure do
   # Send deprecation notices to registered listeners
   # config.active_support.deprecation = :silence
 
-  config.assets.debug = true # Turn off after file browser works
+  config.assets.false = true # Turn off after file browser works
 
 end
 
