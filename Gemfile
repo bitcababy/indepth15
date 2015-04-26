@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+#ruby=ruby-2.0.0
+#ruby-gemset=indepth
+
 
 gem 'rails', '>= 3.2.6', '<4.0.0'
+gem 'actionmailer'
 gem 'railties'
 
 group :production do
@@ -40,7 +43,9 @@ gem 'bundler'
 ## Mongoid
 gem 'mongo'
 gem 'mongoid'
-gem 'mongoid-history'
+gem 'bson_ext'
+
+# gem 'mongoid-history'
 # gem 'mongoid-data_table', path: 'lib/plugins/mongoid-data_table'
 # gem 'mongoid_rails_migrations'
 # gem 'delayed_job_mongoid', :git => 'git://github.com/asavartsov/delayed_job_mongoid.git'
@@ -49,12 +54,6 @@ gem 'mongoid-history'
 
 gem 'devise'
 gem 'haml'
-# gem 'haml-contrib'
-gem 'bson_ext'
-# gem 'delayed_job'
-gem 'xml-simple'
-# gem 'state_machine'
-# gem 'state_machine-audit_trail'
 gem 'htmlentities'
 gem 'google-webfonts'
 
@@ -67,7 +66,6 @@ gem 'client_side_validations-simple_form'
 
 gem 'validates_email_format_of'
 
-gem 'browser'
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic', :git => 'git://github.com/bitcababy/settingslogic.git'
@@ -81,10 +79,6 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog'
 gem 'mini_magick'
 
-# gem 'file_browser', git: 'git://github.com/bitcababy/file_browser.git'
-# gem 'cloudfiles' # http://rubydoc.info/gems/cloudfiles/1.5.0.1/frames
-
-gem 'ruby-mysql'
 gem 'tidy_ffi'
 gem 'daemons'
 gem 'pry'
@@ -95,25 +89,16 @@ gem 'yard'
 
 group :development, :test do
   gem 'taps'
-  gem 'heroku_san'
   gem 'launchy'
   gem 'rspec-rails'
   gem 'rspec-formatter-webkit'
-  gem 'watchr'#,  :git => 'git://github.com/bitcababy/watchr.git'
   gem 'guard'
   gem 'guard-rspec'
-  gem 'guard-cucumber'
-  gem 'guard-coffeescript'
   gem 'guard-bundler'
-  # gem 'guard-sass'
-  gem 'guard-haml'
-  gem 'guard-sprockets2'
-  gem 'growl_notify'
   gem 'fabrication', '>= 2.0'
   gem 'foreman'
 # gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
   # To use debugger
-  gem 'debugger'
   # gem 'inherited_resources'
 end
 
@@ -124,7 +109,6 @@ end
 group :test do
 	gem 'rspec-instafail'
 	gem 'mongoid-rspec'
-  gem 'spork-rails'
   gem 'rspec-html-matchers'
   gem 'rspec-given'
 	gem 'capybara'
@@ -135,10 +119,5 @@ group :test do
   gem 'simplecov-rcov', :require => false
 	gem 'email_spec'
   gem 'websocket'
-	# Warden stuff
-	gem 'warden'
-	gem 'rails_warden'
-	gem 'guard-sass', :require => false
   gem 'rb-fsevent', '~>0.9.1'
 end
-
