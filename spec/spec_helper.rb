@@ -1,8 +1,6 @@
-require 'spork'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
-Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
@@ -13,12 +11,7 @@ Spork.prefork do
   require 'email_spec'
   require 'capybara/rspec'
   require 'devise/test_helpers'
-  require 'mongoid-history'
   require 'fabrication/syntax/make'
-
-  class HistoryTracker
-    include Mongoid::History::Tracker
-  end
 
   module Devise
     module Models
@@ -58,8 +51,8 @@ Spork.prefork do
     # config.mock_with :mocha
     # config.mock_with :flexmock
     # config.mock_with :rr
-    # 
-    
+    #
+
     # config.syntax = :expect
 
     # If true, the base class of anonymous controllers will be inferred
@@ -83,32 +76,30 @@ Spork.prefork do
       DatabaseCleaner.strategy = :truncation
       DatabaseCleaner.orm = 'mongoid'
     end
-    
+
     config.before :each do
       DatabaseCleaner.start
     end
     config.after :each do
       DatabaseCleaner.clean
     end
-    
+
     config.after :suite do
       DatabaseCleaner.clean
     end
-    
-  	# Clear out 
+
+  	# Clear out
   	config.before(:each) do
       Settings.reload!
       Warden.test_mode!
       Mongoid::IdentityMap.clear
   	end
-    
+
     config.after(:each) do
       Warden.test_reset!
     end
   end
 end
-
-Spork.each_run do
   # This code will be run each time you run your specs.
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
@@ -134,5 +125,3 @@ Spork.each_run do
       add_filter '/app/models/ckeditor/'
     end
   # end
-end
-
