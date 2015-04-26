@@ -14,13 +14,13 @@ class User
 	field :ln, as: :last_name, type: String, default: ""
 
 	validates :last_name, presence: true#, length: { minimum: 2 }
-		
+
  # Include default devise modules. Others available are:
   # ::confirmable
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
          :recoverable, :rememberable, :timeoutable, :trackable, :lockable
- 				 
+
   ## Database authenticatable
   field :em, as: :email, :type => String
 	validates :email, presence: true
@@ -31,9 +31,7 @@ class User
   validates_uniqueness_of :email, :login, case_sensitive: false
 
 	field :_id, type: String, default: ->{ login }
-	
 
-  has_many :tags
 
   # def ==(u)
   #   return false unless u.class == self.class
@@ -47,7 +45,7 @@ class User
 	def formal_name
 		return "#{self.honorific} #{self.last_name}"
 	end
-	
+
 	def full_name
 		return "#{self.first_name} #{self.last_name}"
 	end
@@ -55,11 +53,11 @@ class User
 	def to_s
 		return "#{self.first_name} #{self.last_name}"
 	end
-	
+
 	def menu_label
 		return self.full_name
 	end
-	  
+
 	#
 	# Devise stuff
 	#
@@ -86,7 +84,7 @@ class User
   #  field :ca, as: :confirmed_at,         :type => Time
   #  field :co, as: :confirmation_sent_at, :type => Time
   #  field :um, as: :unconfirmed_email,    :type => String # Only if using reconfirmable
- 
+
   ## Lockable
   field :fa, as: :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts
   field :ut, as: :unlock_token,    :type => String # Only if unlock strategy is :email or :both
@@ -104,4 +102,3 @@ class LoginValidator < ActiveModel::EachValidator
     end
   end
 end
-

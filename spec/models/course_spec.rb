@@ -6,12 +6,11 @@ describe Course do
   end
 
 	it { should validate_uniqueness_of(:number) }
-  
+
 	it { should embed_many :documents }
 	it { should have_many(:sections) }
   it { should belong_to :department }
-  it { should have_and_belong_to_many :major_topics }
-  
+
   describe "Fabricator" do
     it "creates a valid course" do
       expect(Fabricate.build :course).to be_valid
@@ -21,28 +20,20 @@ describe Course do
       expect(course.sections.count).to eq 3
     end
   end
-  
+
   # describe '#branches' do
   #   it "returns the branches that a course belongs to" do
-  #     expect( 
+  #     expect(
   #       Fabricate(:course, number: Course::BRANCH_MAP.keys.sample).branches
   #     ).to be_kind_of Array
   #   end
   # end
-    
-  describe '#add_major_topics' do
-    it "adds the the major topics from the BRANCH_MAP" do
-      course = Fabricate.build :course, number: 321
-      course.add_major_topics
-      pending "unfinished test"
-    end
-  end
 
   describe '#current?' do
     it "should return true iff it has sections" do
       course = Fabricate :course
       expect {
-        course.sections << Fabricate(:section, course: course) 
+        course.sections << Fabricate(:section, course: course)
       }.to change { course.current? }.from(false).to(true)
     end
   end
@@ -59,7 +50,7 @@ describe Course do
         expect(course.sections.for_teacher(t2).count).to eq 2
       end
     end
-    
+
     describe 'sections.current' do
       it "returns the sections taught this year" do
         course = Fabricate :course, num_sections: 2
@@ -68,7 +59,7 @@ describe Course do
       end
     end
   end
-  
+
   it "should return the teachers of a course" do
     t1 = Fabricate :teacher
     t2 = Fabricate :teacher
@@ -77,7 +68,7 @@ describe Course do
     expect(course.teachers).to include t1
     expect(course.teachers).to include t2
   end
-    
+
   it "should return the teachers of the current sections" do
     t1 = Fabricate :teacher
     t2 = Fabricate :teacher
@@ -88,5 +79,5 @@ describe Course do
     expect(course.current_teachers).to include t1
     expect(course.current_teachers).to include t2
   end
-		
+
 end

@@ -1,20 +1,13 @@
 require 'spec_helper'
 
 describe AssignmentsController do
-  include Warden::Test::Helpers  
+  include Warden::Test::Helpers
   login_user
-  
+
   describe "GET 'new'" do
     before :each do
       teacher = Fabricate :teacher
       @course = Fabricate :course
-      # @course.major_topics = [
-      #   Fabricate(:none_topic),
-      #   Fabricate(:major_topic, name: "Quadratics"), 
-      #   Fabricate(:major_topic, name: "Functions"), 
-      #   Fabricate(:major_topic, name: 'Exponents/Logs'),
-      #   Fabricate(:major_topic, name: 'Systems of Equations'),
-      # ]
       3.times {
         @course.sections << Fabricate(:section, teacher: teacher, year: Settings.academic_year)
       }
@@ -28,31 +21,31 @@ describe AssignmentsController do
       expect(asst).to_not be_persisted
       expect(asst.section_assignments.to_a.count).to eq 3
     end
-     
+
     it "should render the 'new' template" do
       expect(response).to render_template :new
     end
-    
+
   end # "GET 'new'"
-  
-  #   "teacher_id"=>"davidsonl", 
-  #   "course_id"=>"321", 
+
+  #   "teacher_id"=>"davidsonl",
+  #   "course_id"=>"321",
   #   "assignment"=>{
   #     "section_assignments_attributes"=>{
   #       "0"=>{
-  #         "due_date"=>"2013-03-21", 
-  #         "assigned"=>"0", 
+  #         "due_date"=>"2013-03-21",
+  #         "assigned"=>"0",
   #         "section_id"=>"514361f9df0eda97e900013e"
-  #         }, 
+  #         },
   #         "1"=>{
-  #           "due_date"=>"2013-03-21", 
-  #           "assigned"=>"0", 
+  #           "due_date"=>"2013-03-21",
+  #           "assigned"=>"0",
   #           "section_id"=>"514361f9df0eda97e9000140"
   #           }
-  #         }, 
-  #       "name"=>"foo", 
+  #         },
+  #       "name"=>"foo",
   #       "content"=>"<p>bar</p>\r\n"
-  #     }, 
+  #     },
   describe "PUT create" do
     before :each do
       @course = Fabricate :course
@@ -72,7 +65,7 @@ describe AssignmentsController do
          }
        }
     end
-    
+
     it "creates the assignment" do
       expect { post :create, @parms }
       .to change{ Assignment.count }.by(1)
@@ -88,33 +81,33 @@ describe AssignmentsController do
  #      @course = Fabricate :course
  #      @teacher = Fabricate :teacher, section_count: 2, courses: [course]
  #      @parms = {
- #        "teacher_id"=>@teacher.to_param, 
- #        "course_id"=>@course.to_param, 
+ #        "teacher_id"=>@teacher.to_param,
+ #        "course_id"=>@course.to_param,
  #        "assignment"=>
- #          { 
+ #          {
  #            "section_assignments_attributes"=>
  #            {"0"=>
- #              {"due_date"=>"2013-03-18", 
- #                "assigned"=>"0", 
+ #              {"due_date"=>"2013-03-18",
+ #                "assigned"=>"0",
  #                "section"=>teacher.sections[0].to_param
- #              }, 
+ #              },
  #              "1"=>{
- #                "due_date"=>"2013-03-18", 
- #                "assigned"=>"0", 
+ #                "due_date"=>"2013-03-18",
+ #                "assigned"=>"0",
  #                "section"=>teacher.sections[1].to_param
  #                }
- #              }, 
- #            "name"=>"21", 
+ #              },
+ #            "name"=>"21",
  #          "content"=>"\n"
  #        }
  #      }
  #      session[:form] = {}
  #      session[:form][:redirect_url] = "/"
  #    end
- #    
+ #
  #    it "finds the teacher" do
- #      
- #  
+ #
+ #
  #    it "creates the assignment" do
  #      expect { xhr :post, :create, @parms }
  #      .to change{ Assignment.count }.by(1)
@@ -124,5 +117,5 @@ describe AssignmentsController do
  #      .to change{ SectionAssignment.count }.by(2)
  #    end
  #  end
-      
+
 end

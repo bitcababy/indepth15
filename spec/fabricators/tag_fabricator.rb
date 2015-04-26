@@ -1,2 +1,0 @@
-Fabricator(:tag) do
-end
