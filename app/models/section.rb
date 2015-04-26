@@ -39,14 +39,13 @@ class Section
 
   scope :current,               -> { where(year: Settings.academic_year) }
   scope :for_block,             ->(b) { where(block: b) }
-  # scope :for_first_semester,    ->{ where(semester: Durations::FIRST_SEMESTER) } 
+  # scope :for_first_semester,    ->{ where(semester: Durations::FIRST_SEMESTER) }
   # scope :for_second_semester,    ->{ where(semester:Durations::SECOND_SEMESTER) }
   # scope :for_semester,          ->(s){ (s == Course::FIRST_SEMESTER) ? for_first_semester : for_second_semester }
   scope :for_year,              ->(y) { where(year: y) }
   scope :for_course,            ->(c){ where(course: c) }
   scope :for_teacher,           ->(t){ where(teacher: t) }
 
-  # delegate :major_topics, to: :course
   if Rails.env.test?
     delegate :department, to: :course, allow_nil: true
   else
@@ -66,7 +65,7 @@ class Section
   #   return sec
   # end
 
-  def change_sas_to(new_section)    
+  def change_sas_to(new_section)
     return if self.to_param == new_section.to_param
     self.section_assignments.each {|sa| sa.section = new_section}
     new_section.touch

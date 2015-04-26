@@ -68,11 +68,7 @@ class SectionAssignment
     return "#{due_date}/#{assigned}"
   end
 
-  def potential_major_topics
-    self.course.major_topics
-  end
-
-  def self.upcoming
+    def self.upcoming
     na = self.next_assignment.assigned.first
     if na
       dd = na.due_date

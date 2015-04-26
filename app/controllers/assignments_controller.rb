@@ -4,7 +4,7 @@ class AssignmentsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :check_for_cancel, only: [:create, :update]
   before_filter :find_assignment, only: [:update, :edit, :destroy]
-  
+
   def new
     course = Course.find params[:course_id]
     teacher = Teacher.find params[:teacher_id]
@@ -13,8 +13,7 @@ class AssignmentsController < ApplicationController
     @assignment = Assignment.new name: name + 1
 
     @page_header = page_header course: course, teacher: teacher
-    
-    # @major_topics =  MajorTopic.names_for_topics(course.major_topics).sort
+
     dd = next_school_day
     sections.each {|s| @assignment.section_assignments.new section: s, due_date: dd, block: s.block}
     respond_to do |format|
@@ -50,7 +49,7 @@ class AssignmentsController < ApplicationController
       redirect_to :edit
     end
   end
-  
+
   def update
     asst_params = params[:assignment]
     name = asst_params[:name]
@@ -68,12 +67,12 @@ class AssignmentsController < ApplicationController
       redirect_to :edit
     end
   end
-  
+
   def destroy
     @assignment.destroy
     load_stored_page
   end
-  
+
   protected
   def find_assignment
     @assignment = Assignment.find(params[:id])

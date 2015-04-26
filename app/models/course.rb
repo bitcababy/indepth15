@@ -2,7 +2,6 @@ class Course
   include Mongoid::Document
   include Mongoid::Timestamps::Short
 
-  # before_create :add_major_topics
 
   # FULL_YEAR = 12
   # FULL_YEAR_HALF_TIME = 3
@@ -53,7 +52,6 @@ class Course
   end
 
   belongs_to :department
-  has_and_belongs_to_many :major_topics, autosave: true
 
   embeds_many :documents, class_name: 'CourseDocument'
 
@@ -80,18 +78,6 @@ class Course
 
   def current?
     return self.sections.limit(1).where(year: Settings.academic_year).exists?
-  end
-
-  def branches
-    Topics::BRANCH_MAP[self.number].to_a
-  end
-
-  def add_major_topics
-    return unless self.branches
-    topics = (self.branches.collect {|b| Topics::MAJOR_TOPIC_MAP[b]}).flatten
-    topics.uniq!
-    mts = topics.collect { |topic| MajorTopic.find_or_create_by name: topic }
-    self.major_topics = mts
   end
 
   def doc_of_kind(k)
