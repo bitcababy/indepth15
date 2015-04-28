@@ -3,9 +3,7 @@ source 'https://rubygems.org'
 #ruby=ruby-2.0.0
 #ruby-gemset=indepth
 
-
 gem 'rails', '>= 3.2.6', '<4.0.0'
-gem 'actionmailer'
 gem 'railties'
 
 group :production do
@@ -30,7 +28,7 @@ end
 gem 'browser'
 gem 'asset_sync'
 gem 'jquery-rails'
-gem 'thin'
+gem 'puma'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
