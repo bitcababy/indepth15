@@ -96,6 +96,7 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'fabrication', '>= 2.0'
   gem 'foreman'
+  gem 'factory_girl_rails'
 # gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
   # To use debugger
   # gem 'inherited_resources'
