@@ -9,7 +9,7 @@ CarrierWave.configure do |config|
   config.fog_credentials = {
     provider: 'Rackspace',
     rackspace_username: 'mer',
-    rackspace_api_key: '17b1fba2e589dd68a75040f7b963b343',
+    rackspace_api_key: '1152da795a1c8559e0457bf14dbe3780',
     rackspace_region: :dfw
   }
   config.fog_directory = 'whsmd'
