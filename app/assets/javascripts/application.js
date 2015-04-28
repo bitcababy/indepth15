@@ -14,7 +14,6 @@
 *= require jquery
 *= require jquery_ujs
 *= require_tree ./jquery
-*= require ckeditor/override
 *= require ckeditor/init
 
 */
