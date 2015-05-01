@@ -9,9 +9,10 @@ CarrierWave.configure do |config|
   config.fog_credentials = {
     provider: 'Rackspace',
     rackspace_username: 'mer',
-    rackspace_api_key: '17b1fba2e589dd68a75040f7b963b343',
+    rackspace_api_key: '1152da795a1c8559e0457bf14dbe3780',
+    rackspace_region: :dfw
   }
-  config.fog_directory = 'whsmd'
+  config.fog_directory = 'whsmd2'
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
   config.fog_public     = false
   config.asset_host = 'http://files.westonmath.org'
