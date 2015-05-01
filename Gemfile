@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #ruby=ruby-2.0.0
-#ruby-gemset=indepth
+#ruby-gemset=indepth12
 
 
 gem 'rails', '>= 3.2.6', '<4.0.0'
@@ -70,7 +70,7 @@ gem 'validates_email_format_of'
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic', :git => 'git://github.com/bitcababy/settingslogic.git'
-gem 'kaminari'
+# gem 'kaminari'
 
 gem 'ckeditor', '~> 4.0.0'
 
