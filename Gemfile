@@ -28,7 +28,8 @@ end
 gem 'browser'
 gem 'asset_sync'
 gem 'jquery-rails'
-gem 'thin'
+gem 'puma'
+gem 'strong_parameters'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -37,7 +38,6 @@ gem 'thin'
 # gem 'jbuilder'
 
 gem 'bundler'
-# gem 'strong_parameters' # Getting ready for Rails 4
 
 ## Mongoid
 gem 'mongo'
@@ -56,7 +56,6 @@ gem 'haml'
 gem 'htmlentities'
 gem 'google-webfonts'
 
-# gem 'el_finder'
 
 # Client side validations
 gem 'client_side_validations'
@@ -68,7 +67,7 @@ gem 'validates_email_format_of'
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic'#, :git => 'git://github.com/bitcababy/settingslogic.git'
-# gem 'kaminari'
+gem 'kaminari'
 
 gem 'ckeditor'#, '~> 4.0.0'
 
