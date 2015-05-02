@@ -1,5 +1,4 @@
-# encoding: UTF-8
-module Utils
+module DueDate
 	extend ActiveSupport::Concern
 
 	module ClassMethods

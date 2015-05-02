@@ -1,9 +1,9 @@
 class SectionAssignment
   include Mongoid::Document
   include Mongoid::Timestamps::Short
-  include Utils
+  include DueDate
 
-  field :dd, as: :due_date, type: Date, default: -> { Utils.future_due_date }
+  field :dd, as: :due_date, type: Date, default: -> { DueDate.future_due_date }
   field :as, as: :assigned, type: Boolean, default: false
   field :bl, as: :block, type: String
   field :y, as: :year, type: Integer

@@ -28,7 +28,7 @@ end
 #   config.stretches = 1
 # end
 
-include Utils
+include DueDate
 
 Capybara.configure do |c|
 	c.default_driver = :rack_test

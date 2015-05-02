@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 module ApplicationHelper
-  include Utils
+  include DueDate
   # include UsersHelper
 
   def academic_year_string(year)

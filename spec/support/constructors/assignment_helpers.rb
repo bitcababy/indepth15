@@ -1,5 +1,5 @@
 # module AssignmentHelpers
-#   include Utils
+#   include DueDate
 # 
 #   def assignment_with_sas(p=4, f=3)
 #     asst = Fabricate :assignment

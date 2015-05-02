@@ -1,5 +1,5 @@
 # module CourseMockHelpers
-#   include Utils
+#   include DueDate
 # 
 #   def mock_and_stub(name, opts)
 #     mock name do

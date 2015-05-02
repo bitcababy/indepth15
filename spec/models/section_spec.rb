@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Section do
-  include Utils
+  include DueDate
   include SectionsHelpers
 
   context "Fabrication" do

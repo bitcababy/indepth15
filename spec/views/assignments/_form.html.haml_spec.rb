@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'assignments/_form' do
-  include Utils
+  include DueDate
   include CapybaraExtras
 
   def sas_to_rows(sas)

@@ -1,7 +1,7 @@
 # module FabricationMacros
 #   DEFAULT_FUTURE = 3
 #   DEFAULT_PAST = 2
-#   include Utils
+#   include DueDate
 #   
 #   def create_occurrences(section)
 #     for occ in section.occurrences 
