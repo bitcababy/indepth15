@@ -13,10 +13,12 @@ group :production do
   gem 'rails_serve_static_assets'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
- gem 'sass-rails'#,   '~> 3.2.3'
- gem 'coffee-rails'#, '~> 3.2.1'
+gem 'sass-rails'#,   '~> 3.2.3'
+gem 'coffee-rails'#, '~> 3.2.1'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-ui-sass-rails', git: 'git://github.com/bitcababy/jquery-ui-sass-rails.git'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -27,7 +29,6 @@ end
 
 gem 'browser'
 gem 'asset_sync'
-gem 'jquery-rails'
 gem 'puma'
 gem 'strong_parameters'
 
@@ -67,7 +68,7 @@ gem 'validates_email_format_of'
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic'#, :git => 'git://github.com/bitcababy/settingslogic.git'
-gem 'kaminari'
+# gem 'kaminari'
 
 gem 'ckeditor'#, '~> 4.0.0'
 
