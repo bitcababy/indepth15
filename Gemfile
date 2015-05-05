@@ -1,20 +1,20 @@
 source 'https://rubygems.org'
 
 #ruby=ruby-2.2.1
-#ruby-gemset=indepth12
+#ruby-gemset=indepth-rails4
 
 
-gem 'rails', '>= 3.2.6', '<4.0.0'
+gem 'rails', '>= 4.2.0'
 gem 'actionmailer'
 gem 'railties'
 
 group :production do
   gem 'rails_12factor'
-  gem 'rails_serve_static_assets'
 end
 
-gem 'sass-rails'#,   '~> 3.2.3'
-gem 'coffee-rails'#, '~> 3.2.1'
+gem 'sass-rails'
+gem 'haml-rails'
+gem 'coffee-rails'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -23,14 +23,11 @@ gem 'jquery-ui-sass-rails', git: 'git://github.com/bitcababy/jquery-ui-sass-rail
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier'#, '>= 1.0.3'
-
-  gem 'turbo-sprockets-rails3'
+gem 'uglifier'
 
 gem 'browser'
-gem 'asset_sync'
+# gem 'asset_sync'
 gem 'puma'
-gem 'strong_parameters'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -43,6 +40,7 @@ gem 'bundler'
 ## Mongoid
 gem 'mongo'
 gem 'mongoid'
+gem 'mongoid-paranoia'
 gem 'bson_ext'
 
 # gem 'mongoid-history'
@@ -59,9 +57,9 @@ gem 'google-webfonts'
 
 
 # Client side validations
-gem 'client_side_validations'
-gem 'client_side_validations-mongoid'
-gem 'client_side_validations-simple_form'
+# gem 'client_side_validations'
+# gem 'client_side_validations-mongoid'
+# gem 'client_side_validations-simple_form'
 
 gem 'validates_email_format_of'
 
@@ -96,17 +94,9 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'fabrication'#, '>= 2.0'
   gem 'foreman'
-# gem 'perftools.rb', :git => 'git://github.com/tmm1/perftools.rb.git'
   # To use debugger
   # gem 'inherited_resources'
-end
-
-group :development do
-	gem 'haml-rails'
-end
-
-group :test do
-	gem 'rspec-instafail'
+  gem 'rspec-instafail'
 	gem 'mongoid-rspec'
   gem 'rspec-html-matchers'
   gem 'rspec-given'

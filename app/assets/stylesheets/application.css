@@ -2,6 +2,6 @@
  * application.css
  *
  *= require_self
- *= require_tree ./jquery
- *= require_tree ./all
+ *= require jquery-ui
+ *= require_tree .
 */

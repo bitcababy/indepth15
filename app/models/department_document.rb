@@ -1,3 +1,5 @@
+require 'mongoid/ordered'
+
 class DepartmentDocument < TextDocument
   include Mongoid::Ordered
 
@@ -6,7 +8,7 @@ class DepartmentDocument < TextDocument
 
   ordered_on :pos
   embedded_in :department
-  
+
   def to_s
     return "Doc titled #{title}"
   end

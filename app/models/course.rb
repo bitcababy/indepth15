@@ -39,7 +39,7 @@ class Course
 
   index( {number: -1} )
 
-  scope :in_catalog, where(in_catalog: true)
+  scope :in_catalog, ->{where(in_catalog: true)}
 
   ##
   ## Associations
