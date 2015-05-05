@@ -26,8 +26,8 @@ module InDepth
     # -- all .rb files in that directory are automatically loaded.
 
     # From http://www.peeep.us/92a9f4b0
-   #  initializer :after_append_asset_paths, 
-   #    group: :all, 
+   #  initializer :after_append_asset_paths,
+   #    group: :all,
    #    after: :append_assets_paths do
    #    config.assets.paths.unshift Rails.root.join("app", "assets", "stylesheets", "screen", "images")
 	config.encoding = "utf-8"
@@ -64,15 +64,14 @@ module InDepth
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    
+
     config.active_support.deprecation = :notify
 
 		config.generators do |g|
 			g.helper_spec 				false
 		  g.test_framework      :rspec, fixture: true
-		  g.fixture_replacement :fabrication
-      g.assets              false
+		  g.fixture_replacement :factory_girl
 		end
 
   end
-end 
+end
