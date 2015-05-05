@@ -1,3 +1,5 @@
+require 'durations'
+
 Fabricator(:section) do
   transient             :sas_count
   transient             :offset

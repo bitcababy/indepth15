@@ -1,3 +1,5 @@
+require 'durations'
+
 class Section
   include Mongoid::Document
   include Mongoid::Timestamps::Short

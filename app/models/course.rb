@@ -1,3 +1,5 @@
+require 'durations'
+
 class Course
   include Mongoid::Document
   include Mongoid::Timestamps::Short

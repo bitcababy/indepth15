@@ -1,6 +1,8 @@
 # encoding: UTF-8
 
 require 'spec_helper'
+require 'durations'
+
 
 describe "courses/_sections_pane" do
 
@@ -14,12 +16,12 @@ describe "courses/_sections_pane" do
     course.stub(:current).and_return [1,2,3]
     course.stub(:doc_of_kind).and_return mock_model(TextDocument, content: "Some description")
     assign(:course, course)
-  
+
     render partial: "courses/sections_pane", locals: {course: course}
     expect(rendered).to have_selector('div#sections_pane')
     expect(rendered).to have_content('Course 321')
     expect(rendered).to have_content("Some description")
     expect(rendered).to have_content("In the #{academic_year_string(Settings.academic_year)} academic year there are 3 sections of Fractals 101.")
   end
-	
+
 end

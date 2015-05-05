@@ -1,3 +1,5 @@
+require 'durations'
+
 Fabricator(:course) do
   transient       :num_sections
   transient       :teacher
@@ -10,7 +12,7 @@ Fabricator(:course) do
   after_build     { |course, t|
     if (n = t[:num_sections])
       teacher = t[:teacher] || Fabricate.build(:teacher)
-      n.times { 
+      n.times {
         s = Fabricate.build(:section, teacher: teacher, course: course)
         course.sections << s
         teacher.sections << s
@@ -38,4 +40,3 @@ Fabricator :course_half_time, from: :course do
   duration      Durations::FULL_YEAR_HALF_TIME
   credits       2.5
 end
-
