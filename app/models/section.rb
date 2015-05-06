@@ -34,7 +34,7 @@ class Section
 
   attr_readonly :year, :course_id, :teacher_id, :block, :semester
 
-  field :_id, default: -> { "#{year%100}-#{course_id}-#{teacher_id}-#{extended_block}"}
+  # field :_id, default: -> { "#{year%100}-#{course_id}-#{teacher_id}-#{extended_block}"}
 
   validates_uniqueness_of :block, scope: [:course_id, :teacher_id, :year, :semester]
   validates_uniqueness_of :teacher_id, scope: [:course_id, :block, :year, :semester]
