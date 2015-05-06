@@ -42,7 +42,7 @@ gem 'bundler'
 gem 'mongo'
 gem 'mongoid'
 gem 'mongoid-paranoia'
-gem 'bson_ext'
+gem 'mongoid_optimistic_locking'
 
 # gem 'mongoid-history'
 # gem 'mongoid-data_table', path: 'lib/plugins/mongoid-data_table'
@@ -93,6 +93,7 @@ group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem 'factory_girl'
   gem 'fabrication'#, '>= 2.0'
   gem 'foreman'
   # To use debugger
