@@ -19,6 +19,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-ui-sass-rails', git: 'git://github.com/bitcababy/jquery-ui-sass-rails.git'
+gem 'jquery-datatables-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
