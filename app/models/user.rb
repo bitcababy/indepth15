@@ -1,19 +1,7 @@
 class User
 	include Mongoid::Document
   include Mongoid::Timestamps::Short
-
-	HONORIFICS = %W(Mr. Mrs. Ms Dr. Ms.)
-
-	field :ho, as: :honorific, type:String, default: "Mr."
-	validates :honorific, presence: true#, inclusion: { in: HONORIFICS }
-
-	field :fn, as: :first_name, type: String, default: ""
-	validates :first_name, presence: true#, length: { minimum: 1 }#, format: {with: /[A-Z][a-z\-]+}/}
-
-	field :mn, as: :middle_name, type: String, default: ""
-	field :ln, as: :last_name, type: String, default: ""
-
-	validates :last_name, presence: true#, length: { minimum: 2 }
+	include NamedObject
 
  # Include default devise modules. Others available are:
   # ::confirmable
@@ -41,14 +29,6 @@ class User
   def <=>(u)
     return self.login.downcase <=> u.login.downcase
   end
-
-	def formal_name
-		return "#{self.honorific} #{self.last_name}"
-	end
-
-	def full_name
-		return "#{self.first_name} #{self.last_name}"
-	end
 
 	def to_s
 		return "#{self.first_name} #{self.last_name}"
