@@ -17,10 +17,15 @@ class DepartmentsController < ApplicationController
       format.json {render json: { title: doc.title, content: doc.content } }
     end
   end
-    
+
   protected
+
+	def department_params
+		params.permit(:dept_id)
+	end
+
   def find_department
-    @dept = params[:dept_id] ? Department.find(params[:dept_id]) : Department.first
+    @dept = department_params[:dept_id] ? Department.find(department_params[:dept_id]) : Department.first
   end
 
 end
