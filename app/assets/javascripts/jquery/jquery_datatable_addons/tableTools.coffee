@@ -6,19 +6,19 @@
 # # * Language:    Javascript
 # # * License:        GPL v2 or BSD 3 point style
 # # * Project:	    DataTables
-# # * 
+# # *
 # # * Copyright 2009-2012 Allan Jardine, all rights reserved.
 # # *
 # # * This source file is free software, under either the GPL v2 license or a
 # # * BSD style license, available at:
 # # *   http://datatables.net/license_gpl2
 # # *   http://datatables.net/license_bsd
-# # 
-# 
-# # Global scope for TableTools 
+# #
+#
+# # Global scope for TableTools
 # TableTools = undefined
 # (($, window, document) ->
-#   
+#
 #   ###
 #   TableTools provides flexible buttons and other tools for a DataTables enhanced table
 #   @class TableTools
@@ -33,19 +33,19 @@
 #   @param {Array} oOpts.aButtons List of buttons to be used
 #   ###
 #   TableTools = (oDT, oOpts) ->
-#     
-#     # Santiy check that we are a new instance 
+#
+#     # Santiy check that we are a new instance
 #     alert "Warning: TableTools must be initialised with the keyword 'new'"  if not this instanceof TableTools
-#     
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Public class variables
-#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#     
+#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#
 #     ###
 #     @namespace Settings object which contains customisable information for TableTools instance
 #     ###
 #     @s =
-#       
+#
 #       ###
 #       Store 'this' so the instance can be retrieved from the settings object
 #       @property that
@@ -53,7 +53,7 @@
 #       @default  this
 #       ###
 #       that: this
-#       
+#
 #       ###
 #       DataTables settings objects
 #       @property dt
@@ -61,12 +61,12 @@
 #       @default  <i>From the oDT init option</i>
 #       ###
 #       dt: oDT.fnSettings()
-#       
+#
 #       ###
 #       @namespace Print specific information
 #       ###
 #       print:
-#         
+#
 #         ###
 #         DataTables draw 'start' point before the printing display was shown
 #         @property saveStart
@@ -74,7 +74,7 @@
 #         @default  -1
 #         ###
 #         saveStart: -1
-#         
+#
 #         ###
 #         DataTables draw 'length' point before the printing display was shown
 #         @property saveLength
@@ -82,7 +82,7 @@
 #         @default  -1
 #         ###
 #         saveLength: -1
-#         
+#
 #         ###
 #         Page scrolling point before the printing display was shown so it can be restored
 #         @property saveScroll
@@ -90,7 +90,7 @@
 #         @default  -1
 #         ###
 #         saveScroll: -1
-#         
+#
 #         ###
 #         Wrapped function to end the print display (to maintain scope)
 #         @property funcEnd
@@ -98,8 +98,8 @@
 #         @default  function () {}
 #         ###
 #         funcEnd: ->
-# 
-#       
+#
+#
 #       ###
 #       A unique ID is assigned to each button in each instance
 #       @property buttonCounter
@@ -107,12 +107,12 @@
 #       @default  0
 #       ###
 #       buttonCounter: 0
-#       
+#
 #       ###
 #       @namespace Select rows specific information
 #       ###
 #       select:
-#         
+#
 #         ###
 #         Select type - can be 'none', 'single' or 'multi'
 #         @property type
@@ -120,7 +120,7 @@
 #         @default  ""
 #         ###
 #         type: ""
-#         
+#
 #         ###
 #         Array of nodes which are currently selected
 #         @property selected
@@ -128,7 +128,7 @@
 #         @default  []
 #         ###
 #         selected: []
-#         
+#
 #         ###
 #         Function to run before the selection can take place. Will cancel the select if the
 #         function returns false
@@ -137,7 +137,7 @@
 #         @default  null
 #         ###
 #         preRowSelect: null
-#         
+#
 #         ###
 #         Function to run when a row is selected
 #         @property postSelected
@@ -145,7 +145,7 @@
 #         @default  null
 #         ###
 #         postSelected: null
-#         
+#
 #         ###
 #         Function to run when a row is deselected
 #         @property postDeselected
@@ -153,7 +153,7 @@
 #         @default  null
 #         ###
 #         postDeselected: null
-#         
+#
 #         ###
 #         Indicate if all rows are selected (needed for server-side processing)
 #         @property all
@@ -161,7 +161,7 @@
 #         @default  false
 #         ###
 #         all: false
-#         
+#
 #         ###
 #         Class name to add to selected TR nodes
 #         @property selectedClass
@@ -169,8 +169,8 @@
 #         @default  ""
 #         ###
 #         selectedClass: ""
-# 
-#       
+#
+#
 #       ###
 #       Store of the user input customisation object
 #       @property custom
@@ -178,7 +178,7 @@
 #       @default  {}
 #       ###
 #       custom: {}
-#       
+#
 #       ###
 #       SWF movie path
 #       @property swfPath
@@ -186,7 +186,7 @@
 #       @default  ""
 #       ###
 #       swfPath: ""
-#       
+#
 #       ###
 #       Default button set
 #       @property buttonSet
@@ -194,7 +194,7 @@
 #       @default  []
 #       ###
 #       buttonSet: []
-#       
+#
 #       ###
 #       When there is more than one TableTools instance for a DataTable, there must be a
 #       master which controls events (row selection etc)
@@ -203,19 +203,19 @@
 #       @default  false
 #       ###
 #       master: false
-#       
+#
 #       ###
 #       Tag names that are used for creating collections and buttons
 #       @namesapce
 #       ###
 #       tags: {}
-# 
-#     
+#
+#
 #     ###
 #     @namespace Common and useful DOM elements for the class instance
 #     ###
 #     @dom =
-#       
+#
 #       ###
 #       DIV element that is create and all TableTools buttons (and their children) put into
 #       @property container
@@ -223,7 +223,7 @@
 #       @default  null
 #       ###
 #       container: null
-#       
+#
 #       ###
 #       The table node to which TableTools will be applied
 #       @property table
@@ -231,12 +231,12 @@
 #       @default  null
 #       ###
 #       table: null
-#       
+#
 #       ###
 #       @namespace Nodes used for the print display
 #       ###
 #       print:
-#         
+#
 #         ###
 #         Nodes which have been removed from the display by setting them to display none
 #         @property hidden
@@ -244,7 +244,7 @@
 #         @default  []
 #         ###
 #         hidden: []
-#         
+#
 #         ###
 #         The information display saying telling the user about the print display
 #         @property message
@@ -252,13 +252,13 @@
 #         @default  null
 #         ###
 #         message: null
-# 
-#       
+#
+#
 #       ###
 #       @namespace Nodes used for a collection display. This contains the currently used collection
 #       ###
 #       collection:
-#         
+#
 #         ###
 #         The div wrapper containing the buttons in the collection (i.e. the menu)
 #         @property collection
@@ -266,7 +266,7 @@
 #         @default  null
 #         ###
 #         collection: null
-#         
+#
 #         ###
 #         Background display to provide focus and capture events
 #         @property background
@@ -274,19 +274,19 @@
 #         @default  null
 #         ###
 #         background: null
-# 
-#     
+#
+#
 #     ###
 #     @namespace Name space for the classes that this TableTools instance will use
 #     @extends TableTools.classes
 #     ###
 #     @classes = $.extend(true, {}, TableTools.classes)
 #     $.extend true, @classes, TableTools.classes_themeroller  if @s.dt.bJUI
-#     
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Public class methods
-#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#     
+#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#
 #     ###
 #     Retreieve the settings object from an instance
 #     @method fnSettings
@@ -294,19 +294,19 @@
 #     ###
 #     @fnSettings = ->
 #       @s
-# 
-#     
-#     # Constructor logic 
+#
+#
+#     # Constructor logic
 #     oOpts = {}  if typeof oOpts is "undefined"
 #     @_fnConstruct oOpts
 #     this
-# 
+#
 #   TableTools:: =
-#     
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Public methods
-#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#     
+#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#
 #     ###
 #     Retreieve the settings object from an instance
 #     @returns {array} List of TR nodes which are currently selected
@@ -318,13 +318,13 @@
 #       iLen = undefined
 #       i = 0
 #       iLen = data.length
-# 
+#
 #       while i < iLen
 #         out.push data[i].nTr  if data[i]._DTTT_selected
 #         i++
 #       out
-# 
-#     
+#
+#
 #     ###
 #     Get the data source objects/arrays from DataTables for the selected rows (same as
 #     fnGetSelected followed by fnGetData on each row from the table)
@@ -337,13 +337,13 @@
 #       iLen = undefined
 #       i = 0
 #       iLen = data.length
-# 
+#
 #       while i < iLen
 #         out.push @s.dt.oInstance.fnGetData(i)  if data[i]._DTTT_selected
 #         i++
 #       out
-# 
-#     
+#
+#
 #     ###
 #     Check to see if a current row is selected or not
 #     @param {Node} n TR node to check if it is currently selected or not
@@ -352,8 +352,8 @@
 #     fnIsSelected: (n) ->
 #       pos = @s.dt.oInstance.fnGetPosition(n)
 #       (if (@s.dt.aoData[pos]._DTTT_selected is true) then true else false)
-# 
-#     
+#
+#
 #     ###
 #     Select all rows in the table
 #     @param {boolean} [filtered=false] Select only rows which are available
@@ -363,8 +363,8 @@
 #     fnSelectAll: (filtered) ->
 #       s = @_fnGetMasterSettings()
 #       @_fnRowSelect (if (filtered is true) then s.dt.aiDisplay else s.dt.aoData)
-# 
-#     
+#
+#
 #     ###
 #     Deselect all rows in the table
 #     @param {boolean} [filtered=false] Deselect only rows which are available
@@ -374,8 +374,8 @@
 #     fnSelectNone: (filtered) ->
 #       s = @_fnGetMasterSettings()
 #       @_fnRowDeselect (if (filtered is true) then s.dt.aiDisplay else s.dt.aoData)
-# 
-#     
+#
+#
 #     ###
 #     Select row(s)
 #     @param {node|object|array} n The row(s) to select. Can be a single DOM
@@ -386,8 +386,8 @@
 #         @fnSelectNone()
 #         @_fnRowSelect n
 #       else @_fnRowSelect n  if @s.select.type is "multi"
-# 
-#     
+#
+#
 #     ###
 #     Deselect row(s)
 #     @param {node|object|array} n The row(s) to deselect. Can be a single DOM
@@ -395,8 +395,8 @@
 #     ###
 #     fnDeselect: (n) ->
 #       @_fnRowDeselect n
-# 
-#     
+#
+#
 #     ###
 #     Get the title of the document - useful for file names. The title is retrieved from either
 #     the configuration object's 'title' parameter, or the HTML document title
@@ -410,16 +410,16 @@
 #       else
 #         anTitle = document.getElementsByTagName("title")
 #         sTitle = anTitle[0].innerHTML  if anTitle.length > 0
-#       
+#
 #       # Strip characters which the OS will object to - checking for UTF8 support in the scripting
 #       #		 * engine
-#       #		 
+#       #
 #       if "¡".toString().length < 4
 #         sTitle.replace /[^a-zA-Z0-9_\u00A1-\uFFFF\.,\-_ !\(\)]/g, ""
 #       else
 #         sTitle.replace /[^a-zA-Z0-9_\.,\-_ !\(\)]/g, ""
-# 
-#     
+#
+#
 #     ###
 #     Calculate a unity array with the column width by proportion for a set of columns to be
 #     included for a button. This is particularly useful for PDF creation, where we can use the
@@ -437,7 +437,7 @@
 #       iLen = undefined
 #       i = 0
 #       iLen = aColumnsInc.length
-# 
+#
 #       while i < iLen
 #         if aColumnsInc[i]
 #           iWidth = aoCols[i].nTh.offsetWidth
@@ -446,24 +446,24 @@
 #         i++
 #       i = 0
 #       iLen = aColWidths.length
-# 
+#
 #       while i < iLen
 #         aColWidths[i] = aColWidths[i] / iTotal
 #         i++
 #       aColWidths.join "\t"
-# 
-#     
+#
+#
 #     ###
 #     Get the information contained in a table as a string
 #     @param   {Object} oConfig Button configuration object
 #     @returns {String} Table data as a string
 #     ###
 #     fnGetTableData: (oConfig) ->
-#       
-#       # In future this could be used to get data from a plain HTML source as well as DataTables 
+#
+#       # In future this could be used to get data from a plain HTML source as well as DataTables
 #       @_fnGetDataTablesData oConfig  if @s.dt
-# 
-#     
+#
+#
 #     ###
 #     Pass text to a flash button instance, which will be used on the button's click handler
 #     @param   {Object} clip Flash button object
@@ -471,8 +471,8 @@
 #     ###
 #     fnSetText: (clip, text) ->
 #       @_fnFlashSetText clip, text
-# 
-#     
+#
+#
 #     ###
 #     Resize the flash elements of the buttons attached to this TableTools instance - this is
 #     useful for when initialising TableTools when it is hidden (display:none) since sizes can't
@@ -483,8 +483,8 @@
 #         if cli
 #           client = ZeroClipboard_TableTools.clients[cli]
 #           client.positionElement()  if typeof client.domElement isnt "undefined" and client.domElement.parentNode
-# 
-#     
+#
+#
 #     ###
 #     Check to see if any of the ZeroClipboard client's attached need to be resized
 #     ###
@@ -494,8 +494,8 @@
 #           client = ZeroClipboard_TableTools.clients[cli]
 #           return true  if typeof client.domElement isnt "undefined" and client.domElement.parentNode is @dom.container and client.sized is false
 #       false
-# 
-#     
+#
+#
 #     ###
 #     Programmatically enable or disable the print view
 #     @param {boolean} [bView=true] Show the print view if true or not given. If false, then
@@ -513,8 +513,8 @@
 #         @_fnPrintStart oConfig
 #       else
 #         @_fnPrintEnd()
-# 
-#     
+#
+#
 #     ###
 #     Show a message to the end user which is nicely styled
 #     @param {string} message The HTML string to show to the user
@@ -528,14 +528,14 @@
 #       setTimeout (->
 #         $(nInfo).fadeOut "normal", ->
 #           document.body.removeChild nInfo
-# 
+#
 #       ), time
-# 
-#     
+#
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Private methods (they are of course public in JS, but recommended as private)
-#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#     
+#     #	 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#
 #     ###
 #     Constructor logic
 #     @method  _fnConstruct
@@ -546,25 +546,25 @@
 #     _fnConstruct: (oOpts) ->
 #       that = this
 #       @_fnCustomiseSettings oOpts
-#       
-#       # Container element 
+#
+#       # Container element
 #       @dom.container = document.createElement(@s.tags.container)
 #       @dom.container.className = @classes.container
-#       
-#       # Row selection config 
+#
+#       # Row selection config
 #       @_fnRowSelectConfig()  unless @s.select.type is "none"
-#       
-#       # Buttons 
+#
+#       # Buttons
 #       @_fnButtonDefinations @s.buttonSet, @dom.container
-#       
-#       # Destructor - need to wipe the DOM for IE's garbage collector 
+#
+#       # Destructor - need to wipe the DOM for IE's garbage collector
 #       @s.dt.aoDestroyCallback.push
 #         sName: "TableTools"
 #         fn: ->
 #           that.dom.container.innerHTML = ""
-# 
-# 
-#     
+#
+#
+#
 #     ###
 #     Take the user defined settings and the default settings and combine them.
 #     @method  _fnCustomiseSettings
@@ -573,36 +573,36 @@
 #     @private
 #     ###
 #     _fnCustomiseSettings: (oOpts) ->
-#       
-#       # Is this the master control instance or not? 
+#
+#       # Is this the master control instance or not?
 #       if typeof @s.dt._TableToolsInit is "undefined"
 #         @s.master = true
 #         @s.dt._TableToolsInit = true
-#       
-#       # We can use the table node from comparisons to group controls 
+#
+#       # We can use the table node from comparisons to group controls
 #       @dom.table = @s.dt.nTable
-#       
-#       # Clone the defaults and then the user options 
+#
+#       # Clone the defaults and then the user options
 #       @s.custom = $.extend({}, TableTools.DEFAULTS, oOpts)
-#       
-#       # Flash file location 
+#
+#       # Flash file location
 #       @s.swfPath = @s.custom.sSwfPath
 #       ZeroClipboard_TableTools.moviePath = @s.swfPath  unless typeof ZeroClipboard_TableTools is "undefined"
-#       
-#       # Table row selecting 
+#
+#       # Table row selecting
 #       @s.select.type = @s.custom.sRowSelect
 #       @s.select.preRowSelect = @s.custom.fnPreRowSelect
 #       @s.select.postSelected = @s.custom.fnRowSelected
 #       @s.select.postDeselected = @s.custom.fnRowDeselected
-#       
+#
 #       # Backwards compatibility - allow the user to specify a custom class in the initialiser
 #       @classes.select.row = @s.custom.sSelectedClass  if @s.custom.sSelectedClass
 #       @s.tags = @s.custom.oTags
-#       
-#       # Button set 
+#
+#       # Button set
 #       @s.buttonSet = @s.custom.aButtons
-# 
-#     
+#
+#
 #     ###
 #     Take the user input arrays and expand them to be fully defined, and then add them to a given
 #     DOM element
@@ -616,7 +616,7 @@
 #       buttonDef = undefined
 #       i = 0
 #       iLen = buttonSet.length
-# 
+#
 #       while i < iLen
 #         if typeof buttonSet[i] is "string"
 #           if typeof TableTools.BUTTONS[buttonSet[i]] is "undefined"
@@ -631,8 +631,8 @@
 #           buttonDef = $.extend(o, buttonSet[i], true)
 #         wrapper.appendChild @_fnCreateButton(buttonDef, $(wrapper).hasClass(@classes.collection.container))
 #         i++
-# 
-#     
+#
+#
 #     ###
 #     Create and configure a TableTools button
 #     @method  _fnCreateButton
@@ -652,8 +652,8 @@
 #         @_fnTextConfig nButton, oConfig
 #         @_fnCollectionConfig nButton, oConfig
 #       nButton
-# 
-#     
+#
+#
 #     ###
 #     Create the DOM needed for the button and apply some base properties. All buttons start here
 #     @method  _fnButtonBase
@@ -682,8 +682,8 @@
 #       nSpan.innerHTML = o.sButtonText
 #       masterS.buttonCounter++
 #       nButton
-# 
-#     
+#
+#
 #     ###
 #     Get the settings object for the master instance. When more than one TableTools instance is
 #     assigned to a DataTable, only one of them can be the 'master' (for the select rows). As such,
@@ -696,21 +696,21 @@
 #       if @s.master
 #         @s
 #       else
-#         
-#         # Look for the master which has the same DT as this one 
+#
+#         # Look for the master which has the same DT as this one
 #         instances = TableTools._aInstances
 #         i = 0
 #         iLen = instances.length
-# 
+#
 #         while i < iLen
 #           return instances[i].s  if @dom.table is instances[i].s.dt.nTable
 #           i++
-# 
-#     
+#
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Button collection functions
-#     #	 
-#     
+#     #
+#
 #     ###
 #     Create a collection button, when activated will present a drop down list of other buttons
 #     @param   {Node} nButton Button to use for the collection activation
@@ -725,8 +725,8 @@
 #       oConfig._collection = nHidden
 #       document.body.appendChild nHidden
 #       @_fnButtonDefinations oConfig.aButtons, nHidden
-# 
-#     
+#
+#
 #     ###
 #     Show a button collection
 #     @param   {Node} nButton Button to use for the collection
@@ -759,18 +759,18 @@
 #       $(nBackground).css "opacity", 0
 #       document.body.appendChild nBackground
 #       document.body.appendChild nHidden
-#       
-#       # Visual corrections to try and keep the collection visible 
+#
+#       # Visual corrections to try and keep the collection visible
 #       iDivWidth = $(nHidden).outerWidth()
 #       iDivHeight = $(nHidden).outerHeight()
 #       nHidden.style.left = (iDocWidth - iDivWidth) + "px"  if iDivX + iDivWidth > iDocWidth
 #       nHidden.style.top = (iDivY - iDivHeight - $(nButton).outerHeight()) + "px"  if iDivY + iDivHeight > iDocHeight
 #       @dom.collection.collection = nHidden
 #       @dom.collection.background = nBackground
-#       
+#
 #       # This results in a very small delay for the end user but it allows the animation to be
 #       #		 * much smoother. If you don't want the animation, then the setTimeout can be removed
-#       #		 
+#       #
 #       setTimeout (->
 #         $(nHidden).animate
 #           opacity: 1
@@ -779,16 +779,16 @@
 #           opacity: 0.25
 #         , 500
 #       ), 10
-#       
-#       # Resize the buttons to the Flash contents fit 
+#
+#       # Resize the buttons to the Flash contents fit
 #       @fnResizeButtons()
-#       
-#       # Event handler to remove the collection display 
+#
+#       # Event handler to remove the collection display
 #       $(nBackground).click ->
 #         that._fnCollectionHide.call that, null, null
-# 
-# 
-#     
+#
+#
+#
 #     ###
 #     Hide a button collection
 #     @param   {Node} nButton Button to use for the collection
@@ -803,20 +803,20 @@
 #           opacity: 0
 #         , 500, (e) ->
 #           @style.display = "none"
-# 
+#
 #         $(@dom.collection.background).animate
 #           opacity: 0
 #         , 500, (e) ->
 #           @parentNode.removeChild this
-# 
+#
 #         @dom.collection.collection = null
 #         @dom.collection.background = null
-# 
-#     
+#
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Row selection functions
-#     #	 
-#     
+#     #
+#
 #     ###
 #     Add event handlers to a table to allow for row selection
 #     @method  _fnRowSelectConfig
@@ -832,14 +832,14 @@
 #         aoOpenRows = @s.dt.aoOpenRows
 #         $(dt.nTable).addClass @classes.select.table
 #         $("tr", dt.nTBody).live "click", (e) ->
-#           
-#           # Sub-table must be ignored (odd that the selector won't do this with >) 
+#
+#           # Sub-table must be ignored (odd that the selector won't do this with >)
 #           return  unless @parentNode is dt.nTBody
-#           
-#           # Check that we are actually working with a DataTables controlled row 
+#
+#           # Check that we are actually working with a DataTables controlled row
 #           return  if dt.oInstance.fnGetData(this) is null
-#           
-#           # User defined selection function 
+#
+#           # User defined selection function
 #           return  if that.s.select.preRowSelect isnt null and not that.s.select.preRowSelect.call(that, e)
 #           if that.fnIsSelected(this)
 #             that._fnRowDeselect this
@@ -847,16 +847,16 @@
 #             that.fnSelectNone()
 #             that._fnRowSelect this
 #           else that._fnRowSelect this  if that.s.select.type is "multi"
-# 
-#         
+#
+#
 #         # Bind a listener to the DataTable for when new rows are created.
 #         # This allows rows to be visually selected when they should be and
 #         # deferred rendering is used.
 #         dt.oApi._fnCallbackReg dt, "aoRowCreatedCallback", ((tr, data, index) ->
 #           $(tr).addClass that.classes.select.row  if dt.aoData[index]._DTTT_selected
 #         ), "TableTools-SelectAll"
-# 
-#     
+#
+#
 #     ###
 #     Select rows
 #     @param   {*} src Rows to select - see _fnSelectData for a description of valid inputs
@@ -867,15 +867,15 @@
 #       firstTr = (if data.length is 0 then null else data[0].nTr)
 #       i = 0
 #       iLen = data.length
-# 
+#
 #       while i < iLen
 #         data[i]._DTTT_selected = true
 #         $(data[i].nTr).addClass @classes.select.row  if data[i].nTr
 #         i++
 #       @s.select.postSelected.call this, firstTr  if @s.select.postSelected isnt null
 #       TableTools._fnEventDispatch this, "select", firstTr
-# 
-#     
+#
+#
 #     ###
 #     Deselect rows
 #     @param   {*} src Rows to deselect - see _fnSelectData for a description of valid inputs
@@ -886,15 +886,15 @@
 #       firstTr = (if data.length is 0 then null else data[0].nTr)
 #       i = 0
 #       iLen = data.length
-# 
+#
 #       while i < iLen
 #         $(data[i].nTr).removeClass @classes.select.row  if data[i].nTr and data[i]._DTTT_selected
 #         data[i]._DTTT_selected = false
 #         i++
 #       @s.select.postDeselected.call this, firstTr  if @s.select.postDeselected isnt null
 #       TableTools._fnEventDispatch this, "select", firstTr
-# 
-#     
+#
+#
 #     ###
 #     Take a data source for row selection and convert it into aoData points for the DT
 #     @param {*} src Can be a single DOM TR node, an array of TR nodes (including a
@@ -908,16 +908,16 @@
 #       i = undefined
 #       iLen = undefined
 #       if src.nodeName
-#         
+#
 #         # Single node
 #         pos = @s.dt.oInstance.fnGetPosition(src)
 #         out.push @s.dt.aoData[pos]
 #       else if typeof src.length isnt "undefined"
-#         
+#
 #         # jQuery object or an array of nodes, or aoData points
 #         i = 0
 #         iLen = src.length
-# 
+#
 #         while i < iLen
 #           if src[i].nodeName
 #             pos = @s.dt.oInstance.fnGetPosition(src[i])
@@ -929,16 +929,16 @@
 #           i++
 #         return out
 #       else
-#         
+#
 #         # A single aoData point
 #         out.push src
 #       out
-# 
-#     
+#
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Text button functions
-#     #	 
-#     
+#     #
+#
 #     ###
 #     Configure a text based button for interaction events
 #     @method  _fnTextConfig
@@ -955,26 +955,26 @@
 #         oConfig.fnMouseover.call this, nButton, oConfig, null  if oConfig.fnMouseover isnt null
 #       ), ->
 #         oConfig.fnMouseout.call this, nButton, oConfig, null  if oConfig.fnMouseout isnt null
-# 
+#
 #       if oConfig.fnSelect isnt null
 #         TableTools._fnEventListen this, "select", (n) ->
 #           oConfig.fnSelect.call that, nButton, oConfig, n
-# 
+#
 #       $(nButton).click (e) ->
-#         
+#
 #         #e.preventDefault();
 #         oConfig.fnClick.call that, nButton, oConfig, null  if oConfig.fnClick isnt null
-#         
-#         # Provide a complete function to match the behaviour of the flash elements 
+#
+#         # Provide a complete function to match the behaviour of the flash elements
 #         oConfig.fnComplete.call that, nButton, oConfig, null, null  if oConfig.fnComplete isnt null
 #         that._fnCollectionHide nButton, oConfig
-# 
-# 
-#     
+#
+#
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Flash button functions
-#     #	 
-#     
+#     #
+#
 #     ###
 #     Configure a flash based button for interaction events
 #     @method  _fnFlashConfig
@@ -1000,20 +1000,20 @@
 #         flash.setAction "copy"
 #       flash.addEventListener "mouseOver", (client) ->
 #         oConfig.fnMouseover.call that, nButton, oConfig, flash  if oConfig.fnMouseover isnt null
-# 
+#
 #       flash.addEventListener "mouseOut", (client) ->
 #         oConfig.fnMouseout.call that, nButton, oConfig, flash  if oConfig.fnMouseout isnt null
-# 
+#
 #       flash.addEventListener "mouseDown", (client) ->
 #         oConfig.fnClick.call that, nButton, oConfig, flash  if oConfig.fnClick isnt null
-# 
+#
 #       flash.addEventListener "complete", (client, text) ->
 #         oConfig.fnComplete.call that, nButton, oConfig, flash, text  if oConfig.fnComplete isnt null
 #         that._fnCollectionHide nButton, oConfig
-# 
+#
 #       @_fnFlashGlue flash, nButton, oConfig.sToolTip
-# 
-#     
+#
+#
 #     ###
 #     Wait until the id is in the DOM before we "glue" the swf. Note that this function will call
 #     itself (using setTimeout) until it completes successfully
@@ -1033,11 +1033,11 @@
 #         setTimeout (->
 #           that._fnFlashGlue flash, node, text
 #         ), 100
-# 
-#     
+#
+#
 #     ###
 #     Set the text for the flash clip to deal with
-#     
+#
 #     This function is required for large information sets. There is a limit on the
 #     amount of data that can be transferred between Javascript and Flash in a single call, so
 #     we use this method to build up the text in Flash by sending over chunks. It is estimated
@@ -1054,16 +1054,16 @@
 #       clip.clearText()
 #       i = 0
 #       iLen = asData.length
-# 
+#
 #       while i < iLen
 #         clip.appendText asData[i]
 #         i++
-# 
-#     
+#
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Data retrieval functions
-#     #	 
-#     
+#     #
+#
 #     ###
 #     Convert the mixed columns variable into a boolean array the same size as the columns, which
 #     indicates which columns we want to include
@@ -1081,48 +1081,48 @@
 #       if typeof mColumns is "object"
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           aColumns.push false
 #           i++
 #         i = 0
 #         iLen = mColumns.length
-# 
+#
 #         while i < iLen
 #           aColumns[mColumns[i]] = true
 #           i++
 #       else if mColumns is "visible"
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           aColumns.push (if dt.aoColumns[i].bVisible then true else false)
 #           i++
 #       else if mColumns is "hidden"
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           aColumns.push (if dt.aoColumns[i].bVisible then false else true)
 #           i++
 #       else if mColumns is "sortable"
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           aColumns.push (if dt.aoColumns[i].bSortable then true else false)
 #           i++
-#       # all 
+#       # all
 #       else
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           aColumns.push true
 #           i++
 #       aColumns
-# 
-#     
+#
+#
 #     ###
 #     New line character(s) depend on the platforms
 #     @method  method
@@ -1134,8 +1134,8 @@
 #         (if navigator.userAgent.match(/Windows/) then "\r\n" else "\n")
 #       else
 #         oConfig.sNewLine
-# 
-#     
+#
+#
 #     ###
 #     Get data from DataTables' internals and format it for output
 #     @method  _fnGetDataTablesData
@@ -1165,15 +1165,15 @@
 #       regex = new RegExp(oConfig.sFieldBoundary, "g") # Do it here for speed
 #       aColumnsInc = @_fnColumnTargets(oConfig.mColumns)
 #       bSelectedOnly = (if (typeof oConfig.bSelectedOnly isnt "undefined") then oConfig.bSelectedOnly else false)
-#       
+#
 #       #
 #       #		 * Header
-#       #		 
+#       #
 #       if oConfig.bHeader
 #         aRow = []
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           if aColumnsInc[i]
 #             sLoopData = dt.aoColumns[i].sTitle.replace(/\n/g, " ").replace(/<.*?>/g, "").replace(/^\s+|\s+$/g, "")
@@ -1181,57 +1181,57 @@
 #             aRow.push @_fnBoundData(sLoopData, oConfig.sFieldBoundary, regex)
 #           i++
 #         aData.push aRow.join(oConfig.sFieldSeperator)
-#       
+#
 #       #
 #       #		 * Body
-#       #		 
+#       #
 #       aDataIndex = dt.aiDisplay
 #       aSelected = @fnGetSelected()
 #       if @s.select.type isnt "none" and bSelectedOnly and aSelected.length isnt 0
 #         aDataIndex = []
 #         i = 0
 #         iLen = aSelected.length
-# 
+#
 #         while i < iLen
 #           aDataIndex.push dt.oInstance.fnGetPosition(aSelected[i])
 #           i++
 #       j = 0
 #       jLen = aDataIndex.length
-# 
+#
 #       while j < jLen
 #         tr = dt.aoData[aDataIndex[j]].nTr
 #         aRow = []
-#         
-#         # Columns 
+#
+#         # Columns
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           if aColumnsInc[i]
-#             
-#             # Convert to strings (with small optimisation) 
+#
+#             # Convert to strings (with small optimisation)
 #             mTypeData = dt.oApi._fnGetCellData(dt, aDataIndex[j], i, "display")
 #             if oConfig.fnCellRender
 #               sLoopData = oConfig.fnCellRender(mTypeData, i, tr, aDataIndex[j]) + ""
 #             else if typeof mTypeData is "string"
-#               
-#               # Strip newlines, replace img tags with alt attr. and finally strip html... 
+#
+#               # Strip newlines, replace img tags with alt attr. and finally strip html...
 #               sLoopData = mTypeData.replace(/\n/g, " ")
 #               sLoopData = sLoopData.replace(/<img.*?\s+alt\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+)).*?>/g, "$1$2$3")
 #               sLoopData = sLoopData.replace(/<.*?>/g, "")
 #             else
 #               sLoopData = mTypeData + ""
-#             
-#             # Trim and clean the data 
+#
+#             # Trim and clean the data
 #             sLoopData = sLoopData.replace(/^\s+/, "").replace(/\s+$/, "")
 #             sLoopData = @_fnHtmlDecode(sLoopData)
-#             
-#             # Bound it and add it to the total data 
+#
+#             # Bound it and add it to the total data
 #             aRow.push @_fnBoundData(sLoopData, oConfig.sFieldBoundary, regex)
 #           i++
 #         aData.push aRow.join(oConfig.sFieldSeperator)
-#         
-#         # Details rows from fnOpen 
+#
+#         # Details rows from fnOpen
 #         if oConfig.bOpenRows
 #           arr = $.grep(dt.aoOpenRows, (o) ->
 #             o.nParent is tr
@@ -1240,15 +1240,15 @@
 #             sLoopData = @_fnBoundData($("td", arr[0].nTr).html(), oConfig.sFieldBoundary, regex)
 #             aData.push sLoopData
 #         j++
-#       
+#
 #       #
 #       #		 * Footer
-#       #		 
+#       #
 #       if oConfig.bFooter and dt.nTFoot isnt null
 #         aRow = []
 #         i = 0
 #         iLen = dt.aoColumns.length
-# 
+#
 #         while i < iLen
 #           if aColumnsInc[i] and dt.aoColumns[i].nTf isnt null
 #             sLoopData = dt.aoColumns[i].nTf.innerHTML.replace(/\n/g, " ").replace(/<.*?>/g, "")
@@ -1258,8 +1258,8 @@
 #         aData.push aRow.join(oConfig.sFieldSeperator)
 #       _sLastData = aData.join(@_fnNewline(oConfig))
 #       _sLastData
-# 
-#     
+#
+#
 #     ###
 #     Wrap data up with a boundary string
 #     @method  _fnBoundData
@@ -1275,8 +1275,8 @@
 #         sData
 #       else
 #         sBoundary + sData.replace(regex, sBoundary + sBoundary) + sBoundary
-# 
-#     
+#
+#
 #     ###
 #     Break a string up into an array of smaller strings
 #     @method  _fnChunkData
@@ -1289,7 +1289,7 @@
 #       asReturn = []
 #       iStrlen = sData.length
 #       i = 0
-# 
+#
 #       while i < iStrlen
 #         if i + iSize < iStrlen
 #           asReturn.push sData.substring(i, i + iSize)
@@ -1297,8 +1297,8 @@
 #           asReturn.push sData.substring(i, iStrlen)
 #         i += iSize
 #       asReturn
-# 
-#     
+#
+#
 #     ###
 #     Decode HTML entities
 #     @method  _fnHtmlDecode
@@ -1315,17 +1315,17 @@
 #       iIndex = undefined
 #       sReturn = ""
 #       sInner = undefined
-#       
+#
 #       # nodeValue has a limit in browsers - so we chunk the data into smaller segments to build
 #       #		 * up the string. Note that the 'trick' here is to remember than we might have split over
 #       #		 * an HTML entity, so we backtrack a little to make sure this doesn't happen
-#       #		 
+#       #
 #       i = 0
 #       iLen = aData.length
-# 
+#
 #       while i < iLen
-#         
-#         # Magic number 8 is because no entity is longer then strlen 8 in ISO 8859-1 
+#
+#         # Magic number 8 is because no entity is longer then strlen 8 in ISO 8859-1
 #         iIndex = aData[i].lastIndexOf("&")
 #         if iIndex isnt -1 and aData[i].length >= 8 and iIndex > aData[i].length - 8
 #           sInner = aData[i].substr(iIndex)
@@ -1334,12 +1334,12 @@
 #         sReturn += n.childNodes[0].nodeValue
 #         i++
 #       sReturn
-# 
-#     
+#
+#
 #     # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #     #	 * Printing functions
-#     #	 
-#     
+#     #
+#
 #     ###
 #     Show print display
 #     @method  _fnPrintStart
@@ -1351,11 +1351,11 @@
 #     _fnPrintStart: (oConfig) ->
 #       that = this
 #       oSetDT = @s.dt
-#       
-#       # Parse through the DOM hiding everything that isn't needed for the table 
+#
+#       # Parse through the DOM hiding everything that isn't needed for the table
 #       @_fnPrintHideNodes oSetDT.nTable
-#       
-#       # Show the whole table 
+#
+#       # Show the whole table
 #       @s.print.saveStart = oSetDT._iDisplayStart
 #       @s.print.saveLength = oSetDT._iDisplayLength
 #       if oConfig.bShowAll
@@ -1363,54 +1363,54 @@
 #         oSetDT._iDisplayLength = -1
 #         oSetDT.oApi._fnCalculateEnd oSetDT
 #         oSetDT.oApi._fnDraw oSetDT
-#       
-#       # Adjust the display for scrolling which might be done by DataTables 
+#
+#       # Adjust the display for scrolling which might be done by DataTables
 #       @_fnPrintScrollStart oSetDT  if oSetDT.oScroll.sX isnt "" or oSetDT.oScroll.sY isnt ""
-#       
-#       # Remove the other DataTables feature nodes - but leave the table! and info div 
+#
+#       # Remove the other DataTables feature nodes - but leave the table! and info div
 #       anFeature = oSetDT.aanFeatures
 #       for cFeature of anFeature
 #         if cFeature isnt "i" and cFeature isnt "t" and cFeature.length is 1
 #           i = 0
 #           iLen = anFeature[cFeature].length
-# 
+#
 #           while i < iLen
 #             @dom.print.hidden.push
 #               node: anFeature[cFeature][i]
 #               display: "block"
-# 
+#
 #             anFeature[cFeature][i].style.display = "none"
 #             i++
-#       
-#       # Print class can be used for styling 
+#
+#       # Print class can be used for styling
 #       $(document.body).addClass @classes.print.body
-#       
-#       # Show information message to let the user know what is happening 
+#
+#       # Show information message to let the user know what is happening
 #       @fnInfo oConfig.sInfo, 3000  if oConfig.sInfo isnt ""
-#       
-#       # Add a message at the top of the page 
+#
+#       # Add a message at the top of the page
 #       if oConfig.sMessage
 #         @dom.print.message = document.createElement("div")
 #         @dom.print.message.className = @classes.print.message
 #         @dom.print.message.innerHTML = oConfig.sMessage
 #         document.body.insertBefore @dom.print.message, document.body.childNodes[0]
-#       
-#       # Cache the scrolling and the jump to the top of the page 
+#
+#       # Cache the scrolling and the jump to the top of the page
 #       @s.print.saveScroll = $(window).scrollTop()
 #       window.scrollTo 0, 0
-#       
+#
 #       # Bind a key event listener to the document for the escape key -
 #       #		 * it is removed in the callback
-#       #		 
+#       #
 #       $(document).bind "keydown.DTTT", (e) ->
-#         
-#         # Only interested in the escape key 
+#
+#         # Only interested in the escape key
 #         if e.keyCode is 27
 #           e.preventDefault()
 #           that._fnPrintEnd.call that, e
-# 
-# 
-#     
+#
+#
+#
 #     ###
 #     Printing is finished, resume normal display
 #     @method  _fnPrintEnd
@@ -1423,32 +1423,32 @@
 #       oSetDT = @s.dt
 #       oSetPrint = @s.print
 #       oDomPrint = @dom.print
-#       
-#       # Show all hidden nodes 
+#
+#       # Show all hidden nodes
 #       @_fnPrintShowNodes()
-#       
-#       # Restore DataTables' scrolling 
+#
+#       # Restore DataTables' scrolling
 #       @_fnPrintScrollEnd()  if oSetDT.oScroll.sX isnt "" or oSetDT.oScroll.sY isnt ""
-#       
-#       # Restore the scroll 
+#
+#       # Restore the scroll
 #       window.scrollTo 0, oSetPrint.saveScroll
-#       
-#       # Drop the print message 
+#
+#       # Drop the print message
 #       if oDomPrint.message isnt null
 #         document.body.removeChild oDomPrint.message
 #         oDomPrint.message = null
-#       
-#       # Styling class 
+#
+#       # Styling class
 #       $(document.body).removeClass "DTTT_Print"
-#       
-#       # Restore the table length 
+#
+#       # Restore the table length
 #       oSetDT._iDisplayStart = oSetPrint.saveStart
 #       oSetDT._iDisplayLength = oSetPrint.saveLength
 #       oSetDT.oApi._fnCalculateEnd oSetDT
 #       oSetDT.oApi._fnDraw oSetDT
 #       $(document).unbind "keydown.DTTT"
-# 
-#     
+#
+#
 #     ###
 #     Take account of scrolling in DataTables by showing the full table
 #     @returns void
@@ -1459,10 +1459,10 @@
 #       nScrollHeadInner = oSetDT.nScrollHead.getElementsByTagName("div")[0]
 #       nScrollHeadTable = nScrollHeadInner.getElementsByTagName("table")[0]
 #       nScrollBody = oSetDT.nTable.parentNode
-#       
+#
 #       # Copy the header in the thead in the body table, this way we show one single table when
 #       #		 * in print view. Note that this section of code is more or less verbatim from DT 1.7.0
-#       #		 
+#       #
 #       nTheadSize = oSetDT.nTable.getElementsByTagName("thead")
 #       oSetDT.nTable.removeChild nTheadSize[0]  if nTheadSize.length > 0
 #       if oSetDT.nTFoot isnt null
@@ -1473,8 +1473,8 @@
 #       if oSetDT.nTFoot isnt null
 #         nTfootSize = oSetDT.nTFoot.cloneNode(true)
 #         oSetDT.nTable.insertBefore nTfootSize, oSetDT.nTable.childNodes[1]
-#       
-#       # Now adjust the table's viewport so we can actually see it 
+#
+#       # Now adjust the table's viewport so we can actually see it
 #       if oSetDT.oScroll.sX isnt ""
 #         oSetDT.nTable.style.width = $(oSetDT.nTable).outerWidth() + "px"
 #         nScrollBody.style.width = $(oSetDT.nTable).outerWidth() + "px"
@@ -1482,8 +1482,8 @@
 #       if oSetDT.oScroll.sY isnt ""
 #         nScrollBody.style.height = $(oSetDT.nTable).outerHeight() + "px"
 #         nScrollBody.style.overflow = "visible"
-# 
-#     
+#
+#
 #     ###
 #     Take account of scrolling in DataTables by showing the full table. Note that the redraw of
 #     the DataTable that we do will actually deal with the majority of the hard work here
@@ -1499,8 +1499,8 @@
 #       if oSetDT.oScroll.sY isnt ""
 #         nScrollBody.style.height = oSetDT.oApi._fnStringToCss(oSetDT.oScroll.sY)
 #         nScrollBody.style.overflow = "auto"
-# 
-#     
+#
+#
 #     ###
 #     Resume the display of all TableTools hidden nodes
 #     @method  _fnPrintShowNodes
@@ -1511,13 +1511,13 @@
 #       anHidden = @dom.print.hidden
 #       i = 0
 #       iLen = anHidden.length
-# 
+#
 #       while i < iLen
 #         anHidden[i].node.style.display = anHidden[i].display
 #         i++
 #       anHidden.splice 0, anHidden.length
-# 
-#     
+#
+#
 #     ###
 #     Hide nodes which are not needed in order to display the table. Note that this function is
 #     recursive
@@ -1532,28 +1532,28 @@
 #       nChildren = nParent.childNodes
 #       i = 0
 #       iLen = nChildren.length
-# 
+#
 #       while i < iLen
 #         if nChildren[i] isnt nNode and nChildren[i].nodeType is 1
-#           
-#           # If our node is shown (don't want to show nodes which were previously hidden) 
+#
+#           # If our node is shown (don't want to show nodes which were previously hidden)
 #           sDisplay = $(nChildren[i]).css("display")
 #           unless sDisplay is "none"
-#             
-#             # Cache the node and it's previous state so we can restore it 
+#
+#             # Cache the node and it's previous state so we can restore it
 #             anHidden.push
 #               node: nChildren[i]
 #               display: sDisplay
-# 
+#
 #             nChildren[i].style.display = "none"
 #         i++
 #       @_fnPrintHideNodes nParent  unless nParent.nodeName is "BODY"
-# 
-#   
+#
+#
 #   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #   # * Static variables
-#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#   
+#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#
 #   ###
 #   Store of all instances that have been created of TableTools, so one can look up other (when
 #   there is need of a master)
@@ -1563,7 +1563,7 @@
 #   @private
 #   ###
 #   TableTools._aInstances = []
-#   
+#
 #   ###
 #   Store of all listeners and their callback functions
 #   @property _aListeners
@@ -1571,11 +1571,11 @@
 #   @default  []
 #   ###
 #   TableTools._aListeners = []
-#   
+#
 #   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #   # * Static methods
-#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#   
+#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#
 #   ###
 #   Get an array of all the master instances
 #   @method  fnGetMasters
@@ -1586,13 +1586,13 @@
 #     a = []
 #     i = 0
 #     iLen = TableTools._aInstances.length
-# 
+#
 #     while i < iLen
 #       a.push TableTools._aInstances[i]  if TableTools._aInstances[i].s.master
 #       i++
 #     a
-# 
-#   
+#
+#
 #   ###
 #   Get the master instance for a table node (or id if a string is given)
 #   @method  fnGetInstance
@@ -1603,13 +1603,13 @@
 #     node = document.getElementById(node)  unless typeof node is "object"
 #     i = 0
 #     iLen = TableTools._aInstances.length
-# 
+#
 #     while i < iLen
 #       return TableTools._aInstances[i]  if TableTools._aInstances[i].s.master and TableTools._aInstances[i].dom.table is node
 #       i++
 #     null
-# 
-#   
+#
+#
 #   ###
 #   Add a listener for a specific event
 #   @method  _fnEventListen
@@ -1625,9 +1625,9 @@
 #       that: that
 #       type: type
 #       fn: fn
-# 
-# 
-#   
+#
+#
+#
 #   ###
 #   An event has occurred - look up every listener and fire it off. We check that the event we are
 #   going to fire is attached to the same table (using the table node as reference) before firing
@@ -1643,17 +1643,17 @@
 #     listeners = TableTools._aListeners
 #     i = 0
 #     iLen = listeners.length
-# 
+#
 #     while i < iLen
 #       listeners[i].fn node  if that.dom.table is listeners[i].that.dom.table and listeners[i].type is type
 #       i++
-# 
-#   
+#
+#
 #   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #   # * Constants
-#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #   TableTools.buttonBase =
-#     
+#
 #     # Button base
 #     sAction: "text"
 #     sTag: "default"
@@ -1662,7 +1662,7 @@
 #     sButtonText: "Button text"
 #     sTitle: ""
 #     sToolTip: ""
-#     
+#
 #     # Common button specific options
 #     sCharSet: "utf8"
 #     bBomInc: false
@@ -1675,7 +1675,7 @@
 #     bFooter: true
 #     bOpenRows: false
 #     bSelectedOnly: false
-#     
+#
 #     # Callbacks
 #     fnMouseover: null
 #     fnMouseout: null
@@ -1684,8 +1684,8 @@
 #     fnComplete: null
 #     fnInit: null
 #     fnCellRender: null
-# 
-#   
+#
+#
 #   ###
 #   @namespace Default button configurations
 #   ###
@@ -1714,7 +1714,7 @@
 #       sButtonText: "Copy"
 #       fnClick: (nButton, oConfig, flash) ->
 #         @fnSetText flash, @fnGetTableData(oConfig)
-# 
+#
 #       fnComplete: (nButton, oConfig, flash, text) ->
 #         lines = text.split("\n").length
 #         len = (if @s.dt.nTFoot is null then lines - 1 else lines - 2)
@@ -1751,7 +1751,7 @@
 #           $(nButton).removeClass @classes.buttons.disabled
 #         else
 #           $(nButton).addClass @classes.buttons.disabled
-# 
+#
 #       fnInit: (nButton, oConfig) ->
 #         $(nButton).addClass @classes.buttons.disabled
 #     )
@@ -1763,7 +1763,7 @@
 #           $(nButton).removeClass @classes.buttons.disabled
 #         else
 #           $(nButton).addClass @classes.buttons.disabled
-# 
+#
 #       fnInit: (nButton, oConfig) ->
 #         $(nButton).addClass @classes.buttons.disabled
 #     )
@@ -1771,7 +1771,7 @@
 #       sButtonText: "Select all"
 #       fnClick: (nButton, oConfig) ->
 #         @fnSelectAll()
-# 
+#
 #       fnSelect: (nButton, oConfig) ->
 #         if @fnGetSelected().length is @s.dt.fnRecordsDisplay()
 #           $(nButton).addClass @classes.buttons.disabled
@@ -1782,13 +1782,13 @@
 #       sButtonText: "Deselect all"
 #       fnClick: (nButton, oConfig) ->
 #         @fnSelectNone()
-# 
+#
 #       fnSelect: (nButton, oConfig) ->
 #         if @fnGetSelected().length isnt 0
 #           $(nButton).removeClass @classes.buttons.disabled
 #         else
 #           $(nButton).addClass @classes.buttons.disabled
-# 
+#
 #       fnInit: (nButton, oConfig) ->
 #         $(nButton).addClass @classes.buttons.disabled
 #     )
@@ -1809,8 +1809,8 @@
 #           cache: false
 #           error: ->
 #             alert "Error detected when sending table data to server"
-# 
-# 
+#
+#
 #       fnAjaxComplete: (json) ->
 #         alert "Ajax complete"
 #     )
@@ -1827,16 +1827,16 @@
 #       fnClick: (nButton, oConfig) ->
 #         @_fnCollectionShow nButton, oConfig
 #     )
-# 
-#   
+#
+#
 #   #
 #   # *  on* callback parameters:
 #   # *  	1. node - button element
 #   # *  	2. object - configuration object for this button
 #   # *  	3. object - ZeroClipboard reference (flash button only)
 #   # *  	4. string - Returned string from Flash (flash button only - and only on 'complete')
-#   # 
-#   
+#   #
+#
 #   ###
 #   @namespace Classes used by TableTools - allows the styles to be override easily.
 #   Note that when TableTools initialises it will take a copy of the classes object
@@ -1847,24 +1847,24 @@
 #     buttons:
 #       normal: "DTTT_button"
 #       disabled: "DTTT_disabled"
-# 
+#
 #     collection:
 #       container: "DTTT_collection"
 #       background: "DTTT_collection_background"
 #       buttons:
 #         normal: "DTTT_button"
 #         disabled: "DTTT_disabled"
-# 
+#
 #     select:
 #       table: "DTTT_selectable"
 #       row: "DTTT_selected"
-# 
+#
 #     print:
 #       body: "DTTT_Print"
 #       info: "DTTT_print_info"
 #       message: "DTTT_PrintMessage"
-# 
-#   
+#
+#
 #   ###
 #   @namespace ThemeRoller classes - built in for compatibility with DataTables'
 #   bJQueryUI option.
@@ -1873,11 +1873,11 @@
 #     container: "DTTT_container ui-buttonset ui-buttonset-multi"
 #     buttons:
 #       normal: "DTTT_button ui-button ui-state-default"
-# 
+#
 #     collection:
 #       container: "DTTT_collection ui-buttonset ui-buttonset-multi"
-# 
-#   
+#
+#
 #   ###
 #   @namespace TableTools default settings for initialisation
 #   ###
@@ -1898,8 +1898,8 @@
 #         container: "div"
 #         button: "a"
 #         liner: "span"
-# 
-#   
+#
+#
 #   ###
 #   Name of this class
 #   @constant CLASS
@@ -1907,7 +1907,7 @@
 #   @default  TableTools
 #   ###
 #   TableTools::CLASS = "TableTools"
-#   
+#
 #   ###
 #   TableTools version
 #   @constant  VERSION
@@ -1916,14 +1916,14 @@
 #   ###
 #   TableTools.VERSION = "2.1.3"
 #   TableTools::VERSION = TableTools.VERSION
-#   
+#
 #   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #   # * Initialisation
-#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#   
+#   # * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#
 #   #
 #   # * Register a new feature with DataTables
-#   # 
+#   #
 #   if typeof $.fn.dataTable is "function" and typeof $.fn.dataTableExt.fnVersionCheck is "function" and $.fn.dataTableExt.fnVersionCheck("1.9.0")
 #     $.fn.dataTableExt.aoFeatures.push
 #       fnInit: (oDTSettings) ->
@@ -1931,10 +1931,10 @@
 #         oTT = new TableTools(oDTSettings.oInstance, oOpts)
 #         TableTools._aInstances.push oTT
 #         oTT.dom.container
-# 
+#
 #       cFeature: "T"
 #       sFeature: "TableTools"
-# 
+#
 #   else
 #     alert "Warning: TableTools 2 requires DataTables 1.9.0 or newer - www.datatables.net/download"
 #   $.fn.DataTable.TableTools = TableTools
