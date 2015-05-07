@@ -2,6 +2,7 @@ class Assignment < TextDocument
   include Mongoid::Timestamps::Short
 
   field :n, as: :name
+  field :no, as: :number, type: String
 
   # A section_assignment is broken if the assignment is deleted
   has_many :section_assignments, dependent: :destroy, autosave: true do
