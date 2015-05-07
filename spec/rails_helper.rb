@@ -44,15 +44,5 @@ RSpec.configure do |config|
 
   config.include Mongoid::Matchers, type: :model
   config.include Devise::TestHelpers, type: :controller
-  config.include FactoryGirl::Syntax::Methods
-
-  config.before(:suite) do
-      begin
-        DatabaseCleaner.start
-        FactoryGirl.lint
-      ensure
-        DatabaseCleaner.clean
-      end
-    end
 
 end
