@@ -10,27 +10,29 @@ FactoryGirl.define do
     %W(Smith Jones Lee).sample + n.to_s
   end
 
+  sequence :login_seq do |n|
+    n.to_s
+  end
+
   ## Traits ##
-  trait :email_and_password do
+  trait :user_traits do
     email   { generate :email}
     password "foobar"
     password_confirmation "foobar"
-  end
-
-  trait :with_name do
     honorific "Mr."
     first_name "Sam"
     last_name "Spade"
+    login       { last_name.downcase + first_name.downcase[0] + generate(:login_seq) }
   end
 
   ##
   ## Factories
   ##
 
-  factory :user, traits: [:email_and_password] do
+  factory :user, traits: [:user_traits] do
   end
 
-  factory :teacher, traits: [:email_and_password, :with_name] do
+  factory :teacher, traits: [:user_traits] do
     current   true
     sections  []
   end

@@ -6,7 +6,7 @@ FactoryGirl.define do
 
   factory :department do
     name    { generate :dept_name }
-    department_docs []
+    homepage_docs []
   end
 
 end

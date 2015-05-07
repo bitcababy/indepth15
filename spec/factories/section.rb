@@ -9,10 +9,10 @@ FactoryGirl.define do
   end
 
   factory :section do
-    block    { generate :block }
-    semester { [1,2,0].sample }
     year     { Array(2012..2015).sample }
-    days     { Array(1..8).sample(5) }
+    semester { Durations::SEMESTERS.sample }
+    block    { generate :block }
+    days     { Array(1..5).sample(5) }
     room     ""
 
     course
