@@ -5,10 +5,10 @@ module NamedObject
   HONORIFICS = %w{Mr. Ms Mrs. Dr.}
 
   included do
-    field :honorific, type:String
-    field :first_name, type:String
-    field :middle_name, type:String
-    field :last_name, type:String
+    field :ho, as: :honorific, type:String
+    field :fn, as: :first_name, type:String
+    field :mn, as: :middle_name, type:String
+    field :ln, as: :last_name, type:String
 
     validates :honorific, presence: true, inclusion: {in: HONORIFICS}
     validates :first_name, presence: true, length: {minimum: 3}
