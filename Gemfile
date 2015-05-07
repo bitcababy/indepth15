@@ -94,6 +94,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'factory_girl'
+  gem 'factory_girl_rails', ">= 4.0"
   gem 'fabrication'#, '>= 2.0'
   gem 'foreman'
   # To use debugger
