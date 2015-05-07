@@ -18,7 +18,7 @@ class User
 
   validates_uniqueness_of :email, :login, case_sensitive: false
 
-	field :_id, type: String, default: ->{ login }
+	# field :_id, type: String, default: ->{ login }
 
 
   # def ==(u)
@@ -29,6 +29,10 @@ class User
   def <=>(u)
     return self.login.downcase <=> u.login.downcase
   end
+
+	def describe
+		"#{self.full_name} (#{self.login})"
+	end
 
 	def menu_label
 		return self.full_name
