@@ -30,10 +30,6 @@ class User
     return self.login.downcase <=> u.login.downcase
   end
 
-	def to_s
-		return "#{self.first_name} #{self.last_name}"
-	end
-
 	def menu_label
 		return self.full_name
 	end
