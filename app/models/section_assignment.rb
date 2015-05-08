@@ -1,3 +1,5 @@
+require 'due_date'
+
 class SectionAssignment
   include Mongoid::Document
   include Mongoid::Timestamps::Short
