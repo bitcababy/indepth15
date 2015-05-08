@@ -24,6 +24,10 @@ class Teacher < User
 
   has_many :assignments
 
+  def describe
+		"#{self.full_name} (#{self.login})"
+	end
+
   def courses(all: false)
     if all
       return (self.sections.only(:course).map {|s| s.course}).uniq
