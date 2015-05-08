@@ -7,21 +7,11 @@ class Section
   CURRENT_VERSION = 2
 
   field :bl, as: :block, type: String
-  validates :block, presence: true, length: { minimum: 1, maximum: 2 }
-
-  # field :du, as: :duration
-  # validates :duration, presence: true, inclusion: { in: Course::DURATIONS }
-
   field :se, as: :semester#, type: Symbol
-  validates :semester, inclusion: { in: Durations::SEMESTERS }, allow_nil: true
-
   field :mv, as: :model_version, type: Integer, default: CURRENT_VERSION
 
   # field :eb, as: :extended_block, type: String, default: -> { "#{block}#{Durations.semester_to_i(semester)}"}
-
   field :y, as: :year, type: Integer
-  validates :year, presence: true, numericality: { only_integer: true, less_than_or_equal_to: Settings.academic_year + 1}
-
   field :days, type: Array, default: (1..5).to_a
   field :rm, as: :room, type: String, default: ""
 
@@ -29,13 +19,13 @@ class Section
   belongs_to :course, index: true, autosave: true
   belongs_to :teacher, index: true, autosave: true
 
-  validates :course_id, presence: true
-  validates :teacher_id, presence: true
-
   attr_readonly :year, :course_id, :teacher_id, :block, :semester
 
   # field :_id, default: -> { "#{year%100}-#{course_id}-#{teacher_id}-#{extended_block}"}
 
+  validates :year, presence: true, numericality: { only_integer: true, less_than_or_equal_to: Settings.academic_year + 1}
+  validates :semester, inclusion: { in: Durations::SEMESTERS }, allow_nil: true
+  validates :block, presence: true, length: { minimum: 1, maximum: 2 }
   validates_uniqueness_of :block, scope: [:course_id, :teacher_id, :year, :semester]
   validates_uniqueness_of :teacher_id, scope: [:course_id, :block, :year, :semester]
 
