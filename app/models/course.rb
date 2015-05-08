@@ -16,28 +16,22 @@ class Course
   ## Fields
   ##
   field :no, as: :number, type: Integer
-  validates :number, presence: true, uniqueness: true, numericality: {only_integer: true}
-
   field :du, as: :duration, default: Durations::FULL_YEAR
-  # validates :duration, presence: true, inclusion: {in: Durations::DURATIONS}
-
   field :cr, as: :credits, type: BigDecimal, default: 5.0
-  validates :credits, presence: true, numericality: true, inclusion: Settings.credits
-
   field :fn, as: :full_name, type: String, default: ""
-  validates :full_name, presence: true, length: { minimum: 3 }
-
   field :sn, as: :short_name, type: String, default: ->{ full_name }
   field :sc, as: :schedule_name, type: String, default: ->{ full_name }
-
   field :ha, as: :has_assignments, type: Boolean, default: true
   field :oc, as: :occurrences, type: Array
-
   field :ic, as: :in_catalog, type: Boolean, default: true
-
   field :_id, type: String, default: ->{ number }
 
   index( {number: -1} )
+
+  validates :number, presence: true, uniqueness: true, numericality: {only_integer: true}
+  # validates :duration, presence: true, inclusion: {in: Durations::DURATIONS}
+  validates :credits, presence: true, numericality: true, inclusion: Settings.credits
+  validates :full_name, presence: true, length: { minimum: 3 }
 
   scope :in_catalog, ->{where(in_catalog: true)}
 
@@ -97,6 +91,8 @@ class Course
   def menu_label
     self.full_name
   end
+
+  DOCUMENT_KINDS =  [:resources, :news, :policies, :information, :description]
 
   def create_docs
     self.course_documents.create kind: :resources
