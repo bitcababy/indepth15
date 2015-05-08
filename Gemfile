@@ -67,7 +67,7 @@ gem 'validates_email_format_of'
 gem 'simple_form'
 gem 'memcache-client'
 gem 'settingslogic'#, :git => 'git://github.com/bitcababy/settingslogic.git'
-# gem 'kaminari'
+gem 'kaminari', path: '/Users/mer/dev/Projects/rails/kaminari'
 
 gem 'ckeditor'#, '~> 4.0.0'
 
@@ -83,6 +83,9 @@ gem 'pry'
 
 gem 'yard'
 
+gem 'cancan'
+
+gem 'activeadmin', '~> 1.0.0.pre1'
 # gem "activeadmin-mongoid",  git: "git://github.com/elia/activeadmin-mongoid.git"
 
 group :development, :test do
