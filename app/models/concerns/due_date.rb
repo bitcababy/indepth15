@@ -1,7 +1,7 @@
 module DueDate
 	extend ActiveSupport::Concern
 
-	module ClassMethods
+	included do
 		def next_school_day
       day = Date.today
 			case
@@ -19,7 +19,7 @@ module DueDate
 		end
 
 		def after_cutoff?(time)
-			return time.hour > Settings.cutoff[:hour] || (time.hour == Settings.cutoff[:hour] && time.min >= Settings.cutoff[:minute])
+			return time.hour > Settings.cutoff.hour || (time.hour == Settings.cutoff.hour && time.min >= Settings.cutoff.minute)
 		end
 
 		def future_due_date
@@ -32,20 +32,20 @@ module DueDate
 		end
 	end
 
-	def before_cutoff?(time)
-		return self.class.before_cutoff?(time)
-	end
-
-	def after_cutoff?(time)
-    return self.class.after_cutoff?(time)
-	end
-
-	def future_due_date
-    return self.class.future_due_date
-	end
-
-  def next_school_day
-    return self.class.next_school_day
-  end
+	# def before_cutoff?(time)
+	# 	return self.class.before_cutoff?(time)
+	# end
+	#
+	# def after_cutoff?(time)
+  #   return self.class.after_cutoff?(time)
+	# end
+	#
+	# def future_due_date
+  #   return self.class.future_due_date
+	# end
+	#
+  # def next_school_day
+  #   return self.class.next_school_day
+  # end
 
 end
